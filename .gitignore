@@ -1,0 +1,5 @@
+# Don't add binaries to repository
+affy/sdk/libraries_and_tools/*/*.dll
+affy/sdk/libraries_and_tools/*/*.lib
+affy/sdk/libraries_and_tools/*/*.jar
+affy/sdk/libraries_and_tools/*/*.exe
