@@ -44,6 +44,7 @@
     <li><a href="#index_f"><span>f</span></a></li>
     <li><a href="#index_g"><span>g</span></a></li>
     <li><a href="#index_i"><span>i</span></a></li>
+    <li><a href="#index_k"><span>k</span></a></li>
     <li><a href="#index_l"><span>l</span></a></li>
     <li><a href="#index_m"><span>m</span></a></li>
     <li><a href="#index_n"><span>n</span></a></li>
@@ -52,6 +53,7 @@
     <li><a href="#index_s"><span>s</span></a></li>
     <li><a href="#index_t"><span>t</span></a></li>
     <li><a href="#index_u"><span>u</span></a></li>
+    <li><a href="#index_v"><span>v</span></a></li>
     <li><a href="#index_x"><span>x</span></a></li>
     <li><a href="#index_y"><span>y</span></a></li>
   </ul>
@@ -64,8 +66,7 @@
 <li>All
 : <a class="el" href="classaffymetrix__calvin__io_1_1_generic_file_reader.html#0b5202222f2e4c1d74184e730899a350f26aa3dfbefe216b5872f486cd11245c">affymetrix_calvin_io::GenericFileReader</a>
 <li>APPEND
-: <a class="el" href="class_affx_file.html#00bcd09d93c316760c044152899704554c0746a5aecd2baee7c40d798382017e">AffxFile</a>
-, <a class="el" href="class_affx_binary_file.html#621244adbf2491c8c56a55aca1a758f80420499a5a7224ebf83a841f296422f5">AffxBinaryFile</a>
+: <a class="el" href="class_affx_binary_file.html#621244adbf2491c8c56a55aca1a758f80420499a5a7224ebf83a841f296422f5">AffxBinaryFile</a>
 <li>AsciiType
 : <a class="el" href="class_calvin_value.html#6d1e56b9d1aff4eef81de2762ee37cdc47593bcdb3f138507c93e32c33a94499">CalvinValue</a>
 , <a class="el" href="classaffymetrix__calvin__parameter_1_1_parameter_name_value_type.html#e22489e8de998432c25197ce204797e2fc008fa847121418a387261539767a9b">affymetrix_calvin_parameter::ParameterNameValueType</a>
@@ -95,6 +96,8 @@
 , <a class="el" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#3bcb57200d6e49a2419d40b5f0a832d44863a08c67c2c26c468ae66ec8e8da47">affymetrix_fusion_io::FusionCELData</a>
 <li>COMPACT_BCEL
 : <a class="el" href="classaffxcel_1_1_c_c_e_l_file_data.html#3084aad0d376145ac6e190155d5866eecc30cb63485f3d6cbd200c7c5b22d289">affxcel::CCELFileData</a>
+<li>COMPLETION
+: <a class="el" href="class_socket_handler.html#cc921ce8d718ada1a82b9569c26cc7b102bc507e75d348bb7a3c5e42a355ab0c">SocketHandler</a>
 <li>ControlMultiParameterType
 : <a class="el" href="classaffymetrix__calvin__parameter_1_1_parameter_name_value_default_required_type.html#de41d08fee585d4e61de289c74e6fcedd2f6240fe01080f853def3f14a00520c">affymetrix_calvin_parameter::ParameterNameValueDefaultRequiredType</a>
 <li>ControlSingleParameterType
@@ -107,6 +110,7 @@
 : <a class="el" href="classaffymetrix__calvin__parameter_1_1_parameter_name_value_default_required_type.html#de41d08fee585d4e61de289c74e6fced3a8bc9b156238b226bb81cb45b208a80">affymetrix_calvin_parameter::ParameterNameValueDefaultRequiredType</a>
 <li>DOS
 : <a class="el" href="class_row_file.html#6aaa646aa8be2fb096aabc2d19dfab7c370e0bdb58570c33562819e10f327ce6">RowFile</a>
+, <a class="el" href="class_line_file.html#08e5856f6e25c28ad86f2a34ba69c47419768133698e741437b4ec81f2f830ec">LineFile</a>
 <li>DOUBLE_OPT
 : <a class="el" href="class_pg_opt.html#bd900ee9ae406b602233b8769e333f9fae67a7bd7565650a0cb3219fe1228840">PgOpt</a>
 </ul>
@@ -115,14 +119,28 @@
 : <a class="el" href="classaffxchp_1_1_c_c_h_p_file_header.html#971fa8909ca6049a1290590b9baa932b7af9e871f229a9bca2cd129935f68d79">affxchp::CCHPFileHeader</a>
 </ul>
 <h3><a class="anchor" name="index_f">- f -</a></h3><ul>
+<li>FILEFMT_ANY
+: <a class="el" href="class_fs_path.html#dec9a2d0b19bbcb218b661f4d2122e99d23ad020e5c3ad663b5a988c023040cf">FsPath</a>
+<li>FILEFMT_AUTO
+: <a class="el" href="class_fs_path.html#dec9a2d0b19bbcb218b661f4d2122e99ef2511b1e11eaf7dd96001e0f3815f87">FsPath</a>
+<li>FILEFMT_CALVIN
+: <a class="el" href="class_fs_path.html#dec9a2d0b19bbcb218b661f4d2122e99e00b6cafd7b8e621203d246e84fb4b0e">FsPath</a>
+<li>FILEFMT_FILE5
+: <a class="el" href="class_fs_path.html#dec9a2d0b19bbcb218b661f4d2122e996987be19f06c2138d5522d5f18d62310">FsPath</a>
+<li>FILEFMT_NONE
+: <a class="el" href="class_fs_path.html#dec9a2d0b19bbcb218b661f4d2122e9916870c121628b6e7ca8b97556fa51cf3">FsPath</a>
+<li>FILEFMT_TEXT
+: <a class="el" href="class_fs_path.html#dec9a2d0b19bbcb218b661f4d2122e99f0ebfdc13671536dd1acec6f87ed4d92">FsPath</a>
+<li>FILEFMT_TSVFILE
+: <a class="el" href="class_fs_path.html#dec9a2d0b19bbcb218b661f4d2122e99e693f22cd9a81b391bc883a4705ebce9">FsPath</a>
 <li>FloatParameterType
 : <a class="el" href="classaffymetrix__calvin__parameter_1_1_parameter_name_value_default_required_type.html#de41d08fee585d4e61de289c74e6fced7d00fb5a5c88726bde9347e5421e6f9e">affymetrix_calvin_parameter::ParameterNameValueDefaultRequiredType</a>
 <li>FloatType
 : <a class="el" href="classaffymetrix__calvin__parameter_1_1_parameter_name_value_type.html#e22489e8de998432c25197ce204797e2cbe67cc9eb1d7f6882151538ef025949">affymetrix_calvin_parameter::ParameterNameValueType</a>
 , <a class="el" href="class_calvin_value.html#6d1e56b9d1aff4eef81de2762ee37cdce196db4427e25955d40149bf195733e2">CalvinValue</a>
 <li>FMT_1
-: <a class="el" href="classaffx_1_1_tsv_file_diff.html#874e862a21418a82272ee2fd5ef43d1ca5de3586a78eb103c4eb763daf9a1fb3">affx::TsvFileDiff</a>
-, <a class="el" href="classaffx_1_1_spf_file.html#d8a5a5e5ec3dac5dd4b64b92b098423a4c6b2b855c7e31896a1724c9320d0df3">affx::SpfFile</a>
+: <a class="el" href="classaffx_1_1_spf_file.html#d8a5a5e5ec3dac5dd4b64b92b098423a4c6b2b855c7e31896a1724c9320d0df3">affx::SpfFile</a>
+, <a class="el" href="classaffx_1_1_tsv_file_diff.html#874e862a21418a82272ee2fd5ef43d1ca5de3586a78eb103c4eb763daf9a1fb3">affx::TsvFileDiff</a>
 <li>FMT_2
 : <a class="el" href="classaffx_1_1_tsv_file_diff.html#874e862a21418a82272ee2fd5ef43d1cc9de6ffe1654f91aaed4d3ebc0466c01">affx::TsvFileDiff</a>
 , <a class="el" href="classaffx_1_1_spf_file.html#d8a5a5e5ec3dac5dd4b64b92b098423a83246bb129e548e881c2ff4de6771f35">affx::SpfFile</a>
@@ -164,16 +182,24 @@
 <li>INVALID_OPT
 : <a class="el" href="class_pg_opt.html#bd900ee9ae406b602233b8769e333f9f782f40053927b03ce91565d08045c417">PgOpt</a>
 </ul>
+<h3><a class="anchor" name="index_k">- k -</a></h3><ul>
+<li>KILLMSG
+: <a class="el" href="class_socket_handler.html#cc921ce8d718ada1a82b9569c26cc7b19a6ac59a54ffd2f718a3ce392321a8f7">SocketHandler</a>
+</ul>
 <h3><a class="anchor" name="index_l">- l -</a></h3><ul>
+<li>LAST_CHANNEL
+: <a class="el" href="class_socket_handler.html#cc921ce8d718ada1a82b9569c26cc7b1c8760fdcd676d9f3b94e4aab45e427eb">SocketHandler</a>
+<li>LAST_TYPE
+: <a class="el" href="class_socket_handler.html#2f78de351bd98835c5477812c34d117874e4b510ec4bb04a583f16ae9a842a5f">SocketHandler</a>
 <li>ListIndexCol
 : <a class="el" href="classaffymetrix__calvin__io_1_1_c_d_f_probe_information.html#af75c9ceb6dc0a0d28f8eb03827e1f43c5273d85a1fc9ade8858589fe54796b5">affymetrix_calvin_io::CDFProbeInformation</a>
 <li>LOAD
-: <a class="el" href="class_affx_file.html#00bcd09d93c316760c044152899704559e6d404dabb7ce18d2117be1e01cad06">AffxFile</a>
-, <a class="el" href="class_affx_binary_file.html#621244adbf2491c8c56a55aca1a758f8edea7d1aa38314f4ee44e71b4ffd7c6b">AffxBinaryFile</a>
+: <a class="el" href="class_affx_binary_file.html#621244adbf2491c8c56a55aca1a758f8edea7d1aa38314f4ee44e71b4ffd7c6b">AffxBinaryFile</a>
 </ul>
 <h3><a class="anchor" name="index_m">- m -</a></h3><ul>
 <li>MAC
-: <a class="el" href="class_row_file.html#6aaa646aa8be2fb096aabc2d19dfab7c82182afc32ee792930cf3b8f49591bb5">RowFile</a>
+: <a class="el" href="class_line_file.html#08e5856f6e25c28ad86f2a34ba69c4744e212accf5a42bf6c8398fc35994d6ed">LineFile</a>
+, <a class="el" href="class_row_file.html#6aaa646aa8be2fb096aabc2d19dfab7c82182afc32ee792930cf3b8f49591bb5">RowFile</a>
 </ul>
 <h3><a class="anchor" name="index_n">- n -</a></h3><ul>
 <li>NAME_VALUE_PAIR
@@ -202,6 +228,8 @@
 : <a class="el" href="classaffymetrix__calvin__io_1_1_c_d_f_data.html#5c4d221412450a17e5d72b0bc30aec7899ec2407ce5b3ccfb1f063356cd134ce">affymetrix_calvin_io::CDFData</a>
 <li>ProbeSetNameMode
 : <a class="el" href="classaffymetrix__calvin__io_1_1_c_d_f_data.html#5c4d221412450a17e5d72b0bc30aec785a09c78fab9e36c01c77c09bcf98726e">affymetrix_calvin_io::CDFData</a>
+<li>PROGRESS
+: <a class="el" href="class_socket_handler.html#cc921ce8d718ada1a82b9569c26cc7b1a9ed90c9c1170a3fe7a7e9aaea62673b">SocketHandler</a>
 </ul>
 <h3><a class="anchor" name="index_r">- r -</a></h3><ul>
 <li>ReadAllHeaders
@@ -222,7 +250,6 @@
 <h3><a class="anchor" name="index_s">- s -</a></h3><ul>
 <li>SAVE
 : <a class="el" href="class_affx_binary_file.html#621244adbf2491c8c56a55aca1a758f8be09206599843be8e52e8431ff5e3c19">AffxBinaryFile</a>
-, <a class="el" href="class_affx_file.html#00bcd09d93c316760c04415289970455cddf7634aafc4bdd98e57fe0a98c71fe">AffxFile</a>
 <li>SemiColon
 : <a class="el" href="class_c_ini_file.html#d829bed7b6151ff0ea85144ef2d715daaf9405f0934c43cd5eb12904626f0ddb">CIniFile</a>
 <li>Sequential
@@ -233,6 +260,8 @@
 : <a class="el" href="class_pg_opt.html#bd900ee9ae406b602233b8769e333f9f1b7a64f1a2a78b752b5d19644bc56186">PgOpt</a>
 </ul>
 <h3><a class="anchor" name="index_t">- t -</a></h3><ul>
+<li>TEXT
+: <a class="el" href="class_socket_handler.html#2f78de351bd98835c5477812c34d1178e2829e61f53030384bbb582f9be71723">SocketHandler</a>
 <li>TEXT_CEL
 : <a class="el" href="classaffxcel_1_1_c_c_e_l_file_data.html#3084aad0d376145ac6e190155d5866eeaa76ab84407d9cf0f4aee173ed88895d">affxcel::CCELFileData</a>
 <li>TextParameterType
@@ -262,15 +291,26 @@
 <li>Universal
 : <a class="el" href="classaffxchp_1_1_c_c_h_p_file_header.html#971fa8909ca6049a1290590b9baa932b1bc3365972c4de8cc0e5ff7f87b51f50">affxchp::CCHPFileHeader</a>
 <li>UNIX
-: <a class="el" href="class_row_file.html#6aaa646aa8be2fb096aabc2d19dfab7c0d13929642ddc0cf4789bdb4441bf15d">RowFile</a>
+: <a class="el" href="class_line_file.html#08e5856f6e25c28ad86f2a34ba69c474e75d0ebe6f03a8daa04541ad81cdf329">LineFile</a>
+, <a class="el" href="class_row_file.html#6aaa646aa8be2fb096aabc2d19dfab7c0d13929642ddc0cf4789bdb4441bf15d">RowFile</a>
+<li>UNKNOWN
+: <a class="el" href="classaffxcel_1_1_c_c_e_l_file_data.html#3084aad0d376145ac6e190155d5866ee7a88dea2417c15b1e52bbe9c62d10681">affxcel::CCELFileData</a>
+, <a class="el" href="class_line_file.html#08e5856f6e25c28ad86f2a34ba69c474c22254c3c844f665d802d86278e21613">LineFile</a>
 <li>Unknown
 : <a class="el" href="classaffxchp_1_1_c_c_h_p_file_header.html#971fa8909ca6049a1290590b9baa932b95e4a4b907139319263b8dad42f96c2f">affxchp::CCHPFileHeader</a>
 <li>UNKNOWN
-: <a class="el" href="classaffxcel_1_1_c_c_e_l_file_data.html#3084aad0d376145ac6e190155d5866ee7a88dea2417c15b1e52bbe9c62d10681">affxcel::CCELFileData</a>
-, <a class="el" href="class_row_file.html#6aaa646aa8be2fb096aabc2d19dfab7c7770fb0ace788f53c9c14c700146bfe5">RowFile</a>
+: <a class="el" href="class_row_file.html#6aaa646aa8be2fb096aabc2d19dfab7c7770fb0ace788f53c9c14c700146bfe5">RowFile</a>
+<li>UNKNOWN_CHANNEL
+: <a class="el" href="class_socket_handler.html#cc921ce8d718ada1a82b9569c26cc7b171be13261daec76acacee623bc916c23">SocketHandler</a>
+<li>UNKNOWN_TYPE
+: <a class="el" href="class_socket_handler.html#2f78de351bd98835c5477812c34d11781f6e4ef9b766ad2c9dd2c0410e8db986">SocketHandler</a>
 <li>UnknownType
 : <a class="el" href="class_calvin_value.html#6d1e56b9d1aff4eef81de2762ee37cdc112f5ac4379b2dd65e464e0167099c93">CalvinValue</a>
 , <a class="el" href="classaffymetrix__calvin__parameter_1_1_parameter_name_value_type.html#e22489e8de998432c25197ce204797e2b661c2f1075513b887fce85f797e221b">affymetrix_calvin_parameter::ParameterNameValueType</a>
+</ul>
+<h3><a class="anchor" name="index_v">- v -</a></h3><ul>
+<li>VERBOSE
+: <a class="el" href="class_socket_handler.html#cc921ce8d718ada1a82b9569c26cc7b1f8c293944e1973263d27953f14b2cc31">SocketHandler</a>
 </ul>
 <h3><a class="anchor" name="index_x">- x -</a></h3><ul>
 <li>XCoordCol
@@ -284,7 +324,7 @@
 : <a class="el" href="classaffymetrix__calvin__io_1_1_c_d_f_probe_information.html#af75c9ceb6dc0a0d28f8eb03827e1f4378570296a7a8bed99badeea36a3840be">affymetrix_calvin_io::CDFProbeInformation</a>
 , <a class="el" href="classaffymetrix__calvin__io_1_1_c_d_f_q_c_probe_information.html#014b2da3ecf782324e112cf09c476dd3bcf148037a7b2f00bcb80b48ffb02200">affymetrix_calvin_io::CDFQCProbeInformation</a>
 </ul>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:29 2009 for Affymetrix Fusion SDK by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:40 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

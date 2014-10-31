@@ -24,17 +24,170 @@
 <div class="nav">
 <a class="el" href="dir_0083bb8eedef7fed63dbf70caf86d00a.html">FusionSDK</a>&nbsp;&raquo&nbsp;<a class="el" href="dir_e86b6dbad4e625ef3fbba6406e2d4163.html">affy</a>&nbsp;&raquo&nbsp;<a class="el" href="dir_f87490fa8939fe2ce5b8b80cbaa3c2fa.html">sdk</a>&nbsp;&raquo&nbsp;<a class="el" href="dir_f143c5ea1bdff3e8b6e381f8cdbaa155.html">calvin_files</a>&nbsp;&raquo&nbsp;<a class="el" href="dir_0203433ef7df2cb32df4b482e8437cfd.html">utils</a>&nbsp;&raquo&nbsp;<a class="el" href="dir_a2ced9e657622f7707dc159c43fb3d7e.html">src</a></div>
 <h1>FileUtils.cpp File Reference</h1><code>#include &quot;<a class="el" href="_file_utils_8h-source.html">calvin_files/utils/src/FileUtils.h</a>&quot;</code><br>
-<code>#include &lt;sys/stat.h&gt;</code><br>
+<code>#include &quot;<a class="el" href="_fs_8h-source.html">util/Fs.h</a>&quot;</code><br>
+<code>#include &lt;fcntl.h&gt;</code><br>
+<code>#include &lt;sstream&gt;</code><br>
+<code>#include &lt;string&gt;</code><br>
 <code>#include &lt;sys/types.h&gt;</code><br>
 <code>#include &lt;dirent.h&gt;</code><br>
 
 <p>
 <a href="_file_utils_8cpp-source.html">Go to the source code of this file.</a><table border="0" cellpadding="0" cellspacing="0">
 <tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Defines</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_file_utils_8cpp.html#7f862689020734af17227ef0d1c0396d">POSIX_OPEN</a>&nbsp;&nbsp;&nbsp;open</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_file_utils_8cpp.html#b9322a3b6c8045abc07944ebab0da16f">POSIX_CLOSE</a>&nbsp;&nbsp;&nbsp;close</td></tr>
+
+<tr><td colspan="2"><br><h2>Functions</h2></td></tr>
+<tr><td class="memTemplParams" nowrap colspan="2">template&lt;class T&gt; </td></tr>
+<tr><td class="memTemplItemLeft" nowrap align="right" valign="top">std::string&nbsp;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="_file_utils_8cpp.html#9041e40943f3458ef86e7264568b9029">FUToStr</a> (const T &amp;t)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_file_utils_8cpp.html#d361224868de44d6a0db25cfb502fb35">subChar</a> (std::string &amp;s, char from, char to)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_file_utils_8cpp.html#a6f5d7e8590580dc469ae84c1ef1ab02">convertPathNameLocal</a> (const std::string &amp;path, bool singleFile)</td></tr>
+
 <tr><td colspan="2"><br><h2>Variables</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">static string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_file_utils_8cpp.html#efea50c75aea835dad9da6b17b3b0c87">LockFileExtension</a> = &quot;.lock&quot;</td></tr>
 
 </table>
+<hr><h2>Define Documentation</h2>
+<a class="anchor" name="b9322a3b6c8045abc07944ebab0da16f"></a><!-- doxytag: member="FileUtils.cpp::POSIX_CLOSE" ref="b9322a3b6c8045abc07944ebab0da16f" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define POSIX_CLOSE&nbsp;&nbsp;&nbsp;close          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>
+Definition at line <a class="el" href="_file_utils_8cpp-source.html#l00048">48</a> of file <a class="el" href="_file_utils_8cpp-source.html">FileUtils.cpp</a>.
+<p>
+Referenced by <a class="el" href="_file_utils_8cpp-source.html#l00200">affymetrix_calvin_utilities::FileUtils::Exists()</a>.
+</div>
+</div><p>
+<a class="anchor" name="7f862689020734af17227ef0d1c0396d"></a><!-- doxytag: member="FileUtils.cpp::POSIX_OPEN" ref="7f862689020734af17227ef0d1c0396d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define POSIX_OPEN&nbsp;&nbsp;&nbsp;open          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>
+Definition at line <a class="el" href="_file_utils_8cpp-source.html#l00047">47</a> of file <a class="el" href="_file_utils_8cpp-source.html">FileUtils.cpp</a>.
+</div>
+</div><p>
+<hr><h2>Function Documentation</h2>
+<a class="anchor" name="a6f5d7e8590580dc469ae84c1ef1ab02"></a><!-- doxytag: member="FileUtils.cpp::convertPathNameLocal" ref="a6f5d7e8590580dc469ae84c1ef1ab02" args="(const std::string &amp;path, bool singleFile)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string convertPathNameLocal           </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>singleFile</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+\xrefitem todo 3 
+<p>
+Definition at line <a class="el" href="_file_utils_8cpp-source.html#l00157">157</a> of file <a class="el" href="_file_utils_8cpp-source.html">FileUtils.cpp</a>.
+<p>
+References <a class="el" href="_file_utils_8cpp-source.html#l00080">subChar()</a>.
+<p>
+Referenced by <a class="el" href="_file_utils_8cpp-source.html#l00200">affymetrix_calvin_utilities::FileUtils::Exists()</a>.
+</div>
+</div><p>
+<a class="anchor" name="9041e40943f3458ef86e7264568b9029"></a><!-- doxytag: member="FileUtils.cpp::FUToStr" ref="9041e40943f3458ef86e7264568b9029" args="(const T &amp;t)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string FUToStr           </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&nbsp;</td>
+          <td class="paramname"> <em>t</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Little template function to make string conversion easy. this isn't the fastest way to do things, but it is easy. 
+<p>
+Definition at line <a class="el" href="_file_utils_8cpp-source.html#l00058">58</a> of file <a class="el" href="_file_utils_8cpp-source.html">FileUtils.cpp</a>.
+</div>
+</div><p>
+<a class="anchor" name="d361224868de44d6a0db25cfb502fb35"></a><!-- doxytag: member="FileUtils.cpp::subChar" ref="d361224868de44d6a0db25cfb502fb35" args="(std::string &amp;s, char from, char to)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void subChar           </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&nbsp;</td>
+          <td class="paramname"> <em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&nbsp;</td>
+          <td class="paramname"> <em>to</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+<dl compact><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>copy of the code from <a class="el" href="class_util.html#f48d8be413de4e28b620e58e9f1d5ec1">Util::subChar</a>. Ugly Hack to prevent APT dependencies </dd></dl>
+
+<p>
+Definition at line <a class="el" href="_file_utils_8cpp-source.html#l00080">80</a> of file <a class="el" href="_file_utils_8cpp-source.html">FileUtils.cpp</a>.
+<p>
+Referenced by <a class="el" href="_file_utils_8cpp-source.html#l00157">convertPathNameLocal()</a>.
+</div>
+</div><p>
 <hr><h2>Variable Documentation</h2>
 <a class="anchor" name="efea50c75aea835dad9da6b17b3b0c87"></a><!-- doxytag: member="FileUtils.cpp::LockFileExtension" ref="efea50c75aea835dad9da6b17b3b0c87" args="" -->
 <div class="memitem">
@@ -50,12 +203,12 @@
 <p>
 
 <p>
-Definition at line <a class="el" href="_file_utils_8cpp-source.html#l00041">41</a> of file <a class="el" href="_file_utils_8cpp-source.html">FileUtils.cpp</a>.
+Definition at line <a class="el" href="_file_utils_8cpp-source.html#l00053">53</a> of file <a class="el" href="_file_utils_8cpp-source.html">FileUtils.cpp</a>.
 <p>
-Referenced by <a class="el" href="_file_utils_8cpp-source.html#l00068">affymetrix_calvin_utilities::FileUtils::LockFile()</a>, and <a class="el" href="_file_utils_8cpp-source.html#l00088">affymetrix_calvin_utilities::FileUtils::UnlockFile()</a>.
+Referenced by <a class="el" href="_file_utils_8cpp-source.html#l00230">affymetrix_calvin_utilities::FileUtils::LockFile()</a>, and <a class="el" href="_file_utils_8cpp-source.html#l00250">affymetrix_calvin_utilities::FileUtils::UnlockFile()</a>.
 </div>
 </div><p>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:23 2009 for Affymetrix Fusion SDK by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:33 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

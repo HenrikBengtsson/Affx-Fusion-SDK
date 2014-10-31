@@ -711,7 +711,7 @@
 <a name="l00695"></a>00695   uint32_t v=0;
 <a name="l00696"></a>00696   <span class="keywordtype">int</span> cnt=gzread(gzfile,&amp;v,<span class="keyword">sizeof</span>(v));
 <a name="l00697"></a>00697   <span class="keywordflow">if</span> (cnt!=<span class="keyword">sizeof</span>(v)) {
-<a name="l00698"></a>00698     <a class="code" href="class_err.html#2c92074a0e89f02bba1c217b6c65b000">Err::errAbort</a>(<span class="stringliteral">"ReadUInt32_I: bad read."</span>);
+<a name="l00698"></a>00698     <a class="code" href="class_err.html#121c0cbb1687c93444a1b5f7f6ea56af">Err::errAbort</a>(<span class="stringliteral">"ReadUInt32_I: bad read."</span>);
 <a name="l00699"></a>00699   }
 <a name="l00700"></a>00700   val=<a class="code" href="_file_i_o_8h.html#0c7fbb117b2d4e17a4b1068919b34049">itohl</a>(v);
 <a name="l00701"></a>00701   <span class="comment">// printf("ReadUInt32_I(%p)==%d\n",gzfile,val);</span>
@@ -733,7 +733,7 @@
 <a name="l00717"></a>00717   uint16_t v=0;
 <a name="l00718"></a>00718   <span class="keywordtype">int</span> cnt=gzread(gzfile,&amp;v,<span class="keyword">sizeof</span>(v));
 <a name="l00719"></a>00719   <span class="keywordflow">if</span> (cnt!=<span class="keyword">sizeof</span>(v)) {
-<a name="l00720"></a>00720     <a class="code" href="class_err.html#2c92074a0e89f02bba1c217b6c65b000">Err::errAbort</a>(<span class="stringliteral">"ReadUInt16_I: bad read."</span>);
+<a name="l00720"></a>00720     <a class="code" href="class_err.html#121c0cbb1687c93444a1b5f7f6ea56af">Err::errAbort</a>(<span class="stringliteral">"ReadUInt16_I: bad read."</span>);
 <a name="l00721"></a>00721   }
 <a name="l00722"></a>00722   val=<a class="code" href="_file_i_o_8h.html#faa9da69bd2d0a40dcc6d358bfc0a905">itohs</a>(v);
 <a name="l00723"></a>00723 }
@@ -752,7 +752,7 @@
 <a name="l00736"></a>00736 {
 <a name="l00737"></a>00737   <span class="keywordtype">int</span> cnt=gzread(gzfile,(<span class="keywordtype">char</span>*)&amp;val,<span class="keyword">sizeof</span>(val));
 <a name="l00738"></a>00738   <span class="keywordflow">if</span> (cnt!=<span class="keyword">sizeof</span>(val)) {
-<a name="l00739"></a>00739     <a class="code" href="class_err.html#2c92074a0e89f02bba1c217b6c65b000">Err::errAbort</a>(<span class="stringliteral">"ReadUInt8: bad read."</span>);
+<a name="l00739"></a>00739     <a class="code" href="class_err.html#121c0cbb1687c93444a1b5f7f6ea56af">Err::errAbort</a>(<span class="stringliteral">"ReadUInt8: bad read."</span>);
 <a name="l00740"></a>00740   }
 <a name="l00741"></a>00741 }
 <a name="l00742"></a>00742 <span class="keywordtype">void</span>
@@ -771,7 +771,7 @@
 <a name="l00755"></a>00755   uint32_t v=0;
 <a name="l00756"></a>00756   <span class="keywordtype">int</span> cnt=gzread(gzfile,&amp;v,<span class="keyword">sizeof</span>(v));
 <a name="l00757"></a>00757   <span class="keywordflow">if</span> (cnt!=<span class="keyword">sizeof</span>(v)) {
-<a name="l00758"></a>00758     <a class="code" href="class_err.html#2c92074a0e89f02bba1c217b6c65b000">Err::errAbort</a>(<span class="stringliteral">"ReadUInt32_N: bad read."</span>);
+<a name="l00758"></a>00758     <a class="code" href="class_err.html#121c0cbb1687c93444a1b5f7f6ea56af">Err::errAbort</a>(<span class="stringliteral">"ReadUInt32_N: bad read."</span>);
 <a name="l00759"></a>00759   }
 <a name="l00760"></a>00760   val=ntohl(v);
 <a name="l00761"></a>00761 }
@@ -792,7 +792,7 @@
 <a name="l00776"></a>00776   uint16_t v=0;
 <a name="l00777"></a>00777   <span class="keywordtype">int</span> cnt=gzread(gzfile,&amp;v,<span class="keyword">sizeof</span>(v));
 <a name="l00778"></a>00778   <span class="keywordflow">if</span> (cnt!=<span class="keyword">sizeof</span>(v)) {
-<a name="l00779"></a>00779     <a class="code" href="class_err.html#2c92074a0e89f02bba1c217b6c65b000">Err::errAbort</a>(<span class="stringliteral">"ReadUInt16_N: bad read."</span>);    
+<a name="l00779"></a>00779     <a class="code" href="class_err.html#121c0cbb1687c93444a1b5f7f6ea56af">Err::errAbort</a>(<span class="stringliteral">"ReadUInt16_N: bad read."</span>);    
 <a name="l00780"></a>00780   }
 <a name="l00781"></a>00781   val=ntohs(v);
 <a name="l00782"></a>00782 }
@@ -810,7 +810,7 @@
 <a name="l00794"></a>00794   str.resize(slen);
 <a name="l00795"></a>00795   <span class="keywordtype">int</span> cnt=gzread(gzfile,&amp;str[0],slen);
 <a name="l00796"></a>00796   <span class="keywordflow">if</span> (cnt!=slen) {
-<a name="l00797"></a>00797     <a class="code" href="class_err.html#2c92074a0e89f02bba1c217b6c65b000">Err::errAbort</a>(<span class="stringliteral">"ReadCString_I: bad read. ("</span>+<a class="code" href="_convert_8h.html#9e68e488e4da0371aea30596313537df">ToStr</a>(cnt)+<span class="stringliteral">"!="</span>+<a class="code" href="_convert_8h.html#9e68e488e4da0371aea30596313537df">ToStr</a>(slen)+<span class="stringliteral">")"</span>);
+<a name="l00797"></a>00797     <a class="code" href="class_err.html#121c0cbb1687c93444a1b5f7f6ea56af">Err::errAbort</a>(<span class="stringliteral">"ReadCString_I: bad read. ("</span>+<a class="code" href="_convert_8h.html#9e68e488e4da0371aea30596313537df">ToStr</a>(cnt)+<span class="stringliteral">"!="</span>+<a class="code" href="_convert_8h.html#9e68e488e4da0371aea30596313537df">ToStr</a>(slen)+<span class="stringliteral">")"</span>);
 <a name="l00798"></a>00798   }
 <a name="l00799"></a>00799   <span class="comment">/*</span>
 <a name="l00800"></a>00800 <span class="comment">  printf("== %3d: '",slen);</span>
@@ -833,7 +833,7 @@
 <a name="l00817"></a>00817   str.resize(len);
 <a name="l00818"></a>00818   <span class="keywordtype">int</span> cnt=gzread(gzfile,&amp;str[0],len);
 <a name="l00819"></a>00819   <span class="keywordflow">if</span> (cnt!=len) {
-<a name="l00820"></a>00820     <a class="code" href="class_err.html#2c92074a0e89f02bba1c217b6c65b000">Err::errAbort</a>(<span class="stringliteral">"ReadFixedString: bad read."</span>);
+<a name="l00820"></a>00820     <a class="code" href="class_err.html#121c0cbb1687c93444a1b5f7f6ea56af">Err::errAbort</a>(<span class="stringliteral">"ReadFixedString: bad read."</span>);
 <a name="l00821"></a>00821   }
 <a name="l00822"></a>00822 }
 <a name="l00823"></a>00823 
@@ -842,12 +842,12 @@
 <a name="l00826"></a>00826 {
 <a name="l00827"></a>00827   <span class="keywordtype">int</span> cnt=gzread(gzfile,str,len);
 <a name="l00828"></a>00828   <span class="keywordflow">if</span> (cnt!=len) {
-<a name="l00829"></a>00829     <a class="code" href="class_err.html#2c92074a0e89f02bba1c217b6c65b000">Err::errAbort</a>(<span class="stringliteral">"ReadFixedCString: bad read."</span>);
+<a name="l00829"></a>00829     <a class="code" href="class_err.html#121c0cbb1687c93444a1b5f7f6ea56af">Err::errAbort</a>(<span class="stringliteral">"ReadFixedCString: bad read."</span>);
 <a name="l00830"></a>00830   }
 <a name="l00831"></a>00831 }
 <a name="l00832"></a>00832 
 <a name="l00833"></a>00833 <span class="preprocessor">#endif</span>
-</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:15 2009 for Affymetrix Fusion SDK by&nbsp;
+</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:24 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

@@ -102,7 +102,7 @@
 <a name="l00078"></a>00078 
 <a name="l00079"></a>00079 STDMETHODIMP CFusionCDFDataCOM::get_ChipType(BSTR* pVal)
 <a name="l00080"></a>00080 {
-<a name="l00081"></a>00081         *pVal = <a class="code" href="class_c_o_m_string_utils.html#fba6e02950c2d40fc655b6dcbbf4b6ab">COMStringUtils::ConvertString</a>(<a class="code" href="class_c_fusion_c_d_f_data_c_o_m.html#cc86edc62c4cce2d977d9a39f7dfae5c">cdf</a>.<a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_d_f_data.html#fc0f6885d75b9b878d87d79be9e17ac4">GetChipType</a>());
+<a name="l00081"></a>00081         *pVal = <a class="code" href="class_c_o_m_string_utils.html#fba6e02950c2d40fc655b6dcbbf4b6ab">COMStringUtils::ConvertString</a>(<a class="code" href="class_c_fusion_c_d_f_data_c_o_m.html#cc86edc62c4cce2d977d9a39f7dfae5c">cdf</a>.<a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_d_f_data.html#5a13f4b94d17fcb8ef673b1cd4d1cedd">GetChipType</a>());
 <a name="l00082"></a>00082         <span class="keywordflow">return</span> S_OK;
 <a name="l00083"></a>00083 }
 <a name="l00084"></a>00084 
@@ -168,7 +168,39 @@
 <a name="l00144"></a>00144         <a class="code" href="class_c_fusion_c_d_f_data_c_o_m.html#cc86edc62c4cce2d977d9a39f7dfae5c">cdf</a>.<a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_d_f_data.html#545c68712490da6a6970d74a7d69b3bc">GetQCProbeSetInformation</a>((<a class="code" href="namespaceaffxcdf.html#5021c67c65c70f93aeb5b82beb83cc64">affxcdf::GeneChipQCProbeSetType</a>) qcType, set-&gt;Set());
 <a name="l00145"></a>00145         <span class="keywordflow">return</span> S_OK;
 <a name="l00146"></a>00146 }
-</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:06 2009 for Affymetrix Fusion SDK by&nbsp;
+<a name="l00147"></a>00147 
+<a name="l00148"></a>00148 STDMETHODIMP CFusionCDFDataCOM::get_ChipTypes(VARIANT* pVal)
+<a name="l00149"></a>00149 {
+<a name="l00150"></a>00150         VariantInit(pVal);
+<a name="l00151"></a>00151         pVal-&gt;vt = VT_ARRAY | VT_BSTR;
+<a name="l00152"></a>00152         pVal-&gt;parray = NULL;
+<a name="l00153"></a>00153         std::vector&lt;std::string&gt; ids = <a class="code" href="class_c_fusion_c_d_f_data_c_o_m.html#cc86edc62c4cce2d977d9a39f7dfae5c">cdf</a>.<a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_d_f_data.html#5dce219c71e02618130fc0058277feb4">GetChipTypes</a>();
+<a name="l00154"></a>00154         <span class="keywordtype">int</span> nids = (int)ids.size();
+<a name="l00155"></a>00155         SAFEARRAYBOUND  rgsaBound[1];
+<a name="l00156"></a>00156         rgsaBound[0].lLbound = 0;
+<a name="l00157"></a>00157         rgsaBound[0].cElements = nids;
+<a name="l00158"></a>00158         pVal-&gt;parray = SafeArrayCreate(VT_BSTR, 1, rgsaBound);
+<a name="l00159"></a>00159         <span class="keywordflow">for</span> (<span class="keywordtype">long</span> index=0; index&lt;(long)ids.size(); index++)
+<a name="l00160"></a>00160         {
+<a name="l00161"></a>00161                 BSTR <span class="keywordtype">id</span> = <a class="code" href="class_c_o_m_string_utils.html#fba6e02950c2d40fc655b6dcbbf4b6ab">COMStringUtils::ConvertString</a>(ids[index]);
+<a name="l00162"></a>00162                 HRESULT hr = SafeArrayPutElement(pVal-&gt;parray, &amp;index, <span class="keywordtype">id</span>);
+<a name="l00163"></a>00163         }
+<a name="l00164"></a>00164         <span class="keywordflow">return</span> S_OK;
+<a name="l00165"></a>00165 }
+<a name="l00166"></a>00166 
+<a name="l00167"></a>00167 STDMETHODIMP CFusionCDFDataCOM::get_GUID(BSTR* pVal)
+<a name="l00168"></a>00168 {
+<a name="l00169"></a>00169         *pVal = <a class="code" href="class_c_o_m_string_utils.html#fba6e02950c2d40fc655b6dcbbf4b6ab">COMStringUtils::ConvertString</a>(<a class="code" href="class_c_fusion_c_d_f_data_c_o_m.html#cc86edc62c4cce2d977d9a39f7dfae5c">cdf</a>.<a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_d_f_data.html#667f487b7d01051b0b4039743d814da6">GetGUID</a>());
+<a name="l00170"></a>00170         <span class="keywordflow">return</span> S_OK;
+<a name="l00171"></a>00171 }
+<a name="l00172"></a>00172 
+<a name="l00173"></a>00173 STDMETHODIMP CFusionCDFDataCOM::get_IntegrityMd5(BSTR* pVal)
+<a name="l00174"></a>00174 {
+<a name="l00175"></a>00175         *pVal = <a class="code" href="class_c_o_m_string_utils.html#fba6e02950c2d40fc655b6dcbbf4b6ab">COMStringUtils::ConvertString</a>(<a class="code" href="class_c_fusion_c_d_f_data_c_o_m.html#cc86edc62c4cce2d977d9a39f7dfae5c">cdf</a>.<a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_d_f_data.html#dd1ef7d62c20ceeb3b83daf0a81d963e">GetIntegrityMd5</a>());
+<a name="l00176"></a>00176         <span class="keywordflow">return</span> S_OK;
+<a name="l00177"></a>00177 }
+<a name="l00178"></a>00178 
+</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:14 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

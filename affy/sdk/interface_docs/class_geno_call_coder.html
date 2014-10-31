@@ -164,7 +164,7 @@ char &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 <p>
 
 <p>
-Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00147">147</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.<hr><h2>Constructor &amp; Destructor Documentation</h2>
+Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00129">129</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.<hr><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" name="3083cd9d76ad3e4962113da3971005ea"></a><!-- doxytag: member="GenoCallCoder::GenoCallCoder" ref="3083cd9d76ad3e4962113da3971005ea" args="(const int max_allele_count=2, const std::string data_size=&quot;UCHAR&quot;, const std::string version=&quot;0&quot;, char allele_delimiter='\0')" -->
 <div class="memitem">
 <div class="memproto">
@@ -346,9 +346,9 @@ Retrieve vector of probeset ids in allele name table.
 <p>
 
 <p>
-Definition at line <a class="el" href="_geno_call_coder_8cpp-source.html#l00626">626</a> of file <a class="el" href="_geno_call_coder_8cpp-source.html">GenoCallCoder.cpp</a>.
+Definition at line <a class="el" href="_geno_call_coder_8cpp-source.html#l00675">675</a> of file <a class="el" href="_geno_call_coder_8cpp-source.html">GenoCallCoder.cpp</a>.
 <p>
-References <a class="el" href="_geno_call_coder_8h-source.html#l00398">m_probeset_allele_name_table</a>.
+References <a class="el" href="_geno_call_coder_8h-source.html#l00380">m_probeset_allele_name_table</a>.
 </div>
 </div><p>
 <a class="anchor" name="c3f16463e3107dcb59e579bdb8cde693"></a><!-- doxytag: member="GenoCallCoder::getValidGenotypeCallCodes" ref="c3f16463e3107dcb59e579bdb8cde693" args="(std::string probeset_id)" -->
@@ -377,9 +377,9 @@ Retrieve vector of genotype call codes allowable for given probeset_id -- based 
 </dl>
 
 <p>
-Definition at line <a class="el" href="_geno_call_coder_8cpp-source.html#l00640">640</a> of file <a class="el" href="_geno_call_coder_8cpp-source.html">GenoCallCoder.cpp</a>.
+Definition at line <a class="el" href="_geno_call_coder_8cpp-source.html#l00689">689</a> of file <a class="el" href="_geno_call_coder_8cpp-source.html">GenoCallCoder.cpp</a>.
 <p>
-References <a class="el" href="_geno_call_coder_8h-source.html#l00136">AlleleRecord::compareAlleleRecordsByProbesetId()</a>, and <a class="el" href="_geno_call_coder_8h-source.html#l00398">m_probeset_allele_name_table</a>.
+References <a class="el" href="_geno_call_coder_8cpp-source.html#l00158">AlleleRecord::compareAlleleRecordsByProbesetId()</a>, and <a class="el" href="_geno_call_coder_8h-source.html#l00380">m_probeset_allele_name_table</a>.
 </div>
 </div><p>
 <a class="anchor" name="babac1901219dfe4ef784087147ec6ae"></a><!-- doxytag: member="GenoCallCoder::genotypeCallNumToAbstractAllele" ref="babac1901219dfe4ef784087147ec6ae" args="(const unsigned char call_code)" -->
@@ -408,11 +408,11 @@ Decode from call code number to abstract allele string.
 </dl>
 
 <p>
-Definition at line <a class="el" href="_geno_call_coder_8cpp-source.html#l00653">653</a> of file <a class="el" href="_geno_call_coder_8cpp-source.html">GenoCallCoder.cpp</a>.
+Definition at line <a class="el" href="_geno_call_coder_8cpp-source.html#l00702">702</a> of file <a class="el" href="_geno_call_coder_8cpp-source.html">GenoCallCoder.cpp</a>.
 <p>
-References <a class="el" href="_geno_call_coder_8h-source.html#l00394">m_abstract_codes</a>, <a class="el" href="_geno_call_coder_8h-source.html#l00376">m_data_size</a>, <a class="el" href="_convert_8h-source.html#l00046">ToStr()</a>, and <a class="el" href="_verbose_8cpp-source.html#l00183">Verbose::warn()</a>.
+References <a class="el" href="_geno_call_coder_8h-source.html#l00376">m_abstract_codes</a>, <a class="el" href="_geno_call_coder_8h-source.html#l00358">m_data_size</a>, <a class="el" href="_convert_8h-source.html#l00227">ToStr()</a>, and <a class="el" href="_verbose_8cpp-source.html#l00277">Verbose::warn()</a>.
 <p>
-Referenced by <a class="el" href="_geno_call_coder_8cpp-source.html#l00981">isHet()</a>, and <a class="el" href="_geno_call_coder_8cpp-source.html#l00955">isHom()</a>.
+Referenced by <a class="el" href="_geno_call_coder_8cpp-source.html#l01030">isHet()</a>, and <a class="el" href="_geno_call_coder_8cpp-source.html#l01004">isHom()</a>.
 </div>
 </div><p>
 <a class="anchor" name="b238350c725c1a6072c98338b5d78fe2"></a><!-- doxytag: member="GenoCallCoder::genotypeCallNumToReferenceAllele" ref="b238350c725c1a6072c98338b5d78fe2" args="(const std::string probeset_id, const unsigned char call_code)" -->
@@ -728,9 +728,9 @@ Retrieve a vector of abstract allele calls indexed by numeric call code.
 <p>
 
 <p>
-Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00325">325</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
+Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00307">307</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
 <p>
-References <a class="el" href="_geno_call_coder_8h-source.html#l00394">m_abstract_codes</a>.
+References <a class="el" href="_geno_call_coder_8h-source.html#l00376">m_abstract_codes</a>.
 </div>
 </div><p>
 <a class="anchor" name="cf52719a41a8568da6f2cca2bc7db121"></a><!-- doxytag: member="GenoCallCoder::isValidCallNum" ref="cf52719a41a8568da6f2cca2bc7db121" args="(const unsigned char call_code)" -->
@@ -759,9 +759,9 @@ boolean indicating if code is within proper range for given <a class="el" href="
 </dl>
 
 <p>
-Definition at line <a class="el" href="_geno_call_coder_8cpp-source.html#l00937">937</a> of file <a class="el" href="_geno_call_coder_8cpp-source.html">GenoCallCoder.cpp</a>.
+Definition at line <a class="el" href="_geno_call_coder_8cpp-source.html#l00986">986</a> of file <a class="el" href="_geno_call_coder_8cpp-source.html">GenoCallCoder.cpp</a>.
 <p>
-References <a class="el" href="_geno_call_coder_8h-source.html#l00384">m_max_code</a>, <a class="el" href="_geno_call_coder_8h-source.html#l00388">m_max_extra_code</a>, <a class="el" href="_geno_call_coder_8h-source.html#l00380">m_min_code</a>, and <a class="el" href="_geno_call_coder_8h-source.html#l00386">m_min_extra_code</a>.
+References <a class="el" href="_geno_call_coder_8h-source.html#l00366">m_max_code</a>, <a class="el" href="_geno_call_coder_8h-source.html#l00370">m_max_extra_code</a>, <a class="el" href="_geno_call_coder_8h-source.html#l00362">m_min_code</a>, and <a class="el" href="_geno_call_coder_8h-source.html#l00368">m_min_extra_code</a>.
 </div>
 </div><p>
 <a class="anchor" name="0f49a11e2f301001274267681acb84be"></a><!-- doxytag: member="GenoCallCoder::isValidAbstractAllele" ref="0f49a11e2f301001274267681acb84be" args="(const std::string allele)" -->
@@ -817,9 +817,9 @@ boolean indicating if call code corresponds to a homozygous call. boolean indica
 </dl>
 
 <p>
-Definition at line <a class="el" href="_geno_call_coder_8cpp-source.html#l00955">955</a> of file <a class="el" href="_geno_call_coder_8cpp-source.html">GenoCallCoder.cpp</a>.
+Definition at line <a class="el" href="_geno_call_coder_8cpp-source.html#l01004">1004</a> of file <a class="el" href="_geno_call_coder_8cpp-source.html">GenoCallCoder.cpp</a>.
 <p>
-References <a class="el" href="_geno_call_coder_8cpp-source.html#l00653">genotypeCallNumToAbstractAllele()</a>, <a class="el" href="_geno_call_coder_8h-source.html#l00392">m_allele_delimiter</a>, <a class="el" href="_geno_call_coder_8h-source.html#l00403">m_alpha2num</a>, <a class="el" href="_geno_call_coder_8h-source.html#l00384">m_max_code</a>, and <a class="el" href="_geno_call_coder_8h-source.html#l00382">m_min_translatable_code</a>.
+References <a class="el" href="_geno_call_coder_8cpp-source.html#l00702">genotypeCallNumToAbstractAllele()</a>, <a class="el" href="_geno_call_coder_8h-source.html#l00374">m_allele_delimiter</a>, <a class="el" href="_geno_call_coder_8h-source.html#l00385">m_alpha2num</a>, <a class="el" href="_geno_call_coder_8h-source.html#l00366">m_max_code</a>, and <a class="el" href="_geno_call_coder_8h-source.html#l00364">m_min_translatable_code</a>.
 </div>
 </div><p>
 <a class="anchor" name="0ec1b541ca46b796a0f4a44ee194651e"></a><!-- doxytag: member="GenoCallCoder::isHet" ref="0ec1b541ca46b796a0f4a44ee194651e" args="(const unsigned char call_code)" -->
@@ -848,9 +848,9 @@ boolean indicating if call code corresponds to a heterozygous call
 </dl>
 
 <p>
-Definition at line <a class="el" href="_geno_call_coder_8cpp-source.html#l00981">981</a> of file <a class="el" href="_geno_call_coder_8cpp-source.html">GenoCallCoder.cpp</a>.
+Definition at line <a class="el" href="_geno_call_coder_8cpp-source.html#l01030">1030</a> of file <a class="el" href="_geno_call_coder_8cpp-source.html">GenoCallCoder.cpp</a>.
 <p>
-References <a class="el" href="_geno_call_coder_8cpp-source.html#l00653">genotypeCallNumToAbstractAllele()</a>, <a class="el" href="_geno_call_coder_8h-source.html#l00392">m_allele_delimiter</a>, <a class="el" href="_geno_call_coder_8h-source.html#l00403">m_alpha2num</a>, <a class="el" href="_geno_call_coder_8h-source.html#l00384">m_max_code</a>, and <a class="el" href="_geno_call_coder_8h-source.html#l00382">m_min_translatable_code</a>.
+References <a class="el" href="_geno_call_coder_8cpp-source.html#l00702">genotypeCallNumToAbstractAllele()</a>, <a class="el" href="_geno_call_coder_8h-source.html#l00374">m_allele_delimiter</a>, <a class="el" href="_geno_call_coder_8h-source.html#l00385">m_alpha2num</a>, <a class="el" href="_geno_call_coder_8h-source.html#l00366">m_max_code</a>, and <a class="el" href="_geno_call_coder_8h-source.html#l00364">m_min_translatable_code</a>.
 </div>
 </div><p>
 <a class="anchor" name="e97986a760368e2dde6476e4fe681ddd"></a><!-- doxytag: member="GenoCallCoder::genotypeCallNumToAllele" ref="e97986a760368e2dde6476e4fe681ddd" args="(const std::string probeset_id, const unsigned char call_code, const std::string allele_type)" -->
@@ -946,7 +946,7 @@ annotation csv file intra-column delimiter
 <p>
 
 <p>
-Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00359">359</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
+Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00341">341</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="dc190b66e67653b0bfcb2409d973a1df"></a><!-- doxytag: member="GenoCallCoder::m_extra_codes" ref="dc190b66e67653b0bfcb2409d973a1df" args="[]" -->
@@ -969,7 +969,7 @@ Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00359">3
 <p>
 
 <p>
-Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00361">361</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
+Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00343">343</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="bb01b77ec4aa93320160d95c0064874d"></a><!-- doxytag: member="GenoCallCoder::m_marker_annotation_file_cnames" ref="bb01b77ec4aa93320160d95c0064874d" args="[]" -->
@@ -996,7 +996,7 @@ Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00361">3
 <p>
 
 <p>
-Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00363">363</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
+Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00345">345</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="929a6a4d72f40d575c2b310a0e4b95c1"></a><!-- doxytag: member="GenoCallCoder::m_version_zero_codes" ref="929a6a4d72f40d575c2b310a0e4b95c1" args="[]" -->
@@ -1033,7 +1033,7 @@ Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00363">3
 <p>
 
 <p>
-Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00365">365</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
+Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00347">347</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="536ca9bc8a8cac2ab0c3270ad5bb907e"></a><!-- doxytag: member="GenoCallCoder::m_abstract_nocall_char" ref="536ca9bc8a8cac2ab0c3270ad5bb907e" args="" -->
@@ -1052,7 +1052,7 @@ character to represent a nocall when making partial calls (v1+)
 <p>
 
 <p>
-Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00367">367</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
+Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00349">349</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="68ae0c15eff8a5438364f33f33cea0e5"></a><!-- doxytag: member="GenoCallCoder::m_annot_csv_skip_text" ref="68ae0c15eff8a5438364f33f33cea0e5" args="" -->
@@ -1071,7 +1071,7 @@ string in annotation csv file indicating that there are no alleles to decode
 <p>
 
 <p>
-Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00369">369</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
+Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00351">351</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="273cfdbad833a7a6a4a3ad3b04d852d7"></a><!-- doxytag: member="GenoCallCoder::m_num2alpha" ref="273cfdbad833a7a6a4a3ad3b04d852d7" args="[]" -->
@@ -1090,7 +1090,7 @@ alphabet map
 <p>
 
 <p>
-Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00371">371</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
+Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00353">353</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="9082d2954c0f1b481098cedeb6c07784"></a><!-- doxytag: member="GenoCallCoder::m_max_allele_count" ref="9082d2954c0f1b481098cedeb6c07784" args="" -->
@@ -1109,7 +1109,7 @@ number of alleles for marker with highest allele count
 <p>
 
 <p>
-Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00374">374</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
+Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00356">356</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="5099db83d0b07fe96268c07365ba15a4"></a><!-- doxytag: member="GenoCallCoder::m_data_size" ref="5099db83d0b07fe96268c07365ba15a4" args="" -->
@@ -1128,9 +1128,9 @@ string arg indicating size of call code field
 <p>
 
 <p>
-Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00376">376</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
+Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00358">358</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
 <p>
-Referenced by <a class="el" href="_geno_call_coder_8cpp-source.html#l00653">genotypeCallNumToAbstractAllele()</a>.
+Referenced by <a class="el" href="_geno_call_coder_8cpp-source.html#l00702">genotypeCallNumToAbstractAllele()</a>.
 </div>
 </div><p>
 <a class="anchor" name="17a01083d8469b298fb1223693f0e451"></a><!-- doxytag: member="GenoCallCoder::m_data_size_bits" ref="17a01083d8469b298fb1223693f0e451" args="" -->
@@ -1149,7 +1149,7 @@ number of bits used for encoding
 <p>
 
 <p>
-Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00378">378</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
+Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00360">360</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="e22463359a7f1ad2f71caa82341308ea"></a><!-- doxytag: member="GenoCallCoder::m_min_code" ref="e22463359a7f1ad2f71caa82341308ea" args="" -->
@@ -1168,9 +1168,9 @@ version dependent min call code
 <p>
 
 <p>
-Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00380">380</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
+Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00362">362</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
 <p>
-Referenced by <a class="el" href="_geno_call_coder_8cpp-source.html#l00937">isValidCallNum()</a>.
+Referenced by <a class="el" href="_geno_call_coder_8cpp-source.html#l00986">isValidCallNum()</a>.
 </div>
 </div><p>
 <a class="anchor" name="33d67105c01e7a394c8984964da2da55"></a><!-- doxytag: member="GenoCallCoder::m_min_translatable_code" ref="33d67105c01e7a394c8984964da2da55" args="" -->
@@ -1189,9 +1189,9 @@ version dependent min translatable call code
 <p>
 
 <p>
-Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00382">382</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
+Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00364">364</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
 <p>
-Referenced by <a class="el" href="_geno_call_coder_8cpp-source.html#l00981">isHet()</a>, and <a class="el" href="_geno_call_coder_8cpp-source.html#l00955">isHom()</a>.
+Referenced by <a class="el" href="_geno_call_coder_8cpp-source.html#l01030">isHet()</a>, and <a class="el" href="_geno_call_coder_8cpp-source.html#l01004">isHom()</a>.
 </div>
 </div><p>
 <a class="anchor" name="daa4473dfb5468221b633f78d2ab781d"></a><!-- doxytag: member="GenoCallCoder::m_max_code" ref="daa4473dfb5468221b633f78d2ab781d" args="" -->
@@ -1210,9 +1210,9 @@ data_size dependent max call code
 <p>
 
 <p>
-Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00384">384</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
+Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00366">366</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
 <p>
-Referenced by <a class="el" href="_geno_call_coder_8cpp-source.html#l00981">isHet()</a>, <a class="el" href="_geno_call_coder_8cpp-source.html#l00955">isHom()</a>, and <a class="el" href="_geno_call_coder_8cpp-source.html#l00937">isValidCallNum()</a>.
+Referenced by <a class="el" href="_geno_call_coder_8cpp-source.html#l01030">isHet()</a>, <a class="el" href="_geno_call_coder_8cpp-source.html#l01004">isHom()</a>, and <a class="el" href="_geno_call_coder_8cpp-source.html#l00986">isValidCallNum()</a>.
 </div>
 </div><p>
 <a class="anchor" name="586c3bd0fe7545dd3eb1b5adc542ab17"></a><!-- doxytag: member="GenoCallCoder::m_min_extra_code" ref="586c3bd0fe7545dd3eb1b5adc542ab17" args="" -->
@@ -1231,9 +1231,9 @@ version dependent min call code for extra codes
 <p>
 
 <p>
-Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00386">386</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
+Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00368">368</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
 <p>
-Referenced by <a class="el" href="_geno_call_coder_8cpp-source.html#l00937">isValidCallNum()</a>.
+Referenced by <a class="el" href="_geno_call_coder_8cpp-source.html#l00986">isValidCallNum()</a>.
 </div>
 </div><p>
 <a class="anchor" name="23cb3cdac75a68cc4ab22add556ad514"></a><!-- doxytag: member="GenoCallCoder::m_max_extra_code" ref="23cb3cdac75a68cc4ab22add556ad514" args="" -->
@@ -1252,9 +1252,9 @@ version dependent max call code for extra codes
 <p>
 
 <p>
-Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00388">388</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
+Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00370">370</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
 <p>
-Referenced by <a class="el" href="_geno_call_coder_8cpp-source.html#l00937">isValidCallNum()</a>.
+Referenced by <a class="el" href="_geno_call_coder_8cpp-source.html#l00986">isValidCallNum()</a>.
 </div>
 </div><p>
 <a class="anchor" name="b4c33ac3b50e5b81971839a7cbefa944"></a><!-- doxytag: member="GenoCallCoder::m_version" ref="b4c33ac3b50e5b81971839a7cbefa944" args="" -->
@@ -1273,7 +1273,7 @@ version
 <p>
 
 <p>
-Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00390">390</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
+Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00372">372</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="1e31b7c81793dee73433e63eead83a52"></a><!-- doxytag: member="GenoCallCoder::m_allele_delimiter" ref="1e31b7c81793dee73433e63eead83a52" args="" -->
@@ -1292,9 +1292,9 @@ character to delimit alleles in allele string
 <p>
 
 <p>
-Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00392">392</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
+Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00374">374</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
 <p>
-Referenced by <a class="el" href="_geno_call_coder_8cpp-source.html#l00981">isHet()</a>, and <a class="el" href="_geno_call_coder_8cpp-source.html#l00955">isHom()</a>.
+Referenced by <a class="el" href="_geno_call_coder_8cpp-source.html#l01030">isHet()</a>, and <a class="el" href="_geno_call_coder_8cpp-source.html#l01004">isHom()</a>.
 </div>
 </div><p>
 <a class="anchor" name="5fb926f633f51bed33b6ff0a030ed4ef"></a><!-- doxytag: member="GenoCallCoder::m_abstract_codes" ref="5fb926f633f51bed33b6ff0a030ed4ef" args="" -->
@@ -1313,9 +1313,9 @@ hard-coded codes, for now
 <p>
 
 <p>
-Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00394">394</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
+Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00376">376</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
 <p>
-Referenced by <a class="el" href="_geno_call_coder_8cpp-source.html#l00653">genotypeCallNumToAbstractAllele()</a>, and <a class="el" href="_geno_call_coder_8h-source.html#l00325">getAbstractAlleleVector()</a>.
+Referenced by <a class="el" href="_geno_call_coder_8cpp-source.html#l00702">genotypeCallNumToAbstractAllele()</a>, and <a class="el" href="_geno_call_coder_8h-source.html#l00307">getAbstractAlleleVector()</a>.
 </div>
 </div><p>
 <a class="anchor" name="f461eab1841a1aab4530f1b65ec92924"></a><!-- doxytag: member="GenoCallCoder::m_alleles" ref="f461eab1841a1aab4530f1b65ec92924" args="" -->
@@ -1334,7 +1334,7 @@ hard-coded code map, for now
 <p>
 
 <p>
-Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00396">396</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
+Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00378">378</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="5618e050d0045a7ced926662211193b4"></a><!-- doxytag: member="GenoCallCoder::m_probeset_allele_name_table" ref="5618e050d0045a7ced926662211193b4" args="" -->
@@ -1353,9 +1353,9 @@ table relating abstract alleles to allele names for each marker
 <p>
 
 <p>
-Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00398">398</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
+Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00380">380</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
 <p>
-Referenced by <a class="el" href="_geno_call_coder_8cpp-source.html#l00626">getProbesetIds()</a>, and <a class="el" href="_geno_call_coder_8cpp-source.html#l00640">getValidGenotypeCallCodes()</a>.
+Referenced by <a class="el" href="_geno_call_coder_8cpp-source.html#l00675">getProbesetIds()</a>, and <a class="el" href="_geno_call_coder_8cpp-source.html#l00689">getValidGenotypeCallCodes()</a>.
 </div>
 </div><p>
 <a class="anchor" name="4e22ed27067be3284709d25db2161853"></a><!-- doxytag: member="GenoCallCoder::m_alpha2num" ref="4e22ed27067be3284709d25db2161853" args="" -->
@@ -1374,14 +1374,14 @@ legacy code map
 <p>
 
 <p>
-Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00403">403</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
+Definition at line <a class="el" href="_geno_call_coder_8h-source.html#l00385">385</a> of file <a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a>.
 <p>
-Referenced by <a class="el" href="_geno_call_coder_8cpp-source.html#l00981">isHet()</a>, and <a class="el" href="_geno_call_coder_8cpp-source.html#l00955">isHom()</a>.
+Referenced by <a class="el" href="_geno_call_coder_8cpp-source.html#l01030">isHet()</a>, and <a class="el" href="_geno_call_coder_8cpp-source.html#l01004">isHom()</a>.
 </div>
 </div><p>
 <hr>The documentation for this class was generated from the following files:<ul>
 <li>C:/FusionSDK/affy/sdk/calvin_files/utils/src/<a class="el" href="_geno_call_coder_8h-source.html">GenoCallCoder.h</a><li>C:/FusionSDK/affy/sdk/calvin_files/utils/src/<a class="el" href="_geno_call_coder_8cpp-source.html">GenoCallCoder.cpp</a></ul>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:32 2009 for Affymetrix Fusion SDK by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:43 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

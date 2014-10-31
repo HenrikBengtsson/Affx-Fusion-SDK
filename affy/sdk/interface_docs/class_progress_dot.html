@@ -50,6 +50,8 @@
 <tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_progress_dot.html#b6d5797e40c0eb48f2ccf02a5699a018">m_Total</a></td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">How many steps total are we expecting?  <a href="#b6d5797e40c0eb48f2ccf02a5699a018"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">time_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_progress_dot.html#ce14bdd2e8e1674c995b0700474d9290">m_StartTime</a></td></tr>
+
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
 Prints dots as progress is made. 
@@ -95,7 +97,7 @@ Constructor that takes an stream for doing outputs and level at which to print m
 <p>
 Definition at line <a class="el" href="_progress_dot_8h-source.html#l00060">60</a> of file <a class="el" href="_progress_dot_8h-source.html">ProgressDot.h</a>.
 <p>
-References <a class="el" href="_progress_dot_8h-source.html#l00116">m_Out</a>, and <a class="el" href="_progress_handler_8h-source.html#l00096">ProgressHandler::m_Verbosity</a>.
+References <a class="el" href="_progress_dot_8h-source.html#l00120">m_Out</a>, <a class="el" href="_progress_dot_8h-source.html#l00121">m_Total</a>, and <a class="el" href="_progress_handler_8h-source.html#l00094">ProgressHandler::m_Verbosity</a>.
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
@@ -143,9 +145,9 @@ Begin a progress reporting. After this initial call the progressStep call will b
 <p>
 Implements <a class="el" href="class_progress_handler.html#c59a31bcce96f268c12fe10a4d4a555a">ProgressHandler</a>.
 <p>
-Definition at line <a class="el" href="_progress_dot_8h-source.html#l00077">77</a> of file <a class="el" href="_progress_dot_8h-source.html">ProgressDot.h</a>.
+Definition at line <a class="el" href="_progress_dot_8h-source.html#l00078">78</a> of file <a class="el" href="_progress_dot_8h-source.html">ProgressDot.h</a>.
 <p>
-References <a class="el" href="_progress_dot_8h-source.html#l00116">m_Out</a>, <a class="el" href="_progress_dot_8h-source.html#l00117">m_Total</a>, and <a class="el" href="_progress_handler_8h-source.html#l00096">ProgressHandler::m_Verbosity</a>.
+References <a class="el" href="_progress_dot_8h-source.html#l00120">m_Out</a>, <a class="el" href="_progress_dot_8h-source.html#l00122">m_StartTime</a>, <a class="el" href="_progress_dot_8h-source.html#l00121">m_Total</a>, and <a class="el" href="_progress_handler_8h-source.html#l00094">ProgressHandler::m_Verbosity</a>.
 </div>
 </div><p>
 <a class="anchor" name="6c75c9c696ce23d2f24261e1315efc31"></a><!-- doxytag: member="ProgressDot::progressStep" ref="6c75c9c696ce23d2f24261e1315efc31" args="(int verbosity)" -->
@@ -175,9 +177,9 @@ This function is called when one unit of work has been done. In general it is ex
 <p>
 Implements <a class="el" href="class_progress_handler.html#bc6be4d44b3e510aaa40be6a96879b17">ProgressHandler</a>.
 <p>
-Definition at line <a class="el" href="_progress_dot_8h-source.html#l00095">95</a> of file <a class="el" href="_progress_dot_8h-source.html">ProgressDot.h</a>.
+Definition at line <a class="el" href="_progress_dot_8h-source.html#l00097">97</a> of file <a class="el" href="_progress_dot_8h-source.html">ProgressDot.h</a>.
 <p>
-References <a class="el" href="_progress_dot_8h-source.html#l00116">m_Out</a>, and <a class="el" href="_progress_handler_8h-source.html#l00096">ProgressHandler::m_Verbosity</a>.
+References <a class="el" href="_progress_dot_8h-source.html#l00120">m_Out</a>, and <a class="el" href="_progress_handler_8h-source.html#l00094">ProgressHandler::m_Verbosity</a>.
 </div>
 </div><p>
 <a class="anchor" name="762fc6c84bb7da727ddb7fa849b01c34"></a><!-- doxytag: member="ProgressDot::progressEnd" ref="762fc6c84bb7da727ddb7fa849b01c34" args="(int verbosity, const std::string &amp;msg)" -->
@@ -217,9 +219,9 @@ Signals the end of progress report.<p>
 <p>
 Implements <a class="el" href="class_progress_handler.html#a6db63009cb86903f468343d8f5514d5">ProgressHandler</a>.
 <p>
-Definition at line <a class="el" href="_progress_dot_8h-source.html#l00108">108</a> of file <a class="el" href="_progress_dot_8h-source.html">ProgressDot.h</a>.
+Definition at line <a class="el" href="_progress_dot_8h-source.html#l00110">110</a> of file <a class="el" href="_progress_dot_8h-source.html">ProgressDot.h</a>.
 <p>
-References <a class="el" href="_progress_dot_8h-source.html#l00116">m_Out</a>, and <a class="el" href="_progress_handler_8h-source.html#l00096">ProgressHandler::m_Verbosity</a>.
+References <a class="el" href="_progress_dot_8h-source.html#l00120">m_Out</a>, <a class="el" href="_progress_dot_8h-source.html#l00122">m_StartTime</a>, <a class="el" href="_progress_handler_8h-source.html#l00094">ProgressHandler::m_Verbosity</a>, and <a class="el" href="_convert_8h-source.html#l00227">ToStr()</a>.
 </div>
 </div><p>
 <hr><h2>Member Data Documentation</h2>
@@ -239,9 +241,9 @@ Stream to print messages to. Can be NULL to indicate no printing.
 <p>
 
 <p>
-Definition at line <a class="el" href="_progress_dot_8h-source.html#l00116">116</a> of file <a class="el" href="_progress_dot_8h-source.html">ProgressDot.h</a>.
+Definition at line <a class="el" href="_progress_dot_8h-source.html#l00120">120</a> of file <a class="el" href="_progress_dot_8h-source.html">ProgressDot.h</a>.
 <p>
-Referenced by <a class="el" href="_progress_dot_8h-source.html#l00077">progressBegin()</a>, <a class="el" href="_progress_dot_8h-source.html#l00060">ProgressDot()</a>, <a class="el" href="_progress_dot_8h-source.html#l00108">progressEnd()</a>, and <a class="el" href="_progress_dot_8h-source.html#l00095">progressStep()</a>.
+Referenced by <a class="el" href="_progress_dot_8h-source.html#l00078">progressBegin()</a>, <a class="el" href="_progress_dot_8h-source.html#l00060">ProgressDot()</a>, <a class="el" href="_progress_dot_8h-source.html#l00110">progressEnd()</a>, and <a class="el" href="_progress_dot_8h-source.html#l00097">progressStep()</a>.
 </div>
 </div><p>
 <a class="anchor" name="b6d5797e40c0eb48f2ccf02a5699a018"></a><!-- doxytag: member="ProgressDot::m_Total" ref="b6d5797e40c0eb48f2ccf02a5699a018" args="" -->
@@ -260,14 +262,33 @@ How many steps total are we expecting?
 <p>
 
 <p>
-Definition at line <a class="el" href="_progress_dot_8h-source.html#l00117">117</a> of file <a class="el" href="_progress_dot_8h-source.html">ProgressDot.h</a>.
+Definition at line <a class="el" href="_progress_dot_8h-source.html#l00121">121</a> of file <a class="el" href="_progress_dot_8h-source.html">ProgressDot.h</a>.
 <p>
-Referenced by <a class="el" href="_progress_dot_8h-source.html#l00077">progressBegin()</a>.
+Referenced by <a class="el" href="_progress_dot_8h-source.html#l00078">progressBegin()</a>, and <a class="el" href="_progress_dot_8h-source.html#l00060">ProgressDot()</a>.
+</div>
+</div><p>
+<a class="anchor" name="ce14bdd2e8e1674c995b0700474d9290"></a><!-- doxytag: member="ProgressDot::m_StartTime" ref="ce14bdd2e8e1674c995b0700474d9290" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">time_t <a class="el" href="class_progress_dot.html#ce14bdd2e8e1674c995b0700474d9290">ProgressDot::m_StartTime</a><code> [private]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>
+Definition at line <a class="el" href="_progress_dot_8h-source.html#l00122">122</a> of file <a class="el" href="_progress_dot_8h-source.html">ProgressDot.h</a>.
+<p>
+Referenced by <a class="el" href="_progress_dot_8h-source.html#l00078">progressBegin()</a>, and <a class="el" href="_progress_dot_8h-source.html#l00110">progressEnd()</a>.
 </div>
 </div><p>
 <hr>The documentation for this class was generated from the following file:<ul>
 <li>C:/FusionSDK/affy/sdk/util/<a class="el" href="_progress_dot_8h-source.html">ProgressDot.h</a></ul>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:34 2009 for Affymetrix Fusion SDK by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:45 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

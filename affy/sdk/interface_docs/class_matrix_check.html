@@ -22,17 +22,16 @@
     <li><a href="functions.html"><span>Class&nbsp;Members</span></a></li>
   </ul>
 </div>
-<h1>MatrixCheck Class Reference</h1><!-- doxytag: class="MatrixCheck" --><!-- doxytag: inherits="RegressionCheck" --><code>#include &lt;<a class="el" href="_matrix_check_8h-source.html">MatrixCheck.h</a>&gt;</code>
+<h1>MatrixCheck Class Reference</h1><!-- doxytag: class="MatrixCheck" --><code>#include &lt;<a class="el" href="_matrix_check_8h-source.html">MatrixCheck.h</a>&gt;</code>
 <p>
-<p>Inheritance diagram for MatrixCheck:
-<p><center><img src="class_matrix_check.png" usemap="#MatrixCheck_map" border="0" alt=""></center>
-<map name="MatrixCheck_map">
-<area href="class_regression_check.html" alt="RegressionCheck" shape="rect" coords="0,0,111,24">
-</map>
 <a href="class_matrix_check-members.html">List of all members.</a><table border="0" cellpadding="0" cellspacing="0">
 <tr><td></td></tr>
 <tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix_check.html#9aa9be5ba0263034a5a211745ef9b1d7">MatrixCheck</a> (const std::string &amp;generated, const std::string &amp;gold, double eps, int rowSkip, int colSkip, bool matchNames, unsigned int allowedMisMatch)</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix_check.html#4109c77346eee76941ee2c44907fbe5e">MatrixCheck</a> (const std::string &amp;generated, const std::string &amp;gold, double eps, int rowSkip, int colSkip, bool matchNames, unsigned int allowedMisMatch, double frac=0.0)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix_check.html#81025a65f7199e7a0158fb2cab80609d">setPrintMismatch</a> (bool print)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix_check.html#5d67275ab123d3a65e227416feac156b">setPrintMismatchMax</a> (int max)</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix_check.html#65b3ddd773bb9d1c406ce940bcc50260">check</a> (std::string &amp;msg)</td></tr>
 
@@ -46,6 +45,9 @@
 <tr><td class="memItemLeft" nowrap align="right" valign="top">double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix_check.html#656174804d64b95cbac1c8a788e0382a">m_Epsilon</a></td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Maximum abosolute difference from truth acceptable.  <a href="#656174804d64b95cbac1c8a788e0382a"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix_check.html#20096b0f66751a2c4009b9c53fecfde4">m_Fraction</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Maximum fractional difference from truth acceptable.  <a href="#20096b0f66751a2c4009b9c53fecfde4"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix_check.html#c19282b2db8d53d0129b518e87c80e7d">m_RowSkip</a></td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Number of rows to skip before comparing.  <a href="#c19282b2db8d53d0129b518e87c80e7d"></a><br></td></tr>
@@ -57,6 +59,12 @@
 <tr><td class="memItemLeft" nowrap align="right" valign="top">unsigned int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix_check.html#f43032438ac5111c8854b65b4e70e6ec">m_AllowedMisMatch</a></td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">How many can we get wrong before failing?  <a href="#f43032438ac5111c8854b65b4e70e6ec"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix_check.html#b81a0ae9e22761e44d908d0f64db14dc">m_PrintMismatch</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Mismatches printed if true, not printed if false.  <a href="#b81a0ae9e22761e44d908d0f64db14dc"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix_check.html#c097f17ed4650e8c259a9c31931c41b7">m_PrintMismatchMax</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Maximum number of mismatches to print (default -1 for no limit).  <a href="#c097f17ed4650e8c259a9c31931c41b7"></a><br></td></tr>
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
 Class for testing that two files are the same +/- some epsilon. Currently only supports tab separated matrixes of numerical data. 
@@ -64,7 +72,7 @@ Class for testing that two files are the same +/- some epsilon. Currently only s
 
 <p>
 Definition at line <a class="el" href="_matrix_check_8h-source.html#l00046">46</a> of file <a class="el" href="_matrix_check_8h-source.html">MatrixCheck.h</a>.<hr><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" name="9aa9be5ba0263034a5a211745ef9b1d7"></a><!-- doxytag: member="MatrixCheck::MatrixCheck" ref="9aa9be5ba0263034a5a211745ef9b1d7" args="(const std::string &amp;generated, const std::string &amp;gold, double eps, int rowSkip, int colSkip, bool matchNames, unsigned int allowedMisMatch)" -->
+<a class="anchor" name="4109c77346eee76941ee2c44907fbe5e"></a><!-- doxytag: member="MatrixCheck::MatrixCheck" ref="4109c77346eee76941ee2c44907fbe5e" args="(const std::string &amp;generated, const std::string &amp;gold, double eps, int rowSkip, int colSkip, bool matchNames, unsigned int allowedMisMatch, double frac=0.0)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -108,7 +116,13 @@ Definition at line <a class="el" href="_matrix_check_8h-source.html#l00046">46</
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">unsigned int&nbsp;</td>
-          <td class="paramname"> <em>allowedMisMatch</em></td><td>&nbsp;</td>
+          <td class="paramname"> <em>allowedMisMatch</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>frac</em> = <code>0.0</code></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
@@ -130,16 +144,77 @@ Constructor.<p>
     <tr><td valign="top"></td><td valign="top"><em>colSkip</em>&nbsp;</td><td>- Number of columns to skip before comparing. </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>matchNames</em>&nbsp;</td><td>- Should we try to match the names using first column? Useful when the files aren't necessarily in same order. </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>allowedMisMatch</em>&nbsp;</td><td>- How many can we get wrong before failing? </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>frac</em>&nbsp;</td><td>- Maximum fractional difference from truth acceptable </td></tr>
   </table>
 </dl>
 
 <p>
-Definition at line <a class="el" href="_matrix_check_8h-source.html#l00063">63</a> of file <a class="el" href="_matrix_check_8h-source.html">MatrixCheck.h</a>.
+Definition at line <a class="el" href="_matrix_check_8h-source.html#l00064">64</a> of file <a class="el" href="_matrix_check_8h-source.html">MatrixCheck.h</a>.
 <p>
-References <a class="el" href="_util_8cpp-source.html#l00684">Util::fileRoot()</a>, and <a class="el" href="_regression_check_8h-source.html#l00137">RegressionCheck::m_Name</a>.
+References <a class="el" href="_fs_8cpp-source.html#l00368">Fs::basename()</a>.
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
+<a class="anchor" name="81025a65f7199e7a0158fb2cab80609d"></a><!-- doxytag: member="MatrixCheck::setPrintMismatch" ref="81025a65f7199e7a0158fb2cab80609d" args="(bool print)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MatrixCheck::setPrintMismatch           </td>
+          <td>(</td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>print</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Utility function to enable/disable reporting of individual differences <dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>print</em>&nbsp;</td><td>- mismatches printed if true, not printed if false. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>- void </dd></dl>
+
+<p>
+Definition at line <a class="el" href="_matrix_check_8h-source.html#l00084">84</a> of file <a class="el" href="_matrix_check_8h-source.html">MatrixCheck.h</a>.
+<p>
+References <a class="el" href="_matrix_check_8h-source.html#l00156">m_PrintMismatch</a>.
+</div>
+</div><p>
+<a class="anchor" name="5d67275ab123d3a65e227416feac156b"></a><!-- doxytag: member="MatrixCheck::setPrintMismatchMax" ref="5d67275ab123d3a65e227416feac156b" args="(int max)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MatrixCheck::setPrintMismatchMax           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>max</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Utility function to set the max number of mismatches reported <dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>max</em>&nbsp;</td><td>- maximum number of mismatches to report (set to -1 for no limit default behavior) </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>- void </dd></dl>
+
+<p>
+Definition at line <a class="el" href="_matrix_check_8h-source.html#l00093">93</a> of file <a class="el" href="_matrix_check_8h-source.html">MatrixCheck.h</a>.
+<p>
+References <a class="el" href="_matrix_check_8h-source.html#l00157">m_PrintMismatchMax</a>.
+</div>
+</div><p>
 <a class="anchor" name="65b3ddd773bb9d1c406ce940bcc50260"></a><!-- doxytag: member="MatrixCheck::check" ref="65b3ddd773bb9d1c406ce940bcc50260" args="(std::string &amp;msg)" -->
 <div class="memitem">
 <div class="memproto">
@@ -150,7 +225,7 @@ References <a class="el" href="_util_8cpp-source.html#l00684">Util::fileRoot()</
           <td class="paramtype">std::string &amp;&nbsp;</td>
           <td class="paramname"> <em>msg</em>          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td width="100%"><code> [inline, virtual]</code></td>
+          <td width="100%"><code> [inline]</code></td>
         </tr>
       </table>
 </div>
@@ -165,11 +240,11 @@ Check to make sure that two files are the same +/- some epsilon. <dl compact><dt
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>- Returns true if files are close enough, false otherwise. </dd></dl>
 
 <p>
-Implements <a class="el" href="class_regression_check.html#417b6199813eaa14192b5ea353582335">RegressionCheck</a>.
+Definition at line <a class="el" href="_matrix_check_8h-source.html#l00102">102</a> of file <a class="el" href="_matrix_check_8h-source.html">MatrixCheck.h</a>.
 <p>
-Definition at line <a class="el" href="_matrix_check_8h-source.html#l00082">82</a> of file <a class="el" href="_matrix_check_8h-source.html">MatrixCheck.h</a>.
+References <a class="el" href="_fs_8cpp-source.html#l00599">Fs::convertToUncPath()</a>, <a class="el" href="_fs_8h-source.html#l00031">FS_QUOTE_PATH</a>, <a class="el" href="_fs_8cpp-source.html#l00753">Fs::isReadable()</a>, <a class="el" href="_matrix_check_8h-source.html#l00155">m_AllowedMisMatch</a>, <a class="el" href="_matrix_check_8h-source.html#l00151">m_ColSkip</a>, <a class="el" href="_matrix_check_8h-source.html#l00148">m_Epsilon</a>, <a class="el" href="_matrix_check_8h-source.html#l00149">m_Fraction</a>, <a class="el" href="_matrix_check_8h-source.html#l00146">m_Generated</a>, <a class="el" href="_matrix_check_8h-source.html#l00147">m_Gold</a>, <a class="el" href="_matrix_check_8h-source.html#l00152">m_MatchNames</a>, <a class="el" href="_matrix_check_8h-source.html#l00156">m_PrintMismatch</a>, <a class="el" href="_matrix_check_8h-source.html#l00157">m_PrintMismatchMax</a>, <a class="el" href="_matrix_check_8h-source.html#l00150">m_RowSkip</a>, <a class="el" href="_util_8cpp-source.html#l00315">Util::matrixDifferences()</a>, <a class="el" href="_err_8cpp-source.html#l00111">Err::setThrowStatus()</a>, <a class="el" href="_convert_8h-source.html#l00227">ToStr()</a>, and <a class="el" href="_except_8h-source.html#l00058">Except::what()</a>.
 <p>
-References <a class="el" href="_util_8cpp-source.html#l00887">Util::convertPathName()</a>, <a class="el" href="_util_8cpp-source.html#l00267">Util::fileReadable()</a>, <a class="el" href="_matrix_check_8h-source.html#l00133">m_AllowedMisMatch</a>, <a class="el" href="_matrix_check_8h-source.html#l00129">m_ColSkip</a>, <a class="el" href="_matrix_check_8h-source.html#l00127">m_Epsilon</a>, <a class="el" href="_matrix_check_8h-source.html#l00125">m_Generated</a>, <a class="el" href="_matrix_check_8h-source.html#l00126">m_Gold</a>, <a class="el" href="_matrix_check_8h-source.html#l00130">m_MatchNames</a>, <a class="el" href="_matrix_check_8h-source.html#l00128">m_RowSkip</a>, <a class="el" href="_util_8cpp-source.html#l00716">Util::matrixDifferences()</a>, <a class="el" href="_err_8cpp-source.html#l00080">Err::popHandler()</a>, <a class="el" href="_err_8cpp-source.html#l00095">Err::setThrowStatus()</a>, <a class="el" href="_convert_8h-source.html#l00046">ToStr()</a>, and <a class="el" href="_except_8h-source.html#l00060">Except::what()</a>.
+Referenced by <a class="el" href="apt-check-matrix_8cpp-source.html#l00037">main()</a>.
 </div>
 </div><p>
 <hr><h2>Member Data Documentation</h2>
@@ -189,9 +264,9 @@ File created by application being tested.
 <p>
 
 <p>
-Definition at line <a class="el" href="_matrix_check_8h-source.html#l00125">125</a> of file <a class="el" href="_matrix_check_8h-source.html">MatrixCheck.h</a>.
+Definition at line <a class="el" href="_matrix_check_8h-source.html#l00146">146</a> of file <a class="el" href="_matrix_check_8h-source.html">MatrixCheck.h</a>.
 <p>
-Referenced by <a class="el" href="_matrix_check_8h-source.html#l00082">check()</a>.
+Referenced by <a class="el" href="_matrix_check_8h-source.html#l00102">check()</a>.
 </div>
 </div><p>
 <a class="anchor" name="40ea976fde3e4a6d119b7de7ca7dd45c"></a><!-- doxytag: member="MatrixCheck::m_Gold" ref="40ea976fde3e4a6d119b7de7ca7dd45c" args="" -->
@@ -210,9 +285,9 @@ File believed to be "truth".
 <p>
 
 <p>
-Definition at line <a class="el" href="_matrix_check_8h-source.html#l00126">126</a> of file <a class="el" href="_matrix_check_8h-source.html">MatrixCheck.h</a>.
+Definition at line <a class="el" href="_matrix_check_8h-source.html#l00147">147</a> of file <a class="el" href="_matrix_check_8h-source.html">MatrixCheck.h</a>.
 <p>
-Referenced by <a class="el" href="_matrix_check_8h-source.html#l00082">check()</a>.
+Referenced by <a class="el" href="_matrix_check_8h-source.html#l00102">check()</a>.
 </div>
 </div><p>
 <a class="anchor" name="656174804d64b95cbac1c8a788e0382a"></a><!-- doxytag: member="MatrixCheck::m_Epsilon" ref="656174804d64b95cbac1c8a788e0382a" args="" -->
@@ -231,9 +306,30 @@ Maximum abosolute difference from truth acceptable.
 <p>
 
 <p>
-Definition at line <a class="el" href="_matrix_check_8h-source.html#l00127">127</a> of file <a class="el" href="_matrix_check_8h-source.html">MatrixCheck.h</a>.
+Definition at line <a class="el" href="_matrix_check_8h-source.html#l00148">148</a> of file <a class="el" href="_matrix_check_8h-source.html">MatrixCheck.h</a>.
 <p>
-Referenced by <a class="el" href="_matrix_check_8h-source.html#l00082">check()</a>.
+Referenced by <a class="el" href="_matrix_check_8h-source.html#l00102">check()</a>.
+</div>
+</div><p>
+<a class="anchor" name="20096b0f66751a2c4009b9c53fecfde4"></a><!-- doxytag: member="MatrixCheck::m_Fraction" ref="20096b0f66751a2c4009b9c53fecfde4" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="class_matrix_check.html#20096b0f66751a2c4009b9c53fecfde4">MatrixCheck::m_Fraction</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Maximum fractional difference from truth acceptable. 
+<p>
+
+<p>
+Definition at line <a class="el" href="_matrix_check_8h-source.html#l00149">149</a> of file <a class="el" href="_matrix_check_8h-source.html">MatrixCheck.h</a>.
+<p>
+Referenced by <a class="el" href="_matrix_check_8h-source.html#l00102">check()</a>.
 </div>
 </div><p>
 <a class="anchor" name="c19282b2db8d53d0129b518e87c80e7d"></a><!-- doxytag: member="MatrixCheck::m_RowSkip" ref="c19282b2db8d53d0129b518e87c80e7d" args="" -->
@@ -252,9 +348,9 @@ Number of rows to skip before comparing.
 <p>
 
 <p>
-Definition at line <a class="el" href="_matrix_check_8h-source.html#l00128">128</a> of file <a class="el" href="_matrix_check_8h-source.html">MatrixCheck.h</a>.
+Definition at line <a class="el" href="_matrix_check_8h-source.html#l00150">150</a> of file <a class="el" href="_matrix_check_8h-source.html">MatrixCheck.h</a>.
 <p>
-Referenced by <a class="el" href="_matrix_check_8h-source.html#l00082">check()</a>.
+Referenced by <a class="el" href="_matrix_check_8h-source.html#l00102">check()</a>.
 </div>
 </div><p>
 <a class="anchor" name="bdbf6f52405695543ca67d98126ee89b"></a><!-- doxytag: member="MatrixCheck::m_ColSkip" ref="bdbf6f52405695543ca67d98126ee89b" args="" -->
@@ -273,9 +369,9 @@ Number of columns to skip before comparing.
 <p>
 
 <p>
-Definition at line <a class="el" href="_matrix_check_8h-source.html#l00129">129</a> of file <a class="el" href="_matrix_check_8h-source.html">MatrixCheck.h</a>.
+Definition at line <a class="el" href="_matrix_check_8h-source.html#l00151">151</a> of file <a class="el" href="_matrix_check_8h-source.html">MatrixCheck.h</a>.
 <p>
-Referenced by <a class="el" href="_matrix_check_8h-source.html#l00082">check()</a>.
+Referenced by <a class="el" href="_matrix_check_8h-source.html#l00102">check()</a>.
 </div>
 </div><p>
 <a class="anchor" name="409e5d11871f433bc561cbc9addc6538"></a><!-- doxytag: member="MatrixCheck::m_MatchNames" ref="409e5d11871f433bc561cbc9addc6538" args="" -->
@@ -292,9 +388,9 @@ Referenced by <a class="el" href="_matrix_check_8h-source.html#l00082">check()</
 <p>
 Should we try to match the names using first column? Useful when the files aren't necessarily in same order. 
 <p>
-Definition at line <a class="el" href="_matrix_check_8h-source.html#l00130">130</a> of file <a class="el" href="_matrix_check_8h-source.html">MatrixCheck.h</a>.
+Definition at line <a class="el" href="_matrix_check_8h-source.html#l00152">152</a> of file <a class="el" href="_matrix_check_8h-source.html">MatrixCheck.h</a>.
 <p>
-Referenced by <a class="el" href="_matrix_check_8h-source.html#l00082">check()</a>.
+Referenced by <a class="el" href="_matrix_check_8h-source.html#l00102">check()</a>.
 </div>
 </div><p>
 <a class="anchor" name="f43032438ac5111c8854b65b4e70e6ec"></a><!-- doxytag: member="MatrixCheck::m_AllowedMisMatch" ref="f43032438ac5111c8854b65b4e70e6ec" args="" -->
@@ -313,14 +409,56 @@ How many can we get wrong before failing?
 <p>
 
 <p>
-Definition at line <a class="el" href="_matrix_check_8h-source.html#l00133">133</a> of file <a class="el" href="_matrix_check_8h-source.html">MatrixCheck.h</a>.
+Definition at line <a class="el" href="_matrix_check_8h-source.html#l00155">155</a> of file <a class="el" href="_matrix_check_8h-source.html">MatrixCheck.h</a>.
 <p>
-Referenced by <a class="el" href="_matrix_check_8h-source.html#l00082">check()</a>.
+Referenced by <a class="el" href="_matrix_check_8h-source.html#l00102">check()</a>.
+</div>
+</div><p>
+<a class="anchor" name="b81a0ae9e22761e44d908d0f64db14dc"></a><!-- doxytag: member="MatrixCheck::m_PrintMismatch" ref="b81a0ae9e22761e44d908d0f64db14dc" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_matrix_check.html#b81a0ae9e22761e44d908d0f64db14dc">MatrixCheck::m_PrintMismatch</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Mismatches printed if true, not printed if false. 
+<p>
+
+<p>
+Definition at line <a class="el" href="_matrix_check_8h-source.html#l00156">156</a> of file <a class="el" href="_matrix_check_8h-source.html">MatrixCheck.h</a>.
+<p>
+Referenced by <a class="el" href="_matrix_check_8h-source.html#l00102">check()</a>, and <a class="el" href="_matrix_check_8h-source.html#l00084">setPrintMismatch()</a>.
+</div>
+</div><p>
+<a class="anchor" name="c097f17ed4650e8c259a9c31931c41b7"></a><!-- doxytag: member="MatrixCheck::m_PrintMismatchMax" ref="c097f17ed4650e8c259a9c31931c41b7" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="class_matrix_check.html#c097f17ed4650e8c259a9c31931c41b7">MatrixCheck::m_PrintMismatchMax</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Maximum number of mismatches to print (default -1 for no limit). 
+<p>
+
+<p>
+Definition at line <a class="el" href="_matrix_check_8h-source.html#l00157">157</a> of file <a class="el" href="_matrix_check_8h-source.html">MatrixCheck.h</a>.
+<p>
+Referenced by <a class="el" href="_matrix_check_8h-source.html#l00102">check()</a>, and <a class="el" href="_matrix_check_8h-source.html#l00093">setPrintMismatchMax()</a>.
 </div>
 </div><p>
 <hr>The documentation for this class was generated from the following file:<ul>
 <li>C:/FusionSDK/affy/sdk/util/<a class="el" href="_matrix_check_8h-source.html">MatrixCheck.h</a></ul>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:33 2009 for Affymetrix Fusion SDK by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:45 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

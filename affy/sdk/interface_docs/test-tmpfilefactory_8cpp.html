@@ -23,7 +23,8 @@
 </div>
 <div class="nav">
 <a class="el" href="dir_0083bb8eedef7fed63dbf70caf86d00a.html">FusionSDK</a>&nbsp;&raquo&nbsp;<a class="el" href="dir_e86b6dbad4e625ef3fbba6406e2d4163.html">affy</a>&nbsp;&raquo&nbsp;<a class="el" href="dir_f87490fa8939fe2ce5b8b80cbaa3c2fa.html">sdk</a>&nbsp;&raquo&nbsp;<a class="el" href="dir_374f7a135d973daad145d25feb2e5488.html">util</a></div>
-<h1>test-tmpfilefactory.cpp File Reference</h1><code>#include &quot;<a class="el" href="_pg_options_8h-source.html">util/PgOptions.h</a>&quot;</code><br>
+<h1>test-tmpfilefactory.cpp File Reference</h1><code>#include &quot;<a class="el" href="_fs_8h-source.html">util/Fs.h</a>&quot;</code><br>
+<code>#include &quot;<a class="el" href="_pg_options_8h-source.html">util/PgOptions.h</a>&quot;</code><br>
 <code>#include &quot;<a class="el" href="_tmp_file_factory_8h-source.html">util/TmpFileFactory.h</a>&quot;</code><br>
 <code>#include &quot;<a class="el" href="_util_8h-source.html">util/Util.h</a>&quot;</code><br>
 <code>#include &lt;cassert&gt;</code><br>
@@ -87,9 +88,9 @@
 <p>
 
 <p>
-Definition at line <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00145">145</a> of file <a class="el" href="test-tmpfilefactory_8cpp-source.html">test-tmpfilefactory.cpp</a>.
+Definition at line <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00144">144</a> of file <a class="el" href="test-tmpfilefactory_8cpp-source.html">test-tmpfilefactory.cpp</a>.
 <p>
-References <a class="el" href="_pg_options_8h-source.html#l00117">PgOpt::BOOL_OPT</a>, <a class="el" href="_pg_options_8cpp-source.html#l00527">PgOptions::defineOption()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00850">PgOptions::getInt()</a>, <a class="el" href="_tmp_file_factory_8cpp-source.html#l00063">GlobalTmpFileFactory()</a>, <a class="el" href="_tmp_file_factory_8cpp-source.html#l00073">GlobalTmpFileFactoryFree()</a>, <a class="el" href="_pg_options_8h-source.html#l00119">PgOpt::INT_OPT</a>, <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00037">opt_debug</a>, <a class="el" href="tsv-example_8cpp-source.html#l00052">opt_verbose</a>, <a class="el" href="_pg_options_8cpp-source.html#l00653">PgOptions::parseArgv()</a>, <a class="el" href="_tmp_file_factory_8cpp-source.html#l00113">TmpFileFactory::setDebug()</a>, <a class="el" href="_tmp_file_factory_8cpp-source.html#l00129">TmpFileFactory::setPrefix()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00429">PgOptions::setUsage()</a>, <a class="el" href="_tmp_file_factory_8cpp-source.html#l00118">TmpFileFactory::setVerbose()</a>, <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00058">test_1()</a>, <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00091">test_2()</a>, <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00105">test_3()</a>, and <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00125">test_4()</a>.
+References <a class="el" href="_pg_options_8h-source.html#l00113">PgOpt::BOOL_OPT</a>, <a class="el" href="_pg_options_8cpp-source.html#l00535">PgOptions::defineOption()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00835">PgOptions::getInt()</a>, <a class="el" href="_tmp_file_factory_8cpp-source.html#l00056">GlobalTmpFileFactory()</a>, <a class="el" href="_tmp_file_factory_8cpp-source.html#l00066">GlobalTmpFileFactoryFree()</a>, <a class="el" href="_pg_options_8h-source.html#l00115">PgOpt::INT_OPT</a>, <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00036">opt_debug</a>, <a class="el" href="tsv-example_8cpp-source.html#l00052">opt_verbose</a>, <a class="el" href="_pg_options_8cpp-source.html#l00645">PgOptions::parseArgv()</a>, <a class="el" href="_tmp_file_factory_8cpp-source.html#l00106">TmpFileFactory::setDebug()</a>, <a class="el" href="_tmp_file_factory_8cpp-source.html#l00122">TmpFileFactory::setPrefix()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00431">PgOptions::setUsage()</a>, <a class="el" href="_tmp_file_factory_8cpp-source.html#l00111">TmpFileFactory::setVerbose()</a>, <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00057">test_1()</a>, <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00090">test_2()</a>, <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00104">test_3()</a>, and <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00124">test_4()</a>.
 </div>
 </div><p>
 <a class="anchor" name="51e1074e8597e86adc19d4af6a2a8b7c"></a><!-- doxytag: member="test-tmpfilefactory.cpp::test_1" ref="51e1074e8597e86adc19d4af6a2a8b7c" args="()" -->
@@ -110,11 +111,11 @@ References <a class="el" href="_pg_options_8h-source.html#l00117">PgOpt::BOOL_OP
 <p>
 
 <p>
-Definition at line <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00058">58</a> of file <a class="el" href="test-tmpfilefactory_8cpp-source.html">test-tmpfilefactory.cpp</a>.
+Definition at line <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00057">57</a> of file <a class="el" href="test-tmpfilefactory_8cpp-source.html">test-tmpfilefactory.cpp</a>.
 <p>
-References <a class="el" href="_tmp_file_factory_8cpp-source.html#l00219">TmpFileFactory::genFilename()</a>, <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00037">opt_debug</a>, <a class="el" href="tsv-example_8cpp-source.html#l00052">opt_verbose</a>, <a class="el" href="_tmp_file_factory_8cpp-source.html#l00113">TmpFileFactory::setDebug()</a>, <a class="el" href="_tmp_file_factory_8cpp-source.html#l00129">TmpFileFactory::setPrefix()</a>, <a class="el" href="_tmp_file_factory_8cpp-source.html#l00118">TmpFileFactory::setVerbose()</a>, and <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00045">test_write_data()</a>.
+References <a class="el" href="_tmp_file_factory_8cpp-source.html#l00212">TmpFileFactory::genFilename()</a>, <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00036">opt_debug</a>, <a class="el" href="tsv-example_8cpp-source.html#l00052">opt_verbose</a>, <a class="el" href="_tmp_file_factory_8cpp-source.html#l00106">TmpFileFactory::setDebug()</a>, <a class="el" href="_tmp_file_factory_8cpp-source.html#l00122">TmpFileFactory::setPrefix()</a>, <a class="el" href="_tmp_file_factory_8cpp-source.html#l00111">TmpFileFactory::setVerbose()</a>, and <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00044">test_write_data()</a>.
 <p>
-Referenced by <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00145">main()</a>.
+Referenced by <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00144">main()</a>.
 </div>
 </div><p>
 <a class="anchor" name="84e7b6f9627cfde596e6e95bc4f5f630"></a><!-- doxytag: member="test-tmpfilefactory.cpp::test_2" ref="84e7b6f9627cfde596e6e95bc4f5f630" args="()" -->
@@ -135,11 +136,11 @@ Referenced by <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00145">m
 <p>
 
 <p>
-Definition at line <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00091">91</a> of file <a class="el" href="test-tmpfilefactory_8cpp-source.html">test-tmpfilefactory.cpp</a>.
+Definition at line <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00090">90</a> of file <a class="el" href="test-tmpfilefactory_8cpp-source.html">test-tmpfilefactory.cpp</a>.
 <p>
-References <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00037">opt_debug</a>, <a class="el" href="tsv-example_8cpp-source.html#l00052">opt_verbose</a>, <a class="el" href="_tmp_file_factory_8cpp-source.html#l00113">TmpFileFactory::setDebug()</a>, <a class="el" href="_tmp_file_factory_8cpp-source.html#l00129">TmpFileFactory::setPrefix()</a>, <a class="el" href="_tmp_file_factory_8cpp-source.html#l00118">TmpFileFactory::setVerbose()</a>, and <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00083">test_2_helper()</a>.
+References <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00036">opt_debug</a>, <a class="el" href="tsv-example_8cpp-source.html#l00052">opt_verbose</a>, <a class="el" href="_tmp_file_factory_8cpp-source.html#l00106">TmpFileFactory::setDebug()</a>, <a class="el" href="_tmp_file_factory_8cpp-source.html#l00122">TmpFileFactory::setPrefix()</a>, <a class="el" href="_tmp_file_factory_8cpp-source.html#l00111">TmpFileFactory::setVerbose()</a>, and <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00082">test_2_helper()</a>.
 <p>
-Referenced by <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00145">main()</a>.
+Referenced by <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00144">main()</a>.
 </div>
 </div><p>
 <a class="anchor" name="e9fbac4ff54a124fc2945afa4c2254f5"></a><!-- doxytag: member="test-tmpfilefactory.cpp::test_2_helper" ref="e9fbac4ff54a124fc2945afa4c2254f5" args="(TmpFileFactory *tff, int cnt)" -->
@@ -170,11 +171,11 @@ Referenced by <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00145">m
 <p>
 this function has a <a class="el" href="class_tmp_file_factory.html" title="Allocate temporary filenames and arrange to remove them when done.">TmpFileFactory</a> pointer passed into it. the allocations are done within its context. 
 <p>
-Definition at line <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00083">83</a> of file <a class="el" href="test-tmpfilefactory_8cpp-source.html">test-tmpfilefactory.cpp</a>.
+Definition at line <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00082">82</a> of file <a class="el" href="test-tmpfilefactory_8cpp-source.html">test-tmpfilefactory.cpp</a>.
 <p>
-References <a class="el" href="_tmp_file_factory_8cpp-source.html#l00219">TmpFileFactory::genFilename()</a>.
+References <a class="el" href="_tmp_file_factory_8cpp-source.html#l00212">TmpFileFactory::genFilename()</a>.
 <p>
-Referenced by <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00091">test_2()</a>, and <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00105">test_3()</a>.
+Referenced by <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00090">test_2()</a>, and <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00104">test_3()</a>.
 </div>
 </div><p>
 <a class="anchor" name="5d0d8eaf6d6bc133466babc9f4af6c0e"></a><!-- doxytag: member="test-tmpfilefactory.cpp::test_3" ref="5d0d8eaf6d6bc133466babc9f4af6c0e" args="()" -->
@@ -195,11 +196,11 @@ Referenced by <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00091">t
 <p>
 
 <p>
-Definition at line <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00105">105</a> of file <a class="el" href="test-tmpfilefactory_8cpp-source.html">test-tmpfilefactory.cpp</a>.
+Definition at line <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00104">104</a> of file <a class="el" href="test-tmpfilefactory_8cpp-source.html">test-tmpfilefactory.cpp</a>.
 <p>
-References <a class="el" href="_tmp_file_factory_8cpp-source.html#l00245">TmpFileFactory::genDirname()</a>, <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00037">opt_debug</a>, <a class="el" href="tsv-example_8cpp-source.html#l00052">opt_verbose</a>, <a class="el" href="_tmp_file_factory_8cpp-source.html#l00113">TmpFileFactory::setDebug()</a>, <a class="el" href="_tmp_file_factory_8cpp-source.html#l00129">TmpFileFactory::setPrefix()</a>, <a class="el" href="_tmp_file_factory_8cpp-source.html#l00124">TmpFileFactory::setTmpdir()</a>, <a class="el" href="_tmp_file_factory_8cpp-source.html#l00118">TmpFileFactory::setVerbose()</a>, and <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00083">test_2_helper()</a>.
+References <a class="el" href="_tmp_file_factory_8cpp-source.html#l00238">TmpFileFactory::genDirname()</a>, <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00036">opt_debug</a>, <a class="el" href="tsv-example_8cpp-source.html#l00052">opt_verbose</a>, <a class="el" href="_tmp_file_factory_8cpp-source.html#l00106">TmpFileFactory::setDebug()</a>, <a class="el" href="_tmp_file_factory_8cpp-source.html#l00122">TmpFileFactory::setPrefix()</a>, <a class="el" href="_tmp_file_factory_8cpp-source.html#l00117">TmpFileFactory::setTmpdir()</a>, <a class="el" href="_tmp_file_factory_8cpp-source.html#l00111">TmpFileFactory::setVerbose()</a>, and <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00082">test_2_helper()</a>.
 <p>
-Referenced by <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00145">main()</a>.
+Referenced by <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00144">main()</a>.
 </div>
 </div><p>
 <a class="anchor" name="c2d663bc82c908d24c3dbe730fd38437"></a><!-- doxytag: member="test-tmpfilefactory.cpp::test_4" ref="c2d663bc82c908d24c3dbe730fd38437" args="()" -->
@@ -220,11 +221,11 @@ Referenced by <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00145">m
 <p>
 
 <p>
-Definition at line <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00125">125</a> of file <a class="el" href="test-tmpfilefactory_8cpp-source.html">test-tmpfilefactory.cpp</a>.
+Definition at line <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00124">124</a> of file <a class="el" href="test-tmpfilefactory_8cpp-source.html">test-tmpfilefactory.cpp</a>.
 <p>
-References <a class="el" href="_tmp_file_factory_8cpp-source.html#l00063">GlobalTmpFileFactory()</a>, <a class="el" href="_tmp_file_factory_8cpp-source.html#l00124">TmpFileFactory::setTmpdir()</a>, and <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00045">test_write_data()</a>.
+References <a class="el" href="_tmp_file_factory_8cpp-source.html#l00056">GlobalTmpFileFactory()</a>, <a class="el" href="_tmp_file_factory_8cpp-source.html#l00117">TmpFileFactory::setTmpdir()</a>, and <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00044">test_write_data()</a>.
 <p>
-Referenced by <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00145">main()</a>.
+Referenced by <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00144">main()</a>.
 </div>
 </div><p>
 <a class="anchor" name="7ff5344c62b811e137fbc80b2579819a"></a><!-- doxytag: member="test-tmpfilefactory.cpp::test_write_data" ref="7ff5344c62b811e137fbc80b2579819a" args="(const std::string &amp;filename)" -->
@@ -253,11 +254,11 @@ Dump the filename to the file as test data.
 </dl>
 
 <p>
-Definition at line <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00045">45</a> of file <a class="el" href="test-tmpfilefactory_8cpp-source.html">test-tmpfilefactory.cpp</a>.
+Definition at line <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00044">44</a> of file <a class="el" href="test-tmpfilefactory_8cpp-source.html">test-tmpfilefactory.cpp</a>.
 <p>
-References <a class="el" href="_util_8cpp-source.html#l00267">Util::fileReadable()</a>.
+References <a class="el" href="_fs_8cpp-source.html#l00753">Fs::isReadable()</a>.
 <p>
-Referenced by <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00058">test_1()</a>, and <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00125">test_4()</a>.
+Referenced by <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00057">test_1()</a>, and <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00124">test_4()</a>.
 </div>
 </div><p>
 <hr><h2>Variable Documentation</h2>
@@ -275,9 +276,9 @@ Referenced by <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00058">t
 <p>
 
 <p>
-Definition at line <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00037">37</a> of file <a class="el" href="test-tmpfilefactory_8cpp-source.html">test-tmpfilefactory.cpp</a>.
+Definition at line <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00036">36</a> of file <a class="el" href="test-tmpfilefactory_8cpp-source.html">test-tmpfilefactory.cpp</a>.
 <p>
-Referenced by <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00145">main()</a>, <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00058">test_1()</a>, <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00091">test_2()</a>, and <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00105">test_3()</a>.
+Referenced by <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00144">main()</a>, <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00057">test_1()</a>, <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00090">test_2()</a>, and <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00104">test_3()</a>.
 </div>
 </div><p>
 <a class="anchor" name="68c6795825554fff6f4b5ad6fbed441a"></a><!-- doxytag: member="test-tmpfilefactory.cpp::opt_verbose" ref="68c6795825554fff6f4b5ad6fbed441a" args="" -->
@@ -294,10 +295,10 @@ Referenced by <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00145">m
 <p>
 
 <p>
-Definition at line <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00038">38</a> of file <a class="el" href="test-tmpfilefactory_8cpp-source.html">test-tmpfilefactory.cpp</a>.
+Definition at line <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00037">37</a> of file <a class="el" href="test-tmpfilefactory_8cpp-source.html">test-tmpfilefactory.cpp</a>.
 </div>
 </div><p>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:27 2009 for Affymetrix Fusion SDK by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:38 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

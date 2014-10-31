@@ -242,6 +242,8 @@
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaffymetrix__calvin__io_1_1_m_m_d_a_t_file_writer.html">MMDATFileWriter</a></td></tr>
 
+<tr><td class="memItemLeft" nowrap align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaffymetrix__calvin__io_1_1_multi_channel_cel_file_collater.html">MultiChannelCelFileCollater</a></td></tr>
+
 <tr><td class="memItemLeft" nowrap align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaffymetrix__calvin__io_1_1_template_file_writer.html">TemplateFileWriter</a></td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaffymetrix__calvin__io_1_1_text_file_writer.html">TextFileWriter</a></td></tr>
@@ -464,6 +466,16 @@
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">static const std::wstring&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaffymetrix__calvin__io.html#0ef601eeaa5b296bb9bb25e79c18a71c">QC_PROBESET_TYPE</a> = L&quot;QC Probeset Type&quot;</td></tr>
 
+<tr><td class="memItemLeft" nowrap align="right" valign="top">const int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaffymetrix__calvin__io.html#c2ecfe23b4b97e30feb726626a9af499">NumGridValues</a> = 8</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static const std::wstring&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaffymetrix__calvin__io.html#25cebaa9f7a113faeb5fcd1b1c65e57e">GridValueNames</a> [<a class="el" href="namespaceaffymetrix__calvin__io.html#c2ecfe23b4b97e30feb726626a9af499">NumGridValues</a>]</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static const std::wstring&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaffymetrix__calvin__io.html#5e7439a2efcf93550ab623707b05b327">GridStatus</a> = GRID_STATUS_PARAM_NAME</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static const std::wstring&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaffymetrix__calvin__io.html#c35bb4be1fe60ac701fdb6468cc7ef98">HTGridValueNames</a> [<a class="el" href="namespaceaffymetrix__calvin__io.html#c2ecfe23b4b97e30feb726626a9af499">NumGridValues</a>]</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static const std::wstring&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaffymetrix__calvin__io.html#c52870ff39eb7521ea5091e82d78752a">HTGridStatus</a> = HTGLOBAL_GRID_STATUS_PARAM_NAME</td></tr>
+
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
 file <a class="el" href="_c_d_f_data_8h.html">CDFData.h</a> This file contains classes and definitions for storing CDF file data. 
@@ -680,7 +692,7 @@ Definition at line <a class="el" href="_c_h_p_universal_entry_8h-source.html#l00
 <p>
 vector of column info 
 <p>
-Definition at line <a class="el" href="_column_info_8h-source.html#l00213">213</a> of file <a class="el" href="_column_info_8h-source.html">ColumnInfo.h</a>.
+Definition at line <a class="el" href="_column_info_8h-source.html#l00193">193</a> of file <a class="el" href="_column_info_8h-source.html">ColumnInfo.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="46d2613b74f4971b6b9de56826a367fe"></a><!-- doxytag: member="affymetrix_calvin_io::ColumnInfoConstIt" ref="46d2613b74f4971b6b9de56826a367fe" args="" -->
@@ -697,7 +709,7 @@ Definition at line <a class="el" href="_column_info_8h-source.html#l00213">213</
 <p>
 iterator of column info 
 <p>
-Definition at line <a class="el" href="_column_info_8h-source.html#l00216">216</a> of file <a class="el" href="_column_info_8h-source.html">ColumnInfo.h</a>.
+Definition at line <a class="el" href="_column_info_8h-source.html#l00196">196</a> of file <a class="el" href="_column_info_8h-source.html">ColumnInfo.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="6280d57832c86e170418b38a05ba4a48"></a><!-- doxytag: member="affymetrix_calvin_io::DataGroupHdrConstIt" ref="6280d57832c86e170418b38a05ba4a48" args="" -->
@@ -950,7 +962,7 @@ Definition at line <a class="el" href="_data_set_writer_8h-source.html#l00091">9
 <p>
 vector of GenericDataHeaders 
 <p>
-Definition at line <a class="el" href="_generic_data_header_8h-source.html#l00127">127</a> of file <a class="el" href="_generic_data_header_8h-source.html">GenericDataHeader.h</a>.
+Definition at line <a class="el" href="_generic_data_header_8h-source.html#l00141">141</a> of file <a class="el" href="_generic_data_header_8h-source.html">GenericDataHeader.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="2d374d1944d4c96f09a910d47bc0669d"></a><!-- doxytag: member="affymetrix_calvin_io::GenDataHdrVectorIt" ref="2d374d1944d4c96f09a910d47bc0669d" args="" -->
@@ -967,7 +979,7 @@ Definition at line <a class="el" href="_generic_data_header_8h-source.html#l0012
 <p>
 iterator of GenericDataHeaders 
 <p>
-Definition at line <a class="el" href="_generic_data_header_8h-source.html#l00130">130</a> of file <a class="el" href="_generic_data_header_8h-source.html">GenericDataHeader.h</a>.
+Definition at line <a class="el" href="_generic_data_header_8h-source.html#l00144">144</a> of file <a class="el" href="_generic_data_header_8h-source.html">GenericDataHeader.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="822e3ce9f8dd88d85dc55c86b1b47fed"></a><!-- doxytag: member="affymetrix_calvin_io::MultiDataType_t" ref="822e3ce9f8dd88d85dc55c86b1b47fed" args="" -->
@@ -1384,6 +1396,96 @@ Definition at line <a class="el" href="_file_header_8h-source.html#l00045">45</a
 Referenced by <a class="el" href="_file_header_8cpp-source.html#l00026">affymetrix_calvin_io::FileHeader::FileHeader()</a>.
 </div>
 </div><p>
+<a class="anchor" name="5e7439a2efcf93550ab623707b05b327"></a><!-- doxytag: member="affymetrix_calvin_io::GridStatus" ref="5e7439a2efcf93550ab623707b05b327" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::wstring <a class="el" href="namespaceaffymetrix__calvin__io.html#5e7439a2efcf93550ab623707b05b327">affymetrix_calvin_io::GridStatus</a> = GRID_STATUS_PARAM_NAME<code> [static]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>
+Definition at line <a class="el" href="_combined_dat_constants_8h-source.html#l00071">71</a> of file <a class="el" href="_combined_dat_constants_8h-source.html">CombinedDatConstants.h</a>.
+</div>
+</div><p>
+<a class="anchor" name="25cebaa9f7a113faeb5fcd1b1c65e57e"></a><!-- doxytag: member="affymetrix_calvin_io::GridValueNames" ref="25cebaa9f7a113faeb5fcd1b1c65e57e" args="[NumGridValues]" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::wstring <a class="el" href="namespaceaffymetrix__calvin__io.html#25cebaa9f7a113faeb5fcd1b1c65e57e">affymetrix_calvin_io::GridValueNames</a>[<a class="el" href="namespaceaffymetrix__calvin__io.html#c2ecfe23b4b97e30feb726626a9af499">NumGridValues</a>]<code> [static]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+<b>Initial value:</b><div class="fragment"><pre class="fragment"> 
+{
+        <a class="code" href="_combined_dat_constants_8h.html#396a3f2914cdc4a858b360abd400d985">GRID_UPPER_LEFT_X</a>,
+        <a class="code" href="_combined_dat_constants_8h.html#dcbee3b4ca0a0cfe42b51e09ae4407ee">GRID_UPPER_LEFT_Y</a>,
+        <a class="code" href="_combined_dat_constants_8h.html#e50ed45308531f15edcf6cacf0a875ef">GRID_UPPER_RIGHT_X</a>,
+        <a class="code" href="_combined_dat_constants_8h.html#24636d8dc9e94ed0e0c15a936c9d14f8">GRID_UPPER_RIGHT_Y</a>,
+        <a class="code" href="_combined_dat_constants_8h.html#98b98c3133a699af4e8783ed99760470">GRID_LOWER_RIGHT_X</a>, 
+        <a class="code" href="_combined_dat_constants_8h.html#8fdce8392e71742afe5330ceb339fdc8">GRID_LOWER_RIGHT_Y</a>, 
+        <a class="code" href="_combined_dat_constants_8h.html#0952f6b748fb6334f999992d834fb64a">GRID_LOWER_LEFT_X</a>, 
+        <a class="code" href="_combined_dat_constants_8h.html#c53ed58c506ccd2c9e03b1f98c5c5400">GRID_LOWER_LEFT_Y</a>
+}
+</pre></div>
+<p>
+Definition at line <a class="el" href="_combined_dat_constants_8h-source.html#l00060">60</a> of file <a class="el" href="_combined_dat_constants_8h-source.html">CombinedDatConstants.h</a>.
+</div>
+</div><p>
+<a class="anchor" name="c52870ff39eb7521ea5091e82d78752a"></a><!-- doxytag: member="affymetrix_calvin_io::HTGridStatus" ref="c52870ff39eb7521ea5091e82d78752a" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::wstring <a class="el" href="namespaceaffymetrix__calvin__io.html#c52870ff39eb7521ea5091e82d78752a">affymetrix_calvin_io::HTGridStatus</a> = HTGLOBAL_GRID_STATUS_PARAM_NAME<code> [static]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>
+Definition at line <a class="el" href="_combined_dat_constants_8h-source.html#l00085">85</a> of file <a class="el" href="_combined_dat_constants_8h-source.html">CombinedDatConstants.h</a>.
+</div>
+</div><p>
+<a class="anchor" name="c35bb4be1fe60ac701fdb6468cc7ef98"></a><!-- doxytag: member="affymetrix_calvin_io::HTGridValueNames" ref="c35bb4be1fe60ac701fdb6468cc7ef98" args="[NumGridValues]" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::wstring <a class="el" href="namespaceaffymetrix__calvin__io.html#c35bb4be1fe60ac701fdb6468cc7ef98">affymetrix_calvin_io::HTGridValueNames</a>[<a class="el" href="namespaceaffymetrix__calvin__io.html#c2ecfe23b4b97e30feb726626a9af499">NumGridValues</a>]<code> [static]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+<b>Initial value:</b><div class="fragment"><pre class="fragment"> 
+{
+        <a class="code" href="_combined_dat_constants_8h.html#4ed891a9db4646db4c4f6fc24211d617">HTGLOBAL_GRID_UPPER_LEFT_X</a>,
+        <a class="code" href="_combined_dat_constants_8h.html#c116ae9b725e2bb9fdbd34b2225abca9">HTGLOBAL_GRID_UPPER_LEFT_Y</a>,
+        <a class="code" href="_combined_dat_constants_8h.html#ac29c19a70993e6e127a2864a6a95196">HTGLOBAL_GRID_UPPER_RIGHT_X</a>,
+        <a class="code" href="_combined_dat_constants_8h.html#23cec95206cb787ec307645de21f77fc">HTGLOBAL_GRID_UPPER_RIGHT_Y</a>,
+        <a class="code" href="_combined_dat_constants_8h.html#32359ca2eb4372fa89b721f3f25680b7">HTGLOBAL_GRID_LOWER_RIGHT_X</a>, 
+        <a class="code" href="_combined_dat_constants_8h.html#96a53d2a54447cf55a835319fb801cdd">HTGLOBAL_GRID_LOWER_RIGHT_Y</a>, 
+        <a class="code" href="_combined_dat_constants_8h.html#9912262c027bf938df6c7346b422e24f">HTGLOBAL_GRID_LOWER_LEFT_X</a>, 
+        <a class="code" href="_combined_dat_constants_8h.html#c8b353ba1d7756cc149a94df0d1ba11f">HTGLOBAL_GRID_LOWER_LEFT_Y</a>
+}
+</pre></div>
+<p>
+Definition at line <a class="el" href="_combined_dat_constants_8h-source.html#l00074">74</a> of file <a class="el" href="_combined_dat_constants_8h-source.html">CombinedDatConstants.h</a>.
+</div>
+</div><p>
 <a class="anchor" name="03ab383ad4f9ab195dfc05b6e0c4c6c2"></a><!-- doxytag: member="affymetrix_calvin_io::MAGIC_NUM" ref="03ab383ad4f9ab195dfc05b6e0c4c6c2" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -1419,7 +1521,7 @@ The data set name.
 <p>
 Definition at line <a class="el" href="_c_h_p_multi_data_data_8h-source.html#l00080">80</a> of file <a class="el" href="_c_h_p_multi_data_data_8h-source.html">CHPMultiDataData.h</a>.
 <p>
-Referenced by <a class="el" href="_calvin_chp_check_8h-source.html#l00125">CalvinChpCheck::check()</a>, <a class="el" href="_c_h_p_multi_data_data_8cpp-source.html#l00259">affymetrix_calvin_io::CHPMultiDataData::GetDataSetHeader()</a>, <a class="el" href="_calvin_c_h_p_multi_data_file_updater_8cpp-source.html#l00046">affymetrix_calvin_io::CalvinCHPMultiDataFileUpdater::Initialize()</a>, <a class="el" href="_calvin_c_h_p_file_updater_8cpp-source.html#l00063">affymetrix_calvin_io::CalvinCHPFileUpdater::Initialize()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l00903">CalvinChpCheck::multiDataCopyNumberSame()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l00959">CalvinChpCheck::multiDataCopyNumberVariationSame()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l00851">CalvinChpCheck::multiDataDmetBiAllelicSame()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l00763">CalvinChpCheck::multiDataDmetCopyNumberSame()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l00807">CalvinChpCheck::multiDataDmetMultiAllelicSame()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l01059">CalvinChpCheck::multiDataExpressionSame()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l01011">CalvinChpCheck::multiDataGenotypeSame()</a>, <a class="el" href="_c_h_p_multi_data_data_8cpp-source.html#l01078">affymetrix_calvin_io::CHPMultiDataData::OpenMultiDataDataSet()</a>, and <a class="el" href="_c_h_p_multi_data_data_8cpp-source.html#l00370">affymetrix_calvin_io::CHPMultiDataData::SetEntryCount()</a>.
+Referenced by <a class="el" href="_calvin_chp_check_8h-source.html#l00145">CalvinChpCheck::check()</a>, <a class="el" href="_c_h_p_multi_data_data_8cpp-source.html#l00282">affymetrix_calvin_io::CHPMultiDataData::GetDataSetHeader()</a>, <a class="el" href="_calvin_c_h_p_multi_data_file_updater_8cpp-source.html#l00046">affymetrix_calvin_io::CalvinCHPMultiDataFileUpdater::Initialize()</a>, <a class="el" href="_calvin_c_h_p_file_updater_8cpp-source.html#l00063">affymetrix_calvin_io::CalvinCHPFileUpdater::Initialize()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l00964">CalvinChpCheck::multiDataCopyNumberSame()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l01020">CalvinChpCheck::multiDataCopyNumberVariationSame()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l00912">CalvinChpCheck::multiDataDmetBiAllelicSame()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l00824">CalvinChpCheck::multiDataDmetCopyNumberSame()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l00868">CalvinChpCheck::multiDataDmetMultiAllelicSame()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l01120">CalvinChpCheck::multiDataExpressionSame()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l01072">CalvinChpCheck::multiDataGenotypeSame()</a>, <a class="el" href="_c_h_p_multi_data_data_8cpp-source.html#l01115">affymetrix_calvin_io::CHPMultiDataData::OpenMultiDataDataSet()</a>, and <a class="el" href="_c_h_p_multi_data_data_8cpp-source.html#l00407">affymetrix_calvin_io::CHPMultiDataData::SetEntryCount()</a>.
 </div>
 </div><p>
 <a class="anchor" name="cb85c30c4345276190ca20cea6168af8"></a><!-- doxytag: member="affymetrix_calvin_io::MultiDataDataTypes" ref="cb85c30c4345276190ca20cea6168af8" args="[]" -->
@@ -1438,7 +1540,24 @@ The data types.
 <p>
 Definition at line <a class="el" href="_c_h_p_multi_data_data_8h-source.html#l00114">114</a> of file <a class="el" href="_c_h_p_multi_data_data_8h-source.html">CHPMultiDataData.h</a>.
 <p>
-Referenced by <a class="el" href="_calvin_c_h_p_multi_data_file_updater_8cpp-source.html#l00046">affymetrix_calvin_io::CalvinCHPMultiDataFileUpdater::Initialize()</a>, <a class="el" href="_calvin_c_h_p_file_updater_8cpp-source.html#l00063">affymetrix_calvin_io::CalvinCHPFileUpdater::Initialize()</a>, and <a class="el" href="_c_h_p_multi_data_data_8cpp-source.html#l01078">affymetrix_calvin_io::CHPMultiDataData::OpenMultiDataDataSet()</a>.
+Referenced by <a class="el" href="_calvin_c_h_p_multi_data_file_updater_8cpp-source.html#l00046">affymetrix_calvin_io::CalvinCHPMultiDataFileUpdater::Initialize()</a>, <a class="el" href="_calvin_c_h_p_file_updater_8cpp-source.html#l00063">affymetrix_calvin_io::CalvinCHPFileUpdater::Initialize()</a>, and <a class="el" href="_c_h_p_multi_data_data_8cpp-source.html#l01115">affymetrix_calvin_io::CHPMultiDataData::OpenMultiDataDataSet()</a>.
+</div>
+</div><p>
+<a class="anchor" name="c2ecfe23b4b97e30feb726626a9af499"></a><!-- doxytag: member="affymetrix_calvin_io::NumGridValues" ref="c2ecfe23b4b97e30feb726626a9af499" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int <a class="el" href="namespaceaffymetrix__calvin__io.html#c2ecfe23b4b97e30feb726626a9af499">affymetrix_calvin_io::NumGridValues</a> = 8          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>
+Definition at line <a class="el" href="_combined_dat_constants_8h-source.html#l00059">59</a> of file <a class="el" href="_combined_dat_constants_8h-source.html">CombinedDatConstants.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="0ef601eeaa5b296bb9bb25e79c18a71c"></a><!-- doxytag: member="affymetrix_calvin_io::QC_PROBESET_TYPE" ref="0ef601eeaa5b296bb9bb25e79c18a71c" args="" -->
@@ -1460,7 +1579,7 @@ Definition at line <a class="el" href="_c_d_f_cntrl_file_writer_8h-source.html#l
 Referenced by <a class="el" href="_c_d_f_cntrl_file_writer_8cpp-source.html#l00056">affymetrix_calvin_io::CDFCntrlFileWriter::GetCntrlProbeSetWriter()</a>.
 </div>
 </div><p>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:43 2009 for Affymetrix Fusion SDK by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:54 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

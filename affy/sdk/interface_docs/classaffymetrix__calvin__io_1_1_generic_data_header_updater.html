@@ -39,6 +39,8 @@
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaffymetrix__calvin__io_1_1_generic_data_header_updater.html#336492051c82d5a6e3ad224a0337abfa">UpdateParameters</a> ()</td></tr>
 
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaffymetrix__calvin__io_1_1_generic_data_header_updater.html#5a5561f397790490a6e631f017f5b022">UpdateFileHeaderParameter</a> (const std::string &amp;filename, const std::wstring &amp;paramName, float paramValue)</td></tr>
+
 <tr><td colspan="2"><br><h2>Static Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">static const int32_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaffymetrix__calvin__io_1_1_generic_data_header_updater.html#f0dad22639ef79249148b29f16b918bd">FIELD_LEN_SIZE</a> = sizeof(int32_t)</td></tr>
 
@@ -79,9 +81,9 @@ Definition at line <a class="el" href="_generic_data_header_updater_8h-source.ht
 <p>
 Constructor 
 <p>
-Definition at line <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00037">37</a> of file <a class="el" href="_generic_data_header_updater_8cpp-source.html">GenericDataHeaderUpdater.cpp</a>.
+Definition at line <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00038">38</a> of file <a class="el" href="_generic_data_header_updater_8cpp-source.html">GenericDataHeaderUpdater.cpp</a>.
 <p>
-References <a class="el" href="_generic_data_header_updater_8h-source.html#l00086">currentHdr</a>, <a class="el" href="_generic_data_header_updater_8h-source.html#l00082">os</a>, and <a class="el" href="_generic_data_header_updater_8h-source.html#l00084">updateHdr</a>.
+References <a class="el" href="_generic_data_header_updater_8h-source.html#l00089">currentHdr</a>, <a class="el" href="_generic_data_header_updater_8h-source.html#l00085">os</a>, and <a class="el" href="_generic_data_header_updater_8h-source.html#l00087">updateHdr</a>.
 </div>
 </div><p>
 <a class="anchor" name="b1465609daf86048349b0cbaa9341b83"></a><!-- doxytag: member="affymetrix_calvin_io::GenericDataHeaderUpdater::~GenericDataHeaderUpdater" ref="b1465609daf86048349b0cbaa9341b83" args="()" -->
@@ -102,7 +104,7 @@ References <a class="el" href="_generic_data_header_updater_8h-source.html#l0008
 <p>
 Destructor 
 <p>
-Definition at line <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00047">47</a> of file <a class="el" href="_generic_data_header_updater_8cpp-source.html">GenericDataHeaderUpdater.cpp</a>.
+Definition at line <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00048">48</a> of file <a class="el" href="_generic_data_header_updater_8cpp-source.html">GenericDataHeaderUpdater.cpp</a>.
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
@@ -148,9 +150,9 @@ Update the file with the new <a class="el" href="classaffymetrix__calvin__io_1_1
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>Returns true if the FileId could be udpated. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00054">54</a> of file <a class="el" href="_generic_data_header_updater_8cpp-source.html">GenericDataHeaderUpdater.cpp</a>.
+Definition at line <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00055">55</a> of file <a class="el" href="_generic_data_header_updater_8cpp-source.html">GenericDataHeaderUpdater.cpp</a>.
 <p>
-References <a class="el" href="_generic_data_header_updater_8h-source.html#l00086">currentHdr</a>, <a class="el" href="_generic_data_header_updater_8h-source.html#l00082">os</a>, <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00068">UpdateFileId()</a>, <a class="el" href="_generic_data_header_updater_8h-source.html#l00084">updateHdr</a>, and <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00089">UpdateParameters()</a>.
+References <a class="el" href="_generic_data_header_updater_8h-source.html#l00089">currentHdr</a>, <a class="el" href="_generic_data_header_updater_8h-source.html#l00085">os</a>, <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00069">UpdateFileId()</a>, <a class="el" href="_generic_data_header_updater_8h-source.html#l00087">updateHdr</a>, and <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00090">UpdateParameters()</a>.
 <p>
 Referenced by <a class="el" href="_file_header_updater_8cpp-source.html#l00053">affymetrix_calvin_io::FileHeaderUpdater::Update()</a>.
 </div>
@@ -174,11 +176,11 @@ Referenced by <a class="el" href="_file_header_updater_8cpp-source.html#l00053">
 Update the FileId. Only update the FileId if update and current fileIDs are the same size. <dl class="return" compact><dt><b>Returns:</b></dt><dd>Returns true if successful. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00068">68</a> of file <a class="el" href="_generic_data_header_updater_8cpp-source.html">GenericDataHeaderUpdater.cpp</a>.
+Definition at line <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00069">69</a> of file <a class="el" href="_generic_data_header_updater_8cpp-source.html">GenericDataHeaderUpdater.cpp</a>.
 <p>
-References <a class="el" href="_generic_data_header_updater_8h-source.html#l00086">currentHdr</a>, <a class="el" href="_generic_data_header_updater_8h-source.html#l00043">FIELD_LEN_SIZE</a>, <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00133">GetFileHeaderSize()</a>, <a class="el" href="_generic_data_header_8cpp-source.html#l00060">affymetrix_calvin_io::GenericDataHeader::GetFileId()</a>, <a class="el" href="_generic_data_header_8cpp-source.html#l00050">affymetrix_calvin_io::GenericDataHeader::GetFileTypeId()</a>, <a class="el" href="_generic_data_header_updater_8h-source.html#l00082">os</a>, <a class="el" href="_generic_data_header_updater_8h-source.html#l00084">updateHdr</a>, and <a class="el" href="_file_output_8cpp-source.html#l00116">affymetrix_calvin_io::FileOutput::WriteString8()</a>.
+References <a class="el" href="_generic_data_header_updater_8h-source.html#l00089">currentHdr</a>, <a class="el" href="_generic_data_header_updater_8h-source.html#l00043">FIELD_LEN_SIZE</a>, <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00134">GetFileHeaderSize()</a>, <a class="el" href="_generic_data_header_8cpp-source.html#l00060">affymetrix_calvin_io::GenericDataHeader::GetFileId()</a>, <a class="el" href="_generic_data_header_8cpp-source.html#l00050">affymetrix_calvin_io::GenericDataHeader::GetFileTypeId()</a>, <a class="el" href="_generic_data_header_updater_8h-source.html#l00085">os</a>, <a class="el" href="_generic_data_header_updater_8h-source.html#l00087">updateHdr</a>, and <a class="el" href="_file_output_8cpp-source.html#l00116">affymetrix_calvin_io::FileOutput::WriteString8()</a>.
 <p>
-Referenced by <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00054">Update()</a>.
+Referenced by <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00055">Update()</a>.
 </div>
 </div><p>
 <a class="anchor" name="336492051c82d5a6e3ad224a0337abfa"></a><!-- doxytag: member="affymetrix_calvin_io::GenericDataHeaderUpdater::UpdateParameters" ref="336492051c82d5a6e3ad224a0337abfa" args="()" -->
@@ -199,11 +201,46 @@ Referenced by <a class="el" href="_generic_data_header_updater_8cpp-source.html#
 <p>
 Update the parameter list. Can only update types that have the same name and type and value size in the source and target 
 <p>
-Definition at line <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00089">89</a> of file <a class="el" href="_generic_data_header_updater_8cpp-source.html">GenericDataHeaderUpdater.cpp</a>.
+Definition at line <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00090">90</a> of file <a class="el" href="_generic_data_header_updater_8cpp-source.html">GenericDataHeaderUpdater.cpp</a>.
 <p>
-References <a class="el" href="_generic_data_header_updater_8h-source.html#l00086">currentHdr</a>, <a class="el" href="_generic_data_header_updater_8h-source.html#l00043">FIELD_LEN_SIZE</a>, <a class="el" href="_generic_data_header_8cpp-source.html#l00156">affymetrix_calvin_io::GenericDataHeader::FindNameValParam()</a>, <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00141">GetBytesFromGenericDataHdrStartToParameterList()</a>, <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00133">GetFileHeaderSize()</a>, <a class="el" href="_parameter_name_value_type_8h-source.html#l00315">affymetrix_calvin_parameter::ParameterNameValueType::GetMIMEValue()</a>, <a class="el" href="_generic_data_header_8cpp-source.html#l00110">affymetrix_calvin_io::GenericDataHeader::GetNameValIterators()</a>, <a class="el" href="_parameter_name_value_type_8cpp-source.html#l00152">affymetrix_calvin_parameter::ParameterNameValueType::GetParameterType()</a>, <a class="el" href="_parameter_name_value_type_8cpp-source.html#l00127">affymetrix_calvin_parameter::MIMEValue::GetValue()</a>, <a class="el" href="_generic_data_header_updater_8h-source.html#l00082">os</a>, <a class="el" href="_parameter_name_value_type_8h-source.html#l00096">affymetrix_calvin_parameter::MIMEValue::Size()</a>, <a class="el" href="_generic_data_header_updater_8h-source.html#l00084">updateHdr</a>, <a class="el" href="_data_group_header_updater_8cpp-source.html#l00030">WCHAR_T_SIZE</a>, and <a class="el" href="_file_output_8cpp-source.html#l00210">affymetrix_calvin_io::FileOutput::WriteBlob()</a>.
+References <a class="el" href="_generic_data_header_updater_8h-source.html#l00089">currentHdr</a>, <a class="el" href="_generic_data_header_updater_8h-source.html#l00043">FIELD_LEN_SIZE</a>, <a class="el" href="_generic_data_header_8cpp-source.html#l00179">affymetrix_calvin_io::GenericDataHeader::FindNameValParam()</a>, <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00142">GetBytesFromGenericDataHdrStartToParameterList()</a>, <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00134">GetFileHeaderSize()</a>, <a class="el" href="_parameter_name_value_type_8h-source.html#l00315">affymetrix_calvin_parameter::ParameterNameValueType::GetMIMEValue()</a>, <a class="el" href="_generic_data_header_8cpp-source.html#l00133">affymetrix_calvin_io::GenericDataHeader::GetNameValIterators()</a>, <a class="el" href="_parameter_name_value_type_8cpp-source.html#l00152">affymetrix_calvin_parameter::ParameterNameValueType::GetParameterType()</a>, <a class="el" href="_parameter_name_value_type_8cpp-source.html#l00127">affymetrix_calvin_parameter::MIMEValue::GetValue()</a>, <a class="el" href="_generic_data_header_updater_8h-source.html#l00085">os</a>, <a class="el" href="_parameter_name_value_type_8h-source.html#l00096">affymetrix_calvin_parameter::MIMEValue::Size()</a>, <a class="el" href="_generic_data_header_updater_8h-source.html#l00087">updateHdr</a>, <a class="el" href="_data_group_header_updater_8cpp-source.html#l00030">WCHAR_T_SIZE</a>, and <a class="el" href="_file_output_8cpp-source.html#l00210">affymetrix_calvin_io::FileOutput::WriteBlob()</a>.
 <p>
-Referenced by <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00054">Update()</a>.
+Referenced by <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00055">Update()</a>.
+</div>
+</div><p>
+<a class="anchor" name="5a5561f397790490a6e631f017f5b022"></a><!-- doxytag: member="affymetrix_calvin_io::GenericDataHeaderUpdater::UpdateFileHeaderParameter" ref="5a5561f397790490a6e631f017f5b022" args="(const std::string &amp;filename, const std::wstring &amp;paramName, float paramValue)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void affymetrix_calvin_io::GenericDataHeaderUpdater::UpdateFileHeaderParameter           </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::wstring &amp;&nbsp;</td>
+          <td class="paramname"> <em>paramName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>paramValue</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
 </div>
 </div><p>
 <a class="anchor" name="be896d097b68068b4ff5bf15502628e4"></a><!-- doxytag: member="affymetrix_calvin_io::GenericDataHeaderUpdater::GetFileHeaderSize" ref="be896d097b68068b4ff5bf15502628e4" args="()" -->
@@ -225,9 +262,9 @@ Referenced by <a class="el" href="_generic_data_header_updater_8cpp-source.html#
 Get the size of the <a class="el" href="classaffymetrix__calvin__io_1_1_file_header.html">FileHeader</a> in bytes. <dl class="return" compact><dt><b>Returns:</b></dt><dd>The size of the <a class="el" href="classaffymetrix__calvin__io_1_1_file_header.html">FileHeader</a>. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00133">133</a> of file <a class="el" href="_generic_data_header_updater_8cpp-source.html">GenericDataHeaderUpdater.cpp</a>.
+Definition at line <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00134">134</a> of file <a class="el" href="_generic_data_header_updater_8cpp-source.html">GenericDataHeaderUpdater.cpp</a>.
 <p>
-Referenced by <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00068">UpdateFileId()</a>, and <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00089">UpdateParameters()</a>.
+Referenced by <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00069">UpdateFileId()</a>, and <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00090">UpdateParameters()</a>.
 </div>
 </div><p>
 <a class="anchor" name="63fe2d6c20d396c592b9db2f3bee0706"></a><!-- doxytag: member="affymetrix_calvin_io::GenericDataHeaderUpdater::GetBytesFromGenericDataHdrStartToParameterList" ref="63fe2d6c20d396c592b9db2f3bee0706" args="()" -->
@@ -249,11 +286,11 @@ Referenced by <a class="el" href="_generic_data_header_updater_8cpp-source.html#
 Get the size of the <a class="el" href="classaffymetrix__calvin__io_1_1_generic_data_header.html">GenericDataHeader</a> up to the start of the parameter list. <dl class="return" compact><dt><b>Returns:</b></dt><dd>The size of the <a class="el" href="classaffymetrix__calvin__io_1_1_generic_data_header.html">GenericDataHeader</a> up to the start of the parameter list. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00141">141</a> of file <a class="el" href="_generic_data_header_updater_8cpp-source.html">GenericDataHeaderUpdater.cpp</a>.
+Definition at line <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00142">142</a> of file <a class="el" href="_generic_data_header_updater_8cpp-source.html">GenericDataHeaderUpdater.cpp</a>.
 <p>
-References <a class="el" href="_generic_data_header_updater_8h-source.html#l00086">currentHdr</a>, <a class="el" href="_generic_data_header_updater_8h-source.html#l00043">FIELD_LEN_SIZE</a>, <a class="el" href="_generic_data_header_8cpp-source.html#l00070">affymetrix_calvin_io::GenericDataHeader::GetFileCreationTime()</a>, <a class="el" href="_generic_data_header_8cpp-source.html#l00060">affymetrix_calvin_io::GenericDataHeader::GetFileId()</a>, <a class="el" href="_generic_data_header_8cpp-source.html#l00050">affymetrix_calvin_io::GenericDataHeader::GetFileTypeId()</a>, <a class="el" href="_generic_data_header_8cpp-source.html#l00080">affymetrix_calvin_io::GenericDataHeader::GetLocale()</a>, and <a class="el" href="_data_group_header_updater_8cpp-source.html#l00030">WCHAR_T_SIZE</a>.
+References <a class="el" href="_generic_data_header_updater_8h-source.html#l00089">currentHdr</a>, <a class="el" href="_generic_data_header_updater_8h-source.html#l00043">FIELD_LEN_SIZE</a>, <a class="el" href="_generic_data_header_8cpp-source.html#l00070">affymetrix_calvin_io::GenericDataHeader::GetFileCreationTime()</a>, <a class="el" href="_generic_data_header_8cpp-source.html#l00060">affymetrix_calvin_io::GenericDataHeader::GetFileId()</a>, <a class="el" href="_generic_data_header_8cpp-source.html#l00050">affymetrix_calvin_io::GenericDataHeader::GetFileTypeId()</a>, <a class="el" href="_generic_data_header_8cpp-source.html#l00080">affymetrix_calvin_io::GenericDataHeader::GetLocale()</a>, and <a class="el" href="_data_group_header_updater_8cpp-source.html#l00030">WCHAR_T_SIZE</a>.
 <p>
-Referenced by <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00089">UpdateParameters()</a>.
+Referenced by <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00090">UpdateParameters()</a>.
 </div>
 </div><p>
 <hr><h2>Member Data Documentation</h2>
@@ -273,7 +310,7 @@ Referenced by <a class="el" href="_generic_data_header_updater_8cpp-source.html#
 <p>
 Definition at line <a class="el" href="_generic_data_header_updater_8h-source.html#l00043">43</a> of file <a class="el" href="_generic_data_header_updater_8h-source.html">GenericDataHeaderUpdater.h</a>.
 <p>
-Referenced by <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00141">GetBytesFromGenericDataHdrStartToParameterList()</a>, <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00068">UpdateFileId()</a>, and <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00089">UpdateParameters()</a>.
+Referenced by <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00142">GetBytesFromGenericDataHdrStartToParameterList()</a>, <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00069">UpdateFileId()</a>, and <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00090">UpdateParameters()</a>.
 </div>
 </div><p>
 <a class="anchor" name="309d36df7359eb97c63eeb4cfd557aaf"></a><!-- doxytag: member="affymetrix_calvin_io::GenericDataHeaderUpdater::os" ref="309d36df7359eb97c63eeb4cfd557aaf" args="" -->
@@ -290,9 +327,9 @@ Referenced by <a class="el" href="_generic_data_header_updater_8cpp-source.html#
 <p>
 Open output filestream 
 <p>
-Definition at line <a class="el" href="_generic_data_header_updater_8h-source.html#l00082">82</a> of file <a class="el" href="_generic_data_header_updater_8h-source.html">GenericDataHeaderUpdater.h</a>.
+Definition at line <a class="el" href="_generic_data_header_updater_8h-source.html#l00085">85</a> of file <a class="el" href="_generic_data_header_updater_8h-source.html">GenericDataHeaderUpdater.h</a>.
 <p>
-Referenced by <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00037">GenericDataHeaderUpdater()</a>, <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00054">Update()</a>, <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00068">UpdateFileId()</a>, and <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00089">UpdateParameters()</a>.
+Referenced by <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00038">GenericDataHeaderUpdater()</a>, <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00055">Update()</a>, <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00069">UpdateFileId()</a>, and <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00090">UpdateParameters()</a>.
 </div>
 </div><p>
 <a class="anchor" name="a0e51a6336a347cc975d9c472752c823"></a><!-- doxytag: member="affymetrix_calvin_io::GenericDataHeaderUpdater::updateHdr" ref="a0e51a6336a347cc975d9c472752c823" args="" -->
@@ -309,9 +346,9 @@ Referenced by <a class="el" href="_generic_data_header_updater_8cpp-source.html#
 <p>
 A <a class="el" href="classaffymetrix__calvin__io_1_1_generic_data_header.html">GenericDataHeader</a> with information to use to update the target 
 <p>
-Definition at line <a class="el" href="_generic_data_header_updater_8h-source.html#l00084">84</a> of file <a class="el" href="_generic_data_header_updater_8h-source.html">GenericDataHeaderUpdater.h</a>.
+Definition at line <a class="el" href="_generic_data_header_updater_8h-source.html#l00087">87</a> of file <a class="el" href="_generic_data_header_updater_8h-source.html">GenericDataHeaderUpdater.h</a>.
 <p>
-Referenced by <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00037">GenericDataHeaderUpdater()</a>, <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00054">Update()</a>, <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00068">UpdateFileId()</a>, and <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00089">UpdateParameters()</a>.
+Referenced by <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00038">GenericDataHeaderUpdater()</a>, <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00055">Update()</a>, <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00069">UpdateFileId()</a>, and <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00090">UpdateParameters()</a>.
 </div>
 </div><p>
 <a class="anchor" name="0c097eae5a8af61b39a8c2155cadf795"></a><!-- doxytag: member="affymetrix_calvin_io::GenericDataHeaderUpdater::currentHdr" ref="0c097eae5a8af61b39a8c2155cadf795" args="" -->
@@ -328,14 +365,14 @@ Referenced by <a class="el" href="_generic_data_header_updater_8cpp-source.html#
 <p>
 The <a class="el" href="classaffymetrix__calvin__io_1_1_generic_data_header.html">GenericDataHeader</a> with current information 
 <p>
-Definition at line <a class="el" href="_generic_data_header_updater_8h-source.html#l00086">86</a> of file <a class="el" href="_generic_data_header_updater_8h-source.html">GenericDataHeaderUpdater.h</a>.
+Definition at line <a class="el" href="_generic_data_header_updater_8h-source.html#l00089">89</a> of file <a class="el" href="_generic_data_header_updater_8h-source.html">GenericDataHeaderUpdater.h</a>.
 <p>
-Referenced by <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00037">GenericDataHeaderUpdater()</a>, <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00141">GetBytesFromGenericDataHdrStartToParameterList()</a>, <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00054">Update()</a>, <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00068">UpdateFileId()</a>, and <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00089">UpdateParameters()</a>.
+Referenced by <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00038">GenericDataHeaderUpdater()</a>, <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00142">GetBytesFromGenericDataHdrStartToParameterList()</a>, <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00055">Update()</a>, <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00069">UpdateFileId()</a>, and <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00090">UpdateParameters()</a>.
 </div>
 </div><p>
 <hr>The documentation for this class was generated from the following files:<ul>
 <li>C:/FusionSDK/affy/sdk/calvin_files/writers/src/<a class="el" href="_generic_data_header_updater_8h-source.html">GenericDataHeaderUpdater.h</a><li>C:/FusionSDK/affy/sdk/calvin_files/writers/src/<a class="el" href="_generic_data_header_updater_8cpp-source.html">GenericDataHeaderUpdater.cpp</a></ul>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:48 2009 for Affymetrix Fusion SDK by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 13:00:00 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

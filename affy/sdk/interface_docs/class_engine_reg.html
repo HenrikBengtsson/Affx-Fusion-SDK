@@ -53,7 +53,7 @@ A class used to self register engine data classes.
 <p>
 
 <p>
-Definition at line <a class="el" href="_base_engine_8h-source.html#l00133">133</a> of file <a class="el" href="_base_engine_8h-source.html">BaseEngine.h</a>.<hr><h2>Constructor &amp; Destructor Documentation</h2>
+Definition at line <a class="el" href="_base_engine_8h-source.html#l00164">164</a> of file <a class="el" href="_base_engine_8h-source.html">BaseEngine.h</a>.<hr><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" name="95529f83a7564f01958277a00104f704"></a><!-- doxytag: member="EngineReg::EngineReg" ref="95529f83a7564f01958277a00104f704" args="(const std::string &amp;engName)" -->
 <div class="memitem">
 <div class="memproto">
@@ -78,9 +78,9 @@ Constructor <dl compact><dt><b>Parameters:</b></dt><dd>
 </dl>
 
 <p>
-Definition at line <a class="el" href="_base_engine_8cpp-source.html#l00037">37</a> of file <a class="el" href="_base_engine_8cpp-source.html">BaseEngine.cpp</a>.
+Definition at line <a class="el" href="_base_engine_8cpp-source.html#l00039">39</a> of file <a class="el" href="_base_engine_8cpp-source.html">BaseEngine.cpp</a>.
 <p>
-References <a class="el" href="_base_engine_8h-source.html#l00163">m_Head</a>, and <a class="el" href="_base_engine_8h-source.html#l00169">name</a>.
+References <a class="el" href="_base_engine_8h-source.html#l00194">m_Head</a>, and <a class="el" href="_base_engine_8h-source.html#l00200">name</a>.
 </div>
 </div><p>
 <a class="anchor" name="2b2353606a60327833e83b0c3ff8dcbd"></a><!-- doxytag: member="EngineReg::~EngineReg" ref="2b2353606a60327833e83b0c3ff8dcbd" args="()" -->
@@ -101,7 +101,7 @@ References <a class="el" href="_base_engine_8h-source.html#l00163">m_Head</a>, a
 <p>
 Destructor 
 <p>
-Definition at line <a class="el" href="_base_engine_8cpp-source.html#l00046">46</a> of file <a class="el" href="_base_engine_8cpp-source.html">BaseEngine.cpp</a>.
+Definition at line <a class="el" href="_base_engine_8cpp-source.html#l00048">48</a> of file <a class="el" href="_base_engine_8cpp-source.html">BaseEngine.cpp</a>.
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
@@ -130,11 +130,11 @@ Creates an engine object. <dl compact><dt><b>Parameters:</b></dt><dd>
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>A pointer to the engine. NULL if the failed. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_base_engine_8cpp-source.html#l00053">53</a> of file <a class="el" href="_base_engine_8cpp-source.html">BaseEngine.cpp</a>.
+Definition at line <a class="el" href="_base_engine_8cpp-source.html#l00055">55</a> of file <a class="el" href="_base_engine_8cpp-source.html">BaseEngine.cpp</a>.
 <p>
-References <a class="el" href="_base_engine_8h-source.html#l00163">m_Head</a>, and <a class="el" href="_base_engine_8h-source.html#l00166">m_Next</a>.
+References <a class="el" href="_base_engine_8h-source.html#l00194">m_Head</a>, and <a class="el" href="_base_engine_8h-source.html#l00197">m_Next</a>.
 <p>
-Referenced by <a class="el" href="apt-engine-wrapper_8cpp-source.html#l00126">main()</a>.
+Referenced by <a class="el" href="apt-engine-wrapper_8cpp-source.html#l00043">main()</a>.
 </div>
 </div><p>
 <a class="anchor" name="c18d6f699c35d729444e39598d439438"></a><!-- doxytag: member="EngineReg::GetEngineNames" ref="c18d6f699c35d729444e39598d439438" args="()" -->
@@ -156,11 +156,11 @@ Referenced by <a class="el" href="apt-engine-wrapper_8cpp-source.html#l00126">ma
 Gets the list of all registered engines. <dl class="return" compact><dt><b>Returns:</b></dt><dd>The list of registered engines. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_base_engine_8cpp-source.html#l00073">73</a> of file <a class="el" href="_base_engine_8cpp-source.html">BaseEngine.cpp</a>.
+Definition at line <a class="el" href="_base_engine_8cpp-source.html#l00075">75</a> of file <a class="el" href="_base_engine_8cpp-source.html">BaseEngine.cpp</a>.
 <p>
-References <a class="el" href="_base_engine_8h-source.html#l00163">m_Head</a>, and <a class="el" href="_base_engine_8h-source.html#l00166">m_Next</a>.
+References <a class="el" href="_base_engine_8h-source.html#l00194">m_Head</a>, and <a class="el" href="_base_engine_8h-source.html#l00197">m_Next</a>.
 <p>
-Referenced by <a class="el" href="apt-engine-wrapper_8cpp-source.html#l00126">main()</a>.
+Referenced by <a class="el" href="apt-engine-wrapper_8cpp-source.html#l00043">main()</a>.
 </div>
 </div><p>
 <a class="anchor" name="42460821a7a850ff488545719c8417ca"></a><!-- doxytag: member="EngineReg::MakeObject" ref="42460821a7a850ff488545719c8417ca" args="()=0" -->
@@ -198,9 +198,9 @@ Makes an engine data object. <dl class="return" compact><dt><b>Returns:</b></dt>
 <p>
 A pointer to the first registered engine. 
 <p>
-Definition at line <a class="el" href="_base_engine_8h-source.html#l00163">163</a> of file <a class="el" href="_base_engine_8h-source.html">BaseEngine.h</a>.
+Definition at line <a class="el" href="_base_engine_8h-source.html#l00194">194</a> of file <a class="el" href="_base_engine_8h-source.html">BaseEngine.h</a>.
 <p>
-Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00053">CreateEngine()</a>, <a class="el" href="_base_engine_8cpp-source.html#l00037">EngineReg()</a>, and <a class="el" href="_base_engine_8cpp-source.html#l00073">GetEngineNames()</a>.
+Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00055">CreateEngine()</a>, <a class="el" href="_base_engine_8cpp-source.html#l00039">EngineReg()</a>, and <a class="el" href="_base_engine_8cpp-source.html#l00075">GetEngineNames()</a>.
 </div>
 </div><p>
 <a class="anchor" name="3397102668a44bd59def08358a219809"></a><!-- doxytag: member="EngineReg::m_Next" ref="3397102668a44bd59def08358a219809" args="" -->
@@ -217,9 +217,9 @@ Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00053">CreateEn
 <p>
 A pointer to the next registered engine. 
 <p>
-Definition at line <a class="el" href="_base_engine_8h-source.html#l00166">166</a> of file <a class="el" href="_base_engine_8h-source.html">BaseEngine.h</a>.
+Definition at line <a class="el" href="_base_engine_8h-source.html#l00197">197</a> of file <a class="el" href="_base_engine_8h-source.html">BaseEngine.h</a>.
 <p>
-Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00053">CreateEngine()</a>, and <a class="el" href="_base_engine_8cpp-source.html#l00073">GetEngineNames()</a>.
+Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00055">CreateEngine()</a>, and <a class="el" href="_base_engine_8cpp-source.html#l00075">GetEngineNames()</a>.
 </div>
 </div><p>
 <a class="anchor" name="61b9030d31c317b1b23f570a62fdc862"></a><!-- doxytag: member="EngineReg::name" ref="61b9030d31c317b1b23f570a62fdc862" args="" -->
@@ -236,14 +236,14 @@ Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00053">CreateEn
 <p>
 The name of the engine. 
 <p>
-Definition at line <a class="el" href="_base_engine_8h-source.html#l00169">169</a> of file <a class="el" href="_base_engine_8h-source.html">BaseEngine.h</a>.
+Definition at line <a class="el" href="_base_engine_8h-source.html#l00200">200</a> of file <a class="el" href="_base_engine_8h-source.html">BaseEngine.h</a>.
 <p>
-Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00037">EngineReg()</a>.
+Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00039">EngineReg()</a>.
 </div>
 </div><p>
 <hr>The documentation for this class was generated from the following files:<ul>
 <li>C:/FusionSDK/affy/sdk/util/<a class="el" href="_base_engine_8h-source.html">BaseEngine.h</a><li>C:/FusionSDK/affy/sdk/util/<a class="el" href="_base_engine_8cpp-source.html">BaseEngine.cpp</a></ul>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:32 2009 for Affymetrix Fusion SDK by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:43 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

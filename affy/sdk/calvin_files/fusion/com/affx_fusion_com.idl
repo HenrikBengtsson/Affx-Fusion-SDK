@@ -272,6 +272,9 @@ interface IFusionCDFFileHeader : IDispatch{
 	[propget, id(3), helpstring("property NumProbeSets")] HRESULT NumProbeSets([out, retval] int* pVal);
 	[propget, id(4), helpstring("property NumQCProbeSets")] HRESULT NumQCProbeSets([out, retval] int* pVal);
 	[propget, id(5), helpstring("property Reference")] HRESULT Reference([out, retval] BSTR* pVal);
+	[propget, id(6), helpstring("property FormatVersion")] HRESULT FormatVersion([out, retval] int* pVal);
+	[propget, id(7), helpstring("property GUID")] HRESULT GUID([out, retval] BSTR* pVal);
+	[propget, id(8), helpstring("property IntegrityMd5")] HRESULT IntegrityMd5([out, retval] BSTR* pVal);
 };
 [
 	object,
@@ -384,6 +387,9 @@ interface IFusionCDFData : IDispatch{
 	[id(13), helpstring("method GetProbeSetInformation")] HRESULT GetProbeSetInformation([in] int index, [in] IFusionCDFProbeSetInformation * pVal);
 	[id(14), helpstring("method GetQCProbeSetInformation")] HRESULT GetQCProbeSetInformation([in] int index, [in] IFusionCDFQCProbeSetInformation * pVal);
 	[id(15), helpstring("method GetQCProbeSetInformationByType")] HRESULT GetQCProbeSetInformationByType([in] GeneChipQCProbeSetType qcType, [in] IFusionCDFQCProbeSetInformation * pVal);
+	[propget, id(16), helpstring("property ChipTypes")] HRESULT ChipTypes([out, retval] VARIANT* pVal);
+	[propget, id(17), helpstring("property GUID")] HRESULT GUID([out, retval] BSTR* pVal);
+	[propget, id(18), helpstring("property IntegrityMd5")] HRESULT IntegrityMd5([out, retval] BSTR* pVal);
 };
 [
 	object,

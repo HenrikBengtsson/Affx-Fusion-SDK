@@ -30,8 +30,9 @@
 <p>Inheritance diagram for MsgHandler:
 <p><center><img src="class_msg_handler.png" usemap="#MsgHandler_map" border="0" alt=""></center>
 <map name="MsgHandler_map">
-<area href="class_log_stream.html" alt="LogStream" shape="rect" coords="0,56,81,80">
-<area href="class_msg_stream.html" alt="MsgStream" shape="rect" coords="91,56,172,80">
+<area href="class_log_stream.html" alt="LogStream" shape="rect" coords="0,56,119,80">
+<area href="class_msg_socket_handler.html" alt="MsgSocketHandler" shape="rect" coords="129,56,248,80">
+<area href="class_msg_stream.html" alt="MsgStream" shape="rect" coords="258,56,377,80">
 </map>
 <a href="class_msg_handler-members.html">List of all members.</a><table border="0" cellpadding="0" cellspacing="0">
 <tr><td></td></tr>
@@ -52,7 +53,7 @@ An abstract handler for messages.
 <p>
 
 <p>
-Definition at line <a class="el" href="_msg_handler_8h-source.html#l00040">40</a> of file <a class="el" href="_msg_handler_8h-source.html">MsgHandler.h</a>.<hr><h2>Constructor &amp; Destructor Documentation</h2>
+Definition at line <a class="el" href="_msg_handler_8h-source.html#l00038">38</a> of file <a class="el" href="_msg_handler_8h-source.html">MsgHandler.h</a>.<hr><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" name="b22de10ac1b674743d7b242f04d6f74e"></a><!-- doxytag: member="MsgHandler::~MsgHandler" ref="b22de10ac1b674743d7b242f04d6f74e" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -71,7 +72,7 @@ Definition at line <a class="el" href="_msg_handler_8h-source.html#l00040">40</a
 <p>
 Virtual destructor for a virtual class. 
 <p>
-Definition at line <a class="el" href="_msg_handler_8h-source.html#l00045">45</a> of file <a class="el" href="_msg_handler_8h-source.html">MsgHandler.h</a>.
+Definition at line <a class="el" href="_msg_handler_8h-source.html#l00043">43</a> of file <a class="el" href="_msg_handler_8h-source.html">MsgHandler.h</a>.
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
@@ -117,7 +118,7 @@ A message to be processed by the handler.<p>
 </dl>
 
 <p>
-Implemented in <a class="el" href="class_log_stream.html#6c9329b8b581ff2a741dd7f12e4b5acb">LogStream</a>, and <a class="el" href="class_msg_stream.html#c9643dcb25bc9226b477ce02c973070c">MsgStream</a>.
+Implemented in <a class="el" href="class_log_stream.html#6c9329b8b581ff2a741dd7f12e4b5acb">LogStream</a>, <a class="el" href="class_msg_socket_handler.html#620ba3e3866f624462a2d00f0163c1a4">MsgSocketHandler</a>, and <a class="el" href="class_msg_stream.html#c9643dcb25bc9226b477ce02c973070c">MsgStream</a>.
 </div>
 </div><p>
 <a class="anchor" name="8bca040a9657c03d78d01f320957acea"></a><!-- doxytag: member="MsgHandler::setBaseVerbosity" ref="8bca040a9657c03d78d01f320957acea" args="(int level)" -->
@@ -145,11 +146,11 @@ What level of verbosity is requested. This is a hint to the class and can be ign
 </dl>
 
 <p>
-Reimplemented in <a class="el" href="class_log_stream.html#3fc5faa65fac5451b315d054428a095a">LogStream</a>.
+Reimplemented in <a class="el" href="class_log_stream.html#3fc5faa65fac5451b315d054428a095a">LogStream</a>, and <a class="el" href="class_msg_socket_handler.html#3b7af6ea1127ba6667dacb2b8553595d">MsgSocketHandler</a>.
 <p>
-Definition at line <a class="el" href="_msg_handler_8h-source.html#l00062">62</a> of file <a class="el" href="_msg_handler_8h-source.html">MsgHandler.h</a>.
+Definition at line <a class="el" href="_msg_handler_8h-source.html#l00060">60</a> of file <a class="el" href="_msg_handler_8h-source.html">MsgHandler.h</a>.
 <p>
-References <a class="el" href="_msg_handler_8h-source.html#l00066">m_Verbosity</a>.
+References <a class="el" href="_msg_handler_8h-source.html#l00064">m_Verbosity</a>.
 </div>
 </div><p>
 <hr><h2>Member Data Documentation</h2>
@@ -171,14 +172,14 @@ What level of verbosity is processed, higher == more messages.
 <p>
 Reimplemented in <a class="el" href="class_log_stream.html#1df8aaacd133f747d9c73e90a3de4539">LogStream</a>.
 <p>
-Definition at line <a class="el" href="_msg_handler_8h-source.html#l00066">66</a> of file <a class="el" href="_msg_handler_8h-source.html">MsgHandler.h</a>.
+Definition at line <a class="el" href="_msg_handler_8h-source.html#l00064">64</a> of file <a class="el" href="_msg_handler_8h-source.html">MsgHandler.h</a>.
 <p>
-Referenced by <a class="el" href="_msg_stream_8cpp-source.html#l00045">MsgStream::message()</a>, <a class="el" href="_msg_stream_8h-source.html#l00048">MsgStream::MsgStream()</a>, and <a class="el" href="_msg_handler_8h-source.html#l00062">setBaseVerbosity()</a>.
+Referenced by <a class="el" href="_msg_stream_8cpp-source.html#l00045">MsgStream::message()</a>, <a class="el" href="_msg_socket_handler_8cpp-source.html#l00036">MsgSocketHandler::MsgSocketHandler()</a>, <a class="el" href="_msg_stream_8h-source.html#l00046">MsgStream::MsgStream()</a>, and <a class="el" href="_msg_handler_8h-source.html#l00060">setBaseVerbosity()</a>.
 </div>
 </div><p>
 <hr>The documentation for this class was generated from the following file:<ul>
 <li>C:/FusionSDK/affy/sdk/util/<a class="el" href="_msg_handler_8h-source.html">MsgHandler.h</a></ul>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:33 2009 for Affymetrix Fusion SDK by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:45 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

@@ -63,48 +63,59 @@
 <a name="l00039"></a>00039 
 <a name="l00040"></a>00040 <span class="comment">/*</span>
 <a name="l00041"></a>00041 <span class="comment"> * Reads the GenericDataHeader and all parent GenericDataHeaders.</span>
-<a name="l00042"></a>00042 <span class="comment"> */</span>
-<a name="l00043"></a><a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header_reader.html#ee913510296c5942f830e350cf3e7198">00043</a> <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header_reader.html#ee913510296c5942f830e350cf3e7198">GenericDataHeaderReader::Read</a>(<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html">GenericDataHeader</a>&amp; gdh)
-<a name="l00044"></a>00044 {
-<a name="l00045"></a>00045         <span class="comment">// Read data type identifier</span>
-<a name="l00046"></a>00046         gdh.<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#1022bcf24da7851448eb882a5baa67e9">SetFileTypeId</a>(<a class="code" href="classaffymetrix__calvin__io_1_1_file_input.html#144d6771596b0e1f6a64a8b26ca24281">FileInput::ReadString8</a>(<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header_reader.html#c48907d7a84170ae21d88bd7e2bbc612">fileStream</a>));
-<a name="l00047"></a>00047 
-<a name="l00048"></a>00048         <span class="comment">// Read file identifier</span>
-<a name="l00049"></a>00049         gdh.<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#09a1ebe51a88fcb5dad42219a3780715">SetFileId</a>(<a class="code" href="classaffymetrix__calvin__io_1_1_file_input.html#144d6771596b0e1f6a64a8b26ca24281">FileInput::ReadString8</a>(fileStream));
-<a name="l00050"></a>00050 
-<a name="l00051"></a>00051         <span class="comment">// Read file creation time</span>
-<a name="l00052"></a>00052         gdh.<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#873f00d4e59671d51bedb74890fb3523">SetFileCreationTime</a>(<a class="code" href="classaffymetrix__calvin__io_1_1_file_input.html#c3ae27ec0acc510ff97a22a7adf799ab">FileInput::ReadString16</a>(fileStream));
-<a name="l00053"></a>00053 
-<a name="l00054"></a>00054         <span class="comment">// Read locale</span>
-<a name="l00055"></a>00055         gdh.<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#53517ee8265a4fb80440b933d1549ea7">SetLocale</a>(<a class="code" href="classaffymetrix__calvin__io_1_1_file_input.html#c3ae27ec0acc510ff97a22a7adf799ab">FileInput::ReadString16</a>(fileStream));
-<a name="l00056"></a>00056 
-<a name="l00057"></a>00057         <span class="comment">// Read name value pairs</span>
-<a name="l00058"></a>00058         <a class="code" href="md5_8h.html#0d5a2542b430beb8568bacccd2c657ae">u_int32_t</a> paramCount = <a class="code" href="classaffymetrix__calvin__io_1_1_file_input.html#c5055649ba57d52a65f44846c23c0426">FileInput::ReadUInt32</a>(fileStream);
-<a name="l00059"></a>00059         <span class="keywordflow">for</span> (<a class="code" href="md5_8h.html#0d5a2542b430beb8568bacccd2c657ae">u_int32_t</a> iparam = 0; iparam &lt; paramCount; ++iparam)
-<a name="l00060"></a>00060         {
-<a name="l00061"></a>00061                 <span class="keyword">const</span> <span class="keywordtype">void</span>* mimeValue = 0;
-<a name="l00062"></a>00062                 std::wstring name = <a class="code" href="classaffymetrix__calvin__io_1_1_file_input.html#c3ae27ec0acc510ff97a22a7adf799ab">FileInput::ReadString16</a>(fileStream);
-<a name="l00063"></a>00063                 int32_t mimeSize = <a class="code" href="classaffymetrix__calvin__io_1_1_file_input.html#eb5a14b17e78e8c0d932ab57dfb41da5">FileInput::ReadBlob</a>(fileStream,mimeValue);
-<a name="l00064"></a>00064                 std::wstring type = <a class="code" href="classaffymetrix__calvin__io_1_1_file_input.html#c3ae27ec0acc510ff97a22a7adf799ab">FileInput::ReadString16</a>(fileStream);
-<a name="l00065"></a>00065                 <a class="code" href="classaffymetrix__calvin__parameter_1_1_parameter_name_value_type.html">ParameterNameValueType</a> nvt(name,(<span class="keywordtype">void</span>*)mimeValue, mimeSize, type);
-<a name="l00066"></a>00066                 <span class="comment">// deleting a "const void*" generates a warning under gcc.</span>
-<a name="l00067"></a>00067                 <span class="comment">// cast to a "char*" to quiet it.</span>
-<a name="l00068"></a>00068                 <span class="keyword">delete</span>[] (<span class="keywordtype">char</span>*)mimeValue;
-<a name="l00069"></a>00069                 gdh.<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#aef03a3208142900da10c77e3d46936f">AddNameValParam</a>(nvt);
-<a name="l00070"></a>00070         }
-<a name="l00071"></a>00071 
-<a name="l00072"></a>00072         <span class="comment">// Read number of generic data parent header</span>
-<a name="l00073"></a>00073         <a class="code" href="md5_8h.html#0d5a2542b430beb8568bacccd2c657ae">u_int32_t</a> numParents = <a class="code" href="classaffymetrix__calvin__io_1_1_file_input.html#c5055649ba57d52a65f44846c23c0426">FileInput::ReadUInt32</a>(fileStream);
-<a name="l00074"></a>00074 
-<a name="l00075"></a>00075         <span class="comment">// Read each parent header in turn - this needs to be recursive</span>
-<a name="l00076"></a>00076         <span class="keywordflow">for</span> (<a class="code" href="md5_8h.html#0d5a2542b430beb8568bacccd2c657ae">u_int32_t</a> iparent = 0; iparent &lt; numParents; ++iparent)
-<a name="l00077"></a>00077         {
-<a name="l00078"></a>00078                 <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html">GenericDataHeader</a> parentGDH;
-<a name="l00079"></a>00079                 <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header_reader.html#ee913510296c5942f830e350cf3e7198">Read</a>(parentGDH);
-<a name="l00080"></a>00080                 gdh.<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#41928b79b637a88f915516fbf206c587">AddParent</a>(parentGDH);
+<a name="l00042"></a>00042 <span class="comment"> * Calls Read() with true to retain originqal intent.</span>
+<a name="l00043"></a>00043 <span class="comment"> */</span>
+<a name="l00044"></a><a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header_reader.html#ee913510296c5942f830e350cf3e7198">00044</a> <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header_reader.html#ee913510296c5942f830e350cf3e7198">GenericDataHeaderReader::Read</a>(<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html">GenericDataHeader</a>&amp; gdh)
+<a name="l00045"></a>00045 {
+<a name="l00046"></a>00046         <span class="comment">// retain original calling logic.</span>
+<a name="l00047"></a>00047         <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header_reader.html#ee913510296c5942f830e350cf3e7198">Read</a>(gdh, <span class="keyword">true</span>);
+<a name="l00048"></a>00048 }
+<a name="l00049"></a>00049 
+<a name="l00050"></a>00050 <span class="comment">/*</span>
+<a name="l00051"></a>00051 <span class="comment"> * Reads the GenericDataHeader and all parent GenericDataHeaders.</span>
+<a name="l00052"></a>00052 <span class="comment"> * In call to AddNameValParam, doUniqueAdds is passed.</span>
+<a name="l00053"></a>00053 <span class="comment"> */</span>
+<a name="l00054"></a><a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header_reader.html#251f52c67d111ee6db2bf6c32bcee4b3">00054</a> <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header_reader.html#ee913510296c5942f830e350cf3e7198">GenericDataHeaderReader::Read</a>(<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html">GenericDataHeader</a>&amp; gdh, <span class="keywordtype">bool</span> doUniqueAdds)
+<a name="l00055"></a>00055 {
+<a name="l00056"></a>00056         <span class="comment">// Read data type identifier</span>
+<a name="l00057"></a>00057         gdh.<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#1022bcf24da7851448eb882a5baa67e9">SetFileTypeId</a>(<a class="code" href="classaffymetrix__calvin__io_1_1_file_input.html#144d6771596b0e1f6a64a8b26ca24281">FileInput::ReadString8</a>(<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header_reader.html#c48907d7a84170ae21d88bd7e2bbc612">fileStream</a>));
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059         <span class="comment">// Read file identifier</span>
+<a name="l00060"></a>00060         gdh.<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#09a1ebe51a88fcb5dad42219a3780715">SetFileId</a>(<a class="code" href="classaffymetrix__calvin__io_1_1_file_input.html#144d6771596b0e1f6a64a8b26ca24281">FileInput::ReadString8</a>(fileStream));
+<a name="l00061"></a>00061 
+<a name="l00062"></a>00062         <span class="comment">// Read file creation time</span>
+<a name="l00063"></a>00063         gdh.<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#873f00d4e59671d51bedb74890fb3523">SetFileCreationTime</a>(<a class="code" href="classaffymetrix__calvin__io_1_1_file_input.html#c3ae27ec0acc510ff97a22a7adf799ab">FileInput::ReadString16</a>(fileStream));
+<a name="l00064"></a>00064 
+<a name="l00065"></a>00065         <span class="comment">// Read locale</span>
+<a name="l00066"></a>00066         gdh.<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#53517ee8265a4fb80440b933d1549ea7">SetLocale</a>(<a class="code" href="classaffymetrix__calvin__io_1_1_file_input.html#c3ae27ec0acc510ff97a22a7adf799ab">FileInput::ReadString16</a>(fileStream));
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068         <span class="comment">// Read name value pairs</span>
+<a name="l00069"></a>00069         <a class="code" href="md5_8h.html#0d5a2542b430beb8568bacccd2c657ae">u_int32_t</a> paramCount = <a class="code" href="classaffymetrix__calvin__io_1_1_file_input.html#c5055649ba57d52a65f44846c23c0426">FileInput::ReadUInt32</a>(fileStream);
+<a name="l00070"></a>00070         <span class="keywordflow">for</span> (<a class="code" href="md5_8h.html#0d5a2542b430beb8568bacccd2c657ae">u_int32_t</a> iparam = 0; iparam &lt; paramCount; ++iparam)
+<a name="l00071"></a>00071         {
+<a name="l00072"></a>00072                 <span class="keyword">const</span> <span class="keywordtype">void</span>* mimeValue = 0;
+<a name="l00073"></a>00073                 std::wstring name = <a class="code" href="classaffymetrix__calvin__io_1_1_file_input.html#c3ae27ec0acc510ff97a22a7adf799ab">FileInput::ReadString16</a>(fileStream);
+<a name="l00074"></a>00074                 int32_t mimeSize = <a class="code" href="classaffymetrix__calvin__io_1_1_file_input.html#eb5a14b17e78e8c0d932ab57dfb41da5">FileInput::ReadBlob</a>(fileStream,mimeValue);
+<a name="l00075"></a>00075                 std::wstring type = <a class="code" href="classaffymetrix__calvin__io_1_1_file_input.html#c3ae27ec0acc510ff97a22a7adf799ab">FileInput::ReadString16</a>(fileStream);
+<a name="l00076"></a>00076                 <a class="code" href="classaffymetrix__calvin__parameter_1_1_parameter_name_value_type.html">ParameterNameValueType</a> nvt(name,(<span class="keywordtype">void</span>*)mimeValue, mimeSize, type);
+<a name="l00077"></a>00077                 <span class="comment">// deleting a "const void*" generates a warning under gcc.</span>
+<a name="l00078"></a>00078                 <span class="comment">// cast to a "char*" to quiet it.</span>
+<a name="l00079"></a>00079                 <span class="keyword">delete</span>[] (<span class="keywordtype">char</span>*)mimeValue;
+<a name="l00080"></a>00080                 gdh.<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#aef03a3208142900da10c77e3d46936f">AddNameValParam</a>(nvt,doUniqueAdds);
 <a name="l00081"></a>00081         }
-<a name="l00082"></a>00082 }
-</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:10 2009 for Affymetrix Fusion SDK by&nbsp;
+<a name="l00082"></a>00082 
+<a name="l00083"></a>00083         <span class="comment">// Read number of generic data parent header</span>
+<a name="l00084"></a>00084         <a class="code" href="md5_8h.html#0d5a2542b430beb8568bacccd2c657ae">u_int32_t</a> numParents = <a class="code" href="classaffymetrix__calvin__io_1_1_file_input.html#c5055649ba57d52a65f44846c23c0426">FileInput::ReadUInt32</a>(fileStream);
+<a name="l00085"></a>00085 
+<a name="l00086"></a>00086         <span class="comment">// Read each parent header in turn - this needs to be recursive</span>
+<a name="l00087"></a>00087         <span class="keywordflow">for</span> (<a class="code" href="md5_8h.html#0d5a2542b430beb8568bacccd2c657ae">u_int32_t</a> iparent = 0; iparent &lt; numParents; ++iparent)
+<a name="l00088"></a>00088         {
+<a name="l00089"></a>00089                 <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html">GenericDataHeader</a> parentGDH;
+<a name="l00090"></a>00090                 <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header_reader.html#ee913510296c5942f830e350cf3e7198">Read</a>(parentGDH);
+<a name="l00091"></a>00091                 gdh.<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#41928b79b637a88f915516fbf206c587">AddParent</a>(parentGDH);
+<a name="l00092"></a>00092         }
+<a name="l00093"></a>00093 }
+</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:19 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

@@ -168,7 +168,7 @@
 <a name="l00144"></a>00144 
 <a name="l00145"></a>00145         DWORD dwSizeHigh = 0;
 <a name="l00146"></a>00146         DWORD dwSizeLow  = GetFileSize(<a class="code" href="classaffymetrix__calvin__io_1_1_mem_map_file.html#f0c8fdeee235b35171dff355c3821772">fileHandle</a>, &amp;dwSizeHigh);
-<a name="l00147"></a>00147         <a class="code" href="classaffymetrix__calvin__io_1_1_mem_map_file.html#80a669e6f3c74679d72110bb390a8216">fileSize</a> = __int64(dwSizeHigh &lt;&lt; 32) + __int64(dwSizeLow);
+<a name="l00147"></a>00147         <a class="code" href="classaffymetrix__calvin__io_1_1_mem_map_file.html#80a669e6f3c74679d72110bb390a8216">fileSize</a> = (__int64(dwSizeHigh) &lt;&lt; 32) + __int64(dwSizeLow);
 <a name="l00148"></a>00148 
 <a name="l00149"></a>00149         <span class="comment">// Create a file map handle</span>
 <a name="l00150"></a>00150         DWORD dwProtect = (<a class="code" href="classaffymetrix__calvin__io_1_1_mem_map_file.html#5e5a24d4223eca1275cbacc0feb95f58">dwMapMode</a> == FILE_MAP_READ) ? PAGE_READONLY : PAGE_READWRITE;
@@ -261,7 +261,7 @@
 <a name="l00237"></a>00237         }
 <a name="l00238"></a>00238 }
 <a name="l00239"></a>00239 
-</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:06 2009 for Affymetrix Fusion SDK by&nbsp;
+</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:14 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

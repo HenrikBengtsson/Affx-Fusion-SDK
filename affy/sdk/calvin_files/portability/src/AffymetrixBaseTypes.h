@@ -25,7 +25,7 @@
  */ 
 
 /* Define the type for the Windows platform. */
-#ifdef WIN32
+#ifdef _MSC_VER
 
 #ifndef __MINGW32__
 

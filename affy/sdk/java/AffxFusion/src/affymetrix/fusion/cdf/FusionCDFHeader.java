@@ -107,4 +107,28 @@ public class FusionCDFHeader {
 	public void clear() {
 		gcosHeader = null;
 	}
+	
+	/** Returns the format version. */
+	public int getFormatVersion() {
+		if (gcosHeader != null) {
+			return gcosHeader.getVersion();
+		}
+		return 0;
+	}
+	
+	/** Returns the guid */
+	public String getGUID() {
+		if (gcosHeader != null) {
+			return gcosHeader.getGUID();
+		}
+		return null;
+	}
+	
+	/** Returns the integrity md5 */
+	public String getIntegrityMd5() {
+		if (gcosHeader != null) {
+			return gcosHeader.getIntegrityMd5();
+		}
+		return null;
+	}
 }

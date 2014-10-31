@@ -47,118 +47,118 @@
 <a name="l00023"></a>00023 <span class="preprocessor">#include "<a class="code" href="_data_set_header_8h.html">calvin_files/data/src/DataSetHeader.h</a>"</span>
 <a name="l00024"></a>00024 <span class="preprocessor">#include "<a class="code" href="_generic_data_types_8h.html">calvin_files/data/src/GenericDataTypes.h</a>"</span>
 <a name="l00025"></a>00025 <span class="preprocessor">#include "<a class="code" href="_exception_base_8h.html">calvin_files/exception/src/ExceptionBase.h</a>"</span>
-<a name="l00026"></a>00026 <span class="preprocessor">#include "<a class="code" href="_string_utils_8h.html">calvin_files/utils/src/StringUtils.h</a>"</span>
-<a name="l00027"></a>00027 <span class="comment">//</span>
-<a name="l00028"></a>00028 <span class="preprocessor">#include &lt;sys/stat.h&gt;</span>
-<a name="l00029"></a>00029 <span class="comment">//</span>
-<a name="l00030"></a>00030 
-<a name="l00031"></a>00031 <span class="keyword">using namespace </span>affymetrix_calvin_io;
-<a name="l00032"></a>00032 <span class="keyword">using namespace </span>affymetrix_calvin_exceptions;
-<a name="l00033"></a>00033 <span class="keyword">using namespace </span>affymetrix_calvin_parameter;
-<a name="l00034"></a>00034 
-<a name="l00035"></a>00035 <span class="comment">/*</span>
-<a name="l00036"></a>00036 <span class="comment"> * Default constructor</span>
-<a name="l00037"></a>00037 <span class="comment"> */</span>
-<a name="l00038"></a><a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#81bcf43ca73058de988d311feeacbbc6">00038</a> CelFileData::CelFileData()
-<a name="l00039"></a>00039 {
-<a name="l00040"></a>00040         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#fe635eb747df47653bba9407f7d57152">dpInten</a> = 0;
-<a name="l00041"></a>00041         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#7b71b9483382e3fdf710f40846e4d92c">dpStdev</a> = 0;
-<a name="l00042"></a>00042         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#d14ab623f9e8d21119fd9ce2fd1d16be">dpPixels</a> = 0;
-<a name="l00043"></a>00043         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#ee0b83509a205128b6d581660aba39dc">Clear</a>();
-<a name="l00044"></a>00044 }
-<a name="l00045"></a>00045 
-<a name="l00046"></a>00046 <span class="comment">/*</span>
-<a name="l00047"></a>00047 <span class="comment"> * Constructor</span>
-<a name="l00048"></a>00048 <span class="comment"> */</span>
-<a name="l00049"></a><a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#db82b6dd7645dcbd05a08ec314c0ef60">00049</a> <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#81bcf43ca73058de988d311feeacbbc6">CelFileData::CelFileData</a>(<span class="keyword">const</span> std::string &amp;filename) 
-<a name="l00050"></a>00050 {
-<a name="l00051"></a>00051         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#fe635eb747df47653bba9407f7d57152">dpInten</a> = 0;
-<a name="l00052"></a>00052         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#7b71b9483382e3fdf710f40846e4d92c">dpStdev</a> = 0;
-<a name="l00053"></a>00053         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#d14ab623f9e8d21119fd9ce2fd1d16be">dpPixels</a> = 0;
-<a name="l00054"></a>00054 
-<a name="l00055"></a>00055         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#ee0b83509a205128b6d581660aba39dc">Clear</a>();
-<a name="l00056"></a>00056         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#216b8c3b7c09b217af1354d5a035a63b">SetFilename</a>(filename);
-<a name="l00057"></a>00057         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#b2d3d0d3beb6075ab36a20be876846fc">genericData</a>.<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data.html#a4dde02ef7050992a36bcd7c2c231c29">Header</a>().<a class="code" href="classaffymetrix__calvin__io_1_1_file_header.html#d6e027854ea33adf2e4a555a4e59b656">GetGenericDataHdr</a>()-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#1022bcf24da7851448eb882a5baa67e9">SetFileTypeId</a>(<a class="code" href="_generic_data_types_8h.html#736d12dd7e5dddb193bd80c23f424a83">INTENSITY_DATA_TYPE</a>);
-<a name="l00058"></a>00058         <a class="code" href="classaffymetrix__calvin__io_1_1_data_group_header.html">DataGroupHeader</a> dcHdr(<a class="code" href="_c_e_l_data_8h.html#f1c4e760691406f7085ed7336713fd41">CelDataGroupName</a>);
-<a name="l00059"></a>00059         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#b2d3d0d3beb6075ab36a20be876846fc">genericData</a>.<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data.html#a4dde02ef7050992a36bcd7c2c231c29">Header</a>().<a class="code" href="classaffymetrix__calvin__io_1_1_file_header.html#9583dc2e0e63e173d5f294686a1a00e1">AddDataGroupHdr</a>(dcHdr);
-<a name="l00060"></a>00060 }
-<a name="l00061"></a>00061 
-<a name="l00062"></a>00062 <span class="comment">/*</span>
-<a name="l00063"></a>00063 <span class="comment"> * Destructor</span>
-<a name="l00064"></a>00064 <span class="comment"> */</span>
-<a name="l00065"></a><a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#073560f3cbb454e1e4277643b7a97e9a">00065</a> <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#073560f3cbb454e1e4277643b7a97e9a">CelFileData::~CelFileData</a>() 
-<a name="l00066"></a>00066 {
-<a name="l00067"></a>00067         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#ee0b83509a205128b6d581660aba39dc">Clear</a>(); 
-<a name="l00068"></a>00068 }
-<a name="l00069"></a>00069 
-<a name="l00070"></a>00070 <span class="comment">/*</span>
-<a name="l00071"></a>00071 <span class="comment"> * Clear the object members.</span>
-<a name="l00072"></a>00072 <span class="comment"> */</span>
-<a name="l00073"></a><a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#ee0b83509a205128b6d581660aba39dc">00073</a> <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#ee0b83509a205128b6d581660aba39dc">CelFileData::Clear</a>()
-<a name="l00074"></a>00074 {
-<a name="l00075"></a>00075         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#b2d3d0d3beb6075ab36a20be876846fc">genericData</a>.<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data.html#a4dde02ef7050992a36bcd7c2c231c29">Header</a>().<a class="code" href="classaffymetrix__calvin__io_1_1_file_header.html#529bd075c1f659968e55fd9f04f7f076">Clear</a>();
-<a name="l00076"></a>00076         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#91452f2051d1886f38fecb7b5d9fda09">setIntensityMetaData</a> = <span class="keyword">false</span>;
-<a name="l00077"></a>00077         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#3c9d270972ba871f2e4c1acd76511591">setStdDevMetaData</a> = <span class="keyword">false</span>;
-<a name="l00078"></a>00078         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#6855e8c8fc1f25b4bdbd74cbab839d9c">setPixelMetaData</a> = <span class="keyword">false</span>;
-<a name="l00079"></a>00079         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#b5720314ec1c902eda87ee75c19cc297">setOutlierMetaData</a> = <span class="keyword">false</span>;
-<a name="l00080"></a>00080         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#c7a6fe66afbcca12d68cf6610b3a6b3e">setMaskMetaData</a> = <span class="keyword">false</span>;
-<a name="l00081"></a>00081         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#3879b2d00c0ded9bbe77784e12480514">CloseDataSets</a>();
-<a name="l00082"></a>00082         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#576634da939cdf3f590277741fcd47db">ResetMaskAndOutliers</a>();
-<a name="l00083"></a>00083         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#540af6be15fea364422f05038e0d4c7c">cachedRows</a> = -1;
-<a name="l00084"></a>00084         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#f4faa17ab678be549784562cc94e8606">cachedCols</a> = -1;
-<a name="l00085"></a>00085         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#6983827c5fcd0f8390ee3acb92ee298e">intensityColumnType</a> = -1;
-<a name="l00086"></a>00086         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#86ba00a9ab24f82cf6d8e38ec9517a48">activeChannel</a> = <a class="code" href="_c_e_l_data_8h.html#f1c4e760691406f7085ed7336713fd41">CelDataGroupName</a>;
-<a name="l00087"></a>00087 }
-<a name="l00088"></a>00088 
-<a name="l00089"></a><a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#3879b2d00c0ded9bbe77784e12480514">00089</a> <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#3879b2d00c0ded9bbe77784e12480514">CelFileData::CloseDataSets</a>()
-<a name="l00090"></a>00090 {
-<a name="l00091"></a>00091         <span class="keywordflow">if</span> (<a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#fe635eb747df47653bba9407f7d57152">dpInten</a>)
-<a name="l00092"></a>00092         { 
-<a name="l00093"></a>00093                 <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#fe635eb747df47653bba9407f7d57152">dpInten</a>-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_data_set.html#cbb628f5a2c33bbd7a63cde52dad820f">Delete</a>(); 
-<a name="l00094"></a>00094                 <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#fe635eb747df47653bba9407f7d57152">dpInten</a> = 0; 
-<a name="l00095"></a>00095         }
-<a name="l00096"></a>00096         <span class="keywordflow">if</span> (<a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#7b71b9483382e3fdf710f40846e4d92c">dpStdev</a>) 
-<a name="l00097"></a>00097         { 
-<a name="l00098"></a>00098                 <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#7b71b9483382e3fdf710f40846e4d92c">dpStdev</a>-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_data_set.html#cbb628f5a2c33bbd7a63cde52dad820f">Delete</a>(); 
-<a name="l00099"></a>00099                 <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#7b71b9483382e3fdf710f40846e4d92c">dpStdev</a> = 0; 
-<a name="l00100"></a>00100         }
-<a name="l00101"></a>00101         <span class="keywordflow">if</span> (<a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#d14ab623f9e8d21119fd9ce2fd1d16be">dpPixels</a>) 
-<a name="l00102"></a>00102         { 
-<a name="l00103"></a>00103                 <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#d14ab623f9e8d21119fd9ce2fd1d16be">dpPixels</a>-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_data_set.html#cbb628f5a2c33bbd7a63cde52dad820f">Delete</a>(); 
-<a name="l00104"></a>00104                 <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#d14ab623f9e8d21119fd9ce2fd1d16be">dpPixels</a> = 0; 
-<a name="l00105"></a>00105         }
-<a name="l00106"></a>00106 }
-<a name="l00107"></a>00107 
-<a name="l00108"></a><a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#576634da939cdf3f590277741fcd47db">00108</a> <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#576634da939cdf3f590277741fcd47db">CelFileData::ResetMaskAndOutliers</a>()
-<a name="l00109"></a>00109 {
-<a name="l00110"></a>00110         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#01648b210c0b7c66c4c441c7dfb7a781">outlierPlaneRead</a> = <span class="keyword">false</span>;
-<a name="l00111"></a>00111         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#fe8e62a397f7cf41c25ce809b80ae3a5">outliers</a>.clear();
-<a name="l00112"></a>00112         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#0cc90040572aa785c318283b5b5db3f7">maskPlaneRead</a> = <span class="keyword">false</span>;
-<a name="l00113"></a>00113         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#640c7c74141c42347e66e1fe177cff0f">masked</a>.clear();
-<a name="l00114"></a>00114 }
-<a name="l00115"></a>00115 
-<a name="l00116"></a><a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#c8161dd494a2f333b9488b4ee4e1eeff">00116</a> <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#c8161dd494a2f333b9488b4ee4e1eeff">CelFileData::SetActiveChannel</a>(<span class="keyword">const</span> std::wstring &amp;channel)
-<a name="l00117"></a>00117 {
-<a name="l00118"></a>00118         <span class="keywordflow">if</span>(<a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#86ba00a9ab24f82cf6d8e38ec9517a48">activeChannel</a> != channel)
-<a name="l00119"></a>00119         {
-<a name="l00120"></a>00120                 <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#86ba00a9ab24f82cf6d8e38ec9517a48">activeChannel</a> = channel;
-<a name="l00121"></a>00121                 <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#3879b2d00c0ded9bbe77784e12480514">CloseDataSets</a>();
-<a name="l00122"></a>00122                 <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#576634da939cdf3f590277741fcd47db">ResetMaskAndOutliers</a>();
-<a name="l00123"></a>00123         }
-<a name="l00124"></a>00124 }
-<a name="l00125"></a>00125 
-<a name="l00126"></a>00126 <span class="comment">/*</span>
-<a name="l00127"></a>00127 <span class="comment"> * Check if the file exists.</span>
-<a name="l00128"></a>00128 <span class="comment"> */</span>
-<a name="l00129"></a><a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#476b3690ea85e8971f31c533b7e1d212">00129</a> <span class="keywordtype">bool</span> <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#476b3690ea85e8971f31c533b7e1d212">CelFileData::Exists</a>()
-<a name="l00130"></a>00130 {
-<a name="l00131"></a>00131         std::string filename = <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#b2d3d0d3beb6075ab36a20be876846fc">genericData</a>.<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data.html#a4dde02ef7050992a36bcd7c2c231c29">Header</a>().<a class="code" href="classaffymetrix__calvin__io_1_1_file_header.html#90b5d7e3d84d32a101dbdfd7a2942451">GetFilename</a>();
-<a name="l00132"></a>00132 
-<a name="l00133"></a>00133         <span class="keywordflow">if</span> (filename != <span class="stringliteral">""</span>)
-<a name="l00134"></a>00134         {
-<a name="l00135"></a>00135                 <span class="comment">// Find the file stats.</span>
-<a name="l00136"></a>00136                 <span class="keyword">struct </span>stat st;
-<a name="l00137"></a>00137                 <span class="keywordflow">return</span> ((stat(filename.c_str(), &amp;st) == 0)? <span class="keyword">true</span>: <span class="keyword">false</span>);
+<a name="l00026"></a>00026 <span class="preprocessor">#include "<a class="code" href="_file_utils_8h.html">calvin_files/utils/src/FileUtils.h</a>"</span>
+<a name="l00027"></a>00027 <span class="preprocessor">#include "<a class="code" href="_string_utils_8h.html">calvin_files/utils/src/StringUtils.h</a>"</span>
+<a name="l00028"></a>00028 <span class="comment">//</span>
+<a name="l00029"></a>00029 <span class="preprocessor">#include &lt;sys/stat.h&gt;</span>
+<a name="l00030"></a>00030 <span class="comment">//</span>
+<a name="l00031"></a>00031 
+<a name="l00032"></a>00032 <span class="keyword">using namespace </span>affymetrix_calvin_io;
+<a name="l00033"></a>00033 <span class="keyword">using namespace </span>affymetrix_calvin_exceptions;
+<a name="l00034"></a>00034 <span class="keyword">using namespace </span>affymetrix_calvin_parameter;
+<a name="l00035"></a>00035 
+<a name="l00036"></a>00036 <span class="comment">/*</span>
+<a name="l00037"></a>00037 <span class="comment"> * Default constructor</span>
+<a name="l00038"></a>00038 <span class="comment"> */</span>
+<a name="l00039"></a><a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#81bcf43ca73058de988d311feeacbbc6">00039</a> CelFileData::CelFileData()
+<a name="l00040"></a>00040 {
+<a name="l00041"></a>00041         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#fe635eb747df47653bba9407f7d57152">dpInten</a> = 0;
+<a name="l00042"></a>00042         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#7b71b9483382e3fdf710f40846e4d92c">dpStdev</a> = 0;
+<a name="l00043"></a>00043         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#d14ab623f9e8d21119fd9ce2fd1d16be">dpPixels</a> = 0;
+<a name="l00044"></a>00044         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#ee0b83509a205128b6d581660aba39dc">Clear</a>();
+<a name="l00045"></a>00045 }
+<a name="l00046"></a>00046 
+<a name="l00047"></a>00047 <span class="comment">/*</span>
+<a name="l00048"></a>00048 <span class="comment"> * Constructor</span>
+<a name="l00049"></a>00049 <span class="comment"> */</span>
+<a name="l00050"></a><a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#db82b6dd7645dcbd05a08ec314c0ef60">00050</a> <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#81bcf43ca73058de988d311feeacbbc6">CelFileData::CelFileData</a>(<span class="keyword">const</span> std::string &amp;filename) 
+<a name="l00051"></a>00051 {
+<a name="l00052"></a>00052         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#fe635eb747df47653bba9407f7d57152">dpInten</a> = 0;
+<a name="l00053"></a>00053         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#7b71b9483382e3fdf710f40846e4d92c">dpStdev</a> = 0;
+<a name="l00054"></a>00054         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#d14ab623f9e8d21119fd9ce2fd1d16be">dpPixels</a> = 0;
+<a name="l00055"></a>00055 
+<a name="l00056"></a>00056         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#ee0b83509a205128b6d581660aba39dc">Clear</a>();
+<a name="l00057"></a>00057         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#216b8c3b7c09b217af1354d5a035a63b">SetFilename</a>(filename);
+<a name="l00058"></a>00058         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#b2d3d0d3beb6075ab36a20be876846fc">genericData</a>.<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data.html#a4dde02ef7050992a36bcd7c2c231c29">Header</a>().<a class="code" href="classaffymetrix__calvin__io_1_1_file_header.html#d6e027854ea33adf2e4a555a4e59b656">GetGenericDataHdr</a>()-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#1022bcf24da7851448eb882a5baa67e9">SetFileTypeId</a>(<a class="code" href="_generic_data_types_8h.html#736d12dd7e5dddb193bd80c23f424a83">INTENSITY_DATA_TYPE</a>);
+<a name="l00059"></a>00059         <a class="code" href="classaffymetrix__calvin__io_1_1_data_group_header.html">DataGroupHeader</a> dcHdr(<a class="code" href="_c_e_l_data_8h.html#f1c4e760691406f7085ed7336713fd41">CelDataGroupName</a>);
+<a name="l00060"></a>00060         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#b2d3d0d3beb6075ab36a20be876846fc">genericData</a>.<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data.html#a4dde02ef7050992a36bcd7c2c231c29">Header</a>().<a class="code" href="classaffymetrix__calvin__io_1_1_file_header.html#9583dc2e0e63e173d5f294686a1a00e1">AddDataGroupHdr</a>(dcHdr);
+<a name="l00061"></a>00061 }
+<a name="l00062"></a>00062 
+<a name="l00063"></a>00063 <span class="comment">/*</span>
+<a name="l00064"></a>00064 <span class="comment"> * Destructor</span>
+<a name="l00065"></a>00065 <span class="comment"> */</span>
+<a name="l00066"></a><a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#073560f3cbb454e1e4277643b7a97e9a">00066</a> <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#073560f3cbb454e1e4277643b7a97e9a">CelFileData::~CelFileData</a>() 
+<a name="l00067"></a>00067 {
+<a name="l00068"></a>00068         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#ee0b83509a205128b6d581660aba39dc">Clear</a>(); 
+<a name="l00069"></a>00069 }
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071 <span class="comment">/*</span>
+<a name="l00072"></a>00072 <span class="comment"> * Clear the object members.</span>
+<a name="l00073"></a>00073 <span class="comment"> */</span>
+<a name="l00074"></a><a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#ee0b83509a205128b6d581660aba39dc">00074</a> <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#ee0b83509a205128b6d581660aba39dc">CelFileData::Clear</a>()
+<a name="l00075"></a>00075 {
+<a name="l00076"></a>00076         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#b2d3d0d3beb6075ab36a20be876846fc">genericData</a>.<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data.html#a4dde02ef7050992a36bcd7c2c231c29">Header</a>().<a class="code" href="classaffymetrix__calvin__io_1_1_file_header.html#529bd075c1f659968e55fd9f04f7f076">Clear</a>();
+<a name="l00077"></a>00077         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#91452f2051d1886f38fecb7b5d9fda09">setIntensityMetaData</a> = <span class="keyword">false</span>;
+<a name="l00078"></a>00078         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#3c9d270972ba871f2e4c1acd76511591">setStdDevMetaData</a> = <span class="keyword">false</span>;
+<a name="l00079"></a>00079         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#6855e8c8fc1f25b4bdbd74cbab839d9c">setPixelMetaData</a> = <span class="keyword">false</span>;
+<a name="l00080"></a>00080         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#b5720314ec1c902eda87ee75c19cc297">setOutlierMetaData</a> = <span class="keyword">false</span>;
+<a name="l00081"></a>00081         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#c7a6fe66afbcca12d68cf6610b3a6b3e">setMaskMetaData</a> = <span class="keyword">false</span>;
+<a name="l00082"></a>00082         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#3879b2d00c0ded9bbe77784e12480514">CloseDataSets</a>();
+<a name="l00083"></a>00083         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#576634da939cdf3f590277741fcd47db">ResetMaskAndOutliers</a>();
+<a name="l00084"></a>00084         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#540af6be15fea364422f05038e0d4c7c">cachedRows</a> = -1;
+<a name="l00085"></a>00085         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#f4faa17ab678be549784562cc94e8606">cachedCols</a> = -1;
+<a name="l00086"></a>00086         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#6983827c5fcd0f8390ee3acb92ee298e">intensityColumnType</a> = -1;
+<a name="l00087"></a>00087         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#86ba00a9ab24f82cf6d8e38ec9517a48">activeChannel</a> = <a class="code" href="_c_e_l_data_8h.html#f1c4e760691406f7085ed7336713fd41">CelDataGroupName</a>;
+<a name="l00088"></a>00088 }
+<a name="l00089"></a>00089 
+<a name="l00090"></a><a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#3879b2d00c0ded9bbe77784e12480514">00090</a> <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#3879b2d00c0ded9bbe77784e12480514">CelFileData::CloseDataSets</a>()
+<a name="l00091"></a>00091 {
+<a name="l00092"></a>00092         <span class="keywordflow">if</span> (<a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#fe635eb747df47653bba9407f7d57152">dpInten</a>)
+<a name="l00093"></a>00093         { 
+<a name="l00094"></a>00094                 <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#fe635eb747df47653bba9407f7d57152">dpInten</a>-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_data_set.html#cbb628f5a2c33bbd7a63cde52dad820f">Delete</a>(); 
+<a name="l00095"></a>00095                 <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#fe635eb747df47653bba9407f7d57152">dpInten</a> = 0; 
+<a name="l00096"></a>00096         }
+<a name="l00097"></a>00097         <span class="keywordflow">if</span> (<a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#7b71b9483382e3fdf710f40846e4d92c">dpStdev</a>) 
+<a name="l00098"></a>00098         { 
+<a name="l00099"></a>00099                 <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#7b71b9483382e3fdf710f40846e4d92c">dpStdev</a>-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_data_set.html#cbb628f5a2c33bbd7a63cde52dad820f">Delete</a>(); 
+<a name="l00100"></a>00100                 <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#7b71b9483382e3fdf710f40846e4d92c">dpStdev</a> = 0; 
+<a name="l00101"></a>00101         }
+<a name="l00102"></a>00102         <span class="keywordflow">if</span> (<a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#d14ab623f9e8d21119fd9ce2fd1d16be">dpPixels</a>) 
+<a name="l00103"></a>00103         { 
+<a name="l00104"></a>00104                 <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#d14ab623f9e8d21119fd9ce2fd1d16be">dpPixels</a>-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_data_set.html#cbb628f5a2c33bbd7a63cde52dad820f">Delete</a>(); 
+<a name="l00105"></a>00105                 <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#d14ab623f9e8d21119fd9ce2fd1d16be">dpPixels</a> = 0; 
+<a name="l00106"></a>00106         }
+<a name="l00107"></a>00107 }
+<a name="l00108"></a>00108 
+<a name="l00109"></a><a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#576634da939cdf3f590277741fcd47db">00109</a> <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#576634da939cdf3f590277741fcd47db">CelFileData::ResetMaskAndOutliers</a>()
+<a name="l00110"></a>00110 {
+<a name="l00111"></a>00111         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#01648b210c0b7c66c4c441c7dfb7a781">outlierPlaneRead</a> = <span class="keyword">false</span>;
+<a name="l00112"></a>00112         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#fe8e62a397f7cf41c25ce809b80ae3a5">outliers</a>.clear();
+<a name="l00113"></a>00113         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#0cc90040572aa785c318283b5b5db3f7">maskPlaneRead</a> = <span class="keyword">false</span>;
+<a name="l00114"></a>00114         <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#640c7c74141c42347e66e1fe177cff0f">masked</a>.clear();
+<a name="l00115"></a>00115 }
+<a name="l00116"></a>00116 
+<a name="l00117"></a><a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#c8161dd494a2f333b9488b4ee4e1eeff">00117</a> <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#c8161dd494a2f333b9488b4ee4e1eeff">CelFileData::SetActiveChannel</a>(<span class="keyword">const</span> std::wstring &amp;channel)
+<a name="l00118"></a>00118 {
+<a name="l00119"></a>00119         <span class="keywordflow">if</span>(<a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#86ba00a9ab24f82cf6d8e38ec9517a48">activeChannel</a> != channel)
+<a name="l00120"></a>00120         {
+<a name="l00121"></a>00121                 <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#86ba00a9ab24f82cf6d8e38ec9517a48">activeChannel</a> = channel;
+<a name="l00122"></a>00122                 <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#3879b2d00c0ded9bbe77784e12480514">CloseDataSets</a>();
+<a name="l00123"></a>00123                 <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#576634da939cdf3f590277741fcd47db">ResetMaskAndOutliers</a>();
+<a name="l00124"></a>00124         }
+<a name="l00125"></a>00125 }
+<a name="l00126"></a>00126 
+<a name="l00127"></a>00127 <span class="comment">/*</span>
+<a name="l00128"></a>00128 <span class="comment"> * Check if the file exists.</span>
+<a name="l00129"></a>00129 <span class="comment"> */</span>
+<a name="l00130"></a><a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#476b3690ea85e8971f31c533b7e1d212">00130</a> <span class="keywordtype">bool</span> <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#476b3690ea85e8971f31c533b7e1d212">CelFileData::Exists</a>()
+<a name="l00131"></a>00131 {
+<a name="l00132"></a>00132         std::string filename = <a class="code" href="classaffymetrix__calvin__io_1_1_cel_file_data.html#b2d3d0d3beb6075ab36a20be876846fc">genericData</a>.<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data.html#a4dde02ef7050992a36bcd7c2c231c29">Header</a>().<a class="code" href="classaffymetrix__calvin__io_1_1_file_header.html#90b5d7e3d84d32a101dbdfd7a2942451">GetFilename</a>();
+<a name="l00133"></a>00133 
+<a name="l00134"></a>00134         <span class="keywordflow">if</span> (filename != <span class="stringliteral">""</span>)
+<a name="l00135"></a>00135         {
+<a name="l00136"></a>00136                 <span class="comment">// Find the file stats.</span>
+<a name="l00137"></a>00137           <span class="keywordflow">return</span> FileUtils::Exists(filename.c_str());
 <a name="l00138"></a>00138         }
 <a name="l00139"></a>00139 
 <a name="l00140"></a>00140         <span class="keywordflow">return</span> <span class="keyword">false</span>;
@@ -1066,7 +1066,7 @@
 <a name="l01042"></a>01042         <span class="keywordflow">return</span> params;
 <a name="l01043"></a>01043 }
 <a name="l01044"></a>01044 
-</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:04 2009 for Affymetrix Fusion SDK by&nbsp;
+</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:12 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

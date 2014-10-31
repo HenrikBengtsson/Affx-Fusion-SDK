@@ -43,6 +43,13 @@
 <tr><td class="memTemplParams" nowrap colspan="2">template&lt;class T&gt; </td></tr>
 <tr><td class="memTemplItemLeft" nowrap align="right" valign="top">std::string&nbsp;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="_convert_8h.html#9e68e488e4da0371aea30596313537df">ToStr</a> (const T &amp;t)</td></tr>
 
+<tr><td class="memItemLeft" nowrap align="right" valign="top">std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_convert_8h.html#fbcd5c0acf86d351280781509f2074ff">ToStr</a> (const std::string &amp;str)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><a class="el" href="class_convert.html" title="Utility functions to convert between different types.">Convert</a> the arg to a string.  <a href="#fbcd5c0acf86d351280781509f2074ff"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_convert_8h.html#9b998468881044931182bc887f9a6158">ToStr</a> (double t)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_convert_8h.html#ddc2ebb60ca878f51d30134b1a927900">ToStr</a> (float t)</td></tr>
+
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
 Utility functions for converting between types. 
@@ -52,6 +59,85 @@ Utility functions for converting between types.
 
 <p>
 Definition in file <a class="el" href="_convert_8h-source.html">Convert.h</a>.<hr><h2>Function Documentation</h2>
+<a class="anchor" name="ddc2ebb60ca878f51d30134b1a927900"></a><!-- doxytag: member="Convert.h::ToStr" ref="ddc2ebb60ca878f51d30134b1a927900" args="(float t)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ToStr           </td>
+          <td>(</td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>t</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>
+Definition at line <a class="el" href="_convert_8h-source.html#l00249">249</a> of file <a class="el" href="_convert_8h-source.html">Convert.h</a>.
+<p>
+References <a class="el" href="_convert_8cpp-source.html#l00055">Convert::toString()</a>.
+</div>
+</div><p>
+<a class="anchor" name="9b998468881044931182bc887f9a6158"></a><!-- doxytag: member="Convert.h::ToStr" ref="9b998468881044931182bc887f9a6158" args="(double t)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ToStr           </td>
+          <td>(</td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>t</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>
+Definition at line <a class="el" href="_convert_8h-source.html#l00245">245</a> of file <a class="el" href="_convert_8h-source.html">Convert.h</a>.
+<p>
+References <a class="el" href="_convert_8cpp-source.html#l00055">Convert::toString()</a>.
+</div>
+</div><p>
+<a class="anchor" name="fbcd5c0acf86d351280781509f2074ff"></a><!-- doxytag: member="Convert.h::ToStr" ref="fbcd5c0acf86d351280781509f2074ff" args="(const std::string &amp;str)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ToStr           </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>str</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+<a class="el" href="class_convert.html" title="Utility functions to convert between different types.">Convert</a> the arg to a string. 
+<p>
+<dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>arg</em>&nbsp;</td><td>which is a string already. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>a string </dd></dl>
+<dl class="remark" compact><dt><b>Remarks:</b></dt><dd>Since it is a string already, no conversion needs to be done. ToStr returns a new string, so we match that. </dd></dl>
+
+<p>
+Definition at line <a class="el" href="_convert_8h-source.html#l00240">240</a> of file <a class="el" href="_convert_8h-source.html">Convert.h</a>.
+</div>
+</div><p>
 <a class="anchor" name="9e68e488e4da0371aea30596313537df"></a><!-- doxytag: member="Convert.h::ToStr" ref="9e68e488e4da0371aea30596313537df" args="(const T &amp;t)" -->
 <div class="memitem">
 <div class="memproto">
@@ -73,12 +159,12 @@ template&lt;class T&gt; </div>
 <p>
 Little template function to make string conversion easy. this isn't the fastest way to do things, but it is easy. 
 <p>
-Definition at line <a class="el" href="_convert_8h-source.html#l00046">46</a> of file <a class="el" href="_convert_8h-source.html">Convert.h</a>.
+Definition at line <a class="el" href="_convert_8h-source.html#l00227">227</a> of file <a class="el" href="_convert_8h-source.html">Convert.h</a>.
 <p>
-Referenced by <a class="el" href="_guid_8cpp-source.html#l00065">affxutil::affy_seed_srand()</a>, <a class="el" href="_err_8cpp-source.html#l00134">Err::apt_err_abort()</a>, <a class="el" href="_err_8cpp-source.html#l00120">Err::apt_err_assert()</a>, <a class="el" href="_util_8cpp-source.html#l00950">Util::asMB()</a>, <a class="el" href="_base_engine_8cpp-source.html#l00084">BaseEngine::BaseEngine()</a>, <a class="el" href="_mixed_file_check_8h-source.html#l00071">MixedFileCheck::check()</a>, <a class="el" href="_matrix_check_8h-source.html#l00082">MatrixCheck::check()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l00125">CalvinChpCheck::check()</a>, <a class="el" href="_chp_check_8h-source.html#l00102">ChpCheck::checkFilePair()</a>, <a class="el" href="_cel_check_8h-source.html#l00103">CelCheck::checkFilePair()</a>, <a class="el" href="_regression_check_8h-source.html#l00113">RegressionCheck::checkFloat()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l00715">CalvinChpCheck::checkMultiDataCopyNumberVariationEntry()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l00551">CalvinChpCheck::checkMultiDataDmetBiAllelicEntry()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l00427">CalvinChpCheck::checkMultiDataDmetCopyNumberEntry()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l00471">CalvinChpCheck::checkMultiDataDmetMultiAllelicEntry()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l00747">CalvinChpCheck::checkQuantificationEntry()</a>, <a class="el" href="_table_file_8cpp-source.html#l00247">TableFile::columnFromFile()</a>, <a class="el" href="_table_file_8cpp-source.html#l00319">TableFile::columnFromRowFile()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l00430">affx::TsvFileField::convertToString()</a>, <a class="el" href="_chp_check_8h-source.html#l00264">ChpCheck::dataSame()</a>, <a class="el" href="_cel_check_8h-source.html#l00165">CelCheck::dataSame()</a>, <a class="el" href="_calvin_8cpp-source.html#l00473">Calvin::equivalent()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l02580">affx::TsvFile::f_advance_tabs()</a>, <a class="el" href="_geno_call_coder_8cpp-source.html#l00653">GenoCallCoder::genotypeCallNumToAbstractAllele()</a>, <a class="el" href="_dump_pgf_8cpp-source.html#l00628">dumpPgf::getCoordsByIndex()</a>, <a class="el" href="_affx_conv_8cpp-source.html#l00185">getDouble()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l03839">affx::TsvFile::gotoLine()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l02232">affx::TsvFile::headers_to_fields_v2()</a>, <a class="el" href="_chp_check_8h-source.html#l00224">ChpCheck::headersSame()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l02919">affx::TsvFile::linkvar_link()</a>, <a class="el" href="_util_8cpp-source.html#l00716">Util::matrixDifferences()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l00903">CalvinChpCheck::multiDataCopyNumberSame()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l00959">CalvinChpCheck::multiDataCopyNumberVariationSame()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l00851">CalvinChpCheck::multiDataDmetBiAllelicSame()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l00763">CalvinChpCheck::multiDataDmetCopyNumberSame()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l00807">CalvinChpCheck::multiDataDmetMultiAllelicSame()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l01059">CalvinChpCheck::multiDataExpressionSame()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l01011">CalvinChpCheck::multiDataGenotypeSame()</a>, <a class="el" href="_row_file_8cpp-source.html#l00181">RowFile::nextCStringRowExpect()</a>, <a class="el" href="_row_file_8cpp-source.html#l00095">RowFile::nextLine()</a>, <a class="el" href="_row_file_8cpp-source.html#l00255">RowFile::nextRowExpect()</a>, <a class="el" href="_table_file_8cpp-source.html#l00107">TableFile::open()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l02462">affx::TsvFile::open()</a>, <a class="el" href="_c_h_p_file_updater_8cpp-source.html#l00055">affxchpwriter::CCHPFileUpdater::OpenCHPFile()</a>, <a class="el" href="_calvin_c_h_p_file_updater_8cpp-source.html#l00085">affymetrix_calvin_io::CalvinCHPFileUpdater::OpenCHPFile()</a>, <a class="el" href="_spf_file_8cpp-source.html#l00365">affx::SpfFile::openSpf()</a>, <a class="el" href="_regression_test_8h-source.html#l00123">RegressionTest::pass()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l03014">affx::TsvFile::printBindingErrors()</a>, <a class="el" href="_options_8cpp-source.html#l00128">Options::pushOpt()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l01105">CalvinChpCheck::quantificationDataSame()</a>, <a class="el" href="_row_file_8cpp-source.html#l00266">RowFile::readHeader()</a>, <a class="el" href="_dump_pgf_8cpp-source.html#l00208">dumpPgf::readIdFiles()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l01061">affx::TsvFileIndex::results_append_tmpl()</a>, <a class="el" href="_regression_test_8h-source.html#l00100">RegressionTest::run()</a>, <a class="el" href="_calvin_to_text_8cpp-source.html#l00042">CalvinToText::run()</a>, <a class="el" href="_base_engine_8cpp-source.html#l00178">BaseEngine::run()</a>, <a class="el" href="_options_8cpp-source.html#l00102">Options::setOpt()</a>, <a class="el" href="_regression_test_8h-source.html#l00227">RegressionTest::syncDirectory()</a>, <a class="el" href="_chp_check_8h-source.html#l00193">ChpCheck::tagValuePairMostlySame()</a>, <a class="el" href="_log_stream_8cpp-source.html#l00237">toMB()</a>, <a class="el" href="tsv-util_8cpp-source.html#l00247">tsv_util_paste_basic()</a>, and <a class="el" href="_dump_pgf_8cpp-source.html#l00407">dumpPgf::writeMatches()</a>.
+Referenced by <a class="el" href="_socket_server_8cpp-source.html#l00159">SocketServer::acceptNewConnection()</a>, <a class="el" href="_guid_8cpp-source.html#l00064">affxutil::affy_seed_srand()</a>, <a class="el" href="_err_8cpp-source.html#l00162">Err::apt_err_abort()</a>, <a class="el" href="_err_8cpp-source.html#l00148">Err::apt_err_assert()</a>, <a class="el" href="_util_8cpp-source.html#l00456">Util::asMB()</a>, <a class="el" href="_base_engine_8cpp-source.html#l00086">BaseEngine::BaseEngine()</a>, <a class="el" href="_mixed_file_check_8h-source.html#l00082">MixedFileCheck::check()</a>, <a class="el" href="_matrix_check_8h-source.html#l00102">MatrixCheck::check()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l00145">CalvinChpCheck::check()</a>, <a class="el" href="_chp_check_8h-source.html#l00110">ChpCheck::checkFilePair()</a>, <a class="el" href="_cel_check_8h-source.html#l00099">CelCheck::checkFilePair()</a>, <a class="el" href="_socket_util_8cpp-source.html#l00061">SocketUtil::checkForMsgs()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l00760">CalvinChpCheck::checkMultiDataCopyNumberVariationEntry()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l00594">CalvinChpCheck::checkMultiDataDmetBiAllelicEntry()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l00470">CalvinChpCheck::checkMultiDataDmetCopyNumberEntry()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l00514">CalvinChpCheck::checkMultiDataDmetMultiAllelicEntry()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l00807">CalvinChpCheck::checkQuantificationDetectionEntry()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l00792">CalvinChpCheck::checkQuantificationEntry()</a>, <a class="el" href="_table_file_8cpp-source.html#l00249">TableFile::columnFromFile()</a>, <a class="el" href="_table_file_8cpp-source.html#l00321">TableFile::columnFromRowFile()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l00459">affx::TsvFileField::convertToString()</a>, <a class="el" href="_apt_version_info_8h-source.html#l00114">AptVersionInfo::cvsId()</a>, <a class="el" href="_chp_check_8h-source.html#l00286">ChpCheck::dataSame()</a>, <a class="el" href="_cel_check_8h-source.html#l00160">CelCheck::dataSame()</a>, <a class="el" href="_verbose_8cpp-source.html#l00051">em_out()</a>, <a class="el" href="_calvin_8cpp-source.html#l00452">Calvin::equivalent()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l02782">affx::TsvFile::f_advance_tabs()</a>, <a class="el" href="_socket_base_8cpp-source.html#l00076">SocketBase::fillBufferFromSocket()</a>, <a class="el" href="_geno_call_coder_8cpp-source.html#l00702">GenoCallCoder::genotypeCallNumToAbstractAllele()</a>, <a class="el" href="_dump_pgf_8cpp-source.html#l00626">dumpPgf::getCoordsByIndex()</a>, <a class="el" href="_affx_conv_8cpp-source.html#l00184">getDouble()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l04050">affx::TsvFile::gotoLine()</a>, <a class="el" href="_socket_text_handler_8cpp-source.html#l00026">SocketTextHandler::handleMessage()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l02375">affx::TsvFile::headers_to_fields_v2()</a>, <a class="el" href="_chp_check_8h-source.html#l00246">ChpCheck::headersSame()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l03118">affx::TsvFile::linkvar_link()</a>, <a class="el" href="_util_8cpp-source.html#l00315">Util::matrixDifferences()</a>, <a class="el" href="_msg_socket_handler_8cpp-source.html#l00104">MsgSocketHandler::message()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l00964">CalvinChpCheck::multiDataCopyNumberSame()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l01020">CalvinChpCheck::multiDataCopyNumberVariationSame()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l00912">CalvinChpCheck::multiDataDmetBiAllelicSame()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l00824">CalvinChpCheck::multiDataDmetCopyNumberSame()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l00868">CalvinChpCheck::multiDataDmetMultiAllelicSame()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l01120">CalvinChpCheck::multiDataExpressionSame()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l01072">CalvinChpCheck::multiDataGenotypeSame()</a>, <a class="el" href="_row_file_8cpp-source.html#l00180">RowFile::nextCStringRowExpect()</a>, <a class="el" href="_row_file_8cpp-source.html#l00094">RowFile::nextLine()</a>, <a class="el" href="_row_file_8cpp-source.html#l00254">RowFile::nextRowExpect()</a>, <a class="el" href="_table_file_8cpp-source.html#l00106">TableFile::open()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l02637">affx::TsvFile::open()</a>, <a class="el" href="_c_h_p_file_updater_8cpp-source.html#l00055">affxchpwriter::CCHPFileUpdater::OpenCHPFile()</a>, <a class="el" href="_calvin_c_h_p_file_updater_8cpp-source.html#l00085">affymetrix_calvin_io::CalvinCHPFileUpdater::OpenCHPFile()</a>, <a class="el" href="_spf_file_8cpp-source.html#l00370">affx::SpfFile::openSpf()</a>, <a class="el" href="_affx_string_8h-source.html#l00192">AffxString::ComparePred&lt; k &gt;::operator()()</a>, <a class="el" href="_calvin_8h-source.html#l00154">CalvinParameter::ComparePred&lt; k &gt;::operator()()</a>, <a class="el" href="_socket_base_8cpp-source.html#l00039">SocketBase::parseMsgFromBuffer()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l03213">affx::TsvFile::printBindingErrors()</a>, <a class="el" href="_msg_socket_handler_8cpp-source.html#l00060">MsgSocketHandler::progressBegin()</a>, <a class="el" href="_progress_dot_8h-source.html#l00110">ProgressDot::progressEnd()</a>, <a class="el" href="_msg_socket_handler_8cpp-source.html#l00085">MsgSocketHandler::progressEnd()</a>, <a class="el" href="_msg_socket_handler_8cpp-source.html#l00074">MsgSocketHandler::progressStep()</a>, <a class="el" href="_options_8cpp-source.html#l00126">Options::pushOpt()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l01166">CalvinChpCheck::quantificationDataSame()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l01211">CalvinChpCheck::quantificationDetectionDataSame()</a>, <a class="el" href="_row_file_8cpp-source.html#l00265">RowFile::readHeader()</a>, <a class="el" href="_dump_pgf_8cpp-source.html#l00206">dumpPgf::readIdFiles()</a>, <a class="el" href="_apt_version_info_8h-source.html#l00122">AptVersionInfo::reportBambooBuild()</a>, <a class="el" href="_apt_version_info_8h-source.html#l00125">AptVersionInfo::reportCompileCCVersion()</a>, <a class="el" href="_apt_version_info_8h-source.html#l00128">AptVersionInfo::reportCompileDate()</a>, <a class="el" href="_apt_version_info_8h-source.html#l00131">AptVersionInfo::reportCompileHost()</a>, <a class="el" href="_apt_version_info_8h-source.html#l00134">AptVersionInfo::reportCompileOS()</a>, <a class="el" href="_apt_version_info_8h-source.html#l00137">AptVersionInfo::reportRelease()</a>, <a class="el" href="_apt_version_info_8h-source.html#l00143">AptVersionInfo::reportSVNURL()</a>, <a class="el" href="_apt_version_info_8h-source.html#l00140">AptVersionInfo::reportSVNVersion()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l01117">affx::TsvFileIndex::results_append_tmpl()</a>, <a class="el" href="_socket_engine_8cpp-source.html#l00076">SocketEngine::run()</a>, <a class="el" href="_calvin_to_text_8cpp-source.html#l00106">CalvinToText::run()</a>, <a class="el" href="_base_engine_8cpp-source.html#l00290">BaseEngine::run()</a>, <a class="el" href="_socket_util_8cpp-source.html#l00117">SocketUtil::sendMsg()</a>, <a class="el" href="_socket_base_8cpp-source.html#l00164">SocketBase::sendMsg()</a>, <a class="el" href="_options_8cpp-source.html#l00100">Options::setOpt()</a>, <a class="el" href="_socket_client_8cpp-source.html#l00071">SocketClient::socketConnect()</a>, <a class="el" href="_socket_server_8cpp-source.html#l00064">SocketServer::socketOpen()</a>, <a class="el" href="_chp_check_8h-source.html#l00200">ChpCheck::tagValuePairMostlySame()</a>, <a class="el" href="_log_stream_8cpp-source.html#l00235">toMB()</a>, <a class="el" href="tsv-util_8cpp-source.html#l00186">tsv_util_paste_basic()</a>, <a class="el" href="_apt_version_info_8h-source.html#l00110">AptVersionInfo::version()</a>, <a class="el" href="_apt_version_info_8h-source.html#l00118">AptVersionInfo::versionToReport()</a>, and <a class="el" href="_dump_pgf_8cpp-source.html#l00405">dumpPgf::writeMatches()</a>.
 </div>
 </div><p>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:26 2009 for Affymetrix Fusion SDK by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:37 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

@@ -223,7 +223,7 @@ Clears the members.
 <p>
 Definition at line <a class="el" href="_c_h_p_quantification_detection_data_8cpp-source.html#l00076">76</a> of file <a class="el" href="_c_h_p_quantification_detection_data_8cpp-source.html">CHPQuantificationDetectionData.cpp</a>.
 <p>
-References <a class="el" href="_file_header_8cpp-source.html#l00032">affymetrix_calvin_io::FileHeader::Clear()</a>, <a class="el" href="_data_set_8cpp-source.html#l00110">affymetrix_calvin_io::DataSet::Delete()</a>, <a class="el" href="_c_h_p_quantification_detection_data_8h-source.html#l00062">entries</a>, <a class="el" href="_c_h_p_quantification_detection_data_8h-source.html#l00059">genericData</a>, and <a class="el" href="_generic_data_8h-source.html#l00079">affymetrix_calvin_io::GenericData::Header()</a>.
+References <a class="el" href="_file_header_8cpp-source.html#l00032">affymetrix_calvin_io::FileHeader::Clear()</a>, <a class="el" href="_data_set_8cpp-source.html#l00112">affymetrix_calvin_io::DataSet::Delete()</a>, <a class="el" href="_c_h_p_quantification_detection_data_8h-source.html#l00062">entries</a>, <a class="el" href="_c_h_p_quantification_detection_data_8h-source.html#l00059">genericData</a>, and <a class="el" href="_generic_data_8h-source.html#l00079">affymetrix_calvin_io::GenericData::Header()</a>.
 <p>
 Referenced by <a class="el" href="_c_h_p_quantification_detection_data_8cpp-source.html#l00046">CHPQuantificationDetectionData()</a>, <a class="el" href="_c_h_p_quantification_detection_file_reader_8cpp-source.html#l00044">affymetrix_calvin_io::CHPQuantificationDetectionFileReader::Read()</a>, <a class="el" href="_c_h_p_quantification_detection_data_8cpp-source.html#l00066">~CHPQuantificationDetectionData()</a>, and <a class="el" href="_fusion_c_h_p_quantification_detection_data_8cpp-source.html#l00047">affymetrix_fusion_io::FusionCHPQuantificationDetectionData::~FusionCHPQuantificationDetectionData()</a>.
 </div>
@@ -282,7 +282,7 @@ Definition at line <a class="el" href="_c_h_p_quantification_detection_data_8cpp
 <p>
 References <a class="el" href="_c_h_p_quantification_detection_data_8h-source.html#l00059">genericData</a>.
 <p>
-Referenced by <a class="el" href="_c_h_p_quantification_detection_file_reader_8cpp-source.html#l00044">affymetrix_calvin_io::CHPQuantificationDetectionFileReader::Read()</a>.
+Referenced by <a class="el" href="_calvin_chp_check_8h-source.html#l01211">CalvinChpCheck::quantificationDetectionDataSame()</a>, and <a class="el" href="_c_h_p_quantification_detection_file_reader_8cpp-source.html#l00044">affymetrix_calvin_io::CHPQuantificationDetectionFileReader::Read()</a>.
 </div>
 </div><p>
 <a class="anchor" name="59143f0a73231c2ee20c4b2059a0edfb"></a><!-- doxytag: member="affymetrix_calvin_io::CHPQuantificationDetectionData::GetArrayType" ref="59143f0a73231c2ee20c4b2059a0edfb" args="()" -->
@@ -424,7 +424,7 @@ Definition at line <a class="el" href="_c_h_p_quantification_detection_data_8cpp
 <p>
 References <a class="el" href="_c_h_p_quantification_detection_data_8h-source.html#l00059">genericData</a>, <a class="el" href="_file_header_8cpp-source.html#l00065">affymetrix_calvin_io::FileHeader::GetDataGroup()</a>, <a class="el" href="_data_group_header_8cpp-source.html#l00086">affymetrix_calvin_io::DataGroupHeader::GetDataSet()</a>, <a class="el" href="_data_set_header_8cpp-source.html#l00159">affymetrix_calvin_io::DataSetHeader::GetRowCnt()</a>, and <a class="el" href="_generic_data_8h-source.html#l00079">affymetrix_calvin_io::GenericData::Header()</a>.
 <p>
-Referenced by <a class="el" href="_fusion_c_h_p_quantification_detection_data_8h-source.html#l00087">affymetrix_fusion_io::FusionCHPQuantificationDetectionData::GetEntryCount()</a>.
+Referenced by <a class="el" href="_fusion_c_h_p_quantification_detection_data_8h-source.html#l00087">affymetrix_fusion_io::FusionCHPQuantificationDetectionData::GetEntryCount()</a>, and <a class="el" href="_calvin_chp_check_8h-source.html#l01211">CalvinChpCheck::quantificationDetectionDataSame()</a>.
 </div>
 </div><p>
 <a class="anchor" name="33246e1ea7d5b0566b1e4d8e328fc920"></a><!-- doxytag: member="affymetrix_calvin_io::CHPQuantificationDetectionData::GetAlgName" ref="33246e1ea7d5b0566b1e4d8e328fc920" args="()" -->
@@ -503,7 +503,7 @@ Gets the algorithm version. <dl class="return" compact><dt><b>Returns:</b></dt><
 <p>
 Definition at line <a class="el" href="_c_h_p_quantification_detection_data_8cpp-source.html#l00190">190</a> of file <a class="el" href="_c_h_p_quantification_detection_data_8cpp-source.html">CHPQuantificationDetectionData.cpp</a>.
 <p>
-References <a class="el" href="_affymetrix_parameter_consts_8h-source.html#l00245">ALG_VERSION_PARAM_NAME</a>, and <a class="el" href="_c_h_p_quantification_detection_data_8cpp-source.html#l00268">GetWStringFromGenericHdr()</a>.
+References <a class="el" href="_affymetrix_parameter_consts_8h-source.html#l00251">ALG_VERSION_PARAM_NAME</a>, and <a class="el" href="_c_h_p_quantification_detection_data_8cpp-source.html#l00268">GetWStringFromGenericHdr()</a>.
 <p>
 Referenced by <a class="el" href="_fusion_c_h_p_quantification_detection_data_8h-source.html#l00071">affymetrix_fusion_io::FusionCHPQuantificationDetectionData::GetAlgVersion()</a>.
 </div>
@@ -534,7 +534,7 @@ Sets the algorithm version. <dl compact><dt><b>Parameters:</b></dt><dd>
 <p>
 Definition at line <a class="el" href="_c_h_p_quantification_detection_data_8cpp-source.html#l00195">195</a> of file <a class="el" href="_c_h_p_quantification_detection_data_8cpp-source.html">CHPQuantificationDetectionData.cpp</a>.
 <p>
-References <a class="el" href="_affymetrix_parameter_consts_8h-source.html#l00245">ALG_VERSION_PARAM_NAME</a>, and <a class="el" href="_c_h_p_quantification_detection_data_8cpp-source.html#l00280">SetWStringToGenericHdr()</a>.
+References <a class="el" href="_affymetrix_parameter_consts_8h-source.html#l00251">ALG_VERSION_PARAM_NAME</a>, and <a class="el" href="_c_h_p_quantification_detection_data_8cpp-source.html#l00280">SetWStringToGenericHdr()</a>.
 </div>
 </div><p>
 <a class="anchor" name="bf09a1d3557acae990592eb16c0b09df"></a><!-- doxytag: member="affymetrix_calvin_io::CHPQuantificationDetectionData::GetAlgParams" ref="bf09a1d3557acae990592eb16c0b09df" args="()" -->
@@ -558,7 +558,7 @@ Gets the algorithm parameters <dl class="return" compact><dt><b>Returns:</b></dt
 <p>
 Definition at line <a class="el" href="_c_h_p_quantification_detection_data_8cpp-source.html#l00200">200</a> of file <a class="el" href="_c_h_p_quantification_detection_data_8cpp-source.html">CHPQuantificationDetectionData.cpp</a>.
 <p>
-References <a class="el" href="_affymetrix_parameter_consts_8h-source.html#l00191">ALGORITHM_PARAM_NAME_PREFIX_S</a>, <a class="el" href="_c_h_p_quantification_detection_data_8h-source.html#l00059">genericData</a>, <a class="el" href="_file_header_8cpp-source.html#l00086">affymetrix_calvin_io::FileHeader::GetGenericDataHdr()</a>, <a class="el" href="_generic_data_header_8cpp-source.html#l00110">affymetrix_calvin_io::GenericDataHeader::GetNameValIterators()</a>, <a class="el" href="_generic_data_8h-source.html#l00079">affymetrix_calvin_io::GenericData::Header()</a>, and <a class="el" href="_parameter_name_value_type_8h-source.html#l00180">affymetrix_calvin_parameter::ParameterNameValueType::SetName()</a>.
+References <a class="el" href="_affymetrix_parameter_consts_8h-source.html#l00191">ALGORITHM_PARAM_NAME_PREFIX_S</a>, <a class="el" href="_c_h_p_quantification_detection_data_8h-source.html#l00059">genericData</a>, <a class="el" href="_file_header_8cpp-source.html#l00086">affymetrix_calvin_io::FileHeader::GetGenericDataHdr()</a>, <a class="el" href="_generic_data_header_8cpp-source.html#l00133">affymetrix_calvin_io::GenericDataHeader::GetNameValIterators()</a>, <a class="el" href="_generic_data_8h-source.html#l00079">affymetrix_calvin_io::GenericData::Header()</a>, and <a class="el" href="_parameter_name_value_type_8h-source.html#l00180">affymetrix_calvin_parameter::ParameterNameValueType::SetName()</a>.
 <p>
 Referenced by <a class="el" href="_fusion_c_h_p_quantification_detection_data_8h-source.html#l00079">affymetrix_fusion_io::FusionCHPQuantificationDetectionData::GetAlgParams()</a>.
 </div>
@@ -613,7 +613,7 @@ Gets the summary parameters <dl class="return" compact><dt><b>Returns:</b></dt><
 <p>
 Definition at line <a class="el" href="_c_h_p_quantification_detection_data_8cpp-source.html#l00234">234</a> of file <a class="el" href="_c_h_p_quantification_detection_data_8cpp-source.html">CHPQuantificationDetectionData.cpp</a>.
 <p>
-References <a class="el" href="_affymetrix_parameter_consts_8h-source.html#l00185">CHIP_SUMMARY_PARAMETER_NAME_PREFIX_S</a>, <a class="el" href="_c_h_p_quantification_detection_data_8h-source.html#l00059">genericData</a>, <a class="el" href="_file_header_8cpp-source.html#l00086">affymetrix_calvin_io::FileHeader::GetGenericDataHdr()</a>, <a class="el" href="_generic_data_header_8cpp-source.html#l00110">affymetrix_calvin_io::GenericDataHeader::GetNameValIterators()</a>, <a class="el" href="_generic_data_8h-source.html#l00079">affymetrix_calvin_io::GenericData::Header()</a>, and <a class="el" href="_parameter_name_value_type_8h-source.html#l00180">affymetrix_calvin_parameter::ParameterNameValueType::SetName()</a>.
+References <a class="el" href="_affymetrix_parameter_consts_8h-source.html#l00185">CHIP_SUMMARY_PARAMETER_NAME_PREFIX_S</a>, <a class="el" href="_c_h_p_quantification_detection_data_8h-source.html#l00059">genericData</a>, <a class="el" href="_file_header_8cpp-source.html#l00086">affymetrix_calvin_io::FileHeader::GetGenericDataHdr()</a>, <a class="el" href="_generic_data_header_8cpp-source.html#l00133">affymetrix_calvin_io::GenericDataHeader::GetNameValIterators()</a>, <a class="el" href="_generic_data_8h-source.html#l00079">affymetrix_calvin_io::GenericData::Header()</a>, and <a class="el" href="_parameter_name_value_type_8h-source.html#l00180">affymetrix_calvin_parameter::ParameterNameValueType::SetName()</a>.
 <p>
 Referenced by <a class="el" href="_fusion_c_h_p_quantification_detection_data_8h-source.html#l00084">affymetrix_fusion_io::FusionCHPQuantificationDetectionData::GetSummaryParams()</a>.
 </div>
@@ -735,9 +735,9 @@ Gets the sequence data. <dl compact><dt><b>Parameters:</b></dt><dd>
 <p>
 Definition at line <a class="el" href="_c_h_p_quantification_detection_data_8cpp-source.html#l00125">125</a> of file <a class="el" href="_c_h_p_quantification_detection_data_8cpp-source.html">CHPQuantificationDetectionData.cpp</a>.
 <p>
-References <a class="el" href="_column_info_8h-source.html#l00051">affymetrix_calvin_io::ASCIICharColType</a>, <a class="el" href="_c_h_p_quantification_detection_data_8h-source.html#l00062">entries</a>, <a class="el" href="_c_h_p_quantification_detection_data_8h-source.html#l00056">firstColumnType</a>, <a class="el" href="_data_set_8cpp-source.html#l00465">affymetrix_calvin_io::DataSet::GetData()</a>, <a class="el" href="_probe_set_quantification_detection_data_8h-source.html#l00043">affymetrix_calvin_data::_ProbeSetQuantificationDetectionData::id</a>, <a class="el" href="_column_info_8h-source.html#l00048">affymetrix_calvin_io::IntColType</a>, <a class="el" href="_data_set_8h-source.html#l00094">affymetrix_calvin_io::DataSet::IsOpen()</a>, <a class="el" href="_probe_set_quantification_detection_data_8h-source.html#l00040">affymetrix_calvin_data::_ProbeSetQuantificationDetectionData::name</a>, <a class="el" href="_c_h_p_quantification_detection_data_8cpp-source.html#l00157">OpenQuantificationDetectionDataSet()</a>, <a class="el" href="_probe_set_quantification_detection_data_8h-source.html#l00049">affymetrix_calvin_data::_ProbeSetQuantificationDetectionData::pvalue</a>, <a class="el" href="_probe_set_quantification_detection_data_8h-source.html#l00046">affymetrix_calvin_data::_ProbeSetQuantificationDetectionData::quantification</a>, and <a class="el" href="_column_info_8h-source.html#l00052">affymetrix_calvin_io::UnicodeCharColType</a>.
+References <a class="el" href="_column_info_8h-source.html#l00051">affymetrix_calvin_io::ASCIICharColType</a>, <a class="el" href="_c_h_p_quantification_detection_data_8h-source.html#l00062">entries</a>, <a class="el" href="_c_h_p_quantification_detection_data_8h-source.html#l00056">firstColumnType</a>, <a class="el" href="_data_set_8cpp-source.html#l00466">affymetrix_calvin_io::DataSet::GetData()</a>, <a class="el" href="_probe_set_quantification_detection_data_8h-source.html#l00043">affymetrix_calvin_data::_ProbeSetQuantificationDetectionData::id</a>, <a class="el" href="_column_info_8h-source.html#l00048">affymetrix_calvin_io::IntColType</a>, <a class="el" href="_data_set_8h-source.html#l00094">affymetrix_calvin_io::DataSet::IsOpen()</a>, <a class="el" href="_probe_set_quantification_detection_data_8h-source.html#l00040">affymetrix_calvin_data::_ProbeSetQuantificationDetectionData::name</a>, <a class="el" href="_c_h_p_quantification_detection_data_8cpp-source.html#l00157">OpenQuantificationDetectionDataSet()</a>, <a class="el" href="_probe_set_quantification_detection_data_8h-source.html#l00049">affymetrix_calvin_data::_ProbeSetQuantificationDetectionData::pvalue</a>, <a class="el" href="_probe_set_quantification_detection_data_8h-source.html#l00046">affymetrix_calvin_data::_ProbeSetQuantificationDetectionData::quantification</a>, and <a class="el" href="_column_info_8h-source.html#l00052">affymetrix_calvin_io::UnicodeCharColType</a>.
 <p>
-Referenced by <a class="el" href="_fusion_c_h_p_quantification_detection_data_8h-source.html#l00093">affymetrix_fusion_io::FusionCHPQuantificationDetectionData::GetQuantificationDetectionEntry()</a>.
+Referenced by <a class="el" href="_fusion_c_h_p_quantification_detection_data_8h-source.html#l00093">affymetrix_fusion_io::FusionCHPQuantificationDetectionData::GetQuantificationDetectionEntry()</a>, and <a class="el" href="_calvin_chp_check_8h-source.html#l01211">CalvinChpCheck::quantificationDetectionDataSame()</a>.
 </div>
 </div><p>
 <a class="anchor" name="9227bafd2bf79831918a4b745b69791f"></a><!-- doxytag: member="affymetrix_calvin_io::CHPQuantificationDetectionData::OpenQuantificationDetectionDataSet" ref="9227bafd2bf79831918a4b745b69791f" args="()" -->
@@ -760,7 +760,7 @@ Opens a group for reading.
 <p>
 Definition at line <a class="el" href="_c_h_p_quantification_detection_data_8cpp-source.html#l00157">157</a> of file <a class="el" href="_c_h_p_quantification_detection_data_8cpp-source.html">CHPQuantificationDetectionData.cpp</a>.
 <p>
-References <a class="el" href="_generic_data_8cpp-source.html#l00202">affymetrix_calvin_io::GenericData::DataSet()</a>, <a class="el" href="_c_h_p_quantification_detection_data_8h-source.html#l00062">entries</a>, <a class="el" href="_c_h_p_quantification_detection_data_8h-source.html#l00056">firstColumnType</a>, <a class="el" href="_c_h_p_quantification_detection_data_8h-source.html#l00059">genericData</a>, <a class="el" href="_data_set_header_8cpp-source.html#l00154">affymetrix_calvin_io::DataSetHeader::GetColumnInfo()</a>, <a class="el" href="_column_info_8h-source.html#l00122">affymetrix_calvin_io::ColumnInfo::GetColumnType()</a>, <a class="el" href="_data_set_8h-source.html#l00083">affymetrix_calvin_io::DataSet::Header()</a>, and <a class="el" href="_data_set_8cpp-source.html#l00119">affymetrix_calvin_io::DataSet::Open()</a>.
+References <a class="el" href="_generic_data_8cpp-source.html#l00204">affymetrix_calvin_io::GenericData::DataSet()</a>, <a class="el" href="_c_h_p_quantification_detection_data_8h-source.html#l00062">entries</a>, <a class="el" href="_c_h_p_quantification_detection_data_8h-source.html#l00056">firstColumnType</a>, <a class="el" href="_c_h_p_quantification_detection_data_8h-source.html#l00059">genericData</a>, <a class="el" href="_data_set_header_8cpp-source.html#l00154">affymetrix_calvin_io::DataSetHeader::GetColumnInfo()</a>, <a class="el" href="_column_info_8h-source.html#l00102">affymetrix_calvin_io::ColumnInfo::GetColumnType()</a>, <a class="el" href="_data_set_8h-source.html#l00083">affymetrix_calvin_io::DataSet::Header()</a>, and <a class="el" href="_data_set_8cpp-source.html#l00121">affymetrix_calvin_io::DataSet::Open()</a>.
 <p>
 Referenced by <a class="el" href="_c_h_p_quantification_detection_data_8cpp-source.html#l00125">GetQuantificationDetectionEntry()</a>.
 </div>
@@ -817,7 +817,7 @@ Gets a parameter value as a string. <dl compact><dt><b>Parameters:</b></dt><dd>
 <p>
 Definition at line <a class="el" href="_c_h_p_quantification_detection_data_8cpp-source.html#l00268">268</a> of file <a class="el" href="_c_h_p_quantification_detection_data_8cpp-source.html">CHPQuantificationDetectionData.cpp</a>.
 <p>
-References <a class="el" href="_generic_data_header_8cpp-source.html#l00156">affymetrix_calvin_io::GenericDataHeader::FindNameValParam()</a>, <a class="el" href="_c_h_p_quantification_detection_data_8h-source.html#l00059">genericData</a>, <a class="el" href="_file_header_8cpp-source.html#l00086">affymetrix_calvin_io::FileHeader::GetGenericDataHdr()</a>, <a class="el" href="_parameter_name_value_type_8cpp-source.html#l00249">affymetrix_calvin_parameter::ParameterNameValueType::GetValueText()</a>, and <a class="el" href="_generic_data_8h-source.html#l00079">affymetrix_calvin_io::GenericData::Header()</a>.
+References <a class="el" href="_generic_data_header_8cpp-source.html#l00179">affymetrix_calvin_io::GenericDataHeader::FindNameValParam()</a>, <a class="el" href="_c_h_p_quantification_detection_data_8h-source.html#l00059">genericData</a>, <a class="el" href="_file_header_8cpp-source.html#l00086">affymetrix_calvin_io::FileHeader::GetGenericDataHdr()</a>, <a class="el" href="_parameter_name_value_type_8cpp-source.html#l00249">affymetrix_calvin_parameter::ParameterNameValueType::GetValueText()</a>, and <a class="el" href="_generic_data_8h-source.html#l00079">affymetrix_calvin_io::GenericData::Header()</a>.
 <p>
 Referenced by <a class="el" href="_c_h_p_quantification_detection_data_8cpp-source.html#l00180">GetAlgName()</a>, <a class="el" href="_c_h_p_quantification_detection_data_8cpp-source.html#l00190">GetAlgVersion()</a>, and <a class="el" href="_c_h_p_quantification_detection_data_8cpp-source.html#l00170">GetArrayType()</a>.
 </div>
@@ -990,7 +990,7 @@ Referenced by <a class="el" href="_c_h_p_quantification_detection_data_8cpp-sour
 </div><p>
 <hr>The documentation for this class was generated from the following files:<ul>
 <li>C:/FusionSDK/affy/sdk/calvin_files/data/src/<a class="el" href="_c_h_p_quantification_detection_data_8h-source.html">CHPQuantificationDetectionData.h</a><li>C:/FusionSDK/affy/sdk/calvin_files/data/src/<a class="el" href="_c_h_p_quantification_detection_data_8cpp-source.html">CHPQuantificationDetectionData.cpp</a></ul>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:44 2009 for Affymetrix Fusion SDK by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:55 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

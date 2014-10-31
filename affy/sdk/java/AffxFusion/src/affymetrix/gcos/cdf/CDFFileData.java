@@ -42,7 +42,10 @@ public class CDFFileData {
 	private static final int CDF_FILE_MAGIC_NUMBER = 67;
 
 	/** The version number for an XDA CDF file. */
-	private static final int CDF_FILE_VERSION_NUMBER = 3;
+	private static final int CDF_FILE_VERSION_NUMBER = 4;
+
+	/** The storage length for integrity md5 (hex) in the CDF file. */
+	private static final int INTEGRITY_MD5_LENGTH = 32;
 
 	private static final String EQ = "=";
 
@@ -125,6 +128,7 @@ public class CDFFileData {
 		final String CDFVERSION3 = "GC3.0";
 		final String CDFVERSION4 = "GC4.0";
 		final String CDFVERSION5 = "GC5.0";
+		final String CDFVERSION6 = "GC6.0";
 
 		// Get the CDF section.
 		str = FileIO.readNextLine(b);
@@ -151,11 +155,67 @@ public class CDFFileData {
 		else if (sarray[1].startsWith(CDFVERSION5) == true) {
 			header.setVersion(5);
 		}
+		else if (sarray[1].startsWith(CDFVERSION6) == true) {
+			header.setVersion(6);
+		}
 
+		if (header.getVersion() >= 6)
+		{
+			// Get the guid.
+			sarray = FileIO.readNextLine(b).split(EQ);
+                        String guid = "";
+                        if (sarray.length > 1)
+                            guid = sarray[1];
+			header.setGUID(guid);
+
+			// Get the integrity md5.
+			sarray = FileIO.readNextLine(b).split(EQ);
+                        String md5 = "";
+                        if (sarray.length > 1)
+                            md5 = sarray[1];
+			header.setIntegrityMd5(md5);
+		}
+		
 		// Get the next section.
 		str = FileIO.readNextLine(b); // [Chip]
 		str = FileIO.readNextLine(b); // name
-		sarray = FileIO.readNextLine(b).split(EQ); // rows
+		
+		if (header.getVersion() >= 6)
+		{
+			String chiptype = "";
+			header.setChipType("");
+			Vector<String> chiptypes = new Vector<String>();
+			header.setChipTypes(chiptypes);
+			str = FileIO.readNextLine(b); // chiptype
+			sarray = str.split(EQ);
+			while (str.startsWith("ChipType=") == true)
+			{
+				chiptype = sarray[1];
+				header.getChipTypes().add(chiptype);
+				if ((header.getChipType().isEmpty() == true) && (chiptype.indexOf('.') == -1))
+				{
+					header.setChipType(chiptype);
+				}
+				str = FileIO.readNextLine(b); 
+				sarray = str.split(EQ);
+			}
+			if (header.getChipType().isEmpty() == true)
+			{
+				chiptype = header.getChipTypes().get(0);
+				int pos = chiptype.lastIndexOf('.');
+				while (pos != -1)
+				{
+					if(pos > 0)
+						header.setChipType(chiptype.substring(0,pos));
+					chiptype = chiptype.substring(0, pos);
+					pos = chiptype.lastIndexOf('.');
+				}
+			}
+		}
+		else
+		{
+			sarray = FileIO.readNextLine(b).split(EQ); // rows
+		}
 		header.setRows(Integer.parseInt(sarray[1].trim()));
 		sarray = FileIO.readNextLine(b).split(EQ); // cols
 		header.setCols(Integer.parseInt(sarray[1].trim()));
@@ -625,6 +685,46 @@ public class CDFFileData {
 			return false;
 		}
 
+		// Read guid, integrity md5, and chip type if format version is 4 or above
+		if (header.getVersion() >= 4)
+		{
+			header.setGUID(FileIO.readString(fis));
+			header.setIntegrityMd5(FileIO.readFixedString(fis, INTEGRITY_MD5_LENGTH));
+
+			byte numChipTypes = 0;
+			String chiptype;
+			Vector<String> chiptypes = new Vector<String>();
+			header.setChipType("");
+			header.setChipTypes(chiptypes);
+			numChipTypes = FileIO.readInt8(fis);
+			for (byte count = 0; count < numChipTypes; count++)
+			{
+				chiptype = FileIO.readString(fis);
+				header.getChipTypes().add(chiptype);
+				if ((header.getChipType().isEmpty() == true) && (chiptype.indexOf('.') != -1))
+				{
+					header.setChipType(chiptype);
+				}
+			}
+			if (header.getChipTypes().size() == 0)
+			{
+				strError = "The file does not contain chip types.";
+				return false;
+			}
+			else if (header.getChipType().isEmpty() == true)
+			{
+				chiptype = header.getChipTypes().get(0);
+                int pos = chiptype.lastIndexOf('.');
+                while (pos != -1)
+                {
+                    if(pos>0)
+                        header.setChipType(chiptype.substring(0,pos));
+                    chiptype = chiptype.substring(0, pos);
+                    pos = chiptype.lastIndexOf('.');
+                }
+                        }
+		}		
+				
 		// Read the remaining header.
 		header.setCols(FileIO.readInt16(fis));
 		header.setRows(FileIO.readInt16(fis));
@@ -644,23 +744,6 @@ public class CDFFileData {
 	 */
 	public String getProbeSetName(int index) {
 		return probeSetNames.getName(index);
-	}
-
-	/**
-	 * Gets the chip type (probe array type) of the CDF file.
-	 * 
-	 * @return The chip type. This is just the name (without extension) of the CDF file.
-	 */
-	public String getChipType() {
-		if (fileName.length() > 0) {
-			int start = fileName.lastIndexOf('\\');
-			if (start == -1) {
-				start = fileName.lastIndexOf('/');
-			}
-			int end = fileName.lastIndexOf('.');
-			return fileName.substring(start + 1, end);
-		}
-		return "";
 	}
 
 	/**
@@ -818,32 +901,111 @@ public class CDFFileData {
 		qcProbeSets.clear();
 	}
 
+	/** Gets the chip type (probe array type) of the CDF file. */
+	public String getChipType() {
+        String chiptype = "";
+        if (fileName == null || (fileName != null && fileName.length() == 0))
+            return chiptype;
+        
+		if (fileName.length() > 0) {
+			boolean bXDAFile = isXDACompatibleFile();
+			if (header.getVersion() == 0)
+			{
+				if (readHeader() == false)
+					return chiptype;
+			}
+			if ((bXDAFile && (header.getVersion() < 4)) || (!bXDAFile && (header.getVersion() < 6)))
+			{
+				int start = fileName.lastIndexOf('\\');
+				if (start == -1) {
+					start = fileName.lastIndexOf('/');
+				}
+				int end = fileName.lastIndexOf('.');
+				chiptype = fileName.substring(start + 1, end);
+			}
+			else
+			{
+				chiptype = header.getChipType();
+			}
+		}
+		return chiptype;
+	}
+
+	/** Returns the associated chip types. */
     public Vector<String> getChipTypes()
     {
         if (fileName == null || (fileName != null && fileName.length() == 0))
             return null;
         Vector<String> chiptypes = new Vector<String>();
         String chiptype = "";
-        int index = fileName.lastIndexOf('\\');
-        if (index == -1)
-            index = fileName.lastIndexOf('/');
-        chiptype = fileName.substring(index + 1, fileName.length() - 4);
+        if (fileName.length() > 0) {
+    		boolean bXDAFile = isXDACompatibleFile();
+    		if (header != null && header.getVersion() == 0)
+    		{
+    			if (readHeader() == false)
+    				return chiptypes;
+    		}
+    		if (header == null || ((bXDAFile && (header.getVersion() < 4)) || (!bXDAFile && (header.getVersion() < 6))))
+    		{
+		        int index = fileName.lastIndexOf('\\');
+		        if (index == -1)
+		            index = fileName.lastIndexOf('/');
+		        chiptype = fileName.substring(index + 1, fileName.length() - 4);
 
-        // The full file name (minus .cdf extension) is the default (1st)
-        // chip type. This matches what GetChipType() returns.
-        // ie: foo.bar.v1.r2.cdf -> foo.bar.v1.r2
-        chiptypes.add(chiptype);
-
-        //We then add all substrings starting at zero and ending at '.'
-        // ie: foo.bar.v1.r2.cdf -> foo.bar.v1, foo.bar, foo
-        int pos = chiptype.lastIndexOf('.');
-        while (pos != -1)
-        {
-            if(pos>0)
-                chiptypes.add(chiptype.substring(0,pos));
-            chiptype = chiptype.substring(0, pos);
-            pos = chiptype.lastIndexOf('.');
+		        // The full file name (minus .cdf extension) is the default (1st)
+		        // chip type. This matches what GetChipType() returns.
+		        // ie: foo.bar.v1.r2.cdf -> foo.bar.v1.r2
+		        chiptypes.add(chiptype);
+		
+		        //We then add all substrings starting at zero and ending at '.'
+		        // ie: foo.bar.v1.r2.cdf -> foo.bar.v1, foo.bar, foo
+		        int pos = chiptype.lastIndexOf('.');
+		        while (pos != -1)
+		        {
+		            if(pos>0)
+		                chiptypes.add(chiptype.substring(0,pos));
+		            chiptype = chiptype.substring(0, pos);
+		            pos = chiptype.lastIndexOf('.');
+		        }
+    		}
+    		else
+    		{
+    			chiptypes = header.getChipTypes();
+    		}
         }
         return chiptypes;
     }
+        
+    /** Returns the guid */
+	public String getGUID() {
+	    String guid = "";
+		boolean bXDAFile = isXDACompatibleFile();
+		if (header.getVersion() == 0)
+		{
+			if (readHeader() == false)
+				return guid;
+		}
+		if ((bXDAFile && (header.getVersion() >= 4)) || (!bXDAFile && (header.getVersion() >= 6)))
+		{
+			guid = header.getGUID();
+		}
+		return guid;
+	}
+	
+	/** Returns the integrity md5 */
+	public String getIntegrityMd5() {
+	    String integrityMd5 = "";
+	    boolean bXDAFile = isXDACompatibleFile();
+		if (header.getVersion() == 0)
+		{
+			if (readHeader() == false)
+				return integrityMd5;
+		}
+		if ((bXDAFile && (header.getVersion() >= 4)) || (!bXDAFile && (header.getVersion() >= 6)))
+		{
+			integrityMd5 = header.getIntegrityMd5();
+		}
+		return integrityMd5;
+	}
+	
 }

@@ -1,6 +1,5 @@
 affymetrix.calvin.array
 affymetrix.calvin.data
-affymetrix.calvin.editor
 affymetrix.calvin.exception
 affymetrix.calvin.parameter
 affymetrix.calvin.parsers

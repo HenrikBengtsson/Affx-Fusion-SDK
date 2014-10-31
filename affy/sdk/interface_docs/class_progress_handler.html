@@ -30,8 +30,9 @@
 <p>Inheritance diagram for ProgressHandler:
 <p><center><img src="class_progress_handler.png" usemap="#ProgressHandler_map" border="0" alt=""></center>
 <map name="ProgressHandler_map">
-<area href="class_log_stream.html" alt="LogStream" shape="rect" coords="0,56,108,80">
-<area href="class_progress_dot.html" alt="ProgressDot" shape="rect" coords="118,56,226,80">
+<area href="class_log_stream.html" alt="LogStream" shape="rect" coords="0,56,119,80">
+<area href="class_msg_socket_handler.html" alt="MsgSocketHandler" shape="rect" coords="129,56,248,80">
+<area href="class_progress_dot.html" alt="ProgressDot" shape="rect" coords="258,56,377,80">
 </map>
 <a href="class_progress_handler-members.html">List of all members.</a><table border="0" cellpadding="0" cellspacing="0">
 <tr><td></td></tr>
@@ -58,7 +59,7 @@ An abstract class for handling <a class="el" href="class_progress.html">Progress
 <p>
 
 <p>
-Definition at line <a class="el" href="_progress_handler_8h-source.html#l00043">43</a> of file <a class="el" href="_progress_handler_8h-source.html">ProgressHandler.h</a>.<hr><h2>Constructor &amp; Destructor Documentation</h2>
+Definition at line <a class="el" href="_progress_handler_8h-source.html#l00041">41</a> of file <a class="el" href="_progress_handler_8h-source.html">ProgressHandler.h</a>.<hr><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" name="dcf98a46baba6cd4af19522a89fcd884"></a><!-- doxytag: member="ProgressHandler::~ProgressHandler" ref="dcf98a46baba6cd4af19522a89fcd884" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -77,7 +78,7 @@ Definition at line <a class="el" href="_progress_handler_8h-source.html#l00043">
 <p>
 Virtual destructor for a virtual class. 
 <p>
-Definition at line <a class="el" href="_progress_handler_8h-source.html#l00048">48</a> of file <a class="el" href="_progress_handler_8h-source.html">ProgressHandler.h</a>.
+Definition at line <a class="el" href="_progress_handler_8h-source.html#l00046">46</a> of file <a class="el" href="_progress_handler_8h-source.html">ProgressHandler.h</a>.
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
@@ -99,7 +100,7 @@ Definition at line <a class="el" href="_progress_handler_8h-source.html#l00048">
 <p>
 Does this object handle all the calls or just want signals every dotMod 
 <p>
-Definition at line <a class="el" href="_progress_handler_8h-source.html#l00052">52</a> of file <a class="el" href="_progress_handler_8h-source.html">ProgressHandler.h</a>.
+Definition at line <a class="el" href="_progress_handler_8h-source.html#l00050">50</a> of file <a class="el" href="_progress_handler_8h-source.html">ProgressHandler.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="c59a31bcce96f268c12fe10a4d4a555a"></a><!-- doxytag: member="ProgressHandler::progressBegin" ref="c59a31bcce96f268c12fe10a4d4a555a" args="(int verbosity, const std::string &amp;msg, int total)=0" -->
@@ -144,7 +145,7 @@ Begin a progress reporting. After this initial call the progressStep call will b
 </dl>
 
 <p>
-Implemented in <a class="el" href="class_log_stream.html#c449d7386876f07af5a2f195effe3025">LogStream</a>, and <a class="el" href="class_progress_dot.html#fcb3a8b187f957112e5df69fbd5e78f9">ProgressDot</a>.
+Implemented in <a class="el" href="class_log_stream.html#c449d7386876f07af5a2f195effe3025">LogStream</a>, <a class="el" href="class_msg_socket_handler.html#aeb473fd58650c14348a69868d5d74ea">MsgSocketHandler</a>, and <a class="el" href="class_progress_dot.html#fcb3a8b187f957112e5df69fbd5e78f9">ProgressDot</a>.
 </div>
 </div><p>
 <a class="anchor" name="bc6be4d44b3e510aaa40be6a96879b17"></a><!-- doxytag: member="ProgressHandler::progressStep" ref="bc6be4d44b3e510aaa40be6a96879b17" args="(int verbosity)=0" -->
@@ -172,7 +173,7 @@ This function is called when one unit of work has been done. In general it is ex
 </dl>
 
 <p>
-Implemented in <a class="el" href="class_log_stream.html#166e5bd0f8573e90cceeed2c64cddfdc">LogStream</a>, and <a class="el" href="class_progress_dot.html#6c75c9c696ce23d2f24261e1315efc31">ProgressDot</a>.
+Implemented in <a class="el" href="class_log_stream.html#166e5bd0f8573e90cceeed2c64cddfdc">LogStream</a>, <a class="el" href="class_msg_socket_handler.html#bdba475d681dfce548c504996f188133">MsgSocketHandler</a>, and <a class="el" href="class_progress_dot.html#6c75c9c696ce23d2f24261e1315efc31">ProgressDot</a>.
 </div>
 </div><p>
 <a class="anchor" name="a6db63009cb86903f468343d8f5514d5"></a><!-- doxytag: member="ProgressHandler::progressEnd" ref="a6db63009cb86903f468343d8f5514d5" args="(int verbosity, const std::string &amp;msg)=0" -->
@@ -210,7 +211,7 @@ Signals the end of progress report.<p>
 </dl>
 
 <p>
-Implemented in <a class="el" href="class_log_stream.html#7282f81961fe8242f2b771bcca48e861">LogStream</a>, and <a class="el" href="class_progress_dot.html#762fc6c84bb7da727ddb7fa849b01c34">ProgressDot</a>.
+Implemented in <a class="el" href="class_log_stream.html#7282f81961fe8242f2b771bcca48e861">LogStream</a>, <a class="el" href="class_msg_socket_handler.html#2e74a02e8332f252be4d09cbb135e274">MsgSocketHandler</a>, and <a class="el" href="class_progress_dot.html#762fc6c84bb7da727ddb7fa849b01c34">ProgressDot</a>.
 </div>
 </div><p>
 <a class="anchor" name="102ed618694b41ce893bd955465b601d"></a><!-- doxytag: member="ProgressHandler::setBaseVerbosity" ref="102ed618694b41ce893bd955465b601d" args="(int level)" -->
@@ -238,11 +239,11 @@ What level of verbosity is requested. This is a hint to the class and can be ign
 </dl>
 
 <p>
-Reimplemented in <a class="el" href="class_log_stream.html#3fc5faa65fac5451b315d054428a095a">LogStream</a>.
+Reimplemented in <a class="el" href="class_log_stream.html#3fc5faa65fac5451b315d054428a095a">LogStream</a>, and <a class="el" href="class_msg_socket_handler.html#3b7af6ea1127ba6667dacb2b8553595d">MsgSocketHandler</a>.
 <p>
-Definition at line <a class="el" href="_progress_handler_8h-source.html#l00092">92</a> of file <a class="el" href="_progress_handler_8h-source.html">ProgressHandler.h</a>.
+Definition at line <a class="el" href="_progress_handler_8h-source.html#l00090">90</a> of file <a class="el" href="_progress_handler_8h-source.html">ProgressHandler.h</a>.
 <p>
-References <a class="el" href="_progress_handler_8h-source.html#l00096">m_Verbosity</a>.
+References <a class="el" href="_progress_handler_8h-source.html#l00094">m_Verbosity</a>.
 </div>
 </div><p>
 <hr><h2>Member Data Documentation</h2>
@@ -264,14 +265,14 @@ What level of verbosity is processed, higher == more messages.
 <p>
 Reimplemented in <a class="el" href="class_log_stream.html#1df8aaacd133f747d9c73e90a3de4539">LogStream</a>.
 <p>
-Definition at line <a class="el" href="_progress_handler_8h-source.html#l00096">96</a> of file <a class="el" href="_progress_handler_8h-source.html">ProgressHandler.h</a>.
+Definition at line <a class="el" href="_progress_handler_8h-source.html#l00094">94</a> of file <a class="el" href="_progress_handler_8h-source.html">ProgressHandler.h</a>.
 <p>
-Referenced by <a class="el" href="_progress_dot_8h-source.html#l00077">ProgressDot::progressBegin()</a>, <a class="el" href="_progress_dot_8h-source.html#l00060">ProgressDot::ProgressDot()</a>, <a class="el" href="_progress_dot_8h-source.html#l00108">ProgressDot::progressEnd()</a>, <a class="el" href="_progress_dot_8h-source.html#l00095">ProgressDot::progressStep()</a>, and <a class="el" href="_progress_handler_8h-source.html#l00092">setBaseVerbosity()</a>.
+Referenced by <a class="el" href="_msg_socket_handler_8cpp-source.html#l00036">MsgSocketHandler::MsgSocketHandler()</a>, <a class="el" href="_progress_dot_8h-source.html#l00078">ProgressDot::progressBegin()</a>, <a class="el" href="_progress_dot_8h-source.html#l00060">ProgressDot::ProgressDot()</a>, <a class="el" href="_progress_dot_8h-source.html#l00110">ProgressDot::progressEnd()</a>, <a class="el" href="_progress_dot_8h-source.html#l00097">ProgressDot::progressStep()</a>, and <a class="el" href="_progress_handler_8h-source.html#l00090">setBaseVerbosity()</a>.
 </div>
 </div><p>
 <hr>The documentation for this class was generated from the following file:<ul>
 <li>C:/FusionSDK/affy/sdk/util/<a class="el" href="_progress_handler_8h-source.html">ProgressHandler.h</a></ul>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:34 2009 for Affymetrix Fusion SDK by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:45 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

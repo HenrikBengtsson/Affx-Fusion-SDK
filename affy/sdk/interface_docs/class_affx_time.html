@@ -100,6 +100,17 @@
 <tr><td colspan="2"><br><h2>Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">static <a class="el" href="class_affx_time.html">AffxTime</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_affx_time.html#5ec88748da83dc7cc6fabeb7158fe32e">getCurrentTime</a> ()</td></tr>
 
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static <a class="el" href="class_affx_string.html">AffxString</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_affx_time.html#b0da06a068ce98d55e80f15c637a7b48">getRuntime</a> (<a class="el" href="class_affx_string.html">AffxString</a> strAction, double timeElapsed)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_affx_time.html#138aa65c8a711d92febc95774bd80abf">startTime</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static <a class="el" href="class_affx_string.html">AffxString</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_affx_time.html#d265f1ff698ce9646c8ec169eeadb30e">getRuntime</a> (<a class="el" href="class_affx_string.html">AffxString</a> strAction)</td></tr>
+
+<tr><td colspan="2"><br><h2>Static Public Attributes</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static long&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_affx_time.html#f2f35c67eaadda720abd7ac79c3769e2">m_lStartTime</a> = 0</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static long&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_affx_time.html#c5b8b77e956d209bec22241295458cba">m_lStopTime</a> = 0</td></tr>
+
 <tr><td colspan="2"><br><h2>Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">tm&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_affx_time.html#d542d805afab8bc3b17818d8ccfe19f4">m_time</a></td></tr>
 
@@ -109,7 +120,7 @@
 <p>
 
 <p>
-Definition at line <a class="el" href="_affx_time_8h-source.html#l00081">81</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.<hr><h2>Constructor &amp; Destructor Documentation</h2>
+Definition at line <a class="el" href="_affx_time_8h-source.html#l00079">79</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.<hr><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" name="4db8065baed5bfb5788f3fb844c04ab9"></a><!-- doxytag: member="AffxTime::AffxTime" ref="4db8065baed5bfb5788f3fb844c04ab9" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -128,11 +139,11 @@ Definition at line <a class="el" href="_affx_time_8h-source.html#l00081">81</a> 
 <p>
 
 <p>
-Definition at line <a class="el" href="_affx_time_8cpp-source.html#l00042">42</a> of file <a class="el" href="_affx_time_8cpp-source.html">AffxTime.cpp</a>.
+Definition at line <a class="el" href="_affx_time_8cpp-source.html#l00047">47</a> of file <a class="el" href="_affx_time_8cpp-source.html">AffxTime.cpp</a>.
 <p>
-References <a class="el" href="_affx_time_8cpp-source.html#l00291">empty()</a>.
+References <a class="el" href="_affx_time_8cpp-source.html#l00358">empty()</a>.
 <p>
-Referenced by <a class="el" href="_affx_time_8h-source.html#l00201">operator+()</a>, and <a class="el" href="_affx_time_8h-source.html#l00199">operator-()</a>.
+Referenced by <a class="el" href="_affx_time_8h-source.html#l00205">operator+()</a>, and <a class="el" href="_affx_time_8h-source.html#l00203">operator-()</a>.
 </div>
 </div><p>
 <a class="anchor" name="60edd4591dc33ecb3ef0d1ce2c8850f4"></a><!-- doxytag: member="AffxTime::AffxTime" ref="60edd4591dc33ecb3ef0d1ce2c8850f4" args="(time_t time)" -->
@@ -154,9 +165,9 @@ Referenced by <a class="el" href="_affx_time_8h-source.html#l00201">operator+()<
 <p>
 
 <p>
-Definition at line <a class="el" href="_affx_time_8cpp-source.html#l00054">54</a> of file <a class="el" href="_affx_time_8cpp-source.html">AffxTime.cpp</a>.
+Definition at line <a class="el" href="_affx_time_8cpp-source.html#l00059">59</a> of file <a class="el" href="_affx_time_8cpp-source.html">AffxTime.cpp</a>.
 <p>
-References <a class="el" href="_affx_time_8cpp-source.html#l00036">HALF_SECOND</a>, <a class="el" href="_affx_time_8h-source.html#l00134">m_time</a>, <a class="el" href="_affx_time_8cpp-source.html#l00033">MAX_DATE</a>, <a class="el" href="_affx_time_8cpp-source.html#l00032">MIN_DATE</a>, and <a class="el" href="_affx_time_8cpp-source.html#l00039">rgMonthDays</a>.
+References <a class="el" href="_affx_time_8cpp-source.html#l00038">HALF_SECOND</a>, <a class="el" href="_affx_time_8h-source.html#l00138">m_time</a>, <a class="el" href="_affx_time_8cpp-source.html#l00035">MAX_DATE</a>, <a class="el" href="_affx_time_8cpp-source.html#l00034">MIN_DATE</a>, and <a class="el" href="_affx_time_8cpp-source.html#l00041">rgMonthDays</a>.
 </div>
 </div><p>
 <a class="anchor" name="66f3d7ca7f2fb3ca965c4ef787ed1c2b"></a><!-- doxytag: member="AffxTime::AffxTime" ref="66f3d7ca7f2fb3ca965c4ef787ed1c2b" args="(int nYear, int nMonth, int nDay, int nHour, int nMin, int nSec, int nDST=-1)" -->
@@ -217,9 +228,9 @@ References <a class="el" href="_affx_time_8cpp-source.html#l00036">HALF_SECOND</
 <p>
 
 <p>
-Definition at line <a class="el" href="_affx_time_8cpp-source.html#l00186">186</a> of file <a class="el" href="_affx_time_8cpp-source.html">AffxTime.cpp</a>.
+Definition at line <a class="el" href="_affx_time_8cpp-source.html#l00191">191</a> of file <a class="el" href="_affx_time_8cpp-source.html">AffxTime.cpp</a>.
 <p>
-References <a class="el" href="_err_8cpp-source.html#l00057">Err::errAbort()</a>, and <a class="el" href="_affx_time_8h-source.html#l00134">m_time</a>.
+References <a class="el" href="_err_8cpp-source.html#l00068">Err::errAbort()</a>, and <a class="el" href="_affx_time_8h-source.html#l00138">m_time</a>.
 </div>
 </div><p>
 <a class="anchor" name="65f4c6cc99b3337b73e0f38f38618f33"></a><!-- doxytag: member="AffxTime::AffxTime" ref="65f4c6cc99b3337b73e0f38f38618f33" args="(double dtSrc)" -->
@@ -241,9 +252,9 @@ References <a class="el" href="_err_8cpp-source.html#l00057">Err::errAbort()</a>
 <p>
 
 <p>
-Definition at line <a class="el" href="_affx_time_8cpp-source.html#l00384">384</a> of file <a class="el" href="_affx_time_8cpp-source.html">AffxTime.cpp</a>.
+Definition at line <a class="el" href="_affx_time_8cpp-source.html#l00451">451</a> of file <a class="el" href="_affx_time_8cpp-source.html">AffxTime.cpp</a>.
 <p>
-References <a class="el" href="_affx_time_8cpp-source.html#l00036">HALF_SECOND</a>, <a class="el" href="_affx_time_8h-source.html#l00134">m_time</a>, <a class="el" href="_affx_time_8cpp-source.html#l00033">MAX_DATE</a>, <a class="el" href="_affx_time_8cpp-source.html#l00032">MIN_DATE</a>, and <a class="el" href="_affx_time_8cpp-source.html#l00039">rgMonthDays</a>.
+References <a class="el" href="_affx_time_8cpp-source.html#l00038">HALF_SECOND</a>, <a class="el" href="_affx_time_8h-source.html#l00138">m_time</a>, <a class="el" href="_affx_time_8cpp-source.html#l00035">MAX_DATE</a>, <a class="el" href="_affx_time_8cpp-source.html#l00034">MIN_DATE</a>, and <a class="el" href="_affx_time_8cpp-source.html#l00041">rgMonthDays</a>.
 </div>
 </div><p>
 <a class="anchor" name="bab0f6f0a19ed7a10b56cb72e3a2cefe"></a><!-- doxytag: member="AffxTime::AffxTime" ref="bab0f6f0a19ed7a10b56cb72e3a2cefe" args="(const AffxTime &amp;timeSrc)" -->
@@ -265,9 +276,9 @@ References <a class="el" href="_affx_time_8cpp-source.html#l00036">HALF_SECOND</
 <p>
 
 <p>
-Definition at line <a class="el" href="_affx_time_8cpp-source.html#l00045">45</a> of file <a class="el" href="_affx_time_8cpp-source.html">AffxTime.cpp</a>.
+Definition at line <a class="el" href="_affx_time_8cpp-source.html#l00050">50</a> of file <a class="el" href="_affx_time_8cpp-source.html">AffxTime.cpp</a>.
 <p>
-References <a class="el" href="_affx_time_8h-source.html#l00134">m_time</a>.
+References <a class="el" href="_affx_time_8h-source.html#l00138">m_time</a>.
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
@@ -289,11 +300,93 @@ References <a class="el" href="_affx_time_8h-source.html#l00134">m_time</a>.
 <p>
 
 <p>
-Definition at line <a class="el" href="_affx_time_8cpp-source.html#l00205">205</a> of file <a class="el" href="_affx_time_8cpp-source.html">AffxTime.cpp</a>.
+Definition at line <a class="el" href="_affx_time_8cpp-source.html#l00210">210</a> of file <a class="el" href="_affx_time_8cpp-source.html">AffxTime.cpp</a>.
 <p>
-References <a class="el" href="_affx_time_8h-source.html#l00134">m_time</a>.
+References <a class="el" href="_affx_time_8h-source.html#l00138">m_time</a>.
 <p>
-Referenced by <a class="el" href="_log_stream_8cpp-source.html#l00109">LogStream::message()</a>, <a class="el" href="_log_stream_8cpp-source.html#l00135">LogStream::progressBegin()</a>, <a class="el" href="_log_stream_8cpp-source.html#l00186">LogStream::progressEnd()</a>, and <a class="el" href="_log_stream_8cpp-source.html#l00164">LogStream::progressStep()</a>.
+Referenced by <a class="el" href="_log_stream_8cpp-source.html#l00107">LogStream::message()</a>, <a class="el" href="_log_stream_8cpp-source.html#l00133">LogStream::progressBegin()</a>, <a class="el" href="_log_stream_8cpp-source.html#l00184">LogStream::progressEnd()</a>, and <a class="el" href="_log_stream_8cpp-source.html#l00162">LogStream::progressStep()</a>.
+</div>
+</div><p>
+<a class="anchor" name="b0da06a068ce98d55e80f15c637a7b48"></a><!-- doxytag: member="AffxTime::getRuntime" ref="b0da06a068ce98d55e80f15c637a7b48" args="(AffxString strAction, double timeElapsed)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_affx_string.html">AffxString</a> AffxTime::getRuntime           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_affx_string.html">AffxString</a>&nbsp;</td>
+          <td class="paramname"> <em>strAction</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>timeElapsed</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>
+Definition at line <a class="el" href="_affx_time_8cpp-source.html#l00234">234</a> of file <a class="el" href="_affx_time_8cpp-source.html">AffxTime.cpp</a>.
+<p>
+References <a class="el" href="_affx_string_8cpp-source.html#l00097">AffxString::sprintf()</a>.
+<p>
+Referenced by <a class="el" href="_affx_time_8cpp-source.html#l00267">getRuntime()</a>.
+</div>
+</div><p>
+<a class="anchor" name="138aa65c8a711d92febc95774bd80abf"></a><!-- doxytag: member="AffxTime::startTime" ref="138aa65c8a711d92febc95774bd80abf" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AffxTime::startTime           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>
+Definition at line <a class="el" href="_affx_time_8cpp-source.html#l00258">258</a> of file <a class="el" href="_affx_time_8cpp-source.html">AffxTime.cpp</a>.
+<p>
+References <a class="el" href="_affx_time_8h-source.html#l00087">m_lStartTime</a>.
+</div>
+</div><p>
+<a class="anchor" name="d265f1ff698ce9646c8ec169eeadb30e"></a><!-- doxytag: member="AffxTime::getRuntime" ref="d265f1ff698ce9646c8ec169eeadb30e" args="(AffxString strAction)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_affx_string.html">AffxString</a> AffxTime::getRuntime           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_affx_string.html">AffxString</a>&nbsp;</td>
+          <td class="paramname"> <em>strAction</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>
+Definition at line <a class="el" href="_affx_time_8cpp-source.html#l00267">267</a> of file <a class="el" href="_affx_time_8cpp-source.html">AffxTime.cpp</a>.
+<p>
+References <a class="el" href="_affx_time_8cpp-source.html#l00234">getRuntime()</a>, <a class="el" href="_affx_time_8h-source.html#l00087">m_lStartTime</a>, <a class="el" href="_affx_time_8h-source.html#l00088">m_lStopTime</a>, and <a class="el" href="_affx_string_8cpp-source.html#l00097">AffxString::sprintf()</a>.
 </div>
 </div><p>
 <a class="anchor" name="65a91affb3e49540bacd275f7db0ff6a"></a><!-- doxytag: member="AffxTime::operator=" ref="65a91affb3e49540bacd275f7db0ff6a" args="(const AffxTime &amp;timeSrc)" -->
@@ -315,9 +408,9 @@ Referenced by <a class="el" href="_log_stream_8cpp-source.html#l00109">LogStream
 <p>
 
 <p>
-Definition at line <a class="el" href="_affx_time_8h-source.html#l00181">181</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
+Definition at line <a class="el" href="_affx_time_8h-source.html#l00185">185</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
 <p>
-References <a class="el" href="_affx_time_8h-source.html#l00134">m_time</a>.
+References <a class="el" href="_affx_time_8h-source.html#l00138">m_time</a>.
 </div>
 </div><p>
 <a class="anchor" name="d42fe7c834b49d6cb5cf3fc30dd09f0c"></a><!-- doxytag: member="AffxTime::clear" ref="d42fe7c834b49d6cb5cf3fc30dd09f0c" args="(void)" -->
@@ -339,9 +432,9 @@ References <a class="el" href="_affx_time_8h-source.html#l00134">m_time</a>.
 <p>
 
 <p>
-Definition at line <a class="el" href="_affx_time_8h-source.html#l00095">95</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
+Definition at line <a class="el" href="_affx_time_8h-source.html#l00099">99</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
 <p>
-References <a class="el" href="_affx_time_8cpp-source.html#l00291">empty()</a>.
+References <a class="el" href="_affx_time_8cpp-source.html#l00358">empty()</a>.
 </div>
 </div><p>
 <a class="anchor" name="b37228a7334f81929c32fa212e068883"></a><!-- doxytag: member="AffxTime::empty" ref="b37228a7334f81929c32fa212e068883" args="(void)" -->
@@ -363,11 +456,11 @@ References <a class="el" href="_affx_time_8cpp-source.html#l00291">empty()</a>.
 <p>
 
 <p>
-Definition at line <a class="el" href="_affx_time_8cpp-source.html#l00291">291</a> of file <a class="el" href="_affx_time_8cpp-source.html">AffxTime.cpp</a>.
+Definition at line <a class="el" href="_affx_time_8cpp-source.html#l00358">358</a> of file <a class="el" href="_affx_time_8cpp-source.html">AffxTime.cpp</a>.
 <p>
-References <a class="el" href="_affx_time_8h-source.html#l00134">m_time</a>.
+References <a class="el" href="_affx_time_8h-source.html#l00138">m_time</a>.
 <p>
-Referenced by <a class="el" href="_affx_time_8cpp-source.html#l00042">AffxTime()</a>, and <a class="el" href="_affx_time_8h-source.html#l00095">clear()</a>.
+Referenced by <a class="el" href="_affx_time_8cpp-source.html#l00047">AffxTime()</a>, and <a class="el" href="_affx_time_8h-source.html#l00099">clear()</a>.
 </div>
 </div><p>
 <a class="anchor" name="f3c17cfb7a66b20f7f2c04cc1ca679e0"></a><!-- doxytag: member="AffxTime::isEmpty" ref="f3c17cfb7a66b20f7f2c04cc1ca679e0" args="(void)" -->
@@ -389,11 +482,11 @@ Referenced by <a class="el" href="_affx_time_8cpp-source.html#l00042">AffxTime()
 <p>
 
 <p>
-Definition at line <a class="el" href="_affx_time_8h-source.html#l00097">97</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
+Definition at line <a class="el" href="_affx_time_8h-source.html#l00101">101</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
 <p>
-References <a class="el" href="_affx_time_8cpp-source.html#l00328">getDATE()</a>.
+References <a class="el" href="_affx_time_8cpp-source.html#l00395">getDATE()</a>.
 <p>
-Referenced by <a class="el" href="_affx_time_8cpp-source.html#l00538">getDateString()</a>, <a class="el" href="_affx_time_8cpp-source.html#l00557">getHourMinuteString()</a>, <a class="el" href="_affx_time_8cpp-source.html#l00516">getTimeStampString()</a>, and <a class="el" href="_affx_time_8h-source.html#l00098">isClear()</a>.
+Referenced by <a class="el" href="_affx_time_8cpp-source.html#l00605">getDateString()</a>, <a class="el" href="_affx_time_8cpp-source.html#l00624">getHourMinuteString()</a>, <a class="el" href="_affx_time_8cpp-source.html#l00583">getTimeStampString()</a>, and <a class="el" href="_affx_time_8h-source.html#l00102">isClear()</a>.
 </div>
 </div><p>
 <a class="anchor" name="5b316cb40087825ffc892fdd49b58e12"></a><!-- doxytag: member="AffxTime::isClear" ref="5b316cb40087825ffc892fdd49b58e12" args="(void)" -->
@@ -415,9 +508,9 @@ Referenced by <a class="el" href="_affx_time_8cpp-source.html#l00538">getDateStr
 <p>
 
 <p>
-Definition at line <a class="el" href="_affx_time_8h-source.html#l00098">98</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
+Definition at line <a class="el" href="_affx_time_8h-source.html#l00102">102</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
 <p>
-References <a class="el" href="_affx_time_8h-source.html#l00097">isEmpty()</a>.
+References <a class="el" href="_affx_time_8h-source.html#l00101">isEmpty()</a>.
 </div>
 </div><p>
 <a class="anchor" name="775be2677cc5a342c5afe2176dd55107"></a><!-- doxytag: member="AffxTime::getDATE" ref="775be2677cc5a342c5afe2176dd55107" args="(void)" -->
@@ -439,11 +532,11 @@ References <a class="el" href="_affx_time_8h-source.html#l00097">isEmpty()</a>.
 <p>
 
 <p>
-Definition at line <a class="el" href="_affx_time_8cpp-source.html#l00328">328</a> of file <a class="el" href="_affx_time_8cpp-source.html">AffxTime.cpp</a>.
+Definition at line <a class="el" href="_affx_time_8cpp-source.html#l00395">395</a> of file <a class="el" href="_affx_time_8cpp-source.html">AffxTime.cpp</a>.
 <p>
-References <a class="el" href="_affx_time_8h-source.html#l00187">getDay()</a>, <a class="el" href="_affx_time_8h-source.html#l00189">getHour()</a>, <a class="el" href="_affx_time_8h-source.html#l00191">getMinute()</a>, <a class="el" href="_affx_time_8h-source.html#l00185">getMonth()</a>, <a class="el" href="_affx_time_8h-source.html#l00193">getSecond()</a>, <a class="el" href="_affx_time_8h-source.html#l00183">getYear()</a>, and <a class="el" href="_affx_time_8cpp-source.html#l00039">rgMonthDays</a>.
+References <a class="el" href="_affx_time_8h-source.html#l00191">getDay()</a>, <a class="el" href="_affx_time_8h-source.html#l00193">getHour()</a>, <a class="el" href="_affx_time_8h-source.html#l00195">getMinute()</a>, <a class="el" href="_affx_time_8h-source.html#l00189">getMonth()</a>, <a class="el" href="_affx_time_8h-source.html#l00197">getSecond()</a>, <a class="el" href="_affx_time_8h-source.html#l00187">getYear()</a>, and <a class="el" href="_affx_time_8cpp-source.html#l00041">rgMonthDays</a>.
 <p>
-Referenced by <a class="el" href="_affx_time_8h-source.html#l00097">isEmpty()</a>, <a class="el" href="_affx_time_8h-source.html#l00209">operator!=()</a>, <a class="el" href="_affx_time_8h-source.html#l00201">operator+()</a>, <a class="el" href="_affx_time_8h-source.html#l00203">operator+=()</a>, <a class="el" href="_affx_time_8h-source.html#l00197">operator-()</a>, <a class="el" href="_affx_time_8h-source.html#l00205">operator-=()</a>, <a class="el" href="_affx_time_8h-source.html#l00211">operator&lt;()</a>, <a class="el" href="_affx_time_8h-source.html#l00215">operator&lt;=()</a>, <a class="el" href="_affx_time_8h-source.html#l00207">operator==()</a>, <a class="el" href="_affx_time_8h-source.html#l00213">operator&gt;()</a>, and <a class="el" href="_affx_time_8h-source.html#l00217">operator&gt;=()</a>.
+Referenced by <a class="el" href="_affx_time_8h-source.html#l00101">isEmpty()</a>, <a class="el" href="_affx_time_8h-source.html#l00213">operator!=()</a>, <a class="el" href="_affx_time_8h-source.html#l00205">operator+()</a>, <a class="el" href="_affx_time_8h-source.html#l00207">operator+=()</a>, <a class="el" href="_affx_time_8h-source.html#l00201">operator-()</a>, <a class="el" href="_affx_time_8h-source.html#l00209">operator-=()</a>, <a class="el" href="_affx_time_8h-source.html#l00215">operator&lt;()</a>, <a class="el" href="_affx_time_8h-source.html#l00219">operator&lt;=()</a>, <a class="el" href="_affx_time_8h-source.html#l00211">operator==()</a>, <a class="el" href="_affx_time_8h-source.html#l00217">operator&gt;()</a>, and <a class="el" href="_affx_time_8h-source.html#l00221">operator&gt;=()</a>.
 </div>
 </div><p>
 <a class="anchor" name="48acde48e02e1d6b2de29858fb9fcbd7"></a><!-- doxytag: member="AffxTime::getTime" ref="48acde48e02e1d6b2de29858fb9fcbd7" args="()" -->
@@ -483,11 +576,11 @@ Referenced by <a class="el" href="_affx_time_8h-source.html#l00097">isEmpty()</a
 <p>
 
 <p>
-Definition at line <a class="el" href="_affx_time_8h-source.html#l00183">183</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
+Definition at line <a class="el" href="_affx_time_8h-source.html#l00187">187</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
 <p>
-References <a class="el" href="_affx_time_8h-source.html#l00134">m_time</a>.
+References <a class="el" href="_affx_time_8h-source.html#l00138">m_time</a>.
 <p>
-Referenced by <a class="el" href="_affx_time_8cpp-source.html#l00328">getDATE()</a>, <a class="el" href="_affx_time_8cpp-source.html#l00538">getDateString()</a>, and <a class="el" href="_affx_time_8cpp-source.html#l00516">getTimeStampString()</a>.
+Referenced by <a class="el" href="_affx_time_8cpp-source.html#l00395">getDATE()</a>, <a class="el" href="_affx_time_8cpp-source.html#l00605">getDateString()</a>, and <a class="el" href="_affx_time_8cpp-source.html#l00583">getTimeStampString()</a>.
 </div>
 </div><p>
 <a class="anchor" name="283dd7b48caefa5896956688a27d943d"></a><!-- doxytag: member="AffxTime::getMonth" ref="283dd7b48caefa5896956688a27d943d" args="() const" -->
@@ -508,11 +601,11 @@ Referenced by <a class="el" href="_affx_time_8cpp-source.html#l00328">getDATE()<
 <p>
 
 <p>
-Definition at line <a class="el" href="_affx_time_8h-source.html#l00185">185</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
+Definition at line <a class="el" href="_affx_time_8h-source.html#l00189">189</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
 <p>
-References <a class="el" href="_affx_time_8h-source.html#l00134">m_time</a>.
+References <a class="el" href="_affx_time_8h-source.html#l00138">m_time</a>.
 <p>
-Referenced by <a class="el" href="_affx_time_8cpp-source.html#l00328">getDATE()</a>, <a class="el" href="_affx_time_8cpp-source.html#l00538">getDateString()</a>, and <a class="el" href="_affx_time_8cpp-source.html#l00516">getTimeStampString()</a>.
+Referenced by <a class="el" href="_affx_time_8cpp-source.html#l00395">getDATE()</a>, <a class="el" href="_affx_time_8cpp-source.html#l00605">getDateString()</a>, and <a class="el" href="_affx_time_8cpp-source.html#l00583">getTimeStampString()</a>.
 </div>
 </div><p>
 <a class="anchor" name="6161c54f95a9a631c244514d01382c8b"></a><!-- doxytag: member="AffxTime::getDay" ref="6161c54f95a9a631c244514d01382c8b" args="() const" -->
@@ -533,11 +626,11 @@ Referenced by <a class="el" href="_affx_time_8cpp-source.html#l00328">getDATE()<
 <p>
 
 <p>
-Definition at line <a class="el" href="_affx_time_8h-source.html#l00187">187</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
+Definition at line <a class="el" href="_affx_time_8h-source.html#l00191">191</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
 <p>
-References <a class="el" href="_affx_time_8h-source.html#l00134">m_time</a>.
+References <a class="el" href="_affx_time_8h-source.html#l00138">m_time</a>.
 <p>
-Referenced by <a class="el" href="_affx_time_8cpp-source.html#l00328">getDATE()</a>, <a class="el" href="_affx_time_8cpp-source.html#l00538">getDateString()</a>, and <a class="el" href="_affx_time_8cpp-source.html#l00516">getTimeStampString()</a>.
+Referenced by <a class="el" href="_affx_time_8cpp-source.html#l00395">getDATE()</a>, <a class="el" href="_affx_time_8cpp-source.html#l00605">getDateString()</a>, and <a class="el" href="_affx_time_8cpp-source.html#l00583">getTimeStampString()</a>.
 </div>
 </div><p>
 <a class="anchor" name="cc75d3feb835bd771f67a9ecfae9fa68"></a><!-- doxytag: member="AffxTime::getHour" ref="cc75d3feb835bd771f67a9ecfae9fa68" args="() const" -->
@@ -558,11 +651,11 @@ Referenced by <a class="el" href="_affx_time_8cpp-source.html#l00328">getDATE()<
 <p>
 
 <p>
-Definition at line <a class="el" href="_affx_time_8h-source.html#l00189">189</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
+Definition at line <a class="el" href="_affx_time_8h-source.html#l00193">193</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
 <p>
-References <a class="el" href="_affx_time_8h-source.html#l00134">m_time</a>.
+References <a class="el" href="_affx_time_8h-source.html#l00138">m_time</a>.
 <p>
-Referenced by <a class="el" href="_affx_time_8cpp-source.html#l00328">getDATE()</a>, <a class="el" href="_affx_time_8cpp-source.html#l00557">getHourMinuteString()</a>, and <a class="el" href="_affx_time_8cpp-source.html#l00516">getTimeStampString()</a>.
+Referenced by <a class="el" href="_affx_time_8cpp-source.html#l00395">getDATE()</a>, <a class="el" href="_affx_time_8cpp-source.html#l00624">getHourMinuteString()</a>, and <a class="el" href="_affx_time_8cpp-source.html#l00583">getTimeStampString()</a>.
 </div>
 </div><p>
 <a class="anchor" name="c15f8d922c267382f7da0c156cbafdb3"></a><!-- doxytag: member="AffxTime::getMinute" ref="c15f8d922c267382f7da0c156cbafdb3" args="() const" -->
@@ -583,11 +676,11 @@ Referenced by <a class="el" href="_affx_time_8cpp-source.html#l00328">getDATE()<
 <p>
 
 <p>
-Definition at line <a class="el" href="_affx_time_8h-source.html#l00191">191</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
+Definition at line <a class="el" href="_affx_time_8h-source.html#l00195">195</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
 <p>
-References <a class="el" href="_affx_time_8h-source.html#l00134">m_time</a>.
+References <a class="el" href="_affx_time_8h-source.html#l00138">m_time</a>.
 <p>
-Referenced by <a class="el" href="_affx_time_8cpp-source.html#l00328">getDATE()</a>, <a class="el" href="_affx_time_8cpp-source.html#l00557">getHourMinuteString()</a>, and <a class="el" href="_affx_time_8cpp-source.html#l00516">getTimeStampString()</a>.
+Referenced by <a class="el" href="_affx_time_8cpp-source.html#l00395">getDATE()</a>, <a class="el" href="_affx_time_8cpp-source.html#l00624">getHourMinuteString()</a>, and <a class="el" href="_affx_time_8cpp-source.html#l00583">getTimeStampString()</a>.
 </div>
 </div><p>
 <a class="anchor" name="31dd044c7eed5e2de38fcf67860345f5"></a><!-- doxytag: member="AffxTime::getSecond" ref="31dd044c7eed5e2de38fcf67860345f5" args="() const" -->
@@ -608,11 +701,11 @@ Referenced by <a class="el" href="_affx_time_8cpp-source.html#l00328">getDATE()<
 <p>
 
 <p>
-Definition at line <a class="el" href="_affx_time_8h-source.html#l00193">193</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
+Definition at line <a class="el" href="_affx_time_8h-source.html#l00197">197</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
 <p>
-References <a class="el" href="_affx_time_8h-source.html#l00134">m_time</a>.
+References <a class="el" href="_affx_time_8h-source.html#l00138">m_time</a>.
 <p>
-Referenced by <a class="el" href="_affx_time_8cpp-source.html#l00328">getDATE()</a>, and <a class="el" href="_affx_time_8cpp-source.html#l00516">getTimeStampString()</a>.
+Referenced by <a class="el" href="_affx_time_8cpp-source.html#l00395">getDATE()</a>, and <a class="el" href="_affx_time_8cpp-source.html#l00583">getTimeStampString()</a>.
 </div>
 </div><p>
 <a class="anchor" name="c9c13e9c9a54c58d631bc411c8154159"></a><!-- doxytag: member="AffxTime::getDayOfWeek" ref="c9c13e9c9a54c58d631bc411c8154159" args="() const" -->
@@ -633,9 +726,9 @@ Referenced by <a class="el" href="_affx_time_8cpp-source.html#l00328">getDATE()<
 <p>
 
 <p>
-Definition at line <a class="el" href="_affx_time_8h-source.html#l00195">195</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
+Definition at line <a class="el" href="_affx_time_8h-source.html#l00199">199</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
 <p>
-References <a class="el" href="_affx_time_8h-source.html#l00134">m_time</a>.
+References <a class="el" href="_affx_time_8h-source.html#l00138">m_time</a>.
 </div>
 </div><p>
 <a class="anchor" name="de7f2b1fda267564bbcbc40c89662c6d"></a><!-- doxytag: member="AffxTime::operator-" ref="de7f2b1fda267564bbcbc40c89662c6d" args="(AffxTime time)" -->
@@ -657,9 +750,9 @@ References <a class="el" href="_affx_time_8h-source.html#l00134">m_time</a>.
 <p>
 
 <p>
-Definition at line <a class="el" href="_affx_time_8h-source.html#l00197">197</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
+Definition at line <a class="el" href="_affx_time_8h-source.html#l00201">201</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
 <p>
-References <a class="el" href="_affx_time_8cpp-source.html#l00328">getDATE()</a>.
+References <a class="el" href="_affx_time_8cpp-source.html#l00395">getDATE()</a>.
 </div>
 </div><p>
 <a class="anchor" name="8c33a6a8ff1f56e8ff819aeac83d4291"></a><!-- doxytag: member="AffxTime::operator-" ref="8c33a6a8ff1f56e8ff819aeac83d4291" args="(AffxTimeSpan timeSpan)" -->
@@ -681,9 +774,9 @@ References <a class="el" href="_affx_time_8cpp-source.html#l00328">getDATE()</a>
 <p>
 
 <p>
-Definition at line <a class="el" href="_affx_time_8h-source.html#l00199">199</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
+Definition at line <a class="el" href="_affx_time_8h-source.html#l00203">203</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
 <p>
-References <a class="el" href="_affx_time_8cpp-source.html#l00042">AffxTime()</a>, <a class="el" href="_affx_time_8cpp-source.html#l00311">AffxTimeSpan::getDATE()</a>, and <a class="el" href="_affx_time_8cpp-source.html#l00328">getDATE()</a>.
+References <a class="el" href="_affx_time_8cpp-source.html#l00047">AffxTime()</a>, <a class="el" href="_affx_time_8cpp-source.html#l00378">AffxTimeSpan::getDATE()</a>, and <a class="el" href="_affx_time_8cpp-source.html#l00395">getDATE()</a>.
 </div>
 </div><p>
 <a class="anchor" name="f97f6f8c411179e74e146ad00e752071"></a><!-- doxytag: member="AffxTime::operator+" ref="f97f6f8c411179e74e146ad00e752071" args="(AffxTimeSpan timeSpan)" -->
@@ -705,9 +798,9 @@ References <a class="el" href="_affx_time_8cpp-source.html#l00042">AffxTime()</a
 <p>
 
 <p>
-Definition at line <a class="el" href="_affx_time_8h-source.html#l00201">201</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
+Definition at line <a class="el" href="_affx_time_8h-source.html#l00205">205</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
 <p>
-References <a class="el" href="_affx_time_8cpp-source.html#l00042">AffxTime()</a>, <a class="el" href="_affx_time_8cpp-source.html#l00311">AffxTimeSpan::getDATE()</a>, and <a class="el" href="_affx_time_8cpp-source.html#l00328">getDATE()</a>.
+References <a class="el" href="_affx_time_8cpp-source.html#l00047">AffxTime()</a>, <a class="el" href="_affx_time_8cpp-source.html#l00378">AffxTimeSpan::getDATE()</a>, and <a class="el" href="_affx_time_8cpp-source.html#l00395">getDATE()</a>.
 </div>
 </div><p>
 <a class="anchor" name="74fa47c8e8c7818b1244e4c3644b3cc0"></a><!-- doxytag: member="AffxTime::operator+=" ref="74fa47c8e8c7818b1244e4c3644b3cc0" args="(AffxTimeSpan timeSpan)" -->
@@ -729,9 +822,9 @@ References <a class="el" href="_affx_time_8cpp-source.html#l00042">AffxTime()</a
 <p>
 
 <p>
-Definition at line <a class="el" href="_affx_time_8h-source.html#l00203">203</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
+Definition at line <a class="el" href="_affx_time_8h-source.html#l00207">207</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
 <p>
-References <a class="el" href="_affx_time_8cpp-source.html#l00311">AffxTimeSpan::getDATE()</a>, and <a class="el" href="_affx_time_8cpp-source.html#l00328">getDATE()</a>.
+References <a class="el" href="_affx_time_8cpp-source.html#l00378">AffxTimeSpan::getDATE()</a>, and <a class="el" href="_affx_time_8cpp-source.html#l00395">getDATE()</a>.
 </div>
 </div><p>
 <a class="anchor" name="9e3b38e6f748a32f57a44d645bbf7bd3"></a><!-- doxytag: member="AffxTime::operator-=" ref="9e3b38e6f748a32f57a44d645bbf7bd3" args="(AffxTimeSpan timeSpan)" -->
@@ -753,9 +846,9 @@ References <a class="el" href="_affx_time_8cpp-source.html#l00311">AffxTimeSpan:
 <p>
 
 <p>
-Definition at line <a class="el" href="_affx_time_8h-source.html#l00205">205</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
+Definition at line <a class="el" href="_affx_time_8h-source.html#l00209">209</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
 <p>
-References <a class="el" href="_affx_time_8cpp-source.html#l00311">AffxTimeSpan::getDATE()</a>, and <a class="el" href="_affx_time_8cpp-source.html#l00328">getDATE()</a>.
+References <a class="el" href="_affx_time_8cpp-source.html#l00378">AffxTimeSpan::getDATE()</a>, and <a class="el" href="_affx_time_8cpp-source.html#l00395">getDATE()</a>.
 </div>
 </div><p>
 <a class="anchor" name="aeb1cd703676522f658b4fd48ac1e91b"></a><!-- doxytag: member="AffxTime::operator==" ref="aeb1cd703676522f658b4fd48ac1e91b" args="(AffxTime time)" -->
@@ -777,9 +870,9 @@ References <a class="el" href="_affx_time_8cpp-source.html#l00311">AffxTimeSpan:
 <p>
 
 <p>
-Definition at line <a class="el" href="_affx_time_8h-source.html#l00207">207</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
+Definition at line <a class="el" href="_affx_time_8h-source.html#l00211">211</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
 <p>
-References <a class="el" href="_affx_time_8cpp-source.html#l00328">getDATE()</a>.
+References <a class="el" href="_affx_time_8cpp-source.html#l00395">getDATE()</a>.
 </div>
 </div><p>
 <a class="anchor" name="3f443ac04c3fefb67d1214391fb999b9"></a><!-- doxytag: member="AffxTime::operator!=" ref="3f443ac04c3fefb67d1214391fb999b9" args="(AffxTime time)" -->
@@ -801,9 +894,9 @@ References <a class="el" href="_affx_time_8cpp-source.html#l00328">getDATE()</a>
 <p>
 
 <p>
-Definition at line <a class="el" href="_affx_time_8h-source.html#l00209">209</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
+Definition at line <a class="el" href="_affx_time_8h-source.html#l00213">213</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
 <p>
-References <a class="el" href="_affx_time_8cpp-source.html#l00328">getDATE()</a>.
+References <a class="el" href="_affx_time_8cpp-source.html#l00395">getDATE()</a>.
 </div>
 </div><p>
 <a class="anchor" name="3ad5f3d96536a9e68266924f82ca77b5"></a><!-- doxytag: member="AffxTime::operator&lt;" ref="3ad5f3d96536a9e68266924f82ca77b5" args="(AffxTime time)" -->
@@ -825,9 +918,9 @@ References <a class="el" href="_affx_time_8cpp-source.html#l00328">getDATE()</a>
 <p>
 
 <p>
-Definition at line <a class="el" href="_affx_time_8h-source.html#l00211">211</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
+Definition at line <a class="el" href="_affx_time_8h-source.html#l00215">215</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
 <p>
-References <a class="el" href="_affx_time_8cpp-source.html#l00328">getDATE()</a>.
+References <a class="el" href="_affx_time_8cpp-source.html#l00395">getDATE()</a>.
 </div>
 </div><p>
 <a class="anchor" name="b515dcec921d9a15deda9d3700b26ec9"></a><!-- doxytag: member="AffxTime::operator&gt;" ref="b515dcec921d9a15deda9d3700b26ec9" args="(AffxTime time)" -->
@@ -849,9 +942,9 @@ References <a class="el" href="_affx_time_8cpp-source.html#l00328">getDATE()</a>
 <p>
 
 <p>
-Definition at line <a class="el" href="_affx_time_8h-source.html#l00213">213</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
+Definition at line <a class="el" href="_affx_time_8h-source.html#l00217">217</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
 <p>
-References <a class="el" href="_affx_time_8cpp-source.html#l00328">getDATE()</a>.
+References <a class="el" href="_affx_time_8cpp-source.html#l00395">getDATE()</a>.
 </div>
 </div><p>
 <a class="anchor" name="e1e28780400d33b17e8961af08afeb9e"></a><!-- doxytag: member="AffxTime::operator&lt;=" ref="e1e28780400d33b17e8961af08afeb9e" args="(AffxTime time)" -->
@@ -873,9 +966,9 @@ References <a class="el" href="_affx_time_8cpp-source.html#l00328">getDATE()</a>
 <p>
 
 <p>
-Definition at line <a class="el" href="_affx_time_8h-source.html#l00215">215</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
+Definition at line <a class="el" href="_affx_time_8h-source.html#l00219">219</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
 <p>
-References <a class="el" href="_affx_time_8cpp-source.html#l00328">getDATE()</a>.
+References <a class="el" href="_affx_time_8cpp-source.html#l00395">getDATE()</a>.
 </div>
 </div><p>
 <a class="anchor" name="85102bb13b9e25cf359bea2b3f057596"></a><!-- doxytag: member="AffxTime::operator&gt;=" ref="85102bb13b9e25cf359bea2b3f057596" args="(AffxTime time)" -->
@@ -897,9 +990,9 @@ References <a class="el" href="_affx_time_8cpp-source.html#l00328">getDATE()</a>
 <p>
 
 <p>
-Definition at line <a class="el" href="_affx_time_8h-source.html#l00217">217</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
+Definition at line <a class="el" href="_affx_time_8h-source.html#l00221">221</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
 <p>
-References <a class="el" href="_affx_time_8cpp-source.html#l00328">getDATE()</a>.
+References <a class="el" href="_affx_time_8cpp-source.html#l00395">getDATE()</a>.
 </div>
 </div><p>
 <a class="anchor" name="edd4098ce1a9d8957dcc1b9d625164d9"></a><!-- doxytag: member="AffxTime::format" ref="edd4098ce1a9d8957dcc1b9d625164d9" args="(char *pFormat)" -->
@@ -961,9 +1054,9 @@ References <a class="el" href="_affx_time_8cpp-source.html#l00328">getDATE()</a>
 <p>
 
 <p>
-Definition at line <a class="el" href="_affx_time_8cpp-source.html#l00538">538</a> of file <a class="el" href="_affx_time_8cpp-source.html">AffxTime.cpp</a>.
+Definition at line <a class="el" href="_affx_time_8cpp-source.html#l00605">605</a> of file <a class="el" href="_affx_time_8cpp-source.html">AffxTime.cpp</a>.
 <p>
-References <a class="el" href="_affx_time_8h-source.html#l00187">getDay()</a>, <a class="el" href="_affx_time_8h-source.html#l00185">getMonth()</a>, <a class="el" href="_affx_time_8h-source.html#l00183">getYear()</a>, and <a class="el" href="_affx_time_8h-source.html#l00097">isEmpty()</a>.
+References <a class="el" href="_affx_time_8h-source.html#l00191">getDay()</a>, <a class="el" href="_affx_time_8h-source.html#l00189">getMonth()</a>, <a class="el" href="_affx_time_8h-source.html#l00187">getYear()</a>, and <a class="el" href="_affx_time_8h-source.html#l00101">isEmpty()</a>.
 </div>
 </div><p>
 <a class="anchor" name="5ea028def246fc9f763a8a1e3e69b246"></a><!-- doxytag: member="AffxTime::getHourMinuteString" ref="5ea028def246fc9f763a8a1e3e69b246" args="(void)" -->
@@ -985,9 +1078,9 @@ References <a class="el" href="_affx_time_8h-source.html#l00187">getDay()</a>, <
 <p>
 
 <p>
-Definition at line <a class="el" href="_affx_time_8cpp-source.html#l00557">557</a> of file <a class="el" href="_affx_time_8cpp-source.html">AffxTime.cpp</a>.
+Definition at line <a class="el" href="_affx_time_8cpp-source.html#l00624">624</a> of file <a class="el" href="_affx_time_8cpp-source.html">AffxTime.cpp</a>.
 <p>
-References <a class="el" href="_affx_time_8h-source.html#l00189">getHour()</a>, <a class="el" href="_affx_time_8h-source.html#l00191">getMinute()</a>, and <a class="el" href="_affx_time_8h-source.html#l00097">isEmpty()</a>.
+References <a class="el" href="_affx_time_8h-source.html#l00193">getHour()</a>, <a class="el" href="_affx_time_8h-source.html#l00195">getMinute()</a>, and <a class="el" href="_affx_time_8h-source.html#l00101">isEmpty()</a>.
 </div>
 </div><p>
 <a class="anchor" name="dc52a6c399d9c659d7a8db5c228cec56"></a><!-- doxytag: member="AffxTime::getTimeStampString" ref="dc52a6c399d9c659d7a8db5c228cec56" args="(void)" -->
@@ -1009,14 +1102,52 @@ References <a class="el" href="_affx_time_8h-source.html#l00189">getHour()</a>, 
 <p>
 
 <p>
-Definition at line <a class="el" href="_affx_time_8cpp-source.html#l00516">516</a> of file <a class="el" href="_affx_time_8cpp-source.html">AffxTime.cpp</a>.
+Definition at line <a class="el" href="_affx_time_8cpp-source.html#l00583">583</a> of file <a class="el" href="_affx_time_8cpp-source.html">AffxTime.cpp</a>.
 <p>
-References <a class="el" href="_affx_time_8h-source.html#l00187">getDay()</a>, <a class="el" href="_affx_time_8h-source.html#l00189">getHour()</a>, <a class="el" href="_affx_time_8h-source.html#l00191">getMinute()</a>, <a class="el" href="_affx_time_8h-source.html#l00185">getMonth()</a>, <a class="el" href="_affx_time_8h-source.html#l00193">getSecond()</a>, <a class="el" href="_affx_time_8h-source.html#l00183">getYear()</a>, and <a class="el" href="_affx_time_8h-source.html#l00097">isEmpty()</a>.
+References <a class="el" href="_affx_time_8h-source.html#l00191">getDay()</a>, <a class="el" href="_affx_time_8h-source.html#l00193">getHour()</a>, <a class="el" href="_affx_time_8h-source.html#l00195">getMinute()</a>, <a class="el" href="_affx_time_8h-source.html#l00189">getMonth()</a>, <a class="el" href="_affx_time_8h-source.html#l00197">getSecond()</a>, <a class="el" href="_affx_time_8h-source.html#l00187">getYear()</a>, and <a class="el" href="_affx_time_8h-source.html#l00101">isEmpty()</a>.
 <p>
-Referenced by <a class="el" href="_log_stream_8cpp-source.html#l00109">LogStream::message()</a>, <a class="el" href="_log_stream_8cpp-source.html#l00135">LogStream::progressBegin()</a>, <a class="el" href="_log_stream_8cpp-source.html#l00186">LogStream::progressEnd()</a>, and <a class="el" href="_log_stream_8cpp-source.html#l00164">LogStream::progressStep()</a>.
+Referenced by <a class="el" href="_log_stream_8cpp-source.html#l00107">LogStream::message()</a>, <a class="el" href="_log_stream_8cpp-source.html#l00133">LogStream::progressBegin()</a>, <a class="el" href="_log_stream_8cpp-source.html#l00184">LogStream::progressEnd()</a>, and <a class="el" href="_log_stream_8cpp-source.html#l00162">LogStream::progressStep()</a>.
 </div>
 </div><p>
 <hr><h2>Member Data Documentation</h2>
+<a class="anchor" name="f2f35c67eaadda720abd7ac79c3769e2"></a><!-- doxytag: member="AffxTime::m_lStartTime" ref="f2f35c67eaadda720abd7ac79c3769e2" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long <a class="el" href="class_affx_time.html#f2f35c67eaadda720abd7ac79c3769e2">AffxTime::m_lStartTime</a> = 0<code> [static]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>
+Definition at line <a class="el" href="_affx_time_8h-source.html#l00087">87</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
+<p>
+Referenced by <a class="el" href="_affx_time_8cpp-source.html#l00267">getRuntime()</a>, and <a class="el" href="_affx_time_8cpp-source.html#l00258">startTime()</a>.
+</div>
+</div><p>
+<a class="anchor" name="c5b8b77e956d209bec22241295458cba"></a><!-- doxytag: member="AffxTime::m_lStopTime" ref="c5b8b77e956d209bec22241295458cba" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long <a class="el" href="class_affx_time.html#c5b8b77e956d209bec22241295458cba">AffxTime::m_lStopTime</a> = 0<code> [static]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>
+Definition at line <a class="el" href="_affx_time_8h-source.html#l00088">88</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
+<p>
+Referenced by <a class="el" href="_affx_time_8cpp-source.html#l00267">getRuntime()</a>.
+</div>
+</div><p>
 <a class="anchor" name="d542d805afab8bc3b17818d8ccfe19f4"></a><!-- doxytag: member="AffxTime::m_time" ref="d542d805afab8bc3b17818d8ccfe19f4" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -1031,14 +1162,14 @@ Referenced by <a class="el" href="_log_stream_8cpp-source.html#l00109">LogStream
 <p>
 
 <p>
-Definition at line <a class="el" href="_affx_time_8h-source.html#l00134">134</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
+Definition at line <a class="el" href="_affx_time_8h-source.html#l00138">138</a> of file <a class="el" href="_affx_time_8h-source.html">AffxTime.h</a>.
 <p>
-Referenced by <a class="el" href="_affx_time_8cpp-source.html#l00045">AffxTime()</a>, <a class="el" href="_affx_time_8cpp-source.html#l00291">empty()</a>, <a class="el" href="_affx_time_8cpp-source.html#l00205">getCurrentTime()</a>, <a class="el" href="_affx_time_8h-source.html#l00187">getDay()</a>, <a class="el" href="_affx_time_8h-source.html#l00195">getDayOfWeek()</a>, <a class="el" href="_affx_time_8h-source.html#l00189">getHour()</a>, <a class="el" href="_affx_time_8h-source.html#l00191">getMinute()</a>, <a class="el" href="_affx_time_8h-source.html#l00185">getMonth()</a>, <a class="el" href="_affx_time_8h-source.html#l00193">getSecond()</a>, <a class="el" href="_affx_time_8h-source.html#l00183">getYear()</a>, and <a class="el" href="_affx_time_8h-source.html#l00181">operator=()</a>.
+Referenced by <a class="el" href="_affx_time_8cpp-source.html#l00050">AffxTime()</a>, <a class="el" href="_affx_time_8cpp-source.html#l00358">empty()</a>, <a class="el" href="_affx_time_8cpp-source.html#l00210">getCurrentTime()</a>, <a class="el" href="_affx_time_8h-source.html#l00191">getDay()</a>, <a class="el" href="_affx_time_8h-source.html#l00199">getDayOfWeek()</a>, <a class="el" href="_affx_time_8h-source.html#l00193">getHour()</a>, <a class="el" href="_affx_time_8h-source.html#l00195">getMinute()</a>, <a class="el" href="_affx_time_8h-source.html#l00189">getMonth()</a>, <a class="el" href="_affx_time_8h-source.html#l00197">getSecond()</a>, <a class="el" href="_affx_time_8h-source.html#l00187">getYear()</a>, and <a class="el" href="_affx_time_8h-source.html#l00185">operator=()</a>.
 </div>
 </div><p>
 <hr>The documentation for this class was generated from the following files:<ul>
 <li>C:/FusionSDK/affy/sdk/util/<a class="el" href="_affx_time_8h-source.html">AffxTime.h</a><li>C:/FusionSDK/affy/sdk/util/<a class="el" href="_affx_time_8cpp-source.html">AffxTime.cpp</a></ul>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:30 2009 for Affymetrix Fusion SDK by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:40 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

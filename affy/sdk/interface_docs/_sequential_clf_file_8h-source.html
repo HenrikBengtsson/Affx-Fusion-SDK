@@ -55,41 +55,19 @@
 <a name="l00039"></a><a class="code" href="class_sequential_clf_file.html">00039</a> <span class="keyword">class </span><a class="code" href="class_sequential_clf_file.html">SequentialClfFile</a>
 <a name="l00040"></a>00040 {
 <a name="l00041"></a>00041 <span class="keyword">public</span>:
-<a name="l00045"></a><a class="code" href="class_sequential_clf_file.html#93e8989a3a035c9defc6338b39e648a3">00045</a>   <a class="code" href="class_sequential_clf_file.html#93e8989a3a035c9defc6338b39e648a3">SequentialClfFile</a> (<span class="keywordtype">void</span>)
-<a name="l00046"></a>00046     : <a class="code" href="class_sequential_clf_file.html#f730b297a38ab8a1f9aaaa38965fc693" title="Number of rows.">m_Rows</a> (0), <a class="code" href="class_sequential_clf_file.html#7c5b17547e7f3e37ef153d3e67db2031" title="Number of columns.">m_Cols</a> (0)
-<a name="l00047"></a>00047   {}
-<a name="l00048"></a>00048 
-<a name="l00055"></a><a class="code" href="class_sequential_clf_file.html#a97e249875ebb835878c6e8f84f2cb4e">00055</a>   <span class="keywordtype">bool</span> <a class="code" href="class_sequential_clf_file.html#a97e249875ebb835878c6e8f84f2cb4e">isSequential</a> (<a class="code" href="classaffx_1_1_tsv_file.html" title="A class for reading and writing Tab Seperated Value (TSV) files. See the TsvFile...">affx::TsvFile</a>&amp; clfTsv)
-<a name="l00056"></a>00056   {
-<a name="l00057"></a>00057     std::string rowsValue, colsValue, sequentialValue;
-<a name="l00058"></a>00058     clfTsv.<a class="code" href="classaffx_1_1_tsv_file.html#dabcde206ca5a68ea3a983dfaca0d8f0" title="Advance to the next header matching key.">headersFindNext</a> (<span class="stringliteral">"rows"</span>, rowsValue);
-<a name="l00059"></a>00059     clfTsv.<a class="code" href="classaffx_1_1_tsv_file.html#dabcde206ca5a68ea3a983dfaca0d8f0" title="Advance to the next header matching key.">headersFindNext</a> (<span class="stringliteral">"cols"</span>, colsValue);
-<a name="l00060"></a>00060     clfTsv.<a class="code" href="classaffx_1_1_tsv_file.html#dabcde206ca5a68ea3a983dfaca0d8f0" title="Advance to the next header matching key.">headersFindNext</a> (<span class="stringliteral">"sequential"</span>, sequentialValue);
-<a name="l00061"></a>00061     <span class="comment">// Require rows, cols, and a sequential value of 1.</span>
-<a name="l00062"></a>00062     <span class="keywordflow">if</span> (rowsValue.empty() || colsValue.empty() || sequentialValue != <span class="stringliteral">"1"</span>)
-<a name="l00063"></a>00063       <span class="keywordflow">return</span> <span class="keyword">false</span>;
-<a name="l00064"></a>00064     <span class="comment">// Save rows, cols.</span>
-<a name="l00065"></a>00065     <a class="code" href="class_sequential_clf_file.html#f730b297a38ab8a1f9aaaa38965fc693" title="Number of rows.">m_Rows</a> = <a class="code" href="class_convert.html#ddc9242b0d43612a4383c13e6014bc51">Convert::toInt</a> (rowsValue);
-<a name="l00066"></a>00066     <a class="code" href="class_sequential_clf_file.html#7c5b17547e7f3e37ef153d3e67db2031" title="Number of columns.">m_Cols</a> = <a class="code" href="class_convert.html#ddc9242b0d43612a4383c13e6014bc51">Convert::toInt</a> (colsValue);
-<a name="l00067"></a>00067     <span class="keywordflow">return</span> <span class="keyword">true</span>;
-<a name="l00068"></a>00068   }
-<a name="l00069"></a>00069 
-<a name="l00077"></a><a class="code" href="class_sequential_clf_file.html#00ec51bb45d8e5e8fbc5933a5c84d5fd">00077</a>   <span class="keywordtype">void</span> <a class="code" href="class_sequential_clf_file.html#00ec51bb45d8e5e8fbc5933a5c84d5fd">getProbeCoordinates</a> (<span class="keyword">const</span> <span class="keywordtype">int</span> probeId, <span class="keywordtype">int</span>&amp; x, <span class="keywordtype">int</span>&amp; y)
-<a name="l00078"></a>00078   {
-<a name="l00079"></a>00079     <span class="comment">// Probe id is one based, x and y are zero based.</span>
-<a name="l00080"></a>00080     <span class="keyword">const</span> <span class="keywordtype">int</span> <span class="keywordtype">id</span> = probeId - 1;
-<a name="l00081"></a>00081     x = <span class="keywordtype">id</span> % <a class="code" href="class_sequential_clf_file.html#f730b297a38ab8a1f9aaaa38965fc693" title="Number of rows.">m_Rows</a>;
-<a name="l00082"></a>00082     assert (<a class="code" href="class_sequential_clf_file.html#7c5b17547e7f3e37ef153d3e67db2031" title="Number of columns.">m_Cols</a> &gt; 0);
-<a name="l00083"></a>00083     y = <span class="keywordtype">id</span> / <a class="code" href="class_sequential_clf_file.html#7c5b17547e7f3e37ef153d3e67db2031" title="Number of columns.">m_Cols</a>;
-<a name="l00084"></a>00084   }
-<a name="l00085"></a>00085 
-<a name="l00086"></a>00086 <span class="keyword">private</span>:
-<a name="l00088"></a><a class="code" href="class_sequential_clf_file.html#f730b297a38ab8a1f9aaaa38965fc693">00088</a>   <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_sequential_clf_file.html#f730b297a38ab8a1f9aaaa38965fc693" title="Number of rows.">m_Rows</a>;
-<a name="l00090"></a><a class="code" href="class_sequential_clf_file.html#7c5b17547e7f3e37ef153d3e67db2031">00090</a>   <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_sequential_clf_file.html#7c5b17547e7f3e37ef153d3e67db2031" title="Number of columns.">m_Cols</a>;
-<a name="l00091"></a>00091 };
-<a name="l00092"></a>00092 
-<a name="l00093"></a>00093 <span class="preprocessor">#endif </span><span class="comment">/* SEQUENTIAL_CLF_FILE_H */</span>
-</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:16 2009 for Affymetrix Fusion SDK by&nbsp;
+<a name="l00045"></a>00045   <a class="code" href="class_sequential_clf_file.html#93e8989a3a035c9defc6338b39e648a3">SequentialClfFile</a> (<span class="keywordtype">void</span>);
+<a name="l00046"></a>00046 
+<a name="l00053"></a>00053   <span class="keywordtype">bool</span> <a class="code" href="class_sequential_clf_file.html#a97e249875ebb835878c6e8f84f2cb4e">isSequential</a> (<a class="code" href="classaffx_1_1_tsv_file.html" title="A class for reading and writing Tab Seperated Value (TSV) files. See the TsvFile...">affx::TsvFile</a>&amp; clfTsv);
+<a name="l00054"></a>00054 
+<a name="l00062"></a>00062   <span class="keywordtype">void</span> <a class="code" href="class_sequential_clf_file.html#00ec51bb45d8e5e8fbc5933a5c84d5fd">getProbeCoordinates</a> (<span class="keyword">const</span> <span class="keywordtype">int</span> probeId, <span class="keywordtype">int</span>&amp; x, <span class="keywordtype">int</span>&amp; y);
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064 <span class="keyword">private</span>:
+<a name="l00066"></a><a class="code" href="class_sequential_clf_file.html#f730b297a38ab8a1f9aaaa38965fc693">00066</a>   <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_sequential_clf_file.html#f730b297a38ab8a1f9aaaa38965fc693" title="Number of rows.">m_Rows</a>;
+<a name="l00068"></a><a class="code" href="class_sequential_clf_file.html#7c5b17547e7f3e37ef153d3e67db2031">00068</a>   <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_sequential_clf_file.html#7c5b17547e7f3e37ef153d3e67db2031" title="Number of columns.">m_Cols</a>;
+<a name="l00069"></a>00069 };
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071 <span class="preprocessor">#endif </span><span class="comment">/* SEQUENTIAL_CLF_FILE_H */</span>
+</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:25 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

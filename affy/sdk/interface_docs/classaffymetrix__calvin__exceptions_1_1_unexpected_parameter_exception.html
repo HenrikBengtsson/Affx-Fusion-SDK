@@ -34,7 +34,9 @@
 <a href="classaffymetrix__calvin__exceptions_1_1_unexpected_parameter_exception-members.html">List of all members.</a><table border="0" cellpadding="0" cellspacing="0">
 <tr><td></td></tr>
 <tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaffymetrix__calvin__exceptions_1_1_unexpected_parameter_exception.html#55d938f2b41e2f31529a6569fdef7471">UnexpectedParameterException</a> (const std::wstring &amp;expectedType_)</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaffymetrix__calvin__exceptions_1_1_unexpected_parameter_exception.html#0c5c2a1668a7943b472ade92f57f7371">UnexpectedParameterException</a> (std::wstring _Source, std::wstring _Description, std::wstring _TimeStamp, std::string _FileName, u_int16_t _LineNumber, <a class="el" href="md5_8h.html#fecfb8149081bd9b746bf968fe118a1d">u_int64_t</a> _ErrorCode, const std::wstring &amp;expectedType_)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">const std::wstring&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaffymetrix__calvin__exceptions_1_1_unexpected_parameter_exception.html#cea7510606add0731b3f5caf18a0f732">ToString</a> ()</td></tr>
 
 <tr><td colspan="2"><br><h2>Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">std::wstring&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaffymetrix__calvin__exceptions_1_1_unexpected_parameter_exception.html#7f8b30d0ab1a1d54d3365e58fa9d5c5f">expectedType</a></td></tr>
@@ -45,18 +47,57 @@ This exception indicates the parameter type does not match the expected type
 <p>
 
 <p>
-Definition at line <a class="el" href="_parameter_exception_8h-source.html#l00043">43</a> of file <a class="el" href="_parameter_exception_8h-source.html">ParameterException.h</a>.<hr><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" name="55d938f2b41e2f31529a6569fdef7471"></a><!-- doxytag: member="affymetrix_calvin_exceptions::UnexpectedParameterException::UnexpectedParameterException" ref="55d938f2b41e2f31529a6569fdef7471" args="(const std::wstring &amp;expectedType_)" -->
+Definition at line <a class="el" href="_parameter_exception_8h-source.html#l00049">49</a> of file <a class="el" href="_parameter_exception_8h-source.html">ParameterException.h</a>.<hr><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" name="0c5c2a1668a7943b472ade92f57f7371"></a><!-- doxytag: member="affymetrix_calvin_exceptions::UnexpectedParameterException::UnexpectedParameterException" ref="0c5c2a1668a7943b472ade92f57f7371" args="(std::wstring _Source, std::wstring _Description, std::wstring _TimeStamp, std::string _FileName, u_int16_t _LineNumber, u_int64_t _ErrorCode, const std::wstring &amp;expectedType_)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">affymetrix_calvin_exceptions::UnexpectedParameterException::UnexpectedParameterException           </td>
           <td>(</td>
+          <td class="paramtype">std::wstring&nbsp;</td>
+          <td class="paramname"> <em>_Source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::wstring&nbsp;</td>
+          <td class="paramname"> <em>_Description</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::wstring&nbsp;</td>
+          <td class="paramname"> <em>_TimeStamp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&nbsp;</td>
+          <td class="paramname"> <em>_FileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u_int16_t&nbsp;</td>
+          <td class="paramname"> <em>_LineNumber</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="md5_8h.html#fecfb8149081bd9b746bf968fe118a1d">u_int64_t</a>&nbsp;</td>
+          <td class="paramname"> <em>_ErrorCode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">const std::wstring &amp;&nbsp;</td>
-          <td class="paramname"> <em>expectedType_</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td width="100%"><code> [inline]</code></td>
+          <td class="paramname"> <em>expectedType_</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [inline]</code></td>
         </tr>
       </table>
 </div>
@@ -65,7 +106,35 @@ Definition at line <a class="el" href="_parameter_exception_8h-source.html#l0004
 <p>
 
 <p>
-Definition at line <a class="el" href="_parameter_exception_8h-source.html#l00046">46</a> of file <a class="el" href="_parameter_exception_8h-source.html">ParameterException.h</a>.
+Definition at line <a class="el" href="_parameter_exception_8h-source.html#l00052">52</a> of file <a class="el" href="_parameter_exception_8h-source.html">ParameterException.h</a>.
+</div>
+</div><p>
+<hr><h2>Member Function Documentation</h2>
+<a class="anchor" name="cea7510606add0731b3f5caf18a0f732"></a><!-- doxytag: member="affymetrix_calvin_exceptions::UnexpectedParameterException::ToString" ref="cea7510606add0731b3f5caf18a0f732" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::wstring affymetrix_calvin_exceptions::UnexpectedParameterException::ToString           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Returns a string describing the exception<p>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>Returns a string describing the exception. </dd></dl>
+
+<p>
+Reimplemented from <a class="el" href="classaffymetrix__calvin__exceptions_1_1_calvin_exception.html#7983d657e415f5a9c6cbe4636a38b6f7">affymetrix_calvin_exceptions::CalvinException</a>.
+<p>
+Definition at line <a class="el" href="_parameter_exception_8cpp-source.html#l00031">31</a> of file <a class="el" href="_parameter_exception_8cpp-source.html">ParameterException.cpp</a>.
+<p>
+References <a class="el" href="_exception_base_8cpp-source.html#l00235">affymetrix_calvin_exceptions::CalvinException::SystemInfo()</a>.
 </div>
 </div><p>
 <hr><h2>Member Data Documentation</h2>
@@ -83,12 +152,12 @@ Definition at line <a class="el" href="_parameter_exception_8h-source.html#l0004
 <p>
 String with the name of the expected type 
 <p>
-Definition at line <a class="el" href="_parameter_exception_8h-source.html#l00049">49</a> of file <a class="el" href="_parameter_exception_8h-source.html">ParameterException.h</a>.
+Definition at line <a class="el" href="_parameter_exception_8h-source.html#l00058">58</a> of file <a class="el" href="_parameter_exception_8h-source.html">ParameterException.h</a>.
 </div>
 </div><p>
-<hr>The documentation for this class was generated from the following file:<ul>
-<li>C:/FusionSDK/affy/sdk/calvin_files/parameter/src/<a class="el" href="_parameter_exception_8h-source.html">ParameterException.h</a></ul>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:43 2009 for Affymetrix Fusion SDK by&nbsp;
+<hr>The documentation for this class was generated from the following files:<ul>
+<li>C:/FusionSDK/affy/sdk/calvin_files/parameter/src/<a class="el" href="_parameter_exception_8h-source.html">ParameterException.h</a><li>C:/FusionSDK/affy/sdk/calvin_files/parameter/src/<a class="el" href="_parameter_exception_8cpp-source.html">ParameterException.cpp</a></ul>
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:53 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

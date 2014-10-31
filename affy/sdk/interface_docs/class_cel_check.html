@@ -22,13 +22,8 @@
     <li><a href="functions.html"><span>Class&nbsp;Members</span></a></li>
   </ul>
 </div>
-<h1>CelCheck Class Reference</h1><!-- doxytag: class="CelCheck" --><!-- doxytag: inherits="RegressionCheck" --><code>#include &lt;<a class="el" href="_cel_check_8h-source.html">CelCheck.h</a>&gt;</code>
+<h1>CelCheck Class Reference</h1><!-- doxytag: class="CelCheck" --><code>#include &lt;<a class="el" href="_cel_check_8h-source.html">CelCheck.h</a>&gt;</code>
 <p>
-<p>Inheritance diagram for CelCheck:
-<p><center><img src="class_cel_check.png" usemap="#CelCheck_map" border="0" alt=""></center>
-<map name="CelCheck_map">
-<area href="class_regression_check.html" alt="RegressionCheck" shape="rect" coords="0,0,111,24">
-</map>
 <a href="class_cel_check-members.html">List of all members.</a><table border="0" cellpadding="0" cellspacing="0">
 <tr><td></td></tr>
 <tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
@@ -66,7 +61,7 @@ Class for testing that CEL files are the same +/- some epsilon. Also checks to m
 <p>
 
 <p>
-Definition at line <a class="el" href="_cel_check_8h-source.html#l00058">58</a> of file <a class="el" href="_cel_check_8h-source.html">CelCheck.h</a>.<hr><h2>Constructor &amp; Destructor Documentation</h2>
+Definition at line <a class="el" href="_cel_check_8h-source.html#l00054">54</a> of file <a class="el" href="_cel_check_8h-source.html">CelCheck.h</a>.<hr><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" name="9d6e00eb90a7fc8cebbf017bf68eaf51"></a><!-- doxytag: member="CelCheck::CelCheck" ref="9d6e00eb90a7fc8cebbf017bf68eaf51" args="(std::vector&lt; std::string &gt; &amp;generated, std::vector&lt; std::string &gt; &amp;gold, double eps, const std::string &amp;prefix=&quot;affymetrix-&quot;, int diffAllowed=0)" -->
 <div class="memitem">
 <div class="memproto">
@@ -125,9 +120,9 @@ Constructor.
 <dl class="return" compact><dt><b>Returns:</b></dt><dd></dd></dl>
 
 <p>
-Definition at line <a class="el" href="_cel_check_8h-source.html#l00071">71</a> of file <a class="el" href="_cel_check_8h-source.html">CelCheck.h</a>.
+Definition at line <a class="el" href="_cel_check_8h-source.html#l00067">67</a> of file <a class="el" href="_cel_check_8h-source.html">CelCheck.h</a>.
 <p>
-References <a class="el" href="_cel_check_8h-source.html#l00213">m_DiffAllowed</a>, <a class="el" href="_cel_check_8h-source.html#l00211">m_Eps</a>, <a class="el" href="_cel_check_8h-source.html#l00209">m_Generated</a>, <a class="el" href="_cel_check_8h-source.html#l00210">m_Gold</a>, <a class="el" href="_regression_check_8h-source.html#l00137">RegressionCheck::m_Name</a>, and <a class="el" href="_cel_check_8h-source.html#l00212">m_Prefix</a>.
+References <a class="el" href="_cel_check_8h-source.html#l00208">m_DiffAllowed</a>, <a class="el" href="_cel_check_8h-source.html#l00206">m_Eps</a>, <a class="el" href="_cel_check_8h-source.html#l00204">m_Generated</a>, <a class="el" href="_cel_check_8h-source.html#l00205">m_Gold</a>, and <a class="el" href="_cel_check_8h-source.html#l00207">m_Prefix</a>.
 </div>
 </div><p>
 <a class="anchor" name="58d31908a670570e5cafdfcf75ae4cfc"></a><!-- doxytag: member="CelCheck::CelCheck" ref="58d31908a670570e5cafdfcf75ae4cfc" args="(std::string &amp;generated, std::string &amp;gold, double eps, const std::string &amp;prefix=&quot;affymetrix-&quot;, int diffAllowed=0)" -->
@@ -176,9 +171,9 @@ References <a class="el" href="_cel_check_8h-source.html#l00213">m_DiffAllowed</
 <p>
 
 <p>
-Definition at line <a class="el" href="_cel_check_8h-source.html#l00084">84</a> of file <a class="el" href="_cel_check_8h-source.html">CelCheck.h</a>.
+Definition at line <a class="el" href="_cel_check_8h-source.html#l00080">80</a> of file <a class="el" href="_cel_check_8h-source.html">CelCheck.h</a>.
 <p>
-References <a class="el" href="_cel_check_8h-source.html#l00213">m_DiffAllowed</a>, <a class="el" href="_cel_check_8h-source.html#l00211">m_Eps</a>, <a class="el" href="_cel_check_8h-source.html#l00209">m_Generated</a>, <a class="el" href="_cel_check_8h-source.html#l00210">m_Gold</a>, and <a class="el" href="_cel_check_8h-source.html#l00212">m_Prefix</a>.
+References <a class="el" href="_cel_check_8h-source.html#l00208">m_DiffAllowed</a>, <a class="el" href="_cel_check_8h-source.html#l00206">m_Eps</a>, <a class="el" href="_cel_check_8h-source.html#l00204">m_Generated</a>, <a class="el" href="_cel_check_8h-source.html#l00205">m_Gold</a>, and <a class="el" href="_cel_check_8h-source.html#l00207">m_Prefix</a>.
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
@@ -222,11 +217,11 @@ Check to make sure that two files are the same +/- some epsilon. <dl compact><dt
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>- Returns true if files are close enough, false otherwise. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_cel_check_8h-source.html#l00103">103</a> of file <a class="el" href="_cel_check_8h-source.html">CelCheck.h</a>.
+Definition at line <a class="el" href="_cel_check_8h-source.html#l00099">99</a> of file <a class="el" href="_cel_check_8h-source.html">CelCheck.h</a>.
 <p>
-References <a class="el" href="_regression_check_8h-source.html#l00072">RegressionCheck::checkMsg()</a>, <a class="el" href="_util_8cpp-source.html#l00887">Util::convertPathName()</a>, <a class="el" href="_cel_check_8h-source.html#l00165">dataSame()</a>, <a class="el" href="_exception_base_8cpp-source.html#l00134">affymetrix_calvin_exceptions::CalvinException::Description()</a>, <a class="el" href="_cel_check_8h-source.html#l00160">headersSame()</a>, <a class="el" href="_cel_check_8h-source.html#l00209">m_Generated</a>, <a class="el" href="_cel_check_8h-source.html#l00210">m_Gold</a>, <a class="el" href="_convert_8h-source.html#l00046">ToStr()</a>, and <a class="el" href="_except_8h-source.html#l00060">Except::what()</a>.
+References <a class="el" href="_cel_check_8h-source.html#l00160">dataSame()</a>, <a class="el" href="_exception_base_8cpp-source.html#l00136">affymetrix_calvin_exceptions::CalvinException::Description()</a>, <a class="el" href="_cel_check_8h-source.html#l00155">headersSame()</a>, <a class="el" href="_cel_check_8h-source.html#l00204">m_Generated</a>, <a class="el" href="_cel_check_8h-source.html#l00205">m_Gold</a>, <a class="el" href="_fs_8cpp-source.html#l00262">Fs::normalizePath()</a>, <a class="el" href="_convert_8h-source.html#l00227">ToStr()</a>, and <a class="el" href="_except_8h-source.html#l00058">Except::what()</a>.
 <p>
-Referenced by <a class="el" href="_cel_check_8h-source.html#l00134">check()</a>.
+Referenced by <a class="el" href="_cel_check_8h-source.html#l00129">check()</a>.
 </div>
 </div><p>
 <a class="anchor" name="5e88f36f76da8cb54a72f27a4b10f932"></a><!-- doxytag: member="CelCheck::check" ref="5e88f36f76da8cb54a72f27a4b10f932" args="(std::string &amp;msg)" -->
@@ -239,26 +234,20 @@ Referenced by <a class="el" href="_cel_check_8h-source.html#l00134">check()</a>.
           <td class="paramtype">std::string &amp;&nbsp;</td>
           <td class="paramname"> <em>msg</em>          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td width="100%"><code> [inline, virtual]</code></td>
+          <td width="100%"><code> [inline]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
 <p>
-Check the condition expected. <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>msg</em>&nbsp;</td><td>- Message to be optionally set while checking. </td></tr>
-  </table>
-</dl>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd>- true if passed, false otherwise. </dd></dl>
 
 <p>
-Implements <a class="el" href="class_regression_check.html#417b6199813eaa14192b5ea353582335">RegressionCheck</a>.
+Definition at line <a class="el" href="_cel_check_8h-source.html#l00129">129</a> of file <a class="el" href="_cel_check_8h-source.html">CelCheck.h</a>.
 <p>
-Definition at line <a class="el" href="_cel_check_8h-source.html#l00134">134</a> of file <a class="el" href="_cel_check_8h-source.html">CelCheck.h</a>.
+References <a class="el" href="_cel_check_8h-source.html#l00099">checkFilePair()</a>, <a class="el" href="_cel_check_8h-source.html#l00204">m_Generated</a>, and <a class="el" href="_cel_check_8h-source.html#l00205">m_Gold</a>.
 <p>
-References <a class="el" href="_cel_check_8h-source.html#l00103">checkFilePair()</a>, <a class="el" href="_regression_check_8h-source.html#l00072">RegressionCheck::checkMsg()</a>, <a class="el" href="_cel_check_8h-source.html#l00209">m_Generated</a>, and <a class="el" href="_cel_check_8h-source.html#l00210">m_Gold</a>.
+Referenced by <a class="el" href="apt-check-cel_8cpp-source.html#l00036">main()</a>.
 </div>
 </div><p>
 <a class="anchor" name="3aea91e11a4011eb0dafc412fa5fe1be"></a><!-- doxytag: member="CelCheck::fillInToIgnore" ref="3aea91e11a4011eb0dafc412fa5fe1be" args="(std::set&lt; std::string &gt; &amp;ignoreMap, const std::string &amp;prefix)" -->
@@ -289,7 +278,7 @@ References <a class="el" href="_cel_check_8h-source.html#l00103">checkFilePair()
 <p>
 
 <p>
-Definition at line <a class="el" href="_cel_check_8h-source.html#l00155">155</a> of file <a class="el" href="_cel_check_8h-source.html">CelCheck.h</a>.
+Definition at line <a class="el" href="_cel_check_8h-source.html#l00150">150</a> of file <a class="el" href="_cel_check_8h-source.html">CelCheck.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="5e8f0697974413eaba82caa1f5292bf3"></a><!-- doxytag: member="CelCheck::headersSame" ref="5e8f0697974413eaba82caa1f5292bf3" args="(const std::string &amp;generated, const std::string &amp;gold, std::string &amp;msgs)" -->
@@ -326,12 +315,12 @@ Definition at line <a class="el" href="_cel_check_8h-source.html#l00155">155</a>
 <p>
 
 <p>
-<dl compact><dt><b><a class="el" href="todo.html#_todo000020">Todo:</a></b></dt><dd>implement cel header check once we have new regression data </dd></dl>
+<dl compact><dt><b><a class="el" href="todo.html#_todo000023">Todo:</a></b></dt><dd>implement cel header check once we have new regression data </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_cel_check_8h-source.html#l00160">160</a> of file <a class="el" href="_cel_check_8h-source.html">CelCheck.h</a>.
+Definition at line <a class="el" href="_cel_check_8h-source.html#l00155">155</a> of file <a class="el" href="_cel_check_8h-source.html">CelCheck.h</a>.
 <p>
-Referenced by <a class="el" href="_cel_check_8h-source.html#l00103">checkFilePair()</a>.
+Referenced by <a class="el" href="_cel_check_8h-source.html#l00099">checkFilePair()</a>.
 </div>
 </div><p>
 <a class="anchor" name="a0e562bb24dd53748602f51a92dfebfd"></a><!-- doxytag: member="CelCheck::dataSame" ref="a0e562bb24dd53748602f51a92dfebfd" args="(const std::string &amp;generated, const std::string &amp;gold, std::string &amp;msgs)" -->
@@ -368,11 +357,11 @@ Referenced by <a class="el" href="_cel_check_8h-source.html#l00103">checkFilePai
 <p>
 
 <p>
-Definition at line <a class="el" href="_cel_check_8h-source.html#l00165">165</a> of file <a class="el" href="_cel_check_8h-source.html">CelCheck.h</a>.
+Definition at line <a class="el" href="_cel_check_8h-source.html#l00160">160</a> of file <a class="el" href="_cel_check_8h-source.html">CelCheck.h</a>.
 <p>
-References <a class="el" href="_regression_check_8h-source.html#l00113">RegressionCheck::checkFloat()</a>, <a class="el" href="_fusion_c_e_l_data_8cpp-source.html#l00365">affymetrix_fusion_io::FusionCELData::GetIntensity()</a>, <a class="el" href="_fusion_c_e_l_data_8cpp-source.html#l00155">affymetrix_fusion_io::FusionCELData::GetNumCells()</a>, <a class="el" href="_cel_check_8h-source.html#l00213">m_DiffAllowed</a>, <a class="el" href="_cel_check_8h-source.html#l00211">m_Eps</a>, <a class="el" href="_verbose_8cpp-source.html#l00168">Verbose::out()</a>, <a class="el" href="_fusion_c_e_l_data_8cpp-source.html#l00522">affymetrix_fusion_io::FusionCELData::Read()</a>, <a class="el" href="_fusion_c_e_l_data_8cpp-source.html#l00059">affymetrix_fusion_io::FusionCELData::SetFileName()</a>, and <a class="el" href="_convert_8h-source.html#l00046">ToStr()</a>.
+References <a class="el" href="_fusion_c_e_l_data_8cpp-source.html#l00379">affymetrix_fusion_io::FusionCELData::GetIntensity()</a>, <a class="el" href="_fusion_c_e_l_data_8cpp-source.html#l00169">affymetrix_fusion_io::FusionCELData::GetNumCells()</a>, <a class="el" href="_cel_check_8h-source.html#l00208">m_DiffAllowed</a>, <a class="el" href="_cel_check_8h-source.html#l00206">m_Eps</a>, <a class="el" href="_verbose_8cpp-source.html#l00259">Verbose::out()</a>, <a class="el" href="_fusion_c_e_l_data_8cpp-source.html#l00526">affymetrix_fusion_io::FusionCELData::Read()</a>, <a class="el" href="_fusion_c_e_l_data_8cpp-source.html#l00062">affymetrix_fusion_io::FusionCELData::SetFileName()</a>, and <a class="el" href="_convert_8h-source.html#l00227">ToStr()</a>.
 <p>
-Referenced by <a class="el" href="_cel_check_8h-source.html#l00103">checkFilePair()</a>.
+Referenced by <a class="el" href="_cel_check_8h-source.html#l00099">checkFilePair()</a>.
 </div>
 </div><p>
 <hr><h2>Member Data Documentation</h2>
@@ -390,9 +379,9 @@ Referenced by <a class="el" href="_cel_check_8h-source.html#l00103">checkFilePai
 <p>
 
 <p>
-Definition at line <a class="el" href="_cel_check_8h-source.html#l00209">209</a> of file <a class="el" href="_cel_check_8h-source.html">CelCheck.h</a>.
+Definition at line <a class="el" href="_cel_check_8h-source.html#l00204">204</a> of file <a class="el" href="_cel_check_8h-source.html">CelCheck.h</a>.
 <p>
-Referenced by <a class="el" href="_cel_check_8h-source.html#l00071">CelCheck()</a>, <a class="el" href="_cel_check_8h-source.html#l00134">check()</a>, and <a class="el" href="_cel_check_8h-source.html#l00103">checkFilePair()</a>.
+Referenced by <a class="el" href="_cel_check_8h-source.html#l00067">CelCheck()</a>, <a class="el" href="_cel_check_8h-source.html#l00129">check()</a>, and <a class="el" href="_cel_check_8h-source.html#l00099">checkFilePair()</a>.
 </div>
 </div><p>
 <a class="anchor" name="8205403de2b93c8be1ae74ab8f1bcf41"></a><!-- doxytag: member="CelCheck::m_Gold" ref="8205403de2b93c8be1ae74ab8f1bcf41" args="" -->
@@ -409,9 +398,9 @@ Referenced by <a class="el" href="_cel_check_8h-source.html#l00071">CelCheck()</
 <p>
 
 <p>
-Definition at line <a class="el" href="_cel_check_8h-source.html#l00210">210</a> of file <a class="el" href="_cel_check_8h-source.html">CelCheck.h</a>.
+Definition at line <a class="el" href="_cel_check_8h-source.html#l00205">205</a> of file <a class="el" href="_cel_check_8h-source.html">CelCheck.h</a>.
 <p>
-Referenced by <a class="el" href="_cel_check_8h-source.html#l00071">CelCheck()</a>, <a class="el" href="_cel_check_8h-source.html#l00134">check()</a>, and <a class="el" href="_cel_check_8h-source.html#l00103">checkFilePair()</a>.
+Referenced by <a class="el" href="_cel_check_8h-source.html#l00067">CelCheck()</a>, <a class="el" href="_cel_check_8h-source.html#l00129">check()</a>, and <a class="el" href="_cel_check_8h-source.html#l00099">checkFilePair()</a>.
 </div>
 </div><p>
 <a class="anchor" name="986276d8b0c428119aceb581a95540c3"></a><!-- doxytag: member="CelCheck::m_Eps" ref="986276d8b0c428119aceb581a95540c3" args="" -->
@@ -428,9 +417,9 @@ Referenced by <a class="el" href="_cel_check_8h-source.html#l00071">CelCheck()</
 <p>
 
 <p>
-Definition at line <a class="el" href="_cel_check_8h-source.html#l00211">211</a> of file <a class="el" href="_cel_check_8h-source.html">CelCheck.h</a>.
+Definition at line <a class="el" href="_cel_check_8h-source.html#l00206">206</a> of file <a class="el" href="_cel_check_8h-source.html">CelCheck.h</a>.
 <p>
-Referenced by <a class="el" href="_cel_check_8h-source.html#l00071">CelCheck()</a>, and <a class="el" href="_cel_check_8h-source.html#l00165">dataSame()</a>.
+Referenced by <a class="el" href="_cel_check_8h-source.html#l00067">CelCheck()</a>, and <a class="el" href="_cel_check_8h-source.html#l00160">dataSame()</a>.
 </div>
 </div><p>
 <a class="anchor" name="3d711b0213fff328c740175d18e854fb"></a><!-- doxytag: member="CelCheck::m_Prefix" ref="3d711b0213fff328c740175d18e854fb" args="" -->
@@ -447,9 +436,9 @@ Referenced by <a class="el" href="_cel_check_8h-source.html#l00071">CelCheck()</
 <p>
 
 <p>
-Definition at line <a class="el" href="_cel_check_8h-source.html#l00212">212</a> of file <a class="el" href="_cel_check_8h-source.html">CelCheck.h</a>.
+Definition at line <a class="el" href="_cel_check_8h-source.html#l00207">207</a> of file <a class="el" href="_cel_check_8h-source.html">CelCheck.h</a>.
 <p>
-Referenced by <a class="el" href="_cel_check_8h-source.html#l00071">CelCheck()</a>.
+Referenced by <a class="el" href="_cel_check_8h-source.html#l00067">CelCheck()</a>.
 </div>
 </div><p>
 <a class="anchor" name="6953f127d62e258d9349972e7e1ba7aa"></a><!-- doxytag: member="CelCheck::m_DiffAllowed" ref="6953f127d62e258d9349972e7e1ba7aa" args="" -->
@@ -466,14 +455,14 @@ Referenced by <a class="el" href="_cel_check_8h-source.html#l00071">CelCheck()</
 <p>
 
 <p>
-Definition at line <a class="el" href="_cel_check_8h-source.html#l00213">213</a> of file <a class="el" href="_cel_check_8h-source.html">CelCheck.h</a>.
+Definition at line <a class="el" href="_cel_check_8h-source.html#l00208">208</a> of file <a class="el" href="_cel_check_8h-source.html">CelCheck.h</a>.
 <p>
-Referenced by <a class="el" href="_cel_check_8h-source.html#l00071">CelCheck()</a>, and <a class="el" href="_cel_check_8h-source.html#l00165">dataSame()</a>.
+Referenced by <a class="el" href="_cel_check_8h-source.html#l00067">CelCheck()</a>, and <a class="el" href="_cel_check_8h-source.html#l00160">dataSame()</a>.
 </div>
 </div><p>
 <hr>The documentation for this class was generated from the following file:<ul>
 <li>C:/FusionSDK/affy/sdk/util/<a class="el" href="_cel_check_8h-source.html">CelCheck.h</a></ul>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:30 2009 for Affymetrix Fusion SDK by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:41 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

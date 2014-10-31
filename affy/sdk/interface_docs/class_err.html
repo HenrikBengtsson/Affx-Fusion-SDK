@@ -30,22 +30,28 @@
 <a href="class_err-members.html">List of all members.</a><table border="0" cellpadding="0" cellspacing="0">
 <tr><td></td></tr>
 <tr><td colspan="2"><br><h2>Static Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_err.html#70aca55b691e6f422c932bd8cf5301c0">setErrorPrefix</a> (const std::string &amp;prefix)</td></tr>
+
 <tr><td class="memItemLeft" nowrap align="right" valign="top">static <a class="el" href="class_err_1_1_param.html">Param</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_err.html#cf4b2a285bf93328ab6ace6063f1f015">getParam</a> ()</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">This function gets around the problem of static variable initialization as local static variables work more consistently.  <a href="#cf4b2a285bf93328ab6ace6063f1f015"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_err.html#2c92074a0e89f02bba1c217b6c65b000">errAbort</a> (const std::string &amp;msg, const std::string prefix=&quot;FATAL ERROR: &quot;)</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_err.html#121c0cbb1687c93444a1b5f7f6ea56af">errAbort</a> (const std::string &amp;msg, const std::string &amp;prefix)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_err.html#f263fce7b658322d1e3b07609adaf675">errAbort</a> (const std::string &amp;msg)</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_err.html#e57b8788e17115012f6b42e9f8d5aed9">pushHandler</a> (<a class="el" href="class_err_handler.html">ErrHandler</a> *handler)</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">static <a class="el" href="class_err_handler.html">ErrHandler</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_err.html#7cd8651ed7e53ac86b43dad235d1cb91">popHandler</a> ()</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_err.html#d1a633f602fe60689cdc12d9ca1842e9">check</a> (bool passed, const char *msg)</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_err.html#d1a633f602fe60689cdc12d9ca1842e9">check</a> (bool <a class="el" href="apt-check-textfile_8cpp.html#fe62b54cc6b2cae5b58add564d54d153">passed</a>, const char *msg)</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_err.html#7ef851371fe1326fb95dc9d136e6f23b">check</a> (bool passed, const std::string &amp;msg)</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_err.html#7ef851371fe1326fb95dc9d136e6f23b">check</a> (bool <a class="el" href="apt-check-textfile_8cpp.html#fe62b54cc6b2cae5b58add564d54d153">passed</a>, const std::string &amp;msg)</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_err.html#ceb62780521f07880083c5bed5c64d13">setThrowStatus</a> (bool doThrow)</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_err.html#17c8a1e1c205ceb78c4d097852b9cddd">configureErrHandler</a> (bool doThrow, bool verbose)</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_err.html#765d8c5f872c7e09fc1d56d19d71037b">getThrowStatus</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_err.html#d26ae01c27beb95eb954e118d77aab5a">configureErrHandler</a> (bool doThrow, bool verbose, bool exitOnError=false, int exitOnErrorValue=-1)</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_err.html#6168faed97bb31f95ff18e56ab1a991e">setNewLineOnError</a> (bool newline)</td></tr>
 
@@ -55,6 +61,13 @@
 <tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_err.html#1707d33689099b3fe26de7c04698c145">apt_err_abort</a> (const std::string &amp;file, int line, const std::string &amp;msg)</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">The function called by the APT_ERR_ABORT macro.  <a href="#1707d33689099b3fe26de7c04698c145"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_err.html#cbeba843e35e7c185e46c0980d64ec97">setExitOnError</a> (bool val)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_err.html#c19da9104252ae099b3ec689e9c4369e">setExitOnErrorValue</a> (int val)</td></tr>
+
+<tr><td colspan="2"><br><h2>Static Public Attributes</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_err.html#07310d2845f0aeac9f632c55903c6d52">m_errorPrefix</a> = &quot;FATAL ERROR:&quot;</td></tr>
+
 <tr><td colspan="2"><br><h2>Classes</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_err_1_1_param.html">Param</a></td></tr>
 
@@ -66,7 +79,31 @@ Common abort with message function for programs to call.
 <p>
 
 <p>
-Definition at line <a class="el" href="_err_8h-source.html#l00063">63</a> of file <a class="el" href="_err_8h-source.html">Err.h</a>.<hr><h2>Member Function Documentation</h2>
+Definition at line <a class="el" href="_err_8h-source.html#l00060">60</a> of file <a class="el" href="_err_8h-source.html">Err.h</a>.<hr><h2>Member Function Documentation</h2>
+<a class="anchor" name="70aca55b691e6f422c932bd8cf5301c0"></a><!-- doxytag: member="Err::setErrorPrefix" ref="70aca55b691e6f422c932bd8cf5301c0" args="(const std::string &amp;prefix)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Err::setErrorPrefix           </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>prefix</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>
+Definition at line <a class="el" href="_err_8cpp-source.html#l00045">45</a> of file <a class="el" href="_err_8cpp-source.html">Err.cpp</a>.
+<p>
+References <a class="el" href="_err_8h-source.html#l00064">m_errorPrefix</a>.
+</div>
+</div><p>
 <a class="anchor" name="cf4b2a285bf93328ab6ace6063f1f015"></a><!-- doxytag: member="Err::getParam" ref="cf4b2a285bf93328ab6ace6063f1f015" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -88,12 +125,12 @@ This function gets around the problem of static variable initialization as local
 <dl class="return" compact><dt><b>Returns:</b></dt><dd><a class="el" href="class_err_1_1_param.html">Param</a> - Our static parameters for this class. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_err_8cpp-source.html#l00047">47</a> of file <a class="el" href="_err_8cpp-source.html">Err.cpp</a>.
+Definition at line <a class="el" href="_err_8cpp-source.html#l00054">54</a> of file <a class="el" href="_err_8cpp-source.html">Err.cpp</a>.
 <p>
-Referenced by <a class="el" href="_err_8cpp-source.html#l00057">errAbort()</a>, <a class="el" href="_err_8cpp-source.html#l00080">popHandler()</a>, <a class="el" href="_err_8cpp-source.html#l00072">pushHandler()</a>, and <a class="el" href="_err_8cpp-source.html#l00116">setNewLineOnError()</a>.
+Referenced by <a class="el" href="_err_8cpp-source.html#l00068">errAbort()</a>, <a class="el" href="_err_8cpp-source.html#l00122">getThrowStatus()</a>, <a class="el" href="_err_8cpp-source.html#l00093">popHandler()</a>, <a class="el" href="_err_8cpp-source.html#l00085">pushHandler()</a>, <a class="el" href="_err_8cpp-source.html#l00177">setExitOnError()</a>, <a class="el" href="_err_8cpp-source.html#l00194">setExitOnErrorValue()</a>, <a class="el" href="_err_8cpp-source.html#l00144">setNewLineOnError()</a>, and <a class="el" href="_err_8cpp-source.html#l00111">setThrowStatus()</a>.
 </div>
 </div><p>
-<a class="anchor" name="2c92074a0e89f02bba1c217b6c65b000"></a><!-- doxytag: member="Err::errAbort" ref="2c92074a0e89f02bba1c217b6c65b000" args="(const std::string &amp;msg, const std::string prefix=&quot;FATAL ERROR: &quot;)" -->
+<a class="anchor" name="121c0cbb1687c93444a1b5f7f6ea56af"></a><!-- doxytag: member="Err::errAbort" ref="121c0cbb1687c93444a1b5f7f6ea56af" args="(const std::string &amp;msg, const std::string &amp;prefix)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -106,8 +143,8 @@ Referenced by <a class="el" href="_err_8cpp-source.html#l00057">errAbort()</a>, 
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string&nbsp;</td>
-          <td class="paramname"> <em>prefix</em> = <code>&quot;FATAL&nbsp;ERROR:&nbsp;&quot;</code></td><td>&nbsp;</td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>prefix</em></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
@@ -127,11 +164,35 @@ Print the message supplied and abort program. <dl compact><dt><b>Parameters:</b>
 </dl>
 
 <p>
-Definition at line <a class="el" href="_err_8cpp-source.html#l00057">57</a> of file <a class="el" href="_err_8cpp-source.html">Err.cpp</a>.
+Definition at line <a class="el" href="_err_8cpp-source.html#l00068">68</a> of file <a class="el" href="_err_8cpp-source.html">Err.cpp</a>.
 <p>
-References <a class="el" href="_err_8cpp-source.html#l00047">getParam()</a>, and <a class="el" href="_err_8h-source.html#l00083">Err::Param::m_ErrHandlers</a>.
+References <a class="el" href="_err_8cpp-source.html#l00054">getParam()</a>, and <a class="el" href="_err_8h-source.html#l00084">Err::Param::m_ErrHandlers</a>.
 <p>
-Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00505">PgOptions::addPgOpt_nocopy()</a>, <a class="el" href="_affx_multi_dimensional_array_8h-source.html#l00069">AffxMultiDimensionalArray&lt; TYPE &gt;::AffxMultiDimensionalArray()</a>, <a class="el" href="_affx_time_8cpp-source.html#l00186">AffxTime::AffxTime()</a>, <a class="el" href="_guid_8cpp-source.html#l00065">affxutil::affy_seed_srand()</a>, <a class="el" href="_err_8cpp-source.html#l00134">apt_err_abort()</a>, <a class="el" href="_err_8cpp-source.html#l00120">apt_err_assert()</a>, <a class="el" href="_util_8cpp-source.html#l00239">Util::carefulClose()</a>, <a class="el" href="_affx_string_8h-source.html#l00118">AffxString::charAt()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00332">PgOpt::checkParseIsOk()</a>, <a class="el" href="_table_file_8cpp-source.html#l00247">TableFile::columnFromFile()</a>, <a class="el" href="_table_file_8cpp-source.html#l00319">TableFile::columnFromRowFile()</a>, <a class="el" href="_chp_check_8h-source.html#l00264">ChpCheck::dataSame()</a>, <a class="el" href="_tsv_file_diff_8cpp-source.html#l00319">affx::TsvFileDiff::diffData()</a>, <a class="el" href="_util_8cpp-source.html#l00364">Util::dirRemove()</a>, <a class="el" href="_dump_pgf_8cpp-source.html#l00095">dumpPgf::dumpPgf()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00078">PgOptionsSAXHandler::error()</a>, <a class="el" href="_calvin_to_text_8cpp-source.html#l00037">CalvinToText::error()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00079">PgOptionsSAXHandler::fatalError()</a>, <a class="el" href="_util_8cpp-source.html#l00393">Util::fileCopy()</a>, <a class="el" href="_util_8cpp-source.html#l00339">Util::fileRemove()</a>, <a class="el" href="_util_8cpp-source.html#l00461">Util::fileRename()</a>, <a class="el" href="_affx_time_8cpp-source.html#l00240">AffxTimeSpan::format()</a>, <a class="el" href="_tmp_file_factory_8cpp-source.html#l00245">TmpFileFactory::genDirname()</a>, <a class="el" href="_tmp_file_factory_8cpp-source.html#l00198">TmpFileFactory::genFilename_basic()</a>, <a class="el" href="_affx_multi_dimensional_array_8h-source.html#l00295">AffxMultiDimensionalArray&lt; TYPE &gt;::get()</a>, <a class="el" href="_affx_string_8h-source.html#l00117">AffxString::getAt()</a>, <a class="el" href="_dump_pgf_8cpp-source.html#l00628">dumpPgf::getCoordsByIndex()</a>, <a class="el" href="_table_file_8h-source.html#l00222">TableFile::getHeaderValue()</a>, <a class="el" href="_options_8cpp-source.html#l00155">Options::getOpt()</a>, <a class="el" href="_options_8cpp-source.html#l00165">Options::getOptBool()</a>, <a class="el" href="_options_8cpp-source.html#l00189">Options::getOptDouble()</a>, <a class="el" href="_options_8cpp-source.html#l00179">Options::getOptInt()</a>, <a class="el" href="_options_8cpp-source.html#l00199">Options::getOptVector()</a>, <a class="el" href="_affx_multi_dimensional_array_8h-source.html#l00271">AffxMultiDimensionalArray&lt; TYPE &gt;::getPointer()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00280">PgOpt::getValue()</a>, <a class="el" href="_tmp_file_factory_8cpp-source.html#l00063">GlobalTmpFileFactory()</a>, <a class="el" href="_affx_multi_dimensional_array_8h-source.html#l00119">AffxMultiDimensionalArray&lt; TYPE &gt;::initialize()</a>, <a class="el" href="_affx_multi_dimensional_array_8h-source.html#l00322">AffxMultiDimensionalArray&lt; TYPE &gt;::insertAt()</a>, <a class="el" href="_calvin_8cpp-source.html#l00071">Calvin::load()</a>, <a class="el" href="apt-engine-wrapper_8cpp-source.html#l00126">main()</a>, <a class="el" href="_util_8cpp-source.html#l00604">Util::makeDir()</a>, <a class="el" href="_base_engine_8cpp-source.html#l00294">BaseEngine::makeTempDir()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00688">PgOptions::matchOneArg()</a>, <a class="el" href="_util_8cpp-source.html#l00716">Util::matrixDifferences()</a>, <a class="el" href="_row_file_8cpp-source.html#l00322">RowFile::matrixFromFile()</a>, <a class="el" href="_msg_stream_8cpp-source.html#l00045">MsgStream::message()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00574">PgOptions::mustFindOpt()</a>, <a class="el" href="_util_8cpp-source.html#l00222">Util::mustOpenToWrite()</a>, <a class="el" href="_row_file_8cpp-source.html#l00181">RowFile::nextCStringRowExpect()</a>, <a class="el" href="_row_file_8cpp-source.html#l00095">RowFile::nextLine()</a>, <a class="el" href="_row_file_8cpp-source.html#l00255">RowFile::nextRowExpect()</a>, <a class="el" href="_table_file_8cpp-source.html#l00107">TableFile::open()</a>, <a class="el" href="_row_file_8cpp-source.html#l00061">RowFile::open()</a>, <a class="el" href="_c_h_p_file_updater_8cpp-source.html#l00055">affxchpwriter::CCHPFileUpdater::OpenCHPFile()</a>, <a class="el" href="_calvin_c_h_p_file_updater_8cpp-source.html#l00085">affymetrix_calvin_io::CalvinCHPFileUpdater::OpenCHPFile()</a>, <a class="el" href="_tsv_join_8cpp-source.html#l00184">tsvJoin::openInputFiles()</a>, <a class="el" href="_dump_pgf_8cpp-source.html#l00263">dumpPgf::openInputFiles()</a>, <a class="el" href="_affx_multi_dimensional_array_8h-source.html#l00163">AffxMultiDimensionalArray&lt; TYPE &gt;::operator=()</a>, <a class="el" href="_tsv_file_8h-source.html#l00503">affx::TsvFile::operator=()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00068">PgOptionsSAXHandler::PgOptionsSAXHandler()</a>, <a class="el" href="_err_8cpp-source.html#l00080">popHandler()</a>, <a class="el" href="_options_8cpp-source.html#l00117">Options::pushOpt()</a>, <a class="el" href="_row_file_8cpp-source.html#l00266">RowFile::readHeader()</a>, <a class="el" href="_dump_pgf_8cpp-source.html#l00208">dumpPgf::readIdFiles()</a>, <a class="el" href="_tsv_file_diff_8cpp-source.html#l00116">affx::TsvFileDiff::readOptionsFrom()</a>, <a class="el" href="_calvin_to_text_8cpp-source.html#l00042">CalvinToText::run()</a>, <a class="el" href="_pg_options_8h-source.html#l00369">PgOptions::set()</a>, <a class="el" href="_affx_multi_dimensional_array_8h-source.html#l00265">AffxMultiDimensionalArray&lt; TYPE &gt;::set()</a>, <a class="el" href="_affx_string_8h-source.html#l00116">AffxString::setAt()</a>, <a class="el" href="_options_8cpp-source.html#l00067">Options::setOpt()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00870">PgOptions::setOptionsFromXMLFile()</a>, <a class="el" href="_convert_8cpp-source.html#l00315">Convert::toBool()</a>, <a class="el" href="_convert_8cpp-source.html#l00266">Convert::toDouble()</a>, <a class="el" href="_convert_8cpp-source.html#l00238">Convert::toFloat()</a>, <a class="el" href="_convert_8cpp-source.html#l00101">Convert::toInt()</a>, <a class="el" href="_convert_8cpp-source.html#l00151">Convert::toUnsignedInt()</a>, <a class="el" href="_convert_8cpp-source.html#l00159">Convert::toUnsignedInt64()</a>, <a class="el" href="tsv-util_8cpp-source.html#l00427">tsv_util_paste()</a>, <a class="el" href="tsv-util_8cpp-source.html#l00247">tsv_util_paste_basic()</a>, <a class="el" href="_tsv_join_8cpp-source.html#l00067">tsvJoin::tsvJoin()</a>, <a class="el" href="_table_file_8cpp-source.html#l00220">TableFile::write()</a>, <a class="el" href="_tsv_join_8cpp-source.html#l00371">tsvJoin::writeMatches()</a>, and <a class="el" href="_dump_pgf_8cpp-source.html#l00407">dumpPgf::writeMatches()</a>.
+Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00507">PgOptions::addPgOpt_nocopy()</a>, <a class="el" href="_affx_time_8cpp-source.html#l00191">AffxTime::AffxTime()</a>, <a class="el" href="_guid_8cpp-source.html#l00064">affxutil::affy_seed_srand()</a>, <a class="el" href="_err_8cpp-source.html#l00162">apt_err_abort()</a>, <a class="el" href="_err_8cpp-source.html#l00148">apt_err_assert()</a>, <a class="el" href="_affx_string_8h-source.html#l00120">AffxString::charAt()</a>, <a class="el" href="_msg_socket_handler_8cpp-source.html#l00045">MsgSocketHandler::checkForKill()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00334">PgOpt::checkParseIsOk()</a>, <a class="el" href="_table_file_8cpp-source.html#l00249">TableFile::columnFromFile()</a>, <a class="el" href="_table_file_8cpp-source.html#l00321">TableFile::columnFromRowFile()</a>, <a class="el" href="_chp_check_8h-source.html#l00286">ChpCheck::dataSame()</a>, <a class="el" href="_tsv_file_diff_8cpp-source.html#l00319">affx::TsvFileDiff::diffData()</a>, <a class="el" href="_dump_pgf_8cpp-source.html#l00095">dumpPgf::dumpPgf()</a>, <a class="el" href="_err_8cpp-source.html#l00059">errAbort()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00076">PgOptionsSAXHandler::error()</a>, <a class="el" href="_calvin_to_text_8cpp-source.html#l00101">CalvinToText::error()</a>, <a class="el" href="_s_q_lite_8cpp-source.html#l00184">SQLiteDatabase::execute()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00077">PgOptionsSAXHandler::fatalError()</a>, <a class="el" href="_affx_time_8cpp-source.html#l00307">AffxTimeSpan::format()</a>, <a class="el" href="_tmp_file_factory_8cpp-source.html#l00238">TmpFileFactory::genDirname()</a>, <a class="el" href="_tmp_file_factory_8cpp-source.html#l00191">TmpFileFactory::genFilename_basic()</a>, <a class="el" href="_affx_string_8h-source.html#l00119">AffxString::getAt()</a>, <a class="el" href="_dump_pgf_8cpp-source.html#l00626">dumpPgf::getCoordsByIndex()</a>, <a class="el" href="_table_file_8h-source.html#l00220">TableFile::getHeaderValue()</a>, <a class="el" href="_base_engine_8cpp-source.html#l00170">BaseEngine::getMetaDataDescription()</a>, <a class="el" href="_options_8h-source.html#l00182">Options::getOpt()</a>, <a class="el" href="_options_8cpp-source.html#l00158">Options::getOptBool()</a>, <a class="el" href="_options_8cpp-source.html#l00182">Options::getOptDouble()</a>, <a class="el" href="_options_8cpp-source.html#l00172">Options::getOptInt()</a>, <a class="el" href="_options_8cpp-source.html#l00192">Options::getOptVector()</a>, <a class="el" href="_options_8cpp-source.html#l00148">Options::getPgOpt()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00282">PgOpt::getValue()</a>, <a class="el" href="_tmp_file_factory_8cpp-source.html#l00056">GlobalTmpFileFactory()</a>, <a class="el" href="_calvin_8cpp-source.html#l00074">Calvin::load()</a>, <a class="el" href="apt-engine-wrapper_8cpp-source.html#l00043">main()</a>, <a class="el" href="_base_engine_8cpp-source.html#l00463">BaseEngine::makeTempDir()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00678">PgOptions::matchOneArg()</a>, <a class="el" href="_util_8cpp-source.html#l00315">Util::matrixDifferences()</a>, <a class="el" href="_row_file_8cpp-source.html#l00321">RowFile::matrixFromFile()</a>, <a class="el" href="_msg_stream_8cpp-source.html#l00045">MsgStream::message()</a>, <a class="el" href="_pg_options_8h-source.html#l00333">PgOptions::mustFindOpt()</a>, <a class="el" href="_row_file_8cpp-source.html#l00180">RowFile::nextCStringRowExpect()</a>, <a class="el" href="_row_file_8cpp-source.html#l00094">RowFile::nextLine()</a>, <a class="el" href="_row_file_8cpp-source.html#l00254">RowFile::nextRowExpect()</a>, <a class="el" href="_table_file_8cpp-source.html#l00106">TableFile::open()</a>, <a class="el" href="_row_file_8cpp-source.html#l00059">RowFile::open()</a>, <a class="el" href="_line_file_8cpp-source.html#l00084">LineFile::open()</a>, <a class="el" href="_c_h_p_file_updater_8cpp-source.html#l00055">affxchpwriter::CCHPFileUpdater::OpenCHPFile()</a>, <a class="el" href="_calvin_c_h_p_file_updater_8cpp-source.html#l00085">affymetrix_calvin_io::CalvinCHPFileUpdater::OpenCHPFile()</a>, <a class="el" href="_tsv_join_8cpp-source.html#l00182">tsvJoin::openInputFiles()</a>, <a class="el" href="_dump_pgf_8cpp-source.html#l00261">dumpPgf::openInputFiles()</a>, <a class="el" href="_base_engine_8cpp-source.html#l00145">BaseEngine::openStandardLog()</a>, <a class="el" href="_affx_string_8h-source.html#l00192">AffxString::ComparePred&lt; k &gt;::operator()()</a>, <a class="el" href="_calvin_8h-source.html#l00154">CalvinParameter::ComparePred&lt; k &gt;::operator()()</a>, <a class="el" href="_tsv_file_8h-source.html#l00525">affx::TsvFile::operator=()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00066">PgOptionsSAXHandler::PgOptionsSAXHandler()</a>, <a class="el" href="_err_8cpp-source.html#l00093">popHandler()</a>, <a class="el" href="_options_8cpp-source.html#l00115">Options::pushOpt()</a>, <a class="el" href="_affx_array_8h-source.html#l00248">AffxArray&lt; AffxArray&lt; CalvinValue &gt; &gt;::quickSort()</a>, <a class="el" href="_row_file_8cpp-source.html#l00265">RowFile::readHeader()</a>, <a class="el" href="_dump_pgf_8cpp-source.html#l00206">dumpPgf::readIdFiles()</a>, <a class="el" href="_tsv_file_diff_8cpp-source.html#l00116">affx::TsvFileDiff::readOptionsFrom()</a>, <a class="el" href="_calvin_to_text_8cpp-source.html#l00106">CalvinToText::run()</a>, <a class="el" href="_pg_options_8h-source.html#l00379">PgOptions::set()</a>, <a class="el" href="_affx_string_8h-source.html#l00118">AffxString::setAt()</a>, <a class="el" href="_fs_path_8cpp-source.html#l00267">FsPath::setErr()</a>, <a class="el" href="_options_8cpp-source.html#l00065">Options::setOpt()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00855">PgOptions::setOptionsFromXMLFile()</a>, <a class="el" href="_socket_server_8cpp-source.html#l00037">SocketServer::SocketServer()</a>, <a class="el" href="_convert_8cpp-source.html#l00361">Convert::toBool()</a>, <a class="el" href="_convert_8cpp-source.html#l00284">Convert::toDouble()</a>, <a class="el" href="_convert_8cpp-source.html#l00255">Convert::toFloat()</a>, <a class="el" href="_convert_8cpp-source.html#l00118">Convert::toInt()</a>, <a class="el" href="_convert_8cpp-source.html#l00168">Convert::toUnsignedInt()</a>, <a class="el" href="_convert_8cpp-source.html#l00176">Convert::toUnsignedInt64()</a>, <a class="el" href="tsv-util_8cpp-source.html#l00366">tsv_util_paste()</a>, <a class="el" href="tsv-util_8cpp-source.html#l00186">tsv_util_paste_basic()</a>, <a class="el" href="_tsv_join_8cpp-source.html#l00068">tsvJoin::tsvJoin()</a>, <a class="el" href="_table_file_8cpp-source.html#l00222">TableFile::write()</a>, <a class="el" href="_tsv_join_8cpp-source.html#l00369">tsvJoin::writeMatches()</a>, and <a class="el" href="_dump_pgf_8cpp-source.html#l00405">dumpPgf::writeMatches()</a>.
+</div>
+</div><p>
+<a class="anchor" name="f263fce7b658322d1e3b07609adaf675"></a><!-- doxytag: member="Err::errAbort" ref="f263fce7b658322d1e3b07609adaf675" args="(const std::string &amp;msg)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Err::errAbort           </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>msg</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>
+Definition at line <a class="el" href="_err_8cpp-source.html#l00059">59</a> of file <a class="el" href="_err_8cpp-source.html">Err.cpp</a>.
+<p>
+References <a class="el" href="_err_8cpp-source.html#l00068">errAbort()</a>, and <a class="el" href="_err_8h-source.html#l00064">m_errorPrefix</a>.
 </div>
 </div><p>
 <a class="anchor" name="e57b8788e17115012f6b42e9f8d5aed9"></a><!-- doxytag: member="Err::pushHandler" ref="e57b8788e17115012f6b42e9f8d5aed9" args="(ErrHandler *handler)" -->
@@ -158,11 +219,11 @@ Add a new handler for errors. <dl compact><dt><b>Parameters:</b></dt><dd>
 </dl>
 
 <p>
-Definition at line <a class="el" href="_err_8cpp-source.html#l00072">72</a> of file <a class="el" href="_err_8cpp-source.html">Err.cpp</a>.
+Definition at line <a class="el" href="_err_8cpp-source.html#l00085">85</a> of file <a class="el" href="_err_8cpp-source.html">Err.cpp</a>.
 <p>
-References <a class="el" href="_err_8cpp-source.html#l00047">getParam()</a>, and <a class="el" href="_err_8h-source.html#l00083">Err::Param::m_ErrHandlers</a>.
+References <a class="el" href="_err_8cpp-source.html#l00054">getParam()</a>, and <a class="el" href="_err_8h-source.html#l00084">Err::Param::m_ErrHandlers</a>.
 <p>
-Referenced by <a class="el" href="_err_8cpp-source.html#l00106">configureErrHandler()</a>, and <a class="el" href="_err_8cpp-source.html#l00095">setThrowStatus()</a>.
+Referenced by <a class="el" href="_err_8cpp-source.html#l00133">configureErrHandler()</a>.
 </div>
 </div><p>
 <a class="anchor" name="7cd8651ed7e53ac86b43dad235d1cb91"></a><!-- doxytag: member="Err::popHandler" ref="7cd8651ed7e53ac86b43dad235d1cb91" args="()" -->
@@ -184,11 +245,11 @@ Referenced by <a class="el" href="_err_8cpp-source.html#l00106">configureErrHand
 Pop off the current handler and return it for cleanup, etc. <dl class="return" compact><dt><b>Returns:</b></dt><dd>- last handler pushed onto the stack. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_err_8cpp-source.html#l00080">80</a> of file <a class="el" href="_err_8cpp-source.html">Err.cpp</a>.
+Definition at line <a class="el" href="_err_8cpp-source.html#l00093">93</a> of file <a class="el" href="_err_8cpp-source.html">Err.cpp</a>.
 <p>
-References <a class="el" href="_err_8cpp-source.html#l00057">errAbort()</a>, <a class="el" href="_err_8cpp-source.html#l00047">getParam()</a>, and <a class="el" href="_err_8h-source.html#l00083">Err::Param::m_ErrHandlers</a>.
+References <a class="el" href="_err_8cpp-source.html#l00068">errAbort()</a>, <a class="el" href="_err_8cpp-source.html#l00054">getParam()</a>, and <a class="el" href="_err_8h-source.html#l00084">Err::Param::m_ErrHandlers</a>.
 <p>
-Referenced by <a class="el" href="_matrix_check_8h-source.html#l00082">MatrixCheck::check()</a>, <a class="el" href="_base_engine_8cpp-source.html#l00153">BaseEngine::checkDiskSpace()</a>, <a class="el" href="_base_engine_8cpp-source.html#l00111">BaseEngine::checkOptions()</a>, and <a class="el" href="_base_engine_8cpp-source.html#l00178">BaseEngine::run()</a>.
+Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00265">BaseEngine::checkDiskSpace()</a>, <a class="el" href="_base_engine_8cpp-source.html#l00201">BaseEngine::checkOptions()</a>, and <a class="el" href="_base_engine_8cpp-source.html#l00290">BaseEngine::run()</a>.
 </div>
 </div><p>
 <a class="anchor" name="d1a633f602fe60689cdc12d9ca1842e9"></a><!-- doxytag: member="Err::check" ref="d1a633f602fe60689cdc12d9ca1842e9" args="(bool passed, const char *msg)" -->
@@ -226,9 +287,9 @@ errAbort based version of assert with an error message. Try to use this method i
 </dl>
 
 <p>
-Definition at line <a class="el" href="_err_8h-source.html#l00122">122</a> of file <a class="el" href="_err_8h-source.html">Err.h</a>.
+Definition at line <a class="el" href="_err_8h-source.html#l00124">124</a> of file <a class="el" href="_err_8h-source.html">Err.h</a>.
 <p>
-Referenced by <a class="el" href="_clf_file_8h-source.html#l00270">affx::ClfFile::defineFileClf()</a>, <a class="el" href="_pgf_file_8h-source.html#l00401">affx::PgfFile::defineFilePgf()</a>, <a class="el" href="_clf_file_8h-source.html#l00209">affx::ClfFile::getOrder()</a>, <a class="el" href="_clf_file_8h-source.html#l00194">affx::ClfFile::getSequential()</a>, <a class="el" href="_clf_file_8h-source.html#l00174">affx::ClfFile::getXMax()</a>, <a class="el" href="_clf_file_8h-source.html#l00183">affx::ClfFile::getYMax()</a>, <a class="el" href="_pgf_file_8h-source.html#l00357">affx::PgfFile::open()</a>, <a class="el" href="_clf_file_8h-source.html#l00236">affx::ClfFile::open()</a>, and <a class="el" href="_util_8cpp-source.html#l00932">Util::schrageRandom()</a>.
+Referenced by <a class="el" href="_clf_file_8cpp-source.html#l00267">affx::ClfFile::defineFileClf()</a>, <a class="el" href="_pgf_file_8cpp-source.html#l00376">affx::PgfFile::defineFilePgf()</a>, <a class="el" href="_clf_file_8cpp-source.html#l00199">affx::ClfFile::getOrder()</a>, <a class="el" href="_clf_file_8cpp-source.html#l00184">affx::ClfFile::getSequential()</a>, <a class="el" href="_clf_file_8cpp-source.html#l00162">affx::ClfFile::getXMax()</a>, <a class="el" href="_clf_file_8cpp-source.html#l00172">affx::ClfFile::getYMax()</a>, <a class="el" href="_pgf_file_8cpp-source.html#l00325">affx::PgfFile::open()</a>, <a class="el" href="_clf_file_8cpp-source.html#l00228">affx::ClfFile::open()</a>, and <a class="el" href="_util_8cpp-source.html#l00438">Util::schrageRandom()</a>.
 </div>
 </div><p>
 <a class="anchor" name="7ef851371fe1326fb95dc9d136e6f23b"></a><!-- doxytag: member="Err::check" ref="7ef851371fe1326fb95dc9d136e6f23b" args="(bool passed, const std::string &amp;msg)" -->
@@ -266,7 +327,7 @@ errAbort based version of assert with an error message.<p>
 </dl>
 
 <p>
-Definition at line <a class="el" href="_err_8h-source.html#l00134">134</a> of file <a class="el" href="_err_8h-source.html">Err.h</a>.
+Definition at line <a class="el" href="_err_8h-source.html#l00136">136</a> of file <a class="el" href="_err_8h-source.html">Err.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="ceb62780521f07880083c5bed5c64d13"></a><!-- doxytag: member="Err::setThrowStatus" ref="ceb62780521f07880083c5bed5c64d13" args="(bool doThrow)" -->
@@ -286,22 +347,45 @@ Definition at line <a class="el" href="_err_8h-source.html#l00134">134</a> of fi
 <div class="memdoc">
 
 <p>
-Toggle whether we are throwing exceptions or exiting on errors.<p>
+Give the current error handler a hint about whether or not to throw exceptions. Note that this is just a hint and that if a specifical behavior is really required it is best to push a custom error handler onto the stack.<p>
 <dl compact><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>doThrow</em>&nbsp;</td><td>- if true exceptions will be thrown, if false exit(1) called. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>doThrow</em>&nbsp;</td><td>- if true requesting exceptions to be thrown, if false not to be thrown </td></tr>
   </table>
 </dl>
 
 <p>
-Definition at line <a class="el" href="_err_8cpp-source.html#l00095">95</a> of file <a class="el" href="_err_8cpp-source.html">Err.cpp</a>.
+Definition at line <a class="el" href="_err_8cpp-source.html#l00111">111</a> of file <a class="el" href="_err_8cpp-source.html">Err.cpp</a>.
 <p>
-References <a class="el" href="_err_8cpp-source.html#l00072">pushHandler()</a>.
+References <a class="el" href="_err_8cpp-source.html#l00054">getParam()</a>, and <a class="el" href="_err_8h-source.html#l00084">Err::Param::m_ErrHandlers</a>.
 <p>
-Referenced by <a class="el" href="_matrix_check_8h-source.html#l00082">MatrixCheck::check()</a>, <a class="el" href="_base_engine_8cpp-source.html#l00153">BaseEngine::checkDiskSpace()</a>, <a class="el" href="_base_engine_8cpp-source.html#l00111">BaseEngine::checkOptions()</a>, <a class="el" href="_dump_pgf_8cpp-source.html#l00095">dumpPgf::dumpPgf()</a>, <a class="el" href="_base_engine_8cpp-source.html#l00178">BaseEngine::run()</a>, and <a class="el" href="_tsv_join_8cpp-source.html#l00067">tsvJoin::tsvJoin()</a>.
+Referenced by <a class="el" href="_matrix_check_8h-source.html#l00102">MatrixCheck::check()</a>, <a class="el" href="_base_engine_8cpp-source.html#l00265">BaseEngine::checkDiskSpace()</a>, <a class="el" href="_base_engine_8cpp-source.html#l00201">BaseEngine::checkOptions()</a>, <a class="el" href="_dump_pgf_8cpp-source.html#l00095">dumpPgf::dumpPgf()</a>, <a class="el" href="_base_engine_8cpp-source.html#l00290">BaseEngine::run()</a>, <a class="el" href="_socket_client_8cpp-source.html#l00040">SocketClient::SocketClient()</a>, and <a class="el" href="_tsv_join_8cpp-source.html#l00068">tsvJoin::tsvJoin()</a>.
 </div>
 </div><p>
-<a class="anchor" name="17c8a1e1c205ceb78c4d097852b9cddd"></a><!-- doxytag: member="Err::configureErrHandler" ref="17c8a1e1c205ceb78c4d097852b9cddd" args="(bool doThrow, bool verbose)" -->
+<a class="anchor" name="765d8c5f872c7e09fc1d56d19d71037b"></a><!-- doxytag: member="Err::getThrowStatus" ref="765d8c5f872c7e09fc1d56d19d71037b" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Err::getThrowStatus           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Return true if curerntly configured to throw exceptions on error, false otherwise. 
+<p>
+Definition at line <a class="el" href="_err_8cpp-source.html#l00122">122</a> of file <a class="el" href="_err_8cpp-source.html">Err.cpp</a>.
+<p>
+References <a class="el" href="_err_8cpp-source.html#l00054">getParam()</a>, <a class="el" href="_err_handler_8h-source.html#l00051">ErrHandler::getThrows()</a>, and <a class="el" href="_err_8h-source.html#l00084">Err::Param::m_ErrHandlers</a>.
+</div>
+</div><p>
+<a class="anchor" name="d26ae01c27beb95eb954e118d77aab5a"></a><!-- doxytag: member="Err::configureErrHandler" ref="d26ae01c27beb95eb954e118d77aab5a" args="(bool doThrow, bool verbose, bool exitOnError=false, int exitOnErrorValue=-1)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -315,7 +399,19 @@ Referenced by <a class="el" href="_matrix_check_8h-source.html#l00082">MatrixChe
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&nbsp;</td>
-          <td class="paramname"> <em>verbose</em></td><td>&nbsp;</td>
+          <td class="paramname"> <em>verbose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>exitOnError</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>exitOnErrorValue</em> = <code>-1</code></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
@@ -336,9 +432,11 @@ Configure new error handler<p>
 </dl>
 
 <p>
-Definition at line <a class="el" href="_err_8cpp-source.html#l00106">106</a> of file <a class="el" href="_err_8cpp-source.html">Err.cpp</a>.
+Definition at line <a class="el" href="_err_8cpp-source.html#l00133">133</a> of file <a class="el" href="_err_8cpp-source.html">Err.cpp</a>.
 <p>
-References <a class="el" href="_err_8cpp-source.html#l00072">pushHandler()</a>.
+References <a class="el" href="_err_8cpp-source.html#l00085">pushHandler()</a>.
+<p>
+Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00112">BaseEngine::parseArgv()</a>, and <a class="el" href="_socket_client_8cpp-source.html#l00040">SocketClient::SocketClient()</a>.
 </div>
 </div><p>
 <a class="anchor" name="6168faed97bb31f95ff18e56ab1a991e"></a><!-- doxytag: member="Err::setNewLineOnError" ref="6168faed97bb31f95ff18e56ab1a991e" args="(bool newline)" -->
@@ -366,9 +464,11 @@ Toggle whether we are throwing exceptions or exiting on errors.<p>
 </dl>
 
 <p>
-Definition at line <a class="el" href="_err_8cpp-source.html#l00116">116</a> of file <a class="el" href="_err_8cpp-source.html">Err.cpp</a>.
+Definition at line <a class="el" href="_err_8cpp-source.html#l00144">144</a> of file <a class="el" href="_err_8cpp-source.html">Err.cpp</a>.
 <p>
-References <a class="el" href="_err_8cpp-source.html#l00047">getParam()</a>, and <a class="el" href="_err_8h-source.html#l00084">Err::Param::m_NewLineOnError</a>.
+References <a class="el" href="_err_8cpp-source.html#l00054">getParam()</a>, and <a class="el" href="_err_8h-source.html#l00085">Err::Param::m_NewLineOnError</a>.
+<p>
+Referenced by <a class="el" href="_socket_client_8cpp-source.html#l00040">SocketClient::SocketClient()</a>.
 </div>
 </div><p>
 <a class="anchor" name="958566fec07bebde069fd92a4f96ec68"></a><!-- doxytag: member="Err::apt_err_assert" ref="958566fec07bebde069fd92a4f96ec68" args="(const std::string &amp;file, int line, const std::string &amp;condstr, bool cond, const std::string &amp;msg)" -->
@@ -428,9 +528,9 @@ The function called by the APT_ERR_ASSERT macro.
 </dl>
 
 <p>
-Definition at line <a class="el" href="_err_8cpp-source.html#l00120">120</a> of file <a class="el" href="_err_8cpp-source.html">Err.cpp</a>.
+Definition at line <a class="el" href="_err_8cpp-source.html#l00148">148</a> of file <a class="el" href="_err_8cpp-source.html">Err.cpp</a>.
 <p>
-References <a class="el" href="_err_8cpp-source.html#l00057">errAbort()</a>, and <a class="el" href="_convert_8h-source.html#l00046">ToStr()</a>.
+References <a class="el" href="_err_8cpp-source.html#l00068">errAbort()</a>, and <a class="el" href="_convert_8h-source.html#l00227">ToStr()</a>.
 </div>
 </div><p>
 <a class="anchor" name="1707d33689099b3fe26de7c04698c145"></a><!-- doxytag: member="Err::apt_err_abort" ref="1707d33689099b3fe26de7c04698c145" args="(const std::string &amp;file, int line, const std::string &amp;msg)" -->
@@ -476,14 +576,87 @@ The function called by the APT_ERR_ABORT macro.
 </dl>
 
 <p>
-Definition at line <a class="el" href="_err_8cpp-source.html#l00134">134</a> of file <a class="el" href="_err_8cpp-source.html">Err.cpp</a>.
+Definition at line <a class="el" href="_err_8cpp-source.html#l00162">162</a> of file <a class="el" href="_err_8cpp-source.html">Err.cpp</a>.
 <p>
-References <a class="el" href="_err_8cpp-source.html#l00057">errAbort()</a>, and <a class="el" href="_convert_8h-source.html#l00046">ToStr()</a>.
+References <a class="el" href="_err_8cpp-source.html#l00068">errAbort()</a>, and <a class="el" href="_convert_8h-source.html#l00227">ToStr()</a>.
+</div>
+</div><p>
+<a class="anchor" name="cbeba843e35e7c185e46c0980d64ec97"></a><!-- doxytag: member="Err::setExitOnError" ref="cbeba843e35e7c185e46c0980d64ec97" args="(bool val)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Err::setExitOnError           </td>
+          <td>(</td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>val</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Toggle whether to set the value returned when exiting on errors This is primarily used to suppress Windows OS handling of return values indicating an exe did not terminate successfully<p>
+if val is true, the value in setExitOnErrorValue will be returned. 
+<p>
+Definition at line <a class="el" href="_err_8cpp-source.html#l00177">177</a> of file <a class="el" href="_err_8cpp-source.html">Err.cpp</a>.
+<p>
+References <a class="el" href="_err_8cpp-source.html#l00054">getParam()</a>, <a class="el" href="_err_8h-source.html#l00084">Err::Param::m_ErrHandlers</a>, and <a class="el" href="_verbose_8cpp-source.html#l00277">Verbose::warn()</a>.
+<p>
+Referenced by <a class="el" href="_socket_client_8cpp-source.html#l00040">SocketClient::SocketClient()</a>.
+</div>
+</div><p>
+<a class="anchor" name="c19da9104252ae099b3ec689e9c4369e"></a><!-- doxytag: member="Err::setExitOnErrorValue" ref="c19da9104252ae099b3ec689e9c4369e" args="(int val)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Err::setExitOnErrorValue           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>val</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Value to return when the flag setExitOnError is true and exiting on errors 
+<p>
+Definition at line <a class="el" href="_err_8cpp-source.html#l00194">194</a> of file <a class="el" href="_err_8cpp-source.html">Err.cpp</a>.
+<p>
+References <a class="el" href="_err_8cpp-source.html#l00054">getParam()</a>, <a class="el" href="_err_8h-source.html#l00084">Err::Param::m_ErrHandlers</a>, and <a class="el" href="_verbose_8cpp-source.html#l00277">Verbose::warn()</a>.
+<p>
+Referenced by <a class="el" href="_socket_client_8cpp-source.html#l00040">SocketClient::SocketClient()</a>.
+</div>
+</div><p>
+<hr><h2>Member Data Documentation</h2>
+<a class="anchor" name="07310d2845f0aeac9f632c55903c6d52"></a><!-- doxytag: member="Err::m_errorPrefix" ref="07310d2845f0aeac9f632c55903c6d52" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string <a class="el" href="class_err.html#07310d2845f0aeac9f632c55903c6d52">Err::m_errorPrefix</a> = &quot;FATAL ERROR:&quot;<code> [static]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>
+Definition at line <a class="el" href="_err_8h-source.html#l00064">64</a> of file <a class="el" href="_err_8h-source.html">Err.h</a>.
+<p>
+Referenced by <a class="el" href="_err_8cpp-source.html#l00059">errAbort()</a>, and <a class="el" href="_err_8cpp-source.html#l00045">setErrorPrefix()</a>.
 </div>
 </div><p>
 <hr>The documentation for this class was generated from the following files:<ul>
 <li>C:/FusionSDK/affy/sdk/util/<a class="el" href="_err_8h-source.html">Err.h</a><li>C:/FusionSDK/affy/sdk/util/<a class="el" href="_err_8cpp-source.html">Err.cpp</a></ul>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:32 2009 for Affymetrix Fusion SDK by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:43 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

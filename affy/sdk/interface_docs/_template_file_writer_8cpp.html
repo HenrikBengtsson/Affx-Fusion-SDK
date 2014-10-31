@@ -36,6 +36,7 @@
 <code>#include &lt;xercesc/util/XMLString.hpp&gt;</code><br>
 <code>#include &lt;cstring&gt;</code><br>
 <code>#include &lt;string.h&gt;</code><br>
+<code>#include &lt;stdio.h&gt;</code><br>
 <code>#include &lt;sys/stat.h&gt;</code><br>
 <code>#include &lt;sys/types.h&gt;</code><br>
 
@@ -71,9 +72,9 @@
 <p>
 The expected version number 
 <p>
-Definition at line <a class="el" href="_template_file_writer_8cpp-source.html#l00054">54</a> of file <a class="el" href="_template_file_writer_8cpp-source.html">TemplateFileWriter.cpp</a>.
+Definition at line <a class="el" href="_template_file_writer_8cpp-source.html#l00055">55</a> of file <a class="el" href="_template_file_writer_8cpp-source.html">TemplateFileWriter.cpp</a>.
 <p>
-Referenced by <a class="el" href="_template_file_writer_8cpp-source.html#l00144">CreateTemplateElement()</a>.
+Referenced by <a class="el" href="_template_file_writer_8cpp-source.html#l00145">CreateTemplateElement()</a>.
 </div>
 </div><p>
 <a class="anchor" name="bfb70396d1191b6c921567e157ed4ad2"></a><!-- doxytag: member="TemplateFileWriter.cpp::ToXMLCh" ref="bfb70396d1191b6c921567e157ed4ad2" args="(s)" -->
@@ -95,7 +96,7 @@ Referenced by <a class="el" href="_template_file_writer_8cpp-source.html#l00144"
 <p>
 A macro to help with converting a string to XML string 
 <p>
-Definition at line <a class="el" href="_template_file_writer_8cpp-source.html#l00138">138</a> of file <a class="el" href="_template_file_writer_8cpp-source.html">TemplateFileWriter.cpp</a>.
+Definition at line <a class="el" href="_template_file_writer_8cpp-source.html#l00139">139</a> of file <a class="el" href="_template_file_writer_8cpp-source.html">TemplateFileWriter.cpp</a>.
 </div>
 </div><p>
 <hr><h2>Function Documentation</h2>
@@ -133,9 +134,9 @@ Definition at line <a class="el" href="_template_file_writer_8cpp-source.html#l0
 <p>
 
 <p>
-Definition at line <a class="el" href="_template_file_writer_8cpp-source.html#l00159">159</a> of file <a class="el" href="_template_file_writer_8cpp-source.html">TemplateFileWriter.cpp</a>.
+Definition at line <a class="el" href="_template_file_writer_8cpp-source.html#l00160">160</a> of file <a class="el" href="_template_file_writer_8cpp-source.html">TemplateFileWriter.cpp</a>.
 <p>
-References <a class="el" href="_s_a_x_template_handlers_8h-source.html#l00089">TEMPLATE_USER_ATTRIBUTES_ATTRIBUTE_CONTROL_ELEMENT</a>, <a class="el" href="_s_a_x_template_handlers_8h-source.html#l00092">TEMPLATE_USER_ATTRIBUTES_ATTRIBUTE_CONTROL_ELEMENT_VALUE_ATTRIBUTE</a>, <a class="el" href="_s_a_x_template_handlers_8h-source.html#l00068">TEMPLATE_USER_ATTRIBUTES_ATTRIBUTE_ELEMENT</a>, <a class="el" href="_s_a_x_template_handlers_8h-source.html#l00080">TEMPLATE_USER_ATTRIBUTES_ATTRIBUTE_ELEMENT_DEFAULT_ATTRIBUTE</a>, <a class="el" href="_s_a_x_template_handlers_8h-source.html#l00074">TEMPLATE_USER_ATTRIBUTES_ATTRIBUTE_ELEMENT_NAME_ATTRIBUTE</a>, <a class="el" href="_s_a_x_template_handlers_8h-source.html#l00083">TEMPLATE_USER_ATTRIBUTES_ATTRIBUTE_ELEMENT_REQUIRED_ATTRIBUTE</a>, <a class="el" href="_s_a_x_template_handlers_8h-source.html#l00077">TEMPLATE_USER_ATTRIBUTES_ATTRIBUTE_ELEMENT_TYPE_ATTRIBUTE</a>, <a class="el" href="_s_a_x_template_handlers_8h-source.html#l00071">TEMPLATE_USER_ATTRIBUTES_ATTRIBUTE_VALUE_ELEMENT</a>, <a class="el" href="_s_a_x_template_handlers_8h-source.html#l00065">TEMPLATE_USER_ATTRIBUTES_ELEMENT</a>, <a class="el" href="_array_file_writer_8cpp-source.html#l00139">ToXMLCh</a>, and <a class="el" href="_template_data_8h-source.html#l00089">affymetrix_calvin_template::TemplateData::UserAttributes()</a>.
+References <a class="el" href="_s_a_x_template_handlers_8h-source.html#l00089">TEMPLATE_USER_ATTRIBUTES_ATTRIBUTE_CONTROL_ELEMENT</a>, <a class="el" href="_s_a_x_template_handlers_8h-source.html#l00092">TEMPLATE_USER_ATTRIBUTES_ATTRIBUTE_CONTROL_ELEMENT_VALUE_ATTRIBUTE</a>, <a class="el" href="_s_a_x_template_handlers_8h-source.html#l00068">TEMPLATE_USER_ATTRIBUTES_ATTRIBUTE_ELEMENT</a>, <a class="el" href="_s_a_x_template_handlers_8h-source.html#l00080">TEMPLATE_USER_ATTRIBUTES_ATTRIBUTE_ELEMENT_DEFAULT_ATTRIBUTE</a>, <a class="el" href="_s_a_x_template_handlers_8h-source.html#l00074">TEMPLATE_USER_ATTRIBUTES_ATTRIBUTE_ELEMENT_NAME_ATTRIBUTE</a>, <a class="el" href="_s_a_x_template_handlers_8h-source.html#l00083">TEMPLATE_USER_ATTRIBUTES_ATTRIBUTE_ELEMENT_REQUIRED_ATTRIBUTE</a>, <a class="el" href="_s_a_x_template_handlers_8h-source.html#l00077">TEMPLATE_USER_ATTRIBUTES_ATTRIBUTE_ELEMENT_TYPE_ATTRIBUTE</a>, <a class="el" href="_s_a_x_template_handlers_8h-source.html#l00071">TEMPLATE_USER_ATTRIBUTES_ATTRIBUTE_VALUE_ELEMENT</a>, <a class="el" href="_s_a_x_template_handlers_8h-source.html#l00065">TEMPLATE_USER_ATTRIBUTES_ELEMENT</a>, <a class="el" href="_array_file_writer_8cpp-source.html#l00140">ToXMLCh</a>, and <a class="el" href="_template_data_8h-source.html#l00089">affymetrix_calvin_template::TemplateData::UserAttributes()</a>.
 </div>
 </div><p>
 <a class="anchor" name="9773c65f8c02f136ea86d988a199ad40"></a><!-- doxytag: member="TemplateFileWriter.cpp::CreateTemplateElement" ref="9773c65f8c02f136ea86d988a199ad40" args="(TemplateData &amp;templateData, DOMDocument *doc, const AffymetrixGuidType &amp;dataTypeIdentifier)" -->
@@ -172,14 +173,14 @@ References <a class="el" href="_s_a_x_template_handlers_8h-source.html#l00089">T
 <p>
 
 <p>
-Definition at line <a class="el" href="_template_file_writer_8cpp-source.html#l00144">144</a> of file <a class="el" href="_template_file_writer_8cpp-source.html">TemplateFileWriter.cpp</a>.
+Definition at line <a class="el" href="_template_file_writer_8cpp-source.html#l00145">145</a> of file <a class="el" href="_template_file_writer_8cpp-source.html">TemplateFileWriter.cpp</a>.
 <p>
-References <a class="el" href="_template_data_8h-source.html#l00084">affymetrix_calvin_template::TemplateData::CreatedBy()</a>, <a class="el" href="_template_data_8h-source.html#l00079">affymetrix_calvin_template::TemplateData::CreationDateTime()</a>, <a class="el" href="_s_a_x_template_handlers_8h-source.html#l00047">TEMPLATE_FILE_ELEMENT</a>, <a class="el" href="_s_a_x_template_handlers_8h-source.html#l00059">TEMPLATE_FILE_ELEMENT_CREATE_DATE_TIME_ATTRIBUTE</a>, <a class="el" href="_s_a_x_template_handlers_8h-source.html#l00062">TEMPLATE_FILE_ELEMENT_CREATED_BY_ATTRIBUTE</a>, <a class="el" href="_s_a_x_template_handlers_8h-source.html#l00050">TEMPLATE_FILE_ELEMENT_ID_ATTRIBUTE</a>, <a class="el" href="_s_a_x_template_handlers_8h-source.html#l00053">TEMPLATE_FILE_ELEMENT_TYPE_ATTRIBUTE</a>, <a class="el" href="_s_a_x_template_handlers_8h-source.html#l00056">TEMPLATE_FILE_ELEMENT_VERSION_ATTRIBUTE</a>, <a class="el" href="_template_id_8h-source.html#l00027">TEMPLATE_FILE_TYPE_IDENTIFIER</a>, <a class="el" href="_template_file_writer_8cpp-source.html#l00054">TEMPLATE_SET_FILE_VERSION_NUMBER</a>, <a class="el" href="_template_data_8h-source.html#l00069">affymetrix_calvin_template::TemplateData::TemplateFileIdentifier()</a>, and <a class="el" href="_array_file_writer_8cpp-source.html#l00139">ToXMLCh</a>.
+References <a class="el" href="_template_data_8h-source.html#l00084">affymetrix_calvin_template::TemplateData::CreatedBy()</a>, <a class="el" href="_template_data_8h-source.html#l00079">affymetrix_calvin_template::TemplateData::CreationDateTime()</a>, <a class="el" href="_s_a_x_template_handlers_8h-source.html#l00047">TEMPLATE_FILE_ELEMENT</a>, <a class="el" href="_s_a_x_template_handlers_8h-source.html#l00059">TEMPLATE_FILE_ELEMENT_CREATE_DATE_TIME_ATTRIBUTE</a>, <a class="el" href="_s_a_x_template_handlers_8h-source.html#l00062">TEMPLATE_FILE_ELEMENT_CREATED_BY_ATTRIBUTE</a>, <a class="el" href="_s_a_x_template_handlers_8h-source.html#l00050">TEMPLATE_FILE_ELEMENT_ID_ATTRIBUTE</a>, <a class="el" href="_s_a_x_template_handlers_8h-source.html#l00053">TEMPLATE_FILE_ELEMENT_TYPE_ATTRIBUTE</a>, <a class="el" href="_s_a_x_template_handlers_8h-source.html#l00056">TEMPLATE_FILE_ELEMENT_VERSION_ATTRIBUTE</a>, <a class="el" href="_template_id_8h-source.html#l00027">TEMPLATE_FILE_TYPE_IDENTIFIER</a>, <a class="el" href="_template_file_writer_8cpp-source.html#l00055">TEMPLATE_SET_FILE_VERSION_NUMBER</a>, <a class="el" href="_template_data_8h-source.html#l00069">affymetrix_calvin_template::TemplateData::TemplateFileIdentifier()</a>, and <a class="el" href="_array_file_writer_8cpp-source.html#l00140">ToXMLCh</a>.
 <p>
-Referenced by <a class="el" href="_template_file_writer_8cpp-source.html#l00231">affymetrix_calvin_io::TemplateFileWriter::Write()</a>.
+Referenced by <a class="el" href="_template_file_writer_8cpp-source.html#l00232">affymetrix_calvin_io::TemplateFileWriter::Write()</a>.
 </div>
 </div><p>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:24 2009 for Affymetrix Fusion SDK by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:34 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

@@ -74,12 +74,14 @@ Checks for the existance of a file.<p>
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>True if the file exists. </dd></dl>
 
 <p>
-<dl compact><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>will not correctly handle long names passed in with leading "\\?\". Such files can exist, but will fail this check. </dd></dl>
+<dl compact><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>this is an ugly hack to prevent APT dependencies. The following is a copy from Util::fileReadable() </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_file_utils_8cpp-source.html#l00046">46</a> of file <a class="el" href="_file_utils_8cpp-source.html">FileUtils.cpp</a>.
+Definition at line <a class="el" href="_file_utils_8cpp-source.html#l00200">200</a> of file <a class="el" href="_file_utils_8cpp-source.html">FileUtils.cpp</a>.
 <p>
-Referenced by <a class="el" href="_file_utils_8cpp-source.html#l00068">LockFile()</a>, and <a class="el" href="_file_utils_8cpp-source.html#l00088">UnlockFile()</a>.
+References <a class="el" href="_fs_8cpp-source.html#l01420">Fs::aptOpen()</a>, <a class="el" href="_file_utils_8cpp-source.html#l00157">convertPathNameLocal()</a>, and <a class="el" href="_file_utils_8cpp-source.html#l00048">POSIX_CLOSE</a>.
+<p>
+Referenced by <a class="el" href="_file_utils_8cpp-source.html#l00230">LockFile()</a>, and <a class="el" href="_file_utils_8cpp-source.html#l00250">UnlockFile()</a>.
 </div>
 </div><p>
 <a class="anchor" name="3df32beeaccb9d6c8095ebaf902473bf"></a><!-- doxytag: member="affymetrix_calvin_utilities::FileUtils::LockFile" ref="3df32beeaccb9d6c8095ebaf902473bf" args="(const char *fileName)" -->
@@ -108,9 +110,9 @@ Locks a file for exclusive use. This is a soft locking mechanism. The actual fil
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>True if the file was successfully locked. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_file_utils_8cpp-source.html#l00068">68</a> of file <a class="el" href="_file_utils_8cpp-source.html">FileUtils.cpp</a>.
+Definition at line <a class="el" href="_file_utils_8cpp-source.html#l00230">230</a> of file <a class="el" href="_file_utils_8cpp-source.html">FileUtils.cpp</a>.
 <p>
-References <a class="el" href="_file_utils_8cpp-source.html#l00046">Exists()</a>, and <a class="el" href="_file_utils_8cpp-source.html#l00041">LockFileExtension</a>.
+References <a class="el" href="_fs_8cpp-source.html#l01420">Fs::aptOpen()</a>, <a class="el" href="_file_utils_8cpp-source.html#l00200">Exists()</a>, and <a class="el" href="_file_utils_8cpp-source.html#l00053">LockFileExtension</a>.
 </div>
 </div><p>
 <a class="anchor" name="99e756f2dd12189f272a8d79b2561c6b"></a><!-- doxytag: member="affymetrix_calvin_utilities::FileUtils::UnlockFile" ref="99e756f2dd12189f272a8d79b2561c6b" args="(const char *fileName)" -->
@@ -139,9 +141,9 @@ Unlocks a file for exclusive use. This is a soft locking mechanism. The actual f
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>True if the file was successfully unlocked. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_file_utils_8cpp-source.html#l00088">88</a> of file <a class="el" href="_file_utils_8cpp-source.html">FileUtils.cpp</a>.
+Definition at line <a class="el" href="_file_utils_8cpp-source.html#l00250">250</a> of file <a class="el" href="_file_utils_8cpp-source.html">FileUtils.cpp</a>.
 <p>
-References <a class="el" href="_file_utils_8cpp-source.html#l00046">Exists()</a>, and <a class="el" href="_file_utils_8cpp-source.html#l00041">LockFileExtension</a>.
+References <a class="el" href="_file_utils_8cpp-source.html#l00200">Exists()</a>, and <a class="el" href="_file_utils_8cpp-source.html#l00053">LockFileExtension</a>.
 </div>
 </div><p>
 <a class="anchor" name="1f8af549815ea259038b44ce15f2a018"></a><!-- doxytag: member="affymetrix_calvin_utilities::FileUtils::ListFiles" ref="1f8af549815ea259038b44ce15f2a018" args="(const char *pathName, const char *ext)" -->
@@ -180,7 +182,9 @@ Retrieves the list of files in a path that match the extension.<p>
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>The list of files (full path) found in the directory. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_file_utils_8cpp-source.html#l00096">96</a> of file <a class="el" href="_file_utils_8cpp-source.html">FileUtils.cpp</a>.
+Definition at line <a class="el" href="_file_utils_8cpp-source.html#l00258">258</a> of file <a class="el" href="_file_utils_8cpp-source.html">FileUtils.cpp</a>.
+<p>
+References <a class="el" href="_fs_8cpp-source.html#l00734">Fs::fileExists()</a>.
 </div>
 </div><p>
 <a class="anchor" name="b6e955e88c16282e5ebcc37867531c80"></a><!-- doxytag: member="affymetrix_calvin_utilities::FileUtils::RemoveFile" ref="b6e955e88c16282e5ebcc37867531c80" args="(const char *fileName)" -->
@@ -208,9 +212,9 @@ Deletes a file. <dl compact><dt><b>Parameters:</b></dt><dd>
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>True if the file was deleted. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_file_utils_8cpp-source.html#l00058">58</a> of file <a class="el" href="_file_utils_8cpp-source.html">FileUtils.cpp</a>.
+Definition at line <a class="el" href="_file_utils_8cpp-source.html#l00220">220</a> of file <a class="el" href="_file_utils_8cpp-source.html">FileUtils.cpp</a>.
 <p>
-Referenced by <a class="el" href="_file_utils_8cpp-source.html#l00171">RemovePath()</a>.
+Referenced by <a class="el" href="_file_utils_8cpp-source.html#l00331">RemovePath()</a>.
 </div>
 </div><p>
 <a class="anchor" name="c8fe8cdaa57445135875077877c48725"></a><!-- doxytag: member="affymetrix_calvin_utilities::FileUtils::RemovePath" ref="c8fe8cdaa57445135875077877c48725" args="(const char *path)" -->
@@ -238,14 +242,14 @@ Deletes a file. <dl compact><dt><b>Parameters:</b></dt><dd>
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>True if the path was deleted. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_file_utils_8cpp-source.html#l00171">171</a> of file <a class="el" href="_file_utils_8cpp-source.html">FileUtils.cpp</a>.
+Definition at line <a class="el" href="_file_utils_8cpp-source.html#l00331">331</a> of file <a class="el" href="_file_utils_8cpp-source.html">FileUtils.cpp</a>.
 <p>
-References <a class="el" href="_file_utils_8cpp-source.html#l00058">RemoveFile()</a>.
+References <a class="el" href="_fs_8cpp-source.html#l00734">Fs::fileExists()</a>, and <a class="el" href="_file_utils_8cpp-source.html#l00220">RemoveFile()</a>.
 </div>
 </div><p>
 <hr>The documentation for this class was generated from the following files:<ul>
 <li>C:/FusionSDK/affy/sdk/calvin_files/utils/src/<a class="el" href="_file_utils_8h-source.html">FileUtils.h</a><li>C:/FusionSDK/affy/sdk/calvin_files/utils/src/<a class="el" href="_file_utils_8cpp-source.html">FileUtils.cpp</a></ul>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:50 2009 for Affymetrix Fusion SDK by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 13:00:01 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

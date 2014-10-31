@@ -168,7 +168,7 @@
 <a name="l00162"></a>00162         int32_t posT = (int32_t) value.find(<a class="code" href="_date_time_8h.html#fb46665bd3d8827be6f2567427f1cd44">DATETIME_SEPERATOR_FORMAT_SPECIFIER</a>);
 <a name="l00163"></a>00163         <span class="keywordflow">if</span> (posT == std::wstring::npos)
 <a name="l00164"></a>00164         {
-<a name="l00165"></a>00165                 <a class="code" href="classaffymetrix__calvin__exceptions_1_1_format_exception.html">FormatException</a> e;
+<a name="l00165"></a>00165                 <a class="code" href="classaffymetrix__calvin__exceptions_1_1_format_exception.html">FormatException</a> e(L<span class="stringliteral">"Calvin"</span>,L<span class="stringliteral">"Default Description, Please Update!"</span>,<a class="code" href="classaffymetrix__calvin__utilities_1_1_date_time.html#1d634f56bd3a4f925bdcaac46f0fec15">affymetrix_calvin_utilities::DateTime::GetCurrentDateTime</a>().<a class="code" href="classaffymetrix__calvin__utilities_1_1_date_time.html#d16b3bdd6de3ed7205dfa409964e90c2">ToString</a>(),std::string(__FILE__),(u_int16_t)__LINE__,0);
 <a name="l00166"></a>00166                 <span class="keywordflow">throw</span> e;
 <a name="l00167"></a>00167         }
 <a name="l00168"></a>00168 
@@ -182,7 +182,7 @@
 <a name="l00176"></a>00176         {
 <a name="l00177"></a>00177                 <span class="keywordflow">if</span> (posZ &lt; posT)
 <a name="l00178"></a>00178                 {
-<a name="l00179"></a>00179                         <a class="code" href="classaffymetrix__calvin__exceptions_1_1_format_exception.html">FormatException</a> e;
+<a name="l00179"></a>00179                         <a class="code" href="classaffymetrix__calvin__exceptions_1_1_format_exception.html">FormatException</a> e(L<span class="stringliteral">"Calvin"</span>,L<span class="stringliteral">"Default Description, Please Update!"</span>,<a class="code" href="classaffymetrix__calvin__utilities_1_1_date_time.html#1d634f56bd3a4f925bdcaac46f0fec15">affymetrix_calvin_utilities::DateTime::GetCurrentDateTime</a>().<a class="code" href="classaffymetrix__calvin__utilities_1_1_date_time.html#d16b3bdd6de3ed7205dfa409964e90c2">ToString</a>(),std::string(__FILE__),(u_int16_t)__LINE__,0);
 <a name="l00180"></a>00180                         <span class="keywordflow">throw</span> e;
 <a name="l00181"></a>00181                 }
 <a name="l00182"></a>00182                 utc = <span class="keyword">true</span>;
@@ -247,7 +247,7 @@
 <a name="l00241"></a>00241                 }
 <a name="l00242"></a>00242                 <span class="keywordflow">else</span>
 <a name="l00243"></a>00243                 {
-<a name="l00244"></a>00244                         <a class="code" href="classaffymetrix__calvin__exceptions_1_1_format_exception.html">FormatException</a> e;
+<a name="l00244"></a>00244                         <a class="code" href="classaffymetrix__calvin__exceptions_1_1_format_exception.html">FormatException</a> e(L<span class="stringliteral">"Calvin"</span>,L<span class="stringliteral">"Default Description, Please Update!"</span>,<a class="code" href="classaffymetrix__calvin__utilities_1_1_date_time.html#1d634f56bd3a4f925bdcaac46f0fec15">affymetrix_calvin_utilities::DateTime::GetCurrentDateTime</a>().<a class="code" href="classaffymetrix__calvin__utilities_1_1_date_time.html#d16b3bdd6de3ed7205dfa409964e90c2">ToString</a>(),std::string(__FILE__),(u_int16_t)__LINE__,0);
 <a name="l00245"></a>00245                         <span class="keywordflow">throw</span> e;
 <a name="l00246"></a>00246                 }
 <a name="l00247"></a>00247         }
@@ -261,11 +261,11 @@
 <a name="l00255"></a>00255         int32_t h, M, s;
 <a name="l00256"></a>00256         <span class="keywordflow">if</span> (swscanf(time.c_str(), L<span class="stringliteral">"%d:%d:%d"</span>, &amp;h, &amp;M, &amp;s) != 3)
 <a name="l00257"></a>00257         {
-<a name="l00258"></a>00258                 <a class="code" href="classaffymetrix__calvin__exceptions_1_1_format_exception.html">FormatException</a> e;
+<a name="l00258"></a>00258                 <a class="code" href="classaffymetrix__calvin__exceptions_1_1_format_exception.html">FormatException</a> e(L<span class="stringliteral">"Calvin"</span>,L<span class="stringliteral">"Default Description, Please Update!"</span>,<a class="code" href="classaffymetrix__calvin__utilities_1_1_date_time.html#1d634f56bd3a4f925bdcaac46f0fec15">affymetrix_calvin_utilities::DateTime::GetCurrentDateTime</a>().<a class="code" href="classaffymetrix__calvin__utilities_1_1_date_time.html#d16b3bdd6de3ed7205dfa409964e90c2">ToString</a>(),std::string(__FILE__),(u_int16_t)__LINE__,0);
 <a name="l00259"></a>00259                 <span class="keywordflow">throw</span> e;
 <a name="l00260"></a>00260         }
 <a name="l00261"></a>00261 }
-</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:11 2009 for Affymetrix Fusion SDK by&nbsp;
+</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:20 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

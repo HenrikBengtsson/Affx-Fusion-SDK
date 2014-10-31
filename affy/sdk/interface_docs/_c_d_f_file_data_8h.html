@@ -58,6 +58,8 @@
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_d_f_file_data_8h.html#d7e24ef6dee5a2813d4d2cc40c2e28e4">MAX_PROBE_SET_NAME_LENGTH</a>&nbsp;&nbsp;&nbsp;64</td></tr>
 
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_d_f_file_data_8h.html#b00f71f4c64659678ca10c962b2e5633">INTEGRITY_MD5_LENGTH</a>&nbsp;&nbsp;&nbsp;32</td></tr>
+
 <tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_d_f_file_data_8h.html#aaff97c1ba345151a1c5315fd1281789">PROBE_SIZE</a>&nbsp;&nbsp;&nbsp;(4+4+2+2+1+1)</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_d_f_file_data_8h.html#4c1ef2fc3b18a0da84c440dc81194e28">PROBE_SIZE_V2</a>&nbsp;&nbsp;&nbsp;(4+4+2+2+1+1+2+2)</td></tr>
@@ -152,6 +154,25 @@ Definition in file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileD
 Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00021">21</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
 </div>
 </div><p>
+<a class="anchor" name="b00f71f4c64659678ca10c962b2e5633"></a><!-- doxytag: member="CDFFileData.h::INTEGRITY_MD5_LENGTH" ref="b00f71f4c64659678ca10c962b2e5633" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INTEGRITY_MD5_LENGTH&nbsp;&nbsp;&nbsp;32          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+The storage length for integrity md5 (hex) in the CDF file. 
+<p>
+Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00057">57</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
+<p>
+Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00707">affxcdf::CCDFFileData::ReadXDAHeader()</a>.
+</div>
+</div><p>
 <a class="anchor" name="d7e24ef6dee5a2813d4d2cc40c2e28e4"></a><!-- doxytag: member="CDFFileData.h::MAX_PROBE_SET_NAME_LENGTH" ref="d7e24ef6dee5a2813d4d2cc40c2e28e4" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -168,7 +189,7 @@ The maximum storage length for a probe set name in the CDF file.
 <p>
 Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00054">54</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
 <p>
-Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00419">affxcdf::CCDFFileData::GetProbeSetInformation()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00280">affxcdf::CCDFFileData::GetProbeSetName()</a>, and <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00668">affxcdf::CCDFFileData::ReadXDAFormat()</a>.
+Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00490">affxcdf::CCDFFileData::GetProbeSetInformation()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00281">affxcdf::CCDFFileData::GetProbeSetName()</a>, and <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00777">affxcdf::CCDFFileData::ReadXDAFormat()</a>.
 </div>
 </div><p>
 <a class="anchor" name="989c93cf746cc19641b2b05faddd8a79"></a><!-- doxytag: member="CDFFileData.h::PROBE_GROUP_SIZE" ref="989c93cf746cc19641b2b05faddd8a79" args="" -->
@@ -185,7 +206,7 @@ Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00419">affx
 <p>
 This is the size of the object in a binary CDF file version 1. 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00451">451</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00491">491</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="ef93313ce5656f6b9fc2857b13452c6c"></a><!-- doxytag: member="CDFFileData.h::PROBE_GROUP_SIZE_V2" ref="ef93313ce5656f6b9fc2857b13452c6c" args="" -->
@@ -202,7 +223,7 @@ Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00451">4
 <p>
 This is the size of the object in a binary CDF file version 2. 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00454">454</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00494">494</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="11816659dc3a4617351e1178bd1cc2ef"></a><!-- doxytag: member="CDFFileData.h::PROBE_GROUP_SIZE_V3" ref="11816659dc3a4617351e1178bd1cc2ef" args="" -->
@@ -217,9 +238,9 @@ Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00454">4
 <div class="memdoc">
 
 <p>
-This is the size of the object in a binary CDF file version 3. 
+This is the size of the object in a binary CDF file version 3 and 4. 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00457">457</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00497">497</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="a5099a33cfec08189ddba4cbfc87f9f3"></a><!-- doxytag: member="CDFFileData.h::PROBE_SET_SIZE" ref="a5099a33cfec08189ddba4cbfc87f9f3" args="" -->
@@ -236,7 +257,7 @@ Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00457">4
 <p>
 This is the size of the object in a binary CDF file. 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00562">562</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00602">602</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="aaff97c1ba345151a1c5315fd1281789"></a><!-- doxytag: member="CDFFileData.h::PROBE_SIZE" ref="aaff97c1ba345151a1c5315fd1281789" args="" -->
@@ -253,7 +274,7 @@ Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00562">5
 <p>
 The size of the probe object as stored in the XDA CDF file version 1. 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00297">297</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00337">337</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="4c1ef2fc3b18a0da84c440dc81194e28"></a><!-- doxytag: member="CDFFileData.h::PROBE_SIZE_V2" ref="4c1ef2fc3b18a0da84c440dc81194e28" args="" -->
@@ -268,9 +289,9 @@ Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00297">2
 <div class="memdoc">
 
 <p>
-The size of the probe object as stored in the XDA CDF file version 2. 
+The size of the probe object as stored in the XDA CDF file version 2, 3 and 4. 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00300">300</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00340">340</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="a0b30370fec6ab070e2892fae5a3d42a"></a><!-- doxytag: member="CDFFileData.h::QC_PROBE_SET_SIZE" ref="a0b30370fec6ab070e2892fae5a3d42a" args="" -->
@@ -287,7 +308,7 @@ Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00300">3
 <p>
 This is the size of the QC probe set object in a binary CDF file. 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00776">776</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00816">816</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="bca13add36da7de85c8f3111a9e5259d"></a><!-- doxytag: member="CDFFileData.h::QC_PROBE_SIZE" ref="bca13add36da7de85c8f3111a9e5259d" args="" -->
@@ -304,10 +325,10 @@ Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00776">7
 <p>
 This is the size of the object in a binary CDF file. 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00660">660</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00700">700</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
 </div>
 </div><p>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:25 2009 for Affymetrix Fusion SDK by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:35 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

@@ -127,7 +127,7 @@
 <a name="l00139"></a>00139         cel.<a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#ca791993ba594e5a424ece9cd0bfc54e">ReadHeader</a>();
 <a name="l00140"></a>00140             <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data.html">GenericData</a> *gdata = cel.<a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#5fa95da46ae88e9ab8a85e69a73f198d">GetGenericData</a>();
 <a name="l00141"></a>00141             <span class="keywordflow">if</span> (gdata != NULL)
-<a name="l00142"></a>00142                         data-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_c_h_p_multi_data_data.html#5841ccd4b15079393d2940b76f8978f0">GetFileHeader</a>()-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_file_header.html#d6e027854ea33adf2e4a555a4e59b656">GetGenericDataHdr</a>()-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#41928b79b637a88f915516fbf206c587">AddParent</a>(*gdata-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data.html#a4dde02ef7050992a36bcd7c2c231c29">Header</a>().<a class="code" href="classaffymetrix__calvin__io_1_1_file_header.html#d6e027854ea33adf2e4a555a4e59b656">GetGenericDataHdr</a>()); 
+<a name="l00142"></a>00142                         data-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_c_h_p_multi_data_data.html#9cd1af909c16df6a06f6009a9888f426">GetFileHeader</a>()-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_file_header.html#d6e027854ea33adf2e4a555a4e59b656">GetGenericDataHdr</a>()-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#41928b79b637a88f915516fbf206c587">AddParent</a>(*gdata-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data.html#a4dde02ef7050992a36bcd7c2c231c29">Header</a>().<a class="code" href="classaffymetrix__calvin__io_1_1_file_header.html#d6e027854ea33adf2e4a555a4e59b656">GetGenericDataHdr</a>()); 
 <a name="l00143"></a>00143             cel.<a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#e5e091bf0e0549f45f45ba55221fea31">Close</a>();
 <a name="l00144"></a>00144         }
 <a name="l00145"></a>00145 
@@ -139,21 +139,21 @@
 <a name="l00151"></a>00151         {
 <a name="l00152"></a>00152                 param.<a class="code" href="classaffymetrix__calvin__parameter_1_1_parameter_name_value_type.html#c2eb9ad835d3a8845385811f98ea9f2a">SetName</a>(L<span class="stringliteral">"program-name"</span>);
 <a name="l00153"></a>00153                 param.<a class="code" href="classaffymetrix__calvin__parameter_1_1_parameter_name_value_type.html#0b91a700f3a0cad9e04bd443d27f4dc3">SetValueText</a>(StringUtils::ConvertMBSToWCS(programName));
-<a name="l00154"></a>00154                 data-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_c_h_p_multi_data_data.html#40797cd261aef922f16a4b41023ebb18">GetGenericData</a>().<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data.html#a4dde02ef7050992a36bcd7c2c231c29">Header</a>().<a class="code" href="classaffymetrix__calvin__io_1_1_file_header.html#d6e027854ea33adf2e4a555a4e59b656">GetGenericDataHdr</a>()-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#aef03a3208142900da10c77e3d46936f">AddNameValParam</a>(param);
+<a name="l00154"></a>00154                 data-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_c_h_p_multi_data_data.html#23c5338c17c342b7731a08728f7d6315">GetGenericData</a>().<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data.html#a4dde02ef7050992a36bcd7c2c231c29">Header</a>().<a class="code" href="classaffymetrix__calvin__io_1_1_file_header.html#d6e027854ea33adf2e4a555a4e59b656">GetGenericDataHdr</a>()-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#aef03a3208142900da10c77e3d46936f">AddNameValParam</a>(param);
 <a name="l00155"></a>00155         }
 <a name="l00156"></a>00156 
 <a name="l00157"></a>00157         <span class="keywordflow">if</span> (programVersion.empty() == <span class="keyword">false</span>)
 <a name="l00158"></a>00158         {
 <a name="l00159"></a>00159                 param.<a class="code" href="classaffymetrix__calvin__parameter_1_1_parameter_name_value_type.html#c2eb9ad835d3a8845385811f98ea9f2a">SetName</a>(L<span class="stringliteral">"program-version"</span>);
 <a name="l00160"></a>00160                 param.<a class="code" href="classaffymetrix__calvin__parameter_1_1_parameter_name_value_type.html#0b91a700f3a0cad9e04bd443d27f4dc3">SetValueText</a>(StringUtils::ConvertMBSToWCS(programVersion));
-<a name="l00161"></a>00161                 data-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_c_h_p_multi_data_data.html#40797cd261aef922f16a4b41023ebb18">GetGenericData</a>().<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data.html#a4dde02ef7050992a36bcd7c2c231c29">Header</a>().<a class="code" href="classaffymetrix__calvin__io_1_1_file_header.html#d6e027854ea33adf2e4a555a4e59b656">GetGenericDataHdr</a>()-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#aef03a3208142900da10c77e3d46936f">AddNameValParam</a>(param);
+<a name="l00161"></a>00161                 data-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_c_h_p_multi_data_data.html#23c5338c17c342b7731a08728f7d6315">GetGenericData</a>().<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data.html#a4dde02ef7050992a36bcd7c2c231c29">Header</a>().<a class="code" href="classaffymetrix__calvin__io_1_1_file_header.html#d6e027854ea33adf2e4a555a4e59b656">GetGenericDataHdr</a>()-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#aef03a3208142900da10c77e3d46936f">AddNameValParam</a>(param);
 <a name="l00162"></a>00162         }
 <a name="l00163"></a>00163 
 <a name="l00164"></a>00164         <span class="keywordflow">if</span> (programCompany.empty() == <span class="keyword">false</span>)
 <a name="l00165"></a>00165         {
 <a name="l00166"></a>00166                 param.<a class="code" href="classaffymetrix__calvin__parameter_1_1_parameter_name_value_type.html#c2eb9ad835d3a8845385811f98ea9f2a">SetName</a>(L<span class="stringliteral">"program-company"</span>);
 <a name="l00167"></a>00167                 param.<a class="code" href="classaffymetrix__calvin__parameter_1_1_parameter_name_value_type.html#0b91a700f3a0cad9e04bd443d27f4dc3">SetValueText</a>(StringUtils::ConvertMBSToWCS(programCompany));
-<a name="l00168"></a>00168                 data-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_c_h_p_multi_data_data.html#40797cd261aef922f16a4b41023ebb18">GetGenericData</a>().<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data.html#a4dde02ef7050992a36bcd7c2c231c29">Header</a>().<a class="code" href="classaffymetrix__calvin__io_1_1_file_header.html#d6e027854ea33adf2e4a555a4e59b656">GetGenericDataHdr</a>()-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#aef03a3208142900da10c77e3d46936f">AddNameValParam</a>(param);
+<a name="l00168"></a>00168                 data-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_c_h_p_multi_data_data.html#23c5338c17c342b7731a08728f7d6315">GetGenericData</a>().<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data.html#a4dde02ef7050992a36bcd7c2c231c29">Header</a>().<a class="code" href="classaffymetrix__calvin__io_1_1_file_header.html#d6e027854ea33adf2e4a555a4e59b656">GetGenericDataHdr</a>()-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#aef03a3208142900da10c77e3d46936f">AddNameValParam</a>(param);
 <a name="l00169"></a>00169         }
 <a name="l00170"></a>00170 
 <a name="l00171"></a>00171         <span class="keywordtype">int</span> nparams = (int) extraNames.size();
@@ -161,7 +161,7 @@
 <a name="l00173"></a>00173         {
 <a name="l00174"></a>00174                 param.<a class="code" href="classaffymetrix__calvin__parameter_1_1_parameter_name_value_type.html#c2eb9ad835d3a8845385811f98ea9f2a">SetName</a>(StringUtils::ConvertMBSToWCS(extraNames[iparam]));
 <a name="l00175"></a>00175         param.<a class="code" href="classaffymetrix__calvin__parameter_1_1_parameter_name_value_type.html#5cb4644ca145eab52f8fa6f78123f818">SetValueAscii</a>(extraValues[iparam]);
-<a name="l00176"></a>00176         data-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_c_h_p_multi_data_data.html#40797cd261aef922f16a4b41023ebb18">GetGenericData</a>().<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data.html#a4dde02ef7050992a36bcd7c2c231c29">Header</a>().<a class="code" href="classaffymetrix__calvin__io_1_1_file_header.html#d6e027854ea33adf2e4a555a4e59b656">GetGenericDataHdr</a>()-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#aef03a3208142900da10c77e3d46936f">AddNameValParam</a>(param);
+<a name="l00176"></a>00176         data-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_c_h_p_multi_data_data.html#23c5338c17c342b7731a08728f7d6315">GetGenericData</a>().<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data.html#a4dde02ef7050992a36bcd7c2c231c29">Header</a>().<a class="code" href="classaffymetrix__calvin__io_1_1_file_header.html#d6e027854ea33adf2e4a555a4e59b656">GetGenericDataHdr</a>()-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#aef03a3208142900da10c77e3d46936f">AddNameValParam</a>(param);
 <a name="l00177"></a>00177         }
 <a name="l00178"></a>00178 
 <a name="l00179"></a>00179         nparams = (int) paramNames.size();
@@ -434,7 +434,7 @@
 <a name="l00467"></a>00467         }
 <a name="l00468"></a>00468         <span class="keywordflow">return</span> 0;
 <a name="l00469"></a>00469 }
-</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:04 2009 for Affymetrix Fusion SDK by&nbsp;
+</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:12 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

@@ -81,6 +81,12 @@ public:
 	STDMETHOD(get_NumQCProbeSets)(int* pVal);
 public:
 	STDMETHOD(get_Reference)(BSTR* pVal);
+public:
+	STDMETHOD(get_FormatVersion)(int* pVal);
+public:
+	STDMETHOD(get_GUID)(BSTR* pVal);
+public:
+	STDMETHOD(get_IntegrityMd5)(BSTR* pVal);
 };
 
 OBJECT_ENTRY_AUTO(__uuidof(FusionCDFFileHeader), CFusionCDFFileHeaderCOM)

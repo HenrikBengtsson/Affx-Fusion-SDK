@@ -79,6 +79,8 @@
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_options.html#5e8051ed752abcc6046240b484626211">parseArgv</a> (const char *const *const argv, int start=1)</td></tr>
 
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="class_pg_opt.html">PgOpt</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_options.html#543a3f84734bbe1ddcb5e9bbb6d57a4a">getPgOpt</a> (const std::string &amp;name, int oI=0)</td></tr>
+
 <tr><td class="memItemLeft" nowrap align="right" valign="top">std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_options.html#0efc7e2a4a55297f0f642d1d8bc08b82">getOpt</a> (const std::string &amp;name, int oI=0)</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_options.html#3c98038375042f9b230b3e4e2151fe00">getOptBool</a> (const std::string &amp;name, int oI=0)</td></tr>
@@ -113,7 +115,7 @@ base class for tracking class options
 <p>
 
 <p>
-Definition at line <a class="el" href="_options_8h-source.html#l00047">47</a> of file <a class="el" href="_options_8h-source.html">Options.h</a>.<hr><h2>Constructor &amp; Destructor Documentation</h2>
+Definition at line <a class="el" href="_options_8h-source.html#l00044">44</a> of file <a class="el" href="_options_8h-source.html">Options.h</a>.<hr><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" name="b72fb640172a6109e34c8a5366563753"></a><!-- doxytag: member="Options::Options" ref="b72fb640172a6109e34c8a5366563753" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -132,9 +134,9 @@ Definition at line <a class="el" href="_options_8h-source.html#l00047">47</a> of
 <p>
 Constructor 
 <p>
-Definition at line <a class="el" href="_options_8cpp-source.html#l00029">29</a> of file <a class="el" href="_options_8cpp-source.html">Options.cpp</a>.
+Definition at line <a class="el" href="_options_8cpp-source.html#l00027">27</a> of file <a class="el" href="_options_8cpp-source.html">Options.cpp</a>.
 <p>
-References <a class="el" href="_options_8h-source.html#l00235">m_Labels</a>, and <a class="el" href="_options_8h-source.html#l00230">m_Options</a>.
+References <a class="el" href="_options_8h-source.html#l00243">m_Labels</a>, and <a class="el" href="_options_8h-source.html#l00238">m_Options</a>.
 </div>
 </div><p>
 <a class="anchor" name="84085c51c7e88e8122e90dee76b59166"></a><!-- doxytag: member="Options::Options" ref="84085c51c7e88e8122e90dee76b59166" args="(char *argv[])" -->
@@ -180,7 +182,7 @@ Constructor <dl compact><dt><b>Parameters:</b></dt><dd>
 <p>
 Destructor 
 <p>
-Definition at line <a class="el" href="_options_8cpp-source.html#l00037">37</a> of file <a class="el" href="_options_8cpp-source.html">Options.cpp</a>.
+Definition at line <a class="el" href="_options_8cpp-source.html#l00035">35</a> of file <a class="el" href="_options_8cpp-source.html">Options.cpp</a>.
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
@@ -203,11 +205,11 @@ Definition at line <a class="el" href="_options_8cpp-source.html#l00037">37</a> 
 <p>
 Get the name of the options set 
 <p>
-Definition at line <a class="el" href="_options_8cpp-source.html#l00215">215</a> of file <a class="el" href="_options_8cpp-source.html">Options.cpp</a>.
+Definition at line <a class="el" href="_options_8cpp-source.html#l00208">208</a> of file <a class="el" href="_options_8cpp-source.html">Options.cpp</a>.
 <p>
-References <a class="el" href="_options_8h-source.html#l00230">m_Options</a>.
+References <a class="el" href="_options_8h-source.html#l00238">m_Options</a>.
 <p>
-Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00103">BaseEngine::getProgName()</a>.
+Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00136">BaseEngine::getProgName()</a>.
 </div>
 </div><p>
 <a class="anchor" name="f12713bcaedbcacdb67e97e0666d6843"></a><!-- doxytag: member="Options::getArgCount" ref="f12713bcaedbcacdb67e97e0666d6843" args="(int oI=0)" -->
@@ -229,7 +231,7 @@ Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00103">BaseEngi
 <p>
 
 <p>
-Definition at line <a class="el" href="_options_8h-source.html#l00072">72</a> of file <a class="el" href="_options_8h-source.html">Options.h</a>.
+Definition at line <a class="el" href="_options_8h-source.html#l00069">69</a> of file <a class="el" href="_options_8h-source.html">Options.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="65a8692e468e58a6d3ca664c83b2e699"></a><!-- doxytag: member="Options::getArg" ref="65a8692e468e58a6d3ca664c83b2e699" args="(int index, int oI=0)" -->
@@ -260,7 +262,7 @@ Definition at line <a class="el" href="_options_8h-source.html#l00072">72</a> of
 <p>
 
 <p>
-Definition at line <a class="el" href="_options_8h-source.html#l00075">75</a> of file <a class="el" href="_options_8h-source.html">Options.h</a>.
+Definition at line <a class="el" href="_options_8h-source.html#l00072">72</a> of file <a class="el" href="_options_8h-source.html">Options.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="57ac06007939a5e29fd2754db5fd580b"></a><!-- doxytag: member="Options::getOptionNames" ref="57ac06007939a5e29fd2754db5fd580b" args="(std::vector&lt; std::string &gt; &amp;names, int oI=0)" -->
@@ -291,9 +293,9 @@ Definition at line <a class="el" href="_options_8h-source.html#l00075">75</a> of
 <p>
 
 <p>
-Definition at line <a class="el" href="_options_8cpp-source.html#l00039">39</a> of file <a class="el" href="_options_8cpp-source.html">Options.cpp</a>.
+Definition at line <a class="el" href="_options_8cpp-source.html#l00037">37</a> of file <a class="el" href="_options_8cpp-source.html">Options.cpp</a>.
 <p>
-References <a class="el" href="_options_8h-source.html#l00230">m_Options</a>.
+References <a class="el" href="_options_8h-source.html#l00238">m_Options</a>.
 </div>
 </div><p>
 <a class="anchor" name="8ca6407ea838dcf119b75b6166b8432a"></a><!-- doxytag: member="Options::getOptionTypes" ref="8ca6407ea838dcf119b75b6166b8432a" args="(std::vector&lt; PgOpt::PgOptType &gt; &amp;types, int oI=0)" -->
@@ -324,9 +326,9 @@ References <a class="el" href="_options_8h-source.html#l00230">m_Options</a>.
 <p>
 
 <p>
-Definition at line <a class="el" href="_options_8cpp-source.html#l00045">45</a> of file <a class="el" href="_options_8cpp-source.html">Options.cpp</a>.
+Definition at line <a class="el" href="_options_8cpp-source.html#l00043">43</a> of file <a class="el" href="_options_8cpp-source.html">Options.cpp</a>.
 <p>
-References <a class="el" href="_options_8h-source.html#l00230">m_Options</a>.
+References <a class="el" href="_options_8h-source.html#l00238">m_Options</a>.
 </div>
 </div><p>
 <a class="anchor" name="9147512abd71cf4c14609b63b2dad1d0"></a><!-- doxytag: member="Options::commandLine" ref="9147512abd71cf4c14609b63b2dad1d0" args="(int oI=0)" -->
@@ -348,7 +350,7 @@ References <a class="el" href="_options_8h-source.html#l00230">m_Options</a>.
 <p>
 
 <p>
-Definition at line <a class="el" href="_options_8h-source.html#l00081">81</a> of file <a class="el" href="_options_8h-source.html">Options.h</a>.
+Definition at line <a class="el" href="_options_8h-source.html#l00078">78</a> of file <a class="el" href="_options_8h-source.html">Options.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="e8a8914c8ca03e759c1df8e5d792f8cd"></a><!-- doxytag: member="Options::setUsage" ref="e8a8914c8ca03e759c1df8e5d792f8cd" args="(const std::string &amp;usage)" -->
@@ -370,7 +372,7 @@ Definition at line <a class="el" href="_options_8h-source.html#l00081">81</a> of
 <p>
 
 <p>
-Definition at line <a class="el" href="_options_8h-source.html#l00085">85</a> of file <a class="el" href="_options_8h-source.html">Options.h</a>.
+Definition at line <a class="el" href="_options_8h-source.html#l00082">82</a> of file <a class="el" href="_options_8h-source.html">Options.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="601b17850308799889a9e4fcfbe16d18"></a><!-- doxytag: member="Options::defineOption" ref="601b17850308799889a9e4fcfbe16d18" args="(const std::string &amp;shortName, const std::string &amp;longName, PgOpt::PgOptType_t type, const std::string &amp;help, const std::string &amp;defaultVal)" -->
@@ -419,9 +421,9 @@ Definition at line <a class="el" href="_options_8h-source.html#l00085">85</a> of
 <p>
 
 <p>
-Definition at line <a class="el" href="_options_8h-source.html#l00089">89</a> of file <a class="el" href="_options_8h-source.html">Options.h</a>.
+Definition at line <a class="el" href="_options_8h-source.html#l00086">86</a> of file <a class="el" href="_options_8h-source.html">Options.h</a>.
 <p>
-Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00217">BaseEngine::defineOptions()</a>, and <a class="el" href="_base_engine_8cpp-source.html#l00278">BaseEngine::defineStates()</a>.
+Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00335">BaseEngine::defineOptions()</a>, and <a class="el" href="_base_engine_8cpp-source.html#l00442">BaseEngine::defineStates()</a>.
 </div>
 </div><p>
 <a class="anchor" name="4695290c824c193ac2f84213ac0e127a"></a><!-- doxytag: member="Options::defOptMult" ref="4695290c824c193ac2f84213ac0e127a" args="(const std::string &amp;shortName, const std::string &amp;longName, PgOpt::PgOptType_t type, const std::string &amp;help, const std::string &amp;defaultVal)" -->
@@ -470,9 +472,9 @@ Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00217">BaseEngi
 <p>
 
 <p>
-Definition at line <a class="el" href="_options_8h-source.html#l00097">97</a> of file <a class="el" href="_options_8h-source.html">Options.h</a>.
+Definition at line <a class="el" href="_options_8h-source.html#l00094">94</a> of file <a class="el" href="_options_8h-source.html">Options.h</a>.
 <p>
-Referenced by <a class="el" href="_options_8cpp-source.html#l00128">pushOpt()</a>.
+Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00335">BaseEngine::defineOptions()</a>, and <a class="el" href="_options_8cpp-source.html#l00126">pushOpt()</a>.
 </div>
 </div><p>
 <a class="anchor" name="8b0b17c7744ee0b5103434064781808d"></a><!-- doxytag: member="Options::defineOptionSection" ref="8b0b17c7744ee0b5103434064781808d" args="(const std::string &amp;sectionName)" -->
@@ -494,9 +496,9 @@ Referenced by <a class="el" href="_options_8cpp-source.html#l00128">pushOpt()</a
 <p>
 
 <p>
-Definition at line <a class="el" href="_options_8h-source.html#l00105">105</a> of file <a class="el" href="_options_8h-source.html">Options.h</a>.
+Definition at line <a class="el" href="_options_8h-source.html#l00102">102</a> of file <a class="el" href="_options_8h-source.html">Options.h</a>.
 <p>
-Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00217">BaseEngine::defineOptions()</a>.
+Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00335">BaseEngine::defineOptions()</a>.
 </div>
 </div><p>
 <a class="anchor" name="fe7b8ecd4df74df4cd2f11766415da97"></a><!-- doxytag: member="Options::optionsClear" ref="fe7b8ecd4df74df4cd2f11766415da97" args="()" -->
@@ -517,7 +519,7 @@ Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00217">BaseEngi
 <p>
 
 <p>
-Definition at line <a class="el" href="_options_8h-source.html#l00109">109</a> of file <a class="el" href="_options_8h-source.html">Options.h</a>.
+Definition at line <a class="el" href="_options_8h-source.html#l00106">106</a> of file <a class="el" href="_options_8h-source.html">Options.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="9c058f7b6c500c2cf55986e03f91a2af"></a><!-- doxytag: member="Options::optionUsage" ref="9c058f7b6c500c2cf55986e03f91a2af" args="(std::set&lt; std::string &gt; &amp;hiddenOpts, bool printOpts=true, int oI=0)" -->
@@ -554,9 +556,9 @@ Definition at line <a class="el" href="_options_8h-source.html#l00109">109</a> o
 <p>
 
 <p>
-Definition at line <a class="el" href="_options_8h-source.html#l00115">115</a> of file <a class="el" href="_options_8h-source.html">Options.h</a>.
+Definition at line <a class="el" href="_options_8h-source.html#l00112">112</a> of file <a class="el" href="_options_8h-source.html">Options.h</a>.
 <p>
-Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00111">BaseEngine::checkOptions()</a>.
+Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00201">BaseEngine::checkOptions()</a>.
 </div>
 </div><p>
 <a class="anchor" name="400b67224caf01af079f1709e0e868f4"></a><!-- doxytag: member="Options::isOptDefined" ref="400b67224caf01af079f1709e0e868f4" args="(const std::string &amp;name, int oI=0)" -->
@@ -593,11 +595,11 @@ Check to see if an option is defined.<p>
 </dl>
 
 <p>
-Definition at line <a class="el" href="_options_8cpp-source.html#l00056">56</a> of file <a class="el" href="_options_8cpp-source.html">Options.cpp</a>.
+Definition at line <a class="el" href="_options_8cpp-source.html#l00054">54</a> of file <a class="el" href="_options_8cpp-source.html">Options.cpp</a>.
 <p>
-References <a class="el" href="_options_8h-source.html#l00230">m_Options</a>.
+References <a class="el" href="_options_8h-source.html#l00238">m_Options</a>.
 <p>
-Referenced by <a class="el" href="_options_8cpp-source.html#l00155">getOpt()</a>, <a class="el" href="_options_8cpp-source.html#l00165">getOptBool()</a>, <a class="el" href="_options_8cpp-source.html#l00189">getOptDouble()</a>, <a class="el" href="_options_8cpp-source.html#l00179">getOptInt()</a>, <a class="el" href="_options_8cpp-source.html#l00199">getOptVector()</a>, <a class="el" href="_options_8cpp-source.html#l00117">pushOpt()</a>, and <a class="el" href="_options_8cpp-source.html#l00067">setOpt()</a>.
+Referenced by <a class="el" href="_options_8cpp-source.html#l00158">getOptBool()</a>, <a class="el" href="_options_8cpp-source.html#l00182">getOptDouble()</a>, <a class="el" href="_options_8cpp-source.html#l00172">getOptInt()</a>, <a class="el" href="_options_8cpp-source.html#l00192">getOptVector()</a>, <a class="el" href="_options_8cpp-source.html#l00148">getPgOpt()</a>, <a class="el" href="_options_8cpp-source.html#l00115">pushOpt()</a>, and <a class="el" href="_options_8cpp-source.html#l00065">setOpt()</a>.
 </div>
 </div><p>
 <a class="anchor" name="af215b45e7097fcedae68c15073eb0f8"></a><!-- doxytag: member="Options::setOpt" ref="af215b45e7097fcedae68c15073eb0f8" args="(const std::string &amp;name, const std::string &amp;value)" -->
@@ -635,11 +637,11 @@ Set option value<p>
 </dl>
 
 <p>
-Definition at line <a class="el" href="_options_8cpp-source.html#l00067">67</a> of file <a class="el" href="_options_8cpp-source.html">Options.cpp</a>.
+Definition at line <a class="el" href="_options_8cpp-source.html#l00065">65</a> of file <a class="el" href="_options_8cpp-source.html">Options.cpp</a>.
 <p>
-References <a class="el" href="_err_8cpp-source.html#l00057">Err::errAbort()</a>, <a class="el" href="_options_8cpp-source.html#l00056">isOptDefined()</a>, and <a class="el" href="_options_8h-source.html#l00230">m_Options</a>.
+References <a class="el" href="_err_8cpp-source.html#l00068">Err::errAbort()</a>, <a class="el" href="_options_8cpp-source.html#l00054">isOptDefined()</a>, and <a class="el" href="_options_8h-source.html#l00238">m_Options</a>.
 <p>
-Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00084">BaseEngine::BaseEngine()</a>, <a class="el" href="_base_engine_8cpp-source.html#l00178">BaseEngine::run()</a>, <a class="el" href="_base_engine_8cpp-source.html#l00107">BaseEngine::setLibFileOpt()</a>, and <a class="el" href="_options_8cpp-source.html#l00079">setOpt()</a>.
+Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00086">BaseEngine::BaseEngine()</a>, <a class="el" href="_base_engine_8cpp-source.html#l00290">BaseEngine::run()</a>, <a class="el" href="_base_engine_8cpp-source.html#l00140">BaseEngine::setLibFileOpt()</a>, and <a class="el" href="_options_8cpp-source.html#l00077">setOpt()</a>.
 </div>
 </div><p>
 <a class="anchor" name="1a22f5e025b9a5a282ac5dda866ebbc3"></a><!-- doxytag: member="Options::setOpt" ref="1a22f5e025b9a5a282ac5dda866ebbc3" args="(const std::string &amp;name, std::vector&lt; std::string &gt; &amp;values)" -->
@@ -677,9 +679,9 @@ Set option to vector of values<p>
 </dl>
 
 <p>
-Definition at line <a class="el" href="_options_8cpp-source.html#l00079">79</a> of file <a class="el" href="_options_8cpp-source.html">Options.cpp</a>.
+Definition at line <a class="el" href="_options_8cpp-source.html#l00077">77</a> of file <a class="el" href="_options_8cpp-source.html">Options.cpp</a>.
 <p>
-References <a class="el" href="_err_8cpp-source.html#l00057">Err::errAbort()</a>, <a class="el" href="_options_8cpp-source.html#l00056">isOptDefined()</a>, <a class="el" href="_options_8h-source.html#l00230">m_Options</a>, and <a class="el" href="_options_8cpp-source.html#l00067">setOpt()</a>.
+References <a class="el" href="_err_8cpp-source.html#l00068">Err::errAbort()</a>, <a class="el" href="_options_8cpp-source.html#l00054">isOptDefined()</a>, <a class="el" href="_options_8h-source.html#l00238">m_Options</a>, and <a class="el" href="_options_8cpp-source.html#l00065">setOpt()</a>.
 </div>
 </div><p>
 <a class="anchor" name="09220283cb8eb3cafb49529f8b3fcc2b"></a><!-- doxytag: member="Options::setOpt" ref="09220283cb8eb3cafb49529f8b3fcc2b" args="(const std::string &amp;name, std::vector&lt; std::vector&lt; std::string &gt; &gt; &amp;values)" -->
@@ -717,12 +719,12 @@ Set option to vector of vector of values<p>
 </dl>
 
 <p>
-<dl compact><dt><b><a class="el" href="todo.html#_todo000026">Todo:</a></b></dt><dd>should roll into <a class="el" href="class_pg_options.html">PgOptions</a> support for this rather than using a stand alone hack </dd></dl>
+<dl compact><dt><b><a class="el" href="todo.html#_todo000035">Todo:</a></b></dt><dd>should roll into <a class="el" href="class_pg_options.html">PgOptions</a> support for this rather than using a stand alone hack </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_options_8cpp-source.html#l00102">102</a> of file <a class="el" href="_options_8cpp-source.html">Options.cpp</a>.
+Definition at line <a class="el" href="_options_8cpp-source.html#l00100">100</a> of file <a class="el" href="_options_8cpp-source.html">Options.cpp</a>.
 <p>
-References <a class="el" href="_err_8cpp-source.html#l00057">Err::errAbort()</a>, <a class="el" href="_options_8cpp-source.html#l00056">isOptDefined()</a>, <a class="el" href="_options_8h-source.html#l00230">m_Options</a>, <a class="el" href="_options_8cpp-source.html#l00117">pushOpt()</a>, and <a class="el" href="_convert_8h-source.html#l00046">ToStr()</a>.
+References <a class="el" href="_err_8cpp-source.html#l00068">Err::errAbort()</a>, <a class="el" href="_options_8cpp-source.html#l00054">isOptDefined()</a>, <a class="el" href="_options_8h-source.html#l00238">m_Options</a>, <a class="el" href="_options_8cpp-source.html#l00115">pushOpt()</a>, and <a class="el" href="_convert_8h-source.html#l00227">ToStr()</a>.
 </div>
 </div><p>
 <a class="anchor" name="e588e20caeee2962dd19e495afc11d99"></a><!-- doxytag: member="Options::pushOpt" ref="e588e20caeee2962dd19e495afc11d99" args="(const std::string &amp;name, const std::string &amp;value)" -->
@@ -760,11 +762,11 @@ Add a value to a vector of values for option<p>
 </dl>
 
 <p>
-Definition at line <a class="el" href="_options_8cpp-source.html#l00117">117</a> of file <a class="el" href="_options_8cpp-source.html">Options.cpp</a>.
+Definition at line <a class="el" href="_options_8cpp-source.html#l00115">115</a> of file <a class="el" href="_options_8cpp-source.html">Options.cpp</a>.
 <p>
-References <a class="el" href="_err_8cpp-source.html#l00057">Err::errAbort()</a>, <a class="el" href="_options_8cpp-source.html#l00056">isOptDefined()</a>, and <a class="el" href="_options_8h-source.html#l00230">m_Options</a>.
+References <a class="el" href="_err_8cpp-source.html#l00068">Err::errAbort()</a>, <a class="el" href="_options_8cpp-source.html#l00054">isOptDefined()</a>, and <a class="el" href="_options_8h-source.html#l00238">m_Options</a>.
 <p>
-Referenced by <a class="el" href="_options_8cpp-source.html#l00102">setOpt()</a>.
+Referenced by <a class="el" href="_options_8cpp-source.html#l00100">setOpt()</a>.
 </div>
 </div><p>
 <a class="anchor" name="1fda7f92c76003dcd9c8c72b96723cf7"></a><!-- doxytag: member="Options::pushOpt" ref="1fda7f92c76003dcd9c8c72b96723cf7" args="(const std::string &amp;name, std::vector&lt; std::string &gt; values)" -->
@@ -802,12 +804,12 @@ Add a vector of values to the values for an option<p>
 </dl>
 
 <p>
-<dl compact><dt><b><a class="el" href="todo.html#_todo000027">Todo:</a></b></dt><dd>should roll into <a class="el" href="class_pg_options.html">PgOptions</a> support for this rather than using a stand alone hack </dd></dl>
+<dl compact><dt><b><a class="el" href="todo.html#_todo000036">Todo:</a></b></dt><dd>should roll into <a class="el" href="class_pg_options.html">PgOptions</a> support for this rather than using a stand alone hack </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_options_8cpp-source.html#l00128">128</a> of file <a class="el" href="_options_8cpp-source.html">Options.cpp</a>.
+Definition at line <a class="el" href="_options_8cpp-source.html#l00126">126</a> of file <a class="el" href="_options_8cpp-source.html">Options.cpp</a>.
 <p>
-References <a class="el" href="_options_8h-source.html#l00097">defOptMult()</a>, <a class="el" href="_err_8cpp-source.html#l00057">Err::errAbort()</a>, <a class="el" href="_options_8cpp-source.html#l00056">isOptDefined()</a>, <a class="el" href="_options_8h-source.html#l00230">m_Options</a>, <a class="el" href="_pg_options_8h-source.html#l00120">PgOpt::STRING_OPT</a>, and <a class="el" href="_convert_8h-source.html#l00046">ToStr()</a>.
+References <a class="el" href="_options_8h-source.html#l00094">defOptMult()</a>, <a class="el" href="_err_8cpp-source.html#l00068">Err::errAbort()</a>, <a class="el" href="_options_8cpp-source.html#l00054">isOptDefined()</a>, <a class="el" href="_options_8h-source.html#l00238">m_Options</a>, <a class="el" href="_pg_options_8h-source.html#l00116">PgOpt::STRING_OPT</a>, and <a class="el" href="_convert_8h-source.html#l00227">ToStr()</a>.
 </div>
 </div><p>
 <a class="anchor" name="5e8051ed752abcc6046240b484626211"></a><!-- doxytag: member="Options::parseArgv" ref="5e8051ed752abcc6046240b484626211" args="(const char *const *const argv, int start=1)" -->
@@ -844,11 +846,54 @@ Parse and set options from argv<p>
 </dl>
 
 <p>
-Definition at line <a class="el" href="_options_8cpp-source.html#l00146">146</a> of file <a class="el" href="_options_8cpp-source.html">Options.cpp</a>.
+Reimplemented in <a class="el" href="class_base_engine.html#4739443b1026258d3ee45fc065c6cdbe">BaseEngine</a>.
 <p>
-References <a class="el" href="_options_8h-source.html#l00230">m_Options</a>.
+Definition at line <a class="el" href="_options_8cpp-source.html#l00144">144</a> of file <a class="el" href="_options_8cpp-source.html">Options.cpp</a>.
 <p>
-Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00095">BaseEngine::BaseEngine()</a>.
+References <a class="el" href="_options_8h-source.html#l00238">m_Options</a>.
+<p>
+Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00112">BaseEngine::parseArgv()</a>.
+</div>
+</div><p>
+<a class="anchor" name="543a3f84734bbe1ddcb5e9bbb6d57a4a"></a><!-- doxytag: member="Options::getPgOpt" ref="543a3f84734bbe1ddcb5e9bbb6d57a4a" args="(const std::string &amp;name, int oI=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_pg_opt.html">PgOpt</a> * Options::getPgOpt           </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>oI</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Get the underlying <a class="el" href="class_pg_opt.html" title="The definition of this option and the values.">PgOpt</a> containing information<p>
+<dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>name</em>&nbsp;</td><td>- the name of the option </td></tr>
+  </table>
+</dl>
+
+<p>
+Definition at line <a class="el" href="_options_8cpp-source.html#l00148">148</a> of file <a class="el" href="_options_8cpp-source.html">Options.cpp</a>.
+<p>
+References <a class="el" href="_err_8cpp-source.html#l00068">Err::errAbort()</a>, <a class="el" href="_options_8cpp-source.html#l00054">isOptDefined()</a>, and <a class="el" href="_options_8h-source.html#l00238">m_Options</a>.
+<p>
+Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00170">BaseEngine::getMetaDataDescription()</a>.
 </div>
 </div><p>
 <a class="anchor" name="0efc7e2a4a55297f0f642d1d8bc08b82"></a><!-- doxytag: member="Options::getOpt" ref="0efc7e2a4a55297f0f642d1d8bc08b82" args="(const std::string &amp;name, int oI=0)" -->
@@ -870,7 +915,7 @@ Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00095">BaseEngi
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td><td width="100%"></td>
+          <td></td><td></td><td width="100%"><code> [inline]</code></td>
         </tr>
       </table>
 </div>
@@ -885,11 +930,11 @@ Get the value of an option<p>
 </dl>
 
 <p>
-Definition at line <a class="el" href="_options_8cpp-source.html#l00155">155</a> of file <a class="el" href="_options_8cpp-source.html">Options.cpp</a>.
+Definition at line <a class="el" href="_options_8h-source.html#l00182">182</a> of file <a class="el" href="_options_8h-source.html">Options.h</a>.
 <p>
-References <a class="el" href="_err_8cpp-source.html#l00057">Err::errAbort()</a>, <a class="el" href="_options_8cpp-source.html#l00056">isOptDefined()</a>, and <a class="el" href="_options_8h-source.html#l00230">m_Options</a>.
+References <a class="el" href="_err_8cpp-source.html#l00068">Err::errAbort()</a>.
 <p>
-Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00111">BaseEngine::checkOptions()</a>, <a class="el" href="_options_8cpp-source.html#l00165">getOptBool()</a>, and <a class="el" href="_base_engine_8cpp-source.html#l00107">BaseEngine::setLibFileOpt()</a>.
+Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00201">BaseEngine::checkOptions()</a>, <a class="el" href="_options_8cpp-source.html#l00158">getOptBool()</a>, <a class="el" href="_base_engine_8cpp-source.html#l00145">BaseEngine::openStandardLog()</a>, <a class="el" href="_base_engine_8cpp-source.html#l00112">BaseEngine::parseArgv()</a>, and <a class="el" href="_base_engine_8cpp-source.html#l00140">BaseEngine::setLibFileOpt()</a>.
 </div>
 </div><p>
 <a class="anchor" name="3c98038375042f9b230b3e4e2151fe00"></a><!-- doxytag: member="Options::getOptBool" ref="3c98038375042f9b230b3e4e2151fe00" args="(const std::string &amp;name, int oI=0)" -->
@@ -926,11 +971,11 @@ Get the boolean value of an option<p>
 </dl>
 
 <p>
-Definition at line <a class="el" href="_options_8cpp-source.html#l00165">165</a> of file <a class="el" href="_options_8cpp-source.html">Options.cpp</a>.
+Definition at line <a class="el" href="_options_8cpp-source.html#l00158">158</a> of file <a class="el" href="_options_8cpp-source.html">Options.cpp</a>.
 <p>
-References <a class="el" href="_err_8cpp-source.html#l00057">Err::errAbort()</a>, <a class="el" href="_options_8cpp-source.html#l00155">getOpt()</a>, <a class="el" href="_options_8cpp-source.html#l00056">isOptDefined()</a>, and <a class="el" href="_options_8h-source.html#l00230">m_Options</a>.
+References <a class="el" href="_err_8cpp-source.html#l00068">Err::errAbort()</a>, <a class="el" href="_options_8h-source.html#l00182">getOpt()</a>, <a class="el" href="_options_8cpp-source.html#l00054">isOptDefined()</a>, and <a class="el" href="_options_8h-source.html#l00238">m_Options</a>.
 <p>
-Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00153">BaseEngine::checkDiskSpace()</a>, <a class="el" href="_base_engine_8cpp-source.html#l00111">BaseEngine::checkOptions()</a>, and <a class="el" href="_base_engine_8cpp-source.html#l00178">BaseEngine::run()</a>.
+Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00265">BaseEngine::checkDiskSpace()</a>, <a class="el" href="_base_engine_8cpp-source.html#l00201">BaseEngine::checkOptions()</a>, <a class="el" href="_base_engine_8cpp-source.html#l00112">BaseEngine::parseArgv()</a>, and <a class="el" href="_base_engine_8cpp-source.html#l00290">BaseEngine::run()</a>.
 </div>
 </div><p>
 <a class="anchor" name="fcfab86e21cac5bba43e0858bd428e62"></a><!-- doxytag: member="Options::getOptInt" ref="fcfab86e21cac5bba43e0858bd428e62" args="(const std::string &amp;name, int oI=0)" -->
@@ -967,9 +1012,11 @@ Get the integer value of an option<p>
 </dl>
 
 <p>
-Definition at line <a class="el" href="_options_8cpp-source.html#l00179">179</a> of file <a class="el" href="_options_8cpp-source.html">Options.cpp</a>.
+Definition at line <a class="el" href="_options_8cpp-source.html#l00172">172</a> of file <a class="el" href="_options_8cpp-source.html">Options.cpp</a>.
 <p>
-References <a class="el" href="_err_8cpp-source.html#l00057">Err::errAbort()</a>, <a class="el" href="_options_8cpp-source.html#l00056">isOptDefined()</a>, and <a class="el" href="_options_8h-source.html#l00230">m_Options</a>.
+References <a class="el" href="_err_8cpp-source.html#l00068">Err::errAbort()</a>, <a class="el" href="_options_8cpp-source.html#l00054">isOptDefined()</a>, and <a class="el" href="_options_8h-source.html#l00238">m_Options</a>.
+<p>
+Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00112">BaseEngine::parseArgv()</a>.
 </div>
 </div><p>
 <a class="anchor" name="8b119de0194389e5e91d09520df211d9"></a><!-- doxytag: member="Options::getOptDouble" ref="8b119de0194389e5e91d09520df211d9" args="(const std::string &amp;name, int oI=0)" -->
@@ -1006,9 +1053,9 @@ Get the integer value of an option<p>
 </dl>
 
 <p>
-Definition at line <a class="el" href="_options_8cpp-source.html#l00189">189</a> of file <a class="el" href="_options_8cpp-source.html">Options.cpp</a>.
+Definition at line <a class="el" href="_options_8cpp-source.html#l00182">182</a> of file <a class="el" href="_options_8cpp-source.html">Options.cpp</a>.
 <p>
-References <a class="el" href="_err_8cpp-source.html#l00057">Err::errAbort()</a>, <a class="el" href="_options_8cpp-source.html#l00056">isOptDefined()</a>, and <a class="el" href="_options_8h-source.html#l00230">m_Options</a>.
+References <a class="el" href="_err_8cpp-source.html#l00068">Err::errAbort()</a>, <a class="el" href="_options_8cpp-source.html#l00054">isOptDefined()</a>, and <a class="el" href="_options_8h-source.html#l00238">m_Options</a>.
 </div>
 </div><p>
 <a class="anchor" name="b20d0083424d9d9a8b94da46f487f57a"></a><!-- doxytag: member="Options::getOptVector" ref="b20d0083424d9d9a8b94da46f487f57a" args="(const std::string &amp;name, int oI=0)" -->
@@ -1045,9 +1092,9 @@ Return a vector of values for a particular option<p>
 </dl>
 
 <p>
-Definition at line <a class="el" href="_options_8cpp-source.html#l00199">199</a> of file <a class="el" href="_options_8cpp-source.html">Options.cpp</a>.
+Definition at line <a class="el" href="_options_8cpp-source.html#l00192">192</a> of file <a class="el" href="_options_8cpp-source.html">Options.cpp</a>.
 <p>
-References <a class="el" href="_err_8cpp-source.html#l00057">Err::errAbort()</a>, <a class="el" href="_options_8cpp-source.html#l00056">isOptDefined()</a>, and <a class="el" href="_options_8h-source.html#l00230">m_Options</a>.
+References <a class="el" href="_err_8cpp-source.html#l00068">Err::errAbort()</a>, <a class="el" href="_options_8cpp-source.html#l00054">isOptDefined()</a>, and <a class="el" href="_options_8h-source.html#l00238">m_Options</a>.
 </div>
 </div><p>
 <a class="anchor" name="1c90f1e1810b6828c77e42fcf1edd520"></a><!-- doxytag: member="Options::printOptions" ref="1c90f1e1810b6828c77e42fcf1edd520" args="(const std::string &amp;prefix, int oI=0)" -->
@@ -1078,14 +1125,14 @@ References <a class="el" href="_err_8cpp-source.html#l00057">Err::errAbort()</a>
 <p>
 
 <p>
-<dl compact><dt><b><a class="el" href="todo.html#_todo000028">Todo:</a></b></dt><dd>kind of ugly how we are abusing <a class="el" href="class_pg_options.html">PgOptions</a> </dd></dl>
+<dl compact><dt><b><a class="el" href="todo.html#_todo000037">Todo:</a></b></dt><dd>kind of ugly how we are abusing <a class="el" href="class_pg_options.html">PgOptions</a> </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_options_8cpp-source.html#l00219">219</a> of file <a class="el" href="_options_8cpp-source.html">Options.cpp</a>.
+Definition at line <a class="el" href="_options_8cpp-source.html#l00212">212</a> of file <a class="el" href="_options_8cpp-source.html">Options.cpp</a>.
 <p>
-References <a class="el" href="_options_8h-source.html#l00230">m_Options</a>, and <a class="el" href="_verbose_8cpp-source.html#l00168">Verbose::out()</a>.
+References <a class="el" href="_options_8h-source.html#l00238">m_Options</a>, and <a class="el" href="_verbose_8cpp-source.html#l00259">Verbose::out()</a>.
 <p>
-Referenced by <a class="el" href="_base_engine_8h-source.html#l00109">BaseEngine::printEngineOptions()</a>.
+Referenced by <a class="el" href="_base_engine_8h-source.html#l00140">BaseEngine::printEngineOptions()</a>.
 </div>
 </div><p>
 <a class="anchor" name="8104b079edc7cb748f22f82ee2acdde4"></a><!-- doxytag: member="Options::getXMLParameterFileName" ref="8104b079edc7cb748f22f82ee2acdde4" args="(int oI=0)" -->
@@ -1107,9 +1154,9 @@ Referenced by <a class="el" href="_base_engine_8h-source.html#l00109">BaseEngine
 <p>
 
 <p>
-Definition at line <a class="el" href="_options_8cpp-source.html#l00204">204</a> of file <a class="el" href="_options_8cpp-source.html">Options.cpp</a>.
+Definition at line <a class="el" href="_options_8cpp-source.html#l00197">197</a> of file <a class="el" href="_options_8cpp-source.html">Options.cpp</a>.
 <p>
-References <a class="el" href="_options_8h-source.html#l00230">m_Options</a>.
+References <a class="el" href="_options_8h-source.html#l00238">m_Options</a>.
 </div>
 </div><p>
 <a class="anchor" name="8eedfe2be13d757af9b5914aaf5112fb"></a><!-- doxytag: member="Options::getXMLParameterFileGuid" ref="8eedfe2be13d757af9b5914aaf5112fb" args="(int oI=0)" -->
@@ -1131,9 +1178,9 @@ References <a class="el" href="_options_8h-source.html#l00230">m_Options</a>.
 <p>
 
 <p>
-Definition at line <a class="el" href="_options_8cpp-source.html#l00208">208</a> of file <a class="el" href="_options_8cpp-source.html">Options.cpp</a>.
+Definition at line <a class="el" href="_options_8cpp-source.html#l00201">201</a> of file <a class="el" href="_options_8cpp-source.html">Options.cpp</a>.
 <p>
-References <a class="el" href="_options_8h-source.html#l00230">m_Options</a>.
+References <a class="el" href="_options_8h-source.html#l00238">m_Options</a>.
 </div>
 </div><p>
 <a class="anchor" name="798c5ea7c52ccc17a06f3b17bc3854c5"></a><!-- doxytag: member="Options::setOptions" ref="798c5ea7c52ccc17a06f3b17bc3854c5" args="(PgOptions &amp;opts)" -->
@@ -1155,9 +1202,9 @@ References <a class="el" href="_options_8h-source.html#l00230">m_Options</a>.
 <p>
 
 <p>
-Definition at line <a class="el" href="_options_8h-source.html#l00213">213</a> of file <a class="el" href="_options_8h-source.html">Options.h</a>.
+Definition at line <a class="el" href="_options_8h-source.html#l00221">221</a> of file <a class="el" href="_options_8h-source.html">Options.h</a>.
 <p>
-References <a class="el" href="_pg_options_8h-source.html#l00222">PgOptions::m_option_vec</a>.
+References <a class="el" href="_pg_options_8h-source.html#l00218">PgOptions::m_option_vec</a>.
 </div>
 </div><p>
 <a class="anchor" name="e6d1e9fb84ce4eefa51f133551c0e6db"></a><!-- doxytag: member="Options::snapshotOptions" ref="e6d1e9fb84ce4eefa51f133551c0e6db" args="()" -->
@@ -1178,9 +1225,9 @@ References <a class="el" href="_pg_options_8h-source.html#l00222">PgOptions::m_o
 <p>
 
 <p>
-Definition at line <a class="el" href="_options_8h-source.html#l00219">219</a> of file <a class="el" href="_options_8h-source.html">Options.h</a>.
+Definition at line <a class="el" href="_options_8h-source.html#l00227">227</a> of file <a class="el" href="_options_8h-source.html">Options.h</a>.
 <p>
-Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00111">BaseEngine::checkOptions()</a>.
+Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00201">BaseEngine::checkOptions()</a>.
 </div>
 </div><p>
 <a class="anchor" name="cc91e33302e95cca3f690f38551ab1c6"></a><!-- doxytag: member="Options::snapshotOptions" ref="cc91e33302e95cca3f690f38551ab1c6" args="(const std::string &amp;label)" -->
@@ -1202,7 +1249,7 @@ Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00111">BaseEngi
 <p>
 
 <p>
-Definition at line <a class="el" href="_options_8h-source.html#l00224">224</a> of file <a class="el" href="_options_8h-source.html">Options.h</a>.
+Definition at line <a class="el" href="_options_8h-source.html#l00232">232</a> of file <a class="el" href="_options_8h-source.html">Options.h</a>.
 </div>
 </div><p>
 <hr><h2>Member Data Documentation</h2>
@@ -1222,9 +1269,9 @@ Underlying options implementation.
 <p>
 
 <p>
-Definition at line <a class="el" href="_options_8h-source.html#l00230">230</a> of file <a class="el" href="_options_8h-source.html">Options.h</a>.
+Definition at line <a class="el" href="_options_8h-source.html#l00238">238</a> of file <a class="el" href="_options_8h-source.html">Options.h</a>.
 <p>
-Referenced by <a class="el" href="_options_8cpp-source.html#l00155">getOpt()</a>, <a class="el" href="_options_8cpp-source.html#l00165">getOptBool()</a>, <a class="el" href="_options_8cpp-source.html#l00189">getOptDouble()</a>, <a class="el" href="_options_8cpp-source.html#l00179">getOptInt()</a>, <a class="el" href="_options_8cpp-source.html#l00039">getOptionNames()</a>, <a class="el" href="_options_8cpp-source.html#l00045">getOptionTypes()</a>, <a class="el" href="_options_8cpp-source.html#l00199">getOptVector()</a>, <a class="el" href="_options_8cpp-source.html#l00215">getProgName()</a>, <a class="el" href="_options_8cpp-source.html#l00208">getXMLParameterFileGuid()</a>, <a class="el" href="_options_8cpp-source.html#l00204">getXMLParameterFileName()</a>, <a class="el" href="_options_8cpp-source.html#l00056">isOptDefined()</a>, <a class="el" href="_options_8cpp-source.html#l00029">Options()</a>, <a class="el" href="_options_8cpp-source.html#l00146">parseArgv()</a>, <a class="el" href="_options_8cpp-source.html#l00219">printOptions()</a>, <a class="el" href="_options_8cpp-source.html#l00117">pushOpt()</a>, and <a class="el" href="_options_8cpp-source.html#l00067">setOpt()</a>.
+Referenced by <a class="el" href="_options_8cpp-source.html#l00158">getOptBool()</a>, <a class="el" href="_options_8cpp-source.html#l00182">getOptDouble()</a>, <a class="el" href="_options_8cpp-source.html#l00172">getOptInt()</a>, <a class="el" href="_options_8cpp-source.html#l00037">getOptionNames()</a>, <a class="el" href="_options_8cpp-source.html#l00043">getOptionTypes()</a>, <a class="el" href="_options_8cpp-source.html#l00192">getOptVector()</a>, <a class="el" href="_options_8cpp-source.html#l00148">getPgOpt()</a>, <a class="el" href="_options_8cpp-source.html#l00208">getProgName()</a>, <a class="el" href="_options_8cpp-source.html#l00201">getXMLParameterFileGuid()</a>, <a class="el" href="_options_8cpp-source.html#l00197">getXMLParameterFileName()</a>, <a class="el" href="_options_8cpp-source.html#l00054">isOptDefined()</a>, <a class="el" href="_options_8cpp-source.html#l00027">Options()</a>, <a class="el" href="_options_8cpp-source.html#l00144">parseArgv()</a>, <a class="el" href="_options_8cpp-source.html#l00212">printOptions()</a>, <a class="el" href="_options_8cpp-source.html#l00115">pushOpt()</a>, and <a class="el" href="_options_8cpp-source.html#l00065">setOpt()</a>.
 </div>
 </div><p>
 <a class="anchor" name="c1f127663ca6a52ab2f164a4cd09b3d0"></a><!-- doxytag: member="Options::m_Labels" ref="c1f127663ca6a52ab2f164a4cd09b3d0" args="" -->
@@ -1241,14 +1288,14 @@ Referenced by <a class="el" href="_options_8cpp-source.html#l00155">getOpt()</a>
 <p>
 
 <p>
-Definition at line <a class="el" href="_options_8h-source.html#l00235">235</a> of file <a class="el" href="_options_8h-source.html">Options.h</a>.
+Definition at line <a class="el" href="_options_8h-source.html#l00243">243</a> of file <a class="el" href="_options_8h-source.html">Options.h</a>.
 <p>
-Referenced by <a class="el" href="_options_8cpp-source.html#l00029">Options()</a>.
+Referenced by <a class="el" href="_options_8cpp-source.html#l00027">Options()</a>.
 </div>
 </div><p>
 <hr>The documentation for this class was generated from the following files:<ul>
 <li>C:/FusionSDK/affy/sdk/util/<a class="el" href="_options_8h-source.html">Options.h</a><li>C:/FusionSDK/affy/sdk/util/<a class="el" href="_options_8cpp-source.html">Options.cpp</a></ul>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:34 2009 for Affymetrix Fusion SDK by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:45 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

@@ -134,6 +134,8 @@ Get the number of DataSets in the <a class="el" href="classaffymetrix__calvin__i
 Definition at line <a class="el" href="_data_group_reader_8cpp-source.html#l00043">43</a> of file <a class="el" href="_data_group_reader_8cpp-source.html">DataGroupReader.cpp</a>.
 <p>
 References <a class="el" href="_data_group_reader_8h-source.html#l00081">dataGroupHdr</a>, and <a class="el" href="_data_group_header_8cpp-source.html#l00064">affymetrix_calvin_io::DataGroupHeader::GetDataSetCnt()</a>.
+<p>
+Referenced by <a class="el" href="_multi_channel_cel_file_collater_8cpp-source.html#l00112">affymetrix_calvin_io::MultiChannelCelFileCollater::WriteDataGroup()</a>.
 </div>
 </div><p>
 <a class="anchor" name="7f28b779bf3dd2f0d809bacfa531094b"></a><!-- doxytag: member="affymetrix_calvin_io::DataGroupReader::GetDataGroupName" ref="7f28b779bf3dd2f0d809bacfa531094b" args="() const" -->
@@ -191,9 +193,9 @@ Get the <a class="el" href="classaffymetrix__calvin__io_1_1_data_set_reader.html
 <p>
 Definition at line <a class="el" href="_data_group_reader_8cpp-source.html#l00059">59</a> of file <a class="el" href="_data_group_reader_8cpp-source.html">DataGroupReader.cpp</a>.
 <p>
-References <a class="el" href="_data_group_reader_8h-source.html#l00081">dataGroupHdr</a>, <a class="el" href="_data_group_reader_8h-source.html#l00079">fileStream</a>, <a class="el" href="_data_group_header_8cpp-source.html#l00086">affymetrix_calvin_io::DataGroupHeader::GetDataSet()</a>, and <a class="el" href="_data_group_header_8cpp-source.html#l00064">affymetrix_calvin_io::DataGroupHeader::GetDataSetCnt()</a>.
+References <a class="el" href="_data_group_reader_8h-source.html#l00081">dataGroupHdr</a>, <a class="el" href="_data_group_reader_8h-source.html#l00079">fileStream</a>, <a class="el" href="_date_time_8cpp-source.html#l00107">affymetrix_calvin_utilities::DateTime::GetCurrentDateTime()</a>, <a class="el" href="_data_group_header_8cpp-source.html#l00086">affymetrix_calvin_io::DataGroupHeader::GetDataSet()</a>, and <a class="el" href="_data_group_header_8cpp-source.html#l00064">affymetrix_calvin_io::DataGroupHeader::GetDataSetCnt()</a>.
 <p>
-Referenced by <a class="el" href="_d_a_t_file_reader_8cpp-source.html#l00065">affymetrix_calvin_io::DATFileReader::ReadGlobalGrid()</a>, and <a class="el" href="_d_a_t_file_reader_8cpp-source.html#l00100">affymetrix_calvin_io::DATFileReader::ReadSubgrids()</a>.
+Referenced by <a class="el" href="_d_a_t_file_reader_8cpp-source.html#l00065">affymetrix_calvin_io::DATFileReader::ReadGlobalGrid()</a>, <a class="el" href="_d_a_t_file_reader_8cpp-source.html#l00100">affymetrix_calvin_io::DATFileReader::ReadSubgrids()</a>, and <a class="el" href="_multi_channel_cel_file_collater_8cpp-source.html#l00112">affymetrix_calvin_io::MultiChannelCelFileCollater::WriteDataGroup()</a>.
 </div>
 </div><p>
 <a class="anchor" name="3fa1901f2ec30a7f296abffb3f8d3a6d"></a><!-- doxytag: member="affymetrix_calvin_io::DataGroupReader::GetDataSetReader" ref="3fa1901f2ec30a7f296abffb3f8d3a6d" args="(const std::wstring &amp;name)" -->
@@ -227,7 +229,7 @@ Get the <a class="el" href="classaffymetrix__calvin__io_1_1_data_set_reader.html
 <p>
 Definition at line <a class="el" href="_data_group_reader_8cpp-source.html#l00075">75</a> of file <a class="el" href="_data_group_reader_8cpp-source.html">DataGroupReader.cpp</a>.
 <p>
-References <a class="el" href="_data_group_reader_8h-source.html#l00081">dataGroupHdr</a>, <a class="el" href="_data_group_reader_8h-source.html#l00079">fileStream</a>, and <a class="el" href="_data_group_header_8cpp-source.html#l00105">affymetrix_calvin_io::DataGroupHeader::FindDataSetHeader()</a>.
+References <a class="el" href="_data_group_reader_8h-source.html#l00081">dataGroupHdr</a>, <a class="el" href="_data_group_reader_8h-source.html#l00079">fileStream</a>, <a class="el" href="_data_group_header_8cpp-source.html#l00105">affymetrix_calvin_io::DataGroupHeader::FindDataSetHeader()</a>, and <a class="el" href="_date_time_8cpp-source.html#l00107">affymetrix_calvin_utilities::DateTime::GetCurrentDateTime()</a>.
 </div>
 </div><p>
 <hr><h2>Member Data Documentation</h2>
@@ -271,7 +273,7 @@ Referenced by <a class="el" href="_data_group_reader_8cpp-source.html#l00051">Ge
 </div><p>
 <hr>The documentation for this class was generated from the following files:<ul>
 <li>C:/FusionSDK/affy/sdk/calvin_files/parsers/src/<a class="el" href="_data_group_reader_8h-source.html">DataGroupReader.h</a><li>C:/FusionSDK/affy/sdk/calvin_files/parsers/src/<a class="el" href="_data_group_reader_8cpp-source.html">DataGroupReader.cpp</a></ul>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:46 2009 for Affymetrix Fusion SDK by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:57 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

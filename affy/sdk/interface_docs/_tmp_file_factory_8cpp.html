@@ -24,13 +24,14 @@
 <div class="nav">
 <a class="el" href="dir_0083bb8eedef7fed63dbf70caf86d00a.html">FusionSDK</a>&nbsp;&raquo&nbsp;<a class="el" href="dir_e86b6dbad4e625ef3fbba6406e2d4163.html">affy</a>&nbsp;&raquo&nbsp;<a class="el" href="dir_f87490fa8939fe2ce5b8b80cbaa3c2fa.html">sdk</a>&nbsp;&raquo&nbsp;<a class="el" href="dir_374f7a135d973daad145d25feb2e5488.html">util</a></div>
 <h1>TmpFileFactory.cpp File Reference</h1><code>#include &quot;<a class="el" href="_tmp_file_factory_8h-source.html">util/TmpFileFactory.h</a>&quot;</code><br>
+<code>#include &quot;portability/affy-system-api.h&quot;</code><br>
+<code>#include &quot;<a class="el" href="_fs_8h-source.html">util/Fs.h</a>&quot;</code><br>
 <code>#include &quot;<a class="el" href="_util_8h-source.html">util/Util.h</a>&quot;</code><br>
 <code>#include &lt;cstdlib&gt;</code><br>
 <code>#include &lt;cstring&gt;</code><br>
 <code>#include &lt;iostream&gt;</code><br>
 <code>#include &lt;string&gt;</code><br>
 <code>#include &lt;vector&gt;</code><br>
-<code>#include &lt;unistd.h&gt;</code><br>
 
 <p>
 <a href="_tmp_file_factory_8cpp-source.html">Go to the source code of this file.</a><table border="0" cellpadding="0" cellspacing="0">
@@ -69,11 +70,11 @@ Returns a pointer to the global tmpfilefactory. Allocates it if needed.
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>The global tmpfilefactory </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_tmp_file_factory_8cpp-source.html#l00063">63</a> of file <a class="el" href="_tmp_file_factory_8cpp-source.html">TmpFileFactory.cpp</a>.
+Definition at line <a class="el" href="_tmp_file_factory_8cpp-source.html#l00056">56</a> of file <a class="el" href="_tmp_file_factory_8cpp-source.html">TmpFileFactory.cpp</a>.
 <p>
-References <a class="el" href="_err_8cpp-source.html#l00057">Err::errAbort()</a>, <a class="el" href="_tmp_file_factory_8cpp-source.html#l00061">global_tmpfilefactory</a>, and <a class="el" href="_tmp_file_factory_8cpp-source.html#l00082">TmpFileFactory::TmpFileFactory()</a>.
+References <a class="el" href="_err_8cpp-source.html#l00068">Err::errAbort()</a>, <a class="el" href="_tmp_file_factory_8cpp-source.html#l00054">global_tmpfilefactory</a>, and <a class="el" href="_tmp_file_factory_8cpp-source.html#l00075">TmpFileFactory::TmpFileFactory()</a>.
 <p>
-Referenced by <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00145">main()</a>, and <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00125">test_4()</a>.
+Referenced by <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00144">main()</a>, and <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00124">test_4()</a>.
 </div>
 </div><p>
 <a class="anchor" name="a43daccc92ca7c06ec40b0b4fda483aa"></a><!-- doxytag: member="TmpFileFactory.cpp::GlobalTmpFileFactoryFree" ref="a43daccc92ca7c06ec40b0b4fda483aa" args="()" -->
@@ -96,11 +97,11 @@ Frees the global tmpfilefactory.
 <p>
 
 <p>
-Definition at line <a class="el" href="_tmp_file_factory_8cpp-source.html#l00073">73</a> of file <a class="el" href="_tmp_file_factory_8cpp-source.html">TmpFileFactory.cpp</a>.
+Definition at line <a class="el" href="_tmp_file_factory_8cpp-source.html#l00066">66</a> of file <a class="el" href="_tmp_file_factory_8cpp-source.html">TmpFileFactory.cpp</a>.
 <p>
-References <a class="el" href="_tmp_file_factory_8cpp-source.html#l00151">TmpFileFactory::cleanUp()</a>, and <a class="el" href="_tmp_file_factory_8cpp-source.html#l00061">global_tmpfilefactory</a>.
+References <a class="el" href="_tmp_file_factory_8cpp-source.html#l00144">TmpFileFactory::cleanUp()</a>, and <a class="el" href="_tmp_file_factory_8cpp-source.html#l00054">global_tmpfilefactory</a>.
 <p>
-Referenced by <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00145">main()</a>.
+Referenced by <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00144">main()</a>.
 </div>
 </div><p>
 <hr><h2>Variable Documentation</h2>
@@ -120,12 +121,12 @@ Declared static to scope it to this file.
 <p>
 
 <p>
-Definition at line <a class="el" href="_tmp_file_factory_8cpp-source.html#l00061">61</a> of file <a class="el" href="_tmp_file_factory_8cpp-source.html">TmpFileFactory.cpp</a>.
+Definition at line <a class="el" href="_tmp_file_factory_8cpp-source.html#l00054">54</a> of file <a class="el" href="_tmp_file_factory_8cpp-source.html">TmpFileFactory.cpp</a>.
 <p>
-Referenced by <a class="el" href="_tmp_file_factory_8cpp-source.html#l00063">GlobalTmpFileFactory()</a>, and <a class="el" href="_tmp_file_factory_8cpp-source.html#l00073">GlobalTmpFileFactoryFree()</a>.
+Referenced by <a class="el" href="_tmp_file_factory_8cpp-source.html#l00056">GlobalTmpFileFactory()</a>, and <a class="el" href="_tmp_file_factory_8cpp-source.html#l00066">GlobalTmpFileFactoryFree()</a>.
 </div>
 </div><p>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:27 2009 for Affymetrix Fusion SDK by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:38 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

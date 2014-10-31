@@ -24,6 +24,7 @@
 <div class="nav">
 <a class="el" href="dir_0083bb8eedef7fed63dbf70caf86d00a.html">FusionSDK</a>&nbsp;&raquo&nbsp;<a class="el" href="dir_e86b6dbad4e625ef3fbba6406e2d4163.html">affy</a>&nbsp;&raquo&nbsp;<a class="el" href="dir_f87490fa8939fe2ce5b8b80cbaa3c2fa.html">sdk</a>&nbsp;&raquo&nbsp;<a class="el" href="dir_f143c5ea1bdff3e8b6e381f8cdbaa155.html">calvin_files</a>&nbsp;&raquo&nbsp;<a class="el" href="dir_dfbcc00f161d2153660070beb7273158.html">writers</a>&nbsp;&raquo&nbsp;<a class="el" href="dir_446e299989b095fd607954effe44a034.html">src</a></div>
 <h1>GenericDataHeaderUpdater.cpp File Reference</h1><code>#include &quot;<a class="el" href="_generic_data_header_updater_8h-source.html">calvin_files/writers/src/GenericDataHeaderUpdater.h</a>&quot;</code><br>
+<code>#include &quot;<a class="el" href="_generic_data_8h-source.html">calvin_files/data/src/GenericData.h</a>&quot;</code><br>
 <code>#include &quot;<a class="el" href="_parameter_name_value_type_8h-source.html">calvin_files/parameter/src/ParameterNameValueType.h</a>&quot;</code><br>
 <code>#include &quot;<a class="el" href="_file_header_updater_8h-source.html">calvin_files/writers/src/FileHeaderUpdater.h</a>&quot;</code><br>
 <code>#include &quot;<a class="el" href="_file_output_8h-source.html">calvin_files/writers/src/FileOutput.h</a>&quot;</code><br>
@@ -33,6 +34,9 @@
 <tr><td></td></tr>
 <tr><td colspan="2"><br><h2>Defines</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_generic_data_header_updater_8cpp.html#8ceabb4898d16a0df22a4abfa184392f">WCHAR_T_SIZE</a>&nbsp;&nbsp;&nbsp;2</td></tr>
+
+<tr><td colspan="2"><br><h2>Functions</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_generic_data_header_updater_8cpp.html#9d9ce8a1590ee51901d6d4d743996bc3">UpdateFileHeaderParameter</a> (const std::string &amp;filename, const std::wstring &amp;paramName, float paramValue)</td></tr>
 
 </table>
 <hr><h2>Define Documentation</h2>
@@ -50,10 +54,48 @@
 <p>
 
 <p>
-Definition at line <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00031">31</a> of file <a class="el" href="_generic_data_header_updater_8cpp-source.html">GenericDataHeaderUpdater.cpp</a>.
+Definition at line <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00032">32</a> of file <a class="el" href="_generic_data_header_updater_8cpp-source.html">GenericDataHeaderUpdater.cpp</a>.
 </div>
 </div><p>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:24 2009 for Affymetrix Fusion SDK by&nbsp;
+<hr><h2>Function Documentation</h2>
+<a class="anchor" name="9d9ce8a1590ee51901d6d4d743996bc3"></a><!-- doxytag: member="GenericDataHeaderUpdater.cpp::UpdateFileHeaderParameter" ref="9d9ce8a1590ee51901d6d4d743996bc3" args="(const std::string &amp;filename, const std::wstring &amp;paramName, float paramValue)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UpdateFileHeaderParameter           </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::wstring &amp;&nbsp;</td>
+          <td class="paramname"> <em>paramName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>paramValue</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>
+Definition at line <a class="el" href="_generic_data_header_updater_8cpp-source.html#l00153">153</a> of file <a class="el" href="_generic_data_header_updater_8cpp-source.html">GenericDataHeaderUpdater.cpp</a>.
+</div>
+</div><p>
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:34 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

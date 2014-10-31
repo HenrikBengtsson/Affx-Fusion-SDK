@@ -77,13 +77,13 @@
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Adds an <a class="el" href="class_pg_opt.html" title="The definition of this option and the values.">PgOpt</a> to the internal state.  <a href="#f94c5c283c16467b707ccf8f18e7aa48"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pg_options.html#9ebaa8fec876738ce61d6b3fa39b2e41">bind</a> (const std::string &amp;opt_name, <a class="el" href="class_pg_opt.html">PgOpt</a> *opt)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Bind the name to the option.  <a href="#9ebaa8fec876738ce61d6b3fa39b2e41"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="class_pg_opt.html">PgOpt</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pg_options.html#30b5e0d8516c5c6130a9da8266afd3ce">findOpt</a> (const std::string &amp;name)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Add the option name and <a class="el" href="class_pg_opt.html" title="The definition of this option and the values.">PgOpt</a> to our map of name,value pairs.  <a href="#9ebaa8fec876738ce61d6b3fa39b2e41"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="class_pg_opt.html">PgOpt</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pg_options.html#637bef24edc9520ea2e871283e338724">findOpt</a> (const std::string &amp;longName)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Finds the option which is bound to this name.  <a href="#30b5e0d8516c5c6130a9da8266afd3ce"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="class_pg_opt.html">PgOpt</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pg_options.html#cb645e631e5f0689b9661802af9f1c6e">mustFindOpt</a> (const std::string &amp;name)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Finds the option which is bound to this name.  <a href="#637bef24edc9520ea2e871283e338724"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="class_pg_opt.html">PgOpt</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pg_options.html#e6b1d72f578de5a557f3b891885e18b5">mustFindOpt</a> (const std::string &amp;name)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Same as findOpt, but aborts if not option is not found.  <a href="#cb645e631e5f0689b9661802af9f1c6e"></a><br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Same as findOpt, but aborts if not option is not found.  <a href="#e6b1d72f578de5a557f3b891885e18b5"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pg_options.html#da18bd8d5b64cf07665e679cc85875c0">usage</a> (bool printOpts=true)</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Print out a litte ditty about program and its usage.  <a href="#da18bd8d5b64cf07665e679cc85875c0"></a><br></td></tr>
@@ -196,7 +196,7 @@
 <p>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8h-source.html#l00206">206</a> of file <a class="el" href="_pg_options_8h-source.html">PgOptions.h</a>.<hr><h2>Member Typedef Documentation</h2>
+Definition at line <a class="el" href="_pg_options_8h-source.html#l00202">202</a> of file <a class="el" href="_pg_options_8h-source.html">PgOptions.h</a>.<hr><h2>Member Typedef Documentation</h2>
 <a class="anchor" name="d79a8f09fbdf50b27f3b3621aa11b49b"></a><!-- doxytag: member="PgOptions::optionMap_t" ref="d79a8f09fbdf50b27f3b3621aa11b49b" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -211,7 +211,7 @@ Definition at line <a class="el" href="_pg_options_8h-source.html#l00206">206</a
 <p>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8h-source.html#l00213">213</a> of file <a class="el" href="_pg_options_8h-source.html">PgOptions.h</a>.
+Definition at line <a class="el" href="_pg_options_8h-source.html#l00209">209</a> of file <a class="el" href="_pg_options_8h-source.html">PgOptions.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="8f2ce059fced5fd91181223bddd10090"></a><!-- doxytag: member="PgOptions::optionMapIterator_t" ref="8f2ce059fced5fd91181223bddd10090" args="" -->
@@ -228,7 +228,7 @@ Definition at line <a class="el" href="_pg_options_8h-source.html#l00213">213</a
 <p>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8h-source.html#l00214">214</a> of file <a class="el" href="_pg_options_8h-source.html">PgOptions.h</a>.
+Definition at line <a class="el" href="_pg_options_8h-source.html#l00210">210</a> of file <a class="el" href="_pg_options_8h-source.html">PgOptions.h</a>.
 </div>
 </div><p>
 <hr><h2>Constructor &amp; Destructor Documentation</h2>
@@ -252,9 +252,9 @@ Creates a new <a class="el" href="class_pg_options.html">PgOptions</a> object.
 <p>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00354">354</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
+Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00356">356</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
 <p>
-References <a class="el" href="_pg_options_8cpp-source.html#l00362">clear()</a>.
+References <a class="el" href="_pg_options_8cpp-source.html#l00364">clear()</a>.
 </div>
 </div><p>
 <a class="anchor" name="47f9a3fcea5986116842fd86534b5af2"></a><!-- doxytag: member="PgOptions::PgOptions" ref="47f9a3fcea5986116842fd86534b5af2" args="(const PgOptions &amp;options)" -->
@@ -278,9 +278,9 @@ Creates a new <a class="el" href="class_pg_options.html">PgOptions</a> from an e
 <p>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00411">411</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
+Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00413">413</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
 <p>
-References <a class="el" href="_pg_options_8cpp-source.html#l00498">addPgOpt()</a>, <a class="el" href="_pg_options_8h-source.html#l00232">m_args</a>, <a class="el" href="_pg_options_8h-source.html#l00231">m_argv</a>, <a class="el" href="_pg_options_8h-source.html#l00224">m_option_section</a>, <a class="el" href="_pg_options_8h-source.html#l00222">m_option_vec</a>, <a class="el" href="_pg_options_8h-source.html#l00229">m_progName</a>, <a class="el" href="_pg_options_8h-source.html#l00238">m_strXMLParameterFileGuid</a>, <a class="el" href="_pg_options_8h-source.html#l00235">m_strXMLParameterFileName</a>, and <a class="el" href="_pg_options_8h-source.html#l00220">m_usageMsg</a>.
+References <a class="el" href="_pg_options_8cpp-source.html#l00500">addPgOpt()</a>, <a class="el" href="_pg_options_8h-source.html#l00228">m_args</a>, <a class="el" href="_pg_options_8h-source.html#l00227">m_argv</a>, <a class="el" href="_pg_options_8h-source.html#l00220">m_option_section</a>, <a class="el" href="_pg_options_8h-source.html#l00218">m_option_vec</a>, <a class="el" href="_pg_options_8h-source.html#l00225">m_progName</a>, <a class="el" href="_pg_options_8h-source.html#l00234">m_strXMLParameterFileGuid</a>, <a class="el" href="_pg_options_8h-source.html#l00231">m_strXMLParameterFileName</a>, and <a class="el" href="_pg_options_8h-source.html#l00216">m_usageMsg</a>.
 </div>
 </div><p>
 <a class="anchor" name="ff28d0d5ec233b301876fc5fd10d42d9"></a><!-- doxytag: member="PgOptions::~PgOptions" ref="ff28d0d5ec233b301876fc5fd10d42d9" args="()" -->
@@ -303,9 +303,9 @@ Destroys a <a class="el" href="class_pg_options.html">PgOptions</a> object and i
 <p>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00358">358</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
+Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00360">360</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
 <p>
-References <a class="el" href="_pg_options_8cpp-source.html#l00362">clear()</a>.
+References <a class="el" href="_pg_options_8cpp-source.html#l00364">clear()</a>.
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
@@ -329,11 +329,11 @@ clear all the data &amp; free memory.
 <p>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00362">362</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
+Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00364">364</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
 <p>
-References <a class="el" href="_pg_options_8h-source.html#l00232">m_args</a>, <a class="el" href="_pg_options_8h-source.html#l00231">m_argv</a>, <a class="el" href="_pg_options_8h-source.html#l00227">m_option_map</a>, <a class="el" href="_pg_options_8h-source.html#l00224">m_option_section</a>, <a class="el" href="_pg_options_8h-source.html#l00222">m_option_vec</a>, <a class="el" href="_pg_options_8h-source.html#l00229">m_progName</a>, <a class="el" href="_pg_options_8h-source.html#l00238">m_strXMLParameterFileGuid</a>, <a class="el" href="_pg_options_8h-source.html#l00235">m_strXMLParameterFileName</a>, and <a class="el" href="_pg_options_8h-source.html#l00220">m_usageMsg</a>.
+References <a class="el" href="_pg_options_8h-source.html#l00228">m_args</a>, <a class="el" href="_pg_options_8h-source.html#l00227">m_argv</a>, <a class="el" href="_pg_options_8h-source.html#l00223">m_option_map</a>, <a class="el" href="_pg_options_8h-source.html#l00220">m_option_section</a>, <a class="el" href="_pg_options_8h-source.html#l00218">m_option_vec</a>, <a class="el" href="_pg_options_8h-source.html#l00225">m_progName</a>, <a class="el" href="_pg_options_8h-source.html#l00234">m_strXMLParameterFileGuid</a>, <a class="el" href="_pg_options_8h-source.html#l00231">m_strXMLParameterFileName</a>, and <a class="el" href="_pg_options_8h-source.html#l00216">m_usageMsg</a>.
 <p>
-Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00381">operator=()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00354">PgOptions()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00358">~PgOptions()</a>.
+Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00383">operator=()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00356">PgOptions()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00360">~PgOptions()</a>.
 </div>
 </div><p>
 <a class="anchor" name="0139989e200a3a6a92ebd3d9e5a280d2"></a><!-- doxytag: member="PgOptions::appendOptions" ref="0139989e200a3a6a92ebd3d9e5a280d2" args="(const PgOptions &amp;options)" -->
@@ -357,11 +357,11 @@ appendOptions
 <p>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00396">396</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
+Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00398">398</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
 <p>
-References <a class="el" href="_pg_options_8cpp-source.html#l00498">addPgOpt()</a>, <a class="el" href="_pg_options_8h-source.html#l00224">m_option_section</a>, and <a class="el" href="_pg_options_8h-source.html#l00222">m_option_vec</a>.
+References <a class="el" href="_pg_options_8cpp-source.html#l00500">addPgOpt()</a>, <a class="el" href="_pg_options_8h-source.html#l00220">m_option_section</a>, and <a class="el" href="_pg_options_8h-source.html#l00218">m_option_vec</a>.
 <p>
-Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00381">operator=()</a>.
+Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00383">operator=()</a>.
 </div>
 </div><p>
 <a class="anchor" name="0a28074dcd613605d92deefa08271c4a"></a><!-- doxytag: member="PgOptions::operator=" ref="0a28074dcd613605d92deefa08271c4a" args="(const PgOptions &amp;options)" -->
@@ -385,9 +385,9 @@ Assignment.
 <p>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00381">381</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
+Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00383">383</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
 <p>
-References <a class="el" href="_pg_options_8cpp-source.html#l00396">appendOptions()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00362">clear()</a>, <a class="el" href="_pg_options_8h-source.html#l00232">m_args</a>, <a class="el" href="_pg_options_8h-source.html#l00231">m_argv</a>, <a class="el" href="_pg_options_8h-source.html#l00229">m_progName</a>, and <a class="el" href="_pg_options_8h-source.html#l00220">m_usageMsg</a>.
+References <a class="el" href="_pg_options_8cpp-source.html#l00398">appendOptions()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00364">clear()</a>, <a class="el" href="_pg_options_8h-source.html#l00228">m_args</a>, <a class="el" href="_pg_options_8h-source.html#l00227">m_argv</a>, <a class="el" href="_pg_options_8h-source.html#l00225">m_progName</a>, and <a class="el" href="_pg_options_8h-source.html#l00216">m_usageMsg</a>.
 </div>
 </div><p>
 <a class="anchor" name="e1bab994b1178d192a5969504894e42c"></a><!-- doxytag: member="PgOptions::getUsage" ref="e1bab994b1178d192a5969504894e42c" args="()" -->
@@ -411,11 +411,11 @@ Get the usage info.
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>string </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00433">433</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
+Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00435">435</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
 <p>
-References <a class="el" href="_pg_options_8h-source.html#l00220">m_usageMsg</a>.
+References <a class="el" href="_pg_options_8h-source.html#l00216">m_usageMsg</a>.
 <p>
-Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00586">usage()</a>.
+Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00578">usage()</a>.
 </div>
 </div><p>
 <a class="anchor" name="a40409c034ecf67ad32694103782e97e"></a><!-- doxytag: member="PgOptions::setUsage" ref="a40409c034ecf67ad32694103782e97e" args="(const std::string &amp;usage)" -->
@@ -444,11 +444,11 @@ set the usage info for this program
 </dl>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00429">429</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
+Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00431">431</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
 <p>
-References <a class="el" href="_pg_options_8h-source.html#l00220">m_usageMsg</a>.
+References <a class="el" href="_pg_options_8h-source.html#l00216">m_usageMsg</a>.
 <p>
-Referenced by <a class="el" href="_dump_pgf_8cpp-source.html#l00034">define_dumppgf_options()</a>, <a class="el" href="_tsv_join_8cpp-source.html#l00034">define_tsvjoin_options()</a>, and <a class="el" href="tsv-util_8cpp-source.html#l00566">main()</a>.
+Referenced by <a class="el" href="_dump_pgf_8cpp-source.html#l00035">define_dumppgf_options()</a>, <a class="el" href="_tsv_join_8cpp-source.html#l00036">define_tsvjoin_options()</a>, and <a class="el" href="tsv-util_8cpp-source.html#l00506">main()</a>.
 </div>
 </div><p>
 <a class="anchor" name="dac8b0e3b021c1403e1c3afd28ee5e19"></a><!-- doxytag: member="PgOptions::defineOption" ref="dac8b0e3b021c1403e1c3afd28ee5e19" args="(const std::string &amp;shortName, const std::string &amp;longName, PgOpt::PgOptType_t type, const std::string &amp;help, const std::string &amp;defaultVal)" -->
@@ -510,11 +510,11 @@ define an option to be handled by this option parser.
 <dl class="remark" compact><dt><b>Remarks:</b></dt><dd>This calls addPgOpt to add the created option to the option state. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00527">527</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
+Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00535">535</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
 <p>
-References <a class="el" href="_pg_options_8cpp-source.html#l00505">addPgOpt_nocopy()</a>, <a class="el" href="_pg_options_8h-source.html#l00129">PgOpt::m_defaultValue</a>, <a class="el" href="_pg_options_8h-source.html#l00127">PgOpt::m_help</a>, <a class="el" href="_pg_options_8h-source.html#l00125">PgOpt::m_longName</a>, <a class="el" href="_pg_options_8h-source.html#l00124">PgOpt::m_shortName</a>, <a class="el" href="_pg_options_8h-source.html#l00128">PgOpt::m_type</a>, and <a class="el" href="_pg_options_8h-source.html#l00130">PgOpt::m_values</a>.
+References <a class="el" href="_pg_options_8cpp-source.html#l00507">addPgOpt_nocopy()</a>, <a class="el" href="_pg_options_8h-source.html#l00125">PgOpt::m_defaultValue</a>, <a class="el" href="_pg_options_8h-source.html#l00123">PgOpt::m_help</a>, <a class="el" href="_pg_options_8h-source.html#l00121">PgOpt::m_longName</a>, <a class="el" href="_pg_options_8h-source.html#l00120">PgOpt::m_shortName</a>, <a class="el" href="_pg_options_8h-source.html#l00124">PgOpt::m_type</a>, and <a class="el" href="_pg_options_8h-source.html#l00126">PgOpt::m_values</a>.
 <p>
-Referenced by <a class="el" href="_dump_pgf_8cpp-source.html#l00034">define_dumppgf_options()</a>, <a class="el" href="_tsv_join_8cpp-source.html#l00034">define_tsvjoin_options()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00545">defOpt()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00555">defOptMult()</a>, and <a class="el" href="tsv-util_8cpp-source.html#l00566">main()</a>.
+Referenced by <a class="el" href="_dump_pgf_8cpp-source.html#l00035">define_dumppgf_options()</a>, <a class="el" href="_tsv_join_8cpp-source.html#l00036">define_tsvjoin_options()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00553">defOpt()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00563">defOptMult()</a>, and <a class="el" href="tsv-util_8cpp-source.html#l00506">main()</a>.
 </div>
 </div><p>
 <a class="anchor" name="56135a91c8b215b1f9675e5cb5f90814"></a><!-- doxytag: member="PgOptions::defOpt" ref="56135a91c8b215b1f9675e5cb5f90814" args="(const std::string &amp;shortName, const std::string &amp;longName, PgOpt::PgOptType_t type, const std::string &amp;help, const std::string &amp;defaultVal)" -->
@@ -575,9 +575,9 @@ Short form of defineOption.
 <dl class="return" compact><dt><b>Returns:</b></dt><dd></dd></dl>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00545">545</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
+Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00553">553</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
 <p>
-References <a class="el" href="_pg_options_8cpp-source.html#l00527">defineOption()</a>.
+References <a class="el" href="_pg_options_8cpp-source.html#l00535">defineOption()</a>.
 </div>
 </div><p>
 <a class="anchor" name="817456bb9a6dba73daf3a25197ed3cb0"></a><!-- doxytag: member="PgOptions::defOptMult" ref="817456bb9a6dba73daf3a25197ed3cb0" args="(const std::string &amp;shortName, const std::string &amp;longName, PgOpt::PgOptType_t type, const std::string &amp;help, const std::string &amp;defaultVal)" -->
@@ -638,11 +638,11 @@ Short for to define an option with multiple values.
 <dl class="return" compact><dt><b>Returns:</b></dt><dd></dd></dl>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00555">555</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
+Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00563">563</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
 <p>
-References <a class="el" href="_pg_options_8cpp-source.html#l00252">PgOpt::allowMutipleValues()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00527">defineOption()</a>.
+References <a class="el" href="_pg_options_8cpp-source.html#l00254">PgOpt::allowMutipleValues()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00535">defineOption()</a>.
 <p>
-Referenced by <a class="el" href="_dump_pgf_8cpp-source.html#l00034">define_dumppgf_options()</a>.
+Referenced by <a class="el" href="_dump_pgf_8cpp-source.html#l00035">define_dumppgf_options()</a>.
 </div>
 </div><p>
 <a class="anchor" name="a05d391fa1afd9435ea0f43b39302b04"></a><!-- doxytag: member="PgOptions::defineOptionSection" ref="a05d391fa1afd9435ea0f43b39302b04" args="(const std::string &amp;sectionName)" -->
@@ -672,9 +672,9 @@ Define a new section for options.
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00523">523</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
+Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00531">531</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
 <p>
-References <a class="el" href="_pg_options_8h-source.html#l00224">m_option_section</a>, and <a class="el" href="_pg_options_8h-source.html#l00222">m_option_vec</a>.
+References <a class="el" href="_pg_options_8h-source.html#l00220">m_option_section</a>, and <a class="el" href="_pg_options_8h-source.html#l00218">m_option_vec</a>.
 </div>
 </div><p>
 <a class="anchor" name="a4af45b7061ffaae55eaaa19efbfd33f"></a><!-- doxytag: member="PgOptions::addPgOpt" ref="a4af45b7061ffaae55eaaa19efbfd33f" args="(const PgOpt *option)" -->
@@ -704,11 +704,11 @@ Copies and adds an <a class="el" href="class_pg_opt.html" title="The definition 
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>pointer to copy. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00498">498</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
+Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00500">500</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
 <p>
-References <a class="el" href="_pg_options_8cpp-source.html#l00505">addPgOpt_nocopy()</a>.
+References <a class="el" href="_pg_options_8cpp-source.html#l00507">addPgOpt_nocopy()</a>.
 <p>
-Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00396">appendOptions()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00411">PgOptions()</a>.
+Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00398">appendOptions()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00413">PgOptions()</a>.
 </div>
 </div><p>
 <a class="anchor" name="f94c5c283c16467b707ccf8f18e7aa48"></a><!-- doxytag: member="PgOptions::addPgOpt_nocopy" ref="f94c5c283c16467b707ccf8f18e7aa48" args="(PgOpt *option)" -->
@@ -738,11 +738,11 @@ Adds an <a class="el" href="class_pg_opt.html" title="The definition of this opt
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>pointer to the passed in option </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00505">505</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
+Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00507">507</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
 <p>
-References <a class="el" href="_pg_options_8cpp-source.html#l00490">bind()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00332">PgOpt::checkParseIsOk()</a>, <a class="el" href="_err_8cpp-source.html#l00057">Err::errAbort()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00256">PgOpt::getDefaultValue()</a>, <a class="el" href="_pg_options_8h-source.html#l00125">PgOpt::m_longName</a>, <a class="el" href="_pg_options_8h-source.html#l00227">m_option_map</a>, <a class="el" href="_pg_options_8h-source.html#l00222">m_option_vec</a>, and <a class="el" href="_pg_options_8h-source.html#l00124">PgOpt::m_shortName</a>.
+References <a class="el" href="_pg_options_8cpp-source.html#l00492">bind()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00334">PgOpt::checkParseIsOk()</a>, <a class="el" href="_err_8cpp-source.html#l00068">Err::errAbort()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00258">PgOpt::getDefaultValue()</a>, <a class="el" href="_pg_options_8h-source.html#l00121">PgOpt::m_longName</a>, <a class="el" href="_pg_options_8h-source.html#l00223">m_option_map</a>, <a class="el" href="_pg_options_8h-source.html#l00218">m_option_vec</a>, and <a class="el" href="_pg_options_8h-source.html#l00120">PgOpt::m_shortName</a>.
 <p>
-Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00498">addPgOpt()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00527">defineOption()</a>.
+Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00500">addPgOpt()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00535">defineOption()</a>.
 </div>
 </div><p>
 <a class="anchor" name="9ebaa8fec876738ce61d6b3fa39b2e41"></a><!-- doxytag: member="PgOptions::bind" ref="9ebaa8fec876738ce61d6b3fa39b2e41" args="(const std::string &amp;opt_name, PgOpt *opt)" -->
@@ -771,7 +771,7 @@ Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00498">addPgOpt(
 <div class="memdoc">
 
 <p>
-Bind the name to the option. 
+Add the option name and <a class="el" href="class_pg_opt.html" title="The definition of this option and the values.">PgOpt</a> to our map of name,value pairs. 
 <p>
 <dl compact><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
@@ -781,24 +781,24 @@ Bind the name to the option.
 </dl>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00490">490</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
+Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00492">492</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
 <p>
-References <a class="el" href="_pg_options_8h-source.html#l00227">m_option_map</a>.
+References <a class="el" href="_pg_options_8h-source.html#l00223">m_option_map</a>.
 <p>
-Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00505">addPgOpt_nocopy()</a>.
+Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00507">addPgOpt_nocopy()</a>.
 </div>
 </div><p>
-<a class="anchor" name="30b5e0d8516c5c6130a9da8266afd3ce"></a><!-- doxytag: member="PgOptions::findOpt" ref="30b5e0d8516c5c6130a9da8266afd3ce" args="(const std::string &amp;name)" -->
+<a class="anchor" name="637bef24edc9520ea2e871283e338724"></a><!-- doxytag: member="PgOptions::findOpt" ref="637bef24edc9520ea2e871283e338724" args="(const std::string &amp;longName)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_pg_opt.html">PgOpt</a> * PgOptions::findOpt           </td>
+          <td class="memname"><a class="el" href="class_pg_opt.html">PgOpt</a>* PgOptions::findOpt           </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&nbsp;</td>
-          <td class="paramname"> <em>name</em>          </td>
+          <td class="paramname"> <em>longName</em>          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td width="100%"></td>
+          <td width="100%"><code> [inline]</code></td>
         </tr>
       </table>
 </div>
@@ -815,24 +815,22 @@ Finds the option which is bound to this name.
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>pointer to option or NULL </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00566">566</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
+Definition at line <a class="el" href="_pg_options_8h-source.html#l00322">322</a> of file <a class="el" href="_pg_options_8h-source.html">PgOptions.h</a>.
 <p>
-References <a class="el" href="_pg_options_8h-source.html#l00227">m_option_map</a>.
-<p>
-Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00688">matchOneArg()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00574">mustFindOpt()</a>.
+Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00678">matchOneArg()</a>.
 </div>
 </div><p>
-<a class="anchor" name="cb645e631e5f0689b9661802af9f1c6e"></a><!-- doxytag: member="PgOptions::mustFindOpt" ref="cb645e631e5f0689b9661802af9f1c6e" args="(const std::string &amp;name)" -->
+<a class="anchor" name="e6b1d72f578de5a557f3b891885e18b5"></a><!-- doxytag: member="PgOptions::mustFindOpt" ref="e6b1d72f578de5a557f3b891885e18b5" args="(const std::string &amp;name)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_pg_opt.html">PgOpt</a> * PgOptions::mustFindOpt           </td>
+          <td class="memname"><a class="el" href="class_pg_opt.html">PgOpt</a>* PgOptions::mustFindOpt           </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&nbsp;</td>
           <td class="paramname"> <em>name</em>          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td width="100%"></td>
+          <td width="100%"><code> [inline]</code></td>
         </tr>
       </table>
 </div>
@@ -849,11 +847,11 @@ Same as findOpt, but aborts if not option is not found.
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>pointer to option </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00574">574</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
+Definition at line <a class="el" href="_pg_options_8h-source.html#l00333">333</a> of file <a class="el" href="_pg_options_8h-source.html">PgOptions.h</a>.
 <p>
-References <a class="el" href="_err_8cpp-source.html#l00057">Err::errAbort()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00566">findOpt()</a>.
+References <a class="el" href="_err_8cpp-source.html#l00068">Err::errAbort()</a>.
 <p>
-Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00830">clear()</a>, <a class="el" href="_dump_pgf_8cpp-source.html#l00095">dumpPgf::dumpPgf()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00082">PgOptionsSAXHandler::endDocument()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00835">get()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00840">getBool()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00845">getDouble()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00850">getInt()</a>, <a class="el" href="tsv-util_8cpp-source.html#l00566">main()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00104">PgOptionsSAXHandler::startElement()</a>.
+Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00820">clear()</a>, <a class="el" href="_dump_pgf_8cpp-source.html#l00095">dumpPgf::dumpPgf()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00081">PgOptionsSAXHandler::endDocument()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00825">getBool()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00830">getDouble()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00835">getInt()</a>, <a class="el" href="tsv-util_8cpp-source.html#l00506">main()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00106">PgOptionsSAXHandler::startElement()</a>.
 </div>
 </div><p>
 <a class="anchor" name="782383c669973fc4983400f2239abd53"></a><!-- doxytag: member="PgOptions::printStringWidth" ref="782383c669973fc4983400f2239abd53" args="(const std::string &amp;str, int prefix=0, int currentPos=0, int maxWidth=70)" -->
@@ -906,11 +904,11 @@ Print a string wrapping at max width from the current position.
 </dl>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00582">582</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
+Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00574">574</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
 <p>
-References <a class="el" href="_util_8cpp-source.html#l01424">Util::printStringWidth()</a>.
+References <a class="el" href="_util_8cpp-source.html#l00767">Util::printStringWidth()</a>.
 <p>
-Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00586">usage()</a>.
+Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00578">usage()</a>.
 </div>
 </div><p>
 <a class="anchor" name="da18bd8d5b64cf07665e679cc85875c0"></a><!-- doxytag: member="PgOptions::usage" ref="da18bd8d5b64cf07665e679cc85875c0" args="(bool printOpts=true)" -->
@@ -939,11 +937,11 @@ Print out a litte ditty about program and its usage.
 </dl>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8h-source.html#l00341">341</a> of file <a class="el" href="_pg_options_8h-source.html">PgOptions.h</a>.
+Definition at line <a class="el" href="_pg_options_8h-source.html#l00351">351</a> of file <a class="el" href="_pg_options_8h-source.html">PgOptions.h</a>.
 <p>
 References <a class="el" href="tsv-example_8cpp-source.html#l00413">usage()</a>.
 <p>
-Referenced by <a class="el" href="_dump_pgf_8cpp-source.html#l00095">dumpPgf::dumpPgf()</a>, <a class="el" href="tsv-util_8cpp-source.html#l00566">main()</a>, and <a class="el" href="_tsv_join_8cpp-source.html#l00067">tsvJoin::tsvJoin()</a>.
+Referenced by <a class="el" href="_dump_pgf_8cpp-source.html#l00095">dumpPgf::dumpPgf()</a>, <a class="el" href="tsv-util_8cpp-source.html#l00506">main()</a>, and <a class="el" href="_tsv_join_8cpp-source.html#l00068">tsvJoin::tsvJoin()</a>.
 </div>
 </div><p>
 <a class="anchor" name="34e6f67b6cc451ad41bf6159a58e20c2"></a><!-- doxytag: member="PgOptions::usage" ref="34e6f67b6cc451ad41bf6159a58e20c2" args="(std::set&lt; std::string &gt; &amp;hiddenOpts, bool printOpts=true)" -->
@@ -980,9 +978,9 @@ Print out a litte ditty about program and its usage. <dl compact><dt><b>Paramete
 </dl>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00586">586</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
+Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00578">578</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
 <p>
-References <a class="el" href="_pg_options_8cpp-source.html#l00433">getUsage()</a>, <a class="el" href="_pg_options_8h-source.html#l00129">PgOpt::m_defaultValue</a>, <a class="el" href="_pg_options_8h-source.html#l00127">PgOpt::m_help</a>, <a class="el" href="_pg_options_8h-source.html#l00125">PgOpt::m_longName</a>, <a class="el" href="_pg_options_8h-source.html#l00224">m_option_section</a>, <a class="el" href="_pg_options_8h-source.html#l00222">m_option_vec</a>, <a class="el" href="_pg_options_8h-source.html#l00124">PgOpt::m_shortName</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00582">printStringWidth()</a>.
+References <a class="el" href="_pg_options_8cpp-source.html#l00435">getUsage()</a>, <a class="el" href="_pg_options_8h-source.html#l00125">PgOpt::m_defaultValue</a>, <a class="el" href="_pg_options_8h-source.html#l00123">PgOpt::m_help</a>, <a class="el" href="_pg_options_8h-source.html#l00121">PgOpt::m_longName</a>, <a class="el" href="_pg_options_8h-source.html#l00220">m_option_section</a>, <a class="el" href="_pg_options_8h-source.html#l00218">m_option_vec</a>, <a class="el" href="_pg_options_8h-source.html#l00120">PgOpt::m_shortName</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00574">printStringWidth()</a>.
 </div>
 </div><p>
 <a class="anchor" name="fb2acbc339ff978eee109450c7b4bc07"></a><!-- doxytag: member="PgOptions::parseArgv" ref="fb2acbc339ff978eee109450c7b4bc07" args="(const char *const *const argv, int start=1)" -->
@@ -1022,11 +1020,11 @@ Match the command line arguments from.
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>the last position in argv parsed (will stop at "--") </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00653">653</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
+Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00645">645</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
 <p>
-References <a class="el" href="_pg_options_8h-source.html#l00231">m_argv</a>, <a class="el" href="_pg_options_8cpp-source.html#l00688">matchOneArg()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00456">setArgv()</a>.
+References <a class="el" href="_pg_options_8h-source.html#l00227">m_argv</a>, <a class="el" href="_pg_options_8cpp-source.html#l00678">matchOneArg()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00458">setArgv()</a>.
 <p>
-Referenced by <a class="el" href="_dump_pgf_8cpp-source.html#l00095">dumpPgf::dumpPgf()</a>, <a class="el" href="tsv-util_8cpp-source.html#l00566">main()</a>, and <a class="el" href="_tsv_join_8cpp-source.html#l00067">tsvJoin::tsvJoin()</a>.
+Referenced by <a class="el" href="_dump_pgf_8cpp-source.html#l00095">dumpPgf::dumpPgf()</a>, <a class="el" href="tsv-util_8cpp-source.html#l00506">main()</a>, and <a class="el" href="_tsv_join_8cpp-source.html#l00068">tsvJoin::tsvJoin()</a>.
 </div>
 </div><p>
 <a class="anchor" name="0c0538188cc6d6b418f7bbffa541bc1d"></a><!-- doxytag: member="PgOptions::setArgv" ref="0c0538188cc6d6b418f7bbffa541bc1d" args="(const char *const *const argv)" -->
@@ -1055,11 +1053,11 @@ the args to m_arg
 </dl>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00456">456</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
+Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00458">458</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
 <p>
-References <a class="el" href="_pg_options_8h-source.html#l00231">m_argv</a>, and <a class="el" href="_pg_options_8h-source.html#l00229">m_progName</a>.
+References <a class="el" href="_pg_options_8h-source.html#l00227">m_argv</a>, and <a class="el" href="_pg_options_8h-source.html#l00225">m_progName</a>.
 <p>
-Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00653">parseArgv()</a>.
+Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00645">parseArgv()</a>.
 </div>
 </div><p>
 <a class="anchor" name="b6cbc7548fa83eac180030221f7dbc74"></a><!-- doxytag: member="PgOptions::matchOneArg" ref="b6cbc7548fa83eac180030221f7dbc74" args="(size_t *arg_idx)" -->
@@ -1088,11 +1086,11 @@ Match the arg found at argv[arg_idx].
 </dl>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00688">688</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
+Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00678">678</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
 <p>
-References <a class="el" href="_pg_options_8h-source.html#l00117">PgOpt::BOOL_OPT</a>, <a class="el" href="_pg_options_8cpp-source.html#l00332">PgOpt::checkParseIsOk()</a>, <a class="el" href="_err_8cpp-source.html#l00057">Err::errAbort()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00566">findOpt()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00263">PgOpt::isSet()</a>, <a class="el" href="_pg_options_8h-source.html#l00131">PgOpt::m_allowMultiple</a>, <a class="el" href="_pg_options_8h-source.html#l00232">m_args</a>, <a class="el" href="_pg_options_8h-source.html#l00231">m_argv</a>, <a class="el" href="_pg_options_8h-source.html#l00125">PgOpt::m_longName</a>, <a class="el" href="_pg_options_8h-source.html#l00128">PgOpt::m_type</a>, <a class="el" href="_pg_options_8cpp-source.html#l00267">PgOpt::pushValue()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00870">setOptionsFromXMLFile()</a>, <a class="el" href="_pg_options_8h-source.html#l00171">PgOpt::setValue()</a>, and <a class="el" href="_convert_8cpp-source.html#l00332">Convert::toBoolCheck()</a>.
+References <a class="el" href="_pg_options_8h-source.html#l00113">PgOpt::BOOL_OPT</a>, <a class="el" href="_pg_options_8cpp-source.html#l00334">PgOpt::checkParseIsOk()</a>, <a class="el" href="_err_8cpp-source.html#l00068">Err::errAbort()</a>, <a class="el" href="_pg_options_8h-source.html#l00322">findOpt()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00265">PgOpt::isSet()</a>, <a class="el" href="_pg_options_8h-source.html#l00127">PgOpt::m_allowMultiple</a>, <a class="el" href="_pg_options_8h-source.html#l00228">m_args</a>, <a class="el" href="_pg_options_8h-source.html#l00227">m_argv</a>, <a class="el" href="_pg_options_8h-source.html#l00121">PgOpt::m_longName</a>, <a class="el" href="_pg_options_8h-source.html#l00124">PgOpt::m_type</a>, <a class="el" href="_pg_options_8cpp-source.html#l00269">PgOpt::pushValue()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00855">setOptionsFromXMLFile()</a>, <a class="el" href="_pg_options_8h-source.html#l00167">PgOpt::setValue()</a>, and <a class="el" href="_convert_8cpp-source.html#l00378">Convert::toBoolCheck()</a>.
 <p>
-Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00653">parseArgv()</a>.
+Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00645">parseArgv()</a>.
 </div>
 </div><p>
 <a class="anchor" name="d131d140f2a3ed608738b72eb91818e8"></a><!-- doxytag: member="PgOptions::clear" ref="d131d140f2a3ed608738b72eb91818e8" args="(const std::string &amp;name)" -->
@@ -1121,9 +1119,9 @@ Clear the values for an option.
 </dl>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00830">830</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
+Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00820">820</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
 <p>
-References <a class="el" href="_pg_options_8cpp-source.html#l00248">PgOpt::clearValues()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00574">mustFindOpt()</a>.
+References <a class="el" href="_pg_options_8cpp-source.html#l00250">PgOpt::clearValues()</a>, and <a class="el" href="_pg_options_8h-source.html#l00333">mustFindOpt()</a>.
 </div>
 </div><p>
 <a class="anchor" name="bb87f91f4ee3383ca9144d2f71d016cc"></a><!-- doxytag: member="PgOptions::set" ref="bb87f91f4ee3383ca9144d2f71d016cc" args="(const std::string &amp;name, const std::string &amp;new_value)" -->
@@ -1162,11 +1160,11 @@ Set the value of an option.
 </dl>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8h-source.html#l00369">369</a> of file <a class="el" href="_pg_options_8h-source.html">PgOptions.h</a>.
+Definition at line <a class="el" href="_pg_options_8h-source.html#l00379">379</a> of file <a class="el" href="_pg_options_8h-source.html">PgOptions.h</a>.
 <p>
-References <a class="el" href="_err_8cpp-source.html#l00057">Err::errAbort()</a>.
+References <a class="el" href="_err_8cpp-source.html#l00068">Err::errAbort()</a>.
 <p>
-Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00082">PgOptionsSAXHandler::endDocument()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00104">PgOptionsSAXHandler::startElement()</a>.
+Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00081">PgOptionsSAXHandler::endDocument()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00106">PgOptionsSAXHandler::startElement()</a>.
 </div>
 </div><p>
 <a class="anchor" name="884b318e1d9f3384a95cb1730fca9172"></a><!-- doxytag: member="PgOptions::push" ref="884b318e1d9f3384a95cb1730fca9172" args="(const std::string &amp;name, const std::string &amp;value)" -->
@@ -1205,9 +1203,9 @@ Add a value to an option vector.
 </dl>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8h-source.html#l00383">383</a> of file <a class="el" href="_pg_options_8h-source.html">PgOptions.h</a>.
+Definition at line <a class="el" href="_pg_options_8h-source.html#l00393">393</a> of file <a class="el" href="_pg_options_8h-source.html">PgOptions.h</a>.
 <p>
-Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00082">PgOptionsSAXHandler::endDocument()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00104">PgOptionsSAXHandler::startElement()</a>.
+Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00081">PgOptionsSAXHandler::endDocument()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00106">PgOptionsSAXHandler::startElement()</a>.
 </div>
 </div><p>
 <a class="anchor" name="43eb777dd82aabdee1bc766b5b98ca5b"></a><!-- doxytag: member="PgOptions::get" ref="43eb777dd82aabdee1bc766b5b98ca5b" args="(const std::string &amp;opt_name)" -->
@@ -1220,7 +1218,7 @@ Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00082">PgOptions
           <td class="paramtype">const std::string &amp;&nbsp;</td>
           <td class="paramname"> <em>opt_name</em>          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td width="100%"></td>
+          <td width="100%"><code> [inline]</code></td>
         </tr>
       </table>
 </div>
@@ -1237,11 +1235,9 @@ Get the value of the option as a string.
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>the value. Abort if not found. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00835">835</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
+Definition at line <a class="el" href="_pg_options_8h-source.html#l00399">399</a> of file <a class="el" href="_pg_options_8h-source.html">PgOptions.h</a>.
 <p>
-References <a class="el" href="_pg_options_8cpp-source.html#l00280">PgOpt::getValue()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00574">mustFindOpt()</a>.
-<p>
-Referenced by <a class="el" href="_dump_pgf_8cpp-source.html#l00095">dumpPgf::dumpPgf()</a>, <a class="el" href="tsv-util_8cpp-source.html#l00566">main()</a>, and <a class="el" href="_tsv_join_8cpp-source.html#l00067">tsvJoin::tsvJoin()</a>.
+Referenced by <a class="el" href="_dump_pgf_8cpp-source.html#l00095">dumpPgf::dumpPgf()</a>, <a class="el" href="tsv-util_8cpp-source.html#l00506">main()</a>, and <a class="el" href="_tsv_join_8cpp-source.html#l00068">tsvJoin::tsvJoin()</a>.
 </div>
 </div><p>
 <a class="anchor" name="2558435fb2edc0b54c22e320f637e812"></a><!-- doxytag: member="PgOptions::getBool" ref="2558435fb2edc0b54c22e320f637e812" args="(const std::string &amp;opt_name)" -->
@@ -1271,11 +1267,11 @@ Get the value of the option as a boolean.
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>the value. Abort if not found. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00840">840</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
+Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00825">825</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
 <p>
-References <a class="el" href="_pg_options_8cpp-source.html#l00297">PgOpt::getValueBool()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00574">mustFindOpt()</a>.
+References <a class="el" href="_pg_options_8cpp-source.html#l00299">PgOpt::getValueBool()</a>, and <a class="el" href="_pg_options_8h-source.html#l00333">mustFindOpt()</a>.
 <p>
-Referenced by <a class="el" href="_dump_pgf_8cpp-source.html#l00095">dumpPgf::dumpPgf()</a>, <a class="el" href="tsv-util_8cpp-source.html#l00566">main()</a>, and <a class="el" href="_tsv_join_8cpp-source.html#l00067">tsvJoin::tsvJoin()</a>.
+Referenced by <a class="el" href="_dump_pgf_8cpp-source.html#l00095">dumpPgf::dumpPgf()</a>, <a class="el" href="tsv-util_8cpp-source.html#l00506">main()</a>, and <a class="el" href="_tsv_join_8cpp-source.html#l00068">tsvJoin::tsvJoin()</a>.
 </div>
 </div><p>
 <a class="anchor" name="302506f4d392b4f98ff8077d99a6a5ea"></a><!-- doxytag: member="PgOptions::getDouble" ref="302506f4d392b4f98ff8077d99a6a5ea" args="(const std::string &amp;opt_name)" -->
@@ -1305,11 +1301,11 @@ Get the value of the option as a double.
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>the value. Abort if not found. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00845">845</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
+Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00830">830</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
 <p>
-References <a class="el" href="_pg_options_8cpp-source.html#l00303">PgOpt::getValueDouble()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00574">mustFindOpt()</a>.
+References <a class="el" href="_pg_options_8cpp-source.html#l00305">PgOpt::getValueDouble()</a>, and <a class="el" href="_pg_options_8h-source.html#l00333">mustFindOpt()</a>.
 <p>
-Referenced by <a class="el" href="tsv-util_8cpp-source.html#l00566">main()</a>.
+Referenced by <a class="el" href="tsv-util_8cpp-source.html#l00506">main()</a>.
 </div>
 </div><p>
 <a class="anchor" name="ad90f35336ffd02498d5487d40919641"></a><!-- doxytag: member="PgOptions::getInt" ref="ad90f35336ffd02498d5487d40919641" args="(const std::string &amp;opt_name)" -->
@@ -1339,11 +1335,11 @@ Get the value of the option as a int.
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>the value. Abort if not found. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00850">850</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
+Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00835">835</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
 <p>
-References <a class="el" href="_pg_options_8cpp-source.html#l00300">PgOpt::getValueInt()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00574">mustFindOpt()</a>.
+References <a class="el" href="_pg_options_8cpp-source.html#l00302">PgOpt::getValueInt()</a>, and <a class="el" href="_pg_options_8h-source.html#l00333">mustFindOpt()</a>.
 <p>
-Referenced by <a class="el" href="tsv-util_8cpp-source.html#l00566">main()</a>.
+Referenced by <a class="el" href="tsv-util_8cpp-source.html#l00506">main()</a>.
 </div>
 </div><p>
 <a class="anchor" name="c7faa5974d76730c1ac29123c4aeeea4"></a><!-- doxytag: member="PgOptions::getArgCount" ref="c7faa5974d76730c1ac29123c4aeeea4" args="()" -->
@@ -1367,11 +1363,11 @@ The number of left over args.
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>int </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00447">447</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
+Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00449">449</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
 <p>
-References <a class="el" href="_pg_options_8h-source.html#l00232">m_args</a>.
+References <a class="el" href="_pg_options_8h-source.html#l00228">m_args</a>.
 <p>
-Referenced by <a class="el" href="tsv-util_8cpp-source.html#l00566">main()</a>, and <a class="el" href="_tsv_join_8cpp-source.html#l00067">tsvJoin::tsvJoin()</a>.
+Referenced by <a class="el" href="tsv-util_8cpp-source.html#l00506">main()</a>, and <a class="el" href="_tsv_join_8cpp-source.html#l00068">tsvJoin::tsvJoin()</a>.
 </div>
 </div><p>
 <a class="anchor" name="96eb31df61e35a05185227da2e1fe2b5"></a><!-- doxytag: member="PgOptions::getArg" ref="96eb31df61e35a05185227da2e1fe2b5" args="(int index)" -->
@@ -1401,11 +1397,11 @@ Get the IDXth arg.
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>string </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00443">443</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
+Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00445">445</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
 <p>
-References <a class="el" href="_pg_options_8h-source.html#l00232">m_args</a>.
+References <a class="el" href="_pg_options_8h-source.html#l00228">m_args</a>.
 <p>
-Referenced by <a class="el" href="tsv-util_8cpp-source.html#l00566">main()</a>, and <a class="el" href="_tsv_join_8cpp-source.html#l00067">tsvJoin::tsvJoin()</a>.
+Referenced by <a class="el" href="tsv-util_8cpp-source.html#l00506">main()</a>, and <a class="el" href="_tsv_join_8cpp-source.html#l00068">tsvJoin::tsvJoin()</a>.
 </div>
 </div><p>
 <a class="anchor" name="7c205e8cbea8d42a5a2b21261e1aaa4b"></a><!-- doxytag: member="PgOptions::getArgVector" ref="7c205e8cbea8d42a5a2b21261e1aaa4b" args="()" -->
@@ -1429,11 +1425,11 @@ Get the args as a vector.
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>vector of args. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00439">439</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
+Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00441">441</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
 <p>
-References <a class="el" href="_pg_options_8h-source.html#l00232">m_args</a>.
+References <a class="el" href="_pg_options_8h-source.html#l00228">m_args</a>.
 <p>
-Referenced by <a class="el" href="tsv-util_8cpp-source.html#l00566">main()</a>.
+Referenced by <a class="el" href="tsv-util_8cpp-source.html#l00506">main()</a>.
 </div>
 </div><p>
 <a class="anchor" name="26a39a7ac8520afdc911a10ba6c9b667"></a><!-- doxytag: member="PgOptions::getProgName" ref="26a39a7ac8520afdc911a10ba6c9b667" args="()" -->
@@ -1457,11 +1453,11 @@ The name of the program (argv[0]).
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>string </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00451">451</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
+Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00453">453</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
 <p>
-References <a class="el" href="_pg_options_8h-source.html#l00229">m_progName</a>.
+References <a class="el" href="_pg_options_8h-source.html#l00225">m_progName</a>.
 <p>
-Referenced by <a class="el" href="apt-engine-wrapper_8cpp-source.html#l00126">main()</a>.
+Referenced by <a class="el" href="apt-engine-wrapper_8cpp-source.html#l00043">main()</a>.
 </div>
 </div><p>
 <a class="anchor" name="8dd388ae81e4dfdb0ff449a4e223e1ad"></a><!-- doxytag: member="PgOptions::resetToDefaults" ref="8dd388ae81e4dfdb0ff449a4e223e1ad" args="()" -->
@@ -1484,9 +1480,9 @@ same as clearValues
 <p>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00670">670</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
+Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00660">660</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
 <p>
-References <a class="el" href="_pg_options_8h-source.html#l00232">m_args</a>, <a class="el" href="_pg_options_8h-source.html#l00231">m_argv</a>, and <a class="el" href="_pg_options_8h-source.html#l00222">m_option_vec</a>.
+References <a class="el" href="_pg_options_8h-source.html#l00228">m_args</a>, <a class="el" href="_pg_options_8h-source.html#l00227">m_argv</a>, and <a class="el" href="_pg_options_8h-source.html#l00218">m_option_vec</a>.
 </div>
 </div><p>
 <a class="anchor" name="ca0bae371b43ea9d252ef28206f88d24"></a><!-- doxytag: member="PgOptions::clearValues" ref="ca0bae371b43ea9d252ef28206f88d24" args="()" -->
@@ -1509,9 +1505,9 @@ clear all the values from the PgOpts and internal state.
 <p>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00484">484</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
+Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00486">486</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
 <p>
-References <a class="el" href="_pg_options_8h-source.html#l00222">m_option_vec</a>.
+References <a class="el" href="_pg_options_8h-source.html#l00218">m_option_vec</a>.
 </div>
 </div><p>
 <a class="anchor" name="0dadd2ad156729f65987c38bc2809b77"></a><!-- doxytag: member="PgOptions::commandLine" ref="0dadd2ad156729f65987c38bc2809b77" args="()" -->
@@ -1535,9 +1531,9 @@ A space seperated list of the argv we were given.
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>string </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00468">468</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
+Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00470">470</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
 <p>
-References <a class="el" href="_pg_options_8h-source.html#l00231">m_argv</a>.
+References <a class="el" href="_pg_options_8h-source.html#l00227">m_argv</a>.
 <p>
 Referenced by <a class="el" href="_dump_pgf_8cpp-source.html#l00095">dumpPgf::dumpPgf()</a>.
 </div>
@@ -1563,9 +1559,9 @@ The size of the argv we were inited with.
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>the size of argv </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00858">858</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
+Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00843">843</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
 <p>
-References <a class="el" href="_pg_options_8h-source.html#l00231">m_argv</a>.
+References <a class="el" href="_pg_options_8h-source.html#l00227">m_argv</a>.
 <p>
 Referenced by <a class="el" href="_dump_pgf_8cpp-source.html#l00095">dumpPgf::dumpPgf()</a>.
 </div>
@@ -1597,9 +1593,9 @@ Get the idxth entry in the argv which was supplied.
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>the entry. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00861">861</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
+Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00846">846</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
 <p>
-References <a class="el" href="_pg_options_8h-source.html#l00231">m_argv</a>.
+References <a class="el" href="_pg_options_8h-source.html#l00227">m_argv</a>.
 </div>
 </div><p>
 <a class="anchor" name="bb4bfffa9bfe34dd4a0ad86c5b876bab"></a><!-- doxytag: member="PgOptions::dump" ref="bb4bfffa9bfe34dd4a0ad86c5b876bab" args="()" -->
@@ -1622,9 +1618,9 @@ Dump the internal state for debugging.
 <p>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00678">678</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
+Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00668">668</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
 <p>
-References <a class="el" href="_pg_options_8h-source.html#l00232">m_args</a>, and <a class="el" href="_pg_options_8h-source.html#l00222">m_option_vec</a>.
+References <a class="el" href="_pg_options_8h-source.html#l00228">m_args</a>, and <a class="el" href="_pg_options_8h-source.html#l00218">m_option_vec</a>.
 </div>
 </div><p>
 <a class="anchor" name="bbbe0bb438f7acf9285adce7ce945d6d"></a><!-- doxytag: member="PgOptions::isOptDefined" ref="bbbe0bb438f7acf9285adce7ce945d6d" args="(const std::string &amp;name)" -->
@@ -1646,9 +1642,9 @@ References <a class="el" href="_pg_options_8h-source.html#l00232">m_args</a>, an
 <p>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8h-source.html#l00440">440</a> of file <a class="el" href="_pg_options_8h-source.html">PgOptions.h</a>.
+Definition at line <a class="el" href="_pg_options_8h-source.html#l00454">454</a> of file <a class="el" href="_pg_options_8h-source.html">PgOptions.h</a>.
 <p>
-Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00104">PgOptionsSAXHandler::startElement()</a>.
+Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00106">PgOptionsSAXHandler::startElement()</a>.
 </div>
 </div><p>
 <a class="anchor" name="fcc5461454212b9a18e7f5b51e934e71"></a><!-- doxytag: member="PgOptions::getXMLParameterFileName" ref="fcc5461454212b9a18e7f5b51e934e71" args="()" -->
@@ -1669,7 +1665,7 @@ Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00104">PgOptions
 <p>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8h-source.html#l00442">442</a> of file <a class="el" href="_pg_options_8h-source.html">PgOptions.h</a>.
+Definition at line <a class="el" href="_pg_options_8h-source.html#l00456">456</a> of file <a class="el" href="_pg_options_8h-source.html">PgOptions.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="6c2c6b09a41d0243094f083f021e7b77"></a><!-- doxytag: member="PgOptions::getXMLParameterFileGuid" ref="6c2c6b09a41d0243094f083f021e7b77" args="()" -->
@@ -1690,9 +1686,9 @@ Definition at line <a class="el" href="_pg_options_8h-source.html#l00442">442</a
 <p>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8h-source.html#l00443">443</a> of file <a class="el" href="_pg_options_8h-source.html">PgOptions.h</a>.
+Definition at line <a class="el" href="_pg_options_8h-source.html#l00457">457</a> of file <a class="el" href="_pg_options_8h-source.html">PgOptions.h</a>.
 <p>
-Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00104">PgOptionsSAXHandler::startElement()</a>.
+Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00106">PgOptionsSAXHandler::startElement()</a>.
 </div>
 </div><p>
 <a class="anchor" name="36e35dde0c29463e96dad1ddc6b3cdb4"></a><!-- doxytag: member="PgOptions::setOptionsFromXMLFile" ref="36e35dde0c29463e96dad1ddc6b3cdb4" args="(const std::string &amp;strFileName, std::vector&lt; std::string &gt; &amp;vFileNames)" -->
@@ -1729,11 +1725,11 @@ Load parameters from an XML file.<p>
 </dl>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00870">870</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
+Definition at line <a class="el" href="_pg_options_8cpp-source.html#l00855">855</a> of file <a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a>.
 <p>
-References <a class="el" href="_err_8cpp-source.html#l00057">Err::errAbort()</a>, <a class="el" href="_pg_options_8h-source.html#l00235">m_strXMLParameterFileName</a>, <a class="el" href="_verbose_8cpp-source.html#l00168">Verbose::out()</a>, <a class="el" href="_affx_file_8cpp-source.html#l00240">AffxFile::parseFileName()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00097">PgOptionsSAXHandler::toString()</a>.
+References <a class="el" href="_fs_8cpp-source.html#l00368">Fs::basename()</a>, <a class="el" href="_err_8cpp-source.html#l00068">Err::errAbort()</a>, <a class="el" href="_pg_options_8h-source.html#l00231">m_strXMLParameterFileName</a>, <a class="el" href="_verbose_8cpp-source.html#l00259">Verbose::out()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00097">PgOptionsSAXHandler::toString()</a>.
 <p>
-Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00688">matchOneArg()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00104">PgOptionsSAXHandler::startElement()</a>.
+Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00678">matchOneArg()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00106">PgOptionsSAXHandler::startElement()</a>.
 </div>
 </div><p>
 <hr><h2>Friends And Related Function Documentation</h2>
@@ -1751,7 +1747,7 @@ Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00688">matchOneA
 <p>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8h-source.html#l00209">209</a> of file <a class="el" href="_pg_options_8h-source.html">PgOptions.h</a>.
+Definition at line <a class="el" href="_pg_options_8h-source.html#l00205">205</a> of file <a class="el" href="_pg_options_8h-source.html">PgOptions.h</a>.
 </div>
 </div><p>
 <hr><h2>Member Data Documentation</h2>
@@ -1771,9 +1767,9 @@ Definition at line <a class="el" href="_pg_options_8h-source.html#l00209">209</a
 <p>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8h-source.html#l00220">220</a> of file <a class="el" href="_pg_options_8h-source.html">PgOptions.h</a>.
+Definition at line <a class="el" href="_pg_options_8h-source.html#l00216">216</a> of file <a class="el" href="_pg_options_8h-source.html">PgOptions.h</a>.
 <p>
-Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00362">clear()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00433">getUsage()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00381">operator=()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00411">PgOptions()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00429">setUsage()</a>.
+Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00364">clear()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00435">getUsage()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00383">operator=()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00413">PgOptions()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00431">setUsage()</a>.
 </div>
 </div><p>
 <a class="anchor" name="4974e0550fed704907725a2357aa3ef8"></a><!-- doxytag: member="PgOptions::m_option_vec" ref="4974e0550fed704907725a2357aa3ef8" args="" -->
@@ -1792,9 +1788,9 @@ Map of indexes for option section starts.
 <p>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8h-source.html#l00222">222</a> of file <a class="el" href="_pg_options_8h-source.html">PgOptions.h</a>.
+Definition at line <a class="el" href="_pg_options_8h-source.html#l00218">218</a> of file <a class="el" href="_pg_options_8h-source.html">PgOptions.h</a>.
 <p>
-Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00505">addPgOpt_nocopy()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00396">appendOptions()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00362">clear()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00484">clearValues()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00523">defineOptionSection()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00678">dump()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00411">PgOptions()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00670">resetToDefaults()</a>, <a class="el" href="_options_8h-source.html#l00213">Options::setOptions()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00586">usage()</a>.
+Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00507">addPgOpt_nocopy()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00398">appendOptions()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00364">clear()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00486">clearValues()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00531">defineOptionSection()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00668">dump()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00413">PgOptions()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00660">resetToDefaults()</a>, <a class="el" href="_options_8h-source.html#l00221">Options::setOptions()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00578">usage()</a>.
 </div>
 </div><p>
 <a class="anchor" name="3d7184e379a665c1df2d9987075082c9"></a><!-- doxytag: member="PgOptions::m_option_section" ref="3d7184e379a665c1df2d9987075082c9" args="" -->
@@ -1813,9 +1809,9 @@ Map option names to <a class="el" href="class_pg_opt.html" title="The definition
 <p>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8h-source.html#l00224">224</a> of file <a class="el" href="_pg_options_8h-source.html">PgOptions.h</a>.
+Definition at line <a class="el" href="_pg_options_8h-source.html#l00220">220</a> of file <a class="el" href="_pg_options_8h-source.html">PgOptions.h</a>.
 <p>
-Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00396">appendOptions()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00362">clear()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00523">defineOptionSection()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00411">PgOptions()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00586">usage()</a>.
+Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00398">appendOptions()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00364">clear()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00531">defineOptionSection()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00413">PgOptions()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00578">usage()</a>.
 </div>
 </div><p>
 <a class="anchor" name="2ebb738e0abe17ae27cba1577bbc2985"></a><!-- doxytag: member="PgOptions::m_option_map" ref="2ebb738e0abe17ae27cba1577bbc2985" args="" -->
@@ -1834,9 +1830,9 @@ name of this program.
 <p>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8h-source.html#l00227">227</a> of file <a class="el" href="_pg_options_8h-source.html">PgOptions.h</a>.
+Definition at line <a class="el" href="_pg_options_8h-source.html#l00223">223</a> of file <a class="el" href="_pg_options_8h-source.html">PgOptions.h</a>.
 <p>
-Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00505">addPgOpt_nocopy()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00490">bind()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00362">clear()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00566">findOpt()</a>.
+Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00507">addPgOpt_nocopy()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00492">bind()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00364">clear()</a>.
 </div>
 </div><p>
 <a class="anchor" name="71d13e84570c2cb7e1dfa0320aa2e50a"></a><!-- doxytag: member="PgOptions::m_progName" ref="71d13e84570c2cb7e1dfa0320aa2e50a" args="" -->
@@ -1855,9 +1851,9 @@ A copy argv we were given.
 <p>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8h-source.html#l00229">229</a> of file <a class="el" href="_pg_options_8h-source.html">PgOptions.h</a>.
+Definition at line <a class="el" href="_pg_options_8h-source.html#l00225">225</a> of file <a class="el" href="_pg_options_8h-source.html">PgOptions.h</a>.
 <p>
-Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00362">clear()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00451">getProgName()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00381">operator=()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00411">PgOptions()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00456">setArgv()</a>.
+Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00364">clear()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00453">getProgName()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00383">operator=()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00413">PgOptions()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00458">setArgv()</a>.
 </div>
 </div><p>
 <a class="anchor" name="17a80a6999eafd2eb32c87e581988716"></a><!-- doxytag: member="PgOptions::m_argv" ref="17a80a6999eafd2eb32c87e581988716" args="" -->
@@ -1876,9 +1872,9 @@ Non option arguments.
 <p>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8h-source.html#l00231">231</a> of file <a class="el" href="_pg_options_8h-source.html">PgOptions.h</a>.
+Definition at line <a class="el" href="_pg_options_8h-source.html#l00227">227</a> of file <a class="el" href="_pg_options_8h-source.html">PgOptions.h</a>.
 <p>
-Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00858">argc()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00861">argv()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00362">clear()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00468">commandLine()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00688">matchOneArg()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00381">operator=()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00653">parseArgv()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00411">PgOptions()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00670">resetToDefaults()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00456">setArgv()</a>.
+Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00843">argc()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00846">argv()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00364">clear()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00470">commandLine()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00678">matchOneArg()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00383">operator=()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00645">parseArgv()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00413">PgOptions()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00660">resetToDefaults()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00458">setArgv()</a>.
 </div>
 </div><p>
 <a class="anchor" name="2dbbf366e3baa476f89abe6658be1b7a"></a><!-- doxytag: member="PgOptions::m_args" ref="2dbbf366e3baa476f89abe6658be1b7a" args="" -->
@@ -1895,9 +1891,9 @@ Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00858">argc()</a
 <p>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8h-source.html#l00232">232</a> of file <a class="el" href="_pg_options_8h-source.html">PgOptions.h</a>.
+Definition at line <a class="el" href="_pg_options_8h-source.html#l00228">228</a> of file <a class="el" href="_pg_options_8h-source.html">PgOptions.h</a>.
 <p>
-Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00362">clear()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00678">dump()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00443">getArg()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00447">getArgCount()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00439">getArgVector()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00688">matchOneArg()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00381">operator=()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00411">PgOptions()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00670">resetToDefaults()</a>.
+Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00364">clear()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00668">dump()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00445">getArg()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00449">getArgCount()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00441">getArgVector()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00678">matchOneArg()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00383">operator=()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00413">PgOptions()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00660">resetToDefaults()</a>.
 </div>
 </div><p>
 <a class="anchor" name="a95a621b0c1295d2237908ba2243e968"></a><!-- doxytag: member="PgOptions::m_strXMLParameterFileName" ref="a95a621b0c1295d2237908ba2243e968" args="" -->
@@ -1914,9 +1910,9 @@ Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00362">clear()</
 <p>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8h-source.html#l00235">235</a> of file <a class="el" href="_pg_options_8h-source.html">PgOptions.h</a>.
+Definition at line <a class="el" href="_pg_options_8h-source.html#l00231">231</a> of file <a class="el" href="_pg_options_8h-source.html">PgOptions.h</a>.
 <p>
-Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00362">clear()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00411">PgOptions()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00870">setOptionsFromXMLFile()</a>.
+Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00364">clear()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00413">PgOptions()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00855">setOptionsFromXMLFile()</a>.
 </div>
 </div><p>
 <a class="anchor" name="225ee7ef87daffbaa151098593abe47e"></a><!-- doxytag: member="PgOptions::m_strXMLParameterFileGuid" ref="225ee7ef87daffbaa151098593abe47e" args="" -->
@@ -1933,14 +1929,14 @@ Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00362">clear()</
 <p>
 
 <p>
-Definition at line <a class="el" href="_pg_options_8h-source.html#l00238">238</a> of file <a class="el" href="_pg_options_8h-source.html">PgOptions.h</a>.
+Definition at line <a class="el" href="_pg_options_8h-source.html#l00234">234</a> of file <a class="el" href="_pg_options_8h-source.html">PgOptions.h</a>.
 <p>
-Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00362">clear()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00411">PgOptions()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00104">PgOptionsSAXHandler::startElement()</a>.
+Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00364">clear()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00413">PgOptions()</a>, and <a class="el" href="_pg_options_8cpp-source.html#l00106">PgOptionsSAXHandler::startElement()</a>.
 </div>
 </div><p>
 <hr>The documentation for this class was generated from the following files:<ul>
 <li>C:/FusionSDK/affy/sdk/util/<a class="el" href="_pg_options_8h-source.html">PgOptions.h</a><li>C:/FusionSDK/affy/sdk/util/<a class="el" href="_pg_options_8cpp-source.html">PgOptions.cpp</a></ul>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:34 2009 for Affymetrix Fusion SDK by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:45 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

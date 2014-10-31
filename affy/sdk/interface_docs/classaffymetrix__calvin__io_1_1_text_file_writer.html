@@ -70,7 +70,7 @@ Definition at line <a class="el" href="_text_file_writer_8h-source.html#l00043">
 <p>
 Constructor 
 <p>
-Definition at line <a class="el" href="_text_file_writer_8cpp-source.html#l00029">29</a> of file <a class="el" href="_text_file_writer_8cpp-source.html">TextFileWriter.cpp</a>.
+Definition at line <a class="el" href="_text_file_writer_8cpp-source.html#l00031">31</a> of file <a class="el" href="_text_file_writer_8cpp-source.html">TextFileWriter.cpp</a>.
 </div>
 </div><p>
 <a class="anchor" name="e9a477a725909138b4b2f36070e7fdff"></a><!-- doxytag: member="affymetrix_calvin_io::TextFileWriter::~TextFileWriter" ref="e9a477a725909138b4b2f36070e7fdff" args="()" -->
@@ -91,7 +91,7 @@ Definition at line <a class="el" href="_text_file_writer_8cpp-source.html#l00029
 <p>
 Destructor 
 <p>
-Definition at line <a class="el" href="_text_file_writer_8cpp-source.html#l00036">36</a> of file <a class="el" href="_text_file_writer_8cpp-source.html">TextFileWriter.cpp</a>.
+Definition at line <a class="el" href="_text_file_writer_8cpp-source.html#l00038">38</a> of file <a class="el" href="_text_file_writer_8cpp-source.html">TextFileWriter.cpp</a>.
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
@@ -120,11 +120,11 @@ Opens the file for writing.<p>
 </dl>
 
 <p>
-Definition at line <a class="el" href="_text_file_writer_8cpp-source.html#l00053">53</a> of file <a class="el" href="_text_file_writer_8cpp-source.html">TextFileWriter.cpp</a>.
+Definition at line <a class="el" href="_text_file_writer_8cpp-source.html#l00055">55</a> of file <a class="el" href="_text_file_writer_8cpp-source.html">TextFileWriter.cpp</a>.
 <p>
-References <a class="el" href="_text_file_writer_8h-source.html#l00054">fileStream</a>.
+References <a class="el" href="_fs_8cpp-source.html#l01420">Fs::aptOpen()</a>, <a class="el" href="_text_file_writer_8h-source.html#l00054">fileStream</a>, and <a class="el" href="_date_time_8cpp-source.html#l00107">affymetrix_calvin_utilities::DateTime::GetCurrentDateTime()</a>.
 <p>
-Referenced by <a class="el" href="_text_file_writer_8cpp-source.html#l00043">WriteFile()</a>.
+Referenced by <a class="el" href="_text_file_writer_8cpp-source.html#l00045">WriteFile()</a>.
 </div>
 </div><p>
 <a class="anchor" name="935eb03cf1c8215460cacbf1d4eea415"></a><!-- doxytag: member="affymetrix_calvin_io::TextFileWriter::WriteFileBody" ref="935eb03cf1c8215460cacbf1d4eea415" args="(std::map&lt; std::string, std::string &gt; &amp;textData)" -->
@@ -152,11 +152,11 @@ Writes the body of the file.<p>
 </dl>
 
 <p>
-Definition at line <a class="el" href="_text_file_writer_8cpp-source.html#l00079">79</a> of file <a class="el" href="_text_file_writer_8cpp-source.html">TextFileWriter.cpp</a>.
+Definition at line <a class="el" href="_text_file_writer_8cpp-source.html#l00081">81</a> of file <a class="el" href="_text_file_writer_8cpp-source.html">TextFileWriter.cpp</a>.
 <p>
 References <a class="el" href="_text_file_writer_8h-source.html#l00054">fileStream</a>.
 <p>
-Referenced by <a class="el" href="_text_file_writer_8cpp-source.html#l00043">WriteFile()</a>.
+Referenced by <a class="el" href="_text_file_writer_8cpp-source.html#l00045">WriteFile()</a>.
 </div>
 </div><p>
 <a class="anchor" name="dfa42e1fef4279ce197b5d9c0efc85cb"></a><!-- doxytag: member="affymetrix_calvin_io::TextFileWriter::CloseFile" ref="dfa42e1fef4279ce197b5d9c0efc85cb" args="()" -->
@@ -177,11 +177,11 @@ Referenced by <a class="el" href="_text_file_writer_8cpp-source.html#l00043">Wri
 <p>
 Closes the file 
 <p>
-Definition at line <a class="el" href="_text_file_writer_8cpp-source.html#l00066">66</a> of file <a class="el" href="_text_file_writer_8cpp-source.html">TextFileWriter.cpp</a>.
+Definition at line <a class="el" href="_text_file_writer_8cpp-source.html#l00068">68</a> of file <a class="el" href="_text_file_writer_8cpp-source.html">TextFileWriter.cpp</a>.
 <p>
-References <a class="el" href="_text_file_writer_8h-source.html#l00054">fileStream</a>.
+References <a class="el" href="_text_file_writer_8h-source.html#l00054">fileStream</a>, and <a class="el" href="_date_time_8cpp-source.html#l00107">affymetrix_calvin_utilities::DateTime::GetCurrentDateTime()</a>.
 <p>
-Referenced by <a class="el" href="_text_file_writer_8cpp-source.html#l00043">WriteFile()</a>.
+Referenced by <a class="el" href="_text_file_writer_8cpp-source.html#l00045">WriteFile()</a>.
 </div>
 </div><p>
 <a class="anchor" name="acc30e8f396ac09033307900ec1d027a"></a><!-- doxytag: member="affymetrix_calvin_io::TextFileWriter::WriteFile" ref="acc30e8f396ac09033307900ec1d027a" args="(const std::string &amp;fileName, std::map&lt; std::string, std::string &gt; &amp;textData)" -->
@@ -225,9 +225,9 @@ Writes the parameters to the text file.<p>
 </dl>
 
 <p>
-Definition at line <a class="el" href="_text_file_writer_8cpp-source.html#l00043">43</a> of file <a class="el" href="_text_file_writer_8cpp-source.html">TextFileWriter.cpp</a>.
+Definition at line <a class="el" href="_text_file_writer_8cpp-source.html#l00045">45</a> of file <a class="el" href="_text_file_writer_8cpp-source.html">TextFileWriter.cpp</a>.
 <p>
-References <a class="el" href="_text_file_writer_8cpp-source.html#l00066">CloseFile()</a>, <a class="el" href="_text_file_writer_8cpp-source.html#l00053">OpenFile()</a>, and <a class="el" href="_text_file_writer_8cpp-source.html#l00079">WriteFileBody()</a>.
+References <a class="el" href="_text_file_writer_8cpp-source.html#l00068">CloseFile()</a>, <a class="el" href="_text_file_writer_8cpp-source.html#l00055">OpenFile()</a>, and <a class="el" href="_text_file_writer_8cpp-source.html#l00081">WriteFileBody()</a>.
 </div>
 </div><p>
 <hr><h2>Member Data Documentation</h2>
@@ -247,12 +247,12 @@ The file stream.
 <p>
 Definition at line <a class="el" href="_text_file_writer_8h-source.html#l00054">54</a> of file <a class="el" href="_text_file_writer_8h-source.html">TextFileWriter.h</a>.
 <p>
-Referenced by <a class="el" href="_text_file_writer_8cpp-source.html#l00066">CloseFile()</a>, <a class="el" href="_text_file_writer_8cpp-source.html#l00053">OpenFile()</a>, and <a class="el" href="_text_file_writer_8cpp-source.html#l00079">WriteFileBody()</a>.
+Referenced by <a class="el" href="_text_file_writer_8cpp-source.html#l00068">CloseFile()</a>, <a class="el" href="_text_file_writer_8cpp-source.html#l00055">OpenFile()</a>, and <a class="el" href="_text_file_writer_8cpp-source.html#l00081">WriteFileBody()</a>.
 </div>
 </div><p>
 <hr>The documentation for this class was generated from the following files:<ul>
 <li>C:/FusionSDK/affy/sdk/calvin_files/writers/src/<a class="el" href="_text_file_writer_8h-source.html">TextFileWriter.h</a><li>C:/FusionSDK/affy/sdk/calvin_files/writers/src/<a class="el" href="_text_file_writer_8cpp-source.html">TextFileWriter.cpp</a></ul>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:49 2009 for Affymetrix Fusion SDK by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 13:00:00 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

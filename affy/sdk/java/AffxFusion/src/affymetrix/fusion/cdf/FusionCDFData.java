@@ -218,10 +218,27 @@ public class FusionCDFData {
 		gcosFile = null;
 	}
 
+	/** Returns the associated chip types. */
     public Vector<String> getChipTypes() {
         if (gcosFile != null)
             return gcosFile.getChipTypes();
         else
             return null;
     }
+    
+    /** Returns the guid */
+	public String getGUID() {
+		if (gcosFile != null)
+			return gcosFile.getGUID();
+		else
+			return null;
+	}
+	
+	/** Returns the integrity md5 */
+	public String getIntegrityMd5() {
+		if (gcosFile != null)
+			return gcosFile.getIntegrityMd5();
+		else
+			return null;
+	}
 }

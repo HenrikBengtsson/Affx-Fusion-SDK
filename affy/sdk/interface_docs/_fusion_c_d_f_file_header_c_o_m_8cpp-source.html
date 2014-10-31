@@ -92,7 +92,25 @@
 <a name="l00068"></a>00068         *pVal = <a class="code" href="class_c_o_m_string_utils.html#fba6e02950c2d40fc655b6dcbbf4b6ab">COMStringUtils::ConvertString</a>(<a class="code" href="class_c_fusion_c_d_f_file_header_c_o_m.html#ce4b5f4fc77fdee1805176ca7b5bf38d">header</a>-&gt;<a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_d_f_file_header.html#cb1dfd2cd6e72dfbfb42ff2a81b6c709">GetReference</a>());
 <a name="l00069"></a>00069         <span class="keywordflow">return</span> S_OK;
 <a name="l00070"></a>00070 }
-</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:06 2009 for Affymetrix Fusion SDK by&nbsp;
+<a name="l00071"></a>00071 
+<a name="l00072"></a>00072 STDMETHODIMP CFusionCDFFileHeaderCOM::get_FormatVersion(<span class="keywordtype">int</span>* pVal)
+<a name="l00073"></a>00073 {
+<a name="l00074"></a>00074         *pVal = <a class="code" href="class_c_fusion_c_d_f_file_header_c_o_m.html#ce4b5f4fc77fdee1805176ca7b5bf38d">header</a>-&gt;<a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_d_f_file_header.html#22b678d1339cdeb2e456e4cdf372036d">GetFormatVersion</a>();
+<a name="l00075"></a>00075         <span class="keywordflow">return</span> S_OK;
+<a name="l00076"></a>00076 }
+<a name="l00077"></a>00077 
+<a name="l00078"></a>00078 STDMETHODIMP CFusionCDFFileHeaderCOM::get_GUID(BSTR* pVal)
+<a name="l00079"></a>00079 {
+<a name="l00080"></a>00080         *pVal = <a class="code" href="class_c_o_m_string_utils.html#fba6e02950c2d40fc655b6dcbbf4b6ab">COMStringUtils::ConvertString</a>(<a class="code" href="class_c_fusion_c_d_f_file_header_c_o_m.html#ce4b5f4fc77fdee1805176ca7b5bf38d">header</a>-&gt;<a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_d_f_file_header.html#d6415d37795f5d1937f95002c96f0559">GetGUID</a>());
+<a name="l00081"></a>00081         <span class="keywordflow">return</span> S_OK;
+<a name="l00082"></a>00082 }
+<a name="l00083"></a>00083 
+<a name="l00084"></a>00084 STDMETHODIMP CFusionCDFFileHeaderCOM::get_IntegrityMd5(BSTR* pVal)
+<a name="l00085"></a>00085 {
+<a name="l00086"></a>00086         *pVal = <a class="code" href="class_c_o_m_string_utils.html#fba6e02950c2d40fc655b6dcbbf4b6ab">COMStringUtils::ConvertString</a>(<a class="code" href="class_c_fusion_c_d_f_file_header_c_o_m.html#ce4b5f4fc77fdee1805176ca7b5bf38d">header</a>-&gt;<a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_d_f_file_header.html#c97b6644f8302d6a89e36b9c3f2719e7">GetIntegrityMd5</a>());
+<a name="l00087"></a>00087         <span class="keywordflow">return</span> S_OK;
+<a name="l00088"></a>00088 }
+</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:14 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

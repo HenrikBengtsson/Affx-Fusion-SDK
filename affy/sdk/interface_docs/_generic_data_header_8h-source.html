@@ -53,68 +53,73 @@
 <a name="l00029"></a>00029 <span class="preprocessor">#include &lt;cstring&gt;</span>
 <a name="l00030"></a>00030 <span class="preprocessor">#include &lt;string&gt;</span>
 <a name="l00031"></a>00031 <span class="preprocessor">#include &lt;vector&gt;</span>
-<a name="l00032"></a>00032 <span class="comment">//</span>
-<a name="l00033"></a>00033 
-<a name="l00034"></a>00034 <span class="preprocessor">#ifdef _MSC_VER</span>
-<a name="l00035"></a>00035 <span class="preprocessor"></span><span class="preprocessor">#pragma warning(disable: 4290) // don't show warnings about throw keyword on function declarations.</span>
-<a name="l00036"></a>00036 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
-<a name="l00037"></a>00037 <span class="preprocessor"></span>
-<a name="l00038"></a>00038 <span class="keyword">using namespace </span>affymetrix_calvin_parameter;
-<a name="l00039"></a>00039 
-<a name="l00040"></a>00040 <span class="keyword">namespace </span>affymetrix_calvin_io
-<a name="l00041"></a>00041 {
-<a name="l00042"></a>00042 
-<a name="l00043"></a><a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html">00043</a> <span class="keyword">class </span><a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html">GenericDataHeader</a>
-<a name="l00044"></a>00044 {
-<a name="l00045"></a>00045 <span class="keyword">public</span>:
-<a name="l00046"></a>00046         
-<a name="l00047"></a>00047         <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#4d74eacb7d79a86b441d8791d930f2b1">GenericDataHeader</a>();
-<a name="l00048"></a><a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#41f19de3cd7e7311401b327da5dc17ee">00048</a>         <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#41f19de3cd7e7311401b327da5dc17ee">~GenericDataHeader</a>() { <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#e6b49aa267cd37dc5410c985db7c4a76">Clear</a>(); }
-<a name="l00049"></a>00049 
-<a name="l00050"></a>00050 <span class="keyword">private</span>:
-<a name="l00051"></a>00051         
-<a name="l00053"></a><a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#0864b96bd9528f3053ed1c7fd79db302">00053</a>         std::string <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#0864b96bd9528f3053ed1c7fd79db302">fileTypeId</a>;
-<a name="l00055"></a><a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#cfe7f9e81a4ef45695f0ec4f2dc9024b">00055</a>         <a class="code" href="namespaceaffymetrix__calvin__utilities.html#ecd149cf47b2850b90ed58dc3e82c881">affymetrix_calvin_utilities::AffymetrixGuidType</a> <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#cfe7f9e81a4ef45695f0ec4f2dc9024b">fileId</a>;
-<a name="l00057"></a><a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#fddfbebdbbaf80e02bf4e53984ac69b9">00057</a>         std::wstring <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#fddfbebdbbaf80e02bf4e53984ac69b9">fileCreationTime</a>;
-<a name="l00059"></a><a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#4cc042736c608e47672c399c98038f90">00059</a>         std::wstring <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#4cc042736c608e47672c399c98038f90">locale</a>;
-<a name="l00061"></a><a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#4c62e8358c70c2401a05a922a932db55">00061</a>         <a class="code" href="namespaceaffymetrix__calvin__parameter.html#e8182227290ee4bb6985cf139fce7150">ParameterNameValueTypeVector</a> <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#4c62e8358c70c2401a05a922a932db55">nameValParams</a>;
-<a name="l00063"></a><a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#619d70e6139cad053e350e1c39cd1b1d">00063</a>         std::vector&lt;GenericDataHeader&gt; <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#619d70e6139cad053e350e1c39cd1b1d">GenericDataHdrs</a>;
-<a name="l00064"></a>00064 
-<a name="l00065"></a>00065 <span class="keyword">public</span>:
-<a name="l00066"></a>00066 
-<a name="l00068"></a>00068         <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#e6b49aa267cd37dc5410c985db7c4a76">Clear</a>();
-<a name="l00070"></a>00070         <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#1022bcf24da7851448eb882a5baa67e9">SetFileTypeId</a>(<span class="keyword">const</span> std::string &amp;p);
-<a name="l00072"></a>00072         std::string <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#6abbd19f5956d423b5a94aa45d4679a2">GetFileTypeId</a>() <span class="keyword">const</span>;
-<a name="l00074"></a>00074         <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#09a1ebe51a88fcb5dad42219a3780715">SetFileId</a>(<span class="keyword">const</span> <a class="code" href="namespaceaffymetrix__calvin__utilities.html#ecd149cf47b2850b90ed58dc3e82c881">affymetrix_calvin_utilities::AffymetrixGuidType</a> &amp;p);
-<a name="l00076"></a>00076         <a class="code" href="namespaceaffymetrix__calvin__utilities.html#ecd149cf47b2850b90ed58dc3e82c881">affymetrix_calvin_utilities::AffymetrixGuidType</a> <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#763db9f9a9d8623288666b08a8db6f5a">GetFileId</a>() <span class="keyword">const</span>;
-<a name="l00078"></a>00078         <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#873f00d4e59671d51bedb74890fb3523">SetFileCreationTime</a>(<span class="keyword">const</span> std::wstring &amp;f);
-<a name="l00080"></a>00080         std::wstring <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#f49d746aede49b7838b267eb65ef693e">GetFileCreationTime</a>() <span class="keyword">const</span>;
-<a name="l00082"></a>00082         <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#53517ee8265a4fb80440b933d1549ea7">SetLocale</a>(<span class="keyword">const</span> std::wstring &amp;p);
-<a name="l00084"></a>00084         std::wstring <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#ed48604693b8c8b78545468d6634a90a">GetLocale</a>() <span class="keyword">const</span>;
-<a name="l00086"></a>00086         <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#aef03a3208142900da10c77e3d46936f">AddNameValParam</a>(<span class="keyword">const</span> <a class="code" href="classaffymetrix__calvin__parameter_1_1_parameter_name_value_type.html">ParameterNameValueType</a> &amp;p);
-<a name="l00088"></a>00088         <a class="code" href="classaffymetrix__calvin__parameter_1_1_parameter_name_value_type.html">ParameterNameValueType</a> <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#5e68c1e00b3df93802665f617f2b8f9b">GetNameValParam</a>(int32_t index);
-<a name="l00090"></a>00090         int32_t <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#893a7fdaa1296cee88854522e6c370ba">GetNameValParamCnt</a>() <span class="keyword">const</span>;
-<a name="l00092"></a>00092         <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#ce9b5edeef5b6f87241159fc91d44e0f">GetNameValIterators</a>(<a class="code" href="namespaceaffymetrix__calvin__parameter.html#807be8629af9171416da5b7133772d0a">ParameterNameValueTypeIt</a> &amp;begin, <a class="code" href="namespaceaffymetrix__calvin__parameter.html#807be8629af9171416da5b7133772d0a">ParameterNameValueTypeIt</a> &amp;end);
-<a name="l00094"></a>00094         int32_t <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#be6d6604db927ea7d7761c7a745d4846">GetParentCnt</a>() <span class="keyword">const</span>;
-<a name="l00096"></a>00096         <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#41928b79b637a88f915516fbf206c587">AddParent</a>(<span class="keyword">const</span> <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html">GenericDataHeader</a> &amp;hdr);
-<a name="l00098"></a>00098         <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html">GenericDataHeader</a> <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#53410edd35a54b2a6dc811fe58ee672c">GetParent</a>(int32_t index) <span class="keyword">const</span>;
-<a name="l00100"></a>00100         <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#85d01fa491de6b637e5c700cfe4d6a6c">GetParentIterators</a>(std::vector&lt;GenericDataHeader&gt;::iterator &amp;begin, std::vector&lt;GenericDataHeader&gt;::iterator &amp;end);
-<a name="l00105"></a>00105         <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html">GenericDataHeader</a>* <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#91e2893aa0174f810224a4fbac1ad309">FindParent</a>(<span class="keyword">const</span> std::string&amp; <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#0864b96bd9528f3053ed1c7fd79db302">fileTypeId</a>);
-<a name="l00111"></a>00111         <span class="keywordtype">bool</span> <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#df1fcb58594d739f23b364f163e859ac">FindNameValParam</a>(<span class="keyword">const</span> std::wstring&amp; name, <a class="code" href="classaffymetrix__calvin__parameter_1_1_parameter_name_value_type.html">ParameterNameValueType</a>&amp; result);
-<a name="l00116"></a>00116         <span class="keywordtype">bool</span> <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#e691e4c44b4c3499ea493288ad7c609b">GetNameValParamsBeginsWith</a>(<span class="keyword">const</span> std::wstring&amp; beginsWith, <a class="code" href="namespaceaffymetrix__calvin__parameter.html#e8182227290ee4bb6985cf139fce7150">ParameterNameValueTypeVector</a>&amp; p);
-<a name="l00117"></a>00117 
-<a name="l00118"></a>00118 <span class="keyword">protected</span>:
-<a name="l00123"></a>00123         <a class="code" href="namespaceaffymetrix__calvin__parameter.html#807be8629af9171416da5b7133772d0a">ParameterNameValueTypeIt</a> <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#df1fcb58594d739f23b364f163e859ac">FindNameValParam</a>(<span class="keyword">const</span> <a class="code" href="classaffymetrix__calvin__parameter_1_1_parameter_name_value_type.html">ParameterNameValueType</a>&amp; p);
-<a name="l00124"></a>00124 };
-<a name="l00125"></a>00125 
-<a name="l00127"></a><a class="code" href="namespaceaffymetrix__calvin__io.html#a7d66f98651d74003e1a1d1257f30c89">00127</a> <span class="keyword">typedef</span> std::vector&lt;GenericDataHeader&gt; <a class="code" href="namespaceaffymetrix__calvin__io.html#a7d66f98651d74003e1a1d1257f30c89">GenDataHdrVector</a>;
-<a name="l00128"></a>00128 
-<a name="l00130"></a><a class="code" href="namespaceaffymetrix__calvin__io.html#2d374d1944d4c96f09a910d47bc0669d">00130</a> <span class="keyword">typedef</span> std::vector&lt;GenericDataHeader&gt;::iterator <a class="code" href="namespaceaffymetrix__calvin__io.html#2d374d1944d4c96f09a910d47bc0669d">GenDataHdrVectorIt</a>;
+<a name="l00032"></a>00032 <span class="preprocessor">#include &lt;map&gt;</span>
+<a name="l00033"></a>00033 <span class="comment">//</span>
+<a name="l00034"></a>00034 
+<a name="l00035"></a>00035 <span class="preprocessor">#ifdef _MSC_VER</span>
+<a name="l00036"></a>00036 <span class="preprocessor"></span><span class="preprocessor">#pragma warning(disable: 4290) // don't show warnings about throw keyword on function declarations.</span>
+<a name="l00037"></a>00037 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
+<a name="l00038"></a>00038 <span class="preprocessor"></span>
+<a name="l00039"></a>00039 <span class="keyword">using namespace </span>affymetrix_calvin_parameter;
+<a name="l00040"></a>00040 
+<a name="l00041"></a>00041 <span class="keyword">namespace </span>affymetrix_calvin_io
+<a name="l00042"></a>00042 {
+<a name="l00043"></a>00043 
+<a name="l00044"></a><a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html">00044</a> <span class="keyword">class </span><a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html">GenericDataHeader</a>
+<a name="l00045"></a>00045 {
+<a name="l00046"></a>00046 <span class="keyword">public</span>:
+<a name="l00047"></a>00047         
+<a name="l00048"></a>00048         <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#4d74eacb7d79a86b441d8791d930f2b1">GenericDataHeader</a>();
+<a name="l00049"></a><a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#41f19de3cd7e7311401b327da5dc17ee">00049</a>         <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#41f19de3cd7e7311401b327da5dc17ee">~GenericDataHeader</a>() { <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#e6b49aa267cd37dc5410c985db7c4a76">Clear</a>(); }
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051 <span class="keyword">private</span>:
+<a name="l00052"></a>00052         
+<a name="l00054"></a><a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#0864b96bd9528f3053ed1c7fd79db302">00054</a>         std::string <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#0864b96bd9528f3053ed1c7fd79db302">fileTypeId</a>;
+<a name="l00056"></a><a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#cfe7f9e81a4ef45695f0ec4f2dc9024b">00056</a>         <a class="code" href="namespaceaffymetrix__calvin__utilities.html#ecd149cf47b2850b90ed58dc3e82c881">affymetrix_calvin_utilities::AffymetrixGuidType</a> <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#cfe7f9e81a4ef45695f0ec4f2dc9024b">fileId</a>;
+<a name="l00058"></a><a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#fddfbebdbbaf80e02bf4e53984ac69b9">00058</a>         std::wstring <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#fddfbebdbbaf80e02bf4e53984ac69b9">fileCreationTime</a>;
+<a name="l00060"></a><a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#4cc042736c608e47672c399c98038f90">00060</a>         std::wstring <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#4cc042736c608e47672c399c98038f90">locale</a>;
+<a name="l00062"></a><a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#4c62e8358c70c2401a05a922a932db55">00062</a>         <a class="code" href="namespaceaffymetrix__calvin__parameter.html#e8182227290ee4bb6985cf139fce7150">ParameterNameValueTypeVector</a> <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#4c62e8358c70c2401a05a922a932db55">nameValParams</a>;
+<a name="l00064"></a><a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#619d70e6139cad053e350e1c39cd1b1d">00064</a>         std::vector&lt;GenericDataHeader&gt; <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#619d70e6139cad053e350e1c39cd1b1d">GenericDataHdrs</a>;
+<a name="l00066"></a><a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#69406186e8a8019f55e365bc5cb2466b">00066</a>         std::map&lt;std::wstring, int&gt; <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#69406186e8a8019f55e365bc5cb2466b">paramNameIdxMap</a>;
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068 <span class="keyword">public</span>:
+<a name="l00069"></a>00069 
+<a name="l00071"></a>00071         <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#e6b49aa267cd37dc5410c985db7c4a76">Clear</a>();
+<a name="l00073"></a>00073         <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#1022bcf24da7851448eb882a5baa67e9">SetFileTypeId</a>(<span class="keyword">const</span> std::string &amp;p);
+<a name="l00075"></a>00075         std::string <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#6abbd19f5956d423b5a94aa45d4679a2">GetFileTypeId</a>() <span class="keyword">const</span>;
+<a name="l00077"></a>00077         <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#09a1ebe51a88fcb5dad42219a3780715">SetFileId</a>(<span class="keyword">const</span> <a class="code" href="namespaceaffymetrix__calvin__utilities.html#ecd149cf47b2850b90ed58dc3e82c881">affymetrix_calvin_utilities::AffymetrixGuidType</a> &amp;p);
+<a name="l00079"></a>00079         <a class="code" href="namespaceaffymetrix__calvin__utilities.html#ecd149cf47b2850b90ed58dc3e82c881">affymetrix_calvin_utilities::AffymetrixGuidType</a> <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#763db9f9a9d8623288666b08a8db6f5a">GetFileId</a>() <span class="keyword">const</span>;
+<a name="l00081"></a>00081         <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#873f00d4e59671d51bedb74890fb3523">SetFileCreationTime</a>(<span class="keyword">const</span> std::wstring &amp;f);
+<a name="l00083"></a>00083         std::wstring <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#f49d746aede49b7838b267eb65ef693e">GetFileCreationTime</a>() <span class="keyword">const</span>;
+<a name="l00085"></a>00085         <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#53517ee8265a4fb80440b933d1549ea7">SetLocale</a>(<span class="keyword">const</span> std::wstring &amp;p);
+<a name="l00087"></a>00087         std::wstring <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#ed48604693b8c8b78545468d6634a90a">GetLocale</a>() <span class="keyword">const</span>;
+<a name="l00088"></a>00088 
+<a name="l00092"></a>00092         <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#aef03a3208142900da10c77e3d46936f">AddNameValParam</a>(<span class="keyword">const</span> <a class="code" href="classaffymetrix__calvin__parameter_1_1_parameter_name_value_type.html">ParameterNameValueType</a> &amp;p);
+<a name="l00099"></a>00099         <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#aef03a3208142900da10c77e3d46936f">AddNameValParam</a>(<span class="keyword">const</span> <a class="code" href="classaffymetrix__calvin__parameter_1_1_parameter_name_value_type.html">ParameterNameValueType</a> &amp;p, <span class="keywordtype">bool</span> doUniqueAdds);
+<a name="l00100"></a>00100 
+<a name="l00102"></a>00102         <a class="code" href="classaffymetrix__calvin__parameter_1_1_parameter_name_value_type.html">ParameterNameValueType</a> <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#5e68c1e00b3df93802665f617f2b8f9b">GetNameValParam</a>(int32_t index);
+<a name="l00104"></a>00104         int32_t <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#893a7fdaa1296cee88854522e6c370ba">GetNameValParamCnt</a>() <span class="keyword">const</span>;
+<a name="l00106"></a>00106         <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#ce9b5edeef5b6f87241159fc91d44e0f">GetNameValIterators</a>(<a class="code" href="namespaceaffymetrix__calvin__parameter.html#807be8629af9171416da5b7133772d0a">ParameterNameValueTypeIt</a> &amp;begin, <a class="code" href="namespaceaffymetrix__calvin__parameter.html#807be8629af9171416da5b7133772d0a">ParameterNameValueTypeIt</a> &amp;end);
+<a name="l00108"></a>00108         int32_t <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#be6d6604db927ea7d7761c7a745d4846">GetParentCnt</a>() <span class="keyword">const</span>;
+<a name="l00110"></a>00110         <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#41928b79b637a88f915516fbf206c587">AddParent</a>(<span class="keyword">const</span> <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html">GenericDataHeader</a> &amp;hdr);
+<a name="l00112"></a>00112         <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html">GenericDataHeader</a> <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#53410edd35a54b2a6dc811fe58ee672c">GetParent</a>(int32_t index) <span class="keyword">const</span>;
+<a name="l00114"></a>00114         <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#85d01fa491de6b637e5c700cfe4d6a6c">GetParentIterators</a>(std::vector&lt;GenericDataHeader&gt;::iterator &amp;begin, std::vector&lt;GenericDataHeader&gt;::iterator &amp;end);
+<a name="l00119"></a>00119         <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html">GenericDataHeader</a>* <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#91e2893aa0174f810224a4fbac1ad309">FindParent</a>(<span class="keyword">const</span> std::string&amp; <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#0864b96bd9528f3053ed1c7fd79db302">fileTypeId</a>);
+<a name="l00125"></a>00125         <span class="keywordtype">bool</span> <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#df1fcb58594d739f23b364f163e859ac">FindNameValParam</a>(<span class="keyword">const</span> std::wstring&amp; name, <a class="code" href="classaffymetrix__calvin__parameter_1_1_parameter_name_value_type.html">ParameterNameValueType</a>&amp; result);
+<a name="l00130"></a>00130         <span class="keywordtype">bool</span> <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#e691e4c44b4c3499ea493288ad7c609b">GetNameValParamsBeginsWith</a>(<span class="keyword">const</span> std::wstring&amp; beginsWith, <a class="code" href="namespaceaffymetrix__calvin__parameter.html#e8182227290ee4bb6985cf139fce7150">ParameterNameValueTypeVector</a>&amp; p);
 <a name="l00131"></a>00131 
-<a name="l00132"></a>00132 };
-<a name="l00133"></a>00133 
-<a name="l00134"></a>00134 <span class="preprocessor">#endif // _GenericDataHeader_HEADER_</span>
-</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:06 2009 for Affymetrix Fusion SDK by&nbsp;
+<a name="l00132"></a>00132 <span class="keyword">protected</span>:
+<a name="l00137"></a>00137         <a class="code" href="namespaceaffymetrix__calvin__parameter.html#807be8629af9171416da5b7133772d0a">ParameterNameValueTypeIt</a> <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html#df1fcb58594d739f23b364f163e859ac">FindNameValParam</a>(<span class="keyword">const</span> <a class="code" href="classaffymetrix__calvin__parameter_1_1_parameter_name_value_type.html">ParameterNameValueType</a>&amp; p);
+<a name="l00138"></a>00138 };
+<a name="l00139"></a>00139 
+<a name="l00141"></a><a class="code" href="namespaceaffymetrix__calvin__io.html#a7d66f98651d74003e1a1d1257f30c89">00141</a> <span class="keyword">typedef</span> std::vector&lt;GenericDataHeader&gt; <a class="code" href="namespaceaffymetrix__calvin__io.html#a7d66f98651d74003e1a1d1257f30c89">GenDataHdrVector</a>;
+<a name="l00142"></a>00142 
+<a name="l00144"></a><a class="code" href="namespaceaffymetrix__calvin__io.html#2d374d1944d4c96f09a910d47bc0669d">00144</a> <span class="keyword">typedef</span> std::vector&lt;GenericDataHeader&gt;::iterator <a class="code" href="namespaceaffymetrix__calvin__io.html#2d374d1944d4c96f09a910d47bc0669d">GenDataHdrVectorIt</a>;
+<a name="l00145"></a>00145 
+<a name="l00146"></a>00146 };
+<a name="l00147"></a>00147 
+<a name="l00148"></a>00148 <span class="preprocessor">#endif // _GenericDataHeader_HEADER_</span>
+</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:14 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

@@ -27,287 +27,301 @@
 <a name="l00002"></a>00002 <span class="comment">//</span>
 <a name="l00003"></a>00003 <span class="comment">// Copyright (C) 2005 Affymetrix, Inc.</span>
 <a name="l00004"></a>00004 <span class="comment">//</span>
-<a name="l00005"></a>00005 <span class="comment">// This program is free software; you can redistribute it and/or modify </span>
-<a name="l00006"></a>00006 <span class="comment">// it under the terms of the GNU General Public License (version 2) as </span>
-<a name="l00007"></a>00007 <span class="comment">// published by the Free Software Foundation.</span>
-<a name="l00008"></a>00008 <span class="comment">// </span>
-<a name="l00009"></a>00009 <span class="comment">// This program is distributed in the hope that it will be useful, </span>
-<a name="l00010"></a>00010 <span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of </span>
-<a name="l00011"></a>00011 <span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU </span>
-<a name="l00012"></a>00012 <span class="comment">// General Public License for more details.</span>
-<a name="l00013"></a>00013 <span class="comment">// </span>
-<a name="l00014"></a>00014 <span class="comment">// You should have received a copy of the GNU General Public License </span>
-<a name="l00015"></a>00015 <span class="comment">// along with this program;if not, write to the </span>
-<a name="l00016"></a>00016 <span class="comment">// </span>
-<a name="l00017"></a>00017 <span class="comment">// Free Software Foundation, Inc., </span>
-<a name="l00018"></a>00018 <span class="comment">// 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA</span>
-<a name="l00019"></a>00019 <span class="comment">//</span>
-<a name="l00021"></a>00021 <span class="comment"></span>
-<a name="l00030"></a>00030 <span class="preprocessor">#ifndef _UTIL_H_</span>
-<a name="l00031"></a>00031 <span class="preprocessor"></span><span class="preprocessor">#define _UTIL_H_</span>
-<a name="l00032"></a>00032 <span class="preprocessor"></span>
-<a name="l00033"></a>00033 <span class="comment">//</span>
-<a name="l00034"></a>00034 <span class="preprocessor">#include "<a class="code" href="_convert_8h.html" title="Utility functions for converting between types.">util/Convert.h</a>"</span>
-<a name="l00035"></a>00035 <span class="preprocessor">#include "<a class="code" href="_err_8h.html" title="Some utility error functions, currently prints message and aborts().">util/Err.h</a>"</span>
-<a name="l00036"></a>00036 <span class="comment">//</span>
-<a name="l00037"></a>00037 <span class="preprocessor">#include "<a class="code" href="apt_8h.html">apt/apt.h</a>"</span>
-<a name="l00038"></a>00038 <span class="preprocessor">#include "<a class="code" href="affy-base-types_8h.html">portability/affy-base-types.h</a>"</span>
+<a name="l00005"></a>00005 <span class="comment">// This library is free software; you can redistribute it and/or modify</span>
+<a name="l00006"></a>00006 <span class="comment">// it under the terms of the GNU Lesser General Public License</span>
+<a name="l00007"></a>00007 <span class="comment">// (version 2.1) as published by the Free Software Foundation.</span>
+<a name="l00008"></a>00008 <span class="comment">//</span>
+<a name="l00009"></a>00009 <span class="comment">// This library is distributed in the hope that it will be useful, but</span>
+<a name="l00010"></a>00010 <span class="comment">// WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY</span>
+<a name="l00011"></a>00011 <span class="comment">// or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License</span>
+<a name="l00012"></a>00012 <span class="comment">// for more details.</span>
+<a name="l00013"></a>00013 <span class="comment">//</span>
+<a name="l00014"></a>00014 <span class="comment">// You should have received a copy of the GNU Lesser General Public License</span>
+<a name="l00015"></a>00015 <span class="comment">// along with this library; if not, write to the Free Software Foundation, Inc.,</span>
+<a name="l00016"></a>00016 <span class="comment">// 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA</span>
+<a name="l00017"></a>00017 <span class="comment">//</span>
+<a name="l00019"></a>00019 <span class="comment"></span>
+<a name="l00028"></a>00028 <span class="preprocessor">#ifndef _UTIL_H_</span>
+<a name="l00029"></a>00029 <span class="preprocessor"></span><span class="preprocessor">#define _UTIL_H_</span>
+<a name="l00030"></a>00030 <span class="preprocessor"></span>
+<a name="l00032"></a>00032 <span class="comment">//#define APT_OBSOLETE_FUNCS 1</span>
+<a name="l00033"></a>00033 
+<a name="l00034"></a>00034 <span class="comment">//</span>
+<a name="l00035"></a>00035 <span class="preprocessor">#include "<a class="code" href="affy-base-types_8h.html">portability/affy-base-types.h</a>"</span>
+<a name="l00036"></a>00036 <span class="preprocessor">#include "portability/apt-win-dll.h"</span>
+<a name="l00037"></a>00037 <span class="preprocessor">#include "<a class="code" href="_convert_8h.html" title="Utility functions for converting between types.">util/Convert.h</a>"</span>
+<a name="l00038"></a>00038 <span class="preprocessor">#include "<a class="code" href="_err_8h.html" title="Some utility error functions, currently prints message and aborts().">util/Err.h</a>"</span>
 <a name="l00039"></a>00039 <span class="comment">//</span>
 <a name="l00040"></a>00040 <span class="preprocessor">#include &lt;cassert&gt;</span>
 <a name="l00041"></a>00041 <span class="preprocessor">#include &lt;cctype&gt;</span>
 <a name="l00042"></a>00042 <span class="preprocessor">#include &lt;cstring&gt;</span>
 <a name="l00043"></a>00043 <span class="preprocessor">#include &lt;ctime&gt;</span>
 <a name="l00044"></a>00044 <span class="preprocessor">#include &lt;fstream&gt;</span>
-<a name="l00045"></a>00045 <span class="preprocessor">#include &lt;string.h&gt;</span>
-<a name="l00046"></a>00046 <span class="preprocessor">#include &lt;string&gt;</span>
-<a name="l00047"></a>00047 <span class="preprocessor">#include &lt;vector&gt;</span>
-<a name="l00048"></a>00048 <span class="comment">//</span>
-<a name="l00049"></a>00049 
-<a name="l00050"></a>00050 
-<a name="l00051"></a>00051 
-<a name="l00052"></a>00052 
-<a name="l00054"></a><a class="code" href="_util_8h.html#65c565b731cec6cf34eda591385cfc91">00054</a> <span class="preprocessor">#define PATH_SEPARATOR_WIN32      "\\"</span>
-<a name="l00056"></a><a class="code" href="_util_8h.html#e401ad78a9d3b6b29c58ac3e19ca6576">00056</a> <span class="preprocessor">#define PATH_SEPARATOR_WIN32_CHAR '\\'</span>
-<a name="l00058"></a><a class="code" href="_util_8h.html#83291ac39aff9b1afcd29f15bb6487dc">00058</a> <span class="preprocessor">#define PATH_SEPARATOR_UNIX       "/"</span>
-<a name="l00060"></a><a class="code" href="_util_8h.html#6279a737df1def404ed00714b413bd8f">00060</a> <span class="preprocessor">#define PATH_SEPARATOR_UNIX_CHAR  '/'</span>
-<a name="l00061"></a>00061 <span class="preprocessor"></span>
-<a name="l00063"></a>00063 <span class="preprocessor">#if defined (WIN32)</span>
-<a name="l00065"></a>00065 <span class="preprocessor">#define PATH_SEPARATOR      PATH_SEPARATOR_WIN32</span>
-<a name="l00067"></a>00067 <span class="preprocessor">#define PATH_SEPARATOR_CHAR PATH_SEPARATOR_WIN32_CHAR</span>
-<a name="l00068"></a>00068 <span class="preprocessor"></span><span class="preprocessor">#else</span>
-<a name="l00069"></a><a class="code" href="_util_8h.html#256a5721249aa3309437212cc21a9fe4">00069</a> <span class="preprocessor"></span><span class="preprocessor">#define PATH_SEPARATOR      PATH_SEPARATOR_UNIX</span>
-<a name="l00070"></a><a class="code" href="_util_8h.html#581727c17b559af16969b4073417701d">00070</a> <span class="preprocessor"></span><span class="preprocessor">#define PATH_SEPARATOR_CHAR PATH_SEPARATOR_UNIX_CHAR</span>
-<a name="l00071"></a>00071 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
-<a name="l00072"></a>00072 <span class="preprocessor"></span>
-<a name="l00073"></a><a class="code" href="_util_8h.html#92b22720309846541a7bfc406212076f">00073</a> <span class="preprocessor">#define MEGABYTE 1048576</span>
-<a name="l00074"></a>00074 <span class="preprocessor"></span>
-<a name="l00077"></a>00077 <span class="preprocessor">#ifdef WIN32</span>
-<a name="l00078"></a>00078 <span class="preprocessor"></span><span class="preprocessor">#ifdef _WIN64</span>
-<a name="l00079"></a>00079 <span class="preprocessor"></span><span class="preprocessor">#define MEMINFO_2GB_MAX (2UL*1024*1024*1024)</span>
-<a name="l00080"></a>00080 <span class="preprocessor"></span><span class="preprocessor">#else</span>
-<a name="l00081"></a>00081 <span class="preprocessor"></span><span class="comment">// cap at 1.3G on Windows due to expected memory fragmentation</span>
-<a name="l00083"></a>00083 <span class="comment"></span><span class="preprocessor">#define MEMINFO_2GB_MAX floor(1.3f*1024*1024*1024)</span>
-<a name="l00084"></a>00084 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
-<a name="l00085"></a>00085 <span class="preprocessor"></span><span class="preprocessor">#else</span>
-<a name="l00086"></a><a class="code" href="_util_8h.html#718eaed46b2cb6046da20e9e1470795b">00086</a> <span class="preprocessor"></span><span class="preprocessor">#define MEMINFO_2GB_MAX (2UL*1024*1024*1024)</span>
-<a name="l00087"></a>00087 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
-<a name="l00088"></a>00088 <span class="preprocessor"></span>
-<a name="l00090"></a><a class="code" href="_util_8h.html#18af743c2cec4baeee9ffb27999ddaad">00090</a> <span class="preprocessor">#define log2(x) ( log((x))/log((2.0)) )</span>
-<a name="l00093"></a><a class="code" href="_util_8h.html#dee8c6d2fc20a1194cf64c481e7b6353">00093</a> <span class="preprocessor">#define sqr(x) ((x)*(x))</span>
+<a name="l00045"></a>00045 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00046"></a>00046 <span class="preprocessor">#include &lt;vector&gt;</span>
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048 
+<a name="l00049"></a><a class="code" href="_util_8h.html#92b22720309846541a7bfc406212076f">00049</a> <span class="preprocessor">#define MEGABYTE 1048576</span>
+<a name="l00050"></a>00050 <span class="preprocessor"></span>
+<a name="l00053"></a>00053 <span class="preprocessor">#ifdef WIN32</span>
+<a name="l00054"></a>00054 <span class="preprocessor"></span><span class="preprocessor">#ifdef _WIN64</span>
+<a name="l00055"></a>00055 <span class="preprocessor"></span><span class="preprocessor">#define MEMINFO_2GB_MAX (2UL*1024*1024*1024)</span>
+<a name="l00056"></a>00056 <span class="preprocessor"></span><span class="preprocessor">#else</span>
+<a name="l00057"></a>00057 <span class="preprocessor"></span><span class="comment">// cap at 1.3G on Windows due to expected memory fragmentation</span>
+<a name="l00059"></a>00059 <span class="comment"></span><span class="preprocessor">#define MEMINFO_2GB_MAX floor(1.3f*1024*1024*1024)</span>
+<a name="l00060"></a>00060 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
+<a name="l00061"></a>00061 <span class="preprocessor"></span><span class="preprocessor">#else</span>
+<a name="l00062"></a><a class="code" href="_util_8h.html#718eaed46b2cb6046da20e9e1470795b">00062</a> <span class="preprocessor"></span><span class="preprocessor">#define MEMINFO_2GB_MAX (2UL*1024*1024*1024)</span>
+<a name="l00063"></a>00063 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
+<a name="l00064"></a>00064 <span class="preprocessor"></span>
+<a name="l00066"></a><a class="code" href="_util_8h.html#18af743c2cec4baeee9ffb27999ddaad">00066</a> <span class="preprocessor">#define log2(x) ( log((x))/log((2.0)) )</span>
+<a name="l00069"></a><a class="code" href="_util_8h.html#dee8c6d2fc20a1194cf64c481e7b6353">00069</a> <span class="preprocessor">#define sqr(x) ((x)*(x))</span>
+<a name="l00070"></a>00070 <span class="preprocessor"></span>
+<a name="l00072"></a><a class="code" href="_util_8h.html#21878993864e49b5954d0777a0e0e824">00072</a> <span class="preprocessor">#define ArraySize(a) (sizeof(a)/sizeof((a)[0]))</span>
+<a name="l00073"></a>00073 <span class="preprocessor"></span>
+<a name="l00075"></a><a class="code" href="_util_8h.html#d0787eda9709999bbd42dc11b21deb0d">00075</a> <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt; <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="_util_8h.html#d0787eda9709999bbd42dc11b21deb0d">Freez</a>(T*&amp; p) { <span class="keyword">delete</span> p; p = NULL; }
+<a name="l00077"></a><a class="code" href="_util_8h.html#af8a1260bc5853179000feabfb97b294">00077</a> <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt; <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="_util_8h.html#af8a1260bc5853179000feabfb97b294">FreezArray</a>(T*&amp; p) { <span class="keyword">delete</span>[] p; p = NULL; }
+<a name="l00078"></a>00078 
+<a name="l00092"></a><a class="code" href="_util_8h.html#d0366bf7559d19f9ba38004154add014">00092</a> <span class="preprocessor">#define InstanceOf(objPtr, className) \</span>
+<a name="l00093"></a>00093 <span class="preprocessor">    ((bool)(dynamic_cast&lt;const className*&gt;(objPtr) != NULL))</span>
 <a name="l00094"></a>00094 <span class="preprocessor"></span>
-<a name="l00096"></a><a class="code" href="_util_8h.html#21878993864e49b5954d0777a0e0e824">00096</a> <span class="preprocessor">#define ArraySize(a) (sizeof(a)/sizeof((a)[0]))</span>
-<a name="l00097"></a>00097 <span class="preprocessor"></span>
-<a name="l00099"></a><a class="code" href="_util_8h.html#d0787eda9709999bbd42dc11b21deb0d">00099</a> <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt; <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="_util_8h.html#d0787eda9709999bbd42dc11b21deb0d">Freez</a>(T*&amp; p) { <span class="keyword">delete</span> p; p = NULL; }
-<a name="l00101"></a><a class="code" href="_util_8h.html#af8a1260bc5853179000feabfb97b294">00101</a> <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt; <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="_util_8h.html#af8a1260bc5853179000feabfb97b294">FreezArray</a>(T*&amp; p) { <span class="keyword">delete</span>[] p; p = NULL; }
-<a name="l00102"></a>00102 
-<a name="l00116"></a><a class="code" href="_util_8h.html#d0366bf7559d19f9ba38004154add014">00116</a> <span class="preprocessor">#define InstanceOf(objPtr, className) \</span>
-<a name="l00117"></a>00117 <span class="preprocessor">    ((bool)(dynamic_cast&lt;const className*&gt;(objPtr) != NULL))</span>
-<a name="l00118"></a>00118 <span class="preprocessor"></span>
-<a name="l00123"></a><a class="code" href="class_util.html">00123</a> <span class="keyword">class </span><a class="code" href="apt_8h.html#2f7939adb042bf288bb7753432ddbda1">APTLIB_API</a> <a class="code" href="class_util.html" title="Utility functions for memory, etc.">Util</a> {
-<a name="l00124"></a>00124 <span class="keyword">public</span>:
-<a name="l00125"></a>00125 
-<a name="l00130"></a><a class="code" href="class_util.html#3f73433908596efd3e64a02706a6e75a">00130</a>   <span class="keyword">static</span> <span class="keywordtype">void</span> downcaseString_inplace(std::string&amp; str) {
-<a name="l00131"></a>00131     <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; str.size(); i++) {
-<a name="l00132"></a>00132       str[i] = tolower(str[i]);
-<a name="l00133"></a>00133     }
-<a name="l00134"></a>00134   }
-<a name="l00138"></a><a class="code" href="class_util.html#b73e26f5a353284899216123a494e3bf">00138</a>   <span class="keyword">static</span> std::string downcaseString(<span class="keyword">const</span> std::string&amp; str_orig) {
-<a name="l00139"></a>00139     std::string str=str_orig;
-<a name="l00140"></a>00140     downcaseString_inplace(str);
-<a name="l00141"></a>00141     <span class="keywordflow">return</span> str;
-<a name="l00142"></a>00142   }
-<a name="l00143"></a>00143 
-<a name="l00145"></a><a class="code" href="struct_util_1_1ltstr.html">00145</a>    <span class="keyword">struct </span><a class="code" href="struct_util_1_1ltstr.html">ltstr</a> {
-<a name="l00147"></a><a class="code" href="struct_util_1_1ltstr.html#6d8b77258b6d6d08f86a43b78c7d8581">00147</a>      <span class="keywordtype">bool</span> operator()(<span class="keyword">const</span> <span class="keywordtype">char</span>* s1, <span class="keyword">const</span> <span class="keywordtype">char</span>* s2)<span class="keyword"> const </span>{
-<a name="l00148"></a>00148       <span class="keywordflow">return</span> strcmp(s1, s2) &lt; 0;
-<a name="l00149"></a>00149      }
-<a name="l00150"></a>00150    };
-<a name="l00151"></a>00151 
-<a name="l00152"></a><a class="code" href="struct_util_1_1ltstring.html">00152</a>    <span class="keyword">struct </span><a class="code" href="struct_util_1_1ltstring.html">ltstring</a> {
-<a name="l00154"></a><a class="code" href="struct_util_1_1ltstring.html#1a9ddbbcbb88fd8f5e92b875f6245496">00154</a>      <span class="keywordtype">bool</span> operator()(<span class="keyword">const</span> std::string&amp; s1, <span class="keyword">const</span> std::string&amp; s2)<span class="keyword"> const </span>{
-<a name="l00155"></a>00155        <span class="keywordflow">return</span> strcmp(s1.c_str(), s2.c_str()) &lt; 0;
-<a name="l00156"></a>00156        <span class="comment">//return s1.compare(s2)&lt;0; //vliber</span>
-<a name="l00157"></a>00157      }
-<a name="l00158"></a>00158    };
-<a name="l00159"></a>00159 
-<a name="l00164"></a>00164   <span class="keyword">static</span> std::string getTimeStamp();
-<a name="l00165"></a>00165 
-<a name="l00169"></a><a class="code" href="class_util.html#1eefe5a6e76298c2df9dd6d07a36a1a7">00169</a>    <span class="keyword">static</span> <span class="keywordtype">int</span> round(<span class="keywordtype">double</span> x) { <span class="keywordflow">return</span> ((<span class="keywordtype">int</span>)((x)+0.5)); }
-<a name="l00170"></a>00170 
-<a name="l00177"></a>00177   <span class="keyword">static</span> <span class="keywordtype">char</span> *cloneString(<span class="keyword">const</span> <span class="keywordtype">char</span> *);
-<a name="l00178"></a>00178   <span class="comment">// one shouldnt need this. -jhg</span>
-<a name="l00179"></a>00179   <span class="comment">// static char *cloneString(const std::string &amp;);</span>
-<a name="l00180"></a>00180   
-<a name="l00187"></a>00187   <span class="keyword">static</span> <span class="keywordtype">bool</span> stringEndsWith(<span class="keyword">const</span> std::string&amp; str,<span class="keyword">const</span> std::string&amp; end);
-<a name="l00188"></a>00188 
-<a name="l00189"></a>00189   <span class="comment">// like AffxString but uses std::string.</span>
-<a name="l00190"></a>00190 
-<a name="l00195"></a>00195   <span class="keyword">static</span> <span class="keywordtype">bool</span> endsWithStr(<span class="keyword">const</span> std::string&amp; str,<span class="keyword">const</span> std::string&amp; ending);
-<a name="l00202"></a>00202   <span class="keyword">static</span> <span class="keywordtype">bool</span> endsWithStr(<span class="keyword">const</span> std::string&amp; str,<span class="keyword">const</span> std::string&amp; ending,<span class="keywordtype">int</span> posFromEnd);
-<a name="l00203"></a>00203 
-<a name="l00209"></a>00209   <span class="keyword">static</span> std::string findLibFile(<span class="keyword">const</span> std::string &amp;fileName, <span class="keyword">const</span> std::string &amp;searchPath = <span class="stringliteral">""</span>);
-<a name="l00210"></a>00210 
-<a name="l00216"></a>00216   <span class="keyword">static</span> <span class="keywordtype">void</span> mustOpenToWrite(std::ofstream &amp;out, <span class="keyword">const</span> std::string&amp; fileName);
-<a name="l00217"></a>00217  
-<a name="l00222"></a>00222   <span class="keyword">static</span> <span class="keywordtype">void</span> carefulClose(std::ofstream &amp;out);
-<a name="l00223"></a>00223 
-<a name="l00228"></a>00228   <span class="keyword">static</span> <span class="keywordtype">void</span> carefulClose(std::fstream &amp;out);
-<a name="l00229"></a>00229 
-<a name="l00234"></a>00234   <span class="keyword">static</span> <span class="keywordtype">bool</span> fileReadable(<span class="keyword">const</span> std::string &amp;fileName);
-<a name="l00235"></a>00235 
-<a name="l00240"></a>00240   <span class="keyword">static</span> <span class="keywordtype">bool</span> fileExists(<span class="keyword">const</span> std::string &amp;fileName);
-<a name="l00241"></a>00241 
-<a name="l00247"></a>00247   <span class="keyword">static</span> <span class="keywordtype">bool</span> fileCopy(<span class="keyword">const</span> std::string &amp;in, <span class="keyword">const</span> std::string &amp;out, <span class="keywordtype">bool</span> throwOnError = <span class="keyword">true</span>); 
+<a name="l00099"></a><a class="code" href="class_util.html">00099</a> <span class="keyword">class </span>APTLIB_API <a class="code" href="class_util.html" title="Utility functions for memory, etc.">Util</a> {
+<a name="l00100"></a>00100 <span class="keyword">public</span>:
+<a name="l00101"></a>00101 
+<a name="l00106"></a><a class="code" href="class_util.html#3f73433908596efd3e64a02706a6e75a">00106</a>   <span class="keyword">static</span> <span class="keywordtype">void</span> downcaseString_inplace(std::string&amp; str) {
+<a name="l00107"></a>00107     <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; str.size(); i++) {
+<a name="l00108"></a>00108       str[i] = (<span class="keywordtype">char</span>)<a class="code" href="namespaceaffx.html#70b95f08a97e5d9c6f54dfb40956c840">tolower</a>(str[i]);
+<a name="l00109"></a>00109     }
+<a name="l00110"></a>00110   }
+<a name="l00114"></a><a class="code" href="class_util.html#b73e26f5a353284899216123a494e3bf">00114</a>   <span class="keyword">static</span> std::string downcaseString(<span class="keyword">const</span> std::string&amp; str_orig) {
+<a name="l00115"></a>00115     std::string str=str_orig;
+<a name="l00116"></a>00116     downcaseString_inplace(str);
+<a name="l00117"></a>00117     <span class="keywordflow">return</span> str;
+<a name="l00118"></a>00118   }
+<a name="l00119"></a>00119 
+<a name="l00121"></a><a class="code" href="struct_util_1_1ltstr.html">00121</a>    <span class="keyword">struct </span><a class="code" href="struct_util_1_1ltstr.html">ltstr</a> {
+<a name="l00123"></a><a class="code" href="struct_util_1_1ltstr.html#6d8b77258b6d6d08f86a43b78c7d8581">00123</a>      <span class="keywordtype">bool</span> operator()(<span class="keyword">const</span> <span class="keywordtype">char</span>* s1, <span class="keyword">const</span> <span class="keywordtype">char</span>* s2)<span class="keyword"> const </span>{
+<a name="l00124"></a>00124       <span class="keywordflow">return</span> strcmp(s1, s2) &lt; 0;
+<a name="l00125"></a>00125      }
+<a name="l00126"></a>00126    };
+<a name="l00127"></a>00127 
+<a name="l00128"></a><a class="code" href="struct_util_1_1ltstring.html">00128</a>    <span class="keyword">struct </span><a class="code" href="struct_util_1_1ltstring.html">ltstring</a> {
+<a name="l00130"></a><a class="code" href="struct_util_1_1ltstring.html#1a9ddbbcbb88fd8f5e92b875f6245496">00130</a>      <span class="keywordtype">bool</span> operator()(<span class="keyword">const</span> std::string&amp; s1, <span class="keyword">const</span> std::string&amp; s2)<span class="keyword"> const </span>{
+<a name="l00131"></a>00131        <span class="keywordflow">return</span> strcmp(s1.c_str(), s2.c_str()) &lt; 0;
+<a name="l00132"></a>00132        <span class="comment">//return s1.compare(s2)&lt;0; //vliber</span>
+<a name="l00133"></a>00133      }
+<a name="l00134"></a>00134    };
+<a name="l00135"></a>00135 
+<a name="l00140"></a>00140   <span class="keyword">static</span> std::string getTimeStamp();
+<a name="l00141"></a>00141 
+<a name="l00145"></a><a class="code" href="class_util.html#1eefe5a6e76298c2df9dd6d07a36a1a7">00145</a>    <span class="keyword">static</span> <span class="keywordtype">int</span> round(<span class="keywordtype">double</span> x) { <span class="keywordflow">return</span> ((<span class="keywordtype">int</span>)((x)+0.5)); }
+<a name="l00146"></a>00146 
+<a name="l00153"></a>00153   <span class="keyword">static</span> <span class="keywordtype">char</span> *cloneString(<span class="keyword">const</span> <span class="keywordtype">char</span> *);
+<a name="l00154"></a>00154   <span class="comment">// one shouldnt need this. -jhg</span>
+<a name="l00155"></a>00155   <span class="comment">// static char *cloneString(const std::string &amp;);</span>
+<a name="l00156"></a>00156 
+<a name="l00163"></a>00163   <span class="keyword">static</span> <span class="keywordtype">bool</span> stringEndsWith(<span class="keyword">const</span> std::string&amp; str,<span class="keyword">const</span> std::string&amp; end);
+<a name="l00164"></a>00164 
+<a name="l00165"></a>00165   <span class="comment">// like AffxString but uses std::string.</span>
+<a name="l00166"></a>00166 
+<a name="l00171"></a>00171   <span class="keyword">static</span> <span class="keywordtype">bool</span> endsWithStr(<span class="keyword">const</span> std::string&amp; str,<span class="keyword">const</span> std::string&amp; ending);
+<a name="l00178"></a>00178   <span class="keyword">static</span> <span class="keywordtype">bool</span> endsWithStr(<span class="keyword">const</span> std::string&amp; str,<span class="keyword">const</span> std::string&amp; ending,<span class="keywordtype">int</span> posFromEnd);
+<a name="l00179"></a>00179 
+<a name="l00180"></a>00180   <span class="comment">//#ifndef APT_OBSOLETE_FUNCS</span>
+<a name="l00186"></a>00186 <span class="comment"></span>  <span class="keyword">static</span> <span class="keywordtype">void</span> chompLastIfSep(std::string &amp;s);
+<a name="l00187"></a>00187 
+<a name="l00193"></a>00193   <span class="keyword">static</span> std::string chopSuffix(<span class="keyword">const</span> std::string&amp; s, <span class="keywordtype">char</span> d = <span class="charliteral">'.'</span>);
+<a name="l00194"></a>00194 
+<a name="l00195"></a>00195 
+<a name="l00203"></a>00203   <span class="keyword">static</span> <span class="keywordtype">void</span> chopString(<span class="keyword">const</span> std::string&amp; s,<span class="keyword">const</span> <span class="keywordtype">char</span> delim,std::vector&lt;std::string&gt;&amp; words);
+<a name="l00204"></a>00204 
+<a name="l00213"></a>00213   <span class="keyword">static</span> <span class="keywordtype">void</span> chopString(<span class="keyword">const</span> std::string&amp; s, <span class="keyword">const</span> <span class="keywordtype">char</span>* delims, std::vector&lt;std::string&gt;&amp; words);
+<a name="l00214"></a>00214 
+<a name="l00220"></a><a class="code" href="class_util.html#a912567f9cdde6941ba305f4278b5828">00220</a>   <span class="keyword">static</span> <span class="keywordtype">void</span> trimString(std::string&amp; s, <span class="keyword">const</span> <span class="keywordtype">char</span> *whitespace  = <span class="stringliteral">" \r\n\t"</span>) {
+<a name="l00221"></a>00221     s = s.erase(s.find_last_not_of(whitespace)+1);
+<a name="l00222"></a>00222     s = s.erase(0,s.find_first_not_of(whitespace));
+<a name="l00223"></a>00223   }
+<a name="l00224"></a>00224 
+<a name="l00229"></a>00229   <span class="keyword">static</span> <span class="keywordtype">void</span> changeEnd(std::string&amp; str,<span class="keyword">const</span> std::string&amp; from,<span class="keyword">const</span> std::string&amp; to);
+<a name="l00230"></a>00230 
+<a name="l00235"></a>00235   <span class="keyword">static</span> <span class="keywordtype">void</span> changeEnd(std::vector&lt;std::string&gt;&amp; str_vec,<span class="keyword">const</span> std::string&amp; from,<span class="keyword">const</span> std::string&amp; to);
+<a name="l00236"></a>00236 
+<a name="l00245"></a><a class="code" href="class_util.html#0d2126d2d7027b17fdcba5f94e18567e">00245</a>   <span class="keyword">static</span> <span class="keywordtype">bool</span> sameString(<span class="keyword">const</span> std::string &amp;s1, <span class="keyword">const</span> std::string &amp;s2) {
+<a name="l00246"></a>00246     <span class="keywordflow">return</span> s1.compare(s2) == 0;
+<a name="l00247"></a>00247   }
 <a name="l00248"></a>00248 
-<a name="l00254"></a>00254   <span class="keyword">static</span> <span class="keywordtype">bool</span> fileRename(<span class="keyword">const</span> std::string &amp;in, <span class="keyword">const</span> std::string &amp;out, <span class="keywordtype">bool</span> throwOnError = <span class="keyword">true</span>);
-<a name="l00255"></a>00255 
-<a name="l00260"></a>00260   <span class="keyword">static</span> <span class="keywordtype">bool</span> fileRemove(<span class="keyword">const</span> std::string &amp;fileName, <span class="keywordtype">bool</span> throwOnError = <span class="keyword">true</span>);
-<a name="l00261"></a>00261 
-<a name="l00262"></a>00262   <span class="keyword">static</span> <span class="keywordtype">void</span> fileRemove(std::vector&lt;std::string&gt; &amp;filesToRemove);
-<a name="l00263"></a>00263 
-<a name="l00268"></a>00268   <span class="keyword">static</span> <span class="keywordtype">bool</span> dirRemove(<span class="keyword">const</span> std::string &amp;dirName, <span class="keywordtype">bool</span> throwOnError = <span class="keyword">true</span>);
-<a name="l00269"></a>00269 
-<a name="l00275"></a>00275   <span class="keyword">static</span> <span class="keywordtype">void</span> chompLastIfSep(std::string &amp;s);
-<a name="l00276"></a>00276 
-<a name="l00282"></a>00282   <span class="keyword">static</span> std::string chopSuffix(<span class="keyword">const</span> std::string&amp; s, <span class="keywordtype">char</span> d = <span class="charliteral">'.'</span>);
-<a name="l00283"></a>00283 
-<a name="l00288"></a>00288   <span class="keyword">static</span> <span class="keywordtype">bool</span> directoryReadable(<span class="keyword">const</span> std::string &amp;dirName); 
-<a name="l00289"></a>00289   
-<a name="l00294"></a>00294   <span class="keyword">static</span> <span class="keywordtype">bool</span> directoryWritable(<span class="keyword">const</span> std::string &amp;dirName); 
-<a name="l00295"></a>00295 
-<a name="l00303"></a>00303   <span class="keyword">static</span> <span class="keywordtype">bool</span> makeDir(<span class="keyword">const</span> std::string &amp;dirName); 
-<a name="l00304"></a>00304 
-<a name="l00308"></a>00308   <span class="keyword">static</span> <span class="keywordtype">bool</span> makeDirPath(<span class="keyword">const</span> std::string &amp;pathName);
-<a name="l00309"></a>00309 
-<a name="l00317"></a>00317   <span class="keyword">static</span> <span class="keywordtype">void</span> chopString(<span class="keyword">const</span> std::string&amp; s,<span class="keyword">const</span> <span class="keywordtype">char</span> delim,std::vector&lt;std::string&gt;&amp; words);
-<a name="l00318"></a>00318 
-<a name="l00324"></a><a class="code" href="class_util.html#a912567f9cdde6941ba305f4278b5828">00324</a>   <span class="keyword">static</span> <span class="keywordtype">void</span> trimString(std::string&amp; s, <span class="keyword">const</span> <span class="keywordtype">char</span> *whitespace  = <span class="stringliteral">" \r\n\t"</span>) {
-<a name="l00325"></a>00325     s = s.erase(s.find_last_not_of(whitespace)+1);
-<a name="l00326"></a>00326     s = s.erase(0,s.find_first_not_of(whitespace));
-<a name="l00327"></a>00327   }
-<a name="l00328"></a>00328 
-<a name="l00333"></a>00333   <span class="keyword">static</span> <span class="keywordtype">void</span> changeEnd(std::string&amp; str,<span class="keyword">const</span> std::string&amp; from,<span class="keyword">const</span> std::string&amp; to);
+<a name="l00267"></a>00267   <span class="keyword">static</span> <span class="keywordtype">int</span> matrixDifferences(<span class="keyword">const</span> std::string&amp; targetFile,
+<a name="l00268"></a>00268                                <span class="keyword">const</span> std::string&amp; queryFile,
+<a name="l00269"></a>00269                                <span class="keywordtype">int</span> colSkip, <span class="keywordtype">int</span> rowSkip,
+<a name="l00270"></a>00270                                <span class="keywordtype">double</span> epsilon,
+<a name="l00271"></a>00271                                <span class="keywordtype">bool</span> printMismatch,
+<a name="l00272"></a>00272                                <span class="keywordtype">bool</span> matchRows,
+<a name="l00273"></a>00273                                <span class="keywordtype">double</span> fraction = 0.0,
+<a name="l00274"></a>00274                                <span class="keywordtype">int</span> printMismatchMax = -1);
+<a name="l00275"></a>00275 
+<a name="l00284"></a><a class="code" href="class_util.html#f48d8be413de4e28b620e58e9f1d5ec1">00284</a>   <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="_file_utils_8cpp.html#d361224868de44d6a0db25cfb502fb35">subChar</a>(std::string &amp;s, <span class="keywordtype">char</span> from, <span class="keywordtype">char</span> to) {
+<a name="l00285"></a>00285     std::string::size_type pos = 0;
+<a name="l00286"></a>00286     <span class="keywordflow">for</span>(pos = 0; pos &lt; s.size(); pos++) {
+<a name="l00287"></a>00287       <span class="keywordflow">if</span>(s[pos] == from) {
+<a name="l00288"></a>00288         s[pos] = to;
+<a name="l00289"></a>00289       }
+<a name="l00290"></a>00290     }
+<a name="l00291"></a>00291   }
+<a name="l00292"></a>00292 
+<a name="l00293"></a>00293 
+<a name="l00302"></a>00302   <span class="keyword">static</span> <span class="keywordtype">void</span> replaceString(std::string &amp;s, <span class="keyword">const</span> std::string &amp;from, <span class="keyword">const</span> std::string &amp;to);
+<a name="l00303"></a>00303 
+<a name="l00304"></a>00304   <span class="keyword">static</span> <span class="keywordtype">void</span> breakByString(<span class="keyword">const</span> std::string &amp;s, <span class="keyword">const</span> std::string &amp;delim, std::vector&lt;std::string&gt; &amp;words);
+<a name="l00305"></a>00305 
+<a name="l00306"></a><a class="code" href="class_util.html#9b07bb4e2d37ff95f9e3917308eac68f">00306</a>   <span class="keyword">static</span> <span class="keywordtype">void</span> removeChar(std::string &amp;s, <span class="keywordtype">char</span> character) {
+<a name="l00307"></a>00307     std::ostringstream buf;
+<a name="l00308"></a>00308     <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; s.length(); i++) {
+<a name="l00309"></a>00309       <span class="keywordflow">if</span> (s.at(i) != character) {
+<a name="l00310"></a>00310         buf &lt;&lt; s.at(i);
+<a name="l00311"></a>00311       }
+<a name="l00312"></a>00312     }
+<a name="l00313"></a>00313     s = buf.str();
+<a name="l00314"></a>00314   }
+<a name="l00315"></a>00315 
+<a name="l00316"></a><a class="code" href="class_util.html#c7deea35598bb4438637b912d8eb2be3">00316</a>   <span class="keyword">static</span> <span class="keywordtype">bool</span> is32Bit() {
+<a name="l00317"></a>00317     <span class="keywordtype">bool</span> is32 = <span class="keyword">true</span>;
+<a name="l00318"></a>00318     <span class="keywordtype">int</span> nBytes = <span class="keyword">sizeof</span>(size_t);
+<a name="l00319"></a>00319     <span class="keywordflow">if</span> (nBytes == 4) {
+<a name="l00320"></a>00320       is32 = <span class="keyword">true</span>;
+<a name="l00321"></a>00321     }
+<a name="l00322"></a>00322     <span class="keywordflow">else</span> <span class="keywordflow">if</span> (nBytes == 8) {
+<a name="l00323"></a>00323       is32 = <span class="keyword">false</span>;
+<a name="l00324"></a>00324     }
+<a name="l00325"></a>00325 <span class="preprocessor">#ifdef _WIN64</span>
+<a name="l00326"></a>00326 <span class="preprocessor"></span>    is32 = <span class="keyword">false</span>;
+<a name="l00327"></a>00327 <span class="preprocessor">#endif</span>
+<a name="l00328"></a>00328 <span class="preprocessor"></span><span class="preprocessor">#ifdef __LP64__</span>
+<a name="l00329"></a>00329 <span class="preprocessor"></span>    is32 = <span class="keyword">false</span>;
+<a name="l00330"></a>00330 <span class="preprocessor">#endif</span>
+<a name="l00331"></a>00331 <span class="preprocessor"></span>    <span class="keywordflow">return</span> is32;
+<a name="l00332"></a>00332   }
+<a name="l00333"></a>00333 
 <a name="l00334"></a>00334 
-<a name="l00339"></a>00339   <span class="keyword">static</span> <span class="keywordtype">void</span> changeEnd(std::vector&lt;std::string&gt;&amp; str_vec,<span class="keyword">const</span> std::string&amp; from,<span class="keyword">const</span> std::string&amp; to);
+<a name="l00339"></a>00339   <span class="keyword">static</span> int32_t schrageRandom(int32_t *ix);
 <a name="l00340"></a>00340 
-<a name="l00347"></a>00347   <span class="keyword">static</span> std::string fileRoot(<span class="keyword">const</span> std::string&amp; filename);
-<a name="l00348"></a>00348   <span class="keyword">static</span> std::vector&lt;std::string&gt; fileRoot(<span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; filename_vec);
-<a name="l00349"></a>00349 
-<a name="l00358"></a><a class="code" href="class_util.html#0d2126d2d7027b17fdcba5f94e18567e">00358</a>   <span class="keyword">static</span> <span class="keywordtype">bool</span> sameString(<span class="keyword">const</span> std::string &amp;s1, <span class="keyword">const</span> std::string &amp;s2) {
-<a name="l00359"></a>00359     <span class="keywordflow">return</span> s1.compare(s2) == 0;
-<a name="l00360"></a>00360   }
-<a name="l00361"></a>00361  
-<a name="l00378"></a>00378   <span class="keyword">static</span> <span class="keywordtype">int</span> matrixDifferences(<span class="keyword">const</span> std::string&amp; targetFile, 
-<a name="l00379"></a>00379                                <span class="keyword">const</span> std::string&amp; queryFile, 
-<a name="l00380"></a>00380                                <span class="keywordtype">int</span> colSkip, <span class="keywordtype">int</span> rowSkip, <span class="keywordtype">double</span> epsilon, <span class="keywordtype">bool</span> printMismatch,
-<a name="l00381"></a>00381                                <span class="keywordtype">bool</span> matchRows);
-<a name="l00382"></a>00382 
-<a name="l00391"></a><a class="code" href="class_util.html#f48d8be413de4e28b620e58e9f1d5ec1">00391</a>   <span class="keyword">static</span> <span class="keywordtype">void</span> subChar(std::string &amp;s, <span class="keywordtype">char</span> from, <span class="keywordtype">char</span> to) {
-<a name="l00392"></a>00392     std::string::size_type pos = 0;
-<a name="l00393"></a>00393     <span class="keywordflow">for</span>(pos = 0; pos &lt; s.size(); pos++) {
-<a name="l00394"></a>00394       <span class="keywordflow">if</span>(s[pos] == from) {
-<a name="l00395"></a>00395         s[pos] = to;
-<a name="l00396"></a>00396       }
-<a name="l00397"></a>00397     }
-<a name="l00398"></a>00398   }
-<a name="l00399"></a>00399     
-<a name="l00415"></a>00415   <span class="keyword">static</span> std::string convertPathName(<span class="keyword">const</span> std::string &amp;path, <span class="keywordtype">bool</span> singleFile = <span class="keyword">true</span>);
-<a name="l00416"></a>00416 
+<a name="l00341"></a>00341   <span class="keyword">static</span> std::string asMB(uint64_t x);
+<a name="l00342"></a>00342 
+<a name="l00354"></a>00354   <span class="keyword">static</span> <span class="keywordtype">bool</span> memInfo(uint64_t &amp;free, uint64_t &amp;total, uint64_t &amp;swapAvail,uint64_t&amp; memAvail, <span class="keywordtype">bool</span> cap32bit=<span class="keyword">true</span>);
+<a name="l00355"></a>00355 
+<a name="l00356"></a>00356   <span class="keyword">static</span> uint64_t getMemFreeAtStart();
+<a name="l00357"></a>00357   <span class="keyword">static</span> uint64_t getMemFreeAtBlock();
+<a name="l00358"></a>00358   <span class="keyword">static</span> <span class="keywordtype">void</span> pushMemFreeAtStart();
+<a name="l00359"></a>00359   <span class="keyword">static</span> <span class="keywordtype">void</span> popMemFreeAtStart();
+<a name="l00360"></a>00360 
+<a name="l00368"></a>00368   <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *nextWhiteSpace(<span class="keyword">const</span> <span class="keywordtype">char</span> *);
+<a name="l00369"></a>00369 
+<a name="l00380"></a>00380   <span class="keyword">static</span> <span class="keywordtype">void</span> printStringWidth(std::ostream &amp;out,<span class="keyword">const</span> std::string&amp; str, <span class="keywordtype">int</span> prefix,<span class="keywordtype">int</span> currentPos, <span class="keywordtype">int</span> maxWidth=70);
+<a name="l00381"></a>00381 
+<a name="l00387"></a>00387   <span class="keyword">static</span> <span class="keywordtype">bool</span> isFinite(<span class="keywordtype">double</span> x);
+<a name="l00388"></a>00388 
+<a name="l00389"></a><a class="code" href="class_util.html#bc184e95d822fc945c375557c5411d07">00389</a>    <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">void</span> PrintTextClassTitle(<span class="keyword">const</span> std::string &amp;className){
+<a name="l00390"></a>00390     printf (<span class="stringliteral">"****%s****\n"</span>,className.c_str());
+<a name="l00391"></a>00391   }
+<a name="l00392"></a>00392 
+<a name="l00393"></a><a class="code" href="class_util.html#e1ac43f8bd1cf5636c2febb310d92df8">00393</a>   <span class="keyword">static</span> <span class="keywordtype">void</span> PrintTextFunctionTitle(<span class="keyword">const</span> std::string &amp;className, <span class="keyword">const</span> std::string &amp;functionName){
+<a name="l00394"></a>00394     printf (<span class="stringliteral">"****%s::%s****\n"</span>,className.c_str(),functionName.c_str());
+<a name="l00395"></a>00395   }
+<a name="l00396"></a>00396 
+<a name="l00397"></a>00397   <span class="keyword">static</span> std::vector&lt;std::string&gt; addPrefixSuffix(std::vector&lt;std::string&gt; middle,
+<a name="l00398"></a>00398                           <span class="keyword">const</span> std::string &amp;prefix, <span class="keyword">const</span> std::string &amp;suffix);
+<a name="l00399"></a>00399   <span class="keyword">static</span> std::vector&lt;std::string&gt; addPrefixSuffix(<span class="keyword">const</span> <span class="keywordtype">char</span>* middle[],
+<a name="l00400"></a>00400                           <span class="keyword">const</span> std::string &amp;prefix, <span class="keyword">const</span> std::string &amp;suffix);
+<a name="l00401"></a>00401   <span class="keyword">static</span> std::vector&lt;std::string&gt; addPrefixSuffix(<span class="keyword">const</span> <span class="keywordtype">char</span>* middle[], <span class="keywordtype">int</span> size,
+<a name="l00402"></a>00402                           <span class="keyword">const</span> std::string &amp;prefix, <span class="keyword">const</span> std::string &amp;suffix);
+<a name="l00403"></a>00403   <span class="keyword">static</span> std::vector&lt;std::string&gt; listToVector(<span class="keyword">const</span> <span class="keywordtype">char</span>* in[], <span class="keywordtype">int</span> size);
+<a name="l00404"></a>00404   <span class="keyword">static</span> std::vector&lt;std::string&gt; listToVector(<span class="keyword">const</span> <span class="keywordtype">char</span>* in[]);
+<a name="l00405"></a>00405 
+<a name="l00406"></a>00406   <span class="keyword">static</span> std::vector&lt;std::string&gt; addPrefixSuffix(<span class="keyword">const</span> <span class="keywordtype">char</span>* middle[],
+<a name="l00407"></a>00407                           <span class="keyword">const</span> std::string &amp;prefix);
+<a name="l00408"></a>00408 
+<a name="l00409"></a>00409   <span class="keyword">static</span> std::vector&lt;std::string&gt; addPrefixSuffix(std::string middle[],
+<a name="l00410"></a>00410                           <span class="keyword">const</span> std::string &amp;prefix, <span class="keyword">const</span> std::string &amp;suffix);
+<a name="l00411"></a>00411   <span class="keyword">static</span> std::vector&lt;std::string&gt; addPrefixSuffix(std::string middle[], <span class="keywordtype">int</span> size,
+<a name="l00412"></a>00412                           <span class="keyword">const</span> std::string &amp;prefix, <span class="keyword">const</span> std::string &amp;suffix);
+<a name="l00413"></a>00413   <span class="keyword">static</span> std::vector&lt;std::string&gt; listToVector(std::string in[]);
+<a name="l00414"></a>00414   <span class="keyword">static</span> std::vector&lt;std::string&gt; listToVector(std::string in[], <span class="keywordtype">int</span> size);
+<a name="l00415"></a>00415 
+<a name="l00416"></a>00416   <span class="keyword">static</span> std::string joinVectorString(std::vector&lt;std::string&gt; toJoin, <span class="keyword">const</span> std::string &amp;sep);
 <a name="l00417"></a>00417 
-<a name="l00422"></a>00422   <span class="keyword">static</span> int32_t schrageRandom(int32_t *ix);
-<a name="l00423"></a>00423 
-<a name="l00424"></a>00424   <span class="keyword">static</span> std::string asMB(uint64_t x);
-<a name="l00425"></a>00425 
-<a name="l00426"></a>00426   <span class="keyword">static</span> <span class="keywordtype">bool</span> memInfo(uint64_t &amp;free, uint64_t &amp;total, uint64_t &amp;swapAvail,uint64_t&amp; memAvail, <span class="keywordtype">bool</span> cap32bit=<span class="keyword">true</span>);
-<a name="l00427"></a>00427 
-<a name="l00428"></a>00428   <span class="keyword">static</span> uint64_t getMemFreeAtStart();
-<a name="l00429"></a>00429   <span class="keyword">static</span> uint64_t getMemFreeAtBlock();
-<a name="l00430"></a>00430   <span class="keyword">static</span> <span class="keywordtype">void</span> pushMemFreeAtStart();
-<a name="l00431"></a>00431   <span class="keyword">static</span> <span class="keywordtype">void</span> popMemFreeAtStart();
-<a name="l00432"></a>00432 
-<a name="l00440"></a>00440   <span class="keyword">static</span> int64_t getAvailableDiskSpace(<span class="keyword">const</span> std::string&amp; path);
+<a name="l00418"></a><a class="code" href="class_util.html#4c862e88eab3bbb0610702da59af1775">00418</a>   <span class="keyword">static</span> std::string <a class="code" href="namespaceaffx.html#fa5bc0bf0e987534c19b8912f482e051">escapeString</a>(<span class="keyword">const</span> std::string &amp;s, <span class="keywordtype">char</span> c, <span class="keywordtype">char</span> escape=<span class="charliteral">'\\'</span>) {
+<a name="l00419"></a>00419     std::string e;
+<a name="l00420"></a>00420     e.reserve(s.size());
+<a name="l00421"></a>00421     <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; s.size(); i++) {
+<a name="l00422"></a>00422       <span class="keywordflow">if</span> (s[i] == c || s[i] == escape) {
+<a name="l00423"></a>00423         e.push_back(escape);
+<a name="l00424"></a>00424       }
+<a name="l00425"></a>00425       e.push_back(s[i]);
+<a name="l00426"></a>00426     }
+<a name="l00427"></a>00427     <span class="keywordflow">return</span> e;
+<a name="l00428"></a>00428   }
+<a name="l00429"></a>00429 
+<a name="l00430"></a><a class="code" href="class_util.html#29805eaef3cf6927099814b699afa6dc">00430</a>   <span class="keyword">static</span> std::string deEscapeString(std::string &amp;s, <span class="keywordtype">char</span> escape=<span class="charliteral">'\\'</span>) {
+<a name="l00431"></a>00431     std::string e;
+<a name="l00432"></a>00432     e.reserve(s.size());
+<a name="l00433"></a>00433     <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; s.size(); i++) {
+<a name="l00434"></a>00434       <span class="keywordflow">if</span> (s[i] == escape) {
+<a name="l00435"></a>00435         i++;
+<a name="l00436"></a>00436       }
+<a name="l00437"></a>00437       e.push_back(s[i]);
+<a name="l00438"></a>00438     }
+<a name="l00439"></a>00439     <span class="keywordflow">return</span> e;
+<a name="l00440"></a>00440   }
 <a name="l00441"></a>00441 
-<a name="l00450"></a>00450   <span class="keyword">static</span> int64_t isSameVolume(<span class="keyword">const</span> std::string&amp; path1, <span class="keyword">const</span> std::string&amp; path2);
-<a name="l00451"></a>00451 
-<a name="l00459"></a>00459   <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *nextWhiteSpace(<span class="keyword">const</span> <span class="keywordtype">char</span> *);
-<a name="l00460"></a>00460 
-<a name="l00471"></a>00471   <span class="keyword">static</span> <span class="keywordtype">void</span> printStringWidth(std::ostream &amp;out,<span class="keyword">const</span> std::string&amp; str, <span class="keywordtype">int</span> prefix,<span class="keywordtype">int</span> currentPos, <span class="keywordtype">int</span> maxWidth=70);
-<a name="l00472"></a>00472 
-<a name="l00478"></a>00478   <span class="keyword">static</span> <span class="keywordtype">bool</span> isFinite(<span class="keywordtype">double</span> x);
+<a name="l00442"></a><a class="code" href="class_util.html#1c17631ec24ea786f63ec0599ccea3bb">00442</a>   <span class="keyword">static</span> std::wstring toWString( <span class="keyword">const</span> std::string &amp;src ) {
+<a name="l00443"></a>00443     std::wstring dst( src.length(), L<span class="charliteral">' '</span>);
+<a name="l00444"></a>00444     std::copy( src.begin(), src.end(), dst.begin());
+<a name="l00445"></a>00445     <span class="keywordflow">return</span> dst;
+<a name="l00446"></a>00446   }
+<a name="l00447"></a>00447   <span class="keyword">static</span> std::string toString( <span class="keyword">const</span> std::wstring &amp;src );
+<a name="l00448"></a>00448 
+<a name="l00449"></a>00449 <span class="keyword">private</span>:
+<a name="l00450"></a><a class="code" href="class_util_1_1_static_mem.html">00450</a>     <span class="keyword">class </span><a class="code" href="class_util_1_1_static_mem.html">StaticMem</a> {
+<a name="l00451"></a>00451         <span class="keyword">public</span>:
+<a name="l00452"></a><a class="code" href="class_util_1_1_static_mem.html#12e7dc14bcc9df5bf6962309ce59e99a">00452</a>             <a class="code" href="class_util_1_1_static_mem.html">StaticMem</a>() {
+<a name="l00453"></a>00453                 uint64_t freeRam = 0, totalRam = 0, swapAvail = 0, memAvail = 0;
+<a name="l00454"></a>00454                 <a class="code" href="class_util.html#bd09dcbcbe5d0dc6714bf008005fe0b7">Util::memInfo</a>(freeRam, totalRam, swapAvail, memAvail, <span class="keyword">false</span>);
+<a name="l00455"></a>00455                 m_MemFreeAtStart.push_back(memAvail);
+<a name="l00456"></a>00456             }
+<a name="l00457"></a><a class="code" href="class_util_1_1_static_mem.html#0f45d47b2831ec5341d75c2a921250ed">00457</a>             uint64_t getMemFreeAtStart() {
+<a name="l00458"></a>00458                 <span class="keywordflow">return</span> m_MemFreeAtStart[0];
+<a name="l00459"></a>00459             }
+<a name="l00460"></a><a class="code" href="class_util_1_1_static_mem.html#ea54c9484c82f7e728c8ef8699f31b3a">00460</a>             uint64_t getMemFreeAtBlock() {
+<a name="l00461"></a>00461                 <span class="keywordflow">return</span> m_MemFreeAtStart[m_MemFreeAtStart.size()-1];
+<a name="l00462"></a>00462             }
+<a name="l00463"></a><a class="code" href="class_util_1_1_static_mem.html#cabe19856aad27cc9ee8b1e497e28265">00463</a>             <span class="keywordtype">void</span> pushMemFreeAtStart(uint64_t mem) {
+<a name="l00464"></a>00464                 m_MemFreeAtStart.push_back(mem);
+<a name="l00465"></a>00465             }
+<a name="l00466"></a><a class="code" href="class_util_1_1_static_mem.html#af9fc701e2fd1fbf110fee5426a224d8">00466</a>             uint64_t popMemFreeAtStart() {
+<a name="l00467"></a>00467                 uint64_t mem = m_MemFreeAtStart[m_MemFreeAtStart.size()-1];
+<a name="l00468"></a>00468                 m_MemFreeAtStart.pop_back();
+<a name="l00469"></a>00469                 <span class="keywordflow">return</span> mem;
+<a name="l00470"></a>00470             }
+<a name="l00471"></a>00471 
+<a name="l00472"></a>00472         <span class="keyword">private</span>:
+<a name="l00473"></a><a class="code" href="class_util_1_1_static_mem.html#e79a8cd1e45ff15fd9cff6e1524268c2">00473</a>             std::vector&lt;uint64_t&gt; m_MemFreeAtStart;
+<a name="l00474"></a>00474     };
+<a name="l00475"></a>00475 
+<a name="l00476"></a>00476     <span class="keyword">static</span> <a class="code" href="class_util_1_1_static_mem.html">StaticMem</a> &amp;getStaticMem();
+<a name="l00477"></a>00477 
+<a name="l00478"></a>00478 };
 <a name="l00479"></a>00479 
-<a name="l00480"></a><a class="code" href="class_util.html#bc184e95d822fc945c375557c5411d07">00480</a>    <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">void</span> PrintTextClassTitle(<span class="keyword">const</span> std::string &amp;className){
-<a name="l00481"></a>00481     printf (<span class="stringliteral">"****%s****\n"</span>,className.c_str());
-<a name="l00482"></a>00482   }
-<a name="l00483"></a>00483 
-<a name="l00484"></a><a class="code" href="class_util.html#e1ac43f8bd1cf5636c2febb310d92df8">00484</a>   <span class="keyword">static</span> <span class="keywordtype">void</span> PrintTextFunctionTitle(<span class="keyword">const</span> std::string &amp;className, <span class="keyword">const</span> std::string &amp;functionName){
-<a name="l00485"></a>00485     printf (<span class="stringliteral">"****%s::%s****\n"</span>,className.c_str(),functionName.c_str());
-<a name="l00486"></a>00486   }
-<a name="l00487"></a>00487 
-<a name="l00488"></a>00488   <span class="keyword">static</span> std::vector&lt;std::string&gt; addPrefixSuffix(std::vector&lt;std::string&gt; middle, 
-<a name="l00489"></a>00489                           <span class="keyword">const</span> std::string &amp;prefix, <span class="keyword">const</span> std::string &amp;suffix);
-<a name="l00490"></a>00490   <span class="keyword">static</span> std::vector&lt;std::string&gt; addPrefixSuffix(<span class="keyword">const</span> <span class="keywordtype">char</span>* middle[], 
-<a name="l00491"></a>00491                           <span class="keyword">const</span> std::string &amp;prefix, <span class="keyword">const</span> std::string &amp;suffix);
-<a name="l00492"></a>00492   <span class="keyword">static</span> std::vector&lt;std::string&gt; addPrefixSuffix(<span class="keyword">const</span> <span class="keywordtype">char</span>* middle[], <span class="keywordtype">int</span> size, 
-<a name="l00493"></a>00493                           <span class="keyword">const</span> std::string &amp;prefix, <span class="keyword">const</span> std::string &amp;suffix);
-<a name="l00494"></a>00494   <span class="keyword">static</span> std::vector&lt;std::string&gt; listToVector(<span class="keyword">const</span> <span class="keywordtype">char</span>* in[], <span class="keywordtype">int</span> size);
-<a name="l00495"></a>00495   <span class="keyword">static</span> std::vector&lt;std::string&gt; listToVector(<span class="keyword">const</span> <span class="keywordtype">char</span>* in[]);
-<a name="l00496"></a>00496   
-<a name="l00497"></a>00497   <span class="keyword">static</span> std::vector&lt;std::string&gt; addPrefixSuffix(<span class="keyword">const</span> <span class="keywordtype">char</span>* middle[],
-<a name="l00498"></a>00498                           <span class="keyword">const</span> std::string &amp;prefix);
-<a name="l00499"></a>00499 
-<a name="l00500"></a>00500   <span class="keyword">static</span> std::vector&lt;std::string&gt; addPrefixSuffix(std::string middle[], 
-<a name="l00501"></a>00501                           <span class="keyword">const</span> std::string &amp;prefix, <span class="keyword">const</span> std::string &amp;suffix);
-<a name="l00502"></a>00502   <span class="keyword">static</span> std::vector&lt;std::string&gt; addPrefixSuffix(std::string middle[], <span class="keywordtype">int</span> size, 
-<a name="l00503"></a>00503                           <span class="keyword">const</span> std::string &amp;prefix, <span class="keyword">const</span> std::string &amp;suffix);
-<a name="l00504"></a>00504   <span class="keyword">static</span> std::vector&lt;std::string&gt; listToVector(std::string in[]);
-<a name="l00505"></a>00505   <span class="keyword">static</span> std::vector&lt;std::string&gt; listToVector(std::string in[], <span class="keywordtype">int</span> size);
-<a name="l00506"></a>00506 
-<a name="l00507"></a>00507   <span class="keyword">static</span> std::string joinVectorString(std::vector&lt;std::string&gt; toJoin, <span class="keyword">const</span> std::string &amp;sep);
-<a name="l00508"></a>00508 
-<a name="l00509"></a>00509 <span class="keyword">private</span>:
-<a name="l00510"></a><a class="code" href="class_util_1_1_static_mem.html">00510</a>     <span class="keyword">class </span><a class="code" href="class_util_1_1_static_mem.html">StaticMem</a> {
-<a name="l00511"></a>00511         <span class="keyword">public</span>:
-<a name="l00512"></a><a class="code" href="class_util_1_1_static_mem.html#12e7dc14bcc9df5bf6962309ce59e99a">00512</a>             <a class="code" href="class_util_1_1_static_mem.html">StaticMem</a>() {
-<a name="l00513"></a>00513                 uint64_t freeRam = 0, totalRam = 0, swapAvail = 0, memAvail = 0;
-<a name="l00514"></a>00514                 <a class="code" href="class_util.html#bd09dcbcbe5d0dc6714bf008005fe0b7">Util::memInfo</a>(freeRam, totalRam, swapAvail, memAvail, <span class="keyword">false</span>);
-<a name="l00515"></a>00515                 m_MemFreeAtStart.push_back(memAvail);
-<a name="l00516"></a>00516             }
-<a name="l00517"></a><a class="code" href="class_util_1_1_static_mem.html#0f45d47b2831ec5341d75c2a921250ed">00517</a>             uint64_t getMemFreeAtStart() {
-<a name="l00518"></a>00518                 <span class="keywordflow">return</span> m_MemFreeAtStart[0];
-<a name="l00519"></a>00519             }
-<a name="l00520"></a><a class="code" href="class_util_1_1_static_mem.html#ea54c9484c82f7e728c8ef8699f31b3a">00520</a>             uint64_t getMemFreeAtBlock() {
-<a name="l00521"></a>00521                 <span class="keywordflow">return</span> m_MemFreeAtStart[m_MemFreeAtStart.size()-1];
-<a name="l00522"></a>00522             }
-<a name="l00523"></a><a class="code" href="class_util_1_1_static_mem.html#cabe19856aad27cc9ee8b1e497e28265">00523</a>             <span class="keywordtype">void</span> pushMemFreeAtStart(uint64_t mem) {
-<a name="l00524"></a>00524                 m_MemFreeAtStart.push_back(mem);
-<a name="l00525"></a>00525             }
-<a name="l00526"></a><a class="code" href="class_util_1_1_static_mem.html#af9fc701e2fd1fbf110fee5426a224d8">00526</a>             uint64_t popMemFreeAtStart() {
-<a name="l00527"></a>00527                 uint64_t mem = m_MemFreeAtStart[m_MemFreeAtStart.size()-1];
-<a name="l00528"></a>00528                 m_MemFreeAtStart.pop_back();
-<a name="l00529"></a>00529                 <span class="keywordflow">return</span> mem;
-<a name="l00530"></a>00530             }
-<a name="l00531"></a>00531 
-<a name="l00532"></a>00532         <span class="keyword">private</span>:
-<a name="l00533"></a><a class="code" href="class_util_1_1_static_mem.html#e79a8cd1e45ff15fd9cff6e1524268c2">00533</a>             std::vector&lt;uint64_t&gt; m_MemFreeAtStart;
-<a name="l00534"></a>00534     };
-<a name="l00535"></a>00535 
-<a name="l00536"></a>00536     <span class="keyword">static</span> <a class="code" href="class_util_1_1_static_mem.html">StaticMem</a> &amp;getStaticMem();
-<a name="l00537"></a>00537 
-<a name="l00538"></a>00538 
-<a name="l00539"></a>00539 };
-<a name="l00540"></a>00540 
-<a name="l00541"></a>00541 
-<a name="l00542"></a>00542 
-<a name="l00543"></a>00543 <span class="preprocessor">#ifdef __linux__</span>
-<a name="l00544"></a>00544 <span class="preprocessor"></span><span class="keywordtype">bool</span> memInfo_linux(std::string proc_meminfo_filename,
-<a name="l00545"></a>00545                    uint64_t &amp;free, uint64_t &amp;total,
-<a name="l00546"></a>00546                    uint64_t &amp;swapAvail, uint64_t&amp; memAvail);
-<a name="l00547"></a>00547 <span class="preprocessor">#endif</span>
-<a name="l00548"></a>00548 <span class="preprocessor"></span>
-<a name="l00549"></a>00549 
-<a name="l00550"></a>00550 
-<a name="l00551"></a>00551 <span class="preprocessor">#endif </span><span class="comment">/* _UTIL_H */</span>
-</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:19 2009 for Affymetrix Fusion SDK by&nbsp;
+<a name="l00480"></a>00480 
+<a name="l00481"></a>00481 
+<a name="l00482"></a>00482 <span class="preprocessor">#ifdef __linux__</span>
+<a name="l00483"></a>00483 <span class="preprocessor"></span><span class="keywordtype">bool</span> memInfo_linux(std::string proc_meminfo_filename,
+<a name="l00484"></a>00484                    uint64_t &amp;free, uint64_t &amp;total,
+<a name="l00485"></a>00485                    uint64_t &amp;swapAvail, uint64_t&amp; memAvail);
+<a name="l00486"></a>00486 <span class="preprocessor">#endif</span>
+<a name="l00487"></a>00487 <span class="preprocessor"></span>
+<a name="l00488"></a>00488 
+<a name="l00489"></a>00489 
+<a name="l00490"></a>00490 <span class="preprocessor">#endif </span><span class="comment">/* _UTIL_H */</span>
+</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:28 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

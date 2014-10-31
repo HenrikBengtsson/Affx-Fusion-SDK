@@ -88,7 +88,7 @@
 <a name="l00066"></a>00066         <a class="code" href="md5_8h.html#56d7c2fd64ccd607e3d67262a0741ba9">u_int8_t</a> fileMagicNumber = <a class="code" href="_file_i_o_8cpp.html#cc5fd71005f3e204b5a1225f3b3ecd05">FileInput::ReadInt8</a>(<a class="code" href="classaffymetrix__calvin__io_1_1_file_header_reader.html#2582c66e22be6e7524408bf8d061afa7">fileStream</a>);
 <a name="l00067"></a>00067         <span class="keywordflow">if</span> (fileMagicNumber != <a class="code" href="_file_header_reader_8cpp.html#58735298b53fabda184c9bfd013f2f16">DATA_FILE_MAGIC_NUMBER</a>)
 <a name="l00068"></a>00068         {
-<a name="l00069"></a>00069                 <a class="code" href="classaffymetrix__calvin__exceptions_1_1_invalid_file_type_exception.html">affymetrix_calvin_exceptions::InvalidFileTypeException</a> e;
+<a name="l00069"></a>00069                 <a class="code" href="classaffymetrix__calvin__exceptions_1_1_invalid_file_type_exception.html">affymetrix_calvin_exceptions::InvalidFileTypeException</a> e(L<span class="stringliteral">"Calvin"</span>,L<span class="stringliteral">"Default Description, Please Update!"</span>,<a class="code" href="classaffymetrix__calvin__utilities_1_1_date_time.html#1d634f56bd3a4f925bdcaac46f0fec15">affymetrix_calvin_utilities::DateTime::GetCurrentDateTime</a>().ToString(),std::string(__FILE__),(u_int16_t)__LINE__,0);
 <a name="l00070"></a>00070                 <span class="keywordflow">throw</span> e;
 <a name="l00071"></a>00071         }
 <a name="l00072"></a>00072 }
@@ -102,7 +102,7 @@
 <a name="l00080"></a>00080         <a class="code" href="md5_8h.html#56d7c2fd64ccd607e3d67262a0741ba9">u_int8_t</a> fileVersionNumber = <a class="code" href="_file_i_o_8cpp.html#cc5fd71005f3e204b5a1225f3b3ecd05">FileInput::ReadInt8</a>(<a class="code" href="classaffymetrix__calvin__io_1_1_file_header_reader.html#2582c66e22be6e7524408bf8d061afa7">fileStream</a>);
 <a name="l00081"></a>00081         <span class="keywordflow">if</span> (fileVersionNumber != <a class="code" href="_file_header_reader_8cpp.html#e089daa6c52af6609cb9a75d6c8b363d">DATA_FILE_VERSION_NUMBER</a>)
 <a name="l00082"></a>00082         {
-<a name="l00083"></a>00083                 <a class="code" href="classaffymetrix__calvin__exceptions_1_1_invalid_version_exception.html">affymetrix_calvin_exceptions::InvalidVersionException</a> e;
+<a name="l00083"></a>00083                 <a class="code" href="classaffymetrix__calvin__exceptions_1_1_invalid_version_exception.html">affymetrix_calvin_exceptions::InvalidVersionException</a> e(L<span class="stringliteral">"Calvin"</span>,L<span class="stringliteral">"Default Description, Please Update!"</span>,<a class="code" href="classaffymetrix__calvin__utilities_1_1_date_time.html#1d634f56bd3a4f925bdcaac46f0fec15">affymetrix_calvin_utilities::DateTime::GetCurrentDateTime</a>().ToString(),std::string(__FILE__),(u_int16_t)__LINE__,0);
 <a name="l00084"></a>00084                 <span class="keywordflow">throw</span> e;
 <a name="l00085"></a>00085         }
 <a name="l00086"></a>00086 }
@@ -139,7 +139,7 @@
 <a name="l00117"></a>00117         <a class="code" href="classaffymetrix__calvin__io_1_1_file_header_reader.html#8c9ddd1127e7fc38118a2cb6d8b89623">header</a>.<a class="code" href="classaffymetrix__calvin__io_1_1_file_header.html#fff1dae2ccd75c148c88712bf19d3a75">SetGenericDataHdr</a>(gdh);
 <a name="l00118"></a>00118 }
 <a name="l00119"></a>00119 
-</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:10 2009 for Affymetrix Fusion SDK by&nbsp;
+</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:19 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

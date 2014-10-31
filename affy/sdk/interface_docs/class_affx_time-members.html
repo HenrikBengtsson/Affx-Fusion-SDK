@@ -41,12 +41,16 @@
   <tr class="memlist"><td><a class="el" href="class_affx_time.html#5ea028def246fc9f763a8a1e3e69b246">getHourMinuteString</a>(void)</td><td><a class="el" href="class_affx_time.html">AffxTime</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_affx_time.html#c15f8d922c267382f7da0c156cbafdb3">getMinute</a>() const</td><td><a class="el" href="class_affx_time.html">AffxTime</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="class_affx_time.html#283dd7b48caefa5896956688a27d943d">getMonth</a>() const</td><td><a class="el" href="class_affx_time.html">AffxTime</a></td><td><code> [inline]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_affx_time.html#b0da06a068ce98d55e80f15c637a7b48">getRuntime</a>(AffxString strAction, double timeElapsed)</td><td><a class="el" href="class_affx_time.html">AffxTime</a></td><td><code> [static]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_affx_time.html#d265f1ff698ce9646c8ec169eeadb30e">getRuntime</a>(AffxString strAction)</td><td><a class="el" href="class_affx_time.html">AffxTime</a></td><td><code> [static]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="class_affx_time.html#31dd044c7eed5e2de38fcf67860345f5">getSecond</a>() const</td><td><a class="el" href="class_affx_time.html">AffxTime</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="class_affx_time.html#48acde48e02e1d6b2de29858fb9fcbd7">getTime</a>()</td><td><a class="el" href="class_affx_time.html">AffxTime</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_affx_time.html#dc52a6c399d9c659d7a8db5c228cec56">getTimeStampString</a>(void)</td><td><a class="el" href="class_affx_time.html">AffxTime</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_affx_time.html#af38249810e43d4fb8cc0bd67e93e865">getYear</a>() const</td><td><a class="el" href="class_affx_time.html">AffxTime</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="class_affx_time.html#5b316cb40087825ffc892fdd49b58e12">isClear</a>(void)</td><td><a class="el" href="class_affx_time.html">AffxTime</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="class_affx_time.html#f3c17cfb7a66b20f7f2c04cc1ca679e0">isEmpty</a>(void)</td><td><a class="el" href="class_affx_time.html">AffxTime</a></td><td><code> [inline]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_affx_time.html#f2f35c67eaadda720abd7ac79c3769e2">m_lStartTime</a></td><td><a class="el" href="class_affx_time.html">AffxTime</a></td><td><code> [static]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_affx_time.html#c5b8b77e956d209bec22241295458cba">m_lStopTime</a></td><td><a class="el" href="class_affx_time.html">AffxTime</a></td><td><code> [static]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="class_affx_time.html#d542d805afab8bc3b17818d8ccfe19f4">m_time</a></td><td><a class="el" href="class_affx_time.html">AffxTime</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="class_affx_time.html#3f443ac04c3fefb67d1214391fb999b9">operator!=</a>(AffxTime time)</td><td><a class="el" href="class_affx_time.html">AffxTime</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="class_affx_time.html#f97f6f8c411179e74e146ad00e752071">operator+</a>(AffxTimeSpan timeSpan)</td><td><a class="el" href="class_affx_time.html">AffxTime</a></td><td><code> [inline]</code></td></tr>
@@ -60,7 +64,8 @@
   <tr class="memlist"><td><a class="el" href="class_affx_time.html#aeb1cd703676522f658b4fd48ac1e91b">operator==</a>(AffxTime time)</td><td><a class="el" href="class_affx_time.html">AffxTime</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="class_affx_time.html#b515dcec921d9a15deda9d3700b26ec9">operator&gt;</a>(AffxTime time)</td><td><a class="el" href="class_affx_time.html">AffxTime</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="class_affx_time.html#85102bb13b9e25cf359bea2b3f057596">operator&gt;=</a>(AffxTime time)</td><td><a class="el" href="class_affx_time.html">AffxTime</a></td><td><code> [inline]</code></td></tr>
-</table><hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:30 2009 for Affymetrix Fusion SDK by&nbsp;
+  <tr class="memlist"><td><a class="el" href="class_affx_time.html#138aa65c8a711d92febc95774bd80abf">startTime</a>()</td><td><a class="el" href="class_affx_time.html">AffxTime</a></td><td><code> [static]</code></td></tr>
+</table><hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:40 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

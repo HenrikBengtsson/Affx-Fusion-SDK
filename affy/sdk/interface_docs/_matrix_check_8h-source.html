@@ -27,26 +27,26 @@
 <a name="l00002"></a>00002 <span class="comment">//</span>
 <a name="l00003"></a>00003 <span class="comment">// Copyright (C) 2005 Affymetrix, Inc.</span>
 <a name="l00004"></a>00004 <span class="comment">//</span>
-<a name="l00005"></a>00005 <span class="comment">// This program is free software; you can redistribute it and/or modify </span>
-<a name="l00006"></a>00006 <span class="comment">// it under the terms of the GNU General Public License (version 2) as </span>
-<a name="l00007"></a>00007 <span class="comment">// published by the Free Software Foundation.</span>
+<a name="l00005"></a>00005 <span class="comment">// This library is free software; you can redistribute it and/or modify</span>
+<a name="l00006"></a>00006 <span class="comment">// it under the terms of the GNU Lesser General Public License </span>
+<a name="l00007"></a>00007 <span class="comment">// (version 2.1) as published by the Free Software Foundation.</span>
 <a name="l00008"></a>00008 <span class="comment">// </span>
-<a name="l00009"></a>00009 <span class="comment">// This program is distributed in the hope that it will be useful, </span>
-<a name="l00010"></a>00010 <span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of </span>
-<a name="l00011"></a>00011 <span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU </span>
-<a name="l00012"></a>00012 <span class="comment">// General Public License for more details.</span>
+<a name="l00009"></a>00009 <span class="comment">// This library is distributed in the hope that it will be useful, but</span>
+<a name="l00010"></a>00010 <span class="comment">// WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY</span>
+<a name="l00011"></a>00011 <span class="comment">// or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License</span>
+<a name="l00012"></a>00012 <span class="comment">// for more details.</span>
 <a name="l00013"></a>00013 <span class="comment">// </span>
-<a name="l00014"></a>00014 <span class="comment">// You should have received a copy of the GNU General Public License </span>
-<a name="l00015"></a>00015 <span class="comment">// along with this program;if not, write to the </span>
-<a name="l00016"></a>00016 <span class="comment">// </span>
-<a name="l00017"></a>00017 <span class="comment">// Free Software Foundation, Inc., </span>
-<a name="l00018"></a>00018 <span class="comment">// 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA</span>
-<a name="l00019"></a>00019 <span class="comment">//</span>
-<a name="l00021"></a>00021 <span class="comment"></span>
-<a name="l00028"></a>00028 <span class="preprocessor">#ifndef MATRIXCHECK_H</span>
-<a name="l00029"></a>00029 <span class="preprocessor"></span><span class="preprocessor">#define MATRIXCHECK_H</span>
-<a name="l00030"></a>00030 <span class="preprocessor"></span>
-<a name="l00031"></a>00031 <span class="preprocessor">#include "<a class="code" href="_regression_check_8h.html" title="Virtual class for checks to be done after a regression test.">util/RegressionCheck.h</a>"</span>
+<a name="l00014"></a>00014 <span class="comment">// You should have received a copy of the GNU Lesser General Public License</span>
+<a name="l00015"></a>00015 <span class="comment">// along with this library; if not, write to the Free Software Foundation, Inc.,</span>
+<a name="l00016"></a>00016 <span class="comment">// 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA </span>
+<a name="l00017"></a>00017 <span class="comment">//</span>
+<a name="l00019"></a>00019 <span class="comment"></span>
+<a name="l00026"></a>00026 <span class="preprocessor">#ifndef MATRIXCHECK_H</span>
+<a name="l00027"></a>00027 <span class="preprocessor"></span><span class="preprocessor">#define MATRIXCHECK_H</span>
+<a name="l00028"></a>00028 <span class="preprocessor"></span>
+<a name="l00029"></a>00029 <span class="comment">//</span>
+<a name="l00030"></a>00030 <span class="preprocessor">#include "<a class="code" href="_fs_8h.html" title="A class for working with the Os FileSystem.">util/Fs.h</a>"</span>
+<a name="l00031"></a>00031 <span class="preprocessor">#include "util/RegressionCheck.h"</span>
 <a name="l00032"></a>00032 <span class="preprocessor">#include "<a class="code" href="_util_8h.html" title="General Utilities.">util/Util.h</a>"</span>
 <a name="l00033"></a>00033 <span class="preprocessor">#include "<a class="code" href="_verbose_8h.html" title="Class for doing logging and some command line ui.">util/Verbose.h</a>"</span>
 <a name="l00034"></a>00034 <span class="comment">//</span>
@@ -56,80 +56,93 @@
 <a name="l00038"></a>00038 <span class="preprocessor">#include &lt;string&gt;</span>
 <a name="l00039"></a>00039 <span class="comment">//</span>
 <a name="l00040"></a>00040 
-<a name="l00046"></a><a class="code" href="class_matrix_check.html">00046</a> <span class="keyword">class </span><a class="code" href="class_matrix_check.html">MatrixCheck</a> : <span class="keyword">public</span> <a class="code" href="class_regression_check.html">RegressionCheck</a> {
+<a name="l00046"></a><a class="code" href="class_matrix_check.html">00046</a> <span class="keyword">class </span><a class="code" href="class_matrix_check.html">MatrixCheck</a> : <span class="keyword">public</span> RegressionCheck {
 <a name="l00047"></a>00047 
 <a name="l00048"></a>00048 <span class="keyword">public</span>:
 <a name="l00049"></a>00049 
-<a name="l00063"></a><a class="code" href="class_matrix_check.html#9aa9be5ba0263034a5a211745ef9b1d7">00063</a>   <a class="code" href="class_matrix_check.html#9aa9be5ba0263034a5a211745ef9b1d7">MatrixCheck</a>(
-<a name="l00064"></a>00064                 <span class="keyword">const</span> std::string &amp;generated, 
-<a name="l00065"></a>00065                 <span class="keyword">const</span> std::string &amp;gold, 
-<a name="l00066"></a>00066                 <span class="keywordtype">double</span> eps, 
-<a name="l00067"></a>00067                 <span class="keywordtype">int</span> rowSkip, 
-<a name="l00068"></a>00068                 <span class="keywordtype">int</span> colSkip, 
-<a name="l00069"></a>00069                 <span class="keywordtype">bool</span> matchNames, 
-<a name="l00070"></a>00070                 <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> allowedMisMatch) :
-<a name="l00071"></a>00071     <a class="code" href="class_matrix_check.html#179798c44eccb2bbe083521ba9cbbc6b" title="File created by application being tested.">m_Generated</a>(generated), <a class="code" href="class_matrix_check.html#40ea976fde3e4a6d119b7de7ca7dd45c" title="File believed to be "truth".">m_Gold</a>(gold), <a class="code" href="class_matrix_check.html#656174804d64b95cbac1c8a788e0382a" title="Maximum abosolute difference from truth acceptable.">m_Epsilon</a>(eps),
-<a name="l00072"></a>00072     <a class="code" href="class_matrix_check.html#c19282b2db8d53d0129b518e87c80e7d" title="Number of rows to skip before comparing.">m_RowSkip</a>(rowSkip), <a class="code" href="class_matrix_check.html#bdbf6f52405695543ca67d98126ee89b" title="Number of columns to skip before comparing.">m_ColSkip</a>(colSkip), <a class="code" href="class_matrix_check.html#409e5d11871f433bc561cbc9addc6538">m_MatchNames</a>(matchNames),
-<a name="l00073"></a>00073     <a class="code" href="class_matrix_check.html#f43032438ac5111c8854b65b4e70e6ec" title="How many can we get wrong before failing?">m_AllowedMisMatch</a>(allowedMisMatch) { 
-<a name="l00074"></a>00074         <a class="code" href="class_regression_check.html#a42d75c17cd91c7b4b0023fef1810e40">m_Name</a> = <a class="code" href="class_util.html#058bc4884a54d318b1f7ccc0db102d34" title="Get the root of a filename. Chops on '/' for unix and '\' or '/' windows.">Util::fileRoot</a>(generated);
-<a name="l00075"></a>00075     }
-<a name="l00076"></a>00076 
-<a name="l00082"></a><a class="code" href="class_matrix_check.html#65b3ddd773bb9d1c406ce940bcc50260">00082</a>     <span class="keywordtype">bool</span> <a class="code" href="class_matrix_check.html#65b3ddd773bb9d1c406ce940bcc50260">check</a>(std::string &amp;msg) {
-<a name="l00083"></a>00083     std::string generated(<a class="code" href="class_matrix_check.html#179798c44eccb2bbe083521ba9cbbc6b" title="File created by application being tested.">m_Generated</a>), gold(<a class="code" href="class_matrix_check.html#40ea976fde3e4a6d119b7de7ca7dd45c" title="File believed to be "truth".">m_Gold</a>);
-<a name="l00084"></a>00084     msg = <span class="stringliteral">""</span>;
-<a name="l00085"></a>00085     <span class="keywordtype">bool</span> success = <span class="keyword">true</span>;
-<a name="l00086"></a>00086     <span class="comment">// Fix pathnames to work for this platform.</span>
-<a name="l00087"></a>00087     generated = <a class="code" href="class_util.html#ed990ce9724efda6333e641fbb2cc852">Util::convertPathName</a>(generated.c_str());
-<a name="l00088"></a>00088     gold = <a class="code" href="class_util.html#ed990ce9724efda6333e641fbb2cc852">Util::convertPathName</a>(gold.c_str());
-<a name="l00089"></a>00089     <span class="comment">/* Santiy checks. */</span>
-<a name="l00090"></a>00090     <span class="keywordflow">if</span>(!<a class="code" href="class_util.html#5857fc8140145cc6c0b6389fa443a99a">Util::fileReadable</a>(generated.c_str())) {
-<a name="l00091"></a>00091       msg += <span class="stringliteral">"Can't open file: "</span> + <a class="code" href="_convert_8h.html#9e68e488e4da0371aea30596313537df">ToStr</a>(generated.c_str()) + <span class="stringliteral">" to read."</span>;
-<a name="l00092"></a>00092       <span class="keywordflow">return</span> <span class="keyword">false</span>;
-<a name="l00093"></a>00093     }
-<a name="l00094"></a>00094     <span class="keywordflow">if</span>(!<a class="code" href="class_util.html#5857fc8140145cc6c0b6389fa443a99a">Util::fileReadable</a>(gold.c_str())) {
-<a name="l00095"></a>00095       msg += <span class="stringliteral">"Can't open file: "</span> + <a class="code" href="_convert_8h.html#9e68e488e4da0371aea30596313537df">ToStr</a>(gold.c_str()) + <span class="stringliteral">" to read."</span>;
-<a name="l00096"></a>00096       <span class="keywordflow">return</span> <span class="keyword">false</span>;
-<a name="l00097"></a>00097     }
-<a name="l00098"></a>00098     <span class="keywordflow">if</span>(!(<a class="code" href="class_matrix_check.html#bdbf6f52405695543ca67d98126ee89b" title="Number of columns to skip before comparing.">m_ColSkip</a> &gt;= 0 &amp;&amp; <a class="code" href="class_matrix_check.html#c19282b2db8d53d0129b518e87c80e7d" title="Number of rows to skip before comparing.">m_RowSkip</a> &gt;= 0 &amp;&amp; <a class="code" href="class_matrix_check.html#656174804d64b95cbac1c8a788e0382a" title="Maximum abosolute difference from truth acceptable.">m_Epsilon</a> &gt;= 0)) {
-<a name="l00099"></a>00099       msg += <span class="stringliteral">"invalid ColSkip, RowSkip, and/or Epsilon"</span>;
-<a name="l00100"></a>00100       <span class="keywordflow">return</span> <span class="keyword">false</span>;
-<a name="l00101"></a>00101     }
-<a name="l00102"></a>00102     <span class="comment">/* Count up differences. */</span>
-<a name="l00103"></a>00103     <span class="comment">// push handler to throw exception</span>
-<a name="l00104"></a>00104     <a class="code" href="class_err.html#ceb62780521f07880083c5bed5c64d13">Err::setThrowStatus</a>(<span class="keyword">true</span>); 
-<a name="l00105"></a>00105     <span class="keywordtype">int</span> diffCount;
-<a name="l00106"></a>00106     <span class="keywordflow">try</span> {
-<a name="l00107"></a>00107         diffCount = <a class="code" href="class_util.html#02ce3dfd44d106d2da5ac6edd516fbe2">Util::matrixDifferences</a>(generated.c_str(), gold.c_str() , 
-<a name="l00108"></a>00108                                             <a class="code" href="class_matrix_check.html#bdbf6f52405695543ca67d98126ee89b" title="Number of columns to skip before comparing.">m_ColSkip</a>, <a class="code" href="class_matrix_check.html#c19282b2db8d53d0129b518e87c80e7d" title="Number of rows to skip before comparing.">m_RowSkip</a>, <a class="code" href="class_matrix_check.html#656174804d64b95cbac1c8a788e0382a" title="Maximum abosolute difference from truth acceptable.">m_Epsilon</a>, <span class="keyword">false</span>, <a class="code" href="class_matrix_check.html#409e5d11871f433bc561cbc9addc6538">m_MatchNames</a>);
-<a name="l00109"></a>00109     } 
-<a name="l00110"></a>00110     <span class="keywordflow">catch</span>(<a class="code" href="class_except.html" title="General purpose exception error for error handling.">Except</a> &amp;e) {
-<a name="l00111"></a>00111         msg += <span class="stringliteral">"Caught exception: "</span> + <a class="code" href="_convert_8h.html#9e68e488e4da0371aea30596313537df">ToStr</a>(e.<a class="code" href="class_except.html#3a6db6d976142dc29a4a154d7b0e366b" title="Standard what() call, just returns error message.">what</a>());
-<a name="l00112"></a>00112         <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00064"></a><a class="code" href="class_matrix_check.html#4109c77346eee76941ee2c44907fbe5e">00064</a>   <a class="code" href="class_matrix_check.html#4109c77346eee76941ee2c44907fbe5e">MatrixCheck</a>(
+<a name="l00065"></a>00065                 <span class="keyword">const</span> std::string &amp;generated, 
+<a name="l00066"></a>00066                 <span class="keyword">const</span> std::string &amp;gold, 
+<a name="l00067"></a>00067                 <span class="keywordtype">double</span> eps, 
+<a name="l00068"></a>00068                 <span class="keywordtype">int</span> rowSkip, 
+<a name="l00069"></a>00069                 <span class="keywordtype">int</span> colSkip, 
+<a name="l00070"></a>00070                 <span class="keywordtype">bool</span> matchNames, 
+<a name="l00071"></a>00071                 <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> allowedMisMatch, 
+<a name="l00072"></a>00072                                 <span class="keywordtype">double</span> frac = 0.0 ) :
+<a name="l00073"></a>00073     <a class="code" href="class_matrix_check.html#179798c44eccb2bbe083521ba9cbbc6b" title="File created by application being tested.">m_Generated</a>(generated), <a class="code" href="class_matrix_check.html#40ea976fde3e4a6d119b7de7ca7dd45c" title="File believed to be "truth".">m_Gold</a>(gold), <a class="code" href="class_matrix_check.html#656174804d64b95cbac1c8a788e0382a" title="Maximum abosolute difference from truth acceptable.">m_Epsilon</a>(eps), <a class="code" href="class_matrix_check.html#20096b0f66751a2c4009b9c53fecfde4" title="Maximum fractional difference from truth acceptable.">m_Fraction</a>(frac), 
+<a name="l00074"></a>00074     <a class="code" href="class_matrix_check.html#c19282b2db8d53d0129b518e87c80e7d" title="Number of rows to skip before comparing.">m_RowSkip</a>(rowSkip), <a class="code" href="class_matrix_check.html#bdbf6f52405695543ca67d98126ee89b" title="Number of columns to skip before comparing.">m_ColSkip</a>(colSkip), <a class="code" href="class_matrix_check.html#409e5d11871f433bc561cbc9addc6538">m_MatchNames</a>(matchNames),
+<a name="l00075"></a>00075     <a class="code" href="class_matrix_check.html#f43032438ac5111c8854b65b4e70e6ec" title="How many can we get wrong before failing?">m_AllowedMisMatch</a>(allowedMisMatch), <a class="code" href="class_matrix_check.html#b81a0ae9e22761e44d908d0f64db14dc" title="Mismatches printed if true, not printed if false.">m_PrintMismatch</a>(false), <a class="code" href="class_matrix_check.html#c097f17ed4650e8c259a9c31931c41b7" title="Maximum number of mismatches to print (default -1 for no limit).">m_PrintMismatchMax</a>(-1) { 
+<a name="l00076"></a>00076     m_Name = <a class="code" href="class_fs.html#16925724086de1c12ea58bad4f8df75c" title="like the unix function of the same name.">Fs::basename</a>(generated);
+<a name="l00077"></a>00077     }
+<a name="l00078"></a>00078 
+<a name="l00084"></a><a class="code" href="class_matrix_check.html#81025a65f7199e7a0158fb2cab80609d">00084</a>   <span class="keywordtype">void</span> <a class="code" href="class_matrix_check.html#81025a65f7199e7a0158fb2cab80609d">setPrintMismatch</a>(<span class="keywordtype">bool</span> print) {
+<a name="l00085"></a>00085     <a class="code" href="class_matrix_check.html#b81a0ae9e22761e44d908d0f64db14dc" title="Mismatches printed if true, not printed if false.">m_PrintMismatch</a> = print;
+<a name="l00086"></a>00086   }
+<a name="l00087"></a>00087 
+<a name="l00093"></a><a class="code" href="class_matrix_check.html#5d67275ab123d3a65e227416feac156b">00093</a>   <span class="keywordtype">void</span> <a class="code" href="class_matrix_check.html#5d67275ab123d3a65e227416feac156b">setPrintMismatchMax</a>(<span class="keywordtype">int</span> max) {
+<a name="l00094"></a>00094     <a class="code" href="class_matrix_check.html#c097f17ed4650e8c259a9c31931c41b7" title="Maximum number of mismatches to print (default -1 for no limit).">m_PrintMismatchMax</a> = max;
+<a name="l00095"></a>00095   }
+<a name="l00096"></a>00096 
+<a name="l00102"></a><a class="code" href="class_matrix_check.html#65b3ddd773bb9d1c406ce940bcc50260">00102</a>   <span class="keywordtype">bool</span> <a class="code" href="class_matrix_check.html#65b3ddd773bb9d1c406ce940bcc50260">check</a>(std::string &amp;msg) {
+<a name="l00103"></a>00103     std::string generated(<a class="code" href="class_matrix_check.html#179798c44eccb2bbe083521ba9cbbc6b" title="File created by application being tested.">m_Generated</a>), gold(<a class="code" href="class_matrix_check.html#40ea976fde3e4a6d119b7de7ca7dd45c" title="File believed to be "truth".">m_Gold</a>);
+<a name="l00104"></a>00104     msg = <span class="stringliteral">""</span>;
+<a name="l00105"></a>00105     <span class="keywordtype">bool</span> success = <span class="keyword">true</span>;
+<a name="l00106"></a>00106     <span class="comment">// Fix pathnames to work for this platform.</span>
+<a name="l00107"></a>00107     generated = <a class="code" href="class_fs.html#165f555fa92a445b3e9af7dbd510d693">Fs::convertToUncPath</a>(generated);
+<a name="l00108"></a>00108     gold = <a class="code" href="class_fs.html#165f555fa92a445b3e9af7dbd510d693">Fs::convertToUncPath</a>(gold);
+<a name="l00109"></a>00109     <span class="comment">/* Santiy checks. */</span>
+<a name="l00110"></a>00110     <span class="keywordflow">if</span> (!<a class="code" href="class_fs.html#7a567a9e063ae414babf82307a876965">Fs::isReadable</a>(generated)) {
+<a name="l00111"></a>00111       msg += <span class="stringliteral">"Can't open file: "</span>+<a class="code" href="_fs_8h.html#030c4dbb5947e49f3d303e8de0c63e17" title="Adds quotes to the path.">FS_QUOTE_PATH</a>(generated)+<span class="stringliteral">" to read."</span>;
+<a name="l00112"></a>00112       <span class="keywordflow">return</span> <span class="keyword">false</span>;
 <a name="l00113"></a>00113     }
-<a name="l00114"></a>00114     <a class="code" href="class_err.html#7cd8651ed7e53ac86b43dad235d1cb91">Err::popHandler</a>();
-<a name="l00115"></a>00115 
-<a name="l00116"></a>00116     <span class="keywordflow">if</span>(diffCount &gt; (<span class="keywordtype">int</span>)<a class="code" href="class_matrix_check.html#f43032438ac5111c8854b65b4e70e6ec" title="How many can we get wrong before failing?">m_AllowedMisMatch</a>) {
-<a name="l00117"></a>00117       success = <span class="keyword">false</span>;
-<a name="l00118"></a>00118       msg += <span class="stringliteral">"File: "</span> + generated + <span class="stringliteral">" vs "</span> + gold + <span class="stringliteral">": "</span>;
-<a name="l00119"></a>00119       msg += <a class="code" href="_convert_8h.html#9e68e488e4da0371aea30596313537df">ToStr</a>(<span class="stringliteral">"Expecting no more than "</span>) + <a class="code" href="_convert_8h.html#9e68e488e4da0371aea30596313537df">ToStr</a>(m_AllowedMisMatch) + <a class="code" href="_convert_8h.html#9e68e488e4da0371aea30596313537df">ToStr</a>(<span class="stringliteral">" found: "</span>) + <a class="code" href="_convert_8h.html#9e68e488e4da0371aea30596313537df">ToStr</a>(diffCount);
-<a name="l00120"></a>00120     }
-<a name="l00121"></a>00121     <span class="keywordflow">return</span> success;
-<a name="l00122"></a>00122   }
-<a name="l00123"></a>00123 
-<a name="l00124"></a>00124 
-<a name="l00125"></a><a class="code" href="class_matrix_check.html#179798c44eccb2bbe083521ba9cbbc6b">00125</a>   std::string <a class="code" href="class_matrix_check.html#179798c44eccb2bbe083521ba9cbbc6b" title="File created by application being tested.">m_Generated</a>;   
-<a name="l00126"></a><a class="code" href="class_matrix_check.html#40ea976fde3e4a6d119b7de7ca7dd45c">00126</a>   std::string <a class="code" href="class_matrix_check.html#40ea976fde3e4a6d119b7de7ca7dd45c" title="File believed to be "truth".">m_Gold</a>;        
-<a name="l00127"></a><a class="code" href="class_matrix_check.html#656174804d64b95cbac1c8a788e0382a">00127</a>   <span class="keywordtype">double</span> <a class="code" href="class_matrix_check.html#656174804d64b95cbac1c8a788e0382a" title="Maximum abosolute difference from truth acceptable.">m_Epsilon</a>;      
-<a name="l00128"></a><a class="code" href="class_matrix_check.html#c19282b2db8d53d0129b518e87c80e7d">00128</a>   <span class="keywordtype">int</span> <a class="code" href="class_matrix_check.html#c19282b2db8d53d0129b518e87c80e7d" title="Number of rows to skip before comparing.">m_RowSkip</a>;        
-<a name="l00129"></a><a class="code" href="class_matrix_check.html#bdbf6f52405695543ca67d98126ee89b">00129</a>   <span class="keywordtype">int</span> <a class="code" href="class_matrix_check.html#bdbf6f52405695543ca67d98126ee89b" title="Number of columns to skip before comparing.">m_ColSkip</a>;        
-<a name="l00130"></a><a class="code" href="class_matrix_check.html#409e5d11871f433bc561cbc9addc6538">00130</a>   <span class="keywordtype">bool</span> <a class="code" href="class_matrix_check.html#409e5d11871f433bc561cbc9addc6538">m_MatchNames</a>;    
-<a name="l00131"></a>00131 
-<a name="l00132"></a>00132 
-<a name="l00133"></a><a class="code" href="class_matrix_check.html#f43032438ac5111c8854b65b4e70e6ec">00133</a>   <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_matrix_check.html#f43032438ac5111c8854b65b4e70e6ec" title="How many can we get wrong before failing?">m_AllowedMisMatch</a>;  
-<a name="l00134"></a>00134 };
-<a name="l00135"></a>00135 
-<a name="l00136"></a>00136 <span class="preprocessor">#endif </span><span class="comment">/* MATRIXCHECK_H */</span>
-</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:18 2009 for Affymetrix Fusion SDK by&nbsp;
+<a name="l00114"></a>00114     <span class="keywordflow">if</span> (!<a class="code" href="class_fs.html#7a567a9e063ae414babf82307a876965">Fs::isReadable</a>(gold.c_str())) {
+<a name="l00115"></a>00115       msg += <span class="stringliteral">"Can't open file: "</span>+<a class="code" href="_fs_8h.html#030c4dbb5947e49f3d303e8de0c63e17" title="Adds quotes to the path.">FS_QUOTE_PATH</a>(gold)+<span class="stringliteral">" to read."</span>;
+<a name="l00116"></a>00116       <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00117"></a>00117     }
+<a name="l00118"></a>00118     <span class="keywordflow">if</span>(!(<a class="code" href="class_matrix_check.html#bdbf6f52405695543ca67d98126ee89b" title="Number of columns to skip before comparing.">m_ColSkip</a> &gt;= 0 &amp;&amp; <a class="code" href="class_matrix_check.html#c19282b2db8d53d0129b518e87c80e7d" title="Number of rows to skip before comparing.">m_RowSkip</a> &gt;= 0 &amp;&amp; <a class="code" href="class_matrix_check.html#656174804d64b95cbac1c8a788e0382a" title="Maximum abosolute difference from truth acceptable.">m_Epsilon</a> &gt;= 0)) {
+<a name="l00119"></a>00119       msg += <span class="stringliteral">"invalid ColSkip, RowSkip, and/or Epsilon"</span>;
+<a name="l00120"></a>00120       <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00121"></a>00121     }
+<a name="l00122"></a>00122     <span class="comment">/* Count up differences. */</span>
+<a name="l00123"></a>00123     <span class="comment">// push handler to throw exception</span>
+<a name="l00124"></a>00124     <a class="code" href="class_err.html#ceb62780521f07880083c5bed5c64d13">Err::setThrowStatus</a>(<span class="keyword">true</span>); 
+<a name="l00125"></a>00125     <span class="keywordtype">int</span> diffCount;
+<a name="l00126"></a>00126     <span class="keywordflow">try</span> {
+<a name="l00127"></a>00127         diffCount = <a class="code" href="class_util.html#81d133cd77d241447c255476d65c690f">Util::matrixDifferences</a>(generated.c_str(), gold.c_str(), 
+<a name="l00128"></a>00128                                             <a class="code" href="class_matrix_check.html#bdbf6f52405695543ca67d98126ee89b" title="Number of columns to skip before comparing.">m_ColSkip</a>, <a class="code" href="class_matrix_check.html#c19282b2db8d53d0129b518e87c80e7d" title="Number of rows to skip before comparing.">m_RowSkip</a>, <a class="code" href="class_matrix_check.html#656174804d64b95cbac1c8a788e0382a" title="Maximum abosolute difference from truth acceptable.">m_Epsilon</a>, <a class="code" href="class_matrix_check.html#b81a0ae9e22761e44d908d0f64db14dc" title="Mismatches printed if true, not printed if false.">m_PrintMismatch</a>, <a class="code" href="class_matrix_check.html#409e5d11871f433bc561cbc9addc6538">m_MatchNames</a>, 
+<a name="l00129"></a>00129                                                                                         <a class="code" href="class_matrix_check.html#20096b0f66751a2c4009b9c53fecfde4" title="Maximum fractional difference from truth acceptable.">m_Fraction</a>, <a class="code" href="class_matrix_check.html#c097f17ed4650e8c259a9c31931c41b7" title="Maximum number of mismatches to print (default -1 for no limit).">m_PrintMismatchMax</a> );
+<a name="l00130"></a>00130     } 
+<a name="l00131"></a>00131     <span class="keywordflow">catch</span>(<a class="code" href="class_except.html" title="General purpose exception error for error handling.">Except</a> &amp;e) {
+<a name="l00132"></a>00132         msg += <span class="stringliteral">"Caught exception: "</span> + <a class="code" href="_convert_8h.html#9e68e488e4da0371aea30596313537df">ToStr</a>(e.<a class="code" href="class_except.html#3a6db6d976142dc29a4a154d7b0e366b" title="Standard what() call, just returns error message.">what</a>());
+<a name="l00133"></a>00133         <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00134"></a>00134     }
+<a name="l00135"></a>00135     <a class="code" href="class_err.html#ceb62780521f07880083c5bed5c64d13">Err::setThrowStatus</a>(<span class="keyword">true</span>); 
+<a name="l00136"></a>00136 
+<a name="l00137"></a>00137     <span class="keywordflow">if</span>(diffCount &gt; (<span class="keywordtype">int</span>)<a class="code" href="class_matrix_check.html#f43032438ac5111c8854b65b4e70e6ec" title="How many can we get wrong before failing?">m_AllowedMisMatch</a>) {
+<a name="l00138"></a>00138       success = <span class="keyword">false</span>;
+<a name="l00139"></a>00139       msg += <span class="stringliteral">"File: "</span> + generated + <span class="stringliteral">" vs "</span> + gold + <span class="stringliteral">": "</span>;
+<a name="l00140"></a>00140       msg += <a class="code" href="_convert_8h.html#9e68e488e4da0371aea30596313537df">ToStr</a>(<span class="stringliteral">"Expecting no more than "</span>) + <a class="code" href="_convert_8h.html#9e68e488e4da0371aea30596313537df">ToStr</a>(m_AllowedMisMatch) + <a class="code" href="_convert_8h.html#9e68e488e4da0371aea30596313537df">ToStr</a>(<span class="stringliteral">" found: "</span>) + <a class="code" href="_convert_8h.html#9e68e488e4da0371aea30596313537df">ToStr</a>(diffCount);
+<a name="l00141"></a>00141     }
+<a name="l00142"></a>00142     <span class="keywordflow">return</span> success;
+<a name="l00143"></a>00143   }
+<a name="l00144"></a>00144 
+<a name="l00145"></a>00145 
+<a name="l00146"></a><a class="code" href="class_matrix_check.html#179798c44eccb2bbe083521ba9cbbc6b">00146</a>   std::string <a class="code" href="class_matrix_check.html#179798c44eccb2bbe083521ba9cbbc6b" title="File created by application being tested.">m_Generated</a>;   
+<a name="l00147"></a><a class="code" href="class_matrix_check.html#40ea976fde3e4a6d119b7de7ca7dd45c">00147</a>   std::string <a class="code" href="class_matrix_check.html#40ea976fde3e4a6d119b7de7ca7dd45c" title="File believed to be "truth".">m_Gold</a>;        
+<a name="l00148"></a><a class="code" href="class_matrix_check.html#656174804d64b95cbac1c8a788e0382a">00148</a>   <span class="keywordtype">double</span> <a class="code" href="class_matrix_check.html#656174804d64b95cbac1c8a788e0382a" title="Maximum abosolute difference from truth acceptable.">m_Epsilon</a>;      
+<a name="l00149"></a><a class="code" href="class_matrix_check.html#20096b0f66751a2c4009b9c53fecfde4">00149</a>   <span class="keywordtype">double</span> <a class="code" href="class_matrix_check.html#20096b0f66751a2c4009b9c53fecfde4" title="Maximum fractional difference from truth acceptable.">m_Fraction</a>;     
+<a name="l00150"></a><a class="code" href="class_matrix_check.html#c19282b2db8d53d0129b518e87c80e7d">00150</a>   <span class="keywordtype">int</span> <a class="code" href="class_matrix_check.html#c19282b2db8d53d0129b518e87c80e7d" title="Number of rows to skip before comparing.">m_RowSkip</a>;        
+<a name="l00151"></a><a class="code" href="class_matrix_check.html#bdbf6f52405695543ca67d98126ee89b">00151</a>   <span class="keywordtype">int</span> <a class="code" href="class_matrix_check.html#bdbf6f52405695543ca67d98126ee89b" title="Number of columns to skip before comparing.">m_ColSkip</a>;        
+<a name="l00152"></a><a class="code" href="class_matrix_check.html#409e5d11871f433bc561cbc9addc6538">00152</a>   <span class="keywordtype">bool</span> <a class="code" href="class_matrix_check.html#409e5d11871f433bc561cbc9addc6538">m_MatchNames</a>;    
+<a name="l00153"></a>00153 
+<a name="l00154"></a>00154 
+<a name="l00155"></a><a class="code" href="class_matrix_check.html#f43032438ac5111c8854b65b4e70e6ec">00155</a>   <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_matrix_check.html#f43032438ac5111c8854b65b4e70e6ec" title="How many can we get wrong before failing?">m_AllowedMisMatch</a>;  
+<a name="l00156"></a><a class="code" href="class_matrix_check.html#b81a0ae9e22761e44d908d0f64db14dc">00156</a>   <span class="keywordtype">bool</span> <a class="code" href="class_matrix_check.html#b81a0ae9e22761e44d908d0f64db14dc" title="Mismatches printed if true, not printed if false.">m_PrintMismatch</a>;   
+<a name="l00157"></a><a class="code" href="class_matrix_check.html#c097f17ed4650e8c259a9c31931c41b7">00157</a>   <span class="keywordtype">int</span> <a class="code" href="class_matrix_check.html#c097f17ed4650e8c259a9c31931c41b7" title="Maximum number of mismatches to print (default -1 for no limit).">m_PrintMismatchMax</a>; 
+<a name="l00158"></a>00158 };
+<a name="l00159"></a>00159 
+<a name="l00160"></a>00160 <span class="preprocessor">#endif </span><span class="comment">/* MATRIXCHECK_H */</span>
+</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:27 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

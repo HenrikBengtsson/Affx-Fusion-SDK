@@ -29,8 +29,10 @@
 <code>#include &quot;<a class="el" href="_tsv_file_diff_8h-source.html">file/TsvFile/TsvFileDiff.h</a>&quot;</code><br>
 <code>#include &quot;<a class="el" href="_convert_8h-source.html">util/Convert.h</a>&quot;</code><br>
 <code>#include &quot;<a class="el" href="_err_8h-source.html">util/Err.h</a>&quot;</code><br>
+<code>#include &quot;<a class="el" href="_fs_8h-source.html">util/Fs.h</a>&quot;</code><br>
 <code>#include &quot;<a class="el" href="_pg_options_8h-source.html">util/PgOptions.h</a>&quot;</code><br>
 <code>#include &quot;<a class="el" href="_util_8h-source.html">util/Util.h</a>&quot;</code><br>
+<code>#include &lt;cstdio&gt;</code><br>
 <code>#include &lt;cstring&gt;</code><br>
 <code>#include &lt;string&gt;</code><br>
 <code>#include &lt;vector&gt;</code><br>
@@ -90,9 +92,9 @@ Definition in file <a class="el" href="tsv-util_8cpp-source.html">tsv-util.cpp</
 <p>
 
 <p>
-Definition at line <a class="el" href="tsv-util_8cpp-source.html#l00518">518</a> of file <a class="el" href="tsv-util_8cpp-source.html">tsv-util.cpp</a>.
+Definition at line <a class="el" href="tsv-util_8cpp-source.html#l00457">457</a> of file <a class="el" href="tsv-util_8cpp-source.html">tsv-util.cpp</a>.
 <p>
-Referenced by <a class="el" href="tsv-util_8cpp-source.html#l00521">tsv_util_benchmark()</a>.
+Referenced by <a class="el" href="tsv-util_8cpp-source.html#l00460">tsv_util_benchmark()</a>.
 </div>
 </div><p>
 <a class="anchor" name="770571e12ff9370899184528f4b4626d"></a><!-- doxytag: member="tsv-util.cpp::SNPRINTF" ref="770571e12ff9370899184528f4b4626d" args="" -->
@@ -109,9 +111,9 @@ Referenced by <a class="el" href="tsv-util_8cpp-source.html#l00521">tsv_util_ben
 <p>
 
 <p>
-Definition at line <a class="el" href="tsv-util_8cpp-source.html#l00106">106</a> of file <a class="el" href="tsv-util_8cpp-source.html">tsv-util.cpp</a>.
+Definition at line <a class="el" href="tsv-util_8cpp-source.html#l00042">42</a> of file <a class="el" href="tsv-util_8cpp-source.html">tsv-util.cpp</a>.
 <p>
-Referenced by <a class="el" href="tsv-util_8cpp-source.html#l00427">tsv_util_paste()</a>, and <a class="el" href="tsv-util_8cpp-source.html#l00247">tsv_util_paste_basic()</a>.
+Referenced by <a class="el" href="tsv-util_8cpp-source.html#l00366">tsv_util_paste()</a>, and <a class="el" href="tsv-util_8cpp-source.html#l00186">tsv_util_paste_basic()</a>.
 </div>
 </div><p>
 <a class="anchor" name="7efba4694d624825b251a9ef5a5bb712"></a><!-- doxytag: member="tsv-util.cpp::TSV_PASTE_FH_LIMIT" ref="7efba4694d624825b251a9ef5a5bb712" args="" -->
@@ -130,9 +132,9 @@ The limit of filehandles we can paste at one time.
 <p>
 
 <p>
-Definition at line <a class="el" href="tsv-util_8cpp-source.html#l00235">235</a> of file <a class="el" href="tsv-util_8cpp-source.html">tsv-util.cpp</a>.
+Definition at line <a class="el" href="tsv-util_8cpp-source.html#l00174">174</a> of file <a class="el" href="tsv-util_8cpp-source.html">tsv-util.cpp</a>.
 <p>
-Referenced by <a class="el" href="tsv-util_8cpp-source.html#l00247">tsv_util_paste_basic()</a>.
+Referenced by <a class="el" href="tsv-util_8cpp-source.html#l00186">tsv_util_paste_basic()</a>.
 </div>
 </div><p>
 <hr><h2>Function Documentation</h2>
@@ -173,9 +175,9 @@ entry point for tsv-util
 <dl class="return" compact><dt><b>Returns:</b></dt><dd></dd></dl>
 
 <p>
-Definition at line <a class="el" href="tsv-util_8cpp-source.html#l00566">566</a> of file <a class="el" href="tsv-util_8cpp-source.html">tsv-util.cpp</a>.
+Definition at line <a class="el" href="tsv-util_8cpp-source.html#l00506">506</a> of file <a class="el" href="tsv-util_8cpp-source.html">tsv-util.cpp</a>.
 <p>
-References <a class="el" href="_pg_options_8h-source.html#l00117">PgOpt::BOOL_OPT</a>, <a class="el" href="_pg_options_8cpp-source.html#l00527">PgOptions::defineOption()</a>, <a class="el" href="_tsv_file_diff_8cpp-source.html#l00241">affx::TsvFileDiff::diff()</a>, <a class="el" href="_pg_options_8h-source.html#l00118">PgOpt::DOUBLE_OPT</a>, <a class="el" href="_pg_options_8cpp-source.html#l00835">PgOptions::get()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00443">PgOptions::getArg()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00447">PgOptions::getArgCount()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00439">PgOptions::getArgVector()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00840">PgOptions::getBool()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00845">PgOptions::getDouble()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00850">PgOptions::getInt()</a>, <a class="el" href="_pg_options_8h-source.html#l00119">PgOpt::INT_OPT</a>, <a class="el" href="_pg_options_8cpp-source.html#l00263">PgOpt::isSet()</a>, <a class="el" href="_tsv_file_diff_8h-source.html#l00049">affx::TsvFileDiff::m_diff_cnt</a>, <a class="el" href="_tsv_file_diff_8h-source.html#l00046">affx::TsvFileDiff::m_opt_do_data</a>, <a class="el" href="_tsv_file_diff_8h-source.html#l00045">affx::TsvFileDiff::m_opt_do_headers</a>, <a class="el" href="_tsv_file_diff_8h-source.html#l00047">affx::TsvFileDiff::m_opt_max_diff</a>, <a class="el" href="_tsv_file_diff_8h-source.html#l00042">affx::TsvFileDiff::m_opt_print_format</a>, <a class="el" href="_tsv_file_diff_8h-source.html#l00041">affx::TsvFileDiff::m_opt_print_linenums</a>, <a class="el" href="_tsv_file_diff_8h-source.html#l00043">affx::TsvFileDiff::m_opt_print_max</a>, <a class="el" href="_tsv_file_diff_8h-source.html#l00040">affx::TsvFileDiff::m_opt_print_same</a>, <a class="el" href="_tsv_file_diff_8h-source.html#l00058">affx::TsvFileDiff::m_residuals_filename</a>, <a class="el" href="_pg_options_8cpp-source.html#l00574">PgOptions::mustFindOpt()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00653">PgOptions::parseArgv()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00429">PgOptions::setUsage()</a>, <a class="el" href="_pg_options_8h-source.html#l00171">PgOpt::setValue()</a>, <a class="el" href="_pg_options_8h-source.html#l00120">PgOpt::STRING_OPT</a>, <a class="el" href="tsv-util_8cpp-source.html#l00521">tsv_util_benchmark()</a>, <a class="el" href="tsv-util_8cpp-source.html#l00201">tsv_util_copy()</a>, <a class="el" href="tsv-util_8cpp-source.html#l00145">tsv_util_headers()</a>, <a class="el" href="tsv-util_8cpp-source.html#l00114">tsv_util_linecount()</a>, <a class="el" href="tsv-util_8cpp-source.html#l00427">tsv_util_paste()</a>, <a class="el" href="tsv-util_8cpp-source.html#l00172">tsv_util_print_duplicate_headerkeys()</a>, and <a class="el" href="_pg_options_8h-source.html#l00341">PgOptions::usage()</a>.
+References <a class="el" href="_pg_options_8h-source.html#l00113">PgOpt::BOOL_OPT</a>, <a class="el" href="_pg_options_8cpp-source.html#l00535">PgOptions::defineOption()</a>, <a class="el" href="_tsv_file_diff_8cpp-source.html#l00241">affx::TsvFileDiff::diff()</a>, <a class="el" href="_pg_options_8h-source.html#l00114">PgOpt::DOUBLE_OPT</a>, <a class="el" href="_pg_options_8h-source.html#l00399">PgOptions::get()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00445">PgOptions::getArg()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00449">PgOptions::getArgCount()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00441">PgOptions::getArgVector()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00825">PgOptions::getBool()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00830">PgOptions::getDouble()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00835">PgOptions::getInt()</a>, <a class="el" href="_pg_options_8h-source.html#l00115">PgOpt::INT_OPT</a>, <a class="el" href="_pg_options_8cpp-source.html#l00265">PgOpt::isSet()</a>, <a class="el" href="_tsv_file_diff_8h-source.html#l00049">affx::TsvFileDiff::m_diff_cnt</a>, <a class="el" href="_tsv_file_diff_8h-source.html#l00046">affx::TsvFileDiff::m_opt_do_data</a>, <a class="el" href="_tsv_file_diff_8h-source.html#l00045">affx::TsvFileDiff::m_opt_do_headers</a>, <a class="el" href="_tsv_file_diff_8h-source.html#l00047">affx::TsvFileDiff::m_opt_max_diff</a>, <a class="el" href="_tsv_file_diff_8h-source.html#l00042">affx::TsvFileDiff::m_opt_print_format</a>, <a class="el" href="_tsv_file_diff_8h-source.html#l00041">affx::TsvFileDiff::m_opt_print_linenums</a>, <a class="el" href="_tsv_file_diff_8h-source.html#l00043">affx::TsvFileDiff::m_opt_print_max</a>, <a class="el" href="_tsv_file_diff_8h-source.html#l00040">affx::TsvFileDiff::m_opt_print_same</a>, <a class="el" href="_tsv_file_diff_8h-source.html#l00058">affx::TsvFileDiff::m_residuals_filename</a>, <a class="el" href="_pg_options_8h-source.html#l00333">PgOptions::mustFindOpt()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00645">PgOptions::parseArgv()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00431">PgOptions::setUsage()</a>, <a class="el" href="_pg_options_8h-source.html#l00167">PgOpt::setValue()</a>, <a class="el" href="_pg_options_8h-source.html#l00116">PgOpt::STRING_OPT</a>, <a class="el" href="tsv-util_8cpp-source.html#l00460">tsv_util_benchmark()</a>, <a class="el" href="tsv-util_8cpp-source.html#l00140">tsv_util_copy()</a>, <a class="el" href="tsv-util_8cpp-source.html#l00084">tsv_util_headers()</a>, <a class="el" href="tsv-util_8cpp-source.html#l00050">tsv_util_linecount()</a>, <a class="el" href="tsv-util_8cpp-source.html#l00366">tsv_util_paste()</a>, <a class="el" href="tsv-util_8cpp-source.html#l00111">tsv_util_print_duplicate_headerkeys()</a>, and <a class="el" href="_pg_options_8h-source.html#l00351">PgOptions::usage()</a>.
 </div>
 </div><p>
 <a class="anchor" name="9be8e3bb968bf246ba9acc11e2208b29"></a><!-- doxytag: member="tsv-util.cpp::tsv_util_benchmark" ref="9be8e3bb968bf246ba9acc11e2208b29" args="(int benchmark_cnt, const std::string &amp;filename)" -->
@@ -206,11 +208,11 @@ References <a class="el" href="_pg_options_8h-source.html#l00117">PgOpt::BOOL_OP
 <p>
 
 <p>
-Definition at line <a class="el" href="tsv-util_8cpp-source.html#l00521">521</a> of file <a class="el" href="tsv-util_8cpp-source.html">tsv-util.cpp</a>.
+Definition at line <a class="el" href="tsv-util_8cpp-source.html#l00460">460</a> of file <a class="el" href="tsv-util_8cpp-source.html">tsv-util.cpp</a>.
 <p>
-References <a class="el" href="_tsv_file_8cpp-source.html#l01712">affx::TsvFile::addHeader()</a>, <a class="el" href="tsv-util_8cpp-source.html#l00518">BENCHMARK_COL_CNT</a>, <a class="el" href="_tsv_file_8cpp-source.html#l02557">affx::TsvFile::close()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l02268">affx::TsvFile::defineColumn()</a>, <a class="el" href="classaffx_1_1_tsv_file.html#b4e7d140273967ebbdaaf43164766f46">affx::TsvFile::set()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l04455">affx::TsvFile::writeLevel()</a>, and <a class="el" href="_tsv_file_8cpp-source.html#l04355">affx::TsvFile::writeTsv_v1()</a>.
+References <a class="el" href="_tsv_file_8cpp-source.html#l01798">affx::TsvFile::addHeader()</a>, <a class="el" href="tsv-util_8cpp-source.html#l00457">BENCHMARK_COL_CNT</a>, <a class="el" href="_tsv_file_8cpp-source.html#l02759">affx::TsvFile::close()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l02411">affx::TsvFile::defineColumn()</a>, <a class="el" href="classaffx_1_1_tsv_file.html#b4e7d140273967ebbdaaf43164766f46">affx::TsvFile::set()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l04667">affx::TsvFile::writeLevel()</a>, and <a class="el" href="_tsv_file_8cpp-source.html#l04567">affx::TsvFile::writeTsv_v1()</a>.
 <p>
-Referenced by <a class="el" href="tsv-util_8cpp-source.html#l00566">main()</a>.
+Referenced by <a class="el" href="tsv-util_8cpp-source.html#l00506">main()</a>.
 </div>
 </div><p>
 <a class="anchor" name="33289a235895a1c5ad8c38d33053a9ab"></a><!-- doxytag: member="tsv-util.cpp::tsv_util_copy" ref="33289a235895a1c5ad8c38d33053a9ab" args="(const std::string &amp;f_fileName, const std::string &amp;t_fileName, int fmt)" -->
@@ -256,11 +258,11 @@ Copy contents from one tsvfile to another.
 </dl>
 
 <p>
-Definition at line <a class="el" href="tsv-util_8cpp-source.html#l00201">201</a> of file <a class="el" href="tsv-util_8cpp-source.html">tsv-util.cpp</a>.
+Definition at line <a class="el" href="tsv-util_8cpp-source.html#l00140">140</a> of file <a class="el" href="tsv-util_8cpp-source.html">tsv-util.cpp</a>.
 <p>
-References <a class="el" href="_tsv_file_8cpp-source.html#l01826">affx::TsvFile::addHeadersFrom()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l02557">affx::TsvFile::close()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l04524">affx::TsvFile::copyFormat()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l04542">affx::TsvFile::copyLevel()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l01336">affx::TsvFile::lineLevel()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l03106">affx::TsvFile::nextLine()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l02462">affx::TsvFile::open()</a>, <a class="el" href="_tsv_file_8h-source.html#l00151">affx::TSV_ADD_ALL</a>, <a class="el" href="_tsv_file_8h-source.html#l00092">affx::TSV_OK</a>, <a class="el" href="_tsv_file_8cpp-source.html#l04424">affx::TsvFile::writeCsv()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l04455">affx::TsvFile::writeLevel()</a>, and <a class="el" href="_tsv_file_8cpp-source.html#l04408">affx::TsvFile::writeTsv()</a>.
+References <a class="el" href="_tsv_file_8cpp-source.html#l01936">affx::TsvFile::addHeadersFrom()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l02759">affx::TsvFile::close()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l04736">affx::TsvFile::copyFormat()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l04754">affx::TsvFile::copyLevel()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l01403">affx::TsvFile::lineLevel()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l03305">affx::TsvFile::nextLine()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l02637">affx::TsvFile::open()</a>, <a class="el" href="_tsv_file_8h-source.html#l00157">affx::TSV_ADD_ALL</a>, <a class="el" href="_tsv_file_8h-source.html#l00092">affx::TSV_OK</a>, <a class="el" href="_tsv_file_8cpp-source.html#l04636">affx::TsvFile::writeCsv()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l04667">affx::TsvFile::writeLevel()</a>, and <a class="el" href="_tsv_file_8cpp-source.html#l04620">affx::TsvFile::writeTsv()</a>.
 <p>
-Referenced by <a class="el" href="tsv-util_8cpp-source.html#l00566">main()</a>.
+Referenced by <a class="el" href="tsv-util_8cpp-source.html#l00506">main()</a>.
 </div>
 </div><p>
 <a class="anchor" name="96632697ac8ee58e21bc8bf38d376dd8"></a><!-- doxytag: member="tsv-util.cpp::tsv_util_headers" ref="96632697ac8ee58e21bc8bf38d376dd8" args="(const std::string &amp;fileName)" -->
@@ -289,11 +291,11 @@ Dump the just the headers of the TsvFile to stdout.
 </dl>
 
 <p>
-Definition at line <a class="el" href="tsv-util_8cpp-source.html#l00145">145</a> of file <a class="el" href="tsv-util_8cpp-source.html">tsv-util.cpp</a>.
+Definition at line <a class="el" href="tsv-util_8cpp-source.html#l00084">84</a> of file <a class="el" href="tsv-util_8cpp-source.html">tsv-util.cpp</a>.
 <p>
-References <a class="el" href="_tsv_file_8cpp-source.html#l02557">affx::TsvFile::close()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l01591">affx::TsvFile::headersBegin()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l01645">affx::TsvFile::headersNext()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l02462">affx::TsvFile::open()</a>, and <a class="el" href="_tsv_file_8h-source.html#l00092">affx::TSV_OK</a>.
+References <a class="el" href="_tsv_file_8cpp-source.html#l02759">affx::TsvFile::close()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l01677">affx::TsvFile::headersBegin()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l01731">affx::TsvFile::headersNext()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l02637">affx::TsvFile::open()</a>, and <a class="el" href="_tsv_file_8h-source.html#l00092">affx::TSV_OK</a>.
 <p>
-Referenced by <a class="el" href="tsv-util_8cpp-source.html#l00566">main()</a>.
+Referenced by <a class="el" href="tsv-util_8cpp-source.html#l00506">main()</a>.
 </div>
 </div><p>
 <a class="anchor" name="4a02506cfafbb14491b5b494c8af16cb"></a><!-- doxytag: member="tsv-util.cpp::tsv_util_linecount" ref="4a02506cfafbb14491b5b494c8af16cb" args="(const std::string &amp;fileName)" -->
@@ -322,11 +324,11 @@ Count the datalines in the tsvfile fname.
 </dl>
 
 <p>
-Definition at line <a class="el" href="tsv-util_8cpp-source.html#l00114">114</a> of file <a class="el" href="tsv-util_8cpp-source.html">tsv-util.cpp</a>.
+Definition at line <a class="el" href="tsv-util_8cpp-source.html#l00050">50</a> of file <a class="el" href="tsv-util_8cpp-source.html">tsv-util.cpp</a>.
 <p>
-References <a class="el" href="_tsv_file_8cpp-source.html#l02557">affx::TsvFile::close()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l03106">affx::TsvFile::nextLine()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l02462">affx::TsvFile::open()</a>, and <a class="el" href="_tsv_file_8h-source.html#l00092">affx::TSV_OK</a>.
+References <a class="el" href="_tsv_file_8cpp-source.html#l02759">affx::TsvFile::close()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l03305">affx::TsvFile::nextLine()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l02637">affx::TsvFile::open()</a>, and <a class="el" href="_tsv_file_8h-source.html#l00092">affx::TSV_OK</a>.
 <p>
-Referenced by <a class="el" href="tsv-util_8cpp-source.html#l00566">main()</a>.
+Referenced by <a class="el" href="tsv-util_8cpp-source.html#l00506">main()</a>.
 </div>
 </div><p>
 <a class="anchor" name="a967d49111eb3cb7869a858269585b12"></a><!-- doxytag: member="tsv-util.cpp::tsv_util_paste" ref="a967d49111eb3cb7869a858269585b12" args="(const std::string &amp;out_fileName, const std::vector&lt; std::string &gt; in_tsv_fileNames, int seg_max_lines, const std::string &amp;key_col_name, int verbose, int tsv_paste_fh_limit)" -->
@@ -393,11 +395,11 @@ Paste the columns of the input tsv files into a big tsv file. If there are too m
 </dl>
 
 <p>
-Definition at line <a class="el" href="tsv-util_8cpp-source.html#l00427">427</a> of file <a class="el" href="tsv-util_8cpp-source.html">tsv-util.cpp</a>.
+Definition at line <a class="el" href="tsv-util_8cpp-source.html#l00366">366</a> of file <a class="el" href="tsv-util_8cpp-source.html">tsv-util.cpp</a>.
 <p>
-References <a class="el" href="_err_8cpp-source.html#l00057">Err::errAbort()</a>, <a class="el" href="_util_8cpp-source.html#l00339">Util::fileRemove()</a>, <a class="el" href="tsv-util_8cpp-source.html#l00106">SNPRINTF</a>, and <a class="el" href="tsv-util_8cpp-source.html#l00247">tsv_util_paste_basic()</a>.
+References <a class="el" href="_err_8cpp-source.html#l00068">Err::errAbort()</a>, <a class="el" href="_fs_8cpp-source.html#l01181">Fs::rm()</a>, <a class="el" href="tsv-util_8cpp-source.html#l00042">SNPRINTF</a>, and <a class="el" href="tsv-util_8cpp-source.html#l00186">tsv_util_paste_basic()</a>.
 <p>
-Referenced by <a class="el" href="tsv-util_8cpp-source.html#l00566">main()</a>.
+Referenced by <a class="el" href="tsv-util_8cpp-source.html#l00506">main()</a>.
 </div>
 </div><p>
 <a class="anchor" name="981e97d94e0578d481c34e8afd9a5108"></a><!-- doxytag: member="tsv-util.cpp::tsv_util_paste_basic" ref="981e97d94e0578d481c34e8afd9a5108" args="(const std::string &amp;out_fileName, const std::vector&lt; std::string &gt; in_tsv_fileNames, const std::vector&lt; std::string &gt; in_header_fileNames, int seg_max_lines, const std::string &amp;key_col_name, int verbose)" -->
@@ -464,11 +466,11 @@ Paste the columns of several tsvFiles into one tsvfile in one pass. Cant to more
 </dl>
 
 <p>
-Definition at line <a class="el" href="tsv-util_8cpp-source.html#l00247">247</a> of file <a class="el" href="tsv-util_8cpp-source.html">tsv-util.cpp</a>.
+Definition at line <a class="el" href="tsv-util_8cpp-source.html#l00186">186</a> of file <a class="el" href="tsv-util_8cpp-source.html">tsv-util.cpp</a>.
 <p>
-References <a class="el" href="_tsv_file_8cpp-source.html#l01712">affx::TsvFile::addHeader()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l02557">affx::TsvFile::close()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l02268">affx::TsvFile::defineColumn()</a>, <a class="el" href="_err_8cpp-source.html#l00057">Err::errAbort()</a>, <a class="el" href="classaffx_1_1_tsv_file.html#b4e7d140273967ebbdaaf43164766f46">affx::TsvFile::set()</a>, <a class="el" href="tsv-util_8cpp-source.html#l00106">SNPRINTF</a>, <a class="el" href="_convert_8h-source.html#l00046">ToStr()</a>, <a class="el" href="_tsv_file_8h-source.html#l00092">affx::TSV_OK</a>, <a class="el" href="tsv-util_8cpp-source.html#l00235">TSV_PASTE_FH_LIMIT</a>, <a class="el" href="_tsv_file_8cpp-source.html#l04455">affx::TsvFile::writeLevel()</a>, and <a class="el" href="_tsv_file_8cpp-source.html#l04355">affx::TsvFile::writeTsv_v1()</a>.
+References <a class="el" href="_tsv_file_8cpp-source.html#l01798">affx::TsvFile::addHeader()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l02759">affx::TsvFile::close()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l02411">affx::TsvFile::defineColumn()</a>, <a class="el" href="_err_8cpp-source.html#l00068">Err::errAbort()</a>, <a class="el" href="classaffx_1_1_tsv_file.html#b4e7d140273967ebbdaaf43164766f46">affx::TsvFile::set()</a>, <a class="el" href="tsv-util_8cpp-source.html#l00042">SNPRINTF</a>, <a class="el" href="_convert_8h-source.html#l00227">ToStr()</a>, <a class="el" href="_tsv_file_8h-source.html#l00092">affx::TSV_OK</a>, <a class="el" href="tsv-util_8cpp-source.html#l00174">TSV_PASTE_FH_LIMIT</a>, <a class="el" href="_tsv_file_8cpp-source.html#l04667">affx::TsvFile::writeLevel()</a>, and <a class="el" href="_tsv_file_8cpp-source.html#l04567">affx::TsvFile::writeTsv_v1()</a>.
 <p>
-Referenced by <a class="el" href="tsv-util_8cpp-source.html#l00427">tsv_util_paste()</a>.
+Referenced by <a class="el" href="tsv-util_8cpp-source.html#l00366">tsv_util_paste()</a>.
 </div>
 </div><p>
 <a class="anchor" name="e7ae2139cd90e77a056afdcd5c9f5cda"></a><!-- doxytag: member="tsv-util.cpp::tsv_util_print_duplicate_headerkeys" ref="e7ae2139cd90e77a056afdcd5c9f5cda" args="(const std::string &amp;fileName)" -->
@@ -490,14 +492,14 @@ Referenced by <a class="el" href="tsv-util_8cpp-source.html#l00427">tsv_util_pas
 <p>
 
 <p>
-Definition at line <a class="el" href="tsv-util_8cpp-source.html#l00172">172</a> of file <a class="el" href="tsv-util_8cpp-source.html">tsv-util.cpp</a>.
+Definition at line <a class="el" href="tsv-util_8cpp-source.html#l00111">111</a> of file <a class="el" href="tsv-util_8cpp-source.html">tsv-util.cpp</a>.
 <p>
-References <a class="el" href="_tsv_file_8cpp-source.html#l02557">affx::TsvFile::close()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l02462">affx::TsvFile::open()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l04612">affx::TsvFile::printDuplicateHeaders()</a>, and <a class="el" href="_tsv_file_8h-source.html#l00092">affx::TSV_OK</a>.
+References <a class="el" href="_tsv_file_8cpp-source.html#l02759">affx::TsvFile::close()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l02637">affx::TsvFile::open()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l04824">affx::TsvFile::printDuplicateHeaders()</a>, and <a class="el" href="_tsv_file_8h-source.html#l00092">affx::TSV_OK</a>.
 <p>
-Referenced by <a class="el" href="tsv-util_8cpp-source.html#l00566">main()</a>.
+Referenced by <a class="el" href="tsv-util_8cpp-source.html#l00506">main()</a>.
 </div>
 </div><p>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:26 2009 for Affymetrix Fusion SDK by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:36 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

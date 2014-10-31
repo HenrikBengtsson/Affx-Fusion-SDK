@@ -172,38 +172,28 @@
 <a name="l00270"></a>00270 
 <a name="l00272"></a><a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_h_p_legacy_data.html#e83bdde9b1d340bc950c55d46bf8b723">00272</a>         <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_h_p_header.html">FusionCHPHeader</a> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_h_p_legacy_data.html#e83bdde9b1d340bc950c55d46bf8b723">header</a>;
 <a name="l00273"></a>00273 
-<a name="l00274"></a>00274 <span class="keyword">public</span>:
-<a name="l00276"></a><a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_h_p_legacy_data_1_1_reg.html">00276</a>         <span class="keyword">class </span><a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_h_p_legacy_data_1_1_reg.html">Reg</a> : <span class="keyword">public</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_h_p_data_reg.html">FusionCHPDataReg</a>
-<a name="l00277"></a>00277         {
-<a name="l00278"></a>00278         <span class="keyword">public</span>:
-<a name="l00280"></a><a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_h_p_legacy_data_1_1_reg.html#4515eead7b31e7462ebe27ff23048d01">00280</a>                 <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_h_p_legacy_data_1_1_reg.html#4515eead7b31e7462ebe27ff23048d01">Reg</a>() : <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_h_p_data_reg.html">FusionCHPDataReg</a>()
-<a name="l00281"></a>00281                 {
-<a name="l00282"></a>00282                         std::list&lt;std::string&gt; ids;
-<a name="l00283"></a>00283                         ids.push_back(<a class="code" href="_c_h_p_data_8h.html#f5694d63c2505528ed17552117fae1e3">CHP_EXPRESSION_ASSAY_TYPE</a>);
-<a name="l00284"></a>00284                         ids.push_back(<a class="code" href="_c_h_p_data_8h.html#a556b0f3343626a52f471faa5cc166b4">CHP_RESEQUENCING_ASSAY_TYPE</a>);
-<a name="l00285"></a>00285                         ids.push_back(<a class="code" href="_c_h_p_data_8h.html#ee812330225fce11973816eb216b1589">CHP_GENOTYPING_ASSAY_TYPE</a>);
-<a name="l00286"></a>00286                         ids.push_back(<a class="code" href="_c_h_p_data_8h.html#3b915a1eb94c05a005e39db221d4d0be">CHP_UNIVERSAL_ASSAY_TYPE</a>);
-<a name="l00287"></a>00287                         ids.push_back(<span class="stringliteral">""</span>);
-<a name="l00288"></a>00288                         <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_h_p_data_reg.html#978bc4c2e1a5173622b3ac2d06ef4d23">SetFileTypeIds</a>(ids);
-<a name="l00289"></a>00289                 }
-<a name="l00290"></a>00290 
-<a name="l00294"></a><a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_h_p_legacy_data_1_1_reg.html#d79558bf1afc34d3f0f8b218f89bc9d3">00294</a>                 <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_h_p_data.html">FusionCHPData</a> *<a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_h_p_legacy_data_1_1_reg.html#d79558bf1afc34d3f0f8b218f89bc9d3">MakeObject</a>() { <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_h_p_legacy_data.html">FusionCHPLegacyData</a>; }
-<a name="l00295"></a>00295         };
+<a name="l00275"></a><a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_h_p_legacy_data_1_1_reg.html">00275</a>         <span class="keyword">class </span><a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_h_p_legacy_data_1_1_reg.html">Reg</a> : <span class="keyword">public</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_h_p_data_reg.html">FusionCHPDataReg</a>
+<a name="l00276"></a>00276         {
+<a name="l00277"></a>00277         <span class="keyword">public</span>:
+<a name="l00279"></a>00279                 <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_h_p_legacy_data_1_1_reg.html#4515eead7b31e7462ebe27ff23048d01">Reg</a>(); 
+<a name="l00280"></a>00280 
+<a name="l00284"></a><a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_h_p_legacy_data_1_1_reg.html#d79558bf1afc34d3f0f8b218f89bc9d3">00284</a>                 <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_h_p_data.html">FusionCHPData</a> *<a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_h_p_legacy_data_1_1_reg.html#d79558bf1afc34d3f0f8b218f89bc9d3">MakeObject</a>() { <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_h_p_legacy_data.html">FusionCHPLegacyData</a>; }
+<a name="l00285"></a>00285         };
+<a name="l00286"></a>00286 
+<a name="l00288"></a><a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_h_p_legacy_data.html#04e890ea7e7c565099f33485e9b288c7">00288</a>         <span class="keyword">static</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_h_p_legacy_data_1_1_reg.html">Reg</a> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_h_p_legacy_data.html#04e890ea7e7c565099f33485e9b288c7">reg</a>;
+<a name="l00289"></a>00289 
+<a name="l00290"></a>00290 <span class="keyword">public</span>:
+<a name="l00295"></a>00295         <span class="keyword">static</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_h_p_legacy_data.html">FusionCHPLegacyData</a> * <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_h_p_legacy_data.html#3b0b312deb1d109aaf1999e36cf6c778">FromBase</a>(<a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_h_p_data.html">FusionCHPData</a> *chip);
 <a name="l00296"></a>00296 
-<a name="l00298"></a><a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_h_p_legacy_data.html#04e890ea7e7c565099f33485e9b288c7">00298</a>         <span class="keyword">static</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_h_p_legacy_data_1_1_reg.html">Reg</a> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_h_p_legacy_data.html#04e890ea7e7c565099f33485e9b288c7">reg</a>;
-<a name="l00299"></a>00299 
-<a name="l00300"></a>00300 <span class="keyword">public</span>:
-<a name="l00305"></a>00305         <span class="keyword">static</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_h_p_legacy_data.html">FusionCHPLegacyData</a> * <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_h_p_legacy_data.html#3b0b312deb1d109aaf1999e36cf6c778">FromBase</a>(<a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_h_p_data.html">FusionCHPData</a> *chip);
-<a name="l00306"></a>00306 
-<a name="l00307"></a>00307 };
-<a name="l00308"></a>00308 
-<a name="l00310"></a>00310 
-<a name="l00311"></a>00311 } <span class="comment">// namespace</span>
-<a name="l00312"></a>00312 
-<a name="l00314"></a>00314 
-<a name="l00315"></a>00315 <span class="preprocessor">#endif</span>
-<a name="l00316"></a>00316 <span class="preprocessor"></span>
-</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:08 2009 for Affymetrix Fusion SDK by&nbsp;
+<a name="l00297"></a>00297 };
+<a name="l00298"></a>00298 
+<a name="l00300"></a>00300 
+<a name="l00301"></a>00301 } <span class="comment">// namespace</span>
+<a name="l00302"></a>00302 
+<a name="l00304"></a>00304 
+<a name="l00305"></a>00305 <span class="preprocessor">#endif</span>
+<a name="l00306"></a>00306 <span class="preprocessor"></span>
+</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:17 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

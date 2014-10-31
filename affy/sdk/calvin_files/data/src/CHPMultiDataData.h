@@ -185,20 +185,7 @@ public:
 	std::vector<ColumnInfo> metricColumns;
 
 	/*! constructor */
-	DataSetInfo()
-    {
-        entries = NULL;
-        maxName = -1;
-        maxSegmentType = -1;
-        maxReferenceSegmentID = -1;
-        maxFamilialSegmentID = -1;
-        maxFamilialARRID = -1;
-        maxFamilialCHPID = -1;
-        maxFamilialCHPFile = -1;
-        maxFamilialRole = -1;
-        maxFamilialCHPFile = -1;
-        dataSetIndex = -1;
-    }
+	DataSetInfo();
 };
 
 /*! Holds data associated with genotype or expression CHP files. */
@@ -230,10 +217,10 @@ private:
 
 public:
 
-    std::wstring GetGroupName(MultiDataType dataType) { return dataTypeGroupNames[dataType]; }
+    std::wstring GetGroupName(MultiDataType dataType);
 
 	/*! The data set information */
-	std::map<MultiDataType, DataSetInfo> &GetDataSetInfo() { return dataSetInfo; }
+    std::map<MultiDataType, DataSetInfo> &GetDataSetInfo();
 
 	/*! The maximum length of a probe set name.
 	* @param dataType The data type
@@ -340,6 +327,11 @@ public:
 	*/
 	void AddAlgParams(const ParameterNameValueTypeList& params);
 
+	/*! Adds the application meta data information
+	* @param params The application meta data
+	*/
+        void AddAppMetaInfo(const ParameterNameValueTypeList& params);
+
 	/*! Gets the summary parameters
 	* @return The summary parameters.
 	*/
@@ -353,12 +345,12 @@ public:
 	/*! Gets the file header.
 	* @return The file header.
 	*/
-	FileHeader* GetFileHeader() { return &genericData.Header(); }
+	FileHeader* GetFileHeader(); 
 
 	/*! Gets the generic data object.
 	* @return The data object.
 	*/
-	GenericData& GetGenericData() { return genericData; }
+	GenericData& GetGenericData();
 
 	/*! Gets the probe set data.
 	* @param dataType The data type

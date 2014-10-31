@@ -460,7 +460,7 @@
 <a name="l00452"></a>00452               <span class="keywordflow">if</span> (lineBuffer.substr(0,1) == <a class="code" href="_b_p_m_a_p_file_writer_8cpp.html#596a20899eab0dcd8fbac3fc8d999c52">BPMAP_TAG_VALUE_START</a>){ <span class="comment">// tag is present</span>
 <a name="l00453"></a>00453                 tag = tokens.front();
 <a name="l00454"></a>00454                 tokens.pop_front();
-<a name="l00455"></a>00455                 std::transform(tag.begin(), tag.end(), tag.begin(), tolower);
+<a name="l00455"></a>00455                 std::transform(tag.begin(), tag.end(), tag.begin(), <a class="code" href="namespaceaffx.html#70b95f08a97e5d9c6f54dfb40956c840">tolower</a>);
 <a name="l00456"></a>00456                 <span class="keywordflow">if</span> (ntokens == 1) {  <span class="comment">// tag is present with no value</span>
 <a name="l00457"></a>00457                   value = <span class="stringliteral">""</span>;
 <a name="l00458"></a>00458                 }
@@ -682,7 +682,7 @@
 <a name="l00674"></a>00674         <span class="keywordflow">return</span>( <span class="keyword">false</span> );
 <a name="l00675"></a>00675 }
 <a name="l00676"></a>00676 
-</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:14 2009 for Affymetrix Fusion SDK by&nbsp;
+</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:23 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

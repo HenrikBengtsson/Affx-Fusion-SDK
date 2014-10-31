@@ -108,7 +108,7 @@
 <a name="l00087"></a>00087         <a class="code" href="classaffymetrix__calvin__io_1_1_calvin_c_h_p_file_updater.html#c3152c6e02fd5ab0b53130931f67e843">CloseCHPFile</a>();
 <a name="l00088"></a>00088         <a class="code" href="classaffymetrix__calvin__io_1_1_calvin_c_h_p_file_updater.html#02e9bdbdb71371d1088b61e7dfcbd8c1">Initialize</a>(fileName);
 <a name="l00089"></a>00089         <a class="code" href="classaffymetrix__calvin__io_1_1_calvin_c_h_p_file_updater.html#1090fbf12eec8d347ad3b3f1362d9e5b">m_CHPFile</a> = <span class="keyword">new</span> ofstream(fileName, ios::out | ios::in | ios::binary);
-<a name="l00090"></a>00090         <span class="keywordflow">if</span> (!<a class="code" href="classaffymetrix__calvin__io_1_1_calvin_c_h_p_file_updater.html#1090fbf12eec8d347ad3b3f1362d9e5b">m_CHPFile</a>) { <a class="code" href="class_err.html#2c92074a0e89f02bba1c217b6c65b000">Err::errAbort</a>(<span class="stringliteral">"CalvinCHPFileUpdater::OpenCHPFile() - Unable to open CHP file for updating: "</span> + <a class="code" href="_convert_8h.html#9e68e488e4da0371aea30596313537df">ToStr</a>(fileName)); }
+<a name="l00090"></a>00090         <span class="keywordflow">if</span> (!<a class="code" href="classaffymetrix__calvin__io_1_1_calvin_c_h_p_file_updater.html#1090fbf12eec8d347ad3b3f1362d9e5b">m_CHPFile</a>) { <a class="code" href="class_err.html#121c0cbb1687c93444a1b5f7f6ea56af">Err::errAbort</a>(<span class="stringliteral">"CalvinCHPFileUpdater::OpenCHPFile() - Unable to open CHP file for updating: "</span> + <a class="code" href="_convert_8h.html#9e68e488e4da0371aea30596313537df">ToStr</a>(fileName)); }
 <a name="l00091"></a>00091 }
 <a name="l00092"></a>00092 
 <a name="l00093"></a><a class="code" href="classaffymetrix__calvin__io_1_1_calvin_c_h_p_file_updater.html#2fe2476409cde956e9e44d27b4b23f95">00093</a> <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__calvin__io_1_1_calvin_c_h_p_file_updater.html#2fe2476409cde956e9e44d27b4b23f95">CalvinCHPFileUpdater::UpdateExpressionQuantification</a>(<span class="keywordtype">int</span> row, <span class="keywordtype">float</span> quantification)
@@ -1032,7 +1032,7 @@
 <a name="l01011"></a>01011     <a class="code" href="classaffymetrix__calvin__io_1_1_calvin_c_h_p_file_updater.html#0d4e07671131406cca92e59694cc29c2">dataSetIndexMap</a>.clear();
 <a name="l01012"></a>01012     <a class="code" href="classaffymetrix__calvin__io_1_1_calvin_c_h_p_file_updater.html#788e831f381ded4a31e2f79f90dfc572">dataGroupIndexMap</a>.clear();
 <a name="l01013"></a>01013 }
-</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:11 2009 for Affymetrix Fusion SDK by&nbsp;
+</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:20 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

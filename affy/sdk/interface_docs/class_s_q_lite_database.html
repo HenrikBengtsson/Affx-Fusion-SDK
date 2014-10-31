@@ -39,7 +39,7 @@
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_q_lite_database.html#dfe144ad3772e25f6a73c8a38b64d3e7">close</a> ()</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_q_lite_database.html#3fc722918debe34a74d43128418bfcc3">execute</a> (const std::string &amp;strSQL, bool bError=true)</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_q_lite_database.html#647b2f6ee2ec7dbb4306f8f7bfe2e182">execute</a> (const std::string &amp;strSQL, bool bError=true, bool abortOnErr=true)</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="class_s_q_lite_recordset.html">SQLiteRecordset</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_q_lite_database.html#0094606fba2653a939326415e0ec0ac8">newRecordset</a> ()</td></tr>
 
@@ -55,6 +55,8 @@
 <tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_q_lite_database.html#cfb0eae582ff25f482961293016295e0">test</a> ()</td></tr>
 
 <tr><td colspan="2"><br><h2>Protected Attributes</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_q_lite_database.html#db5eddfe62013898a6dd6110d9bd30b6">m_dbName</a></td></tr>
+
 <tr><td class="memItemLeft" nowrap align="right" valign="top">sqlite3 *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_q_lite_database.html#0bea4b585df41b1c504a2f990dd2368f">m_pdb</a></td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">sqlite3_stmt *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_q_lite_database.html#98401fb6b37dbc927691c312388fae89">m_pstmt</a></td></tr>
@@ -67,7 +69,7 @@
 <p>
 
 <p>
-Definition at line <a class="el" href="_s_q_lite_8h-source.html#l00090">90</a> of file <a class="el" href="_s_q_lite_8h-source.html">SQLite.h</a>.<hr><h2>Constructor &amp; Destructor Documentation</h2>
+Definition at line <a class="el" href="_s_q_lite_8h-source.html#l00088">88</a> of file <a class="el" href="_s_q_lite_8h-source.html">SQLite.h</a>.<hr><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" name="82d8932bb4f4efe8a22943a57d7d9885"></a><!-- doxytag: member="SQLiteDatabase::SQLiteDatabase" ref="82d8932bb4f4efe8a22943a57d7d9885" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -86,9 +88,9 @@ Definition at line <a class="el" href="_s_q_lite_8h-source.html#l00090">90</a> o
 <p>
 Constructs a <a class="el" href="class_s_q_lite_database.html">SQLiteDatabase</a> object. 
 <p>
-Definition at line <a class="el" href="_s_q_lite_8cpp-source.html#l00098">98</a> of file <a class="el" href="_s_q_lite_8cpp-source.html">SQLite.cpp</a>.
+Definition at line <a class="el" href="_s_q_lite_8cpp-source.html#l00099">99</a> of file <a class="el" href="_s_q_lite_8cpp-source.html">SQLite.cpp</a>.
 <p>
-References <a class="el" href="_s_q_lite_8h-source.html#l00099">m_bOpen</a>, <a class="el" href="_s_q_lite_8h-source.html#l00097">m_pdb</a>, and <a class="el" href="_s_q_lite_8h-source.html#l00098">m_pstmt</a>.
+References <a class="el" href="_s_q_lite_8h-source.html#l00098">m_bOpen</a>, <a class="el" href="_s_q_lite_8h-source.html#l00096">m_pdb</a>, and <a class="el" href="_s_q_lite_8h-source.html#l00097">m_pstmt</a>.
 </div>
 </div><p>
 <a class="anchor" name="74d672abce489b8db3f6627c8cfc5c99"></a><!-- doxytag: member="SQLiteDatabase::~SQLiteDatabase" ref="74d672abce489b8db3f6627c8cfc5c99" args="()" -->
@@ -109,9 +111,9 @@ References <a class="el" href="_s_q_lite_8h-source.html#l00099">m_bOpen</a>, <a 
 <p>
 Destroys a <a class="el" href="class_s_q_lite_database.html">SQLiteDatabase</a> object. Closes the database if it is left open. 
 <p>
-Definition at line <a class="el" href="_s_q_lite_8cpp-source.html#l00109">109</a> of file <a class="el" href="_s_q_lite_8cpp-source.html">SQLite.cpp</a>.
+Definition at line <a class="el" href="_s_q_lite_8cpp-source.html#l00110">110</a> of file <a class="el" href="_s_q_lite_8cpp-source.html">SQLite.cpp</a>.
 <p>
-References <a class="el" href="_s_q_lite_8cpp-source.html#l00152">close()</a>.
+References <a class="el" href="_s_q_lite_8cpp-source.html#l00167">close()</a>.
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
@@ -133,9 +135,9 @@ References <a class="el" href="_s_q_lite_8cpp-source.html#l00152">close()</a>.
 <p>
 
 <p>
-Definition at line <a class="el" href="_s_q_lite_8cpp-source.html#l00039">39</a> of file <a class="el" href="_s_q_lite_8cpp-source.html">SQLite.cpp</a>.
+Definition at line <a class="el" href="_s_q_lite_8cpp-source.html#l00040">40</a> of file <a class="el" href="_s_q_lite_8cpp-source.html">SQLite.cpp</a>.
 <p>
-References <a class="el" href="_s_q_lite_8h-source.html#l00118">beginTransaction()</a>, <a class="el" href="_s_q_lite_8cpp-source.html#l00152">close()</a>, <a class="el" href="_s_q_lite_8cpp-source.html#l00220">SQLiteRecordset::close()</a>, <a class="el" href="_s_q_lite_8h-source.html#l00123">commitTransaction()</a>, <a class="el" href="_s_q_lite_8cpp-source.html#l00167">execute()</a>, <a class="el" href="_s_q_lite_8cpp-source.html#l00235">SQLiteRecordset::fetch()</a>, <a class="el" href="_affx_conv_8cpp-source.html#l00052">getInt()</a>, <a class="el" href="_s_q_lite_8cpp-source.html#l00260">SQLiteRecordset::getInteger()</a>, <a class="el" href="_s_q_lite_8h-source.html#l00059">SQLiteException::getMessage()</a>, <a class="el" href="_s_q_lite_8cpp-source.html#l00247">SQLiteRecordset::getString()</a>, <a class="el" href="_s_q_lite_8cpp-source.html#l00207">SQLiteRecordset::open()</a>, <a class="el" href="_s_q_lite_8cpp-source.html#l00136">open()</a>, <a class="el" href="_verbose_8cpp-source.html#l00168">Verbose::out()</a>, and <a class="el" href="_s_q_lite_8h-source.html#l00128">rollbackTransaction()</a>.
+References <a class="el" href="_s_q_lite_8h-source.html#l00117">beginTransaction()</a>, <a class="el" href="_s_q_lite_8cpp-source.html#l00167">close()</a>, <a class="el" href="_s_q_lite_8cpp-source.html#l00253">SQLiteRecordset::close()</a>, <a class="el" href="_s_q_lite_8h-source.html#l00122">commitTransaction()</a>, <a class="el" href="_s_q_lite_8cpp-source.html#l00184">execute()</a>, <a class="el" href="_s_q_lite_8cpp-source.html#l00269">SQLiteRecordset::fetch()</a>, <a class="el" href="_affx_conv_8cpp-source.html#l00051">getInt()</a>, <a class="el" href="_s_q_lite_8cpp-source.html#l00294">SQLiteRecordset::getInteger()</a>, <a class="el" href="_s_q_lite_8h-source.html#l00057">SQLiteException::getMessage()</a>, <a class="el" href="_s_q_lite_8cpp-source.html#l00281">SQLiteRecordset::getString()</a>, <a class="el" href="_s_q_lite_8cpp-source.html#l00240">SQLiteRecordset::open()</a>, <a class="el" href="_s_q_lite_8cpp-source.html#l00148">open()</a>, <a class="el" href="_verbose_8cpp-source.html#l00259">Verbose::out()</a>, and <a class="el" href="_s_q_lite_8h-source.html#l00127">rollbackTransaction()</a>.
 </div>
 </div><p>
 <a class="anchor" name="f0da2c3530300b7d04107b34b6e8c89f"></a><!-- doxytag: member="SQLiteDatabase::getConnection" ref="f0da2c3530300b7d04107b34b6e8c89f" args="()" -->
@@ -157,11 +159,11 @@ References <a class="el" href="_s_q_lite_8h-source.html#l00118">beginTransaction
 Returns the sqlite3 reference. <dl class="return" compact><dt><b>Returns:</b></dt><dd>- The sqlite3 reference. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_s_q_lite_8h-source.html#l00107">107</a> of file <a class="el" href="_s_q_lite_8h-source.html">SQLite.h</a>.
+Definition at line <a class="el" href="_s_q_lite_8h-source.html#l00106">106</a> of file <a class="el" href="_s_q_lite_8h-source.html">SQLite.h</a>.
 <p>
-References <a class="el" href="_s_q_lite_8h-source.html#l00097">m_pdb</a>.
+References <a class="el" href="_s_q_lite_8h-source.html#l00096">m_pdb</a>.
 <p>
-Referenced by <a class="el" href="_s_q_lite_8cpp-source.html#l00207">SQLiteRecordset::open()</a>.
+Referenced by <a class="el" href="_s_q_lite_8cpp-source.html#l00240">SQLiteRecordset::open()</a>.
 </div>
 </div><p>
 <a class="anchor" name="3e16c4ee53c9b5c5112ac6d2198d8fb6"></a><!-- doxytag: member="SQLiteDatabase::error" ref="3e16c4ee53c9b5c5112ac6d2198d8fb6" args="(int iReturnCode, const std::string &amp;strMessage)" -->
@@ -198,9 +200,11 @@ Error handling function. Throws a <a class="el" href="class_s_q_lite_exception.h
 </dl>
 
 <p>
-Definition at line <a class="el" href="_s_q_lite_8cpp-source.html#l00120">120</a> of file <a class="el" href="_s_q_lite_8cpp-source.html">SQLite.cpp</a>.
+Definition at line <a class="el" href="_s_q_lite_8cpp-source.html#l00121">121</a> of file <a class="el" href="_s_q_lite_8cpp-source.html">SQLite.cpp</a>.
 <p>
-Referenced by <a class="el" href="_s_q_lite_8cpp-source.html#l00220">SQLiteRecordset::close()</a>, <a class="el" href="_s_q_lite_8cpp-source.html#l00152">close()</a>, <a class="el" href="_s_q_lite_8cpp-source.html#l00167">execute()</a>, <a class="el" href="_s_q_lite_8cpp-source.html#l00207">SQLiteRecordset::open()</a>, and <a class="el" href="_s_q_lite_8cpp-source.html#l00136">open()</a>.
+References <a class="el" href="_fs_8cpp-source.html#l00403">Fs::dirname()</a>, <a class="el" href="_fs_8cpp-source.html#l00810">Fs::isWriteableDir()</a>, and <a class="el" href="_s_q_lite_8h-source.html#l00095">m_dbName</a>.
+<p>
+Referenced by <a class="el" href="_s_q_lite_8cpp-source.html#l00167">close()</a>, <a class="el" href="_s_q_lite_8cpp-source.html#l00184">execute()</a>, <a class="el" href="_s_q_lite_8cpp-source.html#l00240">SQLiteRecordset::open()</a>, and <a class="el" href="_s_q_lite_8cpp-source.html#l00148">open()</a>.
 </div>
 </div><p>
 <a class="anchor" name="ce7d8958946652aa0d5c6fa608d4c562"></a><!-- doxytag: member="SQLiteDatabase::open" ref="ce7d8958946652aa0d5c6fa608d4c562" args="(const std::string &amp;strFileName, bool bReadOnly=false)" -->
@@ -237,11 +241,11 @@ Opens a SQLite database. <dl compact><dt><b>Parameters:</b></dt><dd>
 </dl>
 
 <p>
-Definition at line <a class="el" href="_s_q_lite_8cpp-source.html#l00136">136</a> of file <a class="el" href="_s_q_lite_8cpp-source.html">SQLite.cpp</a>.
+Definition at line <a class="el" href="_s_q_lite_8cpp-source.html#l00148">148</a> of file <a class="el" href="_s_q_lite_8cpp-source.html">SQLite.cpp</a>.
 <p>
-References <a class="el" href="_s_q_lite_8cpp-source.html#l00120">error()</a>, <a class="el" href="_s_q_lite_8h-source.html#l00099">m_bOpen</a>, and <a class="el" href="_s_q_lite_8h-source.html#l00097">m_pdb</a>.
+References <a class="el" href="_fs_8cpp-source.html#l00599">Fs::convertToUncPath()</a>, <a class="el" href="_s_q_lite_8cpp-source.html#l00121">error()</a>, <a class="el" href="_fs_8h-source.html#l00031">FS_QUOTE_PATH</a>, <a class="el" href="_s_q_lite_8h-source.html#l00098">m_bOpen</a>, <a class="el" href="_s_q_lite_8h-source.html#l00095">m_dbName</a>, and <a class="el" href="_s_q_lite_8h-source.html#l00096">m_pdb</a>.
 <p>
-Referenced by <a class="el" href="_s_q_lite_8cpp-source.html#l00039">test()</a>.
+Referenced by <a class="el" href="_s_q_lite_8cpp-source.html#l00040">test()</a>.
 </div>
 </div><p>
 <a class="anchor" name="dfe144ad3772e25f6a73c8a38b64d3e7"></a><!-- doxytag: member="SQLiteDatabase::close" ref="dfe144ad3772e25f6a73c8a38b64d3e7" args="()" -->
@@ -263,14 +267,14 @@ Referenced by <a class="el" href="_s_q_lite_8cpp-source.html#l00039">test()</a>.
 <p>
 Closes a SQLite database. 
 <p>
-Definition at line <a class="el" href="_s_q_lite_8cpp-source.html#l00152">152</a> of file <a class="el" href="_s_q_lite_8cpp-source.html">SQLite.cpp</a>.
+Definition at line <a class="el" href="_s_q_lite_8cpp-source.html#l00167">167</a> of file <a class="el" href="_s_q_lite_8cpp-source.html">SQLite.cpp</a>.
 <p>
-References <a class="el" href="_s_q_lite_8cpp-source.html#l00120">error()</a>, <a class="el" href="_s_q_lite_8h-source.html#l00099">m_bOpen</a>, and <a class="el" href="_s_q_lite_8h-source.html#l00097">m_pdb</a>.
+References <a class="el" href="_s_q_lite_8cpp-source.html#l00121">error()</a>, <a class="el" href="_s_q_lite_8h-source.html#l00098">m_bOpen</a>, <a class="el" href="_s_q_lite_8h-source.html#l00095">m_dbName</a>, and <a class="el" href="_s_q_lite_8h-source.html#l00096">m_pdb</a>.
 <p>
-Referenced by <a class="el" href="_s_q_lite_8cpp-source.html#l00039">test()</a>, and <a class="el" href="_s_q_lite_8cpp-source.html#l00109">~SQLiteDatabase()</a>.
+Referenced by <a class="el" href="_s_q_lite_8cpp-source.html#l00040">test()</a>, and <a class="el" href="_s_q_lite_8cpp-source.html#l00110">~SQLiteDatabase()</a>.
 </div>
 </div><p>
-<a class="anchor" name="3fc722918debe34a74d43128418bfcc3"></a><!-- doxytag: member="SQLiteDatabase::execute" ref="3fc722918debe34a74d43128418bfcc3" args="(const std::string &amp;strSQL, bool bError=true)" -->
+<a class="anchor" name="647b2f6ee2ec7dbb4306f8f7bfe2e182"></a><!-- doxytag: member="SQLiteDatabase::execute" ref="647b2f6ee2ec7dbb4306f8f7bfe2e182" args="(const std::string &amp;strSQL, bool bError=true, bool abortOnErr=true)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -284,7 +288,13 @@ Referenced by <a class="el" href="_s_q_lite_8cpp-source.html#l00039">test()</a>,
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&nbsp;</td>
-          <td class="paramname"> <em>bError</em> = <code>true</code></td><td>&nbsp;</td>
+          <td class="paramname"> <em>bError</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>abortOnErr</em> = <code>true</code></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
@@ -299,16 +309,17 @@ Referenced by <a class="el" href="_s_q_lite_8cpp-source.html#l00039">test()</a>,
 Executes a SQL statement. Does not return any data. <dl compact><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>strSQL</em>&nbsp;</td><td>- The SQL statement to execute. </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>bError</em>&nbsp;</td><td>- Set to true to trap errors, or false to ignore errors. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>bError</em>&nbsp;</td><td>- Set to true to trap SQL statement errors, or false to ignore. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>abortOnErr</em>&nbsp;</td><td>- true calls Err::abort on SQLite exception, else just throw the exception. </td></tr>
   </table>
 </dl>
 
 <p>
-Definition at line <a class="el" href="_s_q_lite_8cpp-source.html#l00167">167</a> of file <a class="el" href="_s_q_lite_8cpp-source.html">SQLite.cpp</a>.
+Definition at line <a class="el" href="_s_q_lite_8cpp-source.html#l00184">184</a> of file <a class="el" href="_s_q_lite_8cpp-source.html">SQLite.cpp</a>.
 <p>
-References <a class="el" href="_s_q_lite_8cpp-source.html#l00120">error()</a>, and <a class="el" href="_s_q_lite_8h-source.html#l00097">m_pdb</a>.
+References <a class="el" href="_err_8cpp-source.html#l00068">Err::errAbort()</a>, <a class="el" href="_s_q_lite_8cpp-source.html#l00121">error()</a>, <a class="el" href="_s_q_lite_8h-source.html#l00057">SQLiteException::getMessage()</a>, and <a class="el" href="_s_q_lite_8h-source.html#l00096">m_pdb</a>.
 <p>
-Referenced by <a class="el" href="_s_q_lite_8h-source.html#l00118">beginTransaction()</a>, <a class="el" href="_s_q_lite_8h-source.html#l00123">commitTransaction()</a>, <a class="el" href="_s_q_lite_8h-source.html#l00128">rollbackTransaction()</a>, and <a class="el" href="_s_q_lite_8cpp-source.html#l00039">test()</a>.
+Referenced by <a class="el" href="_s_q_lite_8h-source.html#l00117">beginTransaction()</a>, <a class="el" href="_s_q_lite_8h-source.html#l00122">commitTransaction()</a>, <a class="el" href="_s_q_lite_8h-source.html#l00127">rollbackTransaction()</a>, and <a class="el" href="_s_q_lite_8cpp-source.html#l00040">test()</a>.
 </div>
 </div><p>
 <a class="anchor" name="0094606fba2653a939326415e0ec0ac8"></a><!-- doxytag: member="SQLiteDatabase::newRecordset" ref="0094606fba2653a939326415e0ec0ac8" args="()" -->
@@ -329,7 +340,7 @@ Referenced by <a class="el" href="_s_q_lite_8h-source.html#l00118">beginTransact
 <p>
 
 <p>
-Definition at line <a class="el" href="_s_q_lite_8h-source.html#l00112">112</a> of file <a class="el" href="_s_q_lite_8h-source.html">SQLite.h</a>.
+Definition at line <a class="el" href="_s_q_lite_8h-source.html#l00111">111</a> of file <a class="el" href="_s_q_lite_8h-source.html">SQLite.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="798f9f6a8671c6f197ea814166b14d08"></a><!-- doxytag: member="SQLiteDatabase::deleteRecordset" ref="798f9f6a8671c6f197ea814166b14d08" args="(SQLiteRecordset **pprset)" -->
@@ -351,7 +362,7 @@ Definition at line <a class="el" href="_s_q_lite_8h-source.html#l00112">112</a> 
 <p>
 
 <p>
-Definition at line <a class="el" href="_s_q_lite_8h-source.html#l00113">113</a> of file <a class="el" href="_s_q_lite_8h-source.html">SQLite.h</a>.
+Definition at line <a class="el" href="_s_q_lite_8h-source.html#l00112">112</a> of file <a class="el" href="_s_q_lite_8h-source.html">SQLite.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="89ba930342540c628bda8283397c8186"></a><!-- doxytag: member="SQLiteDatabase::beginTransaction" ref="89ba930342540c628bda8283397c8186" args="()" -->
@@ -372,11 +383,11 @@ Definition at line <a class="el" href="_s_q_lite_8h-source.html#l00113">113</a> 
 <p>
 Begin a transaction. 
 <p>
-Definition at line <a class="el" href="_s_q_lite_8h-source.html#l00118">118</a> of file <a class="el" href="_s_q_lite_8h-source.html">SQLite.h</a>.
+Definition at line <a class="el" href="_s_q_lite_8h-source.html#l00117">117</a> of file <a class="el" href="_s_q_lite_8h-source.html">SQLite.h</a>.
 <p>
-References <a class="el" href="_s_q_lite_8cpp-source.html#l00167">execute()</a>.
+References <a class="el" href="_s_q_lite_8cpp-source.html#l00184">execute()</a>.
 <p>
-Referenced by <a class="el" href="_s_q_lite_8cpp-source.html#l00039">test()</a>.
+Referenced by <a class="el" href="_s_q_lite_8cpp-source.html#l00040">test()</a>.
 </div>
 </div><p>
 <a class="anchor" name="156dcbe35b8bb8206e7fb75895271cc7"></a><!-- doxytag: member="SQLiteDatabase::commitTransaction" ref="156dcbe35b8bb8206e7fb75895271cc7" args="()" -->
@@ -397,11 +408,11 @@ Referenced by <a class="el" href="_s_q_lite_8cpp-source.html#l00039">test()</a>.
 <p>
 Commit a transaction. 
 <p>
-Definition at line <a class="el" href="_s_q_lite_8h-source.html#l00123">123</a> of file <a class="el" href="_s_q_lite_8h-source.html">SQLite.h</a>.
+Definition at line <a class="el" href="_s_q_lite_8h-source.html#l00122">122</a> of file <a class="el" href="_s_q_lite_8h-source.html">SQLite.h</a>.
 <p>
-References <a class="el" href="_s_q_lite_8cpp-source.html#l00167">execute()</a>.
+References <a class="el" href="_s_q_lite_8cpp-source.html#l00184">execute()</a>.
 <p>
-Referenced by <a class="el" href="_s_q_lite_8cpp-source.html#l00039">test()</a>.
+Referenced by <a class="el" href="_s_q_lite_8cpp-source.html#l00040">test()</a>.
 </div>
 </div><p>
 <a class="anchor" name="c70c0400ceef0e40e7a43b9abb20201f"></a><!-- doxytag: member="SQLiteDatabase::rollbackTransaction" ref="c70c0400ceef0e40e7a43b9abb20201f" args="()" -->
@@ -422,14 +433,33 @@ Referenced by <a class="el" href="_s_q_lite_8cpp-source.html#l00039">test()</a>.
 <p>
 Rollback a transaction. 
 <p>
-Definition at line <a class="el" href="_s_q_lite_8h-source.html#l00128">128</a> of file <a class="el" href="_s_q_lite_8h-source.html">SQLite.h</a>.
+Definition at line <a class="el" href="_s_q_lite_8h-source.html#l00127">127</a> of file <a class="el" href="_s_q_lite_8h-source.html">SQLite.h</a>.
 <p>
-References <a class="el" href="_s_q_lite_8cpp-source.html#l00167">execute()</a>.
+References <a class="el" href="_s_q_lite_8cpp-source.html#l00184">execute()</a>, and <a class="el" href="_s_q_lite_8h-source.html#l00098">m_bOpen</a>.
 <p>
-Referenced by <a class="el" href="_s_q_lite_8cpp-source.html#l00039">test()</a>.
+Referenced by <a class="el" href="_s_q_lite_8cpp-source.html#l00040">test()</a>.
 </div>
 </div><p>
 <hr><h2>Member Data Documentation</h2>
+<a class="anchor" name="db5eddfe62013898a6dd6110d9bd30b6"></a><!-- doxytag: member="SQLiteDatabase::m_dbName" ref="db5eddfe62013898a6dd6110d9bd30b6" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string <a class="el" href="class_s_q_lite_database.html#db5eddfe62013898a6dd6110d9bd30b6">SQLiteDatabase::m_dbName</a><code> [protected]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>
+Definition at line <a class="el" href="_s_q_lite_8h-source.html#l00095">95</a> of file <a class="el" href="_s_q_lite_8h-source.html">SQLite.h</a>.
+<p>
+Referenced by <a class="el" href="_s_q_lite_8cpp-source.html#l00167">close()</a>, <a class="el" href="_s_q_lite_8cpp-source.html#l00121">error()</a>, and <a class="el" href="_s_q_lite_8cpp-source.html#l00148">open()</a>.
+</div>
+</div><p>
 <a class="anchor" name="0bea4b585df41b1c504a2f990dd2368f"></a><!-- doxytag: member="SQLiteDatabase::m_pdb" ref="0bea4b585df41b1c504a2f990dd2368f" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -444,9 +474,9 @@ Referenced by <a class="el" href="_s_q_lite_8cpp-source.html#l00039">test()</a>.
 <p>
 
 <p>
-Definition at line <a class="el" href="_s_q_lite_8h-source.html#l00097">97</a> of file <a class="el" href="_s_q_lite_8h-source.html">SQLite.h</a>.
+Definition at line <a class="el" href="_s_q_lite_8h-source.html#l00096">96</a> of file <a class="el" href="_s_q_lite_8h-source.html">SQLite.h</a>.
 <p>
-Referenced by <a class="el" href="_s_q_lite_8cpp-source.html#l00152">close()</a>, <a class="el" href="_s_q_lite_8cpp-source.html#l00167">execute()</a>, <a class="el" href="_s_q_lite_8h-source.html#l00107">getConnection()</a>, <a class="el" href="_s_q_lite_8cpp-source.html#l00136">open()</a>, and <a class="el" href="_s_q_lite_8cpp-source.html#l00098">SQLiteDatabase()</a>.
+Referenced by <a class="el" href="_s_q_lite_8cpp-source.html#l00167">close()</a>, <a class="el" href="_s_q_lite_8cpp-source.html#l00184">execute()</a>, <a class="el" href="_s_q_lite_8h-source.html#l00106">getConnection()</a>, <a class="el" href="_s_q_lite_8cpp-source.html#l00148">open()</a>, and <a class="el" href="_s_q_lite_8cpp-source.html#l00099">SQLiteDatabase()</a>.
 </div>
 </div><p>
 <a class="anchor" name="98401fb6b37dbc927691c312388fae89"></a><!-- doxytag: member="SQLiteDatabase::m_pstmt" ref="98401fb6b37dbc927691c312388fae89" args="" -->
@@ -463,9 +493,9 @@ Referenced by <a class="el" href="_s_q_lite_8cpp-source.html#l00152">close()</a>
 <p>
 
 <p>
-Definition at line <a class="el" href="_s_q_lite_8h-source.html#l00098">98</a> of file <a class="el" href="_s_q_lite_8h-source.html">SQLite.h</a>.
+Definition at line <a class="el" href="_s_q_lite_8h-source.html#l00097">97</a> of file <a class="el" href="_s_q_lite_8h-source.html">SQLite.h</a>.
 <p>
-Referenced by <a class="el" href="_s_q_lite_8cpp-source.html#l00098">SQLiteDatabase()</a>.
+Referenced by <a class="el" href="_s_q_lite_8cpp-source.html#l00099">SQLiteDatabase()</a>.
 </div>
 </div><p>
 <a class="anchor" name="44f8d0d506559dfddcf1adf3e8411ed8"></a><!-- doxytag: member="SQLiteDatabase::m_bOpen" ref="44f8d0d506559dfddcf1adf3e8411ed8" args="" -->
@@ -482,14 +512,14 @@ Referenced by <a class="el" href="_s_q_lite_8cpp-source.html#l00098">SQLiteDatab
 <p>
 
 <p>
-Definition at line <a class="el" href="_s_q_lite_8h-source.html#l00099">99</a> of file <a class="el" href="_s_q_lite_8h-source.html">SQLite.h</a>.
+Definition at line <a class="el" href="_s_q_lite_8h-source.html#l00098">98</a> of file <a class="el" href="_s_q_lite_8h-source.html">SQLite.h</a>.
 <p>
-Referenced by <a class="el" href="_s_q_lite_8cpp-source.html#l00152">close()</a>, <a class="el" href="_s_q_lite_8cpp-source.html#l00136">open()</a>, and <a class="el" href="_s_q_lite_8cpp-source.html#l00098">SQLiteDatabase()</a>.
+Referenced by <a class="el" href="_s_q_lite_8cpp-source.html#l00167">close()</a>, <a class="el" href="_s_q_lite_8cpp-source.html#l00148">open()</a>, <a class="el" href="_s_q_lite_8h-source.html#l00127">rollbackTransaction()</a>, and <a class="el" href="_s_q_lite_8cpp-source.html#l00099">SQLiteDatabase()</a>.
 </div>
 </div><p>
 <hr>The documentation for this class was generated from the following files:<ul>
 <li>C:/FusionSDK/affy/sdk/util/<a class="el" href="_s_q_lite_8h-source.html">SQLite.h</a><li>C:/FusionSDK/affy/sdk/util/<a class="el" href="_s_q_lite_8cpp-source.html">SQLite.cpp</a></ul>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:35 2009 for Affymetrix Fusion SDK by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:46 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

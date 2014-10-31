@@ -46,7 +46,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="..;"
+				AdditionalIncludeDirectories=".."
 				PreprocessorDefinitions="WIN32;_DEBUG;_USRDLL"
 				MinimalRebuild="false"
 				BasicRuntimeChecks="0"
@@ -111,7 +111,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="..;"
+				AdditionalIncludeDirectories=".."
 				PreprocessorDefinitions="WIN32;_DEBUG;_USRDLL"
 				MinimalRebuild="false"
 				BasicRuntimeChecks="0"
@@ -178,7 +178,7 @@
 				EnableIntrinsicFunctions="false"
 				FavorSizeOrSpeed="1"
 				WholeProgramOptimization="true"
-				AdditionalIncludeDirectories="..;"
+				AdditionalIncludeDirectories=".."
 				PreprocessorDefinitions="WIN32;_USRDLL"
 				RuntimeLibrary="2"
 				UsePrecompiledHeader="0"
@@ -242,10 +242,11 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="2"
-				EnableIntrinsicFunctions="false"
+				InlineFunctionExpansion="2"
+				EnableIntrinsicFunctions="true"
 				FavorSizeOrSpeed="1"
 				WholeProgramOptimization="true"
-				AdditionalIncludeDirectories="..;"
+				AdditionalIncludeDirectories=".."
 				PreprocessorDefinitions="WIN32;_USRDLL"
 				RuntimeLibrary="2"
 				UsePrecompiledHeader="0"
@@ -263,6 +264,7 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
+				AdditionalOptions="/LTCG"
 				IgnoreAllDefaultLibraries="false"
 			/>
 			<Tool
@@ -311,6 +313,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\TsvFile\BgpFile.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\BPMAPFileData.cpp"
 				>
 			</File>
@@ -344,6 +350,10 @@
 			</File>
 			<File
 				RelativePath=".\CHPFileWriter.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\TsvFile\ClfFile.cpp"
 				>
 			</File>
 			<File
@@ -403,7 +413,15 @@
 				>
 			</File>
 			<File
+				RelativePath=".\TsvFile\PgfFile.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\PSIFileData.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\TsvFile\SequentialClfFile.cpp"
 				>
 			</File>
 			<File
@@ -412,6 +430,10 @@
 			</File>
 			<File
 				RelativePath=".\SMDFileData.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\TsvFile\SnpTable.cpp"
 				>
 			</File>
 			<File

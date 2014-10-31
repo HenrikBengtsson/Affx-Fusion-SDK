@@ -144,3 +144,35 @@ STDMETHODIMP CFusionCDFDataCOM::GetQCProbeSetInformationByType(GeneChipQCProbeSe
 	cdf.GetQCProbeSetInformation((affxcdf::GeneChipQCProbeSetType) qcType, set->Set());
 	return S_OK;
 }
+
+STDMETHODIMP CFusionCDFDataCOM::get_ChipTypes(VARIANT* pVal)
+{
+	VariantInit(pVal);
+	pVal->vt = VT_ARRAY | VT_BSTR;
+	pVal->parray = NULL;
+	std::vector<std::string> ids = cdf.GetChipTypes();
+	int nids = (int)ids.size();
+	SAFEARRAYBOUND  rgsaBound[1];
+	rgsaBound[0].lLbound = 0;
+	rgsaBound[0].cElements = nids;
+	pVal->parray = SafeArrayCreate(VT_BSTR, 1, rgsaBound);
+	for (long index=0; index<(long)ids.size(); index++)
+	{
+		BSTR id = COMStringUtils::ConvertString(ids[index]);
+		HRESULT hr = SafeArrayPutElement(pVal->parray, &index, id);
+	}
+	return S_OK;
+}
+
+STDMETHODIMP CFusionCDFDataCOM::get_GUID(BSTR* pVal)
+{
+	*pVal = COMStringUtils::ConvertString(cdf.GetGUID());
+	return S_OK;
+}
+
+STDMETHODIMP CFusionCDFDataCOM::get_IntegrityMd5(BSTR* pVal)
+{
+	*pVal = COMStringUtils::ConvertString(cdf.GetIntegrityMd5());
+	return S_OK;
+}
+

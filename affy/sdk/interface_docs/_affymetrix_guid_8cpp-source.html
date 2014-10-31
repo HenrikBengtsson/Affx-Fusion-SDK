@@ -56,89 +56,90 @@
 <a name="l00032"></a>00032 <span class="preprocessor">#include &lt;sstream&gt;</span>
 <a name="l00033"></a>00033 <span class="preprocessor">#include &lt;string.h&gt;</span>
 <a name="l00034"></a>00034 <span class="preprocessor">#include &lt;string&gt;</span>
-<a name="l00035"></a>00035 <span class="comment">//</span>
-<a name="l00036"></a>00036 
-<a name="l00037"></a>00037 <span class="preprocessor">#ifdef _MSC_VER</span>
-<a name="l00038"></a>00038 <span class="preprocessor"></span><span class="preprocessor">#pragma warning(disable: 4996) // ignore deprecated functions warning</span>
-<a name="l00039"></a>00039 <span class="preprocessor"></span><span class="preprocessor">#include &lt;process.h&gt;</span>
-<a name="l00040"></a>00040 <span class="preprocessor">#define getpid _getpid</span>
-<a name="l00041"></a>00041 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
-<a name="l00042"></a>00042 <span class="preprocessor"></span>
-<a name="l00043"></a>00043 <span class="preprocessor">#ifndef _MSC_VER</span>
-<a name="l00044"></a>00044 <span class="preprocessor"></span><span class="preprocessor">#include &lt;unistd.h&gt;</span>
-<a name="l00045"></a>00045 <span class="preprocessor">#endif</span>
-<a name="l00046"></a>00046 <span class="preprocessor"></span>
-<a name="l00047"></a>00047 <span class="keyword">using namespace </span>affymetrix_calvin_utilities;
-<a name="l00048"></a>00048 
-<a name="l00049"></a>00049 <span class="comment">/*</span>
-<a name="l00050"></a>00050 <span class="comment"> * Initialize the seed</span>
-<a name="l00051"></a>00051 <span class="comment"> */</span>
-<a name="l00052"></a><a class="code" href="_affymetrix_guid_8cpp.html#84773de17f8b66cfcd58716113f65439">00052</a> <span class="keywordtype">void</span> <a class="code" href="_affymetrix_guid_8cpp.html#84773de17f8b66cfcd58716113f65439">InitializeRandomNumberGenerator</a>()
-<a name="l00053"></a>00053 {
-<a name="l00054"></a>00054         <span class="comment">// Get the current time as a starting point for a seed.</span>
-<a name="l00055"></a>00055         <a class="code" href="md5_8h.html#fecfb8149081bd9b746bf968fe118a1d">u_int64_t</a> seed = (<a class="code" href="md5_8h.html#fecfb8149081bd9b746bf968fe118a1d">u_int64_t</a>) time(NULL);
-<a name="l00056"></a>00056 
-<a name="l00057"></a>00057         <span class="comment">// Multiply the time by its address and the process id.</span>
-<a name="l00058"></a>00058         seed *= (<a class="code" href="md5_8h.html#fecfb8149081bd9b746bf968fe118a1d">u_int64_t</a>)(&amp;seed);
-<a name="l00059"></a>00059         seed *= (<a class="code" href="md5_8h.html#fecfb8149081bd9b746bf968fe118a1d">u_int64_t</a>)getpid();
-<a name="l00060"></a>00060 
-<a name="l00061"></a>00061         <span class="comment">// Initialize the random number generator.</span>
-<a name="l00062"></a>00062         srand((<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)seed);
-<a name="l00063"></a>00063 }
-<a name="l00064"></a>00064 
-<a name="l00065"></a>00065 <span class="comment">/*</span>
-<a name="l00066"></a>00066 <span class="comment"> * Initialize the socket library.</span>
-<a name="l00067"></a>00067 <span class="comment"> */</span>
-<a name="l00068"></a><a class="code" href="classaffymetrix__calvin__utilities_1_1_affymetrix_guid.html#7a3564730710b9641ed7454ae9595eda">00068</a> AffymetrixGuid::AffymetrixGuid()
-<a name="l00069"></a>00069 {
-<a name="l00070"></a>00070 <span class="preprocessor">#ifdef _MSC_VER</span>
-<a name="l00071"></a>00071 <span class="preprocessor"></span>        <span class="comment">// initialize Winsock library</span>
-<a name="l00072"></a>00072         WSADATA wsaData;
-<a name="l00073"></a>00073         WORD wVersionRequested = MAKEWORD(1, 1);
-<a name="l00074"></a>00074         <span class="keywordtype">int</span> nResult = WSAStartup(wVersionRequested, &amp;wsaData);
-<a name="l00075"></a>00075 <span class="preprocessor">#endif</span>
-<a name="l00076"></a>00076 <span class="preprocessor"></span>        <a class="code" href="_affymetrix_guid_8cpp.html#84773de17f8b66cfcd58716113f65439">InitializeRandomNumberGenerator</a>();
-<a name="l00077"></a>00077 }
-<a name="l00078"></a>00078 
-<a name="l00079"></a>00079 <span class="comment">/*</span>
-<a name="l00080"></a>00080 <span class="comment"> * Clean up the socket library.</span>
-<a name="l00081"></a>00081 <span class="comment"> */</span>
-<a name="l00082"></a><a class="code" href="classaffymetrix__calvin__utilities_1_1_affymetrix_guid.html#d560d7ba2e6fdac8fe223e3a18369ff8">00082</a> <a class="code" href="classaffymetrix__calvin__utilities_1_1_affymetrix_guid.html#d560d7ba2e6fdac8fe223e3a18369ff8">AffymetrixGuid::~AffymetrixGuid</a>()
-<a name="l00083"></a>00083 {
-<a name="l00084"></a>00084 <span class="preprocessor">#ifdef _MSC_VER</span>
-<a name="l00085"></a>00085 <span class="preprocessor"></span>        WSACleanup();
-<a name="l00086"></a>00086 <span class="preprocessor">#endif</span>
-<a name="l00087"></a>00087 <span class="preprocessor"></span>}
-<a name="l00088"></a>00088 
-<a name="l00089"></a>00089 <span class="comment">/*</span>
-<a name="l00090"></a>00090 <span class="comment"> * Create a new guid based on the host name, current time and random numbers.</span>
-<a name="l00091"></a>00091 <span class="comment"> * A checksum of the string values are taken so as to remove any user</span>
-<a name="l00092"></a>00092 <span class="comment"> * interpretive information. This should strictly just be an identifier.</span>
-<a name="l00093"></a>00093 <span class="comment"> */</span>
-<a name="l00094"></a><a class="code" href="classaffymetrix__calvin__utilities_1_1_affymetrix_guid.html#149703bfcc840c84072c0a023266431f">00094</a> <a class="code" href="namespaceaffymetrix__calvin__utilities.html#ecd149cf47b2850b90ed58dc3e82c881">AffymetrixGuidType</a> <a class="code" href="classaffymetrix__calvin__utilities_1_1_affymetrix_guid.html#149703bfcc840c84072c0a023266431f">AffymetrixGuid::GenerateNewGuid</a>()
-<a name="l00095"></a>00095 {
-<a name="l00096"></a>00096         <span class="keyword">const</span> <span class="keywordtype">int</span> GUID_LENGTH = 54;
-<a name="l00097"></a>00097         <span class="keywordtype">char</span> guid[GUID_LENGTH+1];
-<a name="l00098"></a>00098         time_t currentTime;
-<a name="l00099"></a>00099         <span class="keyword">const</span> <span class="keywordtype">int</span> MAX_HOST_NAME = 64;
-<a name="l00100"></a>00100         <span class="keywordtype">char</span> hostname[MAX_HOST_NAME];
-<a name="l00101"></a>00101 
-<a name="l00102"></a>00102         currentTime = time(NULL);
-<a name="l00103"></a>00103         gethostname(hostname, MAX_HOST_NAME);
-<a name="l00104"></a>00104 
-<a name="l00105"></a>00105         sprintf(guid, <span class="stringliteral">"%10d-%10d-%10d-%10d-%10d"</span>,
-<a name="l00106"></a>00106                 <a class="code" href="classaffymetrix__calvin__utilities_1_1_check_sum.html#c27fe4fb3bb1c6e130e598ba0b545ec2">CheckSum::OnesComplementCheckSum</a>(hostname, strlen(hostname)/2),
-<a name="l00107"></a>00107                 (<span class="keywordtype">int</span>) currentTime, rand(), rand(), rand());
-<a name="l00108"></a>00108         guid[GUID_LENGTH] = 0;
-<a name="l00109"></a>00109         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;GUID_LENGTH; i++)
-<a name="l00110"></a>00110         {
-<a name="l00111"></a>00111                 <span class="keywordflow">if</span> (guid[i] == <span class="charliteral">' '</span>)
-<a name="l00112"></a>00112                         guid[i] = <span class="charliteral">'0'</span>;
-<a name="l00113"></a>00113         }
-<a name="l00114"></a>00114 
-<a name="l00115"></a>00115         <span class="keywordflow">return</span> <a class="code" href="namespaceaffymetrix__calvin__utilities.html#ecd149cf47b2850b90ed58dc3e82c881">AffymetrixGuidType</a>(guid);
-<a name="l00116"></a>00116 }
-</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:11 2009 for Affymetrix Fusion SDK by&nbsp;
+<a name="l00035"></a>00035 <span class="preprocessor">#include &lt;stdio.h&gt;</span>
+<a name="l00036"></a>00036 <span class="comment">//</span>
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038 <span class="preprocessor">#ifdef _MSC_VER</span>
+<a name="l00039"></a>00039 <span class="preprocessor"></span><span class="preprocessor">#pragma warning(disable: 4996) // ignore deprecated functions warning</span>
+<a name="l00040"></a>00040 <span class="preprocessor"></span><span class="preprocessor">#include &lt;process.h&gt;</span>
+<a name="l00041"></a>00041 <span class="preprocessor">#define getpid _getpid</span>
+<a name="l00042"></a>00042 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
+<a name="l00043"></a>00043 <span class="preprocessor"></span>
+<a name="l00044"></a>00044 <span class="preprocessor">#ifndef _MSC_VER</span>
+<a name="l00045"></a>00045 <span class="preprocessor"></span><span class="preprocessor">#include &lt;unistd.h&gt;</span>
+<a name="l00046"></a>00046 <span class="preprocessor">#endif</span>
+<a name="l00047"></a>00047 <span class="preprocessor"></span>
+<a name="l00048"></a>00048 <span class="keyword">using namespace </span>affymetrix_calvin_utilities;
+<a name="l00049"></a>00049 
+<a name="l00050"></a>00050 <span class="comment">/*</span>
+<a name="l00051"></a>00051 <span class="comment"> * Initialize the seed</span>
+<a name="l00052"></a>00052 <span class="comment"> */</span>
+<a name="l00053"></a><a class="code" href="_affymetrix_guid_8cpp.html#84773de17f8b66cfcd58716113f65439">00053</a> <span class="keywordtype">void</span> <a class="code" href="_affymetrix_guid_8cpp.html#84773de17f8b66cfcd58716113f65439">InitializeRandomNumberGenerator</a>()
+<a name="l00054"></a>00054 {
+<a name="l00055"></a>00055         <span class="comment">// Get the current time as a starting point for a seed.</span>
+<a name="l00056"></a>00056         <a class="code" href="md5_8h.html#fecfb8149081bd9b746bf968fe118a1d">u_int64_t</a> seed = (<a class="code" href="md5_8h.html#fecfb8149081bd9b746bf968fe118a1d">u_int64_t</a>) time(NULL);
+<a name="l00057"></a>00057 
+<a name="l00058"></a>00058         <span class="comment">// Multiply the time by its address and the process id.</span>
+<a name="l00059"></a>00059         seed *= (<a class="code" href="md5_8h.html#fecfb8149081bd9b746bf968fe118a1d">u_int64_t</a>)(&amp;seed);
+<a name="l00060"></a>00060         seed *= (<a class="code" href="md5_8h.html#fecfb8149081bd9b746bf968fe118a1d">u_int64_t</a>)getpid();
+<a name="l00061"></a>00061 
+<a name="l00062"></a>00062         <span class="comment">// Initialize the random number generator.</span>
+<a name="l00063"></a>00063         srand((<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)seed);
+<a name="l00064"></a>00064 }
+<a name="l00065"></a>00065 
+<a name="l00066"></a>00066 <span class="comment">/*</span>
+<a name="l00067"></a>00067 <span class="comment"> * Initialize the socket library.</span>
+<a name="l00068"></a>00068 <span class="comment"> */</span>
+<a name="l00069"></a><a class="code" href="classaffymetrix__calvin__utilities_1_1_affymetrix_guid.html#7a3564730710b9641ed7454ae9595eda">00069</a> AffymetrixGuid::AffymetrixGuid()
+<a name="l00070"></a>00070 {
+<a name="l00071"></a>00071 <span class="preprocessor">#ifdef _MSC_VER</span>
+<a name="l00072"></a>00072 <span class="preprocessor"></span>        <span class="comment">// initialize Winsock library</span>
+<a name="l00073"></a>00073         WSADATA wsaData;
+<a name="l00074"></a>00074         WORD wVersionRequested = MAKEWORD(1, 1);
+<a name="l00075"></a>00075         <span class="keywordtype">int</span> nResult = WSAStartup(wVersionRequested, &amp;wsaData);
+<a name="l00076"></a>00076 <span class="preprocessor">#endif</span>
+<a name="l00077"></a>00077 <span class="preprocessor"></span>        <a class="code" href="_affymetrix_guid_8cpp.html#84773de17f8b66cfcd58716113f65439">InitializeRandomNumberGenerator</a>();
+<a name="l00078"></a>00078 }
+<a name="l00079"></a>00079 
+<a name="l00080"></a>00080 <span class="comment">/*</span>
+<a name="l00081"></a>00081 <span class="comment"> * Clean up the socket library.</span>
+<a name="l00082"></a>00082 <span class="comment"> */</span>
+<a name="l00083"></a><a class="code" href="classaffymetrix__calvin__utilities_1_1_affymetrix_guid.html#d560d7ba2e6fdac8fe223e3a18369ff8">00083</a> <a class="code" href="classaffymetrix__calvin__utilities_1_1_affymetrix_guid.html#d560d7ba2e6fdac8fe223e3a18369ff8">AffymetrixGuid::~AffymetrixGuid</a>()
+<a name="l00084"></a>00084 {
+<a name="l00085"></a>00085 <span class="preprocessor">#ifdef _MSC_VER</span>
+<a name="l00086"></a>00086 <span class="preprocessor"></span>        WSACleanup();
+<a name="l00087"></a>00087 <span class="preprocessor">#endif</span>
+<a name="l00088"></a>00088 <span class="preprocessor"></span>}
+<a name="l00089"></a>00089 
+<a name="l00090"></a>00090 <span class="comment">/*</span>
+<a name="l00091"></a>00091 <span class="comment"> * Create a new guid based on the host name, current time and random numbers.</span>
+<a name="l00092"></a>00092 <span class="comment"> * A checksum of the string values are taken so as to remove any user</span>
+<a name="l00093"></a>00093 <span class="comment"> * interpretive information. This should strictly just be an identifier.</span>
+<a name="l00094"></a>00094 <span class="comment"> */</span>
+<a name="l00095"></a><a class="code" href="classaffymetrix__calvin__utilities_1_1_affymetrix_guid.html#149703bfcc840c84072c0a023266431f">00095</a> <a class="code" href="namespaceaffymetrix__calvin__utilities.html#ecd149cf47b2850b90ed58dc3e82c881">AffymetrixGuidType</a> <a class="code" href="classaffymetrix__calvin__utilities_1_1_affymetrix_guid.html#149703bfcc840c84072c0a023266431f">AffymetrixGuid::GenerateNewGuid</a>()
+<a name="l00096"></a>00096 {
+<a name="l00097"></a>00097         <span class="keyword">const</span> <span class="keywordtype">int</span> GUID_LENGTH = 54;
+<a name="l00098"></a>00098         <span class="keywordtype">char</span> guid[GUID_LENGTH+1];
+<a name="l00099"></a>00099         time_t currentTime;
+<a name="l00100"></a>00100         <span class="keyword">const</span> <span class="keywordtype">int</span> MAX_HOST_NAME = 64;
+<a name="l00101"></a>00101         <span class="keywordtype">char</span> hostname[MAX_HOST_NAME];
+<a name="l00102"></a>00102 
+<a name="l00103"></a>00103         currentTime = time(NULL);
+<a name="l00104"></a>00104         gethostname(hostname, MAX_HOST_NAME);
+<a name="l00105"></a>00105 
+<a name="l00106"></a>00106         sprintf(guid, <span class="stringliteral">"%10d-%10d-%10d-%10d-%10d"</span>,
+<a name="l00107"></a>00107                 <a class="code" href="classaffymetrix__calvin__utilities_1_1_check_sum.html#c27fe4fb3bb1c6e130e598ba0b545ec2">CheckSum::OnesComplementCheckSum</a>(hostname, strlen(hostname)/2),
+<a name="l00108"></a>00108                 (<span class="keywordtype">int</span>) currentTime, rand(), rand(), rand());
+<a name="l00109"></a>00109         guid[GUID_LENGTH] = 0;
+<a name="l00110"></a>00110         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;GUID_LENGTH; i++)
+<a name="l00111"></a>00111         {
+<a name="l00112"></a>00112                 <span class="keywordflow">if</span> (guid[i] == <span class="charliteral">' '</span>)
+<a name="l00113"></a>00113                         guid[i] = <span class="charliteral">'0'</span>;
+<a name="l00114"></a>00114         }
+<a name="l00115"></a>00115 
+<a name="l00116"></a>00116         <span class="keywordflow">return</span> <a class="code" href="namespaceaffymetrix__calvin__utilities.html#ecd149cf47b2850b90ed58dc3e82c881">AffymetrixGuidType</a>(guid);
+<a name="l00117"></a>00117 }
+</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:19 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

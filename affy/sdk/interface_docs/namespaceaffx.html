@@ -100,6 +100,10 @@
 <br>
 &nbsp;&nbsp;<a class="el" href="namespaceaffx.html#d00847b6f358e7269f493808ee6bd3956f44b283cb980eed331f696ddf155a54">TSV_LEVEL_LAST</a> =  -32, 
 <a class="el" href="namespaceaffx.html#d00847b6f358e7269f493808ee6bd3956d15f90fef786bfa82fbec86d563d552">TSV_FIND_LAST</a> =  -33, 
+<a class="el" href="namespaceaffx.html#d00847b6f358e7269f493808ee6bd395c32ea14649f117a6f8b743df8485e29f">TSV_ERR_BINARY</a> =  -40, 
+<a class="el" href="namespaceaffx.html#d00847b6f358e7269f493808ee6bd3958702af65e067d54ec3ba8840c1da7bff">TSV_ERR_CALVIN</a> =  -41, 
+<br>
+&nbsp;&nbsp;<a class="el" href="namespaceaffx.html#d00847b6f358e7269f493808ee6bd3954619d5e98b7e4b5b14deeb6ccc1e6035">TSV_ERR_HDF5</a> =  -42, 
 <a class="el" href="namespaceaffx.html#d00847b6f358e7269f493808ee6bd3956898a163d866d8e2bc719c9f82047255">TSV_LASTVALUE</a> =  -99
 <br>
  }</td></tr>
@@ -157,6 +161,12 @@
  }</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Flags for querying headers.  <a href="namespaceaffx.html#9a97e91d3f603e3c6377f88592ff5284">More...</a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">enum &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaffx.html#6762afe4acfcc38f75800264274977f3">tsv_optionflag_t</a> { <a class="el" href="namespaceaffx.html#6762afe4acfcc38f75800264274977f341220cc972e3fdd00409a0a6157b68d0">TSV_OPT_NONE</a> =  0x00, 
+<a class="el" href="namespaceaffx.html#6762afe4acfcc38f75800264274977f3ced6f23dfe31db896640c35756deb238">TSV_OPT_CASESENSTIVE</a> =  0x01, 
+<a class="el" href="namespaceaffx.html#6762afe4acfcc38f75800264274977f35bc7c1d0f41c431f2042a8c9b202be09">TSV_OPT_CASEINSENSTIVE</a> =  0x02
+ }</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">misc optional flags  <a href="namespaceaffx.html#6762afe4acfcc38f75800264274977f3">More...</a><br></td></tr>
 <tr><td colspan="2"><br><h2>Functions</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaffx.html#9c9d69e0bcf728404dca5a3f8448c90d">ltrim</a> (std::string &amp;str)</td></tr>
 
@@ -167,9 +177,13 @@
 <tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaffx.html#54628348fb76ebbdb02a5b9aad4e720d">trim</a> (std::string &amp;str)</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Trim whitespace from both sides of a string.  <a href="#54628348fb76ebbdb02a5b9aad4e720d"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaffx.html#0fd1ba883e806a62fb595972ac5f2bb2">tolower</a> (const string &amp;str)</td></tr>
+
 <tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaffx.html#af1add79d80b3f2800698a791a26a2a6">dequote</a> (std::string &amp;str)</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Remove quotes from a string if they are matching.  <a href="#af1add79d80b3f2800698a791a26a2a6"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaffx.html#c6022b85938c6e2c930cec8bbfe803c1">countchars</a> (const std::string &amp;str, char chr)</td></tr>
+
 <tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaffx.html#d5ecd67594ce204d9145778589740e90">splitstr</a> (const std::string &amp;str, char c, std::vector&lt; std::string &gt; &amp;vec)</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Split a string into a vector.  <a href="#d5ecd67594ce204d9145778589740e90"></a><br></td></tr>
@@ -183,12 +197,17 @@
 <tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaffx.html#17913c2098709057f108964add3841e6">header_ptr_less</a> (const <a class="el" href="classaffx_1_1_tsv_file_header_line.html">affx::TsvFileHeaderLine</a> *a, const <a class="el" href="classaffx_1_1_tsv_file_header_line.html">affx::TsvFileHeaderLine</a> *b)</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Function for comparing <a class="el" href="classaffx_1_1_tsv_file_header_line.html" title="This is a key-value pair with sort order.">TsvFileHeaderLine</a> pointers.  <a href="#17913c2098709057f108964add3841e6"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaffx.html#70b95f08a97e5d9c6f54dfb40956c840">tolower</a> (const std::string &amp;str)</td></tr>
+
 <tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaffx.html#d2eb4bbefc528ca41b0305269649f9a0">touchEngines</a> ()</td></tr>
 
 <tr><td colspan="2"><br><h2>Variables</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">const int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaffx.html#2ea138a7ce89e1402e2dc69f6bc5a1ba">TSV_INTERNSIZE_UNSET</a> = -1</td></tr>
 
 </table>
+<hr><a name="_details"></a><h2>Detailed Description</h2>
+This defines an object which has fields and some methods to make working with PGF files a snap. Basicly we define user friendly method which map to <a class="el" href="classaffx_1_1_tsv_file.html" title="A class for reading and writing Tab Seperated Value (TSV) files. See the TsvFile...">TsvFile</a> mothods. 
+<p>
 <hr><h2>Typedef Documentation</h2>
 <a class="anchor" name="02a4b3a5a70d459d675eec00d3731f2d"></a><!-- doxytag: member="affx::linenum_t" ref="02a4b3a5a70d459d675eec00d3731f2d" args="" -->
 <div class="memitem">
@@ -267,7 +286,7 @@ return comments </td></tr>
 </dl>
 
 <p>
-Definition at line <a class="el" href="_tsv_file_8h-source.html#l00147">147</a> of file <a class="el" href="_tsv_file_8h-source.html">TsvFile.h</a>.
+Definition at line <a class="el" href="_tsv_file_8h-source.html#l00153">153</a> of file <a class="el" href="_tsv_file_8h-source.html">TsvFile.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="8f36853f1d3b6cfb79edebd82760691d"></a><!-- doxytag: member="affx::tsv_bindopt_t" ref="8f36853f1d3b6cfb79edebd82760691d" args="" -->
@@ -298,7 +317,7 @@ error if not bound </td></tr>
 </dl>
 
 <p>
-Definition at line <a class="el" href="_tsv_file_8h-source.html#l00140">140</a> of file <a class="el" href="_tsv_file_8h-source.html">TsvFile.h</a>.
+Definition at line <a class="el" href="_tsv_file_8h-source.html#l00146">146</a> of file <a class="el" href="_tsv_file_8h-source.html">TsvFile.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="eda26073e51acea0f95c3acde01c76ed"></a><!-- doxytag: member="affx::tsv_fileformat_t" ref="eda26073e51acea0f95c3acde01c76ed" args="" -->
@@ -331,7 +350,7 @@ The format of the file.
 </dl>
 
 <p>
-Definition at line <a class="el" href="_tsv_file_8h-source.html#l00132">132</a> of file <a class="el" href="_tsv_file_8h-source.html">TsvFile.h</a>.
+Definition at line <a class="el" href="_tsv_file_8h-source.html#l00138">138</a> of file <a class="el" href="_tsv_file_8h-source.html">TsvFile.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="03434280a6467bb8c1782af585c92fde"></a><!-- doxytag: member="affx::tsv_indexkind_t" ref="03434280a6467bb8c1782af585c92fde" args="" -->
@@ -364,7 +383,7 @@ The datatype of a index.
 </dl>
 
 <p>
-Definition at line <a class="el" href="_tsv_file_8h-source.html#l00119">119</a> of file <a class="el" href="_tsv_file_8h-source.html">TsvFile.h</a>.
+Definition at line <a class="el" href="_tsv_file_8h-source.html#l00125">125</a> of file <a class="el" href="_tsv_file_8h-source.html">TsvFile.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="bbf11d47722d5167973c58b2ae5fffe3"></a><!-- doxytag: member="affx::tsv_op_t" ref="bbf11d47722d5167973c58b2ae5fffe3" args="" -->
@@ -397,7 +416,36 @@ Flags supplied to when finding matches.
 </dl>
 
 <p>
-Definition at line <a class="el" href="_tsv_file_8h-source.html#l00110">110</a> of file <a class="el" href="_tsv_file_8h-source.html">TsvFile.h</a>.
+Definition at line <a class="el" href="_tsv_file_8h-source.html#l00116">116</a> of file <a class="el" href="_tsv_file_8h-source.html">TsvFile.h</a>.
+</div>
+</div><p>
+<a class="anchor" name="6762afe4acfcc38f75800264274977f3"></a><!-- doxytag: member="affx::tsv_optionflag_t" ref="6762afe4acfcc38f75800264274977f3" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespaceaffx.html#6762afe4acfcc38f75800264274977f3">affx::tsv_optionflag_t</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+misc optional flags 
+<p>
+<dl compact><dt><b>Enumerator: </b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" name="6762afe4acfcc38f75800264274977f341220cc972e3fdd00409a0a6157b68d0"></a><!-- doxytag: member="TSV_OPT_NONE" ref="6762afe4acfcc38f75800264274977f341220cc972e3fdd00409a0a6157b68d0" args="" -->TSV_OPT_NONE</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" name="6762afe4acfcc38f75800264274977f3ced6f23dfe31db896640c35756deb238"></a><!-- doxytag: member="TSV_OPT_CASESENSTIVE" ref="6762afe4acfcc38f75800264274977f3ced6f23dfe31db896640c35756deb238" args="" -->TSV_OPT_CASESENSTIVE</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" name="6762afe4acfcc38f75800264274977f35bc7c1d0f41c431f2042a8c9b202be09"></a><!-- doxytag: member="TSV_OPT_CASEINSENSTIVE" ref="6762afe4acfcc38f75800264274977f35bc7c1d0f41c431f2042a8c9b202be09" args="" -->TSV_OPT_CASEINSENSTIVE</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dl>
+
+<p>
+Definition at line <a class="el" href="_tsv_file_8h-source.html#l00160">160</a> of file <a class="el" href="_tsv_file_8h-source.html">TsvFile.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="029aaa27f93ef8a94646fcbf424c0652"></a><!-- doxytag: member="affx::tsv_orderby_t" ref="029aaa27f93ef8a94646fcbf424c0652" args="" -->
@@ -424,7 +472,7 @@ Should the results be ordered by the line nubmer or value.
 </dl>
 
 <p>
-Definition at line <a class="el" href="_tsv_file_8h-source.html#l00127">127</a> of file <a class="el" href="_tsv_file_8h-source.html">TsvFile.h</a>.
+Definition at line <a class="el" href="_tsv_file_8h-source.html#l00133">133</a> of file <a class="el" href="_tsv_file_8h-source.html">TsvFile.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="d00847b6f358e7269f493808ee6bd395"></a><!-- doxytag: member="affx::tsv_return_t" ref="d00847b6f358e7269f493808ee6bd395" args="" -->
@@ -471,6 +519,12 @@ Did not read a header line. </td></tr>
 Did not read a line of the correct level. </td></tr>
 <tr><td valign="top"><em><a class="anchor" name="d00847b6f358e7269f493808ee6bd3956d15f90fef786bfa82fbec86d563d552"></a><!-- doxytag: member="TSV_FIND_LAST" ref="d00847b6f358e7269f493808ee6bd3956d15f90fef786bfa82fbec86d563d552" args="" -->TSV_FIND_LAST</em>&nbsp;</td><td>
 Found the last matching value. </td></tr>
+<tr><td valign="top"><em><a class="anchor" name="d00847b6f358e7269f493808ee6bd395c32ea14649f117a6f8b743df8485e29f"></a><!-- doxytag: member="TSV_ERR_BINARY" ref="d00847b6f358e7269f493808ee6bd395c32ea14649f117a6f8b743df8485e29f" args="" -->TSV_ERR_BINARY</em>&nbsp;</td><td>
+This is some sort of binary file. </td></tr>
+<tr><td valign="top"><em><a class="anchor" name="d00847b6f358e7269f493808ee6bd3958702af65e067d54ec3ba8840c1da7bff"></a><!-- doxytag: member="TSV_ERR_CALVIN" ref="d00847b6f358e7269f493808ee6bd3958702af65e067d54ec3ba8840c1da7bff" args="" -->TSV_ERR_CALVIN</em>&nbsp;</td><td>
+This is a calvin file. </td></tr>
+<tr><td valign="top"><em><a class="anchor" name="d00847b6f358e7269f493808ee6bd3954619d5e98b7e4b5b14deeb6ccc1e6035"></a><!-- doxytag: member="TSV_ERR_HDF5" ref="d00847b6f358e7269f493808ee6bd3954619d5e98b7e4b5b14deeb6ccc1e6035" args="" -->TSV_ERR_HDF5</em>&nbsp;</td><td>
+This is a HDF5 file. </td></tr>
 <tr><td valign="top"><em><a class="anchor" name="d00847b6f358e7269f493808ee6bd3956898a163d866d8e2bc719c9f82047255"></a><!-- doxytag: member="TSV_LASTVALUE" ref="d00847b6f358e7269f493808ee6bd3956898a163d866d8e2bc719c9f82047255" args="" -->TSV_LASTVALUE</em>&nbsp;</td><td>
 end of errors </td></tr>
 </table>
@@ -543,6 +597,39 @@ Definition at line <a class="el" href="_tsv_file_8h-source.html#l00074">74</a> o
 </div>
 </div><p>
 <hr><h2>Function Documentation</h2>
+<a class="anchor" name="c6022b85938c6e2c930cec8bbfe803c1"></a><!-- doxytag: member="affx::countchars" ref="c6022b85938c6e2c930cec8bbfe803c1" args="(const std::string &amp;str, char chr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int affx::countchars           </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&nbsp;</td>
+          <td class="paramname"> <em>chr</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>
+Definition at line <a class="el" href="_tsv_file_8cpp-source.html#l00172">172</a> of file <a class="el" href="_tsv_file_8cpp-source.html">TsvFile.cpp</a>.
+<p>
+Referenced by <a class="el" href="tsv-test_8cpp-source.html#l00122">check_countchars()</a>, and <a class="el" href="_tsv_file_8cpp-source.html#l02252">affx::TsvFile::f_read_header_v1()</a>.
+</div>
+</div><p>
 <a class="anchor" name="af1add79d80b3f2800698a791a26a2a6"></a><!-- doxytag: member="affx::dequote" ref="af1add79d80b3f2800698a791a26a2a6" args="(std::string &amp;str)" -->
 <div class="memitem">
 <div class="memproto">
@@ -569,9 +656,9 @@ Remove quotes from a string if they are matching.
 </dl>
 
 <p>
-Definition at line <a class="el" href="_tsv_file_8cpp-source.html#l00137">137</a> of file <a class="el" href="_tsv_file_8cpp-source.html">TsvFile.cpp</a>.
+Definition at line <a class="el" href="_tsv_file_8cpp-source.html#l00154">154</a> of file <a class="el" href="_tsv_file_8cpp-source.html">TsvFile.cpp</a>.
 <p>
-Referenced by <a class="el" href="_tsv_file_8cpp-source.html#l02718">affx::TsvFile::f_read_column()</a>, and <a class="el" href="_tsv_file_8cpp-source.html#l02108">affx::TsvFile::f_read_header_v1()</a>.
+Referenced by <a class="el" href="_tsv_file_8cpp-source.html#l02920">affx::TsvFile::f_read_column()</a>, and <a class="el" href="_tsv_file_8cpp-source.html#l02252">affx::TsvFile::f_read_header_v1()</a>.
 </div>
 </div><p>
 <a class="anchor" name="4adda873425f1d4e6dfb87c5c44c6558"></a><!-- doxytag: member="affx::escapeChar" ref="4adda873425f1d4e6dfb87c5c44c6558" args="(int c)" -->
@@ -593,11 +680,11 @@ Referenced by <a class="el" href="_tsv_file_8cpp-source.html#l02718">affx::TsvFi
 <p>
 
 <p>
-Definition at line <a class="el" href="_tsv_file_8cpp-source.html#l00204">204</a> of file <a class="el" href="_tsv_file_8cpp-source.html">TsvFile.cpp</a>.
+Definition at line <a class="el" href="_tsv_file_8cpp-source.html#l00233">233</a> of file <a class="el" href="_tsv_file_8cpp-source.html">TsvFile.cpp</a>.
 <p>
-References <a class="el" href="_tsv_file_8cpp-source.html#l00072">TSV_CHAR_CR</a>, <a class="el" href="_tsv_file_8cpp-source.html#l00070">TSV_CHAR_LF</a>, and <a class="el" href="_tsv_file_8cpp-source.html#l00068">TSV_CHAR_TAB</a>.
+References <a class="el" href="_tsv_file_8cpp-source.html#l00078">TSV_CHAR_CR</a>, <a class="el" href="_tsv_file_8cpp-source.html#l00074">TSV_CHAR_LF</a>, and <a class="el" href="_tsv_file_8cpp-source.html#l00072">TSV_CHAR_TAB</a>.
 <p>
-Referenced by <a class="el" href="tsv-test_8cpp-source.html#l00142">check_escapeString()</a>, and <a class="el" href="_tsv_file_8cpp-source.html#l00221">escapeString()</a>.
+Referenced by <a class="el" href="tsv-test_8cpp-source.html#l00165">check_escapeString()</a>, and <a class="el" href="_tsv_file_8cpp-source.html#l00250">escapeString()</a>.
 </div>
 </div><p>
 <a class="anchor" name="fa5bc0bf0e987534c19b8912f482e051"></a><!-- doxytag: member="affx::escapeString" ref="fa5bc0bf0e987534c19b8912f482e051" args="(const std::string &amp;str, const char eChar)" -->
@@ -628,11 +715,11 @@ Referenced by <a class="el" href="tsv-test_8cpp-source.html#l00142">check_escape
 <p>
 
 <p>
-Definition at line <a class="el" href="_tsv_file_8cpp-source.html#l00221">221</a> of file <a class="el" href="_tsv_file_8cpp-source.html">TsvFile.cpp</a>.
+Definition at line <a class="el" href="_tsv_file_8cpp-source.html#l00250">250</a> of file <a class="el" href="_tsv_file_8cpp-source.html">TsvFile.cpp</a>.
 <p>
-References <a class="el" href="_tsv_file_8cpp-source.html#l00204">escapeChar()</a>.
+References <a class="el" href="_tsv_file_8cpp-source.html#l00233">escapeChar()</a>.
 <p>
-Referenced by <a class="el" href="tsv-test_8cpp-source.html#l00142">check_escapeString()</a>, and <a class="el" href="_tsv_file_8cpp-source.html#l04455">affx::TsvFile::writeLevel()</a>.
+Referenced by <a class="el" href="tsv-test_8cpp-source.html#l00165">check_escapeString()</a>, and <a class="el" href="_tsv_file_8cpp-source.html#l04667">affx::TsvFile::writeLevel()</a>.
 </div>
 </div><p>
 <a class="anchor" name="17913c2098709057f108964add3841e6"></a><!-- doxytag: member="affx::header_ptr_less" ref="17913c2098709057f108964add3841e6" args="(const affx::TsvFileHeaderLine *a, const affx::TsvFileHeaderLine *b)" -->
@@ -665,9 +752,9 @@ Function for comparing <a class="el" href="classaffx_1_1_tsv_file_header_line.ht
 <p>
 
 <p>
-Definition at line <a class="el" href="_tsv_file_8cpp-source.html#l01233">1233</a> of file <a class="el" href="_tsv_file_8cpp-source.html">TsvFile.cpp</a>.
+Definition at line <a class="el" href="_tsv_file_8cpp-source.html#l01289">1289</a> of file <a class="el" href="_tsv_file_8cpp-source.html">TsvFile.cpp</a>.
 <p>
-Referenced by <a class="el" href="_tsv_file_8cpp-source.html#l02017">affx::TsvFile::resortHeaders()</a>.
+Referenced by <a class="el" href="_tsv_file_8cpp-source.html#l02161">affx::TsvFile::resortHeaders()</a>.
 </div>
 </div><p>
 <a class="anchor" name="9c9d69e0bcf728404dca5a3f8448c90d"></a><!-- doxytag: member="affx::ltrim" ref="9c9d69e0bcf728404dca5a3f8448c90d" args="(std::string &amp;str)" -->
@@ -696,9 +783,9 @@ Trim whitespace from the left of a string.
 </dl>
 
 <p>
-Definition at line <a class="el" href="_tsv_file_8cpp-source.html#l00102">102</a> of file <a class="el" href="_tsv_file_8cpp-source.html">TsvFile.cpp</a>.
+Definition at line <a class="el" href="_tsv_file_8cpp-source.html#l00108">108</a> of file <a class="el" href="_tsv_file_8cpp-source.html">TsvFile.cpp</a>.
 <p>
-Referenced by <a class="el" href="tsv-test_8cpp-source.html#l00043">check_trim()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l02150">affx::TsvFile::f_read_header_v2()</a>, and <a class="el" href="_tsv_file_8cpp-source.html#l00128">trim()</a>.
+Referenced by <a class="el" href="tsv-test_8cpp-source.html#l00043">check_trim()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l02293">affx::TsvFile::f_read_header_v2()</a>, and <a class="el" href="_tsv_file_8cpp-source.html#l00134">trim()</a>.
 </div>
 </div><p>
 <a class="anchor" name="fba51719c7e92c971c7dea4ba1bafd69"></a><!-- doxytag: member="affx::rtrim" ref="fba51719c7e92c971c7dea4ba1bafd69" args="(std::string &amp;str)" -->
@@ -727,9 +814,9 @@ Trim whitespace from the right of a string.
 </dl>
 
 <p>
-Definition at line <a class="el" href="_tsv_file_8cpp-source.html#l00115">115</a> of file <a class="el" href="_tsv_file_8cpp-source.html">TsvFile.cpp</a>.
+Definition at line <a class="el" href="_tsv_file_8cpp-source.html#l00121">121</a> of file <a class="el" href="_tsv_file_8cpp-source.html">TsvFile.cpp</a>.
 <p>
-Referenced by <a class="el" href="tsv-test_8cpp-source.html#l00043">check_trim()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l02150">affx::TsvFile::f_read_header_v2()</a>, and <a class="el" href="_tsv_file_8cpp-source.html#l00128">trim()</a>.
+Referenced by <a class="el" href="tsv-test_8cpp-source.html#l00043">check_trim()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l02293">affx::TsvFile::f_read_header_v2()</a>, and <a class="el" href="_tsv_file_8cpp-source.html#l00134">trim()</a>.
 </div>
 </div><p>
 <a class="anchor" name="d5ecd67594ce204d9145778589740e90"></a><!-- doxytag: member="affx::splitstr" ref="d5ecd67594ce204d9145778589740e90" args="(const std::string &amp;str, char c, std::vector&lt; std::string &gt; &amp;vec)" -->
@@ -776,9 +863,55 @@ Split a string into a vector.
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>number of resulting strings </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_tsv_file_8cpp-source.html#l00160">160</a> of file <a class="el" href="_tsv_file_8cpp-source.html">TsvFile.cpp</a>.
+Definition at line <a class="el" href="_tsv_file_8cpp-source.html#l00189">189</a> of file <a class="el" href="_tsv_file_8cpp-source.html">TsvFile.cpp</a>.
 <p>
-Referenced by <a class="el" href="tsv-test_8cpp-source.html#l00120">check_splitstr()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l04211">affx::TsvFile::defineFileParse()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l02108">affx::TsvFile::f_read_header_v1()</a>, and <a class="el" href="_tsv_file_8cpp-source.html#l02232">affx::TsvFile::headers_to_fields_v2()</a>.
+Referenced by <a class="el" href="tsv-test_8cpp-source.html#l00143">check_splitstr()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l04422">affx::TsvFile::defineFileParse()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l02252">affx::TsvFile::f_read_header_v1()</a>, and <a class="el" href="_tsv_file_8cpp-source.html#l02375">affx::TsvFile::headers_to_fields_v2()</a>.
+</div>
+</div><p>
+<a class="anchor" name="70b95f08a97e5d9c6f54dfb40956c840"></a><!-- doxytag: member="affx::tolower" ref="70b95f08a97e5d9c6f54dfb40956c840" args="(const std::string &amp;str)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string affx::tolower           </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>str</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>
+Referenced by <a class="el" href="_util_8h-source.html#l00106">Util::downcaseString_inplace()</a>, <a class="el" href="_b_p_m_a_p_file_writer_8cpp-source.html#l00382">affxbpmapwriter::CBPMAPFileWriter::ReadTpmap()</a>, and <a class="el" href="_affx_string_8h-source.html#l00274">AffxString::toLower()</a>.
+</div>
+</div><p>
+<a class="anchor" name="0fd1ba883e806a62fb595972ac5f2bb2"></a><!-- doxytag: member="affx::tolower" ref="0fd1ba883e806a62fb595972ac5f2bb2" args="(const string &amp;str)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string affx::tolower           </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&nbsp;</td>
+          <td class="paramname"> <em>str</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>
+Definition at line <a class="el" href="_tsv_file_8cpp-source.html#l00141">141</a> of file <a class="el" href="_tsv_file_8cpp-source.html">TsvFile.cpp</a>.
+<p>
+Referenced by <a class="el" href="tsv-test_8cpp-source.html#l00082">check_tolower()</a>, and <a class="el" href="_tsv_file_8cpp-source.html#l02460">affx::TsvFile::cname2cidx()</a>.
 </div>
 </div><p>
 <a class="anchor" name="d2eb4bbefc528ca41b0305269649f9a0"></a><!-- doxytag: member="affx::touchEngines" ref="d2eb4bbefc528ca41b0305269649f9a0" args="()" -->
@@ -799,7 +932,7 @@ Referenced by <a class="el" href="tsv-test_8cpp-source.html#l00120">check_splits
 <p>
 
 <p>
-Definition at line <a class="el" href="_engines_8h-source.html#l00042">42</a> of file <a class="el" href="_engines_8h-source.html">Engines.h</a>.
+Definition at line <a class="el" href="_engines_8h-source.html#l00041">41</a> of file <a class="el" href="_engines_8h-source.html">Engines.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="54628348fb76ebbdb02a5b9aad4e720d"></a><!-- doxytag: member="affx::trim" ref="54628348fb76ebbdb02a5b9aad4e720d" args="(std::string &amp;str)" -->
@@ -828,11 +961,11 @@ Trim whitespace from both sides of a string.
 </dl>
 
 <p>
-Definition at line <a class="el" href="_tsv_file_8cpp-source.html#l00128">128</a> of file <a class="el" href="_tsv_file_8cpp-source.html">TsvFile.cpp</a>.
+Definition at line <a class="el" href="_tsv_file_8cpp-source.html#l00134">134</a> of file <a class="el" href="_tsv_file_8cpp-source.html">TsvFile.cpp</a>.
 <p>
-References <a class="el" href="_tsv_file_8cpp-source.html#l00102">ltrim()</a>, and <a class="el" href="_tsv_file_8cpp-source.html#l00115">rtrim()</a>.
+References <a class="el" href="_tsv_file_8cpp-source.html#l00108">ltrim()</a>, and <a class="el" href="_tsv_file_8cpp-source.html#l00121">rtrim()</a>.
 <p>
-Referenced by <a class="el" href="tsv-test_8cpp-source.html#l00043">check_trim()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l02718">affx::TsvFile::f_read_column()</a>, and <a class="el" href="_tsv_file_8cpp-source.html#l02150">affx::TsvFile::f_read_header_v2()</a>.
+Referenced by <a class="el" href="tsv-test_8cpp-source.html#l00043">check_trim()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l02920">affx::TsvFile::f_read_column()</a>, and <a class="el" href="_tsv_file_8cpp-source.html#l02293">affx::TsvFile::f_read_header_v2()</a>.
 </div>
 </div><p>
 <a class="anchor" name="be1e099cb52d368522327c0d3e20ed59"></a><!-- doxytag: member="affx::unescapeChar" ref="be1e099cb52d368522327c0d3e20ed59" args="(int c)" -->
@@ -862,11 +995,11 @@ Referenced by <a class="el" href="tsv-test_8cpp-source.html#l00043">check_trim()
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>the converted char </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_tsv_file_8cpp-source.html#l00188">188</a> of file <a class="el" href="_tsv_file_8cpp-source.html">TsvFile.cpp</a>.
+Definition at line <a class="el" href="_tsv_file_8cpp-source.html#l00217">217</a> of file <a class="el" href="_tsv_file_8cpp-source.html">TsvFile.cpp</a>.
 <p>
-References <a class="el" href="_tsv_file_8cpp-source.html#l00072">TSV_CHAR_CR</a>, <a class="el" href="_tsv_file_8cpp-source.html#l00070">TSV_CHAR_LF</a>, and <a class="el" href="_tsv_file_8cpp-source.html#l00068">TSV_CHAR_TAB</a>.
+References <a class="el" href="_tsv_file_8cpp-source.html#l00078">TSV_CHAR_CR</a>, <a class="el" href="_tsv_file_8cpp-source.html#l00074">TSV_CHAR_LF</a>, and <a class="el" href="_tsv_file_8cpp-source.html#l00072">TSV_CHAR_TAB</a>.
 <p>
-Referenced by <a class="el" href="_tsv_file_8cpp-source.html#l02718">affx::TsvFile::f_read_column()</a>.
+Referenced by <a class="el" href="_tsv_file_8cpp-source.html#l02920">affx::TsvFile::f_read_column()</a>.
 </div>
 </div><p>
 <hr><h2>Variable Documentation</h2>
@@ -887,7 +1020,7 @@ Referenced by <a class="el" href="_tsv_file_8cpp-source.html#l02718">affx::TsvFi
 Definition at line <a class="el" href="_tsv_file_8h-source.html#l00065">65</a> of file <a class="el" href="_tsv_file_8h-source.html">TsvFile.h</a>.
 </div>
 </div><p>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:36 2009 for Affymetrix Fusion SDK by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:47 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

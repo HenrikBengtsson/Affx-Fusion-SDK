@@ -6,7 +6,6 @@
 using namespace std;
 using namespace affymetrix_fusion_io;
 
-
 /*
  * ReadMultipleIntensitiesAndStdDev function demonstrates how
  * to read intensity values from a CEL file into a vector of floats.  

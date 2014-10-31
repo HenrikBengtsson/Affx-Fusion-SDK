@@ -25,12 +25,12 @@
 <a class="el" href="dir_0083bb8eedef7fed63dbf70caf86d00a.html">FusionSDK</a>&nbsp;&raquo&nbsp;<a class="el" href="dir_e86b6dbad4e625ef3fbba6406e2d4163.html">affy</a>&nbsp;&raquo&nbsp;<a class="el" href="dir_f87490fa8939fe2ce5b8b80cbaa3c2fa.html">sdk</a>&nbsp;&raquo&nbsp;<a class="el" href="dir_374f7a135d973daad145d25feb2e5488.html">util</a></div>
 <h1>Err.h File Reference</h1>Some utility error functions, currently prints message and aborts(). <a href="#_details">More...</a>
 <p>
+<code>#include &quot;portability/apt-win-dll.h&quot;</code><br>
 <code>#include &quot;<a class="el" href="_convert_8h-source.html">util/Convert.h</a>&quot;</code><br>
 <code>#include &quot;<a class="el" href="_err_handler_8h-source.html">util/ErrHandler.h</a>&quot;</code><br>
 <code>#include &quot;<a class="el" href="_except_8h-source.html">util/Except.h</a>&quot;</code><br>
 <code>#include &quot;<a class="el" href="_verbose_8h-source.html">util/Verbose.h</a>&quot;</code><br>
 <code>#include &quot;<a class="el" href="_verbose_err_handler_8h-source.html">util/VerboseErrHandler.h</a>&quot;</code><br>
-<code>#include &quot;<a class="el" href="apt_8h-source.html">apt/apt.h</a>&quot;</code><br>
 <code>#include &lt;cassert&gt;</code><br>
 <code>#include &lt;cstdlib&gt;</code><br>
 <code>#include &lt;cstring&gt;</code><br>
@@ -84,9 +84,9 @@ Calls <a class="el" href="class_err.html#1707d33689099b3fe26de7c04698c145" title
 <p>
 
 <p>
-Definition at line <a class="el" href="_err_8h-source.html#l00053">53</a> of file <a class="el" href="_err_8h-source.html">Err.h</a>.
+Definition at line <a class="el" href="_err_8h-source.html#l00050">50</a> of file <a class="el" href="_err_8h-source.html">Err.h</a>.
 <p>
-Referenced by <a class="el" href="_spf_file_8cpp-source.html#l00280">affx::SpfFile::define_file()</a>, <a class="el" href="_spf_file_8cpp-source.html#l00365">affx::SpfFile::openSpf()</a>, and <a class="el" href="_spf_file_8cpp-source.html#l00296">affx::SpfFile::writeSpf()</a>.
+Referenced by <a class="el" href="_socket_server_8cpp-source.html#l00159">SocketServer::acceptNewConnection()</a>, <a class="el" href="_fs_8cpp-source.html#l01501">Fs::carefulClose()</a>, <a class="el" href="_socket_util_8cpp-source.html#l00061">SocketUtil::checkForMsgs()</a>, <a class="el" href="_socket_server_8cpp-source.html#l00141">SocketServer::checkForMsgs()</a>, <a class="el" href="_socket_client_8cpp-source.html#l00113">SocketClient::checkForMsgs()</a>, <a class="el" href="_fs_8cpp-source.html#l00617">Fs::convertToUncPathInPlace()</a>, <a class="el" href="_spf_file_8cpp-source.html#l00281">affx::SpfFile::define_file()</a>, <a class="el" href="_fs_8cpp-source.html#l00403">Fs::dirname()</a>, <a class="el" href="_fs_8cpp-source.html#l01531">Fs::fileCopy()</a>, <a class="el" href="_fs_8cpp-source.html#l01591">Fs::fileRename()</a>, <a class="el" href="_socket_base_8cpp-source.html#l00076">SocketBase::fillBufferFromSocket()</a>, <a class="el" href="_socket_text_handler_8cpp-source.html#l00026">SocketTextHandler::handleMessage()</a>, <a class="el" href="_fs_8cpp-source.html#l00815">Fs::isWriteableDir()</a>, <a class="el" href="_fs_8cpp-source.html#l01486">Fs::mustOpenToWrite()</a>, <a class="el" href="_spf_file_8cpp-source.html#l00370">affx::SpfFile::openSpf()</a>, <a class="el" href="_socket_util_8cpp-source.html#l00117">SocketUtil::sendMsg()</a>, <a class="el" href="_socket_server_8cpp-source.html#l00152">SocketServer::sendMsg()</a>, <a class="el" href="_socket_client_8cpp-source.html#l00120">SocketClient::sendMsg()</a>, <a class="el" href="_socket_base_8cpp-source.html#l00164">SocketBase::sendMsg()</a>, <a class="el" href="_socket_client_8cpp-source.html#l00040">SocketClient::SocketClient()</a>, <a class="el" href="_socket_client_8cpp-source.html#l00071">SocketClient::socketConnect()</a>, and <a class="el" href="_spf_file_8cpp-source.html#l00297">affx::SpfFile::writeSpf()</a>.
 </div>
 </div><p>
 <a class="anchor" name="d024208f4ba6a4e75df4499ea1639a05"></a><!-- doxytag: member="Err.h::APT_ERR_ASSERT" ref="d024208f4ba6a4e75df4499ea1639a05" args="(_Cond, _Msg)" -->
@@ -111,12 +111,12 @@ Referenced by <a class="el" href="_spf_file_8cpp-source.html#l00280">affx::SpfFi
 <p>
 Calls <a class="el" href="class_err.html#958566fec07bebde069fd92a4f96ec68" title="The function called by the APT_ERR_ASSERT macro.">Err::apt_err_assert</a> with the filename and linenumber set. We want to avoid evaluating the message unless the condition is false. 
 <p>
-Definition at line <a class="el" href="_err_8h-source.html#l00057">57</a> of file <a class="el" href="_err_8h-source.html">Err.h</a>.
+Definition at line <a class="el" href="_err_8h-source.html#l00054">54</a> of file <a class="el" href="_err_8h-source.html">Err.h</a>.
 <p>
-Referenced by <a class="el" href="_tsv_file_8cpp-source.html#l01003">affx::TsvFileIndex::data_add()</a>.
+Referenced by <a class="el" href="_util_8cpp-source.html#l00231">Util::breakByString()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l01059">affx::TsvFileIndex::data_add()</a>, <a class="el" href="_util_8cpp-source.html#l00861">Util::getTimeStamp()</a>, <a class="el" href="_socket_text_handler_8cpp-source.html#l00026">SocketTextHandler::handleMessage()</a>, <a class="el" href="_socket_util_8cpp-source.html#l00038">SocketUtil::parseMsgFromBuffer()</a>, and <a class="el" href="_socket_base_8cpp-source.html#l00039">SocketBase::parseMsgFromBuffer()</a>.
 </div>
 </div><p>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:27 2009 for Affymetrix Fusion SDK by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:37 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

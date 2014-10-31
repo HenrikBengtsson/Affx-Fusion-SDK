@@ -25,6 +25,7 @@
 <a class="el" href="dir_0083bb8eedef7fed63dbf70caf86d00a.html">FusionSDK</a>&nbsp;&raquo&nbsp;<a class="el" href="dir_e86b6dbad4e625ef3fbba6406e2d4163.html">affy</a>&nbsp;&raquo&nbsp;<a class="el" href="dir_f87490fa8939fe2ce5b8b80cbaa3c2fa.html">sdk</a>&nbsp;&raquo&nbsp;<a class="el" href="dir_ed44e89b9c73cc439c8ce524f5965e28.html">file</a></div>
 <h1>CHPFileData.cpp File Reference</h1><code>#include &quot;<a class="el" href="_c_h_p_file_data_8h-source.html">file/CHPFileData.h</a>&quot;</code><br>
 <code>#include &quot;<a class="el" href="_file_i_o_8h-source.html">file/FileIO.h</a>&quot;</code><br>
+<code>#include &quot;<a class="el" href="_fs_8h-source.html">util/Fs.h</a>&quot;</code><br>
 <code>#include &lt;cstring&gt;</code><br>
 <code>#include &lt;fstream&gt;</code><br>
 <code>#include &lt;istream&gt;</code><br>
@@ -63,9 +64,9 @@
 <p>
 The CHP file magic number 
 <p>
-Definition at line <a class="el" href="_c_h_p_file_data_8cpp-source.html#l00042">42</a> of file <a class="el" href="_c_h_p_file_data_8cpp-source.html">CHPFileData.cpp</a>.
+Definition at line <a class="el" href="_c_h_p_file_data_8cpp-source.html#l00044">44</a> of file <a class="el" href="_c_h_p_file_data_8cpp-source.html">CHPFileData.cpp</a>.
 <p>
-Referenced by <a class="el" href="_c_h_p_file_data_8cpp-source.html#l01358">affxchp::CCHPFileData::IsXDACompatibleFile()</a>, <a class="el" href="_c_h_p_file_data_8cpp-source.html#l00470">affxchp::CCHPFileData::Open()</a>, and <a class="el" href="_c_h_p_file_writer_8cpp-source.html#l00275">affxchpwriter::CCHPFileWriter::SaveHeader()</a>.
+Referenced by <a class="el" href="_c_h_p_file_data_8cpp-source.html#l01361">affxchp::CCHPFileData::IsXDACompatibleFile()</a>, <a class="el" href="_c_h_p_file_data_8cpp-source.html#l00473">affxchp::CCHPFileData::Open()</a>, and <a class="el" href="_c_h_p_file_writer_8cpp-source.html#l00275">affxchpwriter::CCHPFileWriter::SaveHeader()</a>.
 </div>
 </div><p>
 <a class="anchor" name="ae917c2738aa818b0ceed8729e597083"></a><!-- doxytag: member="CHPFileData.cpp::CHP_FILE_VERSION_NUMBER" ref="ae917c2738aa818b0ceed8729e597083" args="" -->
@@ -82,9 +83,9 @@ Referenced by <a class="el" href="_c_h_p_file_data_8cpp-source.html#l01358">affx
 <p>
 The max CHP file version the parser can read 
 <p>
-Definition at line <a class="el" href="_c_h_p_file_data_8cpp-source.html#l00045">45</a> of file <a class="el" href="_c_h_p_file_data_8cpp-source.html">CHPFileData.cpp</a>.
+Definition at line <a class="el" href="_c_h_p_file_data_8cpp-source.html#l00047">47</a> of file <a class="el" href="_c_h_p_file_data_8cpp-source.html">CHPFileData.cpp</a>.
 <p>
-Referenced by <a class="el" href="_c_h_p_file_data_8cpp-source.html#l00470">affxchp::CCHPFileData::Open()</a>.
+Referenced by <a class="el" href="_c_h_p_file_data_8cpp-source.html#l00473">affxchp::CCHPFileData::Open()</a>.
 </div>
 </div><p>
 <a class="anchor" name="1d350b03cc910bae4ff466bc2925df9c"></a><!-- doxytag: member="CHPFileData.cpp::EXPRESSION_ABSOLUTE_STAT_ANALYSIS" ref="1d350b03cc910bae4ff466bc2925df9c" args="" -->
@@ -101,9 +102,9 @@ Referenced by <a class="el" href="_c_h_p_file_data_8cpp-source.html#l00470">affx
 <p>
 Identifier to indicate absolute expression analysis results stored. 
 <p>
-Definition at line <a class="el" href="_c_h_p_file_data_8cpp-source.html#l00048">48</a> of file <a class="el" href="_c_h_p_file_data_8cpp-source.html">CHPFileData.cpp</a>.
+Definition at line <a class="el" href="_c_h_p_file_data_8cpp-source.html#l00050">50</a> of file <a class="el" href="_c_h_p_file_data_8cpp-source.html">CHPFileData.cpp</a>.
 <p>
-Referenced by <a class="el" href="_c_h_p_file_data_8cpp-source.html#l00470">affxchp::CCHPFileData::Open()</a>, <a class="el" href="_c_h_p_file_writer_8cpp-source.html#l00339">affxchpwriter::CCHPFileWriter::SaveExpressionEntry()</a>, and <a class="el" href="_c_h_p_file_updater_8cpp-source.html#l00062">affxchpwriter::CCHPFileUpdater::UpdateExpressionEntry()</a>.
+Referenced by <a class="el" href="_c_h_p_file_data_8cpp-source.html#l00473">affxchp::CCHPFileData::Open()</a>, <a class="el" href="_c_h_p_file_writer_8cpp-source.html#l00339">affxchpwriter::CCHPFileWriter::SaveExpressionEntry()</a>, and <a class="el" href="_c_h_p_file_updater_8cpp-source.html#l00062">affxchpwriter::CCHPFileUpdater::UpdateExpressionEntry()</a>.
 </div>
 </div><p>
 <a class="anchor" name="d300141e60cc422e265e80372b10288f"></a><!-- doxytag: member="CHPFileData.cpp::EXPRESSION_COMPARISON_STAT_ANALYSIS" ref="d300141e60cc422e265e80372b10288f" args="" -->
@@ -120,9 +121,9 @@ Referenced by <a class="el" href="_c_h_p_file_data_8cpp-source.html#l00470">affx
 <p>
 Identifier to indicate comparison expression analysis results stored. 
 <p>
-Definition at line <a class="el" href="_c_h_p_file_data_8cpp-source.html#l00051">51</a> of file <a class="el" href="_c_h_p_file_data_8cpp-source.html">CHPFileData.cpp</a>.
+Definition at line <a class="el" href="_c_h_p_file_data_8cpp-source.html#l00053">53</a> of file <a class="el" href="_c_h_p_file_data_8cpp-source.html">CHPFileData.cpp</a>.
 <p>
-Referenced by <a class="el" href="_c_h_p_file_data_8cpp-source.html#l00470">affxchp::CCHPFileData::Open()</a>, and <a class="el" href="_c_h_p_file_writer_8cpp-source.html#l00339">affxchpwriter::CCHPFileWriter::SaveExpressionEntry()</a>.
+Referenced by <a class="el" href="_c_h_p_file_data_8cpp-source.html#l00473">affxchp::CCHPFileData::Open()</a>, and <a class="el" href="_c_h_p_file_writer_8cpp-source.html#l00339">affxchpwriter::CCHPFileWriter::SaveExpressionEntry()</a>.
 </div>
 </div><p>
 <a class="anchor" name="d9439931062cd4566e39de218289a92d"></a><!-- doxytag: member="CHPFileData.cpp::ROUNDFLOAT" ref="d9439931062cd4566e39de218289a92d" args="" -->
@@ -139,12 +140,12 @@ Referenced by <a class="el" href="_c_h_p_file_data_8cpp-source.html#l00470">affx
 <p>
 Used to convert floating point values stored as ints in older CHP files. 
 <p>
-Definition at line <a class="el" href="_c_h_p_file_data_8cpp-source.html#l00054">54</a> of file <a class="el" href="_c_h_p_file_data_8cpp-source.html">CHPFileData.cpp</a>.
+Definition at line <a class="el" href="_c_h_p_file_data_8cpp-source.html#l00056">56</a> of file <a class="el" href="_c_h_p_file_data_8cpp-source.html">CHPFileData.cpp</a>.
 <p>
-Referenced by <a class="el" href="_c_h_p_file_data_8cpp-source.html#l00470">affxchp::CCHPFileData::Open()</a>.
+Referenced by <a class="el" href="_c_h_p_file_data_8cpp-source.html#l00473">affxchp::CCHPFileData::Open()</a>.
 </div>
 </div><p>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:25 2009 for Affymetrix Fusion SDK by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:35 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

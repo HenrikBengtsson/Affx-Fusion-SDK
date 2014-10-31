@@ -53,16 +53,26 @@
 <a name="l00032"></a>00032 
 <a name="l00033"></a><a class="code" href="classaffymetrix__calvin__exceptions_1_1_file_create_exception.html">00033</a> <span class="keyword">class </span><a class="code" href="classaffymetrix__calvin__exceptions_1_1_file_create_exception.html">FileCreateException</a> : <span class="keyword">public</span> <a class="code" href="classaffymetrix__calvin__exceptions_1_1_calvin_exception.html">CalvinException</a>
 <a name="l00034"></a>00034 {
-<a name="l00035"></a>00035 };
-<a name="l00036"></a>00036 
-<a name="l00037"></a><a class="code" href="classaffymetrix__calvin__exceptions_1_1_file_write_exception.html">00037</a> <span class="keyword">class </span><a class="code" href="classaffymetrix__calvin__exceptions_1_1_file_write_exception.html">FileWriteException</a> : <span class="keyword">public</span> <a class="code" href="classaffymetrix__calvin__exceptions_1_1_calvin_exception.html">CalvinException</a>
-<a name="l00038"></a>00038 {
-<a name="l00039"></a>00039 };
-<a name="l00040"></a>00040 
-<a name="l00041"></a>00041 };
-<a name="l00042"></a>00042 
-<a name="l00043"></a>00043 <span class="preprocessor">#endif // _FileWriteException_HEADER_</span>
-</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:13 2009 for Affymetrix Fusion SDK by&nbsp;
+<a name="l00035"></a>00035 <span class="keyword">public</span>:
+<a name="l00036"></a><a class="code" href="classaffymetrix__calvin__exceptions_1_1_file_create_exception.html#3dc597b338c7b0f2526fa4a9e7c6769f">00036</a>   <a class="code" href="classaffymetrix__calvin__exceptions_1_1_file_create_exception.html#3dc597b338c7b0f2526fa4a9e7c6769f">FileCreateException</a>() : <a class="code" href="classaffymetrix__calvin__exceptions_1_1_calvin_exception.html">CalvinException</a>() {}
+<a name="l00037"></a><a class="code" href="classaffymetrix__calvin__exceptions_1_1_file_create_exception.html#1983ce77455ee97d7c25aaccc912cfa0">00037</a>   <a class="code" href="classaffymetrix__calvin__exceptions_1_1_file_create_exception.html#3dc597b338c7b0f2526fa4a9e7c6769f">FileCreateException</a>(std::wstring _Source, std::wstring _Description, std::wstring _TimeStamp, std::string _FileName, u_int16_t _LineNumber, <a class="code" href="md5_8h.html#fecfb8149081bd9b746bf968fe118a1d">u_int64_t</a> _ErrorCode):
+<a name="l00038"></a>00038     <a class="code" href="classaffymetrix__calvin__exceptions_1_1_calvin_exception.html">CalvinException</a>(_Source, _Description, _TimeStamp, _FileName,  _LineNumber, _ErrorCode) {}
+<a name="l00039"></a>00039   <span class="keyword">const</span> std::wstring <a class="code" href="classaffymetrix__calvin__exceptions_1_1_file_create_exception.html#850130ddbc169845d8fee6d93e248ffd">ToString</a>();
+<a name="l00040"></a>00040 };
+<a name="l00041"></a>00041 
+<a name="l00042"></a><a class="code" href="classaffymetrix__calvin__exceptions_1_1_file_write_exception.html">00042</a> <span class="keyword">class </span><a class="code" href="classaffymetrix__calvin__exceptions_1_1_file_write_exception.html">FileWriteException</a> : <span class="keyword">public</span> <a class="code" href="classaffymetrix__calvin__exceptions_1_1_calvin_exception.html">CalvinException</a>
+<a name="l00043"></a>00043 {
+<a name="l00044"></a>00044 <span class="keyword">public</span>:
+<a name="l00045"></a><a class="code" href="classaffymetrix__calvin__exceptions_1_1_file_write_exception.html#a03828e35c6fd7c808914f2efd0c294a">00045</a>   <a class="code" href="classaffymetrix__calvin__exceptions_1_1_file_write_exception.html#a03828e35c6fd7c808914f2efd0c294a">FileWriteException</a>() : <a class="code" href="classaffymetrix__calvin__exceptions_1_1_calvin_exception.html">CalvinException</a>() {}
+<a name="l00046"></a><a class="code" href="classaffymetrix__calvin__exceptions_1_1_file_write_exception.html#413ee2bb6872f2ffc8d8ca956b5a6790">00046</a>   <a class="code" href="classaffymetrix__calvin__exceptions_1_1_file_write_exception.html#a03828e35c6fd7c808914f2efd0c294a">FileWriteException</a>(std::wstring _Source, std::wstring _Description, std::wstring _TimeStamp, std::string _FileName, u_int16_t _LineNumber, <a class="code" href="md5_8h.html#fecfb8149081bd9b746bf968fe118a1d">u_int64_t</a> _ErrorCode):
+<a name="l00047"></a>00047     <a class="code" href="classaffymetrix__calvin__exceptions_1_1_calvin_exception.html">CalvinException</a>(_Source, _Description, _TimeStamp, _FileName,  _LineNumber, _ErrorCode) {}
+<a name="l00048"></a>00048   <span class="keyword">const</span> std::wstring <a class="code" href="classaffymetrix__calvin__exceptions_1_1_file_write_exception.html#38c2de50692bba9516b0d4a7c9084d2c">ToString</a>();
+<a name="l00049"></a>00049 };
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051 };
+<a name="l00052"></a>00052 
+<a name="l00053"></a>00053 <span class="preprocessor">#endif // _FileWriteException_HEADER_</span>
+</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:22 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

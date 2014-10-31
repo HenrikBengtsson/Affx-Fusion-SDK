@@ -99,6 +99,12 @@ public:
 	STDMETHOD(GetQCProbeSetInformation)(int index, IFusionCDFQCProbeSetInformation * pVal);
 public:
 	STDMETHOD(GetQCProbeSetInformationByType)(GeneChipQCProbeSetType qcType, IFusionCDFQCProbeSetInformation * pVal);
+public:
+	STDMETHOD(get_ChipTypes)(VARIANT* pVal);
+public:
+	STDMETHOD(get_GUID)(BSTR* pVal);
+public:
+	STDMETHOD(get_IntegrityMd5)(BSTR* pVal);
 };
 
 OBJECT_ENTRY_AUTO(__uuidof(FusionCDFData), CFusionCDFDataCOM)

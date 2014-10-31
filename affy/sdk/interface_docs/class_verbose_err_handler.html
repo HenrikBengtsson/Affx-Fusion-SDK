@@ -35,11 +35,15 @@
 <a href="class_verbose_err_handler-members.html">List of all members.</a><table border="0" cellpadding="0" cellspacing="0">
 <tr><td></td></tr>
 <tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_verbose_err_handler.html#8594cc908b45cbb4168fce67d9040f52">VerboseErrHandler</a> (bool doThrow=false, bool verbose=true)</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_verbose_err_handler.html#6daeb836139a44beda1c506f3823be69">VerboseErrHandler</a> (bool doThrow=false, bool verbose=true, bool exitOnError=true, int exitOnErrorValue=-1)</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_verbose_err_handler.html#75bb1db6450f4dc23d558dcb903ebc49">~VerboseErrHandler</a> ()</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_verbose_err_handler.html#5d551fc0dd98c15a5005dc0a1cdc27ed">handleError</a> (const std::string &amp;msg)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_verbose_err_handler.html#d2d22efc1b1b7912a395da3eaad4e4b7">getThrows</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_verbose_err_handler.html#32fab14d9587a65b62efb8a11672137d">setThrows</a> (bool doThrow)</td></tr>
 
 <tr><td colspan="2"><br><h2>Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_verbose_err_handler.html#17d5e58886055c534b0c8cfabca32d95">m_Throw</a></td></tr>
@@ -48,14 +52,20 @@
 <tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_verbose_err_handler.html#af61ada3f361295418f9e5753e4b25cd">m_Verbose</a></td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Determines if we call <a class="el" href="class_verbose.html#c4034f68f4c8d2b49cd6340984b940ce" title="Print a message to the stream.">Verbose::out</a>.  <a href="#af61ada3f361295418f9e5753e4b25cd"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_verbose_err_handler.html#94a40a38b368df181e543601c996b99f">m_ExitOnError</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Determines if overriding default value to return when exiting on error.  <a href="#94a40a38b368df181e543601c996b99f"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_verbose_err_handler.html#bf880a9d26ac9bbc214aa17e15e01afe">m_ExitOnErrorValue</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Value to set if setting the value to return when exiting on errors.  <a href="#bf880a9d26ac9bbc214aa17e15e01afe"></a><br></td></tr>
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
 Basic error handler that prints to cerr and dies by either throwing an exception or calling abort(). 
 <p>
 
 <p>
-Definition at line <a class="el" href="_verbose_err_handler_8h-source.html#l00046">46</a> of file <a class="el" href="_verbose_err_handler_8h-source.html">VerboseErrHandler.h</a>.<hr><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" name="8594cc908b45cbb4168fce67d9040f52"></a><!-- doxytag: member="VerboseErrHandler::VerboseErrHandler" ref="8594cc908b45cbb4168fce67d9040f52" args="(bool doThrow=false, bool verbose=true)" -->
+Definition at line <a class="el" href="_verbose_err_handler_8h-source.html#l00044">44</a> of file <a class="el" href="_verbose_err_handler_8h-source.html">VerboseErrHandler.h</a>.<hr><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" name="6daeb836139a44beda1c506f3823be69"></a><!-- doxytag: member="VerboseErrHandler::VerboseErrHandler" ref="6daeb836139a44beda1c506f3823be69" args="(bool doThrow=false, bool verbose=true, bool exitOnError=true, int exitOnErrorValue=-1)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -69,7 +79,19 @@ Definition at line <a class="el" href="_verbose_err_handler_8h-source.html#l0004
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&nbsp;</td>
-          <td class="paramname"> <em>verbose</em> = <code>true</code></td><td>&nbsp;</td>
+          <td class="paramname"> <em>verbose</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>exitOnError</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>exitOnErrorValue</em> = <code>-1</code></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
@@ -83,9 +105,9 @@ Definition at line <a class="el" href="_verbose_err_handler_8h-source.html#l0004
 <p>
 
 <p>
-Definition at line <a class="el" href="_verbose_err_handler_8h-source.html#l00049">49</a> of file <a class="el" href="_verbose_err_handler_8h-source.html">VerboseErrHandler.h</a>.
+Definition at line <a class="el" href="_verbose_err_handler_8h-source.html#l00047">47</a> of file <a class="el" href="_verbose_err_handler_8h-source.html">VerboseErrHandler.h</a>.
 <p>
-References <a class="el" href="_verbose_err_handler_8h-source.html#l00078">m_Throw</a>, and <a class="el" href="_verbose_err_handler_8h-source.html#l00079">m_Verbose</a>.
+References <a class="el" href="_verbose_err_handler_8h-source.html#l00100">m_ExitOnError</a>, <a class="el" href="_verbose_err_handler_8h-source.html#l00101">m_ExitOnErrorValue</a>, <a class="el" href="_verbose_err_handler_8h-source.html#l00098">m_Throw</a>, and <a class="el" href="_verbose_err_handler_8h-source.html#l00099">m_Verbose</a>.
 </div>
 </div><p>
 <a class="anchor" name="75bb1db6450f4dc23d558dcb903ebc49"></a><!-- doxytag: member="VerboseErrHandler::~VerboseErrHandler" ref="75bb1db6450f4dc23d558dcb903ebc49" args="()" -->
@@ -106,7 +128,7 @@ References <a class="el" href="_verbose_err_handler_8h-source.html#l00078">m_Thr
 <p>
 Virtual destructor for a virtual class. 
 <p>
-Definition at line <a class="el" href="_verbose_err_handler_8h-source.html#l00055">55</a> of file <a class="el" href="_verbose_err_handler_8h-source.html">VerboseErrHandler.h</a>.
+Definition at line <a class="el" href="_verbose_err_handler_8h-source.html#l00058">58</a> of file <a class="el" href="_verbose_err_handler_8h-source.html">VerboseErrHandler.h</a>.
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
@@ -137,9 +159,60 @@ When something terminal happens this function is called. This is the place to do
 <p>
 Implements <a class="el" href="class_err_handler.html#90075ce34e272aaab5a72740b1d9c204">ErrHandler</a>.
 <p>
-Definition at line <a class="el" href="_verbose_err_handler_8h-source.html#l00066">66</a> of file <a class="el" href="_verbose_err_handler_8h-source.html">VerboseErrHandler.h</a>.
+Definition at line <a class="el" href="_verbose_err_handler_8h-source.html#l00069">69</a> of file <a class="el" href="_verbose_err_handler_8h-source.html">VerboseErrHandler.h</a>.
 <p>
-References <a class="el" href="_verbose_err_handler_8h-source.html#l00078">m_Throw</a>, <a class="el" href="_verbose_err_handler_8h-source.html#l00079">m_Verbose</a>, and <a class="el" href="_verbose_8cpp-source.html#l00168">Verbose::out()</a>.
+References <a class="el" href="_verbose_err_handler_8h-source.html#l00100">m_ExitOnError</a>, <a class="el" href="_verbose_err_handler_8h-source.html#l00101">m_ExitOnErrorValue</a>, <a class="el" href="_verbose_err_handler_8h-source.html#l00098">m_Throw</a>, <a class="el" href="_verbose_err_handler_8h-source.html#l00099">m_Verbose</a>, and <a class="el" href="_verbose_8cpp-source.html#l00259">Verbose::out()</a>.
+</div>
+</div><p>
+<a class="anchor" name="d2d22efc1b1b7912a395da3eaad4e4b7"></a><!-- doxytag: member="VerboseErrHandler::getThrows" ref="d2d22efc1b1b7912a395da3eaad4e4b7" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool VerboseErrHandler::getThrows           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Will this error handler be throwing exceptions? 
+<p>
+Reimplemented from <a class="el" href="class_err_handler.html#e4ba904469557ac26218b747a1a4a5f0">ErrHandler</a>.
+<p>
+Definition at line <a class="el" href="_verbose_err_handler_8h-source.html#l00092">92</a> of file <a class="el" href="_verbose_err_handler_8h-source.html">VerboseErrHandler.h</a>.
+<p>
+References <a class="el" href="_verbose_err_handler_8h-source.html#l00098">m_Throw</a>.
+</div>
+</div><p>
+<a class="anchor" name="32fab14d9587a65b62efb8a11672137d"></a><!-- doxytag: member="VerboseErrHandler::setThrows" ref="32fab14d9587a65b62efb8a11672137d" args="(bool doThrow)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void VerboseErrHandler::setThrows           </td>
+          <td>(</td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>doThrow</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Will this error handler be throwing exceptions? 
+<p>
+Reimplemented from <a class="el" href="class_err_handler.html#fd11463fd11e67182331eba8236e236b">ErrHandler</a>.
+<p>
+Definition at line <a class="el" href="_verbose_err_handler_8h-source.html#l00095">95</a> of file <a class="el" href="_verbose_err_handler_8h-source.html">VerboseErrHandler.h</a>.
+<p>
+References <a class="el" href="_verbose_err_handler_8h-source.html#l00098">m_Throw</a>.
 </div>
 </div><p>
 <hr><h2>Member Data Documentation</h2>
@@ -159,9 +232,9 @@ Determines if we throw an exception or just call abort().
 <p>
 
 <p>
-Definition at line <a class="el" href="_verbose_err_handler_8h-source.html#l00078">78</a> of file <a class="el" href="_verbose_err_handler_8h-source.html">VerboseErrHandler.h</a>.
+Definition at line <a class="el" href="_verbose_err_handler_8h-source.html#l00098">98</a> of file <a class="el" href="_verbose_err_handler_8h-source.html">VerboseErrHandler.h</a>.
 <p>
-Referenced by <a class="el" href="_verbose_err_handler_8h-source.html#l00066">handleError()</a>, and <a class="el" href="_verbose_err_handler_8h-source.html#l00049">VerboseErrHandler()</a>.
+Referenced by <a class="el" href="_verbose_err_handler_8h-source.html#l00092">getThrows()</a>, <a class="el" href="_verbose_err_handler_8h-source.html#l00069">handleError()</a>, <a class="el" href="_verbose_err_handler_8h-source.html#l00095">setThrows()</a>, and <a class="el" href="_verbose_err_handler_8h-source.html#l00047">VerboseErrHandler()</a>.
 </div>
 </div><p>
 <a class="anchor" name="af61ada3f361295418f9e5753e4b25cd"></a><!-- doxytag: member="VerboseErrHandler::m_Verbose" ref="af61ada3f361295418f9e5753e4b25cd" args="" -->
@@ -180,14 +253,56 @@ Determines if we call <a class="el" href="class_verbose.html#c4034f68f4c8d2b49cd
 <p>
 
 <p>
-Definition at line <a class="el" href="_verbose_err_handler_8h-source.html#l00079">79</a> of file <a class="el" href="_verbose_err_handler_8h-source.html">VerboseErrHandler.h</a>.
+Definition at line <a class="el" href="_verbose_err_handler_8h-source.html#l00099">99</a> of file <a class="el" href="_verbose_err_handler_8h-source.html">VerboseErrHandler.h</a>.
 <p>
-Referenced by <a class="el" href="_verbose_err_handler_8h-source.html#l00066">handleError()</a>, and <a class="el" href="_verbose_err_handler_8h-source.html#l00049">VerboseErrHandler()</a>.
+Referenced by <a class="el" href="_verbose_err_handler_8h-source.html#l00069">handleError()</a>, and <a class="el" href="_verbose_err_handler_8h-source.html#l00047">VerboseErrHandler()</a>.
+</div>
+</div><p>
+<a class="anchor" name="94a40a38b368df181e543601c996b99f"></a><!-- doxytag: member="VerboseErrHandler::m_ExitOnError" ref="94a40a38b368df181e543601c996b99f" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_verbose_err_handler.html#94a40a38b368df181e543601c996b99f">VerboseErrHandler::m_ExitOnError</a><code> [private]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Determines if overriding default value to return when exiting on error. 
+<p>
+
+<p>
+Definition at line <a class="el" href="_verbose_err_handler_8h-source.html#l00100">100</a> of file <a class="el" href="_verbose_err_handler_8h-source.html">VerboseErrHandler.h</a>.
+<p>
+Referenced by <a class="el" href="_verbose_err_handler_8h-source.html#l00069">handleError()</a>, and <a class="el" href="_verbose_err_handler_8h-source.html#l00047">VerboseErrHandler()</a>.
+</div>
+</div><p>
+<a class="anchor" name="bf880a9d26ac9bbc214aa17e15e01afe"></a><!-- doxytag: member="VerboseErrHandler::m_ExitOnErrorValue" ref="bf880a9d26ac9bbc214aa17e15e01afe" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="class_verbose_err_handler.html#bf880a9d26ac9bbc214aa17e15e01afe">VerboseErrHandler::m_ExitOnErrorValue</a><code> [private]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Value to set if setting the value to return when exiting on errors. 
+<p>
+
+<p>
+Definition at line <a class="el" href="_verbose_err_handler_8h-source.html#l00101">101</a> of file <a class="el" href="_verbose_err_handler_8h-source.html">VerboseErrHandler.h</a>.
+<p>
+Referenced by <a class="el" href="_verbose_err_handler_8h-source.html#l00069">handleError()</a>, and <a class="el" href="_verbose_err_handler_8h-source.html#l00047">VerboseErrHandler()</a>.
 </div>
 </div><p>
 <hr>The documentation for this class was generated from the following file:<ul>
 <li>C:/FusionSDK/affy/sdk/util/<a class="el" href="_verbose_err_handler_8h-source.html">VerboseErrHandler.h</a></ul>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:35 2009 for Affymetrix Fusion SDK by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:46 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

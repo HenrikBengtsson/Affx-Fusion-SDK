@@ -95,18 +95,18 @@ Example 1 -- Human Exon 1.0 ST PGF File Excerpt</a></h2>
 #%create_date=Tue Sep 19 15:18:05 PDT 2006
 #%guid=0000008635-1158704285-0183259307-0389325148-0127012107
 #%pgf_format_version=1.0
-#%header0=probeset_id	type
-#%header1=	atom_id
-#%header2=		probe_id	type	gc_count	probe_length	interrogation_position	probe_sequence
-2590411	main
-	1
-		5402769	pm:st	12	25	13	CGAAGTTGTTCATTTCCCCGAAGAC
-	2
-		4684894	pm:st	13	25	13	ATGAGGTCACGACGGTAGGACTAAC
-	3
-		3869021	pm:st	11	25	13	AGGAGTACAGGGTAAGATATGGTCT
-	4
-		3774604	pm:st	14	25	13	CCCCGAAGACCCTAAGATGAGGTCA
+#%header0=probeset_id type
+#%header1= atom_id
+#%header2=  probe_id type gc_count probe_length interrogation_position probe_sequence
+2590411 main
+ 1
+  5402769 pm:st 12 25 13 CGAAGTTGTTCATTTCCCCGAAGAC
+ 2
+  4684894 pm:st 13 25 13 ATGAGGTCACGACGGTAGGACTAAC
+ 3
+  3869021 pm:st 11 25 13 AGGAGTACAGGGTAAGATATGGTCT
+ 4
+  3774604 pm:st 14 25 13 CCCCGAAGACCCTAAGATGAGGTCA
 ...
 </pre></div><h2><a class="anchor" name="pgfExample2">
 Example 2 -- Human Genome U133 2.0 Plus PGF File Excerpt</a></h2>
@@ -117,21 +117,21 @@ Here is a hypothetical example of a PGF file for an expression array with PM/MM 
 #%lib_set_name=HG-U133_Plus_2
 #%lib_set_version=1
 #%create_date=Tue Mar 29 16:48:05 2005
-#%header0=probeset_id	type	probeset_name
-#%header1=	atom_id
-#%header2=		probe_id	type	gc_count	probe_length	interrogation_position	probe_sequence	exon_position
-1354897		204339_s_at
-	1354898
-		1221821	pm:target-&gt;at	13	25	13	ACAACGACCGTTCCGGAATCGACAT	1703
-		1222985	mm:target-&gt;at	13	25	13	ACAACGACCGTTGCGGAATCGACAT	1703
-	1354899
-		788881	pm:target-&gt;at	8	25	13	TTACATCATACTTTCTTGTCTCTAG	1355
-		790045	mm:target-&gt;at	8	25	13	TTACATCATACTATCTTGTCTCTAG	1355
-	1354900
-		516645	pm:target-&gt;at	12	25	13	GAATCTTATCACGAGTTCCACCTCC	1518
-		517809	mm:target-&gt;at	12	25	13	GAATCTTATCACCAGTTCCACCTCC	1518
-	1354901
-		736948	pm:target-&gt;at	12	25	13	GAGTTCCCTCGATTCCATAAACGAG	1543
+#%header0=probeset_id type probeset_name
+#%header1= atom_id
+#%header2=  probe_id type gc_count probe_length interrogation_position probe_sequence exon_position
+1354897  204339_s_at
+ 1354898
+  1221821 pm:target-&gt;at 13 25 13 ACAACGACCGTTCCGGAATCGACAT 1703
+  1222985 mm:target-&gt;at 13 25 13 ACAACGACCGTTGCGGAATCGACAT 1703
+ 1354899
+  788881 pm:target-&gt;at 8 25 13 TTACATCATACTTTCTTGTCTCTAG 1355
+  790045 mm:target-&gt;at 8 25 13 TTACATCATACTATCTTGTCTCTAG 1355
+ 1354900
+  516645 pm:target-&gt;at 12 25 13 GAATCTTATCACGAGTTCCACCTCC 1518
+  517809 mm:target-&gt;at 12 25 13 GAATCTTATCACCAGTTCCACCTCC 1518
+ 1354901
+  736948 pm:target-&gt;at 12 25 13 GAGTTCCCTCGATTCCATAAACGAG 1543
 </pre></div><h2><a class="anchor" name="related">
 Related Pages</a></h2>
 <ul>
@@ -140,7 +140,7 @@ Related Pages</a></h2>
 Developer Notes</a></h2>
 <ul>
 <li>If you are defining a file format which is based on TsvFile, use this as an example.</li><li>PgfFile is not subclassed as we dont want it to inherit methods from TsvFile. This prevents calling a method by accident.</li><li>m_tsv is a member so it appears when a PgfFile is made. (ie: minus messy memory management)</li><li>We make "tsv" public so if the programmer wants to work with the underlying tsv object may do so. </li></ul>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:27 2009 for Affymetrix Fusion SDK by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:38 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

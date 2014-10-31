@@ -37,6 +37,7 @@
 #include <cstring>
 #include <map>
 #include <string.h>
+#include <stdio.h>
 //
 #define XERCES_STATIC_LIBRARY
 
@@ -54,6 +55,7 @@ XERCES_CPP_NAMESPACE_USE;
 #define ANALYSIS_PARAMETERS "Analysis Parameters"
 #define QC_RESULTS "QC Results"
 #define SAMPLE_SIGNATURE "Sample Signature"
+#define SAMPLE_SIGNATURE_ANALYSIS_PARAMETERS "Sample Signature Analysis Parameters"
 #define NAME_ATTRIBUTE "name"
 #define ROWS_ATTRIBUTE "rows"
 #define COLS_ATTRIBUTE "cols"
@@ -296,8 +298,10 @@ public:
                 else if (atts[NAME_ATTRIBUTE] == QC_RESULTS)
                     currentParameters = &fileData->QCResults();
                 else if (atts[NAME_ATTRIBUTE] == SAMPLE_SIGNATURE)
+                    currentParameters = &fileData->SampleSignature();     
+				else if (atts[NAME_ATTRIBUTE] == SAMPLE_SIGNATURE_ANALYSIS_PARAMETERS)
                     currentParameters = &fileData->SampleSignature();
-                else
+				else	
                     currentParameters = NULL;
                 break;
 
@@ -340,6 +344,7 @@ void GQCFileData::Clear()
     qcResults.clear();
     sampleSignature.clear();
     analysisParameters.clear();
+	sampleSignatureParameters.clear();
 }
 
 /* Read the file. */
@@ -458,6 +463,7 @@ bool GQCFileData::Write(const std::string &fileName)
 	AddNameValuePairs(ANALYSIS_PARAMETERS, analysisParameters, doc, rootElement);
 	AddNameValuePairs(QC_RESULTS, qcResults, doc, rootElement);
 	AddNameValuePairs(SAMPLE_SIGNATURE, sampleSignature, doc, rootElement);
+	AddNameValuePairs(SAMPLE_SIGNATURE_ANALYSIS_PARAMETERS, sampleSignatureParameters, doc, rootElement);
 
     // Add an empty table (required by the DTD)
     AddBlankReportTable(doc, rootElement);

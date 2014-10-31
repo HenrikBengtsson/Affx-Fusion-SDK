@@ -83,7 +83,7 @@
 <a name="l00059"></a>00059         <span class="comment">// Check the file identifier</span>
 <a name="l00060"></a>00060         <span class="keywordflow">if</span> (gdata.<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data.html#92d745630f7e6bc9038fa99a980f92f9">FileIdentifier</a>() != <a class="code" href="_grid_control_file_reader_8h.html#33ad98f97bf1774310055d2689d483e2">GRD_FILE_TYPE_IDENTIFIER</a>)
 <a name="l00061"></a>00061         {
-<a name="l00062"></a>00062                 <a class="code" href="classaffymetrix__calvin__exceptions_1_1_invalid_file_type_exception.html">affymetrix_calvin_exceptions::InvalidFileTypeException</a> e;
+<a name="l00062"></a>00062                 <a class="code" href="classaffymetrix__calvin__exceptions_1_1_invalid_file_type_exception.html">affymetrix_calvin_exceptions::InvalidFileTypeException</a> e(L<span class="stringliteral">"Calvin"</span>,L<span class="stringliteral">"Default Description, Please Update!"</span>,<a class="code" href="classaffymetrix__calvin__utilities_1_1_date_time.html#1d634f56bd3a4f925bdcaac46f0fec15">affymetrix_calvin_utilities::DateTime::GetCurrentDateTime</a>().ToString(),std::string(__FILE__),(u_int16_t)__LINE__,0);
 <a name="l00063"></a>00063                 <span class="keywordflow">throw</span> e;
 <a name="l00064"></a>00064         }
 <a name="l00065"></a>00065 
@@ -105,7 +105,7 @@
 <a name="l00081"></a>00081         dataSet = gdata.<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data.html#3363c61f5da726d7a7ffcbc49e85a0b2">DataSet</a>(<a class="code" href="_grid_control_file_reader_8h.html#db51f3c8c8a102407d2fa5d2e33786f1">GRD_FILE_COORDINATE_GROUP_NAME</a>, <a class="code" href="_grid_control_file_reader_8h.html#1ac4c62f3a440a7224eb6411ff348488">GRD_FILE_B1_SET_NAME</a>);
 <a name="l00082"></a>00082         <span class="keywordflow">if</span> (dataSet-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_data_set.html#f9403cf7cabee1069ca9c2437adc5992">Open</a>() == <span class="keyword">false</span>)
 <a name="l00083"></a>00083         {
-<a name="l00084"></a>00084                 <a class="code" href="classaffymetrix__calvin__exceptions_1_1_data_set_not_open_exception.html">affymetrix_calvin_exceptions::DataSetNotOpenException</a> e;
+<a name="l00084"></a>00084                 <a class="code" href="classaffymetrix__calvin__exceptions_1_1_data_set_not_open_exception.html">affymetrix_calvin_exceptions::DataSetNotOpenException</a> e(L<span class="stringliteral">"Calvin"</span>,L<span class="stringliteral">"Default Description, Please Update!"</span>,<a class="code" href="classaffymetrix__calvin__utilities_1_1_date_time.html#1d634f56bd3a4f925bdcaac46f0fec15">affymetrix_calvin_utilities::DateTime::GetCurrentDateTime</a>().ToString(),std::string(__FILE__),(u_int16_t)__LINE__,0);
 <a name="l00085"></a>00085                 <span class="keywordflow">throw</span> e;
 <a name="l00086"></a>00086         }
 <a name="l00087"></a>00087         nRows = dataSet-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_data_set.html#b51b565cd5e20692e83940027ad169c6">Rows</a>();
@@ -125,7 +125,7 @@
 <a name="l00101"></a>00101         dataSet = gdata.<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data.html#3363c61f5da726d7a7ffcbc49e85a0b2">DataSet</a>(<a class="code" href="_grid_control_file_reader_8h.html#db51f3c8c8a102407d2fa5d2e33786f1">GRD_FILE_COORDINATE_GROUP_NAME</a>, <a class="code" href="_grid_control_file_reader_8h.html#7acd39d04ec22ee38e3247ca72852b4f">GRD_FILE_B2_SET_NAME</a>);
 <a name="l00102"></a>00102         <span class="keywordflow">if</span> (dataSet-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_data_set.html#f9403cf7cabee1069ca9c2437adc5992">Open</a>() == <span class="keyword">false</span>)
 <a name="l00103"></a>00103         {
-<a name="l00104"></a>00104                 <a class="code" href="classaffymetrix__calvin__exceptions_1_1_data_set_not_open_exception.html">affymetrix_calvin_exceptions::DataSetNotOpenException</a> e;
+<a name="l00104"></a>00104                 <a class="code" href="classaffymetrix__calvin__exceptions_1_1_data_set_not_open_exception.html">affymetrix_calvin_exceptions::DataSetNotOpenException</a> e(L<span class="stringliteral">"Calvin"</span>,L<span class="stringliteral">"Default Description, Please Update!"</span>,<a class="code" href="classaffymetrix__calvin__utilities_1_1_date_time.html#1d634f56bd3a4f925bdcaac46f0fec15">affymetrix_calvin_utilities::DateTime::GetCurrentDateTime</a>().ToString(),std::string(__FILE__),(u_int16_t)__LINE__,0);
 <a name="l00105"></a>00105                 <span class="keywordflow">throw</span> e;
 <a name="l00106"></a>00106         }
 <a name="l00107"></a>00107         nRows = dataSet-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_data_set.html#b51b565cd5e20692e83940027ad169c6">Rows</a>();
@@ -145,7 +145,7 @@
 <a name="l00121"></a>00121         dataSet = gdata.<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data.html#3363c61f5da726d7a7ffcbc49e85a0b2">DataSet</a>(<a class="code" href="_grid_control_file_reader_8h.html#db51f3c8c8a102407d2fa5d2e33786f1">GRD_FILE_COORDINATE_GROUP_NAME</a>, <a class="code" href="_grid_control_file_reader_8h.html#ef5cacab5a17b317ad59dbd908a628d2">GRD_FILE_NS_SET_NAME</a>);
 <a name="l00122"></a>00122         <span class="keywordflow">if</span> (dataSet-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_data_set.html#f9403cf7cabee1069ca9c2437adc5992">Open</a>() == <span class="keyword">false</span>)
 <a name="l00123"></a>00123         {
-<a name="l00124"></a>00124                 <a class="code" href="classaffymetrix__calvin__exceptions_1_1_data_set_not_open_exception.html">affymetrix_calvin_exceptions::DataSetNotOpenException</a> e;
+<a name="l00124"></a>00124                 <a class="code" href="classaffymetrix__calvin__exceptions_1_1_data_set_not_open_exception.html">affymetrix_calvin_exceptions::DataSetNotOpenException</a> e(L<span class="stringliteral">"Calvin"</span>,L<span class="stringliteral">"Default Description, Please Update!"</span>,<a class="code" href="classaffymetrix__calvin__utilities_1_1_date_time.html#1d634f56bd3a4f925bdcaac46f0fec15">affymetrix_calvin_utilities::DateTime::GetCurrentDateTime</a>().ToString(),std::string(__FILE__),(u_int16_t)__LINE__,0);
 <a name="l00125"></a>00125                 <span class="keywordflow">throw</span> e;
 <a name="l00126"></a>00126         }
 <a name="l00127"></a>00127         nRows = dataSet-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_data_set.html#b51b565cd5e20692e83940027ad169c6">Rows</a>();
@@ -161,7 +161,7 @@
 <a name="l00137"></a>00137         dataSet-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_data_set.html#48002a5c86691f4135769ee6b0eddd79">Close</a>();
 <a name="l00138"></a>00138         dataSet-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_data_set.html#cbb628f5a2c33bbd7a63cde52dad820f">Delete</a>();
 <a name="l00139"></a>00139 }
-</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:10 2009 for Affymetrix Fusion SDK by&nbsp;
+</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:19 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

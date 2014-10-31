@@ -22,17 +22,14 @@
     <li><a href="functions.html"><span>Class&nbsp;Members</span></a></li>
   </ul>
 </div>
-<h1>MixedFileCheck Class Reference</h1><!-- doxytag: class="MixedFileCheck" --><!-- doxytag: inherits="RegressionCheck" --><code>#include &lt;<a class="el" href="_mixed_file_check_8h-source.html">MixedFileCheck.h</a>&gt;</code>
+<h1>MixedFileCheck Class Reference</h1><!-- doxytag: class="MixedFileCheck" --><code>#include &lt;<a class="el" href="_mixed_file_check_8h-source.html">MixedFileCheck.h</a>&gt;</code>
 <p>
-<p>Inheritance diagram for MixedFileCheck:
-<p><center><img src="class_mixed_file_check.png" usemap="#MixedFileCheck_map" border="0" alt=""></center>
-<map name="MixedFileCheck_map">
-<area href="class_regression_check.html" alt="RegressionCheck" shape="rect" coords="0,0,111,24">
-</map>
 <a href="class_mixed_file_check-members.html">List of all members.</a><table border="0" cellpadding="0" cellspacing="0">
 <tr><td></td></tr>
 <tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mixed_file_check.html#d44e01a852201f2086dcf099cf35c896">MixedFileCheck</a> (const std::string &amp;generatedFile, const std::string &amp;goldFile, const double eps, const unsigned int skipLines, const unsigned int allowedMismatch)</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mixed_file_check.html#2818d29a133535b15fb08a7dd22c26e0">MixedFileCheck</a> (const std::string &amp;generatedFile, const std::string &amp;goldFile, const double eps, const unsigned int skipDataLines, const unsigned int allowedMismatch, const double frac=0.0)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mixed_file_check.html#2e4983d95c7fc69abf899d951744550d">setMaxError</a> (int max)</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mixed_file_check.html#5e20e97ed9737db4d3a416c58594e406">check</a> (std::string &amp;errorMsg)</td></tr>
 
@@ -49,20 +46,26 @@
 <tr><td class="memItemLeft" nowrap align="right" valign="top">const double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mixed_file_check.html#61c670cb1a79cf8c85153c04c7e513c7">m_Eps</a></td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Maximum accepted absolute difference in numeric values.  <a href="#61c670cb1a79cf8c85153c04c7e513c7"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">const unsigned int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mixed_file_check.html#3c9c729f4bf84af6dd71838bd986e3f5">m_SkipLines</a></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">const unsigned int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mixed_file_check.html#af7a95e5b5fa67075c5367edf0c68e43">m_SkipDataLines</a></td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Number of lines to skip.  <a href="#3c9c729f4bf84af6dd71838bd986e3f5"></a><br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Number of data lines to skip (header lines are already auto-skipped).  <a href="#af7a95e5b5fa67075c5367edf0c68e43"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">const unsigned int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mixed_file_check.html#2f166dd45e302c1166b84ebb9aa4946e">m_AllowedMismatch</a></td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Maximum number of non-matching numeric values accepted.  <a href="#2f166dd45e302c1166b84ebb9aa4946e"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mixed_file_check.html#fce1f74bef451894124a88a0a05251ce">m_MaxErrorsReport</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">The maximum number of errors to report.  <a href="#fce1f74bef451894124a88a0a05251ce"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">const double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mixed_file_check.html#047da760244a8287cc959b9f3b943494">m_Frac</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Maximum fractional difference considered equivalent.  <a href="#047da760244a8287cc959b9f3b943494"></a><br></td></tr>
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
 Class for testing whether two files, containing both text and numeric data, are equal, within tolerances for numeric data, ignoring line endings. 
 <p>
 
 <p>
-Definition at line <a class="el" href="_mixed_file_check_8h-source.html#l00045">45</a> of file <a class="el" href="_mixed_file_check_8h-source.html">MixedFileCheck.h</a>.<hr><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" name="d44e01a852201f2086dcf099cf35c896"></a><!-- doxytag: member="MixedFileCheck::MixedFileCheck" ref="d44e01a852201f2086dcf099cf35c896" args="(const std::string &amp;generatedFile, const std::string &amp;goldFile, const double eps, const unsigned int skipLines, const unsigned int allowedMismatch)" -->
+Definition at line <a class="el" href="_mixed_file_check_8h-source.html#l00044">44</a> of file <a class="el" href="_mixed_file_check_8h-source.html">MixedFileCheck.h</a>.<hr><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" name="2818d29a133535b15fb08a7dd22c26e0"></a><!-- doxytag: member="MixedFileCheck::MixedFileCheck" ref="2818d29a133535b15fb08a7dd22c26e0" args="(const std::string &amp;generatedFile, const std::string &amp;goldFile, const double eps, const unsigned int skipDataLines, const unsigned int allowedMismatch, const double frac=0.0)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -88,13 +91,19 @@ Definition at line <a class="el" href="_mixed_file_check_8h-source.html#l00045">
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const unsigned int&nbsp;</td>
-          <td class="paramname"> <em>skipLines</em>, </td>
+          <td class="paramname"> <em>skipDataLines</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const unsigned int&nbsp;</td>
-          <td class="paramname"> <em>allowedMismatch</em></td><td>&nbsp;</td>
+          <td class="paramname"> <em>allowedMismatch</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&nbsp;</td>
+          <td class="paramname"> <em>frac</em> = <code>0.0</code></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
@@ -111,19 +120,50 @@ Constructor.<p>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>generatedFile</em>&nbsp;</td><td>File generated by application. </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>goldFile</em>&nbsp;</td><td>Comparison file, assumed to be correct. </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>eps</em>&nbsp;</td><td>Maximum accepted absolute difference in numeric values. </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>skipLines</em>&nbsp;</td><td>Number of lines to skip. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>eps</em>&nbsp;</td><td>Maximum accepted absolute difference in numeric values. i.e. if |generated-gold| &gt;= eps then there is a difference. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>skipDataLines</em>&nbsp;</td><td>Number of data lines to skip (after header lines auto-skipped). </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>allowedMismatch</em>&nbsp;</td><td>Maximum number of non-matching numeric values accepted. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>frac</em>&nbsp;</td><td>Maximum accepted fractional difference in numeric values (not used by default). i.e. if |generated-gold| &gt;= frac*max(|generated|,|gold|) then there is a difference. </td></tr>
   </table>
 </dl>
 
 <p>
-Definition at line <a class="el" href="_mixed_file_check_8h-source.html#l00057">57</a> of file <a class="el" href="_mixed_file_check_8h-source.html">MixedFileCheck.h</a>.
+Definition at line <a class="el" href="_mixed_file_check_8h-source.html#l00059">59</a> of file <a class="el" href="_mixed_file_check_8h-source.html">MixedFileCheck.h</a>.
 <p>
-References <a class="el" href="_util_8cpp-source.html#l00684">Util::fileRoot()</a>, and <a class="el" href="_regression_check_8h-source.html#l00137">RegressionCheck::m_Name</a>.
+References <a class="el" href="_fs_8cpp-source.html#l00368">Fs::basename()</a>.
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
+<a class="anchor" name="2e4983d95c7fc69abf899d951744550d"></a><!-- doxytag: member="MixedFileCheck::setMaxError" ref="2e4983d95c7fc69abf899d951744550d" args="(int max)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MixedFileCheck::setMaxError           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>max</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Utility function to set the max number of errors reported <dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>max</em>&nbsp;</td><td>- maximum number of errors to report (set to -1 for no limit default behavior) </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>- void </dd></dl>
+
+<p>
+Definition at line <a class="el" href="_mixed_file_check_8h-source.html#l00072">72</a> of file <a class="el" href="_mixed_file_check_8h-source.html">MixedFileCheck.h</a>.
+<p>
+References <a class="el" href="_mixed_file_check_8h-source.html#l00255">m_MaxErrorsReport</a>.
+</div>
+</div><p>
 <a class="anchor" name="5e20e97ed9737db4d3a416c58594e406"></a><!-- doxytag: member="MixedFileCheck::check" ref="5e20e97ed9737db4d3a416c58594e406" args="(std::string &amp;errorMsg)" -->
 <div class="memitem">
 <div class="memproto">
@@ -134,7 +174,7 @@ References <a class="el" href="_util_8cpp-source.html#l00684">Util::fileRoot()</
           <td class="paramtype">std::string &amp;&nbsp;</td>
           <td class="paramname"> <em>errorMsg</em>          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td width="100%"><code> [inline, virtual]</code></td>
+          <td width="100%"><code> [inline]</code></td>
         </tr>
       </table>
 </div>
@@ -150,11 +190,11 @@ Check that the two files are the same, within tolerances.<p>
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>bool Return true if files pass tests, else false. </dd></dl>
 
 <p>
-Implements <a class="el" href="class_regression_check.html#417b6199813eaa14192b5ea353582335">RegressionCheck</a>.
+Definition at line <a class="el" href="_mixed_file_check_8h-source.html#l00082">82</a> of file <a class="el" href="_mixed_file_check_8h-source.html">MixedFileCheck.h</a>.
 <p>
-Definition at line <a class="el" href="_mixed_file_check_8h-source.html#l00071">71</a> of file <a class="el" href="_mixed_file_check_8h-source.html">MixedFileCheck.h</a>.
+References <a class="el" href="_fs_8cpp-source.html#l01420">Fs::aptOpen()</a>, <a class="el" href="_fs_8cpp-source.html#l00599">Fs::convertToUncPath()</a>, <a class="el" href="_mixed_file_check_8h-source.html#l00237">lineErrorMsg()</a>, <a class="el" href="_mixed_file_check_8h-source.html#l00253">m_AllowedMismatch</a>, <a class="el" href="_mixed_file_check_8h-source.html#l00249">m_Eps</a>, <a class="el" href="_mixed_file_check_8h-source.html#l00257">m_Frac</a>, <a class="el" href="_mixed_file_check_8h-source.html#l00245">m_GeneratedFile</a>, <a class="el" href="_mixed_file_check_8h-source.html#l00247">m_GoldFile</a>, <a class="el" href="_mixed_file_check_8h-source.html#l00255">m_MaxErrorsReport</a>, <a class="el" href="_mixed_file_check_8h-source.html#l00251">m_SkipDataLines</a>, <a class="el" href="affy-base-types_8h-source.html#l00059">Max</a>, <a class="el" href="_verbose_8cpp-source.html#l00259">Verbose::out()</a>, <a class="el" href="_convert_8cpp-source.html#l00301">Convert::toDoubleCheck()</a>, and <a class="el" href="_convert_8h-source.html#l00227">ToStr()</a>.
 <p>
-References <a class="el" href="_util_8cpp-source.html#l00887">Util::convertPathName()</a>, <a class="el" href="_mixed_file_check_8h-source.html#l00208">lineErrorMsg()</a>, <a class="el" href="_mixed_file_check_8h-source.html#l00224">m_AllowedMismatch</a>, <a class="el" href="_mixed_file_check_8h-source.html#l00220">m_Eps</a>, <a class="el" href="_mixed_file_check_8h-source.html#l00216">m_GeneratedFile</a>, <a class="el" href="_mixed_file_check_8h-source.html#l00218">m_GoldFile</a>, <a class="el" href="_mixed_file_check_8h-source.html#l00222">m_SkipLines</a>, <a class="el" href="_verbose_8cpp-source.html#l00168">Verbose::out()</a>, <a class="el" href="_convert_8cpp-source.html#l00283">Convert::toDoubleCheck()</a>, and <a class="el" href="_convert_8h-source.html#l00046">ToStr()</a>.
+Referenced by <a class="el" href="apt-check-mixedfile_8cpp-source.html#l00037">main()</a>.
 </div>
 </div><p>
 <a class="anchor" name="2ca0d9bfd63b6da0a8d01d9e6ba912a6"></a><!-- doxytag: member="MixedFileCheck::lineErrorMsg" ref="2ca0d9bfd63b6da0a8d01d9e6ba912a6" args="(const std::string &amp;generatedLine, const std::string &amp;goldLine)" -->
@@ -193,11 +233,11 @@ Generate a generic error message for a line mismatch.<p>
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>Error message. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_mixed_file_check_8h-source.html#l00208">208</a> of file <a class="el" href="_mixed_file_check_8h-source.html">MixedFileCheck.h</a>.
+Definition at line <a class="el" href="_mixed_file_check_8h-source.html#l00237">237</a> of file <a class="el" href="_mixed_file_check_8h-source.html">MixedFileCheck.h</a>.
 <p>
-References <a class="el" href="_mixed_file_check_8h-source.html#l00216">m_GeneratedFile</a>.
+References <a class="el" href="_mixed_file_check_8h-source.html#l00245">m_GeneratedFile</a>.
 <p>
-Referenced by <a class="el" href="_mixed_file_check_8h-source.html#l00071">check()</a>.
+Referenced by <a class="el" href="_mixed_file_check_8h-source.html#l00082">check()</a>.
 </div>
 </div><p>
 <hr><h2>Member Data Documentation</h2>
@@ -217,9 +257,9 @@ Name of file generated by application being tested.
 <p>
 
 <p>
-Definition at line <a class="el" href="_mixed_file_check_8h-source.html#l00216">216</a> of file <a class="el" href="_mixed_file_check_8h-source.html">MixedFileCheck.h</a>.
+Definition at line <a class="el" href="_mixed_file_check_8h-source.html#l00245">245</a> of file <a class="el" href="_mixed_file_check_8h-source.html">MixedFileCheck.h</a>.
 <p>
-Referenced by <a class="el" href="_mixed_file_check_8h-source.html#l00071">check()</a>, and <a class="el" href="_mixed_file_check_8h-source.html#l00208">lineErrorMsg()</a>.
+Referenced by <a class="el" href="_mixed_file_check_8h-source.html#l00082">check()</a>, and <a class="el" href="_mixed_file_check_8h-source.html#l00237">lineErrorMsg()</a>.
 </div>
 </div><p>
 <a class="anchor" name="452b01286e2510b143469347f1d82eb4"></a><!-- doxytag: member="MixedFileCheck::m_GoldFile" ref="452b01286e2510b143469347f1d82eb4" args="" -->
@@ -238,9 +278,9 @@ Name of file assumed to be correct.
 <p>
 
 <p>
-Definition at line <a class="el" href="_mixed_file_check_8h-source.html#l00218">218</a> of file <a class="el" href="_mixed_file_check_8h-source.html">MixedFileCheck.h</a>.
+Definition at line <a class="el" href="_mixed_file_check_8h-source.html#l00247">247</a> of file <a class="el" href="_mixed_file_check_8h-source.html">MixedFileCheck.h</a>.
 <p>
-Referenced by <a class="el" href="_mixed_file_check_8h-source.html#l00071">check()</a>.
+Referenced by <a class="el" href="_mixed_file_check_8h-source.html#l00082">check()</a>.
 </div>
 </div><p>
 <a class="anchor" name="61c670cb1a79cf8c85153c04c7e513c7"></a><!-- doxytag: member="MixedFileCheck::m_Eps" ref="61c670cb1a79cf8c85153c04c7e513c7" args="" -->
@@ -259,30 +299,30 @@ Maximum accepted absolute difference in numeric values.
 <p>
 
 <p>
-Definition at line <a class="el" href="_mixed_file_check_8h-source.html#l00220">220</a> of file <a class="el" href="_mixed_file_check_8h-source.html">MixedFileCheck.h</a>.
+Definition at line <a class="el" href="_mixed_file_check_8h-source.html#l00249">249</a> of file <a class="el" href="_mixed_file_check_8h-source.html">MixedFileCheck.h</a>.
 <p>
-Referenced by <a class="el" href="_mixed_file_check_8h-source.html#l00071">check()</a>.
+Referenced by <a class="el" href="_mixed_file_check_8h-source.html#l00082">check()</a>.
 </div>
 </div><p>
-<a class="anchor" name="3c9c729f4bf84af6dd71838bd986e3f5"></a><!-- doxytag: member="MixedFileCheck::m_SkipLines" ref="3c9c729f4bf84af6dd71838bd986e3f5" args="" -->
+<a class="anchor" name="af7a95e5b5fa67075c5367edf0c68e43"></a><!-- doxytag: member="MixedFileCheck::m_SkipDataLines" ref="af7a95e5b5fa67075c5367edf0c68e43" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const unsigned int <a class="el" href="class_mixed_file_check.html#3c9c729f4bf84af6dd71838bd986e3f5">MixedFileCheck::m_SkipLines</a><code> [private]</code>          </td>
+          <td class="memname">const unsigned int <a class="el" href="class_mixed_file_check.html#af7a95e5b5fa67075c5367edf0c68e43">MixedFileCheck::m_SkipDataLines</a><code> [private]</code>          </td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
 <p>
-Number of lines to skip. 
+Number of data lines to skip (header lines are already auto-skipped). 
 <p>
 
 <p>
-Definition at line <a class="el" href="_mixed_file_check_8h-source.html#l00222">222</a> of file <a class="el" href="_mixed_file_check_8h-source.html">MixedFileCheck.h</a>.
+Definition at line <a class="el" href="_mixed_file_check_8h-source.html#l00251">251</a> of file <a class="el" href="_mixed_file_check_8h-source.html">MixedFileCheck.h</a>.
 <p>
-Referenced by <a class="el" href="_mixed_file_check_8h-source.html#l00071">check()</a>.
+Referenced by <a class="el" href="_mixed_file_check_8h-source.html#l00082">check()</a>.
 </div>
 </div><p>
 <a class="anchor" name="2f166dd45e302c1166b84ebb9aa4946e"></a><!-- doxytag: member="MixedFileCheck::m_AllowedMismatch" ref="2f166dd45e302c1166b84ebb9aa4946e" args="" -->
@@ -301,14 +341,56 @@ Maximum number of non-matching numeric values accepted.
 <p>
 
 <p>
-Definition at line <a class="el" href="_mixed_file_check_8h-source.html#l00224">224</a> of file <a class="el" href="_mixed_file_check_8h-source.html">MixedFileCheck.h</a>.
+Definition at line <a class="el" href="_mixed_file_check_8h-source.html#l00253">253</a> of file <a class="el" href="_mixed_file_check_8h-source.html">MixedFileCheck.h</a>.
 <p>
-Referenced by <a class="el" href="_mixed_file_check_8h-source.html#l00071">check()</a>.
+Referenced by <a class="el" href="_mixed_file_check_8h-source.html#l00082">check()</a>.
+</div>
+</div><p>
+<a class="anchor" name="fce1f74bef451894124a88a0a05251ce"></a><!-- doxytag: member="MixedFileCheck::m_MaxErrorsReport" ref="fce1f74bef451894124a88a0a05251ce" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="class_mixed_file_check.html#fce1f74bef451894124a88a0a05251ce">MixedFileCheck::m_MaxErrorsReport</a><code> [private]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+The maximum number of errors to report. 
+<p>
+
+<p>
+Definition at line <a class="el" href="_mixed_file_check_8h-source.html#l00255">255</a> of file <a class="el" href="_mixed_file_check_8h-source.html">MixedFileCheck.h</a>.
+<p>
+Referenced by <a class="el" href="_mixed_file_check_8h-source.html#l00082">check()</a>, and <a class="el" href="_mixed_file_check_8h-source.html#l00072">setMaxError()</a>.
+</div>
+</div><p>
+<a class="anchor" name="047da760244a8287cc959b9f3b943494"></a><!-- doxytag: member="MixedFileCheck::m_Frac" ref="047da760244a8287cc959b9f3b943494" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double <a class="el" href="class_mixed_file_check.html#047da760244a8287cc959b9f3b943494">MixedFileCheck::m_Frac</a><code> [private]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Maximum fractional difference considered equivalent. 
+<p>
+
+<p>
+Definition at line <a class="el" href="_mixed_file_check_8h-source.html#l00257">257</a> of file <a class="el" href="_mixed_file_check_8h-source.html">MixedFileCheck.h</a>.
+<p>
+Referenced by <a class="el" href="_mixed_file_check_8h-source.html#l00082">check()</a>.
 </div>
 </div><p>
 <hr>The documentation for this class was generated from the following file:<ul>
 <li>C:/FusionSDK/affy/sdk/util/<a class="el" href="_mixed_file_check_8h-source.html">MixedFileCheck.h</a></ul>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:33 2009 for Affymetrix Fusion SDK by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:45 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

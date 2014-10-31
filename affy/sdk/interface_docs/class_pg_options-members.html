@@ -38,8 +38,8 @@
   <tr class="memlist"><td><a class="el" href="class_pg_options.html#56135a91c8b215b1f9675e5cb5f90814">defOpt</a>(const std::string &amp;shortName, const std::string &amp;longName, PgOpt::PgOptType_t type, const std::string &amp;help, const std::string &amp;defaultVal)</td><td><a class="el" href="class_pg_options.html">PgOptions</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_pg_options.html#817456bb9a6dba73daf3a25197ed3cb0">defOptMult</a>(const std::string &amp;shortName, const std::string &amp;longName, PgOpt::PgOptType_t type, const std::string &amp;help, const std::string &amp;defaultVal)</td><td><a class="el" href="class_pg_options.html">PgOptions</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_pg_options.html#bb4bfffa9bfe34dd4a0ad86c5b876bab">dump</a>()</td><td><a class="el" href="class_pg_options.html">PgOptions</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="class_pg_options.html#30b5e0d8516c5c6130a9da8266afd3ce">findOpt</a>(const std::string &amp;name)</td><td><a class="el" href="class_pg_options.html">PgOptions</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="class_pg_options.html#43eb777dd82aabdee1bc766b5b98ca5b">get</a>(const std::string &amp;opt_name)</td><td><a class="el" href="class_pg_options.html">PgOptions</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_pg_options.html#637bef24edc9520ea2e871283e338724">findOpt</a>(const std::string &amp;longName)</td><td><a class="el" href="class_pg_options.html">PgOptions</a></td><td><code> [inline]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_pg_options.html#43eb777dd82aabdee1bc766b5b98ca5b">get</a>(const std::string &amp;opt_name)</td><td><a class="el" href="class_pg_options.html">PgOptions</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="class_pg_options.html#96eb31df61e35a05185227da2e1fe2b5">getArg</a>(int index)</td><td><a class="el" href="class_pg_options.html">PgOptions</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_pg_options.html#c7faa5974d76730c1ac29123c4aeeea4">getArgCount</a>()</td><td><a class="el" href="class_pg_options.html">PgOptions</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_pg_options.html#7c205e8cbea8d42a5a2b21261e1aaa4b">getArgVector</a>()</td><td><a class="el" href="class_pg_options.html">PgOptions</a></td><td></td></tr>
@@ -61,7 +61,7 @@
   <tr class="memlist"><td><a class="el" href="class_pg_options.html#a95a621b0c1295d2237908ba2243e968">m_strXMLParameterFileName</a></td><td><a class="el" href="class_pg_options.html">PgOptions</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_pg_options.html#c7d3e81651b8dbb8903a93333fa025be">m_usageMsg</a></td><td><a class="el" href="class_pg_options.html">PgOptions</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_pg_options.html#b6cbc7548fa83eac180030221f7dbc74">matchOneArg</a>(size_t *arg_idx)</td><td><a class="el" href="class_pg_options.html">PgOptions</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="class_pg_options.html#cb645e631e5f0689b9661802af9f1c6e">mustFindOpt</a>(const std::string &amp;name)</td><td><a class="el" href="class_pg_options.html">PgOptions</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_pg_options.html#e6b1d72f578de5a557f3b891885e18b5">mustFindOpt</a>(const std::string &amp;name)</td><td><a class="el" href="class_pg_options.html">PgOptions</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="class_pg_options.html#0a28074dcd613605d92deefa08271c4a">operator=</a>(const PgOptions &amp;options)</td><td><a class="el" href="class_pg_options.html">PgOptions</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_pg_options.html#d79a8f09fbdf50b27f3b3621aa11b49b">optionMap_t</a> typedef</td><td><a class="el" href="class_pg_options.html">PgOptions</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_pg_options.html#8f2ce059fced5fd91181223bddd10090">optionMapIterator_t</a> typedef</td><td><a class="el" href="class_pg_options.html">PgOptions</a></td><td></td></tr>
@@ -79,7 +79,7 @@
   <tr class="memlist"><td><a class="el" href="class_pg_options.html#da18bd8d5b64cf07665e679cc85875c0">usage</a>(bool printOpts=true)</td><td><a class="el" href="class_pg_options.html">PgOptions</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="class_pg_options.html#34e6f67b6cc451ad41bf6159a58e20c2">usage</a>(std::set&lt; std::string &gt; &amp;hiddenOpts, bool printOpts=true)</td><td><a class="el" href="class_pg_options.html">PgOptions</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_pg_options.html#ff28d0d5ec233b301876fc5fd10d42d9">~PgOptions</a>()</td><td><a class="el" href="class_pg_options.html">PgOptions</a></td><td></td></tr>
-</table><hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:34 2009 for Affymetrix Fusion SDK by&nbsp;
+</table><hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:45 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

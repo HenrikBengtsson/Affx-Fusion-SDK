@@ -1,3 +1,23 @@
+/////////////////////////////////////////////////////////////////
+//
+// Copyright (C) 2009 Affymetrix, Inc.
+//
+// This library is free software; you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published
+// by the Free Software Foundation; either version 2.1 of the License,
+// or (at your option) any later version.
+//
+// This library is distributed in the hope that it will be useful, but
+// WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+// or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License
+// for more details.
+//
+// You should have received a copy of the GNU Lesser General Public License
+// along with this library; if not, write to the Free Software Foundation, Inc.,
+// 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA 
+//
+/////////////////////////////////////////////////////////////////
+
 package affymetrix.calvin.parsers;
 
 import org.xml.sax.SAXException;
@@ -17,7 +37,13 @@ public class ArrayFileReader {
 	}
 
 	/**
-	 * Read the entire file using the XML SAX parser.
+	 * Reads the entire ARR file or just the header using the XML SAX parser.
+	 * 
+	 * @param fileName		the fully qualified name of the ARR file.
+	 * @param arrayData		the ArrayData object that will be populated with data from the ARR file.
+	 * @param headerOnly	if false the whole file is read; if true only the header is read.
+	 * 
+	 * @return	true if successfully read; false otherwise.
 	 */
 	boolean read(String fileName, ArrayData arrayData, boolean headerOnly) {
 		arrayData.clear();
@@ -35,6 +61,7 @@ public class ArrayFileReader {
 
 		try {
 			reader.parse(fileName);
+			status = true;
 		}
 		catch (SAXArrayStopParsingException se) {
 			status = true;

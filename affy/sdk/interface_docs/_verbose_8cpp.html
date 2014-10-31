@@ -25,11 +25,24 @@
 <a class="el" href="dir_0083bb8eedef7fed63dbf70caf86d00a.html">FusionSDK</a>&nbsp;&raquo&nbsp;<a class="el" href="dir_e86b6dbad4e625ef3fbba6406e2d4163.html">affy</a>&nbsp;&raquo&nbsp;<a class="el" href="dir_f87490fa8939fe2ce5b8b80cbaa3c2fa.html">sdk</a>&nbsp;&raquo&nbsp;<a class="el" href="dir_374f7a135d973daad145d25feb2e5488.html">util</a></div>
 <h1>Verbose.cpp File Reference</h1>Class for doing logging and some command line ui. <a href="#_details">More...</a>
 <p>
+<code>#include &quot;<a class="el" href="_string_utils_8h-source.html">calvin_files/utils/src/StringUtils.h</a>&quot;</code><br>
+<code>#include &quot;portability/affy-system-api.h&quot;</code><br>
+<code>#include &quot;<a class="el" href="_fs_8h-source.html">util/Fs.h</a>&quot;</code><br>
+<code>#include &quot;<a class="el" href="_util_8h-source.html">util/Util.h</a>&quot;</code><br>
 <code>#include &quot;<a class="el" href="_verbose_8h-source.html">util/Verbose.h</a>&quot;</code><br>
+<code>#include &lt;cstdlib&gt;</code><br>
+<code>#include &lt;fstream&gt;</code><br>
 
 <p>
 <a href="_verbose_8cpp-source.html">Go to the source code of this file.</a><table border="0" cellpadding="0" cellspacing="0">
 <tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Functions</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_verbose_8cpp.html#8a78cc79f6a7435406ab45b2d2720dc3">em_out</a> (const std::string &amp;msg)</td></tr>
+
+<tr><td colspan="2"><br><h2>Variables</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">std::fstream *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_verbose_8cpp.html#1f9be6dcbfc0f25978634666250c94e2">em_out_fstream</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">a static pointer to the fstream which will be used for "emergency debugging output".  <a href="#1f9be6dcbfc0f25978634666250c94e2"></a><br></td></tr>
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
 Class for doing logging and some command line ui. 
@@ -38,7 +51,54 @@ Class for doing logging and some command line ui.
 <dl class="date" compact><dt><b>Date:</b></dt><dd>Fri Oct 21 17:06:17 2005 </dd></dl>
 
 <p>
-Definition in file <a class="el" href="_verbose_8cpp-source.html">Verbose.cpp</a>.<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:27 2009 for Affymetrix Fusion SDK by&nbsp;
+Definition in file <a class="el" href="_verbose_8cpp-source.html">Verbose.cpp</a>.<hr><h2>Function Documentation</h2>
+<a class="anchor" name="8a78cc79f6a7435406ab45b2d2720dc3"></a><!-- doxytag: member="Verbose.cpp::em_out" ref="8a78cc79f6a7435406ab45b2d2720dc3" args="(const std::string &amp;msg)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void em_out           </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>msg</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>
+Definition at line <a class="el" href="_verbose_8cpp-source.html#l00051">51</a> of file <a class="el" href="_verbose_8cpp-source.html">Verbose.cpp</a>.
+<p>
+References <a class="el" href="_verbose_8cpp-source.html#l00049">em_out_fstream</a>, and <a class="el" href="_convert_8h-source.html#l00227">ToStr()</a>.
+</div>
+</div><p>
+<hr><h2>Variable Documentation</h2>
+<a class="anchor" name="1f9be6dcbfc0f25978634666250c94e2"></a><!-- doxytag: member="Verbose.cpp::em_out_fstream" ref="1f9be6dcbfc0f25978634666250c94e2" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::fstream* <a class="el" href="_verbose_8cpp.html#1f9be6dcbfc0f25978634666250c94e2">em_out_fstream</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+a static pointer to the fstream which will be used for "emergency debugging output". 
+<p>
+
+<p>
+Definition at line <a class="el" href="_verbose_8cpp-source.html#l00049">49</a> of file <a class="el" href="_verbose_8cpp-source.html">Verbose.cpp</a>.
+<p>
+Referenced by <a class="el" href="_verbose_8cpp-source.html#l00051">em_out()</a>.
+</div>
+</div><p>
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:38 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

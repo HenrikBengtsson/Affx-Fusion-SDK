@@ -78,7 +78,7 @@
 <a name="l00056"></a>00056 {
 <a name="l00057"></a>00057         <a class="code" href="classaffxchpwriter_1_1_c_c_h_p_file_updater.html#d33063c2b63d7dcadee9c443d8492a0b">CloseCHPFile</a>();
 <a name="l00058"></a>00058         <a class="code" href="classaffxchpwriter_1_1_c_c_h_p_file_updater.html#ad780a8d43678cc46319e5047137eb87">m_CHPFile</a> = <span class="keyword">new</span> ofstream(fileName, ios::binary | ios::app);
-<a name="l00059"></a>00059         <span class="keywordflow">if</span> (!<a class="code" href="classaffxchpwriter_1_1_c_c_h_p_file_updater.html#ad780a8d43678cc46319e5047137eb87">m_CHPFile</a>) { <a class="code" href="class_err.html#2c92074a0e89f02bba1c217b6c65b000">Err::errAbort</a>(<span class="stringliteral">"CCHPFileUpdater::OpenCHPFile() - Unable to open CHP file for updating: "</span> + <a class="code" href="_convert_8h.html#9e68e488e4da0371aea30596313537df">ToStr</a>(fileName)); }
+<a name="l00059"></a>00059         <span class="keywordflow">if</span> (!<a class="code" href="classaffxchpwriter_1_1_c_c_h_p_file_updater.html#ad780a8d43678cc46319e5047137eb87">m_CHPFile</a>) { <a class="code" href="class_err.html#121c0cbb1687c93444a1b5f7f6ea56af">Err::errAbort</a>(<span class="stringliteral">"CCHPFileUpdater::OpenCHPFile() - Unable to open CHP file for updating: "</span> + <a class="code" href="_convert_8h.html#9e68e488e4da0371aea30596313537df">ToStr</a>(fileName)); }
 <a name="l00060"></a>00060 }
 <a name="l00061"></a>00061 
 <a name="l00062"></a><a class="code" href="classaffxchpwriter_1_1_c_c_h_p_file_updater.html#68656a99410f6a373be87224714d9c4a">00062</a> <span class="keywordtype">void</span> <a class="code" href="classaffxchpwriter_1_1_c_c_h_p_file_updater.html#68656a99410f6a373be87224714d9c4a">CCHPFileUpdater::UpdateExpressionEntry</a>(<span class="keywordtype">int</span> row, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> Detection, <span class="keywordtype">float</span> DetectionPValue, <span class="keywordtype">float</span> Signal, <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> NumPairs, <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> NumUsedPairs)
@@ -129,7 +129,7 @@
 <a name="l00107"></a>00107                 <a class="code" href="classaffxchpwriter_1_1_c_c_h_p_file_updater.html#ad780a8d43678cc46319e5047137eb87">m_CHPFile</a> = NULL;
 <a name="l00108"></a>00108         }
 <a name="l00109"></a>00109 }
-</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:15 2009 for Affymetrix Fusion SDK by&nbsp;
+</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:23 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

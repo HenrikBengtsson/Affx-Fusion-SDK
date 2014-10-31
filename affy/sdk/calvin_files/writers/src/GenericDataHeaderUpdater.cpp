@@ -20,6 +20,7 @@
 
 #include "calvin_files/writers/src/GenericDataHeaderUpdater.h"
 //
+#include "calvin_files/data/src/GenericData.h"
 #include "calvin_files/parameter/src/ParameterNameValueType.h"
 #include "calvin_files/writers/src/FileHeaderUpdater.h"
 #include "calvin_files/writers/src/FileOutput.h"
@@ -146,3 +147,34 @@ int32_t GenericDataHeaderUpdater::GetBytesFromGenericDataHdrStartToParameterList
 		FIELD_LEN_SIZE + (int32_t)currentHdr->GetLocale().length()*WCHAR_T_SIZE +
 		FIELD_LEN_SIZE;
 }
+
+
+//$$
+void UpdateFileHeaderParameter(const std::string &filename, const std::wstring &paramName, float paramValue)
+{
+	//std::ofstream os;
+	//GenericDataHeader updateHdr;
+	//GenericData data;
+	//GenericFileReader reader;
+	//ParameterNameValueType nvt;
+	//GenericDataHeaderUpdater updater;
+
+	//// Read in the file
+	//reader.SetFilename(filename);
+	//reader.ReadHeader(data);
+
+	//// Open the file for writing
+	//os.open(filename.c_str(), std::ios::out|std::ios::binary|std::ios::in);
+
+	//// Not sure if you need to update the file id. It’s in the test case, but not sure if this is required.
+	//AffymetrixGuidType newFileId = AffymetrixGuid::GenerateNewGuid();
+	//updateHdr.SetFileId(newFileId);
+
+	//// Update the header of the file then close it.
+	//nvt.SetName(paramName);
+	//nvt.SetValueFloat(paramValue);
+	//updateHdr.AddNameValParam(nvt);
+	//updater.Update(os, updateHdr, *data.Header().GetGenericDataHdr()));
+	//os.close();
+}
+

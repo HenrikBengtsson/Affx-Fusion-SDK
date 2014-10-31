@@ -50,45 +50,14 @@
 <tr><td class="memItemLeft" nowrap align="right" valign="top">static bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#38e0b2532b9cc8b070efb0f472f42c35">endsWithStr</a> (const std::string &amp;str, const std::string &amp;ending, int posFromEnd)</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Checks to see if STR ends with ENDING ignoring the last POSFROMEND chars. Basicly the POSFROMEND acts as a wildcard "." at the end of the string.  <a href="#38e0b2532b9cc8b070efb0f472f42c35"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">static std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#5b31bc660526f70d6a20a94a0cc37caf">findLibFile</a> (const std::string &amp;fileName, const std::string &amp;searchPath=&quot;&quot;)</td></tr>
-
-<tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#08a6db19fe822f8362b5479d0991312c">mustOpenToWrite</a> (std::ofstream &amp;out, const std::string &amp;fileName)</td></tr>
-
-<tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#5770d41bdd6087fefe3fb349ec5b456a">carefulClose</a> (std::ofstream &amp;out)</td></tr>
-
-<tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#34c69eb96716640b004e0db120f14f9d">carefulClose</a> (std::fstream &amp;out)</td></tr>
-
-<tr><td class="memItemLeft" nowrap align="right" valign="top">static bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#5857fc8140145cc6c0b6389fa443a99a">fileReadable</a> (const std::string &amp;fileName)</td></tr>
-
-<tr><td class="memItemLeft" nowrap align="right" valign="top">static bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#d30e8ab1fb59cff14e0094427d5d7bb8">fileExists</a> (const std::string &amp;fileName)</td></tr>
-
-<tr><td class="memItemLeft" nowrap align="right" valign="top">static bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#d99a7082377b498746da69f6ba62aae3">fileCopy</a> (const std::string &amp;in, const std::string &amp;out, bool throwOnError=true)</td></tr>
-
-<tr><td class="memItemLeft" nowrap align="right" valign="top">static bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#6123509028f7213cbf31cc8a0e30abb2">fileRename</a> (const std::string &amp;in, const std::string &amp;out, bool throwOnError=true)</td></tr>
-
-<tr><td class="memItemLeft" nowrap align="right" valign="top">static bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#c8c76734b088645313b1ef333ce3fdb6">fileRemove</a> (const std::string &amp;fileName, bool throwOnError=true)</td></tr>
-
-<tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#df111bc66695d4b3a9bc326a11f573d1">fileRemove</a> (std::vector&lt; std::string &gt; &amp;filesToRemove)</td></tr>
-
-<tr><td class="memItemLeft" nowrap align="right" valign="top">static bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#1f5b895609662fcc7c5663d60853c3fc">dirRemove</a> (const std::string &amp;dirName, bool throwOnError=true)</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">removes the directory  <a href="#1f5b895609662fcc7c5663d60853c3fc"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#21a08a463a4b0b321b58979b0404e017">chompLastIfSep</a> (std::string &amp;s)</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Chop off the last character if it is a path separator. windows stat() can't handle having it there.  <a href="#21a08a463a4b0b321b58979b0404e017"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">static std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#1cc2d9cdd9ce481d8d9f8d0737a4292f">chopSuffix</a> (const std::string &amp;s, char d= '.')</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">static bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#b6b21b7bb39caf646bdc89da1b063fea">directoryReadable</a> (const std::string &amp;dirName)</td></tr>
-
-<tr><td class="memItemLeft" nowrap align="right" valign="top">static bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#ddb931b560006fa7b41d1b5641e78908">directoryWritable</a> (const std::string &amp;dirName)</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">return true if directory exists and is readable, false otherwise  <a href="#ddb931b560006fa7b41d1b5641e78908"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">static bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#3b7cf2c4445da53b5498d2510a1174c1">makeDir</a> (const std::string &amp;dirName)</td></tr>
-
-<tr><td class="memItemLeft" nowrap align="right" valign="top">static bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#f2bbc22948ca19379af1278999fecbae">makeDirPath</a> (const std::string &amp;pathName)</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Creates a directory path.  <a href="#f2bbc22948ca19379af1278999fecbae"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#c0aefd5694432916da36f4f2cfe8bd76">chopString</a> (const std::string &amp;s, const char delim, std::vector&lt; std::string &gt; &amp;words)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#297d2016086e9127f513c77e48f98169">chopString</a> (const std::string &amp;s, const char *delims, std::vector&lt; std::string &gt; &amp;words)</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#a912567f9cdde6941ba305f4278b5828">trimString</a> (std::string &amp;s, const char *whitespace=&quot; \r\n\t&quot;)</td></tr>
 
@@ -99,20 +68,20 @@
 <tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#cda0844fbd5d927f78b8736975eab66a">changeEnd</a> (std::vector&lt; std::string &gt; &amp;str_vec, const std::string &amp;from, const std::string &amp;to)</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Change the endings of a vector of strings.  <a href="#cda0844fbd5d927f78b8736975eab66a"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">static std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#058bc4884a54d318b1f7ccc0db102d34">fileRoot</a> (const std::string &amp;filename)</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the root of a filename. Chops on '/' for unix and '\' or '/' windows.  <a href="#058bc4884a54d318b1f7ccc0db102d34"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">static std::vector&lt; std::string &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#d62a2d76bba223ac10794ca765754f7d">fileRoot</a> (const std::vector&lt; std::string &gt; &amp;filename_vec)</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Preform the fileRoot on a vector of filenames.  <a href="#d62a2d76bba223ac10794ca765754f7d"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">static bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#0d2126d2d7027b17fdcba5f94e18567e">sameString</a> (const std::string &amp;s1, const std::string &amp;s2)</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Check to see if two strings are the same.  <a href="#0d2126d2d7027b17fdcba5f94e18567e"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">static int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#02ce3dfd44d106d2da5ac6edd516fbe2">matrixDifferences</a> (const std::string &amp;targetFile, const std::string &amp;queryFile, int colSkip, int rowSkip, double epsilon, bool printMismatch, bool matchRows)</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#81d133cd77d241447c255476d65c690f">matrixDifferences</a> (const std::string &amp;targetFile, const std::string &amp;queryFile, int colSkip, int rowSkip, double epsilon, bool printMismatch, bool matchRows, double fraction=0.0, int printMismatchMax=-1)</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#f48d8be413de4e28b620e58e9f1d5ec1">subChar</a> (std::string &amp;s, char from, char to)</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">static std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#ed990ce9724efda6333e641fbb2cc852">convertPathName</a> (const std::string &amp;path, bool singleFile=true)</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#4f3f450e9baf79936a220deba4716f9d">replaceString</a> (std::string &amp;s, const std::string &amp;from, const std::string &amp;to)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#ab3925e1057c93124acb24fd2217eaec">breakByString</a> (const std::string &amp;s, const std::string &amp;delim, std::vector&lt; std::string &gt; &amp;words)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#9b07bb4e2d37ff95f9e3917308eac68f">removeChar</a> (std::string &amp;s, char character)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#c7deea35598bb4438637b912d8eb2be3">is32Bit</a> ()</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">static int32_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#425642d78784387daa25abdca75ecd17">schrageRandom</a> (int32_t *ix)</td></tr>
 
@@ -127,10 +96,6 @@
 <tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#0babcf1f4d1afa0fc46975782b0bda94">pushMemFreeAtStart</a> ()</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#9acb101ef69d9b05f53f6eb7f411ab14">popMemFreeAtStart</a> ()</td></tr>
-
-<tr><td class="memItemLeft" nowrap align="right" valign="top">static int64_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#4fd1850e7bfe292f167186f150155bb8">getAvailableDiskSpace</a> (const std::string &amp;path)</td></tr>
-
-<tr><td class="memItemLeft" nowrap align="right" valign="top">static int64_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#bd89105f973ffc1f96302a7f8980b0da">isSameVolume</a> (const std::string &amp;path1, const std::string &amp;path2)</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">static const char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#772cd3b6f20be1e6082a800bb38d5e08">nextWhiteSpace</a> (const char *)</td></tr>
 
@@ -164,6 +129,14 @@
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">static std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#1c7bcb4dafd24bc9c9aff2744f10d692">joinVectorString</a> (std::vector&lt; std::string &gt; toJoin, const std::string &amp;sep)</td></tr>
 
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#4c862e88eab3bbb0610702da59af1775">escapeString</a> (const std::string &amp;s, char c, char escape='\\')</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#29805eaef3cf6927099814b699afa6dc">deEscapeString</a> (std::string &amp;s, char escape='\\')</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static std::wstring&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#1c17631ec24ea786f63ec0599ccea3bb">toWString</a> (const std::string &amp;src)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#6372407731162e097168d74f44a94cc2">toString</a> (const std::wstring &amp;src)</td></tr>
+
 <tr><td colspan="2"><br><h2>Static Private Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">static <a class="el" href="class_util_1_1_static_mem.html">StaticMem</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util.html#44da0991bd0c86e8d222bec3b871974a">getStaticMem</a> ()</td></tr>
 
@@ -182,7 +155,7 @@ Utility functions for memory, etc.
 <p>
 
 <p>
-Definition at line <a class="el" href="_util_8h-source.html#l00123">123</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.<hr><h2>Member Function Documentation</h2>
+Definition at line <a class="el" href="_util_8h-source.html#l00099">99</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.<hr><h2>Member Function Documentation</h2>
 <a class="anchor" name="3f73433908596efd3e64a02706a6e75a"></a><!-- doxytag: member="Util::downcaseString_inplace" ref="3f73433908596efd3e64a02706a6e75a" args="(std::string &amp;str)" -->
 <div class="memitem">
 <div class="memproto">
@@ -207,7 +180,9 @@ Make the string all lowercase. <dl compact><dt><b>Parameters:</b></dt><dd>
 </dl>
 
 <p>
-Definition at line <a class="el" href="_util_8h-source.html#l00130">130</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.
+Definition at line <a class="el" href="_util_8h-source.html#l00106">106</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.
+<p>
+References <a class="el" href="namespaceaffx.html#70b95f08a97e5d9c6f54dfb40956c840">affx::tolower()</a>.
 </div>
 </div><p>
 <a class="anchor" name="b73e26f5a353284899216123a494e3bf"></a><!-- doxytag: member="Util::downcaseString" ref="b73e26f5a353284899216123a494e3bf" args="(const std::string &amp;str_orig)" -->
@@ -237,7 +212,7 @@ Copy and downcase a 8bit string.
 <dl class="return" compact><dt><b>Returns:</b></dt><dd></dd></dl>
 
 <p>
-Definition at line <a class="el" href="_util_8h-source.html#l00138">138</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.
+Definition at line <a class="el" href="_util_8h-source.html#l00114">114</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="ccf4f30492f3726aac3197a37b3f77cc"></a><!-- doxytag: member="Util::getTimeStamp" ref="ccf4f30492f3726aac3197a37b3f77cc" args="()" -->
@@ -259,9 +234,11 @@ Definition at line <a class="el" href="_util_8h-source.html#l00138">138</a> of f
 Get a timestamp string. <dl class="return" compact><dt><b>Returns:</b></dt><dd>- pointer to statically allocated buffer with time. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l01518">1518</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
+Definition at line <a class="el" href="_util_8cpp-source.html#l00861">861</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
 <p>
-Referenced by <a class="el" href="_tsv_join_8cpp-source.html#l00287">tsvJoin::beginOutputHeader()</a>, <a class="el" href="_base_engine_8cpp-source.html#l00178">BaseEngine::run()</a>, and <a class="el" href="_dump_pgf_8cpp-source.html#l00376">dumpPgf::writeOutputHeader()</a>.
+References <a class="el" href="_err_8h-source.html#l00054">APT_ERR_ASSERT</a>, and <a class="el" href="_util_8h-source.html#l00220">trimString()</a>.
+<p>
+Referenced by <a class="el" href="_tsv_join_8cpp-source.html#l00285">tsvJoin::beginOutputHeader()</a>, <a class="el" href="_base_engine_8cpp-source.html#l00290">BaseEngine::run()</a>, and <a class="el" href="_dump_pgf_8cpp-source.html#l00374">dumpPgf::writeOutputHeader()</a>.
 </div>
 </div><p>
 <a class="anchor" name="1eefe5a6e76298c2df9dd6d07a36a1a7"></a><!-- doxytag: member="Util::round" ref="1eefe5a6e76298c2df9dd6d07a36a1a7" args="(double x)" -->
@@ -283,7 +260,7 @@ Referenced by <a class="el" href="_tsv_join_8cpp-source.html#l00287">tsvJoin::be
 <p>
 Some older compilers (solaris) don't have a round function. 
 <p>
-Definition at line <a class="el" href="_util_8h-source.html#l00169">169</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.
+Definition at line <a class="el" href="_util_8h-source.html#l00145">145</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="508b7aff9569ed929945d0d37eca384e"></a><!-- doxytag: member="Util::cloneString" ref="508b7aff9569ed929945d0d37eca384e" args="(const char *)" -->
@@ -311,9 +288,9 @@ Create a copy of a string. Free this with delete [] (or freezArray()) when done.
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>char * newly allocated c-string. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l00117">117</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
+Definition at line <a class="el" href="_util_8cpp-source.html#l00122">122</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
 <p>
-Referenced by <a class="el" href="_table_file_8cpp-source.html#l00107">TableFile::open()</a>.
+Referenced by <a class="el" href="_table_file_8cpp-source.html#l00106">TableFile::open()</a>.
 </div>
 </div><p>
 <a class="anchor" name="b074b74806364312a75e60933cd6d3e7"></a><!-- doxytag: member="Util::stringEndsWith" ref="b074b74806364312a75e60933cd6d3e7" args="(const std::string &amp;str, const std::string &amp;end)" -->
@@ -353,7 +330,7 @@ Does the string end with the other string?
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>true if str ends with endstr. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l00146">146</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
+Definition at line <a class="el" href="_util_8cpp-source.html#l00151">151</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
 </div>
 </div><p>
 <a class="anchor" name="3f9b6bdba823e1f1162ffb6c3202f1d3"></a><!-- doxytag: member="Util::endsWithStr" ref="3f9b6bdba823e1f1162ffb6c3202f1d3" args="(const std::string &amp;str, const std::string &amp;ending)" -->
@@ -393,7 +370,7 @@ Check to see if STR ends with ENDING.
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>true if it does. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l00177">177</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
+Definition at line <a class="el" href="_util_8cpp-source.html#l00182">182</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
 </div>
 </div><p>
 <a class="anchor" name="38e0b2532b9cc8b070efb0f472f42c35"></a><!-- doxytag: member="Util::endsWithStr" ref="38e0b2532b9cc8b070efb0f472f42c35" args="(const std::string &amp;str, const std::string &amp;ending, int posFromEnd)" -->
@@ -440,417 +417,7 @@ Checks to see if STR ends with ENDING ignoring the last POSFROMEND chars. Basicl
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>true if it does </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l00168">168</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
-</div>
-</div><p>
-<a class="anchor" name="5b31bc660526f70d6a20a94a0cc37caf"></a><!-- doxytag: member="Util::findLibFile" ref="5b31bc660526f70d6a20a94a0cc37caf" args="(const std::string &amp;fileName, const std::string &amp;searchPath=&quot;&quot;)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string Util::findLibFile           </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&nbsp;</td>
-          <td class="paramname"> <em>fileName</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&nbsp;</td>
-          <td class="paramname"> <em>searchPath</em> = <code>&quot;&quot;</code></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td width="100%"><code> [static]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Search the affy library file path for the actual file name to open <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>fileName</em>&nbsp;</td><td>- the name of the file to find </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>searchPath</em>&nbsp;</td><td>- alternative search path </td></tr>
-  </table>
-</dl>
-
-<p>
-<dl compact><dt><b><a class="el" href="todo.html#_todo000031">Todo:</a></b></dt><dd>do we handle ';' on windows? </dd></dl>
-
-<p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l00183">183</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
-<p>
-References <a class="el" href="_util_8cpp-source.html#l00663">chopString()</a>, <a class="el" href="_util_8cpp-source.html#l00284">fileExists()</a>, and <a class="el" href="_util_8h-source.html#l00069">PATH_SEPARATOR</a>.
-<p>
-Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00107">BaseEngine::setLibFileOpt()</a>.
-</div>
-</div><p>
-<a class="anchor" name="08a6db19fe822f8362b5479d0991312c"></a><!-- doxytag: member="Util::mustOpenToWrite" ref="08a6db19fe822f8362b5479d0991312c" args="(std::ofstream &amp;out, const std::string &amp;fileName)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Util::mustOpenToWrite           </td>
-          <td>(</td>
-          <td class="paramtype">std::ofstream &amp;&nbsp;</td>
-          <td class="paramname"> <em>out</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&nbsp;</td>
-          <td class="paramname"> <em>fileName</em></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td width="100%"><code> [static]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Open an ofstream for writing to. Abort if can't open for some reason. <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>out</em>&nbsp;</td><td>- stream to be opened. </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>fileName</em>&nbsp;</td><td>- name of file to be opened. </td></tr>
-  </table>
-</dl>
-
-<p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l00222">222</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
-<p>
-References <a class="el" href="_util_8cpp-source.html#l00887">convertPathName()</a>, and <a class="el" href="_err_8cpp-source.html#l00057">Err::errAbort()</a>.
-<p>
-Referenced by <a class="el" href="_dump_pgf_8cpp-source.html#l00095">dumpPgf::dumpPgf()</a>, <a class="el" href="apt-engine-wrapper_8cpp-source.html#l00126">main()</a>, and <a class="el" href="_tsv_join_8cpp-source.html#l00067">tsvJoin::tsvJoin()</a>.
-</div>
-</div><p>
-<a class="anchor" name="5770d41bdd6087fefe3fb349ec5b456a"></a><!-- doxytag: member="Util::carefulClose" ref="5770d41bdd6087fefe3fb349ec5b456a" args="(std::ofstream &amp;out)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Util::carefulClose           </td>
-          <td>(</td>
-          <td class="paramtype">std::ofstream &amp;&nbsp;</td>
-          <td class="paramname"> <em>out</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td width="100%"><code> [static]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Close an output stream making sure that it is ok before doing so. <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>out</em>&nbsp;</td><td>- stream to be closed. </td></tr>
-  </table>
-</dl>
-
-<p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l00239">239</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
-<p>
-References <a class="el" href="_err_8cpp-source.html#l00057">Err::errAbort()</a>.
-</div>
-</div><p>
-<a class="anchor" name="34c69eb96716640b004e0db120f14f9d"></a><!-- doxytag: member="Util::carefulClose" ref="34c69eb96716640b004e0db120f14f9d" args="(std::fstream &amp;out)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Util::carefulClose           </td>
-          <td>(</td>
-          <td class="paramtype">std::fstream &amp;&nbsp;</td>
-          <td class="paramname"> <em>out</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td width="100%"><code> [static]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Close an output stream making sure that it is ok before doing so. <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>out</em>&nbsp;</td><td>- stream to be closed. </td></tr>
-  </table>
-</dl>
-
-<p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l00253">253</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
-<p>
-References <a class="el" href="_err_8cpp-source.html#l00057">Err::errAbort()</a>.
-</div>
-</div><p>
-<a class="anchor" name="5857fc8140145cc6c0b6389fa443a99a"></a><!-- doxytag: member="Util::fileReadable" ref="5857fc8140145cc6c0b6389fa443a99a" args="(const std::string &amp;fileName)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Util::fileReadable           </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&nbsp;</td>
-          <td class="paramname"> <em>fileName</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td width="100%"><code> [static]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Return true if file exists, false otherwise. <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>fileName</em>&nbsp;</td><td></td></tr>
-  </table>
-</dl>
-
-<p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l00267">267</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
-<p>
-References <a class="el" href="_util_8cpp-source.html#l00887">convertPathName()</a>, <a class="el" href="_util_8cpp-source.html#l00057">POSIX_CLOSE</a>, and <a class="el" href="_util_8cpp-source.html#l00056">POSIX_OPEN</a>.
-<p>
-Referenced by <a class="el" href="_matrix_check_8h-source.html#l00082">MatrixCheck::check()</a>, <a class="el" href="_util_8cpp-source.html#l00284">fileExists()</a>, <a class="el" href="_tmp_file_factory_8cpp-source.html#l00198">TmpFileFactory::genFilename_basic()</a>, and <a class="el" href="test-tmpfilefactory_8cpp-source.html#l00045">test_write_data()</a>.
-</div>
-</div><p>
-<a class="anchor" name="d30e8ab1fb59cff14e0094427d5d7bb8"></a><!-- doxytag: member="Util::fileExists" ref="d30e8ab1fb59cff14e0094427d5d7bb8" args="(const std::string &amp;fileName)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Util::fileExists           </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&nbsp;</td>
-          <td class="paramname"> <em>fileName</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td width="100%"><code> [static]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Return true if file exists, false otherwise. <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>fileName</em>&nbsp;</td><td></td></tr>
-  </table>
-</dl>
-
-<p>
-<dl compact><dt><b><a class="el" href="todo.html#_todo000032">Todo:</a></b></dt><dd>do we want to make a distinction between Exists and Readable? </dd></dl>
-
-<p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l00284">284</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
-<p>
-References <a class="el" href="_util_8cpp-source.html#l00887">convertPathName()</a>, and <a class="el" href="_util_8cpp-source.html#l00267">fileReadable()</a>.
-<p>
-Referenced by <a class="el" href="_util_8cpp-source.html#l00339">fileRemove()</a>, <a class="el" href="_util_8cpp-source.html#l00183">findLibFile()</a>, and <a class="el" href="_regression_test_8h-source.html#l00123">RegressionTest::pass()</a>.
-</div>
-</div><p>
-<a class="anchor" name="d99a7082377b498746da69f6ba62aae3"></a><!-- doxytag: member="Util::fileCopy" ref="d99a7082377b498746da69f6ba62aae3" args="(const std::string &amp;in, const std::string &amp;out, bool throwOnError=true)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Util::fileCopy           </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&nbsp;</td>
-          <td class="paramname"> <em>in</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&nbsp;</td>
-          <td class="paramname"> <em>out</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&nbsp;</td>
-          <td class="paramname"> <em>throwOnError</em> = <code>true</code></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td width="100%"><code> [static]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Return true on success. False otherwise <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>in</em>&nbsp;</td><td>- file to copy </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>out</em>&nbsp;</td><td>- name of the new file </td></tr>
-  </table>
-</dl>
-
-<p>
-<dl compact><dt><b><a class="el" href="todo.html#_todo000033">Todo:</a></b></dt><dd>there is probably a better way to copy files and check for errors </dd></dl>
-
-<p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l00393">393</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
-<p>
-References <a class="el" href="_util_8cpp-source.html#l00887">convertPathName()</a>, and <a class="el" href="_err_8cpp-source.html#l00057">Err::errAbort()</a>.
-</div>
-</div><p>
-<a class="anchor" name="6123509028f7213cbf31cc8a0e30abb2"></a><!-- doxytag: member="Util::fileRename" ref="6123509028f7213cbf31cc8a0e30abb2" args="(const std::string &amp;in, const std::string &amp;out, bool throwOnError=true)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Util::fileRename           </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&nbsp;</td>
-          <td class="paramname"> <em>in</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&nbsp;</td>
-          <td class="paramname"> <em>out</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&nbsp;</td>
-          <td class="paramname"> <em>throwOnError</em> = <code>true</code></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td width="100%"><code> [static]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Return true on success. False otherwise <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>in</em>&nbsp;</td><td>- file to copy </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>out</em>&nbsp;</td><td>- name of the new file </td></tr>
-  </table>
-</dl>
-
-<p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l00461">461</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
-<p>
-References <a class="el" href="_util_8cpp-source.html#l00435">_uncheckedFileRename()</a>, and <a class="el" href="_err_8cpp-source.html#l00057">Err::errAbort()</a>.
-</div>
-</div><p>
-<a class="anchor" name="c8c76734b088645313b1ef333ce3fdb6"></a><!-- doxytag: member="Util::fileRemove" ref="c8c76734b088645313b1ef333ce3fdb6" args="(const std::string &amp;fileName, bool throwOnError=true)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Util::fileRemove           </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&nbsp;</td>
-          <td class="paramname"> <em>fileName</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&nbsp;</td>
-          <td class="paramname"> <em>throwOnError</em> = <code>true</code></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td width="100%"><code> [static]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Deletes a file. <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>fileName</em>&nbsp;</td><td>The name of the file to delete. </td></tr>
-  </table>
-</dl>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd>True if the file was deleted. </dd></dl>
-
-<p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l00339">339</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
-<p>
-References <a class="el" href="_util_8cpp-source.html#l00308">_uncheckedFileRemove()</a>, <a class="el" href="_err_8cpp-source.html#l00057">Err::errAbort()</a>, and <a class="el" href="_util_8cpp-source.html#l00284">fileExists()</a>.
-<p>
-Referenced by <a class="el" href="_tmp_file_factory_8cpp-source.html#l00151">TmpFileFactory::cleanUp()</a>, <a class="el" href="_util_8cpp-source.html#l00349">fileRemove()</a>, <a class="el" href="_regression_test_8h-source.html#l00123">RegressionTest::pass()</a>, <a class="el" href="_affx_file_8h-source.html#l00057">AffxFile::remove()</a>, and <a class="el" href="tsv-util_8cpp-source.html#l00427">tsv_util_paste()</a>.
-</div>
-</div><p>
-<a class="anchor" name="df111bc66695d4b3a9bc326a11f573d1"></a><!-- doxytag: member="Util::fileRemove" ref="df111bc66695d4b3a9bc326a11f573d1" args="(std::vector&lt; std::string &gt; &amp;filesToRemove)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Util::fileRemove           </td>
-          <td>(</td>
-          <td class="paramtype">std::vector&lt; std::string &gt; &amp;&nbsp;</td>
-          <td class="paramname"> <em>filesToRemove</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td width="100%"><code> [static]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-
-<p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l00349">349</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
-<p>
-References <a class="el" href="_err_8cpp-source.html#l00057">Err::errAbort()</a>, and <a class="el" href="_util_8cpp-source.html#l00339">fileRemove()</a>.
-</div>
-</div><p>
-<a class="anchor" name="1f5b895609662fcc7c5663d60853c3fc"></a><!-- doxytag: member="Util::dirRemove" ref="1f5b895609662fcc7c5663d60853c3fc" args="(const std::string &amp;dirName, bool throwOnError=true)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Util::dirRemove           </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&nbsp;</td>
-          <td class="paramname"> <em>dirName</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&nbsp;</td>
-          <td class="paramname"> <em>throwOnError</em> = <code>true</code></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td width="100%"><code> [static]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-removes the directory 
-<p>
-<dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>dirName</em>&nbsp;</td><td>name of the dir to remove. </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>throwOnError</em>&nbsp;</td><td>throw an error if it fails. </td></tr>
-  </table>
-</dl>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd>true if removed. </dd></dl>
-
-<p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l00364">364</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
-<p>
-References <a class="el" href="_util_8cpp-source.html#l00887">convertPathName()</a>, and <a class="el" href="_err_8cpp-source.html#l00057">Err::errAbort()</a>.
-<p>
-Referenced by <a class="el" href="_tmp_file_factory_8cpp-source.html#l00151">TmpFileFactory::cleanUp()</a>, and <a class="el" href="_base_engine_8cpp-source.html#l00305">BaseEngine::removeTempDir()</a>.
+Definition at line <a class="el" href="_util_8cpp-source.html#l00173">173</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
 </div>
 </div><p>
 <a class="anchor" name="21a08a463a4b0b321b58979b0404e017"></a><!-- doxytag: member="Util::chompLastIfSep" ref="21a08a463a4b0b321b58979b0404e017" args="(std::string &amp;s)" -->
@@ -879,11 +446,9 @@ Chop off the last character if it is a path separator. windows stat() can't hand
 </dl>
 
 <p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l00474">474</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
+Definition at line <a class="el" href="_util_8cpp-source.html#l00192">192</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
 <p>
-References <a class="el" href="_util_8h-source.html#l00069">PATH_SEPARATOR</a>.
-<p>
-Referenced by <a class="el" href="_util_8cpp-source.html#l00515">directoryReadable()</a>, and <a class="el" href="_util_8cpp-source.html#l00553">directoryWritable()</a>.
+References <a class="el" href="_fs_8cpp-source.html#l00237">Fs::osPathSep()</a>.
 </div>
 </div><p>
 <a class="anchor" name="1cc2d9cdd9ce481d8d9f8d0737a4292f"></a><!-- doxytag: member="Util::chopSuffix" ref="1cc2d9cdd9ce481d8d9f8d0737a4292f" args="(const std::string &amp;s, char d= '.')" -->
@@ -920,144 +485,7 @@ Chop the last suffix (as defined by '.') from a string <dl compact><dt><b>Parame
 </dl>
 
 <p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l00485">485</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
-</div>
-</div><p>
-<a class="anchor" name="b6b21b7bb39caf646bdc89da1b063fea"></a><!-- doxytag: member="Util::directoryReadable" ref="b6b21b7bb39caf646bdc89da1b063fea" args="(const std::string &amp;dirName)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Util::directoryReadable           </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&nbsp;</td>
-          <td class="paramname"> <em>dirName</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td width="100%"><code> [static]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Return true if directory exists and is readable, false otherwise. <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>dirName</em>&nbsp;</td><td></td></tr>
-  </table>
-</dl>
-
-<p>
-<dl compact><dt><b><a class="el" href="todo.html#_todo000034">Todo:</a></b></dt><dd>this will fail on long file names under windows </dd></dl>
-
-<p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l00515">515</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
-<p>
-References <a class="el" href="_util_8cpp-source.html#l00474">chompLastIfSep()</a>.
-<p>
-Referenced by <a class="el" href="_util_8cpp-source.html#l00638">makeDirPath()</a>, and <a class="el" href="_regression_test_8h-source.html#l00227">RegressionTest::syncDirectory()</a>.
-</div>
-</div><p>
-<a class="anchor" name="ddb931b560006fa7b41d1b5641e78908"></a><!-- doxytag: member="Util::directoryWritable" ref="ddb931b560006fa7b41d1b5641e78908" args="(const std::string &amp;dirName)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Util::directoryWritable           </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&nbsp;</td>
-          <td class="paramname"> <em>dirName</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td width="100%"><code> [static]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-return true if directory exists and is readable, false otherwise 
-<p>
-Return true if directory exists and is readable, false otherwise. <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>dirName</em>&nbsp;</td><td></td></tr>
-  </table>
-</dl>
-
-<p>
-<dl compact><dt><b><a class="el" href="todo.html#_todo000035">Todo:</a></b></dt><dd>this will fail on long file names under windows </dd></dl>
-
-<p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l00553">553</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
-<p>
-References <a class="el" href="_util_8cpp-source.html#l00474">chompLastIfSep()</a>.
-<p>
-Referenced by <a class="el" href="_tmp_file_factory_8cpp-source.html#l00245">TmpFileFactory::genDirname()</a>, <a class="el" href="_util_8cpp-source.html#l00604">makeDir()</a>, <a class="el" href="_base_engine_8cpp-source.html#l00294">BaseEngine::makeTempDir()</a>, and <a class="el" href="_base_engine_8cpp-source.html#l00305">BaseEngine::removeTempDir()</a>.
-</div>
-</div><p>
-<a class="anchor" name="3b7cf2c4445da53b5498d2510a1174c1"></a><!-- doxytag: member="Util::makeDir" ref="3b7cf2c4445da53b5498d2510a1174c1" args="(const std::string &amp;dirName)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Util::makeDir           </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&nbsp;</td>
-          <td class="paramname"> <em>dirName</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td width="100%"><code> [static]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Make a directory. Returns true if directory is created successfully, false if directory exists and aborts if any other error is encountered. <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>dirName</em>&nbsp;</td><td>- Directory name to be made. </td></tr>
-  </table>
-</dl>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd>- true if created sucessfully, false if already exists. </dd></dl>
-
-<p>
-<dl compact><dt><b><a class="el" href="todo.html#_todo000036">Todo:</a></b></dt><dd>handle long file names on windows </dd></dl>
-
-<p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l00604">604</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
-<p>
-References <a class="el" href="_util_8cpp-source.html#l00553">directoryWritable()</a>, <a class="el" href="_err_8cpp-source.html#l00057">Err::errAbort()</a>, and <a class="el" href="_util_8cpp-source.html#l00058">POSIX_MKDIR</a>.
-<p>
-Referenced by <a class="el" href="_tmp_file_factory_8cpp-source.html#l00245">TmpFileFactory::genDirname()</a>, <a class="el" href="_util_8cpp-source.html#l00638">makeDirPath()</a>, and <a class="el" href="_base_engine_8cpp-source.html#l00294">BaseEngine::makeTempDir()</a>.
-</div>
-</div><p>
-<a class="anchor" name="f2bbc22948ca19379af1278999fecbae"></a><!-- doxytag: member="Util::makeDirPath" ref="f2bbc22948ca19379af1278999fecbae" args="(const std::string &amp;pathName)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Util::makeDirPath           </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&nbsp;</td>
-          <td class="paramname"> <em>pathName</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td width="100%"><code> [static]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Creates a directory path. 
-<p>
-<dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>pathName</em>&nbsp;</td><td></td></tr>
-  </table>
-</dl>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd>true if a writeable directory. </dd></dl>
-
-<p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l00638">638</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
-<p>
-References <a class="el" href="_util_8cpp-source.html#l00663">chopString()</a>, <a class="el" href="_util_8cpp-source.html#l00515">directoryReadable()</a>, and <a class="el" href="_util_8cpp-source.html#l00604">makeDir()</a>.
+Definition at line <a class="el" href="_util_8cpp-source.html#l00203">203</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
 </div>
 </div><p>
 <a class="anchor" name="c0aefd5694432916da36f4f2cfe8bd76"></a><!-- doxytag: member="Util::chopString" ref="c0aefd5694432916da36f4f2cfe8bd76" args="(const std::string &amp;s, const char delim, std::vector&lt; std::string &gt; &amp;words)" -->
@@ -1102,9 +530,56 @@ Chop up a string into a vector of words.<p>
 </dl>
 
 <p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l00663">663</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
+Definition at line <a class="el" href="_util_8cpp-source.html#l00258">258</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
 <p>
-Referenced by <a class="el" href="_util_8cpp-source.html#l00183">findLibFile()</a>, <a class="el" href="_util_8cpp-source.html#l00638">makeDirPath()</a>, and <a class="el" href="_convert_8cpp-source.html#l00383">Convert::strToIntVec()</a>.
+Referenced by <a class="el" href="_fs_8cpp-source.html#l01442">Fs::findLibFile()</a>, <a class="el" href="_convert_8cpp-source.html#l00429">Convert::strToIntVec()</a>, and <a class="el" href="_convert_8cpp-source.html#l00475">Convert::strToStrVec()</a>.
+</div>
+</div><p>
+<a class="anchor" name="297d2016086e9127f513c77e48f98169"></a><!-- doxytag: member="Util::chopString" ref="297d2016086e9127f513c77e48f98169" args="(const std::string &amp;s, const char *delims, std::vector&lt; std::string &gt; &amp;words)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Util::chopString           </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>delims</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::string &gt; &amp;&nbsp;</td>
+          <td class="paramname"> <em>words</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Chop up a string into a vector of words.<p>
+<dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>s</em>&nbsp;</td><td>- string of interest. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>delims</em>&nbsp;</td><td>- delimiters to split on. The split will occur at any character<ul>
+<li>among those present in the string. </li></ul>
+</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>words</em>&nbsp;</td><td>- vector to put words into, will be cleared then filled. </td></tr>
+  </table>
+</dl>
+
+<p>
+Definition at line <a class="el" href="_util_8cpp-source.html#l00281">281</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
 </div>
 </div><p>
 <a class="anchor" name="a912567f9cdde6941ba305f4278b5828"></a><!-- doxytag: member="Util::trimString" ref="a912567f9cdde6941ba305f4278b5828" args="(std::string &amp;s, const char *whitespace=&quot; \r\n\t&quot;)" -->
@@ -1143,9 +618,9 @@ Cut off any preceding and trailing white space.
 </dl>
 
 <p>
-Definition at line <a class="el" href="_util_8h-source.html#l00324">324</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.
+Definition at line <a class="el" href="_util_8h-source.html#l00220">220</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.
 <p>
-Referenced by <a class="el" href="_row_file_8cpp-source.html#l00095">RowFile::nextLine()</a>.
+Referenced by <a class="el" href="_line_file_8cpp-source.html#l00124">LineFile::getline()</a>, <a class="el" href="_util_8cpp-source.html#l00861">getTimeStamp()</a>, and <a class="el" href="_row_file_8cpp-source.html#l00094">RowFile::nextLine()</a>.
 </div>
 </div><p>
 <a class="anchor" name="e9d62d301c938a9185d03ade3cf4a757"></a><!-- doxytag: member="Util::changeEnd" ref="e9d62d301c938a9185d03ade3cf4a757" args="(std::string &amp;str, const std::string &amp;from, const std::string &amp;to)" -->
@@ -1191,9 +666,9 @@ Change the end of a string.
 </dl>
 
 <p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l01541">1541</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
+Definition at line <a class="el" href="_util_8cpp-source.html#l00872">872</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
 <p>
-Referenced by <a class="el" href="_util_8cpp-source.html#l01548">changeEnd()</a>.
+Referenced by <a class="el" href="_util_8cpp-source.html#l00879">changeEnd()</a>.
 </div>
 </div><p>
 <a class="anchor" name="cda0844fbd5d927f78b8736975eab66a"></a><!-- doxytag: member="Util::changeEnd" ref="cda0844fbd5d927f78b8736975eab66a" args="(std::vector&lt; std::string &gt; &amp;str_vec, const std::string &amp;from, const std::string &amp;to)" -->
@@ -1239,75 +714,9 @@ Change the endings of a vector of strings.
 </dl>
 
 <p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l01548">1548</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
+Definition at line <a class="el" href="_util_8cpp-source.html#l00879">879</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
 <p>
-References <a class="el" href="_util_8cpp-source.html#l01541">changeEnd()</a>.
-</div>
-</div><p>
-<a class="anchor" name="058bc4884a54d318b1f7ccc0db102d34"></a><!-- doxytag: member="Util::fileRoot" ref="058bc4884a54d318b1f7ccc0db102d34" args="(const std::string &amp;filename)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string Util::fileRoot           </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&nbsp;</td>
-          <td class="paramname"> <em>filename</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td width="100%"><code> [static]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Get the root of a filename. Chops on '/' for unix and '\' or '/' windows. 
-<p>
-<dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>s</em>&nbsp;</td><td>- File name to find root of. </td></tr>
-  </table>
-</dl>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd>- Root of string. </dd></dl>
-
-<p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l00684">684</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
-<p>
-References <a class="el" href="_affx_file_8cpp-source.html#l00240">AffxFile::parseFileName()</a>.
-<p>
-Referenced by <a class="el" href="apt-engine-wrapper_8cpp-source.html#l00126">main()</a>, <a class="el" href="_matrix_check_8h-source.html#l00063">MatrixCheck::MatrixCheck()</a>, <a class="el" href="_mixed_file_check_8h-source.html#l00057">MixedFileCheck::MixedFileCheck()</a>, <a class="el" href="_table_file_8cpp-source.html#l00107">TableFile::open()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l00346">CalvinChpCheck::ParameterNameValueTypeMostlySame()</a>, <a class="el" href="_chp_check_8h-source.html#l00193">ChpCheck::tagValuePairMostlySame()</a>, and <a class="el" href="_text_file_check_8h-source.html#l00050">TextFileCheck::TextFileCheck()</a>.
-</div>
-</div><p>
-<a class="anchor" name="d62a2d76bba223ac10794ca765754f7d"></a><!-- doxytag: member="Util::fileRoot" ref="d62a2d76bba223ac10794ca765754f7d" args="(const std::vector&lt; std::string &gt; &amp;filename_vec)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt; std::string &gt; Util::fileRoot           </td>
-          <td>(</td>
-          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&nbsp;</td>
-          <td class="paramname"> <em>filename_vec</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td width="100%"><code> [static]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Preform the fileRoot on a vector of filenames. 
-<p>
-<dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>filename_vec</em>&nbsp;</td><td>the vector files to 'fileRoot' </td></tr>
-  </table>
-</dl>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd></dd></dl>
-
-<p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l00691">691</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
-<p>
-References <a class="el" href="_affx_file_8cpp-source.html#l00240">AffxFile::parseFileName()</a>.
+References <a class="el" href="_util_8cpp-source.html#l00872">changeEnd()</a>.
 </div>
 </div><p>
 <a class="anchor" name="0d2126d2d7027b17fdcba5f94e18567e"></a><!-- doxytag: member="Util::sameString" ref="0d2126d2d7027b17fdcba5f94e18567e" args="(const std::string &amp;s1, const std::string &amp;s2)" -->
@@ -1347,10 +756,10 @@ Check to see if two strings are the same.
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>true if compare() considers them the same. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_util_8h-source.html#l00358">358</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.
+Definition at line <a class="el" href="_util_8h-source.html#l00245">245</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.
 </div>
 </div><p>
-<a class="anchor" name="02ce3dfd44d106d2da5ac6edd516fbe2"></a><!-- doxytag: member="Util::matrixDifferences" ref="02ce3dfd44d106d2da5ac6edd516fbe2" args="(const std::string &amp;targetFile, const std::string &amp;queryFile, int colSkip, int rowSkip, double epsilon, bool printMismatch, bool matchRows)" -->
+<a class="anchor" name="81d133cd77d241447c255476d65c690f"></a><!-- doxytag: member="Util::matrixDifferences" ref="81d133cd77d241447c255476d65c690f" args="(const std::string &amp;targetFile, const std::string &amp;queryFile, int colSkip, int rowSkip, double epsilon, bool printMismatch, bool matchRows, double fraction=0.0, int printMismatchMax=-1)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1394,7 +803,19 @@ Definition at line <a class="el" href="_util_8h-source.html#l00358">358</a> of f
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&nbsp;</td>
-          <td class="paramname"> <em>matchRows</em></td><td>&nbsp;</td>
+          <td class="paramname"> <em>matchRows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>fraction</em> = <code>0.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>printMismatchMax</em> = <code>-1</code></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
@@ -1415,20 +836,19 @@ Check each entry in two matrices to see if they are the same. If doing 'match-ro
     <tr><td valign="top"></td><td valign="top"><em>rowSkip</em>&nbsp;</td><td>- How many of initial rows to ignore (i.e. column header) </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>epsilon</em>&nbsp;</td><td>- What is the tolerance of difference. i.e. if q[i][j] - t[i][j] &gt;= epsilon then there is a difference. </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>printMismatch</em>&nbsp;</td><td>- Should we print out the cases where difference is &gt;= epsilon </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>matchRows</em>&nbsp;</td><td>- Should we try to match the rows based on the row identifiers.</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>matchRows</em>&nbsp;</td><td>- Should we try to match the rows based on the row identifiers. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>fraction</em>&nbsp;</td><td>- Maximum fractional difference considered equivalent (default: not used). </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>printMismatchMax</em>&nbsp;</td><td>- Maximum number of mismatches to print (default: no limit).</td></tr>
   </table>
 </dl>
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>- Number of differences &gt;= epsilon found. </dd></dl>
 
 <p>
-<dl compact><dt><b><a class="el" href="todo.html#_todo000037">Todo:</a></b></dt><dd>handle long file names on windows </dd></dl>
-
+Definition at line <a class="el" href="_util_8cpp-source.html#l00315">315</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
 <p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l00716">716</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
+References <a class="el" href="_table_file_8cpp-source.html#l00249">TableFile::columnFromFile()</a>, <a class="el" href="_fs_8cpp-source.html#l00599">Fs::convertToUncPath()</a>, <a class="el" href="_err_8cpp-source.html#l00068">Err::errAbort()</a>, <a class="el" href="apt-check-calvinchp_8cpp-source.html#l00050">failed</a>, <a class="el" href="_util_8cpp-source.html#l00851">isFinite()</a>, <a class="el" href="_row_file_8cpp-source.html#l00321">RowFile::matrixFromFile()</a>, <a class="el" href="affy-base-types_8h-source.html#l00059">Max</a>, <a class="el" href="_verbose_8cpp-source.html#l00259">Verbose::out()</a>, and <a class="el" href="_convert_8h-source.html#l00227">ToStr()</a>.
 <p>
-References <a class="el" href="_table_file_8cpp-source.html#l00247">TableFile::columnFromFile()</a>, <a class="el" href="_err_8cpp-source.html#l00057">Err::errAbort()</a>, <a class="el" href="_util_8cpp-source.html#l01508">isFinite()</a>, <a class="el" href="_row_file_8cpp-source.html#l00322">RowFile::matrixFromFile()</a>, <a class="el" href="_verbose_8cpp-source.html#l00168">Verbose::out()</a>, and <a class="el" href="_convert_8h-source.html#l00046">ToStr()</a>.
-<p>
-Referenced by <a class="el" href="_matrix_check_8h-source.html#l00082">MatrixCheck::check()</a>.
+Referenced by <a class="el" href="_matrix_check_8h-source.html#l00102">MatrixCheck::check()</a>.
 </div>
 </div><p>
 <a class="anchor" name="f48d8be413de4e28b620e58e9f1d5ec1"></a><!-- doxytag: member="Util::subChar" ref="f48d8be413de4e28b620e58e9f1d5ec1" args="(std::string &amp;s, char from, char to)" -->
@@ -1473,26 +893,32 @@ Replace the from character with the to character for all instances in string sup
 </dl>
 
 <p>
-Definition at line <a class="el" href="_util_8h-source.html#l00391">391</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.
+Definition at line <a class="el" href="_util_8h-source.html#l00284">284</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.
 <p>
-Referenced by <a class="el" href="_util_8cpp-source.html#l00887">convertPathName()</a>.
+Referenced by <a class="el" href="_msg_stream_8cpp-source.html#l00045">MsgStream::message()</a>.
 </div>
 </div><p>
-<a class="anchor" name="ed990ce9724efda6333e641fbb2cc852"></a><!-- doxytag: member="Util::convertPathName" ref="ed990ce9724efda6333e641fbb2cc852" args="(const std::string &amp;path, bool singleFile=true)" -->
+<a class="anchor" name="4f3f450e9baf79936a220deba4716f9d"></a><!-- doxytag: member="Util::replaceString" ref="4f3f450e9baf79936a220deba4716f9d" args="(std::string &amp;s, const std::string &amp;from, const std::string &amp;to)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::string Util::convertPathName           </td>
+          <td class="memname">void Util::replaceString           </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&nbsp;</td>
-          <td class="paramname"> <em>path</em>, </td>
+          <td class="paramtype">std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>s</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&nbsp;</td>
-          <td class="paramname"> <em>singleFile</em> = <code>true</code></td><td>&nbsp;</td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>to</em></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
@@ -1504,21 +930,112 @@ Referenced by <a class="el" href="_util_8cpp-source.html#l00887">convertPathName
 <div class="memdoc">
 
 <p>
-Simple minded function for converting unix paths to windows and vice-versa. Will fail if any drives are specified or any escaping of characters are going on. On windows this method will attempt to handle long paths/filenames by converting the specified path to a UNC absolute path with a leading "\\?\".<p>
+Replace the from string with the to string for all instances in string supplied.<p>
 <dl compact><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>path</em>&nbsp;</td><td>- filename/dirname to be converted </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>singleFile</em>&nbsp;</td><td>- boolean to indicate if the path/string is a single file or if it has multiple files (eg a whole command line). If it is a whole command line then to attempt to handle long paths/filenames on windows will be attempted</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>s</em>&nbsp;</td><td>- string to do the replacement in. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>from</em>&nbsp;</td><td>- original string to be replaced. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>to</em>&nbsp;</td><td>- string to do the replacing with. </td></tr>
   </table>
 </dl>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd>converted filename for that platform. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l00887">887</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
+Definition at line <a class="el" href="_util_8cpp-source.html#l00420">420</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
 <p>
-References <a class="el" href="_util_8h-source.html#l00069">PATH_SEPARATOR</a>, and <a class="el" href="_util_8h-source.html#l00391">subChar()</a>.
+References <a class="el" href="_util_8cpp-source.html#l00231">breakByString()</a>.
+</div>
+</div><p>
+<a class="anchor" name="ab3925e1057c93124acb24fd2217eaec"></a><!-- doxytag: member="Util::breakByString" ref="ab3925e1057c93124acb24fd2217eaec" args="(const std::string &amp;s, const std::string &amp;delim, std::vector&lt; std::string &gt; &amp;words)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Util::breakByString           </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>delim</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::string &gt; &amp;&nbsp;</td>
+          <td class="paramname"> <em>words</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
 <p>
-Referenced by <a class="el" href="_util_8cpp-source.html#l00308">_uncheckedFileRemove()</a>, <a class="el" href="_util_8cpp-source.html#l00435">_uncheckedFileRename()</a>, <a class="el" href="_mixed_file_check_8h-source.html#l00071">MixedFileCheck::check()</a>, <a class="el" href="_matrix_check_8h-source.html#l00082">MatrixCheck::check()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l00125">CalvinChpCheck::check()</a>, <a class="el" href="_chp_check_8h-source.html#l00102">ChpCheck::checkFilePair()</a>, <a class="el" href="_cel_check_8h-source.html#l00103">CelCheck::checkFilePair()</a>, <a class="el" href="_util_8cpp-source.html#l00364">dirRemove()</a>, <a class="el" href="_calvin_8cpp-source.html#l00473">Calvin::equivalent()</a>, <a class="el" href="_util_8cpp-source.html#l00393">fileCopy()</a>, <a class="el" href="_util_8cpp-source.html#l00284">fileExists()</a>, <a class="el" href="_util_8cpp-source.html#l00267">fileReadable()</a>, <a class="el" href="_util_8cpp-source.html#l00222">mustOpenToWrite()</a>, <a class="el" href="_affx_file_8cpp-source.html#l00085">AffxFile::open()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l02462">affx::TsvFile::open()</a>, <a class="el" href="_regression_test_8h-source.html#l00054">RegressionTest::RegressionTest()</a>, and <a class="el" href="_regression_test_8h-source.html#l00227">RegressionTest::syncDirectory()</a>.
+
+<p>
+Definition at line <a class="el" href="_util_8cpp-source.html#l00231">231</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
+<p>
+References <a class="el" href="_err_8h-source.html#l00054">APT_ERR_ASSERT</a>.
+<p>
+Referenced by <a class="el" href="_util_8cpp-source.html#l00420">replaceString()</a>.
+</div>
+</div><p>
+<a class="anchor" name="9b07bb4e2d37ff95f9e3917308eac68f"></a><!-- doxytag: member="Util::removeChar" ref="9b07bb4e2d37ff95f9e3917308eac68f" args="(std::string &amp;s, char character)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Util::removeChar           </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&nbsp;</td>
+          <td class="paramname"> <em>character</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [inline, static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>
+Definition at line <a class="el" href="_util_8h-source.html#l00306">306</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.
+</div>
+</div><p>
+<a class="anchor" name="c7deea35598bb4438637b912d8eb2be3"></a><!-- doxytag: member="Util::is32Bit" ref="c7deea35598bb4438637b912d8eb2be3" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool Util::is32Bit           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline, static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>
+Definition at line <a class="el" href="_util_8h-source.html#l00316">316</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="425642d78784387daa25abdca75ecd17"></a><!-- doxytag: member="Util::schrageRandom" ref="425642d78784387daa25abdca75ecd17" args="(int32_t *ix)" -->
@@ -1545,9 +1062,9 @@ Schrage's algorithm for generating random numbers in 32 bits. <dl compact><dt><b
 </dl>
 
 <p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l00932">932</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
+Definition at line <a class="el" href="_util_8cpp-source.html#l00438">438</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
 <p>
-References <a class="el" href="_err_8h-source.html#l00122">Err::check()</a>.
+References <a class="el" href="_err_8h-source.html#l00124">Err::check()</a>.
 </div>
 </div><p>
 <a class="anchor" name="cb942f6f677a0f31de6ba8e2ef77f951"></a><!-- doxytag: member="Util::asMB" ref="cb942f6f677a0f31de6ba8e2ef77f951" args="(uint64_t x)" -->
@@ -1569,9 +1086,9 @@ References <a class="el" href="_err_8h-source.html#l00122">Err::check()</a>.
 <p>
 
 <p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l00950">950</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
+Definition at line <a class="el" href="_util_8cpp-source.html#l00456">456</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
 <p>
-References <a class="el" href="_util_8h-source.html#l00073">MEGABYTE</a>, and <a class="el" href="_convert_8h-source.html#l00046">ToStr()</a>.
+References <a class="el" href="_util_8h-source.html#l00049">MEGABYTE</a>, and <a class="el" href="_convert_8h-source.html#l00227">ToStr()</a>.
 </div>
 </div><p>
 <a class="anchor" name="bd09dcbcbe5d0dc6714bf008005fe0b7"></a><!-- doxytag: member="Util::memInfo" ref="bd09dcbcbe5d0dc6714bf008005fe0b7" args="(uint64_t &amp;free, uint64_t &amp;total, uint64_t &amp;swapAvail, uint64_t &amp;memAvail, bool cap32bit=true)" -->
@@ -1623,7 +1140,7 @@ Determine the free and total amount of memory in bytes on this machine.<p>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>free</em>&nbsp;</td><td>- Bytes available currently. </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>total</em>&nbsp;</td><td>- Total bytes installed on machine. </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>swapAvail</em>&nbsp;</td><td>- Amount of swap available on machine. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>swapAvail</em>&nbsp;</td><td>- Amount of swap available on machine. OSX can use all disk space so reports 0 on OSX </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>memAvail</em>&nbsp;</td><td>- Amount of space we should consider available. </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>cap32bit</em>&nbsp;</td><td>- Cap the memory at 4GB.</td></tr>
   </table>
@@ -1631,14 +1148,14 @@ Determine the free and total amount of memory in bytes on this machine.<p>
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>true if successful, false otherwise. </dd></dl>
 
 <p>
-<dl compact><dt><b><a class="el" href="todo.html#_todo000038">Todo:</a></b></dt><dd>is there a more robust way to determine 32 vs 64 bitness? </dd></dl>
+<dl compact><dt><b><a class="el" href="todo.html#_todo000042">Todo:</a></b></dt><dd>is there a more robust way to determine 32 vs 64 bitness? </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l01199">1199</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
+Definition at line <a class="el" href="_util_8cpp-source.html#l00695">695</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
 <p>
-References <a class="el" href="_util_8h-source.html#l00086">MEMINFO_2GB_MAX</a>.
+References <a class="el" href="_util_8h-source.html#l00062">MEMINFO_2GB_MAX</a>.
 <p>
-Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00084">BaseEngine::BaseEngine()</a>, <a class="el" href="util-meminfo_8cpp-source.html#l00033">main()</a>, <a class="el" href="_log_stream_8cpp-source.html#l00318">LogStream::profileString()</a>, <a class="el" href="_util_8cpp-source.html#l01691">pushMemFreeAtStart()</a>, and <a class="el" href="_util_8h-source.html#l00512">Util::StaticMem::StaticMem()</a>.
+Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00086">BaseEngine::BaseEngine()</a>, <a class="el" href="util-meminfo_8cpp-source.html#l00031">main()</a>, <a class="el" href="_log_stream_8cpp-source.html#l00316">LogStream::profileString()</a>, <a class="el" href="_util_8cpp-source.html#l01022">pushMemFreeAtStart()</a>, and <a class="el" href="_util_8h-source.html#l00452">Util::StaticMem::StaticMem()</a>.
 </div>
 </div><p>
 <a class="anchor" name="210269ffd3328426b3598fbb7eb3893b"></a><!-- doxytag: member="Util::getMemFreeAtStart" ref="210269ffd3328426b3598fbb7eb3893b" args="()" -->
@@ -1659,11 +1176,11 @@ Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00084">BaseEngi
 <p>
 
 <p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l01676">1676</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
+Definition at line <a class="el" href="_util_8cpp-source.html#l01007">1007</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
 <p>
-References <a class="el" href="_util_8h-source.html#l00517">Util::StaticMem::getMemFreeAtStart()</a>, and <a class="el" href="_util_8cpp-source.html#l01671">getStaticMem()</a>.
+References <a class="el" href="_util_8h-source.html#l00457">Util::StaticMem::getMemFreeAtStart()</a>, and <a class="el" href="_util_8cpp-source.html#l01002">getStaticMem()</a>.
 <p>
-Referenced by <a class="el" href="_log_stream_8cpp-source.html#l00318">LogStream::profileString()</a>.
+Referenced by <a class="el" href="_log_stream_8cpp-source.html#l00316">LogStream::profileString()</a>.
 </div>
 </div><p>
 <a class="anchor" name="c88243cf7300b17d7ed4a8853ef84b15"></a><!-- doxytag: member="Util::getMemFreeAtBlock" ref="c88243cf7300b17d7ed4a8853ef84b15" args="()" -->
@@ -1684,11 +1201,11 @@ Referenced by <a class="el" href="_log_stream_8cpp-source.html#l00318">LogStream
 <p>
 
 <p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l01681">1681</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
+Definition at line <a class="el" href="_util_8cpp-source.html#l01012">1012</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
 <p>
-References <a class="el" href="_util_8h-source.html#l00520">Util::StaticMem::getMemFreeAtBlock()</a>, and <a class="el" href="_util_8cpp-source.html#l01671">getStaticMem()</a>.
+References <a class="el" href="_util_8h-source.html#l00460">Util::StaticMem::getMemFreeAtBlock()</a>, and <a class="el" href="_util_8cpp-source.html#l01002">getStaticMem()</a>.
 <p>
-Referenced by <a class="el" href="_log_stream_8cpp-source.html#l00318">LogStream::profileString()</a>.
+Referenced by <a class="el" href="_log_stream_8cpp-source.html#l00316">LogStream::profileString()</a>.
 </div>
 </div><p>
 <a class="anchor" name="0babcf1f4d1afa0fc46975782b0bda94"></a><!-- doxytag: member="Util::pushMemFreeAtStart" ref="0babcf1f4d1afa0fc46975782b0bda94" args="()" -->
@@ -1709,11 +1226,11 @@ Referenced by <a class="el" href="_log_stream_8cpp-source.html#l00318">LogStream
 <p>
 
 <p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l01691">1691</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
+Definition at line <a class="el" href="_util_8cpp-source.html#l01022">1022</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
 <p>
-References <a class="el" href="_util_8cpp-source.html#l01671">getStaticMem()</a>, <a class="el" href="_util_8cpp-source.html#l01199">memInfo()</a>, and <a class="el" href="_util_8h-source.html#l00523">Util::StaticMem::pushMemFreeAtStart()</a>.
+References <a class="el" href="_util_8cpp-source.html#l01002">getStaticMem()</a>, <a class="el" href="_util_8cpp-source.html#l00695">memInfo()</a>, and <a class="el" href="_util_8h-source.html#l00463">Util::StaticMem::pushMemFreeAtStart()</a>.
 <p>
-Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00178">BaseEngine::run()</a>.
+Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00290">BaseEngine::run()</a>.
 </div>
 </div><p>
 <a class="anchor" name="9acb101ef69d9b05f53f6eb7f411ab14"></a><!-- doxytag: member="Util::popMemFreeAtStart" ref="9acb101ef69d9b05f53f6eb7f411ab14" args="()" -->
@@ -1734,79 +1251,11 @@ Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00178">BaseEngi
 <p>
 
 <p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l01686">1686</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
+Definition at line <a class="el" href="_util_8cpp-source.html#l01017">1017</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
 <p>
-References <a class="el" href="_util_8cpp-source.html#l01671">getStaticMem()</a>, and <a class="el" href="_util_8h-source.html#l00526">Util::StaticMem::popMemFreeAtStart()</a>.
+References <a class="el" href="_util_8cpp-source.html#l01002">getStaticMem()</a>, and <a class="el" href="_util_8h-source.html#l00466">Util::StaticMem::popMemFreeAtStart()</a>.
 <p>
-Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00178">BaseEngine::run()</a>.
-</div>
-</div><p>
-<a class="anchor" name="4fd1850e7bfe292f167186f150155bb8"></a><!-- doxytag: member="Util::getAvailableDiskSpace" ref="4fd1850e7bfe292f167186f150155bb8" args="(const std::string &amp;path)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int64_t Util::getAvailableDiskSpace           </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&nbsp;</td>
-          <td class="paramname"> <em>path</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td width="100%"><code> [static]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Determine the available space in bytes on given volume.<p>
-<dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>path</em>&nbsp;</td><td>- path to any file on the volume.</td></tr>
-  </table>
-</dl>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd>available space in bytes. </dd></dl>
-
-<p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l01295">1295</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
-</div>
-</div><p>
-<a class="anchor" name="bd89105f973ffc1f96302a7f8980b0da"></a><!-- doxytag: member="Util::isSameVolume" ref="bd89105f973ffc1f96302a7f8980b0da" args="(const std::string &amp;path1, const std::string &amp;path2)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int64_t Util::isSameVolume           </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&nbsp;</td>
-          <td class="paramname"> <em>path1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&nbsp;</td>
-          <td class="paramname"> <em>path2</em></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td width="100%"><code> [static]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Determine if two files/dirs are on the same volume.<p>
-<dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>path1</em>&nbsp;</td><td>- first path to any file/dir on the volume. </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>path2</em>&nbsp;</td><td>- second path to any file/dir on the volume.</td></tr>
-  </table>
-</dl>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd>1 if same volume, 0 if not, -1 if unsupported platform. </dd></dl>
-
-<p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l01382">1382</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
+Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00290">BaseEngine::run()</a>.
 </div>
 </div><p>
 <a class="anchor" name="772cd3b6f20be1e6082a800bb38d5e08"></a><!-- doxytag: member="Util::nextWhiteSpace" ref="772cd3b6f20be1e6082a800bb38d5e08" args="(const char *)" -->
@@ -1834,9 +1283,9 @@ Return a pointer to the next character that is white space or NULL if none found
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>- Pointer to next whitespace character or NULL if none found. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l01407">1407</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
+Definition at line <a class="el" href="_util_8cpp-source.html#l00750">750</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
 <p>
-Referenced by <a class="el" href="_util_8cpp-source.html#l01424">printStringWidth()</a>.
+Referenced by <a class="el" href="_util_8cpp-source.html#l00767">printStringWidth()</a>.
 </div>
 </div><p>
 <a class="anchor" name="19c53e9ca0edb65d4a32717b509ba857"></a><!-- doxytag: member="Util::printStringWidth" ref="19c53e9ca0edb65d4a32717b509ba857" args="(std::ostream &amp;out, const std::string &amp;str, int prefix, int currentPos, int maxWidth=70)" -->
@@ -1894,11 +1343,11 @@ Print a string wrapping at max width from the current position. <dl compact><dt>
 </dl>
 
 <p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l01424">1424</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
+Definition at line <a class="el" href="_util_8cpp-source.html#l00767">767</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
 <p>
-References <a class="el" href="_util_8cpp-source.html#l01407">nextWhiteSpace()</a>.
+References <a class="el" href="_util_8cpp-source.html#l00750">nextWhiteSpace()</a>.
 <p>
-Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00582">PgOptions::printStringWidth()</a>.
+Referenced by <a class="el" href="_pg_options_8cpp-source.html#l00574">PgOptions::printStringWidth()</a>.
 </div>
 </div><p>
 <a class="anchor" name="66b3f27deb315aab108936d0830c6991"></a><!-- doxytag: member="Util::isFinite" ref="66b3f27deb315aab108936d0830c6991" args="(double x)" -->
@@ -1926,9 +1375,9 @@ Wrapper for different version of isnan() on different systems. <dl compact><dt><
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>- true if x is finite (-INF &lt; x &amp;&amp; x &lt; +INF &amp;&amp; x != nan), false otherwise </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l01508">1508</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
+Definition at line <a class="el" href="_util_8cpp-source.html#l00851">851</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
 <p>
-Referenced by <a class="el" href="_regression_check_8h-source.html#l00113">RegressionCheck::checkFloat()</a>, <a class="el" href="_affx_multi_dimensional_array_8h-source.html#l00734">AffxMultiDimensionalArray&lt; TYPE &gt;::finiteMedian()</a>, and <a class="el" href="_util_8cpp-source.html#l00716">matrixDifferences()</a>.
+Referenced by <a class="el" href="_calvin_8cpp-source.html#l00452">Calvin::equivalent()</a>, and <a class="el" href="_util_8cpp-source.html#l00315">matrixDifferences()</a>.
 </div>
 </div><p>
 <a class="anchor" name="bc184e95d822fc945c375557c5411d07"></a><!-- doxytag: member="Util::PrintTextClassTitle" ref="bc184e95d822fc945c375557c5411d07" args="(const std::string &amp;className)" -->
@@ -1950,7 +1399,7 @@ Referenced by <a class="el" href="_regression_check_8h-source.html#l00113">Regre
 <p>
 
 <p>
-Definition at line <a class="el" href="_util_8h-source.html#l00480">480</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.
+Definition at line <a class="el" href="_util_8h-source.html#l00389">389</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="e1ac43f8bd1cf5636c2febb310d92df8"></a><!-- doxytag: member="Util::PrintTextFunctionTitle" ref="e1ac43f8bd1cf5636c2febb310d92df8" args="(const std::string &amp;className, const std::string &amp;functionName)" -->
@@ -1981,7 +1430,7 @@ Definition at line <a class="el" href="_util_8h-source.html#l00480">480</a> of f
 <p>
 
 <p>
-Definition at line <a class="el" href="_util_8h-source.html#l00484">484</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.
+Definition at line <a class="el" href="_util_8h-source.html#l00393">393</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="c6448a37e6cea364722de61e8bdd3c47"></a><!-- doxytag: member="Util::addPrefixSuffix" ref="c6448a37e6cea364722de61e8bdd3c47" args="(std::vector&lt; std::string &gt; middle, const std::string &amp;prefix, const std::string &amp;suffix)" -->
@@ -2018,9 +1467,11 @@ Definition at line <a class="el" href="_util_8h-source.html#l00484">484</a> of f
 <p>
 
 <p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l01581">1581</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
+Definition at line <a class="el" href="_util_8cpp-source.html#l00912">912</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
 <p>
-Referenced by <a class="el" href="_util_8cpp-source.html#l01594">addPrefixSuffix()</a>.
+References <a class="el" href="_fs_8h-source.html#l00257">Fs::Unc()</a>.
+<p>
+Referenced by <a class="el" href="_util_8cpp-source.html#l00925">addPrefixSuffix()</a>.
 </div>
 </div><p>
 <a class="anchor" name="68ea8e5614fff3a4763d22e05ca888e9"></a><!-- doxytag: member="Util::addPrefixSuffix" ref="68ea8e5614fff3a4763d22e05ca888e9" args="(const char *middle[], const std::string &amp;prefix, const std::string &amp;suffix)" -->
@@ -2057,9 +1508,9 @@ Referenced by <a class="el" href="_util_8cpp-source.html#l01594">addPrefixSuffix
 <p>
 
 <p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l01594">1594</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
+Definition at line <a class="el" href="_util_8cpp-source.html#l00925">925</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
 <p>
-References <a class="el" href="_util_8cpp-source.html#l01581">addPrefixSuffix()</a>, and <a class="el" href="_util_8cpp-source.html#l01569">listToVector()</a>.
+References <a class="el" href="_util_8cpp-source.html#l00912">addPrefixSuffix()</a>, and <a class="el" href="_util_8cpp-source.html#l00900">listToVector()</a>.
 </div>
 </div><p>
 <a class="anchor" name="879b092ca9a44862b095d51a59a5d2b9"></a><!-- doxytag: member="Util::addPrefixSuffix" ref="879b092ca9a44862b095d51a59a5d2b9" args="(const char *middle[], int size, const std::string &amp;prefix, const std::string &amp;suffix)" -->
@@ -2102,9 +1553,9 @@ References <a class="el" href="_util_8cpp-source.html#l01581">addPrefixSuffix()<
 <p>
 
 <p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l01602">1602</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
+Definition at line <a class="el" href="_util_8cpp-source.html#l00933">933</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
 <p>
-References <a class="el" href="_util_8cpp-source.html#l01581">addPrefixSuffix()</a>, and <a class="el" href="_util_8cpp-source.html#l01569">listToVector()</a>.
+References <a class="el" href="_util_8cpp-source.html#l00912">addPrefixSuffix()</a>, and <a class="el" href="_util_8cpp-source.html#l00900">listToVector()</a>.
 </div>
 </div><p>
 <a class="anchor" name="c08761abc8cec842124fdf6134d12cef"></a><!-- doxytag: member="Util::listToVector" ref="c08761abc8cec842124fdf6134d12cef" args="(const char *in[], int size)" -->
@@ -2135,9 +1586,9 @@ References <a class="el" href="_util_8cpp-source.html#l01581">addPrefixSuffix()<
 <p>
 
 <p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l01569">1569</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
+Definition at line <a class="el" href="_util_8cpp-source.html#l00900">900</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
 <p>
-Referenced by <a class="el" href="_util_8cpp-source.html#l01594">addPrefixSuffix()</a>.
+Referenced by <a class="el" href="_util_8cpp-source.html#l00925">addPrefixSuffix()</a>.
 </div>
 </div><p>
 <a class="anchor" name="909e5f3fdc1b56be8d5f4b9ce59e9f33"></a><!-- doxytag: member="Util::listToVector" ref="909e5f3fdc1b56be8d5f4b9ce59e9f33" args="(const char *in[])" -->
@@ -2159,7 +1610,7 @@ Referenced by <a class="el" href="_util_8cpp-source.html#l01594">addPrefixSuffix
 <p>
 
 <p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l01557">1557</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
+Definition at line <a class="el" href="_util_8cpp-source.html#l00888">888</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
 </div>
 </div><p>
 <a class="anchor" name="5ab70741c21394edb5d780f3454bad95"></a><!-- doxytag: member="Util::addPrefixSuffix" ref="5ab70741c21394edb5d780f3454bad95" args="(const char *middle[], const std::string &amp;prefix)" -->
@@ -2190,9 +1641,9 @@ Definition at line <a class="el" href="_util_8cpp-source.html#l01557">1557</a> o
 <p>
 
 <p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l01610">1610</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
+Definition at line <a class="el" href="_util_8cpp-source.html#l00941">941</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
 <p>
-References <a class="el" href="_util_8cpp-source.html#l01581">addPrefixSuffix()</a>, and <a class="el" href="_util_8cpp-source.html#l01569">listToVector()</a>.
+References <a class="el" href="_util_8cpp-source.html#l00912">addPrefixSuffix()</a>, and <a class="el" href="_util_8cpp-source.html#l00900">listToVector()</a>.
 </div>
 </div><p>
 <a class="anchor" name="189158b112beb10593f5e803392d3ec6"></a><!-- doxytag: member="Util::addPrefixSuffix" ref="189158b112beb10593f5e803392d3ec6" args="(std::string middle[], const std::string &amp;prefix, const std::string &amp;suffix)" -->
@@ -2229,9 +1680,9 @@ References <a class="el" href="_util_8cpp-source.html#l01581">addPrefixSuffix()<
 <p>
 
 <p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l01644">1644</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
+Definition at line <a class="el" href="_util_8cpp-source.html#l00975">975</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
 <p>
-References <a class="el" href="_util_8cpp-source.html#l01581">addPrefixSuffix()</a>, and <a class="el" href="_util_8cpp-source.html#l01569">listToVector()</a>.
+References <a class="el" href="_util_8cpp-source.html#l00912">addPrefixSuffix()</a>, and <a class="el" href="_util_8cpp-source.html#l00900">listToVector()</a>.
 </div>
 </div><p>
 <a class="anchor" name="99e3e4d9cfc6788b7cf21926622ed569"></a><!-- doxytag: member="Util::addPrefixSuffix" ref="99e3e4d9cfc6788b7cf21926622ed569" args="(std::string middle[], int size, const std::string &amp;prefix, const std::string &amp;suffix)" -->
@@ -2274,9 +1725,9 @@ References <a class="el" href="_util_8cpp-source.html#l01581">addPrefixSuffix()<
 <p>
 
 <p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l01652">1652</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
+Definition at line <a class="el" href="_util_8cpp-source.html#l00983">983</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
 <p>
-References <a class="el" href="_util_8cpp-source.html#l01581">addPrefixSuffix()</a>, and <a class="el" href="_util_8cpp-source.html#l01569">listToVector()</a>.
+References <a class="el" href="_util_8cpp-source.html#l00912">addPrefixSuffix()</a>, and <a class="el" href="_util_8cpp-source.html#l00900">listToVector()</a>.
 </div>
 </div><p>
 <a class="anchor" name="38f4ce1cba7450ec56b5d96fb11b75b9"></a><!-- doxytag: member="Util::listToVector" ref="38f4ce1cba7450ec56b5d96fb11b75b9" args="(std::string in[])" -->
@@ -2298,7 +1749,7 @@ References <a class="el" href="_util_8cpp-source.html#l01581">addPrefixSuffix()<
 <p>
 
 <p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l01620">1620</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
+Definition at line <a class="el" href="_util_8cpp-source.html#l00951">951</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
 </div>
 </div><p>
 <a class="anchor" name="057e6e01e2d034431548368ea2a82580"></a><!-- doxytag: member="Util::listToVector" ref="057e6e01e2d034431548368ea2a82580" args="(std::string in[], int size)" -->
@@ -2329,7 +1780,7 @@ Definition at line <a class="el" href="_util_8cpp-source.html#l01620">1620</a> o
 <p>
 
 <p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l01632">1632</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
+Definition at line <a class="el" href="_util_8cpp-source.html#l00963">963</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
 </div>
 </div><p>
 <a class="anchor" name="1c7bcb4dafd24bc9c9aff2744f10d692"></a><!-- doxytag: member="Util::joinVectorString" ref="1c7bcb4dafd24bc9c9aff2744f10d692" args="(std::vector&lt; std::string &gt; toJoin, const std::string &amp;sep)" -->
@@ -2360,7 +1811,123 @@ Definition at line <a class="el" href="_util_8cpp-source.html#l01632">1632</a> o
 <p>
 
 <p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l01660">1660</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
+Definition at line <a class="el" href="_util_8cpp-source.html#l00991">991</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
+</div>
+</div><p>
+<a class="anchor" name="4c862e88eab3bbb0610702da59af1775"></a><!-- doxytag: member="Util::escapeString" ref="4c862e88eab3bbb0610702da59af1775" args="(const std::string &amp;s, char c, char escape='\\')" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string Util::escapeString           </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&nbsp;</td>
+          <td class="paramname"> <em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&nbsp;</td>
+          <td class="paramname"> <em>escape</em> = <code>'\\'</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [inline, static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>
+Definition at line <a class="el" href="_util_8h-source.html#l00418">418</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.
+</div>
+</div><p>
+<a class="anchor" name="29805eaef3cf6927099814b699afa6dc"></a><!-- doxytag: member="Util::deEscapeString" ref="29805eaef3cf6927099814b699afa6dc" args="(std::string &amp;s, char escape='\\')" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string Util::deEscapeString           </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&nbsp;</td>
+          <td class="paramname"> <em>escape</em> = <code>'\\'</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [inline, static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>
+Definition at line <a class="el" href="_util_8h-source.html#l00430">430</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.
+</div>
+</div><p>
+<a class="anchor" name="1c17631ec24ea786f63ec0599ccea3bb"></a><!-- doxytag: member="Util::toWString" ref="1c17631ec24ea786f63ec0599ccea3bb" args="(const std::string &amp;src)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::wstring Util::toWString           </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>src</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline, static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>
+Definition at line <a class="el" href="_util_8h-source.html#l00442">442</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.
+<p>
+Referenced by <a class="el" href="_fs_8cpp-source.html#l00617">Fs::convertToUncPathInPlace()</a>, and <a class="el" href="_fs_8h-source.html#l00252">Fs::convertToUncPathW()</a>.
+</div>
+</div><p>
+<a class="anchor" name="6372407731162e097168d74f44a94cc2"></a><!-- doxytag: member="Util::toString" ref="6372407731162e097168d74f44a94cc2" args="(const std::wstring &amp;src)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Util::toString           </td>
+          <td>(</td>
+          <td class="paramtype">const std::wstring &amp;&nbsp;</td>
+          <td class="paramname"> <em>src</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>
+Definition at line <a class="el" href="_util_8cpp-source.html#l01029">1029</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
+<p>
+Referenced by <a class="el" href="_fs_8cpp-source.html#l00617">Fs::convertToUncPathInPlace()</a>, <a class="el" href="_fs_8cpp-source.html#l00992">Fs::listDir()</a>, and <a class="el" href="_generic_data_8cpp-source.html#l00472">affymetrix_calvin_io::GenericData::MapFile()</a>.
 </div>
 </div><p>
 <a class="anchor" name="44da0991bd0c86e8d222bec3b871974a"></a><!-- doxytag: member="Util::getStaticMem" ref="44da0991bd0c86e8d222bec3b871974a" args="()" -->
@@ -2381,14 +1948,14 @@ Definition at line <a class="el" href="_util_8cpp-source.html#l01660">1660</a> o
 <p>
 
 <p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l01671">1671</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
+Definition at line <a class="el" href="_util_8cpp-source.html#l01002">1002</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
 <p>
-Referenced by <a class="el" href="_util_8cpp-source.html#l01681">getMemFreeAtBlock()</a>, <a class="el" href="_util_8cpp-source.html#l01676">getMemFreeAtStart()</a>, <a class="el" href="_util_8cpp-source.html#l01686">popMemFreeAtStart()</a>, and <a class="el" href="_util_8cpp-source.html#l01691">pushMemFreeAtStart()</a>.
+Referenced by <a class="el" href="_util_8cpp-source.html#l01012">getMemFreeAtBlock()</a>, <a class="el" href="_util_8cpp-source.html#l01007">getMemFreeAtStart()</a>, <a class="el" href="_util_8cpp-source.html#l01017">popMemFreeAtStart()</a>, and <a class="el" href="_util_8cpp-source.html#l01022">pushMemFreeAtStart()</a>.
 </div>
 </div><p>
 <hr>The documentation for this class was generated from the following files:<ul>
 <li>C:/FusionSDK/affy/sdk/util/<a class="el" href="_util_8h-source.html">Util.h</a><li>C:/FusionSDK/affy/sdk/util/<a class="el" href="_util_8cpp-source.html">Util.cpp</a></ul>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:35 2009 for Affymetrix Fusion SDK by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:46 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

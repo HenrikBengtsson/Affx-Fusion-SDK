@@ -53,14 +53,14 @@
 <a name="l00029"></a><a class="code" href="classaffymetrix__calvin__io_1_1_c_h_p_multi_data_file_writer.html#20ed562ae306fb3ea26e88031fe47d93">00029</a> CHPMultiDataFileWriter::CHPMultiDataFileWriter(<a class="code" href="classaffymetrix__calvin__io_1_1_c_h_p_multi_data_data.html">CHPMultiDataData</a> &amp;p)
 <a name="l00030"></a>00030 {
 <a name="l00031"></a>00031         <a class="code" href="classaffymetrix__calvin__io_1_1_c_h_p_multi_data_file_writer.html#30f4aa1e14c199dc24be0796bf0a115a">data</a> = &amp;p;
-<a name="l00032"></a>00032         map&lt;MultiDataType, DataSetInfo&gt; &amp;info = p.<a class="code" href="classaffymetrix__calvin__io_1_1_c_h_p_multi_data_data.html#4cc1607ba8246c8a2ddb44376fa7e12f">GetDataSetInfo</a>();
+<a name="l00032"></a>00032         map&lt;MultiDataType, DataSetInfo&gt; &amp;info = p.<a class="code" href="classaffymetrix__calvin__io_1_1_c_h_p_multi_data_data.html#dc050e73346e1df2cfd3aaea4865728d">GetDataSetInfo</a>();
 <a name="l00033"></a>00033         map&lt;MultiDataType, DataSetInfo&gt;::iterator it;
 <a name="l00034"></a>00034         <span class="keywordflow">for</span> (it=info.begin(); it!=info.end(); it++)
 <a name="l00035"></a>00035         {
 <a name="l00036"></a>00036                 <a class="code" href="classaffymetrix__calvin__io_1_1_c_h_p_multi_data_file_writer.html#77168b4b74c95dd7ae67ead832d20e02">dataTypeToIndex</a>[it-&gt;first] = it-&gt;second.dataSetIndex;
 <a name="l00037"></a>00037                 <a class="code" href="classaffymetrix__calvin__io_1_1_c_h_p_multi_data_file_writer.html#d10be839278a499e1ae4a120077bd5f8">indexToDataType</a>[it-&gt;second.dataSetIndex] = it-&gt;first;
 <a name="l00038"></a>00038         }
-<a name="l00039"></a>00039         <a class="code" href="classaffymetrix__calvin__io_1_1_c_h_p_multi_data_file_writer.html#8852920b98f1f89f671ef4b356038811">writer</a> = <span class="keyword">new</span> <a class="code" href="classaffymetrix__calvin__io_1_1_generic_file_writer.html">GenericFileWriter</a>(p.<a class="code" href="classaffymetrix__calvin__io_1_1_c_h_p_multi_data_data.html#5841ccd4b15079393d2940b76f8978f0">GetFileHeader</a>());
+<a name="l00039"></a>00039         <a class="code" href="classaffymetrix__calvin__io_1_1_c_h_p_multi_data_file_writer.html#8852920b98f1f89f671ef4b356038811">writer</a> = <span class="keyword">new</span> <a class="code" href="classaffymetrix__calvin__io_1_1_generic_file_writer.html">GenericFileWriter</a>(p.<a class="code" href="classaffymetrix__calvin__io_1_1_c_h_p_multi_data_data.html#9cd1af909c16df6a06f6009a9888f426">GetFileHeader</a>());
 <a name="l00040"></a>00040         <a class="code" href="classaffymetrix__calvin__io_1_1_c_h_p_multi_data_file_writer.html#abf405bae31bff1af17dba65e1ef3ee2">WriteHeaders</a>();
 <a name="l00041"></a>00041 }
 <a name="l00042"></a>00042 
@@ -108,14 +108,14 @@
 <a name="l00084"></a>00084     <a class="code" href="classaffymetrix__calvin__io_1_1_c_h_p_multi_data_file_writer.html#a45aa375e9ac98ef375c4ea9e3796929">maxName</a> = <a class="code" href="classaffymetrix__calvin__io_1_1_c_h_p_multi_data_file_writer.html#30f4aa1e14c199dc24be0796bf0a115a">data</a>-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_c_h_p_multi_data_data.html#fc76fab435a7962f40121b24b5fe6d85">GetMaxProbeSetName</a>(dataType);
 <a name="l00085"></a>00085     <span class="keywordflow">if</span> (dataType == <a class="code" href="namespaceaffymetrix__calvin__io.html#fc9112c4b48f40f8f938ba3a0f9f9de8939927b8486ae8f92ac9417bc5f9bdf7">FamilialSegmentOverlapsMultiDataType</a>)
 <a name="l00086"></a>00086     {
-<a name="l00087"></a>00087         std::map&lt;MultiDataType, DataSetInfo&gt; &amp;dinfo = <a class="code" href="classaffymetrix__calvin__io_1_1_c_h_p_multi_data_file_writer.html#30f4aa1e14c199dc24be0796bf0a115a">data</a>-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_c_h_p_multi_data_data.html#4cc1607ba8246c8a2ddb44376fa7e12f">GetDataSetInfo</a>();
+<a name="l00087"></a>00087         std::map&lt;MultiDataType, DataSetInfo&gt; &amp;dinfo = <a class="code" href="classaffymetrix__calvin__io_1_1_c_h_p_multi_data_file_writer.html#30f4aa1e14c199dc24be0796bf0a115a">data</a>-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_c_h_p_multi_data_data.html#dc050e73346e1df2cfd3aaea4865728d">GetDataSetInfo</a>();
 <a name="l00088"></a>00088         <a class="code" href="classaffymetrix__calvin__io_1_1_c_h_p_multi_data_file_writer.html#75074a98666efbd801b15b280495aea2">maxSegmentType</a> = dinfo[dataType].maxSegmentType;
 <a name="l00089"></a>00089         <a class="code" href="classaffymetrix__calvin__io_1_1_c_h_p_multi_data_file_writer.html#33f828b6fa14d3c8c426f940173ec8fa">maxReferenceSegmentID</a> = dinfo[dataType].maxReferenceSegmentID;
 <a name="l00090"></a>00090         <a class="code" href="classaffymetrix__calvin__io_1_1_c_h_p_multi_data_file_writer.html#c016c16ca69035d706525175dd2b4796">maxFamilialSegmentID</a> = dinfo[dataType].maxFamilialSegmentID;
 <a name="l00091"></a>00091     }
 <a name="l00092"></a>00092     <span class="keywordflow">else</span> <span class="keywordflow">if</span> (dataType == <a class="code" href="namespaceaffymetrix__calvin__io.html#fc9112c4b48f40f8f938ba3a0f9f9de85bc40a9f56db8b70413805c7dbb1df5c">FamilialSamplesMultiDataType</a>)
 <a name="l00093"></a>00093     {
-<a name="l00094"></a>00094         std::map&lt;MultiDataType, DataSetInfo&gt; &amp;dinfo = <a class="code" href="classaffymetrix__calvin__io_1_1_c_h_p_multi_data_file_writer.html#30f4aa1e14c199dc24be0796bf0a115a">data</a>-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_c_h_p_multi_data_data.html#4cc1607ba8246c8a2ddb44376fa7e12f">GetDataSetInfo</a>();
+<a name="l00094"></a>00094         std::map&lt;MultiDataType, DataSetInfo&gt; &amp;dinfo = <a class="code" href="classaffymetrix__calvin__io_1_1_c_h_p_multi_data_file_writer.html#30f4aa1e14c199dc24be0796bf0a115a">data</a>-&gt;<a class="code" href="classaffymetrix__calvin__io_1_1_c_h_p_multi_data_data.html#dc050e73346e1df2cfd3aaea4865728d">GetDataSetInfo</a>();
 <a name="l00095"></a>00095         <a class="code" href="classaffymetrix__calvin__io_1_1_c_h_p_multi_data_file_writer.html#b28a4441eb3215e1da601d84917eb1df">maxFamilialARRID</a> = dinfo[dataType].maxFamilialARRID;
 <a name="l00096"></a>00096         <a class="code" href="classaffymetrix__calvin__io_1_1_c_h_p_multi_data_file_writer.html#7e5dbdbc52729e1bf034fab4026070ad">maxFamilialCHPID</a> = dinfo[dataType].maxFamilialCHPID;
 <a name="l00097"></a>00097         <a class="code" href="classaffymetrix__calvin__io_1_1_c_h_p_multi_data_file_writer.html#1cc73e3d05565fa9411290c6345dc072">maxFamilialCHPFile</a> = dinfo[dataType].maxFamilialCHPFile;
@@ -371,7 +371,7 @@
 <a name="l00347"></a>00347         }
 <a name="l00348"></a>00348 }
 <a name="l00349"></a>00349 
-</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:12 2009 for Affymetrix Fusion SDK by&nbsp;
+</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:20 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

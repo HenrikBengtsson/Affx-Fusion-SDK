@@ -123,10 +123,16 @@
 <a name="l00099"></a>00099         STDMETHOD(GetQCProbeSetInformation)(<span class="keywordtype">int</span> index, <a class="code" href="interface_i_fusion_c_d_f_q_c_probe_set_information.html">IFusionCDFQCProbeSetInformation</a> * pVal);
 <a name="l00100"></a>00100 <span class="keyword">public</span>:
 <a name="l00101"></a>00101         STDMETHOD(GetQCProbeSetInformationByType)(<a class="code" href="affx__fusion__com_8idl.html#e2500776edc82dcf882200bf53de6ecb">GeneChipQCProbeSetType</a> qcType, <a class="code" href="interface_i_fusion_c_d_f_q_c_probe_set_information.html">IFusionCDFQCProbeSetInformation</a> * pVal);
-<a name="l00102"></a>00102 };
-<a name="l00103"></a>00103 
-<a name="l00104"></a>00104 OBJECT_ENTRY_AUTO(__uuidof(FusionCDFData), <a class="code" href="class_c_fusion_c_d_f_data_c_o_m.html">CFusionCDFDataCOM</a>)
-</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:06 2009 for Affymetrix Fusion SDK by&nbsp;
+<a name="l00102"></a>00102 <span class="keyword">public</span>:
+<a name="l00103"></a>00103         STDMETHOD(get_ChipTypes)(VARIANT* pVal);
+<a name="l00104"></a>00104 <span class="keyword">public</span>:
+<a name="l00105"></a>00105         STDMETHOD(get_GUID)(BSTR* pVal);
+<a name="l00106"></a>00106 <span class="keyword">public</span>:
+<a name="l00107"></a>00107         STDMETHOD(get_IntegrityMd5)(BSTR* pVal);
+<a name="l00108"></a>00108 };
+<a name="l00109"></a>00109 
+<a name="l00110"></a>00110 OBJECT_ENTRY_AUTO(__uuidof(FusionCDFData), <a class="code" href="class_c_fusion_c_d_f_data_c_o_m.html">CFusionCDFDataCOM</a>)
+</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:14 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

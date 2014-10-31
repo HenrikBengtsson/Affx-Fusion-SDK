@@ -32,6 +32,7 @@
 <code>#include &lt;cstring&gt;</code><br>
 <code>#include &lt;limits&gt;</code><br>
 <code>#include &lt;string&gt;</code><br>
+<code>#include &lt;stdio.h&gt;</code><br>
 
 <p>
 <a href="_affx_conv_8cpp-source.html">Go to the source code of this file.</a><table border="0" cellpadding="0" cellspacing="0">
@@ -49,7 +50,6 @@
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_affx_conv_8cpp.html#25527befae79a2385fd5d85bbabcd2fe">getUnsignedInt</a> (unsigned int i, bool bCommas)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Some data conversion routines.  <a href="#25527befae79a2385fd5d85bbabcd2fe"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_affx_conv_8cpp.html#7f505f3b73da87d502a3708c5d9a9e2e">getDouble</a> (double d)</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_affx_conv_8cpp.html#fcc7ea7f5106f39d015570f0a259e776">getDouble</a> (double d, int iDecimalPlaces, bool bCommas)</td></tr>
@@ -113,9 +113,9 @@ Formats a number string <dl compact><dt><b>Parameters:</b></dt><dd>
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>- string value. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_affx_conv_8cpp-source.html#l00233">233</a> of file <a class="el" href="_affx_conv_8cpp-source.html">AffxConv.cpp</a>.
+Definition at line <a class="el" href="_affx_conv_8cpp-source.html#l00232">232</a> of file <a class="el" href="_affx_conv_8cpp-source.html">AffxConv.cpp</a>.
 <p>
-Referenced by <a class="el" href="_affx_conv_8cpp-source.html#l00208">getDouble()</a>, <a class="el" href="_affx_conv_8cpp-source.html#l00112">getInt()</a>, and <a class="el" href="_affx_conv_8cpp-source.html#l00168">getUnsignedInt()</a>.
+Referenced by <a class="el" href="_affx_conv_8cpp-source.html#l00207">getDouble()</a>, <a class="el" href="_affx_conv_8cpp-source.html#l00111">getInt()</a>, and <a class="el" href="_affx_conv_8cpp-source.html#l00167">getUnsignedInt()</a>.
 </div>
 </div><p>
 <a class="anchor" name="fcc7ea7f5106f39d015570f0a259e776"></a><!-- doxytag: member="AffxConv.cpp::getDouble" ref="fcc7ea7f5106f39d015570f0a259e776" args="(double d, int iDecimalPlaces, bool bCommas)" -->
@@ -160,7 +160,7 @@ Converts a double to a string. <dl compact><dt><b>Parameters:</b></dt><dd>
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>- string value. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_affx_conv_8cpp-source.html#l00208">208</a> of file <a class="el" href="_affx_conv_8cpp-source.html">AffxConv.cpp</a>.
+Definition at line <a class="el" href="_affx_conv_8cpp-source.html#l00207">207</a> of file <a class="el" href="_affx_conv_8cpp-source.html">AffxConv.cpp</a>.
 </div>
 </div><p>
 <a class="anchor" name="7f505f3b73da87d502a3708c5d9a9e2e"></a><!-- doxytag: member="AffxConv.cpp::getDouble" ref="7f505f3b73da87d502a3708c5d9a9e2e" args="(double d)" -->
@@ -188,7 +188,7 @@ Converts a double to a string. <dl compact><dt><b>Parameters:</b></dt><dd>
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>- string value. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_affx_conv_8cpp-source.html#l00185">185</a> of file <a class="el" href="_affx_conv_8cpp-source.html">AffxConv.cpp</a>.
+Definition at line <a class="el" href="_affx_conv_8cpp-source.html#l00184">184</a> of file <a class="el" href="_affx_conv_8cpp-source.html">AffxConv.cpp</a>.
 </div>
 </div><p>
 <a class="anchor" name="4e40c31006c5b45e47ea0240921b98b2"></a><!-- doxytag: member="AffxConv.cpp::getDouble" ref="4e40c31006c5b45e47ea0240921b98b2" args="(const std::string &amp;str)" -->
@@ -216,9 +216,9 @@ Converts a string with commas into a double. <dl compact><dt><b>Parameters:</b><
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>- double value. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_affx_conv_8cpp-source.html#l00080">80</a> of file <a class="el" href="_affx_conv_8cpp-source.html">AffxConv.cpp</a>.
+Definition at line <a class="el" href="_affx_conv_8cpp-source.html#l00079">79</a> of file <a class="el" href="_affx_conv_8cpp-source.html">AffxConv.cpp</a>.
 <p>
-Referenced by <a class="el" href="_affx_byte_array_8h-source.html#l00086">AffxByteArray::append()</a>, <a class="el" href="_calvin_8h-source.html#l00081">CalvinValue::compareTo()</a>, <a class="el" href="_affx_string_8cpp-source.html#l00226">AffxString::doubleToString()</a>, <a class="el" href="_calvin_8cpp-source.html#l00243">Calvin::dump()</a>, <a class="el" href="_calvin_8cpp-source.html#l00293">Calvin::dumpHeader()</a>, <a class="el" href="_calvin_8cpp-source.html#l00309">Calvin::equivalent()</a>, <a class="el" href="_calvin_8cpp-source.html#l00812">Calvin::equivalentHeader()</a>, <a class="el" href="_calvin_8cpp-source.html#l00437">Calvin::equivalentParameter()</a>, <a class="el" href="_affx_conv_8cpp-source.html#l00070">getUnsignedInt()</a>, <a class="el" href="_calvin_8cpp-source.html#l00071">Calvin::load()</a>, <a class="el" href="_calvin_8cpp-source.html#l00191">Calvin::loadHeader()</a>, <a class="el" href="_calvin_to_text_8cpp-source.html#l00131">CalvinToText::OutputData()</a>, and <a class="el" href="_log_stream_8cpp-source.html#l00186">LogStream::progressEnd()</a>.
+Referenced by <a class="el" href="_affx_byte_array_8h-source.html#l00084">AffxByteArray::append()</a>, <a class="el" href="_calvin_8h-source.html#l00083">CalvinValue::compareTo()</a>, <a class="el" href="_affx_string_8cpp-source.html#l00225">AffxString::doubleToString()</a>, <a class="el" href="_calvin_8cpp-source.html#l00247">Calvin::equivalent()</a>, <a class="el" href="_calvin_8cpp-source.html#l00838">Calvin::equivalentHeader()</a>, <a class="el" href="_calvin_8cpp-source.html#l00386">Calvin::equivalentParameter()</a>, <a class="el" href="_affx_conv_8cpp-source.html#l00069">getUnsignedInt()</a>, <a class="el" href="_calvin_8cpp-source.html#l00074">Calvin::load()</a>, <a class="el" href="_calvin_8cpp-source.html#l00194">Calvin::loadHeader()</a>, <a class="el" href="_calvin_to_text_8cpp-source.html#l00194">CalvinToText::OutputData()</a>, and <a class="el" href="_log_stream_8cpp-source.html#l00184">LogStream::progressEnd()</a>.
 </div>
 </div><p>
 <a class="anchor" name="109b5585f7fc582adaad45205bda515e"></a><!-- doxytag: member="AffxConv.cpp::getInt" ref="109b5585f7fc582adaad45205bda515e" args="(int i, bool bCommas)" -->
@@ -256,7 +256,7 @@ Converts an int to a string. <dl compact><dt><b>Parameters:</b></dt><dd>
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>- string value. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_affx_conv_8cpp-source.html#l00112">112</a> of file <a class="el" href="_affx_conv_8cpp-source.html">AffxConv.cpp</a>.
+Definition at line <a class="el" href="_affx_conv_8cpp-source.html#l00111">111</a> of file <a class="el" href="_affx_conv_8cpp-source.html">AffxConv.cpp</a>.
 </div>
 </div><p>
 <a class="anchor" name="1efdd93d484c08ed0d922553881845d4"></a><!-- doxytag: member="AffxConv.cpp::getInt" ref="1efdd93d484c08ed0d922553881845d4" args="(int i, unsigned int iLength)" -->
@@ -294,7 +294,7 @@ Converts an int to a string. <dl compact><dt><b>Parameters:</b></dt><dd>
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>- string value. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_affx_conv_8cpp-source.html#l00099">99</a> of file <a class="el" href="_affx_conv_8cpp-source.html">AffxConv.cpp</a>.
+Definition at line <a class="el" href="_affx_conv_8cpp-source.html#l00098">98</a> of file <a class="el" href="_affx_conv_8cpp-source.html">AffxConv.cpp</a>.
 </div>
 </div><p>
 <a class="anchor" name="b7d46fb769602a66d9e19f96e792498d"></a><!-- doxytag: member="AffxConv.cpp::getInt" ref="b7d46fb769602a66d9e19f96e792498d" args="(const std::string &amp;str)" -->
@@ -322,9 +322,9 @@ Converts a string with commas into an int. <dl compact><dt><b>Parameters:</b></d
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>- int value. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_affx_conv_8cpp-source.html#l00052">52</a> of file <a class="el" href="_affx_conv_8cpp-source.html">AffxConv.cpp</a>.
+Definition at line <a class="el" href="_affx_conv_8cpp-source.html#l00051">51</a> of file <a class="el" href="_affx_conv_8cpp-source.html">AffxConv.cpp</a>.
 <p>
-Referenced by <a class="el" href="_calvin_8h-source.html#l00081">CalvinValue::compareTo()</a>, <a class="el" href="_calvin_8cpp-source.html#l00243">Calvin::dump()</a>, <a class="el" href="_calvin_8cpp-source.html#l00309">Calvin::equivalent()</a>, <a class="el" href="_calvin_8cpp-source.html#l00812">Calvin::equivalentHeader()</a>, <a class="el" href="_affx_multi_dimensional_array_8h-source.html#l00295">AffxMultiDimensionalArray&lt; TYPE &gt;::get()</a>, <a class="el" href="_affx_conv_8cpp-source.html#l00099">getInt()</a>, <a class="el" href="_affx_multi_dimensional_array_8h-source.html#l00271">AffxMultiDimensionalArray&lt; TYPE &gt;::getPointer()</a>, <a class="el" href="_affx_string_8cpp-source.html#l00219">AffxString::intToString()</a>, <a class="el" href="_calvin_8cpp-source.html#l00071">Calvin::load()</a>, <a class="el" href="_calvin_8cpp-source.html#l00191">Calvin::loadHeader()</a>, <a class="el" href="_affx_string_8h-source.html#l00151">AffxString::operator+()</a>, <a class="el" href="_calvin_to_text_8cpp-source.html#l00131">CalvinToText::OutputData()</a>, <a class="el" href="_calvin_to_text_8cpp-source.html#l00255">CalvinToText::OutputFileHeaderParameters()</a>, <a class="el" href="_calvin_to_text_8cpp-source.html#l00284">CalvinToText::OutputParameters()</a>, <a class="el" href="_calvin_to_text_8cpp-source.html#l00374">CalvinToText::OutputSetInfo()</a>, <a class="el" href="_affx_multi_dimensional_array_8h-source.html#l00265">AffxMultiDimensionalArray&lt; TYPE &gt;::set()</a>, and <a class="el" href="_s_q_lite_8cpp-source.html#l00039">SQLiteDatabase::test()</a>.
+Referenced by <a class="el" href="_calvin_8h-source.html#l00083">CalvinValue::compareTo()</a>, <a class="el" href="_calvin_8cpp-source.html#l00247">Calvin::equivalent()</a>, <a class="el" href="_calvin_8cpp-source.html#l00838">Calvin::equivalentHeader()</a>, <a class="el" href="_affx_conv_8cpp-source.html#l00098">getInt()</a>, <a class="el" href="_affx_string_8cpp-source.html#l00218">AffxString::intToString()</a>, <a class="el" href="_calvin_8cpp-source.html#l00074">Calvin::load()</a>, <a class="el" href="_calvin_8cpp-source.html#l00194">Calvin::loadHeader()</a>, <a class="el" href="_affx_string_8h-source.html#l00153">AffxString::operator+()</a>, <a class="el" href="_calvin_to_text_8cpp-source.html#l00194">CalvinToText::OutputData()</a>, <a class="el" href="_calvin_to_text_8cpp-source.html#l00318">CalvinToText::OutputFileHeaderParameters()</a>, <a class="el" href="_calvin_to_text_8cpp-source.html#l00347">CalvinToText::OutputParameters()</a>, <a class="el" href="_calvin_to_text_8cpp-source.html#l00437">CalvinToText::OutputSetInfo()</a>, and <a class="el" href="_s_q_lite_8cpp-source.html#l00040">SQLiteDatabase::test()</a>.
 </div>
 </div><p>
 <a class="anchor" name="ef5e76b7418be30a85d9a28d7c57d6b8"></a><!-- doxytag: member="AffxConv.cpp::getMonth" ref="ef5e76b7418be30a85d9a28d7c57d6b8" args="(const std::string &amp;strMonth)" -->
@@ -352,7 +352,7 @@ Converts Month string to Month int. <dl compact><dt><b>Parameters:</b></dt><dd>
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>- int value. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_affx_conv_8cpp-source.html#l00347">347</a> of file <a class="el" href="_affx_conv_8cpp-source.html">AffxConv.cpp</a>.
+Definition at line <a class="el" href="_affx_conv_8cpp-source.html#l00346">346</a> of file <a class="el" href="_affx_conv_8cpp-source.html">AffxConv.cpp</a>.
 </div>
 </div><p>
 <a class="anchor" name="f1bd0f99470c2655f422ab938da2116f"></a><!-- doxytag: member="AffxConv.cpp::getMonth" ref="f1bd0f99470c2655f422ab938da2116f" args="(int iMonth)" -->
@@ -380,7 +380,7 @@ Converts Month int to Month string. <dl compact><dt><b>Parameters:</b></dt><dd>
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>- string value. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_affx_conv_8cpp-source.html#l00326">326</a> of file <a class="el" href="_affx_conv_8cpp-source.html">AffxConv.cpp</a>.
+Definition at line <a class="el" href="_affx_conv_8cpp-source.html#l00325">325</a> of file <a class="el" href="_affx_conv_8cpp-source.html">AffxConv.cpp</a>.
 </div>
 </div><p>
 <a class="anchor" name="25527befae79a2385fd5d85bbabcd2fe"></a><!-- doxytag: member="AffxConv.cpp::getUnsignedInt" ref="25527befae79a2385fd5d85bbabcd2fe" args="(unsigned int i, bool bCommas)" -->
@@ -409,8 +409,6 @@ Definition at line <a class="el" href="_affx_conv_8cpp-source.html#l00326">326</
 <div class="memdoc">
 
 <p>
-Some data conversion routines. 
-<p>
 Converts an unsigned int to a string. <dl compact><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>i</em>&nbsp;</td><td>- The unsigned int to convert. </td></tr>
@@ -420,7 +418,7 @@ Converts an unsigned int to a string. <dl compact><dt><b>Parameters:</b></dt><dd
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>- string value. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_affx_conv_8cpp-source.html#l00168">168</a> of file <a class="el" href="_affx_conv_8cpp-source.html">AffxConv.cpp</a>.
+Definition at line <a class="el" href="_affx_conv_8cpp-source.html#l00167">167</a> of file <a class="el" href="_affx_conv_8cpp-source.html">AffxConv.cpp</a>.
 </div>
 </div><p>
 <a class="anchor" name="3bfc6fcf2404cad091f4bc4433ba4ee3"></a><!-- doxytag: member="AffxConv.cpp::getUnsignedInt" ref="3bfc6fcf2404cad091f4bc4433ba4ee3" args="(const std::string &amp;str)" -->
@@ -448,9 +446,9 @@ Converts a string with commas into an unsigned int. <dl compact><dt><b>Parameter
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>- unsigned int value. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_affx_conv_8cpp-source.html#l00070">70</a> of file <a class="el" href="_affx_conv_8cpp-source.html">AffxConv.cpp</a>.
+Definition at line <a class="el" href="_affx_conv_8cpp-source.html#l00069">69</a> of file <a class="el" href="_affx_conv_8cpp-source.html">AffxConv.cpp</a>.
 <p>
-Referenced by <a class="el" href="_affx_byte_array_8h-source.html#l00085">AffxByteArray::append()</a>, <a class="el" href="_calvin_8h-source.html#l00081">CalvinValue::compareTo()</a>, <a class="el" href="_calvin_8cpp-source.html#l00473">Calvin::equivalent()</a>, <a class="el" href="_calvin_8cpp-source.html#l00812">Calvin::equivalentHeader()</a>, <a class="el" href="_calvin_8cpp-source.html#l00071">Calvin::load()</a>, <a class="el" href="_calvin_8cpp-source.html#l00191">Calvin::loadHeader()</a>, <a class="el" href="_calvin_to_text_8cpp-source.html#l00131">CalvinToText::OutputData()</a>, and <a class="el" href="_calvin_to_text_8cpp-source.html#l00255">CalvinToText::OutputFileHeaderParameters()</a>.
+Referenced by <a class="el" href="_affx_byte_array_8h-source.html#l00083">AffxByteArray::append()</a>, <a class="el" href="_calvin_8h-source.html#l00083">CalvinValue::compareTo()</a>, <a class="el" href="_calvin_8cpp-source.html#l00452">Calvin::equivalent()</a>, <a class="el" href="_calvin_8cpp-source.html#l00838">Calvin::equivalentHeader()</a>, <a class="el" href="_calvin_8cpp-source.html#l00074">Calvin::load()</a>, <a class="el" href="_calvin_8cpp-source.html#l00194">Calvin::loadHeader()</a>, <a class="el" href="_calvin_to_text_8cpp-source.html#l00194">CalvinToText::OutputData()</a>, and <a class="el" href="_calvin_to_text_8cpp-source.html#l00318">CalvinToText::OutputFileHeaderParameters()</a>.
 </div>
 </div><p>
 <a class="anchor" name="6641301a21ea8e58ede6ba262efc3d34"></a><!-- doxytag: member="AffxConv.cpp::likeString" ref="6641301a21ea8e58ede6ba262efc3d34" args="(const std::string &amp;str)" -->
@@ -478,7 +476,7 @@ Check for special characters is a string using in a SQL WHERE xxx LIKE xxx claus
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>- The formatted string. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_affx_conv_8cpp-source.html#l00403">403</a> of file <a class="el" href="_affx_conv_8cpp-source.html">AffxConv.cpp</a>.
+Definition at line <a class="el" href="_affx_conv_8cpp-source.html#l00402">402</a> of file <a class="el" href="_affx_conv_8cpp-source.html">AffxConv.cpp</a>.
 </div>
 </div><p>
 <a class="anchor" name="85d4ccdf9a257120206d24974b959402"></a><!-- doxytag: member="AffxConv.cpp::roundDouble" ref="85d4ccdf9a257120206d24974b959402" args="(double val, int places)" -->
@@ -516,12 +514,12 @@ Round the double and return it. <dl compact><dt><b>Parameters:</b></dt><dd>
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>- rounded double value. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_affx_conv_8cpp-source.html#l00370">370</a> of file <a class="el" href="_affx_conv_8cpp-source.html">AffxConv.cpp</a>.
+Definition at line <a class="el" href="_affx_conv_8cpp-source.html#l00369">369</a> of file <a class="el" href="_affx_conv_8cpp-source.html">AffxConv.cpp</a>.
 <p>
-Referenced by <a class="el" href="_affx_conv_8cpp-source.html#l00208">getDouble()</a>.
+Referenced by <a class="el" href="_affx_conv_8cpp-source.html#l00207">getDouble()</a>.
 </div>
 </div><p>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:26 2009 for Affymetrix Fusion SDK by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:36 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

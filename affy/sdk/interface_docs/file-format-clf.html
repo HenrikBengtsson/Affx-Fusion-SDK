@@ -40,8 +40,9 @@ The official C++ parser used by affy can be found in APT under <a class="el" hre
 Notes</a></h2>
 ChipLayout used by APT (in sdk/chipstream) will currently only accept CLF files for which:<p>
 <ul>
-<li>sequential=1</li><li>order=col_major</li></ul>
-<h2><a class="anchor" name="clfExample1">
+<li>sequential=1</li><li>order=col_major</li><li>order=row_major</li></ul>
+<p>
+In fact all the coordinates are done as row_major and the library files with col_major in the header are due to a bug. Please use row_major going forward.<h2><a class="anchor" name="clfExample1">
 Example 1</a></h2>
 <div class="fragment"><pre class="fragment">
 #%chip_type=HuEx-1_0-st-v2
@@ -56,20 +57,20 @@ Example 1</a></h2>
 #%cols=2560
 #%sequential=1
 #%order=col_major
-#%header0=probe_id	x	y
-1	0	0
-2	1	0
-3	2	0
-4	3	0
-5	4	0
-6	5	0
-7	6	0
+#%header0=probe_id x y
+1 0 0
+2 1 0
+3 2 0
+4 3 0
+5 4 0
+6 5 0
+7 6 0
 ...
 </pre></div><h2><a class="anchor" name="related">
 Related Pages</a></h2>
 <ul>
 <li><a href="./file-format-tsv-notes.html">TsvFile Design Notes</a></li><li><a href="./file-format-tsv.html">TSV File Format</a> </li></ul>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:27 2009 for Affymetrix Fusion SDK by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:38 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

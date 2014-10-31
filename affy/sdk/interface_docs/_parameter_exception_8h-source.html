@@ -53,38 +53,51 @@
 <a name="l00032"></a>00032 
 <a name="l00036"></a><a class="code" href="classaffymetrix__calvin__exceptions_1_1_parameter_mismatch_exception.html">00036</a> <span class="keyword">class </span><a class="code" href="classaffymetrix__calvin__exceptions_1_1_parameter_mismatch_exception.html">ParameterMismatchException</a> : <span class="keyword">public</span> <a class="code" href="classaffymetrix__calvin__exceptions_1_1_calvin_exception.html">CalvinException</a>
 <a name="l00037"></a>00037 {
-<a name="l00038"></a>00038 };
-<a name="l00039"></a>00039 
-<a name="l00043"></a><a class="code" href="classaffymetrix__calvin__exceptions_1_1_unexpected_parameter_exception.html">00043</a> <span class="keyword">class </span><a class="code" href="classaffymetrix__calvin__exceptions_1_1_unexpected_parameter_exception.html">UnexpectedParameterException</a> : <span class="keyword">public</span> <a class="code" href="classaffymetrix__calvin__exceptions_1_1_calvin_exception.html">CalvinException</a>
-<a name="l00044"></a>00044 {
-<a name="l00045"></a>00045 <span class="keyword">public</span>:
-<a name="l00046"></a><a class="code" href="classaffymetrix__calvin__exceptions_1_1_unexpected_parameter_exception.html#55d938f2b41e2f31529a6569fdef7471">00046</a>         <a class="code" href="classaffymetrix__calvin__exceptions_1_1_unexpected_parameter_exception.html#55d938f2b41e2f31529a6569fdef7471">UnexpectedParameterException</a>(<span class="keyword">const</span> std::wstring&amp; expectedType_) : <a class="code" href="classaffymetrix__calvin__exceptions_1_1_unexpected_parameter_exception.html#7f8b30d0ab1a1d54d3365e58fa9d5c5f">expectedType</a>(expectedType_) {}
-<a name="l00047"></a>00047 <span class="keyword">protected</span>:
-<a name="l00049"></a><a class="code" href="classaffymetrix__calvin__exceptions_1_1_unexpected_parameter_exception.html#7f8b30d0ab1a1d54d3365e58fa9d5c5f">00049</a>         std::wstring <a class="code" href="classaffymetrix__calvin__exceptions_1_1_unexpected_parameter_exception.html#7f8b30d0ab1a1d54d3365e58fa9d5c5f">expectedType</a>;
-<a name="l00050"></a>00050 };
-<a name="l00051"></a>00051 
-<a name="l00053"></a><a class="code" href="classaffymetrix__calvin__exceptions_1_1_out_of_range_parameter_exception.html">00053</a> <span class="keyword">class </span><a class="code" href="classaffymetrix__calvin__exceptions_1_1_out_of_range_parameter_exception.html">OutOfRangeParameterException</a> : <span class="keyword">public</span> <a class="code" href="classaffymetrix__calvin__exceptions_1_1_calvin_exception.html">CalvinException</a>
-<a name="l00054"></a>00054 {
-<a name="l00055"></a>00055 <span class="keyword">public</span>:
-<a name="l00060"></a><a class="code" href="classaffymetrix__calvin__exceptions_1_1_out_of_range_parameter_exception.html#7d2eaad08fe3f0541efc01e13fa264b2">00060</a>         <a class="code" href="classaffymetrix__calvin__exceptions_1_1_out_of_range_parameter_exception.html#7d2eaad08fe3f0541efc01e13fa264b2">OutOfRangeParameterException</a>(<span class="keyword">const</span> std::wstring&amp; lower_, <span class="keyword">const</span> std::wstring&amp; upper_):
-<a name="l00061"></a>00061                 <a class="code" href="classaffymetrix__calvin__exceptions_1_1_out_of_range_parameter_exception.html#394bcf6db67a9d5f5854967ff32b90f3">lower</a>(lower_), <a class="code" href="classaffymetrix__calvin__exceptions_1_1_out_of_range_parameter_exception.html#139e95c2b17aa137afe0aad158888eef">upper</a>(upper_) {}
-<a name="l00062"></a>00062 <span class="keyword">protected</span>:
-<a name="l00063"></a><a class="code" href="classaffymetrix__calvin__exceptions_1_1_out_of_range_parameter_exception.html#394bcf6db67a9d5f5854967ff32b90f3">00063</a>         std::wstring <a class="code" href="classaffymetrix__calvin__exceptions_1_1_out_of_range_parameter_exception.html#394bcf6db67a9d5f5854967ff32b90f3">lower</a>;
-<a name="l00064"></a><a class="code" href="classaffymetrix__calvin__exceptions_1_1_out_of_range_parameter_exception.html#139e95c2b17aa137afe0aad158888eef">00064</a>         std::wstring <a class="code" href="classaffymetrix__calvin__exceptions_1_1_out_of_range_parameter_exception.html#139e95c2b17aa137afe0aad158888eef">upper</a>;
-<a name="l00065"></a>00065 };
-<a name="l00066"></a>00066 
-<a name="l00068"></a><a class="code" href="classaffymetrix__calvin__exceptions_1_1_parameter_string_too_long_exception.html">00068</a> <span class="keyword">class </span><a class="code" href="classaffymetrix__calvin__exceptions_1_1_parameter_string_too_long_exception.html">ParameterStringTooLongException</a> : <span class="keyword">public</span> <a class="code" href="classaffymetrix__calvin__exceptions_1_1_calvin_exception.html">CalvinException</a>
-<a name="l00069"></a>00069 {
-<a name="l00070"></a>00070 <span class="keyword">public</span>:
-<a name="l00074"></a><a class="code" href="classaffymetrix__calvin__exceptions_1_1_parameter_string_too_long_exception.html#0340a771e2c2dd20e8a1c0eef675ab20">00074</a>         <a class="code" href="classaffymetrix__calvin__exceptions_1_1_parameter_string_too_long_exception.html#0340a771e2c2dd20e8a1c0eef675ab20">ParameterStringTooLongException</a>(int32_t len): <a class="code" href="classaffymetrix__calvin__exceptions_1_1_parameter_string_too_long_exception.html#8c07c488a71775446bf945315a63797c">maxLen</a>(len) {}
-<a name="l00075"></a>00075 <span class="keyword">protected</span>:
-<a name="l00076"></a><a class="code" href="classaffymetrix__calvin__exceptions_1_1_parameter_string_too_long_exception.html#8c07c488a71775446bf945315a63797c">00076</a>         int32_t <a class="code" href="classaffymetrix__calvin__exceptions_1_1_parameter_string_too_long_exception.html#8c07c488a71775446bf945315a63797c">maxLen</a>;
-<a name="l00077"></a>00077 };
-<a name="l00078"></a>00078 
-<a name="l00079"></a>00079 }
-<a name="l00080"></a>00080 
-<a name="l00081"></a>00081 <span class="preprocessor">#endif</span>
-</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:09 2009 for Affymetrix Fusion SDK by&nbsp;
+<a name="l00038"></a>00038 <span class="keyword">public</span>:
+<a name="l00039"></a><a class="code" href="classaffymetrix__calvin__exceptions_1_1_parameter_mismatch_exception.html#2762ad735efbf4067c9d55ce12fd634b">00039</a>   <a class="code" href="classaffymetrix__calvin__exceptions_1_1_parameter_mismatch_exception.html#2762ad735efbf4067c9d55ce12fd634b">ParameterMismatchException</a>() : <a class="code" href="classaffymetrix__calvin__exceptions_1_1_calvin_exception.html">CalvinException</a>() {}
+<a name="l00040"></a><a class="code" href="classaffymetrix__calvin__exceptions_1_1_parameter_mismatch_exception.html#624775c0bbf1f54723a9dfc193502fea">00040</a>   <a class="code" href="classaffymetrix__calvin__exceptions_1_1_parameter_mismatch_exception.html#2762ad735efbf4067c9d55ce12fd634b">ParameterMismatchException</a>(std::wstring _Source, std::wstring _Description, std::wstring _TimeStamp, std::string _FileName, u_int16_t _LineNumber, <a class="code" href="md5_8h.html#fecfb8149081bd9b746bf968fe118a1d">u_int64_t</a> _ErrorCode):
+<a name="l00041"></a>00041     <a class="code" href="classaffymetrix__calvin__exceptions_1_1_calvin_exception.html">CalvinException</a>(_Source, _Description, _TimeStamp, _FileName,  _LineNumber, _ErrorCode) {}
+<a name="l00042"></a>00042     
+<a name="l00043"></a>00043   <span class="keyword">const</span> std::wstring <a class="code" href="classaffymetrix__calvin__exceptions_1_1_parameter_mismatch_exception.html#36d5cf8b8977220762265eadc03faf59">ToString</a>();
+<a name="l00044"></a>00044 };
+<a name="l00045"></a>00045 
+<a name="l00049"></a><a class="code" href="classaffymetrix__calvin__exceptions_1_1_unexpected_parameter_exception.html">00049</a> <span class="keyword">class </span><a class="code" href="classaffymetrix__calvin__exceptions_1_1_unexpected_parameter_exception.html">UnexpectedParameterException</a> : <span class="keyword">public</span> <a class="code" href="classaffymetrix__calvin__exceptions_1_1_calvin_exception.html">CalvinException</a>
+<a name="l00050"></a>00050 {
+<a name="l00051"></a>00051 <span class="keyword">public</span>:
+<a name="l00052"></a><a class="code" href="classaffymetrix__calvin__exceptions_1_1_unexpected_parameter_exception.html#0c5c2a1668a7943b472ade92f57f7371">00052</a>     <a class="code" href="classaffymetrix__calvin__exceptions_1_1_unexpected_parameter_exception.html#0c5c2a1668a7943b472ade92f57f7371">UnexpectedParameterException</a>(std::wstring _Source, std::wstring _Description, std::wstring _TimeStamp, std::string _FileName, u_int16_t _LineNumber, <a class="code" href="md5_8h.html#fecfb8149081bd9b746bf968fe118a1d">u_int64_t</a> _ErrorCode, <span class="keyword">const</span> std::wstring&amp; expectedType_):
+<a name="l00053"></a>00053       <a class="code" href="classaffymetrix__calvin__exceptions_1_1_calvin_exception.html">CalvinException</a>(_Source, _Description, _TimeStamp, _FileName,  _LineNumber, _ErrorCode),
+<a name="l00054"></a>00054       <a class="code" href="classaffymetrix__calvin__exceptions_1_1_unexpected_parameter_exception.html#7f8b30d0ab1a1d54d3365e58fa9d5c5f">expectedType</a>(expectedType_){}
+<a name="l00055"></a>00055   <span class="keyword">const</span> std::wstring <a class="code" href="classaffymetrix__calvin__exceptions_1_1_unexpected_parameter_exception.html#cea7510606add0731b3f5caf18a0f732">ToString</a>();
+<a name="l00056"></a>00056 <span class="keyword">protected</span>:
+<a name="l00058"></a><a class="code" href="classaffymetrix__calvin__exceptions_1_1_unexpected_parameter_exception.html#7f8b30d0ab1a1d54d3365e58fa9d5c5f">00058</a>         std::wstring <a class="code" href="classaffymetrix__calvin__exceptions_1_1_unexpected_parameter_exception.html#7f8b30d0ab1a1d54d3365e58fa9d5c5f">expectedType</a>;
+<a name="l00059"></a>00059 };
+<a name="l00060"></a>00060 
+<a name="l00062"></a><a class="code" href="classaffymetrix__calvin__exceptions_1_1_out_of_range_parameter_exception.html">00062</a> <span class="keyword">class </span><a class="code" href="classaffymetrix__calvin__exceptions_1_1_out_of_range_parameter_exception.html">OutOfRangeParameterException</a> : <span class="keyword">public</span> <a class="code" href="classaffymetrix__calvin__exceptions_1_1_calvin_exception.html">CalvinException</a>
+<a name="l00063"></a>00063 {
+<a name="l00064"></a>00064 <span class="keyword">public</span>:
+<a name="l00069"></a><a class="code" href="classaffymetrix__calvin__exceptions_1_1_out_of_range_parameter_exception.html#ed5507d878f0e30e17b2e7e80c348c10">00069</a>         <a class="code" href="classaffymetrix__calvin__exceptions_1_1_out_of_range_parameter_exception.html#ed5507d878f0e30e17b2e7e80c348c10">OutOfRangeParameterException</a>(std::wstring _Source, std::wstring _Description, std::wstring _TimeStamp, std::string _FileName, u_int16_t _LineNumber, <a class="code" href="md5_8h.html#fecfb8149081bd9b746bf968fe118a1d">u_int64_t</a> _ErrorCode, <span class="keyword">const</span> std::wstring&amp; lower_, <span class="keyword">const</span> std::wstring&amp; upper_):
+<a name="l00070"></a>00070           <a class="code" href="classaffymetrix__calvin__exceptions_1_1_calvin_exception.html">CalvinException</a>(_Source, _Description, _TimeStamp, _FileName,  _LineNumber, _ErrorCode), 
+<a name="l00071"></a>00071           <a class="code" href="classaffymetrix__calvin__exceptions_1_1_out_of_range_parameter_exception.html#394bcf6db67a9d5f5854967ff32b90f3">lower</a>(lower_), <a class="code" href="classaffymetrix__calvin__exceptions_1_1_out_of_range_parameter_exception.html#139e95c2b17aa137afe0aad158888eef">upper</a>(upper_) {}
+<a name="l00072"></a>00072   <span class="keyword">const</span> std::wstring <a class="code" href="classaffymetrix__calvin__exceptions_1_1_out_of_range_parameter_exception.html#3ded99a5ce74ce9b14191d7041b7b6c5">ToString</a>();
+<a name="l00073"></a>00073 <span class="keyword">protected</span>:
+<a name="l00074"></a><a class="code" href="classaffymetrix__calvin__exceptions_1_1_out_of_range_parameter_exception.html#394bcf6db67a9d5f5854967ff32b90f3">00074</a>         std::wstring <a class="code" href="classaffymetrix__calvin__exceptions_1_1_out_of_range_parameter_exception.html#394bcf6db67a9d5f5854967ff32b90f3">lower</a>;
+<a name="l00075"></a><a class="code" href="classaffymetrix__calvin__exceptions_1_1_out_of_range_parameter_exception.html#139e95c2b17aa137afe0aad158888eef">00075</a>         std::wstring <a class="code" href="classaffymetrix__calvin__exceptions_1_1_out_of_range_parameter_exception.html#139e95c2b17aa137afe0aad158888eef">upper</a>;
+<a name="l00076"></a>00076 };
+<a name="l00077"></a>00077 
+<a name="l00079"></a><a class="code" href="classaffymetrix__calvin__exceptions_1_1_parameter_string_too_long_exception.html">00079</a> <span class="keyword">class </span><a class="code" href="classaffymetrix__calvin__exceptions_1_1_parameter_string_too_long_exception.html">ParameterStringTooLongException</a> : <span class="keyword">public</span> <a class="code" href="classaffymetrix__calvin__exceptions_1_1_calvin_exception.html">CalvinException</a>
+<a name="l00080"></a>00080 {
+<a name="l00081"></a>00081 <span class="keyword">public</span>:
+<a name="l00085"></a><a class="code" href="classaffymetrix__calvin__exceptions_1_1_parameter_string_too_long_exception.html#91f2525dab996d37395fb8ab15fa4231">00085</a>         <a class="code" href="classaffymetrix__calvin__exceptions_1_1_parameter_string_too_long_exception.html#91f2525dab996d37395fb8ab15fa4231">ParameterStringTooLongException</a>(std::wstring _Source, std::wstring _Description, std::wstring _TimeStamp, std::string _FileName, u_int16_t _LineNumber, <a class="code" href="md5_8h.html#fecfb8149081bd9b746bf968fe118a1d">u_int64_t</a> _ErrorCode, int32_t len):
+<a name="l00086"></a>00086           <a class="code" href="classaffymetrix__calvin__exceptions_1_1_calvin_exception.html">CalvinException</a>(_Source, _Description, _TimeStamp, _FileName,  _LineNumber, _ErrorCode), <a class="code" href="classaffymetrix__calvin__exceptions_1_1_parameter_string_too_long_exception.html#8c07c488a71775446bf945315a63797c">maxLen</a>(len) {}
+<a name="l00087"></a>00087           <span class="keyword">const</span> std::wstring <a class="code" href="classaffymetrix__calvin__exceptions_1_1_parameter_string_too_long_exception.html#617deccbc7052b9909a0204e6cfc6256">ToString</a>();
+<a name="l00088"></a>00088 <span class="keyword">protected</span>:
+<a name="l00089"></a><a class="code" href="classaffymetrix__calvin__exceptions_1_1_parameter_string_too_long_exception.html#8c07c488a71775446bf945315a63797c">00089</a>         int32_t <a class="code" href="classaffymetrix__calvin__exceptions_1_1_parameter_string_too_long_exception.html#8c07c488a71775446bf945315a63797c">maxLen</a>;
+<a name="l00090"></a>00090 };
+<a name="l00091"></a>00091 
+<a name="l00092"></a>00092 }
+<a name="l00093"></a>00093 
+<a name="l00094"></a>00094 <span class="preprocessor">#endif</span>
+</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:18 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

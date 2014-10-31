@@ -20,6 +20,8 @@
 
 package affymetrix.gcos.cdf;
 
+import java.util.Vector;
+
 /** Stores information from the header section of the CDF file. */
 public class CDFFileHeader {
 	/** The magic number in an XDA file */
@@ -176,6 +178,58 @@ public class CDFFileHeader {
 		rows = value;
 	}
 
+	/** The guid */
+	private String guid;
+
+	/** Returns the guid */
+	public String getGUID() {
+		return guid;
+	}
+
+	/** Sets the guid */
+	public void setGUID(String g) {
+		guid = g;
+	}
+	
+	/** The integrity MD5 value. */
+	private String integrityMd5;
+
+	/** Returns the integrity md5 */
+	public String getIntegrityMd5() {
+		return integrityMd5;
+	}
+
+	/** Sets the integrity md5 */
+	public void setIntegrityMd5(String m) {
+		integrityMd5 = m;
+	}
+
+	/** The chip type */
+	private String chipType;
+
+	/** Returns the chip type */
+	public String getChipType() {
+		return chipType;
+	}
+
+	/** Sets the chip type */
+	public void setChipType(String c) {
+		chipType = c;
+	}
+	
+	/** The chip types */
+	private Vector<String> chipTypes;
+
+	/** Returns the chip types */
+	public Vector<String> getChipTypes() {
+		return chipTypes;
+	}
+
+	/** Sets the chip types */
+	public void setChipTypes(Vector<String> c) {
+		chipTypes = c;
+	}
+	
 	/** Creates a new instance of CDFFileHeader */
 	public CDFFileHeader() {
 		cols = 0;
@@ -184,7 +238,12 @@ public class CDFFileHeader {
 		version = 0;
 		numProbeSets = 0;
 		numQCProbeSets = 0;
+		version = 0;
 		reference = null;
+		guid = null;
+		integrityMd5 = null;
+		chipType = null;
+		chipTypes = null;
 	}
 
 }

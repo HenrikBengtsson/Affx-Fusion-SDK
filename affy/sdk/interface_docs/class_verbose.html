@@ -38,9 +38,17 @@
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Functions to add and remove handlers for communcation functions.  <a href="#f20e052bc19f95d3a949d1daa1647fa8"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_verbose.html#33bb725b0b5fb5ed3c03afde79cbec03">popProgressHandler</a> ()</td></tr>
 
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_verbose.html#6f96ae4999db01b4c53746a884c3ea3e">removeProgressHandler</a> (<a class="el" href="class_progress_handler.html">ProgressHandler</a> *h)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_verbose.html#83da9516286c650973bc9323e5f7bffd">removeProgressHandler</a> (std::vector&lt; <a class="el" href="class_progress_handler.html">ProgressHandler</a> * &gt; &amp;vec, <a class="el" href="class_progress_handler.html">ProgressHandler</a> *h)</td></tr>
+
 <tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_verbose.html#5e08410863552e5ad8a5ee6f9d900369">pushMsgHandler</a> (<a class="el" href="class_msg_handler.html">MsgHandler</a> *handler)</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_verbose.html#f8338b339fe62eeb1348e70a2f31a20c">popMsgHandler</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_verbose.html#3ade0725371cec13088386e016d43d9b">removeMsgHandler</a> (<a class="el" href="class_msg_handler.html">MsgHandler</a> *handler)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_verbose.html#29f00fbdf27138e38d71613dc726f54b">removeMsgHandler</a> (std::vector&lt; <a class="el" href="class_msg_handler.html">MsgHandler</a> * &gt; &amp;vec, <a class="el" href="class_msg_handler.html">MsgHandler</a> *h)</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_verbose.html#93a94bfb25219b455917ee37e5f939db">pushWarnHandler</a> (<a class="el" href="class_msg_handler.html">MsgHandler</a> *handler)</td></tr>
 
@@ -52,6 +60,8 @@
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Print a dot out to let the user know we are still alive and making progress.  <a href="#b28a28741a3ab2086099e2d66e920eb5"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_verbose.html#91422409e57aefb36247c5357a87d92d">progressEnd</a> (int verbosity, const std::string &amp;msg)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_verbose.html#2ea34eabb48232258ca20da18f858afc">removeDefault</a> ()</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_verbose.html#fa67ccc022f9fba0cb637e81206ec058">setOutput</a> (bool output)</td></tr>
 
@@ -98,9 +108,11 @@ This function gets around the problem of static variable initialization as local
 <dl class="return" compact><dt><b>Returns:</b></dt><dd><a class="el" href="class_verbose_1_1_param.html">Param</a> - Our static parameters for this class. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_verbose_8cpp-source.html#l00064">64</a> of file <a class="el" href="_verbose_8cpp-source.html">Verbose.cpp</a>.
+Definition at line <a class="el" href="_verbose_8cpp-source.html#l00103">103</a> of file <a class="el" href="_verbose_8cpp-source.html">Verbose.cpp</a>.
 <p>
-Referenced by <a class="el" href="_verbose_8cpp-source.html#l00168">out()</a>, <a class="el" href="_verbose_8cpp-source.html#l00094">popMsgHandler()</a>, <a class="el" href="_verbose_8cpp-source.html#l00086">popProgressHandler()</a>, <a class="el" href="_verbose_8cpp-source.html#l00102">popWarnHandler()</a>, <a class="el" href="_verbose_8cpp-source.html#l00106">progressBegin()</a>, <a class="el" href="_verbose_8cpp-source.html#l00121">progressEnd()</a>, <a class="el" href="_verbose_8cpp-source.html#l00039">progressStep()</a>, <a class="el" href="_verbose_8cpp-source.html#l00090">pushMsgHandler()</a>, <a class="el" href="_verbose_8cpp-source.html#l00082">pushProgressHandler()</a>, <a class="el" href="_verbose_8cpp-source.html#l00098">pushWarnHandler()</a>, <a class="el" href="_verbose_8cpp-source.html#l00152">setLevel()</a>, <a class="el" href="_verbose_8cpp-source.html#l00142">setOutput()</a>, and <a class="el" href="_verbose_8cpp-source.html#l00183">warn()</a>.
+References <a class="el" href="_verbose_8cpp-source.html#l00259">out()</a>.
+<p>
+Referenced by <a class="el" href="_verbose_8cpp-source.html#l00259">out()</a>, <a class="el" href="_base_engine_8cpp-source.html#l00112">BaseEngine::parseArgv()</a>, <a class="el" href="_verbose_8cpp-source.html#l00137">popMsgHandler()</a>, <a class="el" href="_verbose_8cpp-source.html#l00128">popProgressHandler()</a>, <a class="el" href="_verbose_8cpp-source.html#l00146">popWarnHandler()</a>, <a class="el" href="_verbose_8cpp-source.html#l00150">progressBegin()</a>, <a class="el" href="_verbose_8cpp-source.html#l00165">progressEnd()</a>, <a class="el" href="_verbose_8cpp-source.html#l00078">progressStep()</a>, <a class="el" href="_verbose_8cpp-source.html#l00132">pushMsgHandler()</a>, <a class="el" href="_verbose_8cpp-source.html#l00124">pushProgressHandler()</a>, <a class="el" href="_verbose_8cpp-source.html#l00142">pushWarnHandler()</a>, <a class="el" href="_verbose_8cpp-source.html#l00211">removeDefault()</a>, <a class="el" href="_verbose_8cpp-source.html#l00180">removeMsgHandler()</a>, <a class="el" href="_verbose_8cpp-source.html#l00186">removeProgressHandler()</a>, <a class="el" href="_verbose_8cpp-source.html#l00242">setLevel()</a>, <a class="el" href="_verbose_8cpp-source.html#l00232">setOutput()</a>, and <a class="el" href="_verbose_8cpp-source.html#l00277">warn()</a>.
 </div>
 </div><p>
 <a class="anchor" name="f20e052bc19f95d3a949d1daa1647fa8"></a><!-- doxytag: member="Verbose::pushProgressHandler" ref="f20e052bc19f95d3a949d1daa1647fa8" args="(ProgressHandler *handler)" -->
@@ -124,11 +136,11 @@ Functions to add and remove handlers for communcation functions.
 <p>
 
 <p>
-Definition at line <a class="el" href="_verbose_8cpp-source.html#l00082">82</a> of file <a class="el" href="_verbose_8cpp-source.html">Verbose.cpp</a>.
+Definition at line <a class="el" href="_verbose_8cpp-source.html#l00124">124</a> of file <a class="el" href="_verbose_8cpp-source.html">Verbose.cpp</a>.
 <p>
-References <a class="el" href="_verbose_8cpp-source.html#l00064">getParam()</a>, and <a class="el" href="_verbose_8h-source.html#l00071">Verbose::Param::m_ProHandler</a>.
+References <a class="el" href="_verbose_8cpp-source.html#l00103">getParam()</a>, and <a class="el" href="_verbose_8h-source.html#l00077">Verbose::Param::m_ProHandler</a>.
 <p>
-Referenced by <a class="el" href="apt-engine-wrapper_8cpp-source.html#l00126">main()</a>.
+Referenced by <a class="el" href="apt-engine-wrapper_8cpp-source.html#l00043">main()</a>, <a class="el" href="_base_engine_8cpp-source.html#l00145">BaseEngine::openStandardLog()</a>, and <a class="el" href="_base_engine_8cpp-source.html#l00112">BaseEngine::parseArgv()</a>.
 </div>
 </div><p>
 <a class="anchor" name="33bb725b0b5fb5ed3c03afde79cbec03"></a><!-- doxytag: member="Verbose::popProgressHandler" ref="33bb725b0b5fb5ed3c03afde79cbec03" args="()" -->
@@ -149,9 +161,66 @@ Referenced by <a class="el" href="apt-engine-wrapper_8cpp-source.html#l00126">ma
 <p>
 
 <p>
-Definition at line <a class="el" href="_verbose_8cpp-source.html#l00086">86</a> of file <a class="el" href="_verbose_8cpp-source.html">Verbose.cpp</a>.
+Definition at line <a class="el" href="_verbose_8cpp-source.html#l00128">128</a> of file <a class="el" href="_verbose_8cpp-source.html">Verbose.cpp</a>.
 <p>
-References <a class="el" href="_verbose_8cpp-source.html#l00064">getParam()</a>, and <a class="el" href="_verbose_8h-source.html#l00071">Verbose::Param::m_ProHandler</a>.
+References <a class="el" href="_verbose_8cpp-source.html#l00103">getParam()</a>, and <a class="el" href="_verbose_8h-source.html#l00077">Verbose::Param::m_ProHandler</a>.
+</div>
+</div><p>
+<a class="anchor" name="6f96ae4999db01b4c53746a884c3ea3e"></a><!-- doxytag: member="Verbose::removeProgressHandler" ref="6f96ae4999db01b4c53746a884c3ea3e" args="(ProgressHandler *h)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Verbose::removeProgressHandler           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_progress_handler.html">ProgressHandler</a> *&nbsp;</td>
+          <td class="paramname"> <em>h</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>
+Definition at line <a class="el" href="_verbose_8cpp-source.html#l00186">186</a> of file <a class="el" href="_verbose_8cpp-source.html">Verbose.cpp</a>.
+<p>
+References <a class="el" href="_verbose_8cpp-source.html#l00103">getParam()</a>, and <a class="el" href="_verbose_8h-source.html#l00077">Verbose::Param::m_ProHandler</a>.
+<p>
+Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00290">BaseEngine::run()</a>.
+</div>
+</div><p>
+<a class="anchor" name="83da9516286c650973bc9323e5f7bffd"></a><!-- doxytag: member="Verbose::removeProgressHandler" ref="83da9516286c650973bc9323e5f7bffd" args="(std::vector&lt; ProgressHandler * &gt; &amp;vec, ProgressHandler *h)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Verbose::removeProgressHandler           </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_progress_handler.html">ProgressHandler</a> * &gt; &amp;&nbsp;</td>
+          <td class="paramname"> <em>vec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_progress_handler.html">ProgressHandler</a> *&nbsp;</td>
+          <td class="paramname"> <em>h</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>
+Definition at line <a class="el" href="_verbose_8cpp-source.html#l00201">201</a> of file <a class="el" href="_verbose_8cpp-source.html">Verbose.cpp</a>.
 </div>
 </div><p>
 <a class="anchor" name="5e08410863552e5ad8a5ee6f9d900369"></a><!-- doxytag: member="Verbose::pushMsgHandler" ref="5e08410863552e5ad8a5ee6f9d900369" args="(MsgHandler *handler)" -->
@@ -173,11 +242,11 @@ References <a class="el" href="_verbose_8cpp-source.html#l00064">getParam()</a>,
 <p>
 
 <p>
-Definition at line <a class="el" href="_verbose_8cpp-source.html#l00090">90</a> of file <a class="el" href="_verbose_8cpp-source.html">Verbose.cpp</a>.
+Definition at line <a class="el" href="_verbose_8cpp-source.html#l00132">132</a> of file <a class="el" href="_verbose_8cpp-source.html">Verbose.cpp</a>.
 <p>
-References <a class="el" href="_verbose_8cpp-source.html#l00064">getParam()</a>, and <a class="el" href="_verbose_8h-source.html#l00072">Verbose::Param::m_MsgHandler</a>.
+References <a class="el" href="_verbose_8cpp-source.html#l00103">getParam()</a>, and <a class="el" href="_verbose_8h-source.html#l00078">Verbose::Param::m_MsgHandler</a>.
 <p>
-Referenced by <a class="el" href="apt-engine-wrapper_8cpp-source.html#l00126">main()</a>.
+Referenced by <a class="el" href="apt-engine-wrapper_8cpp-source.html#l00043">main()</a>, <a class="el" href="_base_engine_8cpp-source.html#l00145">BaseEngine::openStandardLog()</a>, and <a class="el" href="_base_engine_8cpp-source.html#l00112">BaseEngine::parseArgv()</a>.
 </div>
 </div><p>
 <a class="anchor" name="f8338b339fe62eeb1348e70a2f31a20c"></a><!-- doxytag: member="Verbose::popMsgHandler" ref="f8338b339fe62eeb1348e70a2f31a20c" args="()" -->
@@ -198,9 +267,66 @@ Referenced by <a class="el" href="apt-engine-wrapper_8cpp-source.html#l00126">ma
 <p>
 
 <p>
-Definition at line <a class="el" href="_verbose_8cpp-source.html#l00094">94</a> of file <a class="el" href="_verbose_8cpp-source.html">Verbose.cpp</a>.
+Definition at line <a class="el" href="_verbose_8cpp-source.html#l00137">137</a> of file <a class="el" href="_verbose_8cpp-source.html">Verbose.cpp</a>.
 <p>
-References <a class="el" href="_verbose_8cpp-source.html#l00064">getParam()</a>, and <a class="el" href="_verbose_8h-source.html#l00072">Verbose::Param::m_MsgHandler</a>.
+References <a class="el" href="_verbose_8cpp-source.html#l00103">getParam()</a>, and <a class="el" href="_verbose_8h-source.html#l00078">Verbose::Param::m_MsgHandler</a>.
+</div>
+</div><p>
+<a class="anchor" name="3ade0725371cec13088386e016d43d9b"></a><!-- doxytag: member="Verbose::removeMsgHandler" ref="3ade0725371cec13088386e016d43d9b" args="(MsgHandler *handler)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Verbose::removeMsgHandler           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_msg_handler.html">MsgHandler</a> *&nbsp;</td>
+          <td class="paramname"> <em>handler</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>
+Definition at line <a class="el" href="_verbose_8cpp-source.html#l00180">180</a> of file <a class="el" href="_verbose_8cpp-source.html">Verbose.cpp</a>.
+<p>
+References <a class="el" href="_verbose_8cpp-source.html#l00103">getParam()</a>, <a class="el" href="_verbose_8h-source.html#l00078">Verbose::Param::m_MsgHandler</a>, and <a class="el" href="_verbose_8h-source.html#l00079">Verbose::Param::m_WarnHandler</a>.
+<p>
+Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00290">BaseEngine::run()</a>.
+</div>
+</div><p>
+<a class="anchor" name="29f00fbdf27138e38d71613dc726f54b"></a><!-- doxytag: member="Verbose::removeMsgHandler" ref="29f00fbdf27138e38d71613dc726f54b" args="(std::vector&lt; MsgHandler * &gt; &amp;vec, MsgHandler *h)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Verbose::removeMsgHandler           </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_msg_handler.html">MsgHandler</a> * &gt; &amp;&nbsp;</td>
+          <td class="paramname"> <em>vec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_msg_handler.html">MsgHandler</a> *&nbsp;</td>
+          <td class="paramname"> <em>h</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>
+Definition at line <a class="el" href="_verbose_8cpp-source.html#l00191">191</a> of file <a class="el" href="_verbose_8cpp-source.html">Verbose.cpp</a>.
 </div>
 </div><p>
 <a class="anchor" name="93a94bfb25219b455917ee37e5f939db"></a><!-- doxytag: member="Verbose::pushWarnHandler" ref="93a94bfb25219b455917ee37e5f939db" args="(MsgHandler *handler)" -->
@@ -222,11 +348,11 @@ References <a class="el" href="_verbose_8cpp-source.html#l00064">getParam()</a>,
 <p>
 
 <p>
-Definition at line <a class="el" href="_verbose_8cpp-source.html#l00098">98</a> of file <a class="el" href="_verbose_8cpp-source.html">Verbose.cpp</a>.
+Definition at line <a class="el" href="_verbose_8cpp-source.html#l00142">142</a> of file <a class="el" href="_verbose_8cpp-source.html">Verbose.cpp</a>.
 <p>
-References <a class="el" href="_verbose_8cpp-source.html#l00064">getParam()</a>, and <a class="el" href="_verbose_8h-source.html#l00073">Verbose::Param::m_WarnHandler</a>.
+References <a class="el" href="_verbose_8cpp-source.html#l00103">getParam()</a>, and <a class="el" href="_verbose_8h-source.html#l00079">Verbose::Param::m_WarnHandler</a>.
 <p>
-Referenced by <a class="el" href="apt-engine-wrapper_8cpp-source.html#l00126">main()</a>.
+Referenced by <a class="el" href="apt-engine-wrapper_8cpp-source.html#l00043">main()</a>, and <a class="el" href="_base_engine_8cpp-source.html#l00145">BaseEngine::openStandardLog()</a>.
 </div>
 </div><p>
 <a class="anchor" name="858c7eb9f4328a4992bb97c215fb25e1"></a><!-- doxytag: member="Verbose::popWarnHandler" ref="858c7eb9f4328a4992bb97c215fb25e1" args="()" -->
@@ -247,9 +373,9 @@ Referenced by <a class="el" href="apt-engine-wrapper_8cpp-source.html#l00126">ma
 <p>
 
 <p>
-Definition at line <a class="el" href="_verbose_8cpp-source.html#l00102">102</a> of file <a class="el" href="_verbose_8cpp-source.html">Verbose.cpp</a>.
+Definition at line <a class="el" href="_verbose_8cpp-source.html#l00146">146</a> of file <a class="el" href="_verbose_8cpp-source.html">Verbose.cpp</a>.
 <p>
-References <a class="el" href="_verbose_8cpp-source.html#l00064">getParam()</a>, and <a class="el" href="_verbose_8h-source.html#l00073">Verbose::Param::m_WarnHandler</a>.
+References <a class="el" href="_verbose_8cpp-source.html#l00103">getParam()</a>, and <a class="el" href="_verbose_8h-source.html#l00079">Verbose::Param::m_WarnHandler</a>.
 </div>
 </div><p>
 <a class="anchor" name="4ac11421997846921f91150933277222"></a><!-- doxytag: member="Verbose::progressBegin" ref="4ac11421997846921f91150933277222" args="(int verbosity, const std::string &amp;msg, int total, int dotMod, int maxCalls)" -->
@@ -298,9 +424,11 @@ References <a class="el" href="_verbose_8cpp-source.html#l00064">getParam()</a>,
 <p>
 
 <p>
-Definition at line <a class="el" href="_verbose_8cpp-source.html#l00106">106</a> of file <a class="el" href="_verbose_8cpp-source.html">Verbose.cpp</a>.
+Definition at line <a class="el" href="_verbose_8cpp-source.html#l00150">150</a> of file <a class="el" href="_verbose_8cpp-source.html">Verbose.cpp</a>.
 <p>
-References <a class="el" href="_verbose_8cpp-source.html#l00064">getParam()</a>, <a class="el" href="_verbose_8h-source.html#l00078">Verbose::Param::m_DotCount</a>, <a class="el" href="_verbose_8h-source.html#l00077">Verbose::Param::m_DotMod</a>, and <a class="el" href="_verbose_8h-source.html#l00071">Verbose::Param::m_ProHandler</a>.
+References <a class="el" href="_verbose_8cpp-source.html#l00103">getParam()</a>, <a class="el" href="_verbose_8h-source.html#l00084">Verbose::Param::m_DotCount</a>, <a class="el" href="_verbose_8h-source.html#l00083">Verbose::Param::m_DotMod</a>, and <a class="el" href="_verbose_8h-source.html#l00077">Verbose::Param::m_ProHandler</a>.
+<p>
+Referenced by <a class="el" href="_socket_text_handler_8cpp-source.html#l00026">SocketTextHandler::handleMessage()</a>.
 </div>
 </div><p>
 <a class="anchor" name="b28a28741a3ab2086099e2d66e920eb5"></a><!-- doxytag: member="Verbose::progressStep" ref="b28a28741a3ab2086099e2d66e920eb5" args="(int verbosity)" -->
@@ -329,9 +457,11 @@ Print a dot out to let the user know we are still alive and making progress.
 </dl>
 
 <p>
-Definition at line <a class="el" href="_verbose_8cpp-source.html#l00039">39</a> of file <a class="el" href="_verbose_8cpp-source.html">Verbose.cpp</a>.
+Definition at line <a class="el" href="_verbose_8cpp-source.html#l00078">78</a> of file <a class="el" href="_verbose_8cpp-source.html">Verbose.cpp</a>.
 <p>
-References <a class="el" href="_verbose_8cpp-source.html#l00064">getParam()</a>, <a class="el" href="_verbose_8h-source.html#l00078">Verbose::Param::m_DotCount</a>, <a class="el" href="_verbose_8h-source.html#l00077">Verbose::Param::m_DotMod</a>, <a class="el" href="_verbose_8h-source.html#l00071">Verbose::Param::m_ProHandler</a>, and <a class="el" href="_verbose_8h-source.html#l00076">Verbose::Param::m_Verbosity</a>.
+References <a class="el" href="_verbose_8cpp-source.html#l00103">getParam()</a>, <a class="el" href="_verbose_8h-source.html#l00084">Verbose::Param::m_DotCount</a>, <a class="el" href="_verbose_8h-source.html#l00083">Verbose::Param::m_DotMod</a>, <a class="el" href="_verbose_8h-source.html#l00077">Verbose::Param::m_ProHandler</a>, and <a class="el" href="_verbose_8h-source.html#l00082">Verbose::Param::m_Verbosity</a>.
+<p>
+Referenced by <a class="el" href="_socket_text_handler_8cpp-source.html#l00026">SocketTextHandler::handleMessage()</a>.
 </div>
 </div><p>
 <a class="anchor" name="91422409e57aefb36247c5357a87d92d"></a><!-- doxytag: member="Verbose::progressEnd" ref="91422409e57aefb36247c5357a87d92d" args="(int verbosity, const std::string &amp;msg)" -->
@@ -362,9 +492,36 @@ References <a class="el" href="_verbose_8cpp-source.html#l00064">getParam()</a>,
 <p>
 
 <p>
-Definition at line <a class="el" href="_verbose_8cpp-source.html#l00121">121</a> of file <a class="el" href="_verbose_8cpp-source.html">Verbose.cpp</a>.
+Definition at line <a class="el" href="_verbose_8cpp-source.html#l00165">165</a> of file <a class="el" href="_verbose_8cpp-source.html">Verbose.cpp</a>.
 <p>
-References <a class="el" href="_verbose_8cpp-source.html#l00064">getParam()</a>, <a class="el" href="_verbose_8h-source.html#l00078">Verbose::Param::m_DotCount</a>, <a class="el" href="_verbose_8h-source.html#l00077">Verbose::Param::m_DotMod</a>, <a class="el" href="_verbose_8h-source.html#l00071">Verbose::Param::m_ProHandler</a>, and <a class="el" href="_verbose_8h-source.html#l00076">Verbose::Param::m_Verbosity</a>.
+References <a class="el" href="_verbose_8cpp-source.html#l00103">getParam()</a>, <a class="el" href="_verbose_8h-source.html#l00084">Verbose::Param::m_DotCount</a>, <a class="el" href="_verbose_8h-source.html#l00083">Verbose::Param::m_DotMod</a>, <a class="el" href="_verbose_8h-source.html#l00077">Verbose::Param::m_ProHandler</a>, and <a class="el" href="_verbose_8h-source.html#l00082">Verbose::Param::m_Verbosity</a>.
+<p>
+Referenced by <a class="el" href="_socket_text_handler_8cpp-source.html#l00026">SocketTextHandler::handleMessage()</a>.
+</div>
+</div><p>
+<a class="anchor" name="2ea34eabb48232258ca20da18f858afc"></a><!-- doxytag: member="Verbose::removeDefault" ref="2ea34eabb48232258ca20da18f858afc" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Verbose::removeDefault           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>
+Definition at line <a class="el" href="_verbose_8cpp-source.html#l00211">211</a> of file <a class="el" href="_verbose_8cpp-source.html">Verbose.cpp</a>.
+<p>
+References <a class="el" href="_verbose_8cpp-source.html#l00103">getParam()</a>, <a class="el" href="_verbose_8h-source.html#l00075">Verbose::Param::m_MsgDefault</a>, <a class="el" href="_verbose_8h-source.html#l00078">Verbose::Param::m_MsgHandler</a>, <a class="el" href="_verbose_8h-source.html#l00074">Verbose::Param::m_ProgDefault</a>, <a class="el" href="_verbose_8h-source.html#l00077">Verbose::Param::m_ProHandler</a>, <a class="el" href="_verbose_8h-source.html#l00076">Verbose::Param::m_WarnDefault</a>, and <a class="el" href="_verbose_8h-source.html#l00079">Verbose::Param::m_WarnHandler</a>.
+<p>
+Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00112">BaseEngine::parseArgv()</a>.
 </div>
 </div><p>
 <a class="anchor" name="fa67ccc022f9fba0cb637e81206ec058"></a><!-- doxytag: member="Verbose::setOutput" ref="fa67ccc022f9fba0cb637e81206ec058" args="(bool output)" -->
@@ -393,9 +550,9 @@ Set whether or not output messages are logged useful to turn off output when cat
 </dl>
 
 <p>
-Definition at line <a class="el" href="_verbose_8cpp-source.html#l00142">142</a> of file <a class="el" href="_verbose_8cpp-source.html">Verbose.cpp</a>.
+Definition at line <a class="el" href="_verbose_8cpp-source.html#l00232">232</a> of file <a class="el" href="_verbose_8cpp-source.html">Verbose.cpp</a>.
 <p>
-References <a class="el" href="_verbose_8cpp-source.html#l00064">getParam()</a>, and <a class="el" href="_verbose_8h-source.html#l00075">Verbose::Param::m_Output</a>.
+References <a class="el" href="_verbose_8cpp-source.html#l00103">getParam()</a>, and <a class="el" href="_verbose_8h-source.html#l00081">Verbose::Param::m_Output</a>.
 </div>
 </div><p>
 <a class="anchor" name="416deece7d5098dc2e8759ef5fb134e3"></a><!-- doxytag: member="Verbose::setLevel" ref="416deece7d5098dc2e8759ef5fb134e3" args="(int level)" -->
@@ -424,11 +581,11 @@ Set the level of verbosity desired. 0 == no messages 1 == normal messages, 2,3,4
 </dl>
 
 <p>
-Definition at line <a class="el" href="_verbose_8cpp-source.html#l00152">152</a> of file <a class="el" href="_verbose_8cpp-source.html">Verbose.cpp</a>.
+Definition at line <a class="el" href="_verbose_8cpp-source.html#l00242">242</a> of file <a class="el" href="_verbose_8cpp-source.html">Verbose.cpp</a>.
 <p>
-References <a class="el" href="_verbose_8cpp-source.html#l00064">getParam()</a>, <a class="el" href="_verbose_8h-source.html#l00072">Verbose::Param::m_MsgHandler</a>, and <a class="el" href="_verbose_8h-source.html#l00071">Verbose::Param::m_ProHandler</a>.
+References <a class="el" href="_verbose_8cpp-source.html#l00103">getParam()</a>, <a class="el" href="_verbose_8h-source.html#l00078">Verbose::Param::m_MsgHandler</a>, <a class="el" href="_verbose_8h-source.html#l00077">Verbose::Param::m_ProHandler</a>, and <a class="el" href="_verbose_8h-source.html#l00082">Verbose::Param::m_Verbosity</a>.
 <p>
-Referenced by <a class="el" href="apt-engine-wrapper_8cpp-source.html#l00126">main()</a>.
+Referenced by <a class="el" href="apt-engine-wrapper_8cpp-source.html#l00043">main()</a>.
 </div>
 </div><p>
 <a class="anchor" name="c4034f68f4c8d2b49cd6340984b940ce"></a><!-- doxytag: member="Verbose::out" ref="c4034f68f4c8d2b49cd6340984b940ce" args="(int level, const std::string &amp;s, bool nl=true)" -->
@@ -474,11 +631,11 @@ Print a message to the stream.
 </dl>
 
 <p>
-Definition at line <a class="el" href="_verbose_8cpp-source.html#l00168">168</a> of file <a class="el" href="_verbose_8cpp-source.html">Verbose.cpp</a>.
+Definition at line <a class="el" href="_verbose_8cpp-source.html#l00259">259</a> of file <a class="el" href="_verbose_8cpp-source.html">Verbose.cpp</a>.
 <p>
-References <a class="el" href="_verbose_8cpp-source.html#l00064">getParam()</a>, <a class="el" href="_verbose_8h-source.html#l00072">Verbose::Param::m_MsgHandler</a>, and <a class="el" href="_verbose_8h-source.html#l00075">Verbose::Param::m_Output</a>.
+References <a class="el" href="_verbose_8cpp-source.html#l00103">getParam()</a>, <a class="el" href="_verbose_8h-source.html#l00078">Verbose::Param::m_MsgHandler</a>, and <a class="el" href="_verbose_8h-source.html#l00081">Verbose::Param::m_Output</a>.
 <p>
-Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00084">BaseEngine::BaseEngine()</a>, <a class="el" href="_tsv_join_8cpp-source.html#l00170">tsvJoin::beginOutput()</a>, <a class="el" href="_dump_pgf_8cpp-source.html#l00249">dumpPgf::beginOutput()</a>, <a class="el" href="_mixed_file_check_8h-source.html#l00071">MixedFileCheck::check()</a>, <a class="el" href="_table_file_8cpp-source.html#l00247">TableFile::columnFromFile()</a>, <a class="el" href="_chp_check_8h-source.html#l00264">ChpCheck::dataSame()</a>, <a class="el" href="_cel_check_8h-source.html#l00165">CelCheck::dataSame()</a>, <a class="el" href="_calvin_8cpp-source.html#l00243">Calvin::dump()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00082">PgOptionsSAXHandler::endDocument()</a>, <a class="el" href="_calvin_8cpp-source.html#l00309">Calvin::equivalent()</a>, <a class="el" href="_calvin_8cpp-source.html#l00409">Calvin::equivalentHeader()</a>, <a class="el" href="_calvin_8cpp-source.html#l00437">Calvin::equivalentParameter()</a>, <a class="el" href="_verbose_err_handler_8h-source.html#l00066">VerboseErrHandler::handleError()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l02232">affx::TsvFile::headers_to_fields_v2()</a>, <a class="el" href="_calvin_8cpp-source.html#l00071">Calvin::load()</a>, <a class="el" href="apt-engine-wrapper_8cpp-source.html#l00126">main()</a>, <a class="el" href="_util_8cpp-source.html#l00716">Util::matrixDifferences()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l00903">CalvinChpCheck::multiDataCopyNumberSame()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l00959">CalvinChpCheck::multiDataCopyNumberVariationSame()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l00851">CalvinChpCheck::multiDataDmetBiAllelicSame()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l00763">CalvinChpCheck::multiDataDmetCopyNumberSame()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l00807">CalvinChpCheck::multiDataDmetMultiAllelicSame()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l01059">CalvinChpCheck::multiDataExpressionSame()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l01011">CalvinChpCheck::multiDataGenotypeSame()</a>, <a class="el" href="_table_file_8cpp-source.html#l00107">TableFile::open()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l02462">affx::TsvFile::open()</a>, <a class="el" href="_tsv_join_8cpp-source.html#l00184">tsvJoin::openInputFiles()</a>, <a class="el" href="_dump_pgf_8cpp-source.html#l00263">dumpPgf::openInputFiles()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l03014">affx::TsvFile::printBindingErrors()</a>, <a class="el" href="_options_8cpp-source.html#l00219">Options::printOptions()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l01105">CalvinChpCheck::quantificationDataSame()</a>, <a class="el" href="_dump_pgf_8cpp-source.html#l00208">dumpPgf::readIdFiles()</a>, <a class="el" href="_regression_check_8h-source.html#l00085">RegressionCheck::reportError()</a>, <a class="el" href="_calvin_to_text_8cpp-source.html#l00042">CalvinToText::run()</a>, <a class="el" href="_base_engine_8cpp-source.html#l00178">BaseEngine::run()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00870">PgOptions::setOptionsFromXMLFile()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00104">PgOptionsSAXHandler::startElement()</a>, <a class="el" href="_regression_test_8h-source.html#l00227">RegressionTest::syncDirectory()</a>, <a class="el" href="_s_q_lite_8cpp-source.html#l00039">SQLiteDatabase::test()</a>, <a class="el" href="_calvin_8cpp-source.html#l00029">Calvin::test()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00077">PgOptionsSAXHandler::warning()</a>, <a class="el" href="_tsv_join_8cpp-source.html#l00371">tsvJoin::writeMatches()</a>, <a class="el" href="_dump_pgf_8cpp-source.html#l00407">dumpPgf::writeMatches()</a>, and <a class="el" href="_base_engine_8cpp-source.html#l00099">BaseEngine::~BaseEngine()</a>.
+Referenced by <a class="el" href="_socket_server_8cpp-source.html#l00159">SocketServer::acceptNewConnection()</a>, <a class="el" href="_base_engine_8cpp-source.html#l00086">BaseEngine::BaseEngine()</a>, <a class="el" href="_tsv_join_8cpp-source.html#l00168">tsvJoin::beginOutput()</a>, <a class="el" href="_dump_pgf_8cpp-source.html#l00247">dumpPgf::beginOutput()</a>, <a class="el" href="_mixed_file_check_8h-source.html#l00082">MixedFileCheck::check()</a>, <a class="el" href="_socket_util_8cpp-source.html#l00061">SocketUtil::checkForMsgs()</a>, <a class="el" href="_table_file_8cpp-source.html#l00249">TableFile::columnFromFile()</a>, <a class="el" href="_chp_check_8h-source.html#l00286">ChpCheck::dataSame()</a>, <a class="el" href="_cel_check_8h-source.html#l00160">CelCheck::dataSame()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00081">PgOptionsSAXHandler::endDocument()</a>, <a class="el" href="_calvin_8cpp-source.html#l00247">Calvin::equivalent()</a>, <a class="el" href="_calvin_8cpp-source.html#l00355">Calvin::equivalentHeader()</a>, <a class="el" href="_calvin_8cpp-source.html#l00386">Calvin::equivalentParameter()</a>, <a class="el" href="_socket_base_8cpp-source.html#l00076">SocketBase::fillBufferFromSocket()</a>, <a class="el" href="_verbose_8cpp-source.html#l00103">getParam()</a>, <a class="el" href="_verbose_err_handler_8h-source.html#l00069">VerboseErrHandler::handleError()</a>, <a class="el" href="_socket_text_handler_8cpp-source.html#l00026">SocketTextHandler::handleMessage()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l02375">affx::TsvFile::headers_to_fields_v2()</a>, <a class="el" href="_calvin_8cpp-source.html#l00074">Calvin::load()</a>, <a class="el" href="apt-dump-pgf_8cpp-source.html#l00032">main()</a>, <a class="el" href="_generic_data_8cpp-source.html#l00472">affymetrix_calvin_io::GenericData::MapFile()</a>, <a class="el" href="_util_8cpp-source.html#l00315">Util::matrixDifferences()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l00964">CalvinChpCheck::multiDataCopyNumberSame()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l01020">CalvinChpCheck::multiDataCopyNumberVariationSame()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l00912">CalvinChpCheck::multiDataDmetBiAllelicSame()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l00824">CalvinChpCheck::multiDataDmetCopyNumberSame()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l00868">CalvinChpCheck::multiDataDmetMultiAllelicSame()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l01120">CalvinChpCheck::multiDataExpressionSame()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l01072">CalvinChpCheck::multiDataGenotypeSame()</a>, <a class="el" href="_table_file_8cpp-source.html#l00106">TableFile::open()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l02637">affx::TsvFile::open()</a>, <a class="el" href="_tsv_join_8cpp-source.html#l00182">tsvJoin::openInputFiles()</a>, <a class="el" href="_dump_pgf_8cpp-source.html#l00261">dumpPgf::openInputFiles()</a>, <a class="el" href="_base_engine_8cpp-source.html#l00112">BaseEngine::parseArgv()</a>, <a class="el" href="_tsv_file_8cpp-source.html#l03213">affx::TsvFile::printBindingErrors()</a>, <a class="el" href="_options_8cpp-source.html#l00212">Options::printOptions()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l01166">CalvinChpCheck::quantificationDataSame()</a>, <a class="el" href="_calvin_chp_check_8h-source.html#l01211">CalvinChpCheck::quantificationDetectionDataSame()</a>, <a class="el" href="_dump_pgf_8cpp-source.html#l00206">dumpPgf::readIdFiles()</a>, <a class="el" href="_socket_engine_8cpp-source.html#l00076">SocketEngine::run()</a>, <a class="el" href="_calvin_to_text_8cpp-source.html#l00106">CalvinToText::run()</a>, <a class="el" href="_base_engine_8cpp-source.html#l00290">BaseEngine::run()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00855">PgOptions::setOptionsFromXMLFile()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00106">PgOptionsSAXHandler::startElement()</a>, <a class="el" href="_s_q_lite_8cpp-source.html#l00040">SQLiteDatabase::test()</a>, <a class="el" href="_calvin_8cpp-source.html#l00032">Calvin::test()</a>, <a class="el" href="_convert_8cpp-source.html#l00301">Convert::toDoubleCheck()</a>, <a class="el" href="_pg_options_8cpp-source.html#l00075">PgOptionsSAXHandler::warning()</a>, <a class="el" href="_tsv_join_8cpp-source.html#l00369">tsvJoin::writeMatches()</a>, <a class="el" href="_dump_pgf_8cpp-source.html#l00405">dumpPgf::writeMatches()</a>, and <a class="el" href="_base_engine_8cpp-source.html#l00102">BaseEngine::~BaseEngine()</a>.
 </div>
 </div><p>
 <a class="anchor" name="34e1d936178741eeb78de93c5497e1b8"></a><!-- doxytag: member="Verbose::warn" ref="34e1d936178741eeb78de93c5497e1b8" args="(int level, const std::string &amp;s, bool nl=true, const std::string prefix=&quot;\nWARNING: &quot;)" -->
@@ -530,16 +687,16 @@ Print a warning message.
 </dl>
 
 <p>
-Definition at line <a class="el" href="_verbose_8cpp-source.html#l00183">183</a> of file <a class="el" href="_verbose_8cpp-source.html">Verbose.cpp</a>.
+Definition at line <a class="el" href="_verbose_8cpp-source.html#l00277">277</a> of file <a class="el" href="_verbose_8cpp-source.html">Verbose.cpp</a>.
 <p>
-References <a class="el" href="_verbose_8cpp-source.html#l00064">getParam()</a>, <a class="el" href="_verbose_8h-source.html#l00075">Verbose::Param::m_Output</a>, and <a class="el" href="_verbose_8h-source.html#l00073">Verbose::Param::m_WarnHandler</a>.
+References <a class="el" href="_verbose_8cpp-source.html#l00103">getParam()</a>, <a class="el" href="_verbose_8h-source.html#l00081">Verbose::Param::m_Output</a>, and <a class="el" href="_verbose_8h-source.html#l00079">Verbose::Param::m_WarnHandler</a>.
 <p>
-Referenced by <a class="el" href="_geno_call_coder_8cpp-source.html#l00653">GenoCallCoder::genotypeCallNumToAbstractAllele()</a>.
+Referenced by <a class="el" href="_geno_call_coder_8cpp-source.html#l00702">GenoCallCoder::genotypeCallNumToAbstractAllele()</a>, <a class="el" href="_err_8cpp-source.html#l00177">Err::setExitOnError()</a>, and <a class="el" href="_err_8cpp-source.html#l00194">Err::setExitOnErrorValue()</a>.
 </div>
 </div><p>
 <hr>The documentation for this class was generated from the following files:<ul>
 <li>C:/FusionSDK/affy/sdk/util/<a class="el" href="_verbose_8h-source.html">Verbose.h</a><li>C:/FusionSDK/affy/sdk/util/<a class="el" href="_verbose_8cpp-source.html">Verbose.cpp</a></ul>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:35 2009 for Affymetrix Fusion SDK by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:46 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

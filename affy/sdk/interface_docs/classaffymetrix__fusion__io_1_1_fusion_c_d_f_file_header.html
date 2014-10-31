@@ -29,6 +29,12 @@
 <a href="classaffymetrix__fusion__io_1_1_fusion_c_d_f_file_header-members.html">List of all members.</a><table border="0" cellpadding="0" cellspacing="0">
 <tr><td></td></tr>
 <tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaffymetrix__fusion__io_1_1_fusion_c_d_f_file_header.html#22b678d1339cdeb2e456e4cdf372036d">GetFormatVersion</a> () const</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaffymetrix__fusion__io_1_1_fusion_c_d_f_file_header.html#d6415d37795f5d1937f95002c96f0559">GetGUID</a> () const</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaffymetrix__fusion__io_1_1_fusion_c_d_f_file_header.html#c97b6644f8302d6a89e36b9c3f2719e7">GetIntegrityMd5</a> () const</td></tr>
+
 <tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaffymetrix__fusion__io_1_1_fusion_c_d_f_file_header.html#47863ef8554b746b4f3c0af4629e00c9">GetCols</a> () const</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaffymetrix__fusion__io_1_1_fusion_c_d_f_file_header.html#e7fdf2c355581bd8ec5df8fefac9b3eb">GetRows</a> () const</td></tr>
@@ -81,7 +87,7 @@ Definition at line <a class="el" href="_fusion_c_d_f_data_8h-source.html#l00040"
 <p>
 Constructor 
 <p>
-Definition at line <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00122">122</a> of file <a class="el" href="_fusion_c_d_f_data_8cpp-source.html">FusionCDFData.cpp</a>.
+Definition at line <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00157">157</a> of file <a class="el" href="_fusion_c_d_f_data_8cpp-source.html">FusionCDFData.cpp</a>.
 <p>
 References <a class="el" href="_fusion_c_d_f_data_8h-source.html#l00047">calvinData</a>, and <a class="el" href="_fusion_c_d_f_data_8h-source.html#l00044">gcosHeader</a>.
 </div>
@@ -111,11 +117,11 @@ Initializes the class based on GCOS information. <dl compact><dt><b>Parameters:<
 </dl>
 
 <p>
-Definition at line <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00102">102</a> of file <a class="el" href="_fusion_c_d_f_data_8cpp-source.html">FusionCDFData.cpp</a>.
+Definition at line <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00137">137</a> of file <a class="el" href="_fusion_c_d_f_data_8cpp-source.html">FusionCDFData.cpp</a>.
 <p>
-References <a class="el" href="_fusion_c_d_f_data_8h-source.html#l00047">calvinData</a>, <a class="el" href="_fusion_c_d_f_data_8h-source.html#l00044">gcosHeader</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00873">affxcdf::CCDFFileData::GetHeader()</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00110">affxcdf::CCDFFileHeader::GetReference()</a>, and <a class="el" href="_fusion_c_d_f_data_8h-source.html#l00050">ref</a>.
+References <a class="el" href="_fusion_c_d_f_data_8h-source.html#l00047">calvinData</a>, <a class="el" href="_fusion_c_d_f_data_8h-source.html#l00044">gcosHeader</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00913">affxcdf::CCDFFileData::GetHeader()</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00150">affxcdf::CCDFFileHeader::GetReference()</a>, and <a class="el" href="_fusion_c_d_f_data_8h-source.html#l00050">ref</a>.
 <p>
-Referenced by <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l01054">affymetrix_fusion_io::FusionCDFData::GetHeader()</a>.
+Referenced by <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l01089">affymetrix_fusion_io::FusionCDFData::GetHeader()</a>.
 </div>
 </div><p>
 <a class="anchor" name="29b64347af682bd364a833b088b2d74b"></a><!-- doxytag: member="affymetrix_fusion_io::FusionCDFFileHeader::Initialize" ref="29b64347af682bd364a833b088b2d74b" args="(affymetrix_calvin_io::CDFData *data)" -->
@@ -142,9 +148,81 @@ Initializes the class based on <a class="el" href="class_calvin.html">Calvin</a>
 </dl>
 
 <p>
-Definition at line <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00112">112</a> of file <a class="el" href="_fusion_c_d_f_data_8cpp-source.html">FusionCDFData.cpp</a>.
+Definition at line <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00147">147</a> of file <a class="el" href="_fusion_c_d_f_data_8cpp-source.html">FusionCDFData.cpp</a>.
 <p>
-References <a class="el" href="_fusion_c_d_f_data_8h-source.html#l00047">calvinData</a>, <a class="el" href="_fusion_c_d_f_data_8h-source.html#l00044">gcosHeader</a>, <a class="el" href="_c_d_f_data_8cpp-source.html#l00096">affymetrix_calvin_io::CDFData::GetRefSequence()</a>, and <a class="el" href="_fusion_c_d_f_data_8h-source.html#l00050">ref</a>.
+References <a class="el" href="_fusion_c_d_f_data_8h-source.html#l00047">calvinData</a>, <a class="el" href="_fusion_c_d_f_data_8h-source.html#l00044">gcosHeader</a>, <a class="el" href="_c_d_f_data_8cpp-source.html#l00101">affymetrix_calvin_io::CDFData::GetRefSequence()</a>, and <a class="el" href="_fusion_c_d_f_data_8h-source.html#l00050">ref</a>.
+</div>
+</div><p>
+<a class="anchor" name="22b678d1339cdeb2e456e4cdf372036d"></a><!-- doxytag: member="affymetrix_fusion_io::FusionCDFFileHeader::GetFormatVersion" ref="22b678d1339cdeb2e456e4cdf372036d" args="() const" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int FusionCDFFileHeader::GetFormatVersion           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Get CDF Format Version <dl class="return" compact><dt><b>Returns:</b></dt><dd>CDF Format Version </dd></dl>
+
+<p>
+Definition at line <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00042">42</a> of file <a class="el" href="_fusion_c_d_f_data_8cpp-source.html">FusionCDFData.cpp</a>.
+<p>
+References <a class="el" href="_fusion_c_d_f_data_8h-source.html#l00047">calvinData</a>, <a class="el" href="_fusion_c_d_f_data_8h-source.html#l00044">gcosHeader</a>, <a class="el" href="_c_d_f_data_8cpp-source.html#l00067">affymetrix_calvin_io::CDFData::GetFormatVersion()</a>, and <a class="el" href="_c_d_f_file_data_8h-source.html#l00105">affxcdf::CCDFFileHeader::GetFormatVersion()</a>.
+</div>
+</div><p>
+<a class="anchor" name="d6415d37795f5d1937f95002c96f0559"></a><!-- doxytag: member="affymetrix_fusion_io::FusionCDFFileHeader::GetGUID" ref="d6415d37795f5d1937f95002c96f0559" args="() const" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string FusionCDFFileHeader::GetGUID           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Get GUID <dl class="return" compact><dt><b>Returns:</b></dt><dd>GUID </dd></dl>
+
+<p>
+Definition at line <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00055">55</a> of file <a class="el" href="_fusion_c_d_f_data_8cpp-source.html">FusionCDFData.cpp</a>.
+<p>
+References <a class="el" href="_fusion_c_d_f_data_8h-source.html#l00044">gcosHeader</a>, and <a class="el" href="_c_d_f_file_data_8h-source.html#l00110">affxcdf::CCDFFileHeader::GetGUID()</a>.
+</div>
+</div><p>
+<a class="anchor" name="c97b6644f8302d6a89e36b9c3f2719e7"></a><!-- doxytag: member="affymetrix_fusion_io::FusionCDFFileHeader::GetIntegrityMd5" ref="c97b6644f8302d6a89e36b9c3f2719e7" args="() const" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string FusionCDFFileHeader::GetIntegrityMd5           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Get integrity md5 <dl class="return" compact><dt><b>Returns:</b></dt><dd>integrity md5 </dd></dl>
+
+<p>
+Definition at line <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00066">66</a> of file <a class="el" href="_fusion_c_d_f_data_8cpp-source.html">FusionCDFData.cpp</a>.
+<p>
+References <a class="el" href="_fusion_c_d_f_data_8h-source.html#l00044">gcosHeader</a>, and <a class="el" href="_c_d_f_file_data_8h-source.html#l00115">affxcdf::CCDFFileHeader::GetIntegrityMd5()</a>.
 </div>
 </div><p>
 <a class="anchor" name="47863ef8554b746b4f3c0af4629e00c9"></a><!-- doxytag: member="affymetrix_fusion_io::FusionCDFFileHeader::GetCols" ref="47863ef8554b746b4f3c0af4629e00c9" args="() const" -->
@@ -166,9 +244,9 @@ References <a class="el" href="_fusion_c_d_f_data_8h-source.html#l00047">calvinD
 Gets the number of feature columns in the array. <dl class="return" compact><dt><b>Returns:</b></dt><dd>The number of columns. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00042">42</a> of file <a class="el" href="_fusion_c_d_f_data_8cpp-source.html">FusionCDFData.cpp</a>.
+Definition at line <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00077">77</a> of file <a class="el" href="_fusion_c_d_f_data_8cpp-source.html">FusionCDFData.cpp</a>.
 <p>
-References <a class="el" href="_fusion_c_d_f_data_8h-source.html#l00047">calvinData</a>, <a class="el" href="_fusion_c_d_f_data_8h-source.html#l00044">gcosHeader</a>, <a class="el" href="_c_d_f_data_8cpp-source.html#l00082">affymetrix_calvin_io::CDFData::GetArrayCols()</a>, and <a class="el" href="_c_d_f_file_data_8h-source.html#l00090">affxcdf::CCDFFileHeader::GetCols()</a>.
+References <a class="el" href="_fusion_c_d_f_data_8h-source.html#l00047">calvinData</a>, <a class="el" href="_fusion_c_d_f_data_8h-source.html#l00044">gcosHeader</a>, <a class="el" href="_c_d_f_data_8cpp-source.html#l00087">affymetrix_calvin_io::CDFData::GetArrayCols()</a>, and <a class="el" href="_c_d_f_file_data_8h-source.html#l00130">affxcdf::CCDFFileHeader::GetCols()</a>.
 </div>
 </div><p>
 <a class="anchor" name="e7fdf2c355581bd8ec5df8fefac9b3eb"></a><!-- doxytag: member="affymetrix_fusion_io::FusionCDFFileHeader::GetRows" ref="e7fdf2c355581bd8ec5df8fefac9b3eb" args="() const" -->
@@ -190,9 +268,9 @@ References <a class="el" href="_fusion_c_d_f_data_8h-source.html#l00047">calvinD
 Gets the number of feature rows in the array. <dl class="return" compact><dt><b>Returns:</b></dt><dd>The number of rows. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00055">55</a> of file <a class="el" href="_fusion_c_d_f_data_8cpp-source.html">FusionCDFData.cpp</a>.
+Definition at line <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00090">90</a> of file <a class="el" href="_fusion_c_d_f_data_8cpp-source.html">FusionCDFData.cpp</a>.
 <p>
-References <a class="el" href="_fusion_c_d_f_data_8h-source.html#l00047">calvinData</a>, <a class="el" href="_fusion_c_d_f_data_8h-source.html#l00044">gcosHeader</a>, <a class="el" href="_c_d_f_data_8cpp-source.html#l00072">affymetrix_calvin_io::CDFData::GetArrayRows()</a>, and <a class="el" href="_c_d_f_file_data_8h-source.html#l00095">affxcdf::CCDFFileHeader::GetRows()</a>.
+References <a class="el" href="_fusion_c_d_f_data_8h-source.html#l00047">calvinData</a>, <a class="el" href="_fusion_c_d_f_data_8h-source.html#l00044">gcosHeader</a>, <a class="el" href="_c_d_f_data_8cpp-source.html#l00077">affymetrix_calvin_io::CDFData::GetArrayRows()</a>, and <a class="el" href="_c_d_f_file_data_8h-source.html#l00135">affxcdf::CCDFFileHeader::GetRows()</a>.
 </div>
 </div><p>
 <a class="anchor" name="a55a9aa41bf7b4019827bbc9bf7e9949"></a><!-- doxytag: member="affymetrix_fusion_io::FusionCDFFileHeader::GetNumProbeSets" ref="a55a9aa41bf7b4019827bbc9bf7e9949" args="() const" -->
@@ -214,11 +292,11 @@ References <a class="el" href="_fusion_c_d_f_data_8h-source.html#l00047">calvinD
 Gets the number of probe sets. <dl class="return" compact><dt><b>Returns:</b></dt><dd>The number of probe sets. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00068">68</a> of file <a class="el" href="_fusion_c_d_f_data_8cpp-source.html">FusionCDFData.cpp</a>.
+Definition at line <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00103">103</a> of file <a class="el" href="_fusion_c_d_f_data_8cpp-source.html">FusionCDFData.cpp</a>.
 <p>
-References <a class="el" href="_affymetrix_parameter_consts_8h-source.html#l00275">AFFY_CNTRL_PS</a>, <a class="el" href="_fusion_c_d_f_data_8h-source.html#l00047">calvinData</a>, <a class="el" href="_fusion_c_d_f_data_8h-source.html#l00044">gcosHeader</a>, <a class="el" href="_generic_data_header_8cpp-source.html#l00050">affymetrix_calvin_io::GenericDataHeader::GetFileTypeId()</a>, <a class="el" href="_c_d_f_data_8h-source.html#l00173">affymetrix_calvin_io::CDFData::GetGenericData()</a>, <a class="el" href="_file_header_8cpp-source.html#l00086">affymetrix_calvin_io::FileHeader::GetGenericDataHdr()</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00100">affxcdf::CCDFFileHeader::GetNumProbeSets()</a>, <a class="el" href="_c_d_f_data_8cpp-source.html#l00118">affymetrix_calvin_io::CDFData::GetProbeSetCnt()</a>, and <a class="el" href="_generic_data_8h-source.html#l00079">affymetrix_calvin_io::GenericData::Header()</a>.
+References <a class="el" href="_affymetrix_parameter_consts_8h-source.html#l00281">AFFY_CNTRL_PS</a>, <a class="el" href="_fusion_c_d_f_data_8h-source.html#l00047">calvinData</a>, <a class="el" href="_fusion_c_d_f_data_8h-source.html#l00044">gcosHeader</a>, <a class="el" href="_generic_data_header_8cpp-source.html#l00050">affymetrix_calvin_io::GenericDataHeader::GetFileTypeId()</a>, <a class="el" href="_c_d_f_data_8h-source.html#l00178">affymetrix_calvin_io::CDFData::GetGenericData()</a>, <a class="el" href="_file_header_8cpp-source.html#l00086">affymetrix_calvin_io::FileHeader::GetGenericDataHdr()</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00140">affxcdf::CCDFFileHeader::GetNumProbeSets()</a>, <a class="el" href="_c_d_f_data_8cpp-source.html#l00123">affymetrix_calvin_io::CDFData::GetProbeSetCnt()</a>, and <a class="el" href="_generic_data_8h-source.html#l00079">affymetrix_calvin_io::GenericData::Header()</a>.
 <p>
-Referenced by <a class="el" href="read__cel_8cpp-source.html#l00063">ReadSingleChannelCelFile()</a>, and <a class="el" href="read__cel_8cpp-source.html#l00110">ReadSingleOrMultiChannelCelFile()</a>.
+Referenced by <a class="el" href="read__cel_8cpp-source.html#l00062">ReadSingleChannelCelFile()</a>, and <a class="el" href="read__cel_8cpp-source.html#l00109">ReadSingleOrMultiChannelCelFile()</a>.
 </div>
 </div><p>
 <a class="anchor" name="1bfc7174e621ce50d0e2c6f8b91f7ba1"></a><!-- doxytag: member="affymetrix_fusion_io::FusionCDFFileHeader::GetNumQCProbeSets" ref="1bfc7174e621ce50d0e2c6f8b91f7ba1" args="() const" -->
@@ -240,9 +318,9 @@ Referenced by <a class="el" href="read__cel_8cpp-source.html#l00063">ReadSingleC
 Gets the number of QC probe sets. <dl class="return" compact><dt><b>Returns:</b></dt><dd>The number of columns. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00081">81</a> of file <a class="el" href="_fusion_c_d_f_data_8cpp-source.html">FusionCDFData.cpp</a>.
+Definition at line <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00116">116</a> of file <a class="el" href="_fusion_c_d_f_data_8cpp-source.html">FusionCDFData.cpp</a>.
 <p>
-References <a class="el" href="_affymetrix_parameter_consts_8h-source.html#l00275">AFFY_CNTRL_PS</a>, <a class="el" href="_fusion_c_d_f_data_8h-source.html#l00047">calvinData</a>, <a class="el" href="_fusion_c_d_f_data_8h-source.html#l00044">gcosHeader</a>, <a class="el" href="_generic_data_header_8cpp-source.html#l00050">affymetrix_calvin_io::GenericDataHeader::GetFileTypeId()</a>, <a class="el" href="_c_d_f_data_8h-source.html#l00173">affymetrix_calvin_io::CDFData::GetGenericData()</a>, <a class="el" href="_file_header_8cpp-source.html#l00086">affymetrix_calvin_io::FileHeader::GetGenericDataHdr()</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00105">affxcdf::CCDFFileHeader::GetNumQCProbeSets()</a>, <a class="el" href="_c_d_f_data_8cpp-source.html#l00118">affymetrix_calvin_io::CDFData::GetProbeSetCnt()</a>, and <a class="el" href="_generic_data_8h-source.html#l00079">affymetrix_calvin_io::GenericData::Header()</a>.
+References <a class="el" href="_affymetrix_parameter_consts_8h-source.html#l00281">AFFY_CNTRL_PS</a>, <a class="el" href="_fusion_c_d_f_data_8h-source.html#l00047">calvinData</a>, <a class="el" href="_fusion_c_d_f_data_8h-source.html#l00044">gcosHeader</a>, <a class="el" href="_generic_data_header_8cpp-source.html#l00050">affymetrix_calvin_io::GenericDataHeader::GetFileTypeId()</a>, <a class="el" href="_c_d_f_data_8h-source.html#l00178">affymetrix_calvin_io::CDFData::GetGenericData()</a>, <a class="el" href="_file_header_8cpp-source.html#l00086">affymetrix_calvin_io::FileHeader::GetGenericDataHdr()</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00145">affxcdf::CCDFFileHeader::GetNumQCProbeSets()</a>, <a class="el" href="_c_d_f_data_8cpp-source.html#l00123">affymetrix_calvin_io::CDFData::GetProbeSetCnt()</a>, and <a class="el" href="_generic_data_8h-source.html#l00079">affymetrix_calvin_io::GenericData::Header()</a>.
 </div>
 </div><p>
 <a class="anchor" name="cb1dfd2cd6e72dfbfb42ff2a81b6c709"></a><!-- doxytag: member="affymetrix_fusion_io::FusionCDFFileHeader::GetReference" ref="cb1dfd2cd6e72dfbfb42ff2a81b6c709" args="()" -->
@@ -264,7 +342,7 @@ References <a class="el" href="_affymetrix_parameter_consts_8h-source.html#l0027
 Gets the reference sequence (for resequencing arrays only). <dl class="return" compact><dt><b>Returns:</b></dt><dd>The reference sequence. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00094">94</a> of file <a class="el" href="_fusion_c_d_f_data_8cpp-source.html">FusionCDFData.cpp</a>.
+Definition at line <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00129">129</a> of file <a class="el" href="_fusion_c_d_f_data_8cpp-source.html">FusionCDFData.cpp</a>.
 <p>
 References <a class="el" href="_fusion_c_d_f_data_8h-source.html#l00050">ref</a>.
 </div>
@@ -304,7 +382,7 @@ The GCOS CDF file header object.
 <p>
 Definition at line <a class="el" href="_fusion_c_d_f_data_8h-source.html#l00044">44</a> of file <a class="el" href="_fusion_c_d_f_data_8h-source.html">FusionCDFData.h</a>.
 <p>
-Referenced by <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00122">FusionCDFFileHeader()</a>, <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00042">GetCols()</a>, <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00068">GetNumProbeSets()</a>, <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00081">GetNumQCProbeSets()</a>, <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00055">GetRows()</a>, and <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00102">Initialize()</a>.
+Referenced by <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00157">FusionCDFFileHeader()</a>, <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00077">GetCols()</a>, <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00042">GetFormatVersion()</a>, <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00055">GetGUID()</a>, <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00066">GetIntegrityMd5()</a>, <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00103">GetNumProbeSets()</a>, <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00116">GetNumQCProbeSets()</a>, <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00090">GetRows()</a>, and <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00137">Initialize()</a>.
 </div>
 </div><p>
 <a class="anchor" name="668d2ab04d7b742c55efec42e1e23b53"></a><!-- doxytag: member="affymetrix_fusion_io::FusionCDFFileHeader::calvinData" ref="668d2ab04d7b742c55efec42e1e23b53" args="" -->
@@ -323,7 +401,7 @@ The <a class="el" href="class_calvin.html">Calvin</a> CDF file object.
 <p>
 Definition at line <a class="el" href="_fusion_c_d_f_data_8h-source.html#l00047">47</a> of file <a class="el" href="_fusion_c_d_f_data_8h-source.html">FusionCDFData.h</a>.
 <p>
-Referenced by <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00122">FusionCDFFileHeader()</a>, <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00042">GetCols()</a>, <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00068">GetNumProbeSets()</a>, <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00081">GetNumQCProbeSets()</a>, <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00055">GetRows()</a>, and <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00102">Initialize()</a>.
+Referenced by <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00157">FusionCDFFileHeader()</a>, <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00077">GetCols()</a>, <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00042">GetFormatVersion()</a>, <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00103">GetNumProbeSets()</a>, <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00116">GetNumQCProbeSets()</a>, <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00090">GetRows()</a>, and <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00137">Initialize()</a>.
 </div>
 </div><p>
 <a class="anchor" name="d3de35cfa59bf3c779c23270a24307b2"></a><!-- doxytag: member="affymetrix_fusion_io::FusionCDFFileHeader::ref" ref="d3de35cfa59bf3c779c23270a24307b2" args="" -->
@@ -342,12 +420,12 @@ The reference sequence
 <p>
 Definition at line <a class="el" href="_fusion_c_d_f_data_8h-source.html#l00050">50</a> of file <a class="el" href="_fusion_c_d_f_data_8h-source.html">FusionCDFData.h</a>.
 <p>
-Referenced by <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00094">GetReference()</a>, and <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00102">Initialize()</a>.
+Referenced by <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00129">GetReference()</a>, and <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00137">Initialize()</a>.
 </div>
 </div><p>
 <hr>The documentation for this class was generated from the following files:<ul>
 <li>C:/FusionSDK/affy/sdk/calvin_files/fusion/src/<a class="el" href="_fusion_c_d_f_data_8h-source.html">FusionCDFData.h</a><li>C:/FusionSDK/affy/sdk/calvin_files/fusion/src/<a class="el" href="_fusion_c_d_f_data_8cpp-source.html">FusionCDFData.cpp</a></ul>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:50 2009 for Affymetrix Fusion SDK by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 13:00:02 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

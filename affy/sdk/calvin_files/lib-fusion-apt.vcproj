@@ -46,7 +46,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="..;..\file;.\Extractor\src;.\array\src;.\array\test;.\converters\bar\src;.\converters\cdf\src;.\converters\cdf\test;.\converters\cel\comparer;.\converters\cel\src;.\converters\chp\comparer;.\converters\chp\src;.\converters\chp\test;.\converters\dat\comparer\DATComparer;.\converters\dat\src;.\converters\utils\src;.\converters\utils\test;.\data\src;.\data\test;.\exception\src;.\exception\test;.\fusion-dat\PerfTest;.\fusion-dat\src;.\fusion-dat\test;.\fusion\com;.\fusion\com_test;.\fusion\src;.\fusion\src\CalvinAdapter;.\fusion\src\GCOSAdapter;.\fusion\test;.\parameter\src;.\parameter\test;.\parsers\src;.\parsers\test;.\portability\src;.\portability\test;.\utils\src;.\utils\test;.\writers\src;.\writers\test;"
+				AdditionalIncludeDirectories=".."
 				PreprocessorDefinitions="WIN32;_DEBUG;_USRDLL"
 				MinimalRebuild="false"
 				BasicRuntimeChecks="0"
@@ -111,7 +111,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="..;..\file;.\Extractor\src;.\array\src;.\array\test;.\converters\bar\src;.\converters\cdf\src;.\converters\cdf\test;.\converters\cel\comparer;.\converters\cel\src;.\converters\chp\comparer;.\converters\chp\src;.\converters\chp\test;.\converters\dat\comparer\DATComparer;.\converters\dat\src;.\converters\utils\src;.\converters\utils\test;.\data\src;.\data\test;.\exception\src;.\exception\test;.\fusion-dat\PerfTest;.\fusion-dat\src;.\fusion-dat\test;.\fusion\com;.\fusion\com_test;.\fusion\src;.\fusion\src\CalvinAdapter;.\fusion\src\GCOSAdapter;.\fusion\test;.\parameter\src;.\parameter\test;.\parsers\src;.\parsers\test;.\portability\src;.\portability\test;.\utils\src;.\utils\test;.\writers\src;.\writers\test;"
+				AdditionalIncludeDirectories=".."
 				PreprocessorDefinitions="WIN32;_DEBUG;_USRDLL"
 				MinimalRebuild="false"
 				BasicRuntimeChecks="0"
@@ -178,7 +178,7 @@
 				EnableIntrinsicFunctions="false"
 				FavorSizeOrSpeed="1"
 				WholeProgramOptimization="true"
-				AdditionalIncludeDirectories="..;..\file;.\Extractor\src;.\array\src;.\array\test;.\converters\bar\src;.\converters\cdf\src;.\converters\cdf\test;.\converters\cel\comparer;.\converters\cel\src;.\converters\chp\comparer;.\converters\chp\src;.\converters\chp\test;.\converters\dat\comparer\DATComparer;.\converters\dat\src;.\converters\utils\src;.\converters\utils\test;.\data\src;.\data\test;.\exception\src;.\exception\test;.\fusion-dat\PerfTest;.\fusion-dat\src;.\fusion-dat\test;.\fusion\com;.\fusion\com_test;.\fusion\src;.\fusion\src\CalvinAdapter;.\fusion\src\GCOSAdapter;.\fusion\test;.\parameter\src;.\parameter\test;.\parsers\src;.\parsers\test;.\portability\src;.\portability\test;.\utils\src;.\utils\test;.\writers\src;.\writers\test;"
+				AdditionalIncludeDirectories=".."
 				PreprocessorDefinitions="WIN32;_USRDLL"
 				RuntimeLibrary="2"
 				UsePrecompiledHeader="0"
@@ -242,10 +242,11 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="2"
-				EnableIntrinsicFunctions="false"
+				InlineFunctionExpansion="2"
+				EnableIntrinsicFunctions="true"
 				FavorSizeOrSpeed="1"
 				WholeProgramOptimization="true"
-				AdditionalIncludeDirectories="..;..\file;.\Extractor\src;.\array\src;.\array\test;.\converters\bar\src;.\converters\cdf\src;.\converters\cdf\test;.\converters\cel\comparer;.\converters\cel\src;.\converters\chp\comparer;.\converters\chp\src;.\converters\chp\test;.\converters\dat\comparer\DATComparer;.\converters\dat\src;.\converters\utils\src;.\converters\utils\test;.\data\src;.\data\test;.\exception\src;.\exception\test;.\fusion-dat\PerfTest;.\fusion-dat\src;.\fusion-dat\test;.\fusion\com;.\fusion\com_test;.\fusion\src;.\fusion\src\CalvinAdapter;.\fusion\src\GCOSAdapter;.\fusion\test;.\parameter\src;.\parameter\test;.\parsers\src;.\parsers\test;.\portability\src;.\portability\test;.\utils\src;.\utils\test;.\writers\src;.\writers\test;"
+				AdditionalIncludeDirectories=".."
 				PreprocessorDefinitions="WIN32;_USRDLL"
 				RuntimeLibrary="2"
 				UsePrecompiledHeader="0"
@@ -263,6 +264,7 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
+				AdditionalOptions="/LTCG"
 				IgnoreAllDefaultLibraries="false"
 			/>
 			<Tool

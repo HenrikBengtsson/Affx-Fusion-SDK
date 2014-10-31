@@ -129,89 +129,87 @@
 <a name="l00200"></a>00200 
 <a name="l00204"></a>00204         <span class="keywordtype">int</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#e8cc642bf2fffcf80277bde3c1e30d4d">XYToIndex</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);
 <a name="l00205"></a>00205 
-<a name="l00213"></a><a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#f6ab2cc50988090c46721c6377a88f83">00213</a>         <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#e8cc642bf2fffcf80277bde3c1e30d4d">XYToIndex</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> r, <span class="keywordtype">int</span> c)
-<a name="l00214"></a>00214         {
-<a name="l00215"></a>00215                 <span class="keywordflow">return</span> ((y*c) + x);
-<a name="l00216"></a>00216         }
+<a name="l00213"></a>00213         <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#e8cc642bf2fffcf80277bde3c1e30d4d">XYToIndex</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> r, <span class="keywordtype">int</span> c);
+<a name="l00214"></a>00214 
+<a name="l00215"></a>00215 
+<a name="l00216"></a>00216         <span class="comment">// Accessors for intensity information.</span>
 <a name="l00217"></a>00217 
-<a name="l00218"></a>00218         <span class="comment">// Accessors for intensity information.</span>
-<a name="l00219"></a>00219 
-<a name="l00224"></a>00224         <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#57c435733c1d4d06a274767b391befb9">GetEntry</a>(<span class="keywordtype">int</span> index, <a class="code" href="structaffymetrix__fusion__io_1_1___fusion_c_e_l_file_entry_type.html">FusionCELFileEntryType</a> &amp;entry);
-<a name="l00225"></a>00225 
-<a name="l00231"></a>00231         <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#57c435733c1d4d06a274767b391befb9">GetEntry</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <a class="code" href="structaffymetrix__fusion__io_1_1___fusion_c_e_l_file_entry_type.html">FusionCELFileEntryType</a> &amp;entry);
-<a name="l00232"></a>00232 
-<a name="l00237"></a>00237         <span class="keywordtype">float</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#76d2432b4075dbb9f00a1cf306a3a614">GetIntensity</a>(<span class="keywordtype">int</span> index);
-<a name="l00238"></a>00238 
-<a name="l00242"></a>00242         <span class="keywordtype">int</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#9a9cbf36630376b976bee22c87c774a7" title="Get a vector of intensities.">GetIntensities</a>(<span class="keywordtype">int</span> index,std::vector&lt;float&gt;&amp; intensity_vec);
-<a name="l00243"></a>00243 
-<a name="l00249"></a>00249         <span class="keywordtype">float</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#76d2432b4075dbb9f00a1cf306a3a614">GetIntensity</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);
-<a name="l00250"></a>00250 
-<a name="l00255"></a>00255         <span class="keywordtype">float</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#98f22aa88b61307c5340b7de102d70c8">GetStdv</a>(<span class="keywordtype">int</span> index);
-<a name="l00256"></a>00256 
-<a name="l00262"></a>00262         <span class="keywordtype">float</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#98f22aa88b61307c5340b7de102d70c8">GetStdv</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);
-<a name="l00263"></a>00263 
-<a name="l00268"></a>00268         <span class="keywordtype">short</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#9dfaab112224b9a4c52fb8e81a3e6843">GetPixels</a>(<span class="keywordtype">int</span> index);
-<a name="l00269"></a>00269 
-<a name="l00275"></a>00275         <span class="keywordtype">short</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#9dfaab112224b9a4c52fb8e81a3e6843">GetPixels</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);
-<a name="l00276"></a>00276 
-<a name="l00277"></a>00277         <span class="comment">// Accessors for the mask/outlier flags</span>
-<a name="l00283"></a>00283 <span class="comment"></span>        <span class="keywordtype">bool</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#901fd93c166f0e79d241e60a343296c5">IsMasked</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);
-<a name="l00284"></a>00284 
-<a name="l00289"></a>00289         <span class="keywordtype">bool</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#901fd93c166f0e79d241e60a343296c5">IsMasked</a>(<span class="keywordtype">int</span> index);
-<a name="l00290"></a>00290 
-<a name="l00296"></a>00296         <span class="keywordtype">bool</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#2b993648143d291d266840f5724e714f">IsOutlier</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);
-<a name="l00297"></a>00297 
-<a name="l00302"></a>00302         <span class="keywordtype">bool</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#2b993648143d291d266840f5724e714f">IsOutlier</a>(<span class="keywordtype">int</span> index);
-<a name="l00303"></a>00303 
-<a name="l00304"></a>00304         <span class="comment">// For reading a file.</span>
-<a name="l00306"></a>00306 <span class="comment"></span>        <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#e5e091bf0e0549f45f45ba55221fea31">Close</a>();
-<a name="l00307"></a>00307 
-<a name="l00311"></a>00311         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#6a856345b345876a2f94a2dff9633461">GetFileSize</a>();
-<a name="l00312"></a>00312 
-<a name="l00316"></a>00316         <span class="keywordtype">bool</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#9ceb3df739fef8084236835eed9e1886">Exists</a>();
-<a name="l00317"></a>00317 
-<a name="l00321"></a>00321         <span class="keywordtype">bool</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#ca791993ba594e5a424ece9cd0bfc54e">ReadHeader</a>();
-<a name="l00322"></a>00322 
-<a name="l00327"></a>00327         <span class="keywordtype">bool</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#fb44820c729a78caa986e598716c802c">Read</a>(<span class="keywordtype">bool</span> bIncludeMaskAndOutliers=<span class="keyword">true</span>);
-<a name="l00328"></a>00328 
-<a name="l00340"></a>00340         <span class="keywordtype">bool</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#b0c932b1b9d332725cfec35a9a5aedbe">ReadEx</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#1a7a3e4b5094aa27e32bbd50279fb6a7">filename</a>=0, <span class="keywordtype">int</span> state=<a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#3bcb57200d6e49a2419d40b5f0a832d48ae98b60b11e985c4fe944daed3bbb6f">CEL_ALL</a>);
-<a name="l00341"></a>00341 
-<a name="l00345"></a>00345         <span class="keywordtype">int</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#c1d0e200c37acba2e02db5a3dfc1874c">GetReadState</a>();
+<a name="l00222"></a>00222         <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#57c435733c1d4d06a274767b391befb9">GetEntry</a>(<span class="keywordtype">int</span> index, <a class="code" href="structaffymetrix__fusion__io_1_1___fusion_c_e_l_file_entry_type.html">FusionCELFileEntryType</a> &amp;entry);
+<a name="l00223"></a>00223 
+<a name="l00229"></a>00229         <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#57c435733c1d4d06a274767b391befb9">GetEntry</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <a class="code" href="structaffymetrix__fusion__io_1_1___fusion_c_e_l_file_entry_type.html">FusionCELFileEntryType</a> &amp;entry);
+<a name="l00230"></a>00230 
+<a name="l00235"></a>00235         <span class="keywordtype">float</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#76d2432b4075dbb9f00a1cf306a3a614">GetIntensity</a>(<span class="keywordtype">int</span> index);
+<a name="l00236"></a>00236 
+<a name="l00240"></a>00240         <span class="keywordtype">int</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#9a9cbf36630376b976bee22c87c774a7" title="Get a vector of intensities.">GetIntensities</a>(<span class="keywordtype">int</span> index,std::vector&lt;float&gt;&amp; intensity_vec);
+<a name="l00241"></a>00241 
+<a name="l00247"></a>00247         <span class="keywordtype">float</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#76d2432b4075dbb9f00a1cf306a3a614">GetIntensity</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);
+<a name="l00248"></a>00248 
+<a name="l00253"></a>00253         <span class="keywordtype">float</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#98f22aa88b61307c5340b7de102d70c8">GetStdv</a>(<span class="keywordtype">int</span> index);
+<a name="l00254"></a>00254 
+<a name="l00260"></a>00260         <span class="keywordtype">float</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#98f22aa88b61307c5340b7de102d70c8">GetStdv</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);
+<a name="l00261"></a>00261 
+<a name="l00266"></a>00266         <span class="keywordtype">short</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#9dfaab112224b9a4c52fb8e81a3e6843">GetPixels</a>(<span class="keywordtype">int</span> index);
+<a name="l00267"></a>00267 
+<a name="l00273"></a>00273         <span class="keywordtype">short</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#9dfaab112224b9a4c52fb8e81a3e6843">GetPixels</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);
+<a name="l00274"></a>00274 
+<a name="l00275"></a>00275         <span class="comment">// Accessors for the mask/outlier flags</span>
+<a name="l00281"></a>00281 <span class="comment"></span>        <span class="keywordtype">bool</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#901fd93c166f0e79d241e60a343296c5">IsMasked</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);
+<a name="l00282"></a>00282 
+<a name="l00287"></a>00287         <span class="keywordtype">bool</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#901fd93c166f0e79d241e60a343296c5">IsMasked</a>(<span class="keywordtype">int</span> index);
+<a name="l00288"></a>00288 
+<a name="l00294"></a>00294         <span class="keywordtype">bool</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#2b993648143d291d266840f5724e714f">IsOutlier</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);
+<a name="l00295"></a>00295 
+<a name="l00300"></a>00300         <span class="keywordtype">bool</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#2b993648143d291d266840f5724e714f">IsOutlier</a>(<span class="keywordtype">int</span> index);
+<a name="l00301"></a>00301 
+<a name="l00302"></a>00302         <span class="comment">// For reading a file.</span>
+<a name="l00304"></a>00304 <span class="comment"></span>        <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#e5e091bf0e0549f45f45ba55221fea31">Close</a>();
+<a name="l00305"></a>00305 
+<a name="l00309"></a>00309         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#6a856345b345876a2f94a2dff9633461">GetFileSize</a>();
+<a name="l00310"></a>00310 
+<a name="l00314"></a>00314         <span class="keywordtype">bool</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#9ceb3df739fef8084236835eed9e1886">Exists</a>();
+<a name="l00315"></a>00315 
+<a name="l00319"></a>00319         <span class="keywordtype">bool</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#ca791993ba594e5a424ece9cd0bfc54e">ReadHeader</a>();
+<a name="l00320"></a>00320 
+<a name="l00325"></a>00325         <span class="keywordtype">bool</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#fb44820c729a78caa986e598716c802c">Read</a>(<span class="keywordtype">bool</span> bIncludeMaskAndOutliers=<span class="keyword">true</span>);
+<a name="l00326"></a>00326 
+<a name="l00338"></a>00338         <span class="keywordtype">bool</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#b0c932b1b9d332725cfec35a9a5aedbe">ReadEx</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#1a7a3e4b5094aa27e32bbd50279fb6a7">filename</a>=0, <span class="keywordtype">int</span> state=<a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#3bcb57200d6e49a2419d40b5f0a832d48ae98b60b11e985c4fe944daed3bbb6f">CEL_ALL</a>);
+<a name="l00339"></a>00339 
+<a name="l00343"></a>00343         <span class="keywordtype">int</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#c1d0e200c37acba2e02db5a3dfc1874c">GetReadState</a>();
+<a name="l00344"></a>00344 
+<a name="l00345"></a>00345         <span class="comment">// For writing a new CEL file</span>
 <a name="l00346"></a>00346 
-<a name="l00347"></a>00347         <span class="comment">// For writing a new CEL file</span>
-<a name="l00348"></a>00348 
-<a name="l00350"></a>00350         <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#53be682bef2f2661e1c70acede1bec93">Clear</a>();
-<a name="l00351"></a>00351 
-<a name="l00353"></a>00353         <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data.html">affymetrix_calvin_io::GenericData</a> *<a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#5fa95da46ae88e9ab8a85e69a73f198d">GetGenericData</a>();
-<a name="l00354"></a>00354 
-<a name="l00359"></a>00359         <a class="code" href="namespaceaffymetrix__calvin__parameter.html#a4ad3690891e837b3c6e5d55157c44f3">affymetrix_calvin_parameter::ParameterNameValueTypeList</a> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#ef85d51d3e619dd555eea73563097861">GetDataSetParameters</a>(<span class="keyword">const</span> std::wstring &amp;setName);
-<a name="l00360"></a>00360 
-<a name="l00362"></a>00362         <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#e817370eca1aef1ea33cf87d4a736f02">SetActiveDataGroup</a>(<span class="keyword">const</span> std::wstring &amp;groupName);
-<a name="l00363"></a>00363 
-<a name="l00367"></a>00367         <span class="keywordtype">bool</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#9edc47898cac05f5978b4a46d0a74e0b">IsMultiColor</a>();
-<a name="l00368"></a>00368 
-<a name="l00372"></a>00372         <a class="code" href="_affy_stl_collection_types_8h.html#afbe16e1466760bd15b7fba33f192042">WStringVector</a> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#36d1d74c33faee8550398e6f390a31e2">GetChannels</a>();
-<a name="l00373"></a>00373 
-<a name="l00374"></a>00374 <span class="keyword">protected</span>:
-<a name="l00378"></a>00378         <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#b3fb95d8c2ed1656744acec7fdae1a75">CreateAdapter</a>();
-<a name="l00379"></a>00379 
-<a name="l00381"></a>00381         <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#e8ab722e379fdb4867a60024cd99844a">DeleteAdapter</a>();
-<a name="l00382"></a>00382 
-<a name="l00386"></a>00386         <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#2502e8e305f691ad407377add187984b">CheckAdapter</a>() <span class="keyword">const</span>;
-<a name="l00387"></a>00387 
-<a name="l00389"></a>00389         <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#4f6975c9f0bbfb08afedcd4b0a992c21">FillParameterList</a>();
-<a name="l00390"></a>00390 
-<a name="l00391"></a>00391 <span class="keyword">private</span>:
-<a name="l00393"></a><a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#46a0e8cccfb675e18da4d55872b75968">00393</a>         <a class="code" href="classaffymetrix__fusion__io_1_1_i_fusion_c_e_l_data_adapter.html" title="Adapter that wraps both GCOS and Calvin cell file readers and contains the interfaces...">IFusionCELDataAdapter</a>* <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#46a0e8cccfb675e18da4d55872b75968">adapter</a>;
-<a name="l00395"></a><a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#1a7a3e4b5094aa27e32bbd50279fb6a7">00395</a>         std::string <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#1a7a3e4b5094aa27e32bbd50279fb6a7">filename</a>;
-<a name="l00397"></a><a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#c9907bfe421db10be4a981577cdaf694">00397</a>         <a class="code" href="namespaceaffymetrix__fusion__io.html#c79e7f7d0eb7ee265ea66138f29be9ec">FusionTagValuePairTypeList</a> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#c9907bfe421db10be4a981577cdaf694">parameterList</a>;
-<a name="l00399"></a><a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#9d8e492bd9cee14b4d19c8aab9018059">00399</a>         <span class="keywordtype">bool</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#9d8e492bd9cee14b4d19c8aab9018059">parameterListRead</a>;
-<a name="l00400"></a>00400 };
+<a name="l00348"></a>00348         <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#53be682bef2f2661e1c70acede1bec93">Clear</a>();
+<a name="l00349"></a>00349 
+<a name="l00351"></a>00351         <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data.html">affymetrix_calvin_io::GenericData</a> *<a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#5fa95da46ae88e9ab8a85e69a73f198d">GetGenericData</a>();
+<a name="l00352"></a>00352 
+<a name="l00357"></a>00357         <a class="code" href="namespaceaffymetrix__calvin__parameter.html#a4ad3690891e837b3c6e5d55157c44f3">affymetrix_calvin_parameter::ParameterNameValueTypeList</a> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#ef85d51d3e619dd555eea73563097861">GetDataSetParameters</a>(<span class="keyword">const</span> std::wstring &amp;setName);
+<a name="l00358"></a>00358 
+<a name="l00360"></a>00360         <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#e817370eca1aef1ea33cf87d4a736f02">SetActiveDataGroup</a>(<span class="keyword">const</span> std::wstring &amp;groupName);
+<a name="l00361"></a>00361 
+<a name="l00365"></a>00365         <span class="keywordtype">bool</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#9edc47898cac05f5978b4a46d0a74e0b">IsMultiColor</a>();
+<a name="l00366"></a>00366 
+<a name="l00370"></a>00370         <a class="code" href="_affy_stl_collection_types_8h.html#afbe16e1466760bd15b7fba33f192042">WStringVector</a> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#36d1d74c33faee8550398e6f390a31e2">GetChannels</a>();
+<a name="l00371"></a>00371 
+<a name="l00372"></a>00372 <span class="keyword">protected</span>:
+<a name="l00376"></a>00376         <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#b3fb95d8c2ed1656744acec7fdae1a75">CreateAdapter</a>();
+<a name="l00377"></a>00377 
+<a name="l00379"></a>00379         <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#e8ab722e379fdb4867a60024cd99844a">DeleteAdapter</a>();
+<a name="l00380"></a>00380 
+<a name="l00384"></a>00384         <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#2502e8e305f691ad407377add187984b">CheckAdapter</a>() <span class="keyword">const</span>;
+<a name="l00385"></a>00385 
+<a name="l00387"></a>00387         <span class="keywordtype">void</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#4f6975c9f0bbfb08afedcd4b0a992c21">FillParameterList</a>();
+<a name="l00388"></a>00388 
+<a name="l00389"></a>00389 <span class="keyword">private</span>:
+<a name="l00391"></a><a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#46a0e8cccfb675e18da4d55872b75968">00391</a>         <a class="code" href="classaffymetrix__fusion__io_1_1_i_fusion_c_e_l_data_adapter.html" title="Adapter that wraps both GCOS and Calvin cell file readers and contains the interfaces...">IFusionCELDataAdapter</a>* <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#46a0e8cccfb675e18da4d55872b75968">adapter</a>;
+<a name="l00393"></a><a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#1a7a3e4b5094aa27e32bbd50279fb6a7">00393</a>         std::string <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#1a7a3e4b5094aa27e32bbd50279fb6a7">filename</a>;
+<a name="l00395"></a><a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#c9907bfe421db10be4a981577cdaf694">00395</a>         <a class="code" href="namespaceaffymetrix__fusion__io.html#c79e7f7d0eb7ee265ea66138f29be9ec">FusionTagValuePairTypeList</a> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#c9907bfe421db10be4a981577cdaf694">parameterList</a>;
+<a name="l00397"></a><a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#9d8e492bd9cee14b4d19c8aab9018059">00397</a>         <span class="keywordtype">bool</span> <a class="code" href="classaffymetrix__fusion__io_1_1_fusion_c_e_l_data.html#9d8e492bd9cee14b4d19c8aab9018059">parameterListRead</a>;
+<a name="l00398"></a>00398 };
+<a name="l00399"></a>00399 
+<a name="l00400"></a>00400 }
 <a name="l00401"></a>00401 
-<a name="l00402"></a>00402 }
-<a name="l00403"></a>00403 
-<a name="l00404"></a>00404 <span class="preprocessor">#endif  //_AffymetrixFusionCELData_HEADER_</span>
-</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:08 2009 for Affymetrix Fusion SDK by&nbsp;
+<a name="l00402"></a>00402 <span class="preprocessor">#endif  //_AffymetrixFusionCELData_HEADER_</span>
+</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:17 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

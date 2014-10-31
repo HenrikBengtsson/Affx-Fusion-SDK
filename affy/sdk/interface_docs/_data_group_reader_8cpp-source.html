@@ -84,7 +84,7 @@
 <a name="l00060"></a>00060 {
 <a name="l00061"></a>00061         <span class="keywordflow">if</span> (index &lt; 0 || index &gt; <a class="code" href="classaffymetrix__calvin__io_1_1_data_group_reader.html#7ac51e33aa91cc4caab2ae69daf3db02">dataGroupHdr</a>.<a class="code" href="classaffymetrix__calvin__io_1_1_data_group_header.html#77c666837d84863b37be95a38123c64d">GetDataSetCnt</a>())
 <a name="l00062"></a>00062         {
-<a name="l00063"></a>00063                 <a class="code" href="classaffymetrix__calvin__exceptions_1_1_data_set_not_found_exception.html">DataSetNotFoundException</a> e;
+<a name="l00063"></a>00063           <a class="code" href="classaffymetrix__calvin__exceptions_1_1_data_set_not_found_exception.html">DataSetNotFoundException</a> e(L<span class="stringliteral">"Calvin"</span>,L<span class="stringliteral">"Default Description, Please Update!"</span>,<a class="code" href="classaffymetrix__calvin__utilities_1_1_date_time.html#1d634f56bd3a4f925bdcaac46f0fec15">affymetrix_calvin_utilities::DateTime::GetCurrentDateTime</a>().ToString(),std::string(__FILE__),(u_int16_t)__LINE__,0);
 <a name="l00064"></a>00064                 <span class="keywordflow">throw</span> e;
 <a name="l00065"></a>00065         }
 <a name="l00066"></a>00066 
@@ -101,7 +101,7 @@
 <a name="l00077"></a>00077         <a class="code" href="classaffymetrix__calvin__io_1_1_data_set_header.html">DataSetHeader</a>* dph = <a class="code" href="classaffymetrix__calvin__io_1_1_data_group_reader.html#7ac51e33aa91cc4caab2ae69daf3db02">dataGroupHdr</a>.<a class="code" href="classaffymetrix__calvin__io_1_1_data_group_header.html#736bb6ddbf249f3b98f31973dec1a5f7">FindDataSetHeader</a>(name);
 <a name="l00078"></a>00078         <span class="keywordflow">if</span> (dph == 0)
 <a name="l00079"></a>00079         {
-<a name="l00080"></a>00080                 <a class="code" href="classaffymetrix__calvin__exceptions_1_1_data_set_not_found_exception.html">DataSetNotFoundException</a> e;
+<a name="l00080"></a>00080                 <a class="code" href="classaffymetrix__calvin__exceptions_1_1_data_set_not_found_exception.html">DataSetNotFoundException</a> e(L<span class="stringliteral">"Calvin"</span>,L<span class="stringliteral">"Default Description, Please Update!"</span>,<a class="code" href="classaffymetrix__calvin__utilities_1_1_date_time.html#1d634f56bd3a4f925bdcaac46f0fec15">affymetrix_calvin_utilities::DateTime::GetCurrentDateTime</a>().ToString(),std::string(__FILE__),(u_int16_t)__LINE__,0);
 <a name="l00081"></a>00081                 <span class="keywordflow">throw</span> e;
 <a name="l00082"></a>00082         }
 <a name="l00083"></a>00083 
@@ -109,7 +109,7 @@
 <a name="l00085"></a>00085         <span class="keywordflow">return</span> dpReader;
 <a name="l00086"></a>00086 }
 <a name="l00087"></a>00087 
-</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:10 2009 for Affymetrix Fusion SDK by&nbsp;
+</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:18 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

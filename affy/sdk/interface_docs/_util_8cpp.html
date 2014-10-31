@@ -26,26 +26,26 @@
 <h1>Util.cpp File Reference</h1>General Utilities. <a href="#_details">More...</a>
 <p>
 <code>#include &quot;<a class="el" href="_util_8h-source.html">util/Util.h</a>&quot;</code><br>
-<code>#include &quot;<a class="el" href="_affx_file_8h-source.html">util/AffxFile.h</a>&quot;</code><br>
+<code>#include &quot;<a class="el" href="_string_utils_8h-source.html">calvin_files/utils/src/StringUtils.h</a>&quot;</code><br>
 <code>#include &quot;<a class="el" href="_convert_8h-source.html">util/Convert.h</a>&quot;</code><br>
 <code>#include &quot;<a class="el" href="_err_8h-source.html">util/Err.h</a>&quot;</code><br>
+<code>#include &quot;<a class="el" href="_fs_8h-source.html">util/Fs.h</a>&quot;</code><br>
 <code>#include &quot;<a class="el" href="_row_file_8h-source.html">util/RowFile.h</a>&quot;</code><br>
 <code>#include &quot;<a class="el" href="_table_file_8h-source.html">util/TableFile.h</a>&quot;</code><br>
 <code>#include &quot;<a class="el" href="_verbose_8h-source.html">util/Verbose.h</a>&quot;</code><br>
-<code>#include &quot;<a class="el" href="_string_utils_8h-source.html">calvin_files/utils/src/StringUtils.h</a>&quot;</code><br>
 <code>#include &lt;cerrno&gt;</code><br>
 <code>#include &lt;cmath&gt;</code><br>
 <code>#include &lt;cstdio&gt;</code><br>
 <code>#include &lt;cstdlib&gt;</code><br>
 <code>#include &lt;cstring&gt;</code><br>
 <code>#include &lt;fcntl.h&gt;</code><br>
+<code>#include &lt;iostream&gt;</code><br>
 <code>#include &lt;map&gt;</code><br>
-<code>#include &lt;sstream&gt;</code><br>
 <code>#include &lt;stdarg.h&gt;</code><br>
-<code>#include &lt;string.h&gt;</code><br>
 <code>#include &lt;sys/stat.h&gt;</code><br>
 <code>#include &lt;sys/types.h&gt;</code><br>
 <code>#include &lt;vector&gt;</code><br>
+<code>#include &quot;portability/apt-no-warnings.h&quot;</code><br>
 <code>#include &lt;unistd.h&gt;</code><br>
 
 <p>
@@ -57,11 +57,6 @@
 <tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_util_8cpp.html#b9322a3b6c8045abc07944ebab0da16f">POSIX_CLOSE</a>&nbsp;&nbsp;&nbsp;close</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_util_8cpp.html#2d7668d2acc47385b4f033d8b5d98b92">POSIX_MKDIR</a>&nbsp;&nbsp;&nbsp;mkdir</td></tr>
-
-<tr><td colspan="2"><br><h2>Functions</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_util_8cpp.html#3c31153c070590f3426cdd7566838a61">_uncheckedFileRemove</a> (const std::string &amp;fileName, int tries, int sec)</td></tr>
-
-<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_util_8cpp.html#91a06b166c28f94431c33c9a39af709c">_uncheckedFileRename</a> (const std::string &amp;in, const std::string &amp;out, int tries, int sec)</td></tr>
 
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
@@ -87,8 +82,6 @@ Definition in file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.<hr>
 
 <p>
 Definition at line <a class="el" href="_util_8cpp-source.html#l00057">57</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
-<p>
-Referenced by <a class="el" href="_util_8cpp-source.html#l00267">Util::fileReadable()</a>.
 </div>
 </div><p>
 <a class="anchor" name="2d7668d2acc47385b4f033d8b5d98b92"></a><!-- doxytag: member="Util.cpp::POSIX_MKDIR" ref="2d7668d2acc47385b4f033d8b5d98b92" args="" -->
@@ -106,8 +99,6 @@ Referenced by <a class="el" href="_util_8cpp-source.html#l00267">Util::fileReada
 
 <p>
 Definition at line <a class="el" href="_util_8cpp-source.html#l00058">58</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
-<p>
-Referenced by <a class="el" href="_util_8cpp-source.html#l00604">Util::makeDir()</a>.
 </div>
 </div><p>
 <a class="anchor" name="7f862689020734af17227ef0d1c0396d"></a><!-- doxytag: member="Util.cpp::POSIX_OPEN" ref="7f862689020734af17227ef0d1c0396d" args="" -->
@@ -125,100 +116,9 @@ Referenced by <a class="el" href="_util_8cpp-source.html#l00604">Util::makeDir()
 
 <p>
 Definition at line <a class="el" href="_util_8cpp-source.html#l00056">56</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
-<p>
-Referenced by <a class="el" href="_util_8cpp-source.html#l00267">Util::fileReadable()</a>.
 </div>
 </div><p>
-<hr><h2>Function Documentation</h2>
-<a class="anchor" name="3c31153c070590f3426cdd7566838a61"></a><!-- doxytag: member="Util.cpp::_uncheckedFileRemove" ref="3c31153c070590f3426cdd7566838a61" args="(const std::string &amp;fileName, int tries, int sec)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool _uncheckedFileRemove           </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&nbsp;</td>
-          <td class="paramname"> <em>fileName</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&nbsp;</td>
-          <td class="paramname"> <em>tries</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&nbsp;</td>
-          <td class="paramname"> <em>sec</em></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td width="100%"></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Not intended to direct use. Only indirectly via <a class="el" href="class_util.html#c8c76734b088645313b1ef333ce3fdb6">Util::fileRemove()</a> We make multiple attempts to get around read lock issues. 
-<p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l00308">308</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
-<p>
-References <a class="el" href="_util_8cpp-source.html#l00887">Util::convertPathName()</a>.
-<p>
-Referenced by <a class="el" href="_util_8cpp-source.html#l00339">Util::fileRemove()</a>.
-</div>
-</div><p>
-<a class="anchor" name="91a06b166c28f94431c33c9a39af709c"></a><!-- doxytag: member="Util.cpp::_uncheckedFileRename" ref="91a06b166c28f94431c33c9a39af709c" args="(const std::string &amp;in, const std::string &amp;out, int tries, int sec)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool _uncheckedFileRename           </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&nbsp;</td>
-          <td class="paramname"> <em>in</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&nbsp;</td>
-          <td class="paramname"> <em>out</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&nbsp;</td>
-          <td class="paramname"> <em>tries</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&nbsp;</td>
-          <td class="paramname"> <em>sec</em></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td width="100%"></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Not intended to direct use. Only indirectly via <a class="el" href="class_util.html#6123509028f7213cbf31cc8a0e30abb2">Util::fileRename()</a> We make multiple attempts to get around read lock issues. 
-<p>
-Definition at line <a class="el" href="_util_8cpp-source.html#l00435">435</a> of file <a class="el" href="_util_8cpp-source.html">Util.cpp</a>.
-<p>
-References <a class="el" href="_util_8cpp-source.html#l00887">Util::convertPathName()</a>.
-<p>
-Referenced by <a class="el" href="_util_8cpp-source.html#l00461">Util::fileRename()</a>.
-</div>
-</div><p>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:27 2009 for Affymetrix Fusion SDK by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:38 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

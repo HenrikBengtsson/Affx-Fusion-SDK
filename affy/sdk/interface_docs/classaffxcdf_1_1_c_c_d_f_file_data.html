@@ -35,13 +35,17 @@
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classaffxcdf_1_1_c_c_d_f_file_header.html">CCDFFileHeader</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaffxcdf_1_1_c_c_d_f_file_data.html#888879ec5a8fde85de50f889d8990890">GetHeader</a> ()</td></tr>
 
+<tr><td class="memItemLeft" nowrap align="right" valign="top">std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaffxcdf_1_1_c_c_d_f_file_data.html#e6c1d41630278343afc7555f3ba1496a">GetGUID</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaffxcdf_1_1_c_c_d_f_file_data.html#b8d3ad16a98e6639f21063c8ab668031">GetIntegrityMd5</a> ()</td></tr>
+
 <tr><td class="memItemLeft" nowrap align="right" valign="top">std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaffxcdf_1_1_c_c_d_f_file_data.html#068f0a98a27034beba444441797ed1f3">GetError</a> () const</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaffxcdf_1_1_c_c_d_f_file_data.html#ba3a19fe865b60bce816a98b72dd6d43">GetProbeSetName</a> (int index)</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaffxcdf_1_1_c_c_d_f_file_data.html#739762cdf0d0167844e867419397b4f1">GetChipType</a> () const</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaffxcdf_1_1_c_c_d_f_file_data.html#6165158d795f08b92caf103c22fe0676">GetChipType</a> ()</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">std::vector&lt; std::string &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaffxcdf_1_1_c_c_d_f_file_data.html#1ae2ffe5fbf398a9b1e5046baf916b7b">GetChipTypes</a> () const</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">std::vector&lt; std::string &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaffxcdf_1_1_c_c_d_f_file_data.html#87b8f745c66257c7f5f8ca228d6365ac">GetChipTypes</a> ()</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaffxcdf_1_1_c_c_d_f_file_data.html#b98f160968892e93a3d5678fdfb2a51b">Read</a> ()</td></tr>
 
@@ -109,7 +113,7 @@ This class provides storage and reading capabilities for a CDF file.
 <p>
 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00781">781</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.<hr><h2>Constructor &amp; Destructor Documentation</h2>
+Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00821">821</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.<hr><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" name="71d9dc81d6246fd8d2576703e2aab599"></a><!-- doxytag: member="affxcdf::CCDFFileData::CCDFFileData" ref="71d9dc81d6246fd8d2576703e2aab599" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -128,7 +132,7 @@ Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00781">7
 <p>
 Constructor 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00072">72</a> of file <a class="el" href="_c_d_f_file_data_8cpp-source.html">CDFFileData.cpp</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00073">73</a> of file <a class="el" href="_c_d_f_file_data_8cpp-source.html">CDFFileData.cpp</a>.
 </div>
 </div><p>
 <a class="anchor" name="0f87facbea6bc6dc5e6890b7e5f89cd0"></a><!-- doxytag: member="affxcdf::CCDFFileData::~CCDFFileData" ref="0f87facbea6bc6dc5e6890b7e5f89cd0" args="()" -->
@@ -149,9 +153,9 @@ Definition at line <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00072"
 <p>
 Destructor 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00078">78</a> of file <a class="el" href="_c_d_f_file_data_8cpp-source.html">CDFFileData.cpp</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00079">79</a> of file <a class="el" href="_c_d_f_file_data_8cpp-source.html">CDFFileData.cpp</a>.
 <p>
-References <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00295">Close()</a>.
+References <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00296">Close()</a>.
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
@@ -183,11 +187,11 @@ References <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00295">Close()
 <p>
 Use this seekg method when seeking with the iteratorReader. It updates the state needed for sequenial reads. 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00806">806</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00846">846</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
 <p>
-References <a class="el" href="_c_d_f_file_data_8h-source.html#l00816">iteratorReader</a>, and <a class="el" href="_c_d_f_file_data_8h-source.html#l00801">m_probeSetIndex_last_valid</a>.
+References <a class="el" href="_c_d_f_file_data_8h-source.html#l00856">iteratorReader</a>, and <a class="el" href="_c_d_f_file_data_8h-source.html#l00841">m_probeSetIndex_last_valid</a>.
 <p>
-Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00280">GetProbeSetName()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00395">GetProbeSetType()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00560">GetQCProbeSetInformation()</a>, and <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00668">ReadXDAFormat()</a>.
+Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00281">GetProbeSetName()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00466">GetProbeSetType()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00631">GetQCProbeSetInformation()</a>, and <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00777">ReadXDAFormat()</a>.
 </div>
 </div><p>
 <a class="anchor" name="6d28e6e3b6f344e2e9f3e05194dbe842"></a><!-- doxytag: member="affxcdf::CCDFFileData::Open" ref="6d28e6e3b6f344e2e9f3e05194dbe842" args="()" -->
@@ -209,11 +213,11 @@ Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00280">GetP
 Opens the file for reading. <dl class="return" compact><dt><b>Returns:</b></dt><dd>True if successful. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00622">622</a> of file <a class="el" href="_c_d_f_file_data_8cpp-source.html">CDFFileData.cpp</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00693">693</a> of file <a class="el" href="_c_d_f_file_data_8cpp-source.html">CDFFileData.cpp</a>.
 <p>
-References <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00295">Close()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00306">IsXDACompatibleFile()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00704">ReadTextFormat()</a>, and <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00668">ReadXDAFormat()</a>.
+References <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00296">Close()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00307">IsXDACompatibleFile()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00813">ReadTextFormat()</a>, and <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00777">ReadXDAFormat()</a>.
 <p>
-Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00608">Read()</a>, and <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00381">ReadHeader()</a>.
+Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00679">Read()</a>, and <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00452">ReadHeader()</a>.
 </div>
 </div><p>
 <a class="anchor" name="c49a3f3924b485763d6e219b7e8718d4"></a><!-- doxytag: member="affxcdf::CCDFFileData::ReadTextFormat" ref="c49a3f3924b485763d6e219b7e8718d4" args="()" -->
@@ -235,11 +239,11 @@ Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00608">Read
 Reads a text format CDF file. <dl class="return" compact><dt><b>Returns:</b></dt><dd>True if successful. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00704">704</a> of file <a class="el" href="_c_d_f_file_data_8cpp-source.html">CDFFileData.cpp</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00813">813</a> of file <a class="el" href="_c_d_f_file_data_8cpp-source.html">CDFFileData.cpp</a>.
 <p>
-References <a class="el" href="_c_d_f_file_data_8h-source.html#l00137">affxcdf::CopyNumberProbeSetType</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00143">affxcdf::ExpressionControlProbeSetType</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00125">affxcdf::ExpressionProbeSetType</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00140">affxcdf::GenotypeControlProbeSetType</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00128">affxcdf::GenotypingProbeSetType</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00333">affxcdf::CCDFProbeGroupInformation::m_AlleleCode</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00624">affxcdf::CCDFQCProbeInformation::m_Background</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00348">affxcdf::CCDFProbeGroupInformation::m_Cells</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00738">affxcdf::CCDFQCProbeSetInformation::m_Cells</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00336">affxcdf::CCDFProbeGroupInformation::m_Channel</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00078">affxcdf::CCDFFileHeader::m_Cols</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00345">affxcdf::CCDFProbeGroupInformation::m_Direction</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00484">affxcdf::CCDFProbeSetInformation::m_Direction</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00212">affxcdf::CCDFProbeInformation::m_Expos</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00834">m_FileName</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00324">affxcdf::CCDFProbeGroupInformation::m_GroupIndex</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00490">affxcdf::CCDFProbeSetInformation::m_Groups</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00822">m_Header</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00475">affxcdf::CCDFProbeSetInformation::m_Index</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00208">affxcdf::CCDFProbeInformation::m_ListIndex</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00327">affxcdf::CCDFProbeGroupInformation::m_Name</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00312">affxcdf::CCDFProbeGroupInformation::m_NumCells</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00472">affxcdf::CCDFProbeSetInformation::m_NumCells</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00732">affxcdf::CCDFQCProbeSetInformation::m_NumCells</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00342">affxcdf::CCDFProbeGroupInformation::m_NumCellsPerList</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00487">affxcdf::CCDFProbeSetInformation::m_NumCellsPerList</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00469">affxcdf::CCDFProbeSetInformation::m_NumGroups</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00309">affxcdf::CCDFProbeGroupInformation::m_NumLists</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00466">affxcdf::CCDFProbeSetInformation::m_NumLists</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00069">affxcdf::CCDFFileHeader::m_NumProbeSets</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00072">affxcdf::CCDFFileHeader::m_NumQCProbeSets</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00221">affxcdf::CCDFProbeInformation::m_PBase</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00618">affxcdf::CCDFQCProbeInformation::m_PLen</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00621">affxcdf::CCDFQCProbeInformation::m_PMProbe</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00230">affxcdf::CCDFProbeInformation::m_ProbeGrouping</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00227">affxcdf::CCDFProbeInformation::m_ProbeLength</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00321">affxcdf::CCDFProbeGroupInformation::m_ProbeSetIndex</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00825">m_ProbeSetNames</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00478">affxcdf::CCDFProbeSetInformation::m_ProbeSetNumber</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00828">m_ProbeSets</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00481">affxcdf::CCDFProbeSetInformation::m_ProbeSetType</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00831">m_QCProbeSets</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00735">affxcdf::CCDFQCProbeSetInformation::m_QCProbeSetType</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00075">affxcdf::CCDFFileHeader::m_Reference</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00339">affxcdf::CCDFProbeGroupInformation::m_RepType</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00081">affxcdf::CCDFFileHeader::m_Rows</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00315">affxcdf::CCDFProbeGroupInformation::m_Start</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00318">affxcdf::CCDFProbeGroupInformation::m_Stop</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00837">m_strError</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00224">affxcdf::CCDFProbeInformation::m_TBase</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00066">affxcdf::CCDFFileHeader::m_Version</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00330">affxcdf::CCDFProbeGroupInformation::m_WobbleSituation</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00215">affxcdf::CCDFProbeInformation::m_X</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00612">affxcdf::CCDFQCProbeInformation::m_X</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00218">affxcdf::CCDFProbeInformation::m_Y</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00615">affxcdf::CCDFQCProbeInformation::m_Y</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00146">affxcdf::MarkerProbeSetType</a>, <a class="el" href="1_l_q_file_data_8cpp-source.html#l00039">MAXLINELENGTH</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00149">affxcdf::MultichannelMarkerProbeSetType</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00819">readHeaderOnly</a>, <a class="el" href="_file_i_o_8cpp-source.html#l00266">ReadNextLine()</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00131">affxcdf::ResequencingProbeSetType</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00266">affxcdf::CCDFProbeSetNames::Resize()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00273">affxcdf::CCDFProbeSetNames::SetName()</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00134">affxcdf::TagProbeSetType</a>, and <a class="el" href="_c_d_f_file_data_8h-source.html#l00122">affxcdf::UnknownProbeSetType</a>.
+References <a class="el" href="_c_d_f_file_data_8h-source.html#l00177">affxcdf::CopyNumberProbeSetType</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00183">affxcdf::ExpressionControlProbeSetType</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00165">affxcdf::ExpressionProbeSetType</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00180">affxcdf::GenotypeControlProbeSetType</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00168">affxcdf::GenotypingProbeSetType</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00373">affxcdf::CCDFProbeGroupInformation::m_AlleleCode</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00664">affxcdf::CCDFQCProbeInformation::m_Background</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00388">affxcdf::CCDFProbeGroupInformation::m_Cells</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00778">affxcdf::CCDFQCProbeSetInformation::m_Cells</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00376">affxcdf::CCDFProbeGroupInformation::m_Channel</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00078">affxcdf::CCDFFileHeader::m_ChipType</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00081">affxcdf::CCDFFileHeader::m_ChipTypes</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00093">affxcdf::CCDFFileHeader::m_Cols</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00385">affxcdf::CCDFProbeGroupInformation::m_Direction</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00524">affxcdf::CCDFProbeSetInformation::m_Direction</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00252">affxcdf::CCDFProbeInformation::m_Expos</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00874">m_FileName</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00364">affxcdf::CCDFProbeGroupInformation::m_GroupIndex</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00530">affxcdf::CCDFProbeSetInformation::m_Groups</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00072">affxcdf::CCDFFileHeader::m_GUID</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00862">m_Header</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00515">affxcdf::CCDFProbeSetInformation::m_Index</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00075">affxcdf::CCDFFileHeader::m_IntegrityMd5</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00248">affxcdf::CCDFProbeInformation::m_ListIndex</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00367">affxcdf::CCDFProbeGroupInformation::m_Name</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00352">affxcdf::CCDFProbeGroupInformation::m_NumCells</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00512">affxcdf::CCDFProbeSetInformation::m_NumCells</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00772">affxcdf::CCDFQCProbeSetInformation::m_NumCells</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00382">affxcdf::CCDFProbeGroupInformation::m_NumCellsPerList</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00527">affxcdf::CCDFProbeSetInformation::m_NumCellsPerList</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00509">affxcdf::CCDFProbeSetInformation::m_NumGroups</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00349">affxcdf::CCDFProbeGroupInformation::m_NumLists</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00506">affxcdf::CCDFProbeSetInformation::m_NumLists</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00084">affxcdf::CCDFFileHeader::m_NumProbeSets</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00087">affxcdf::CCDFFileHeader::m_NumQCProbeSets</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00261">affxcdf::CCDFProbeInformation::m_PBase</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00658">affxcdf::CCDFQCProbeInformation::m_PLen</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00661">affxcdf::CCDFQCProbeInformation::m_PMProbe</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00270">affxcdf::CCDFProbeInformation::m_ProbeGrouping</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00267">affxcdf::CCDFProbeInformation::m_ProbeLength</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00361">affxcdf::CCDFProbeGroupInformation::m_ProbeSetIndex</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00865">m_ProbeSetNames</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00518">affxcdf::CCDFProbeSetInformation::m_ProbeSetNumber</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00868">m_ProbeSets</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00521">affxcdf::CCDFProbeSetInformation::m_ProbeSetType</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00871">m_QCProbeSets</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00775">affxcdf::CCDFQCProbeSetInformation::m_QCProbeSetType</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00090">affxcdf::CCDFFileHeader::m_Reference</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00379">affxcdf::CCDFProbeGroupInformation::m_RepType</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00096">affxcdf::CCDFFileHeader::m_Rows</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00355">affxcdf::CCDFProbeGroupInformation::m_Start</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00358">affxcdf::CCDFProbeGroupInformation::m_Stop</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00877">m_strError</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00264">affxcdf::CCDFProbeInformation::m_TBase</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00069">affxcdf::CCDFFileHeader::m_Version</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00370">affxcdf::CCDFProbeGroupInformation::m_WobbleSituation</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00255">affxcdf::CCDFProbeInformation::m_X</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00652">affxcdf::CCDFQCProbeInformation::m_X</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00258">affxcdf::CCDFProbeInformation::m_Y</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00655">affxcdf::CCDFQCProbeInformation::m_Y</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00186">affxcdf::MarkerProbeSetType</a>, <a class="el" href="1_l_q_file_data_8cpp-source.html#l00039">MAXLINELENGTH</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00189">affxcdf::MultichannelMarkerProbeSetType</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00859">readHeaderOnly</a>, <a class="el" href="_file_i_o_8cpp-source.html#l00266">ReadNextLine()</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00171">affxcdf::ResequencingProbeSetType</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00267">affxcdf::CCDFProbeSetNames::Resize()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00274">affxcdf::CCDFProbeSetNames::SetName()</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00174">affxcdf::TagProbeSetType</a>, and <a class="el" href="_c_d_f_file_data_8h-source.html#l00162">affxcdf::UnknownProbeSetType</a>.
 <p>
-Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00622">Open()</a>.
+Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00693">Open()</a>.
 </div>
 </div><p>
 <a class="anchor" name="d2c45be19bd2b7fa9521312ce0807e17"></a><!-- doxytag: member="affxcdf::CCDFFileData::ReadXDAFormat" ref="d2c45be19bd2b7fa9521312ce0807e17" args="()" -->
@@ -261,11 +265,11 @@ Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00622">Open
 Reads an XDA format CDF file. <dl class="return" compact><dt><b>Returns:</b></dt><dd>True if successful. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00668">668</a> of file <a class="el" href="_c_d_f_file_data_8cpp-source.html">CDFFileData.cpp</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00777">777</a> of file <a class="el" href="_c_d_f_file_data_8cpp-source.html">CDFFileData.cpp</a>.
 <p>
-References <a class="el" href="_c_d_f_file_data_8h-source.html#l00816">iteratorReader</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00834">m_FileName</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00822">m_Header</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00069">affxcdf::CCDFFileHeader::m_NumProbeSets</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00072">affxcdf::CCDFFileHeader::m_NumQCProbeSets</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00801">m_probeSetIndex_last_valid</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00837">m_strError</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00054">MAX_PROBE_SET_NAME_LENGTH</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00791">probeSetIndexPos</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00785">probeSetNamePos</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00788">qcSetIndexPos</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00636">ReadXDAHeader()</a>, and <a class="el" href="_c_d_f_file_data_8h-source.html#l00806">seekg()</a>.
+References <a class="el" href="_c_d_f_file_data_8h-source.html#l00856">iteratorReader</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00874">m_FileName</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00862">m_Header</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00084">affxcdf::CCDFFileHeader::m_NumProbeSets</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00087">affxcdf::CCDFFileHeader::m_NumQCProbeSets</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00841">m_probeSetIndex_last_valid</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00877">m_strError</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00054">MAX_PROBE_SET_NAME_LENGTH</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00831">probeSetIndexPos</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00825">probeSetNamePos</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00828">qcSetIndexPos</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00707">ReadXDAHeader()</a>, and <a class="el" href="_c_d_f_file_data_8h-source.html#l00846">seekg()</a>.
 <p>
-Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00622">Open()</a>.
+Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00693">Open()</a>.
 </div>
 </div><p>
 <a class="anchor" name="606843af946edaafed012539659a1d9f"></a><!-- doxytag: member="affxcdf::CCDFFileData::ReadXDAHeader" ref="606843af946edaafed012539659a1d9f" args="()" -->
@@ -287,11 +291,11 @@ Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00622">Open
 Reads the header of an XDA format CDF file. <dl class="return" compact><dt><b>Returns:</b></dt><dd>True if successful. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00636">636</a> of file <a class="el" href="_c_d_f_file_data_8cpp-source.html">CDFFileData.cpp</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00707">707</a> of file <a class="el" href="_c_d_f_file_data_8cpp-source.html">CDFFileData.cpp</a>.
 <p>
-References <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00055">CDF_FILE_MAGIC_NUMBER</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00056">CDF_FILE_VERSION_NUMBER</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00816">iteratorReader</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00078">affxcdf::CCDFFileHeader::m_Cols</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00822">m_Header</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00063">affxcdf::CCDFFileHeader::m_Magic</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00069">affxcdf::CCDFFileHeader::m_NumProbeSets</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00072">affxcdf::CCDFFileHeader::m_NumQCProbeSets</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00075">affxcdf::CCDFFileHeader::m_Reference</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00081">affxcdf::CCDFFileHeader::m_Rows</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00837">m_strError</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00066">affxcdf::CCDFFileHeader::m_Version</a>, <a class="el" href="_file_i_o_8cpp-source.html#l00072">ReadInt32_I()</a>, <a class="el" href="_file_i_o_8cpp-source.html#l00223">ReadString_I()</a>, and <a class="el" href="_file_i_o_8cpp-source.html#l00083">ReadUInt16_I()</a>.
+References <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00056">CDF_FILE_MAGIC_NUMBER</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00057">CDF_FILE_VERSION_NUMBER</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00057">INTEGRITY_MD5_LENGTH</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00856">iteratorReader</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00078">affxcdf::CCDFFileHeader::m_ChipType</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00081">affxcdf::CCDFFileHeader::m_ChipTypes</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00093">affxcdf::CCDFFileHeader::m_Cols</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00072">affxcdf::CCDFFileHeader::m_GUID</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00862">m_Header</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00075">affxcdf::CCDFFileHeader::m_IntegrityMd5</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00066">affxcdf::CCDFFileHeader::m_Magic</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00084">affxcdf::CCDFFileHeader::m_NumProbeSets</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00087">affxcdf::CCDFFileHeader::m_NumQCProbeSets</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00090">affxcdf::CCDFFileHeader::m_Reference</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00096">affxcdf::CCDFFileHeader::m_Rows</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00877">m_strError</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00069">affxcdf::CCDFFileHeader::m_Version</a>, <a class="el" href="_file_i_o_8cpp-source.html#l00213">ReadFixedString()</a>, <a class="el" href="_file_i_o_8cpp-source.html#l00072">ReadInt32_I()</a>, <a class="el" href="_file_i_o_8cpp-source.html#l00223">ReadString_I()</a>, <a class="el" href="_file_i_o_8cpp-source.html#l00083">ReadUInt16_I()</a>, and <a class="el" href="_file_i_o_8cpp-source.html#l00097">ReadUInt8()</a>.
 <p>
-Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00668">ReadXDAFormat()</a>.
+Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00777">ReadXDAFormat()</a>.
 </div>
 </div><p>
 <a class="anchor" name="25ea6eb11d988c7a7bb7f31f15d038ed"></a><!-- doxytag: member="affxcdf::CCDFFileData::SetFileName" ref="25ea6eb11d988c7a7bb7f31f15d038ed" args="(const char *name)" -->
@@ -318,11 +322,11 @@ Sets the name of the file. <dl compact><dt><b>Parameters:</b></dt><dd>
 </dl>
 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00863">863</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00903">903</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
 <p>
-References <a class="el" href="_c_d_f_file_data_8h-source.html#l00834">m_FileName</a>.
+References <a class="el" href="_c_d_f_file_data_8h-source.html#l00874">m_FileName</a>.
 <p>
-Referenced by <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l01222">affymetrix_fusion_io::FusionCDFData::IsXDACompatibleFile()</a>, <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l01143">affymetrix_fusion_io::FusionCDFData::Read()</a>, and <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l01171">affymetrix_fusion_io::FusionCDFData::ReadHeader()</a>.
+Referenced by <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l01164">affymetrix_fusion_io::FusionCDFData::GetChipType()</a>, <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l01191">affymetrix_fusion_io::FusionCDFData::GetChipTypes()</a>, <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l01106">affymetrix_fusion_io::FusionCDFData::GetGUID()</a>, <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l01122">affymetrix_fusion_io::FusionCDFData::GetIntegrityMd5()</a>, <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l01312">affymetrix_fusion_io::FusionCDFData::IsXDACompatibleFile()</a>, <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l01233">affymetrix_fusion_io::FusionCDFData::Read()</a>, and <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l01261">affymetrix_fusion_io::FusionCDFData::ReadHeader()</a>.
 </div>
 </div><p>
 <a class="anchor" name="fb4ee3102b7110f65a1aac8653a72cf1"></a><!-- doxytag: member="affxcdf::CCDFFileData::GetFileName" ref="fb4ee3102b7110f65a1aac8653a72cf1" args="() const" -->
@@ -344,9 +348,9 @@ Referenced by <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l01222">af
 Gets the name of the file. <dl class="return" compact><dt><b>Returns:</b></dt><dd>The full path of the CDF file. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00868">868</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00908">908</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
 <p>
-References <a class="el" href="_c_d_f_file_data_8h-source.html#l00834">m_FileName</a>.
+References <a class="el" href="_c_d_f_file_data_8h-source.html#l00874">m_FileName</a>.
 </div>
 </div><p>
 <a class="anchor" name="888879ec5a8fde85de50f889d8990890"></a><!-- doxytag: member="affxcdf::CCDFFileData::GetHeader" ref="888879ec5a8fde85de50f889d8990890" args="()" -->
@@ -368,11 +372,63 @@ References <a class="el" href="_c_d_f_file_data_8h-source.html#l00834">m_FileNam
 Gets the header object. <dl class="return" compact><dt><b>Returns:</b></dt><dd>The CDF file header object. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00873">873</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00913">913</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
 <p>
-References <a class="el" href="_c_d_f_file_data_8h-source.html#l00822">m_Header</a>.
+References <a class="el" href="_c_d_f_file_data_8h-source.html#l00862">m_Header</a>.
 <p>
-Referenced by <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00102">affymetrix_fusion_io::FusionCDFFileHeader::Initialize()</a>, and <a class="el" href="_c_h_p_file_writer_8cpp-source.html#l00078">affxchpwriter::CCHPFileWriter::InitializeForWriting()</a>.
+Referenced by <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00137">affymetrix_fusion_io::FusionCDFFileHeader::Initialize()</a>, and <a class="el" href="_c_h_p_file_writer_8cpp-source.html#l00078">affxchpwriter::CCHPFileWriter::InitializeForWriting()</a>.
+</div>
+</div><p>
+<a class="anchor" name="e6c1d41630278343afc7555f3ba1496a"></a><!-- doxytag: member="affxcdf::CCDFFileData::GetGUID" ref="e6c1d41630278343afc7555f3ba1496a" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string CCDFFileData::GetGUID           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Get GUID <dl class="return" compact><dt><b>Returns:</b></dt><dd>GUID </dd></dl>
+
+<p>
+Definition at line <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00325">325</a> of file <a class="el" href="_c_d_f_file_data_8cpp-source.html">CDFFileData.cpp</a>.
+<p>
+References <a class="el" href="_c_d_f_file_data_8h-source.html#l00105">affxcdf::CCDFFileHeader::GetFormatVersion()</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00110">affxcdf::CCDFFileHeader::GetGUID()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00307">IsXDACompatibleFile()</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00862">m_Header</a>, and <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00452">ReadHeader()</a>.
+<p>
+Referenced by <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l01106">affymetrix_fusion_io::FusionCDFData::GetGUID()</a>.
+</div>
+</div><p>
+<a class="anchor" name="b8d3ad16a98e6639f21063c8ab668031"></a><!-- doxytag: member="affxcdf::CCDFFileData::GetIntegrityMd5" ref="b8d3ad16a98e6639f21063c8ab668031" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string CCDFFileData::GetIntegrityMd5           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Get integrity md5 <dl class="return" compact><dt><b>Returns:</b></dt><dd>The integrity md5 </dd></dl>
+
+<p>
+Definition at line <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00346">346</a> of file <a class="el" href="_c_d_f_file_data_8cpp-source.html">CDFFileData.cpp</a>.
+<p>
+References <a class="el" href="_c_d_f_file_data_8h-source.html#l00105">affxcdf::CCDFFileHeader::GetFormatVersion()</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00115">affxcdf::CCDFFileHeader::GetIntegrityMd5()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00307">IsXDACompatibleFile()</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00862">m_Header</a>, and <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00452">ReadHeader()</a>.
+<p>
+Referenced by <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l01122">affymetrix_fusion_io::FusionCDFData::GetIntegrityMd5()</a>.
 </div>
 </div><p>
 <a class="anchor" name="068f0a98a27034beba444441797ed1f3"></a><!-- doxytag: member="affxcdf::CCDFFileData::GetError" ref="068f0a98a27034beba444441797ed1f3" args="() const" -->
@@ -394,11 +450,11 @@ Referenced by <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00102">af
 Gets the error string. <dl class="return" compact><dt><b>Returns:</b></dt><dd>A string describing the last read error. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00878">878</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00928">928</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
 <p>
-References <a class="el" href="_c_d_f_file_data_8h-source.html#l00837">m_strError</a>.
+References <a class="el" href="_c_d_f_file_data_8h-source.html#l00877">m_strError</a>.
 <p>
-Referenced by <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l01070">affymetrix_fusion_io::FusionCDFData::GetError()</a>.
+Referenced by <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l01138">affymetrix_fusion_io::FusionCDFData::GetError()</a>.
 </div>
 </div><p>
 <a class="anchor" name="ba3a19fe865b60bce816a98b72dd6d43"></a><!-- doxytag: member="affxcdf::CCDFFileData::GetProbeSetName" ref="ba3a19fe865b60bce816a98b72dd6d43" args="(int index)" -->
@@ -426,14 +482,14 @@ Gets the name of a probe set. <dl compact><dt><b>Parameters:</b></dt><dd>
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>The probe set name. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00280">280</a> of file <a class="el" href="_c_d_f_file_data_8cpp-source.html">CDFFileData.cpp</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00281">281</a> of file <a class="el" href="_c_d_f_file_data_8cpp-source.html">CDFFileData.cpp</a>.
 <p>
-References <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00259">affxcdf::CCDFProbeSetNames::GetName()</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00816">iteratorReader</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00825">m_ProbeSetNames</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00054">MAX_PROBE_SET_NAME_LENGTH</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00785">probeSetNamePos</a>, <a class="el" href="_file_i_o_8cpp-source.html#l00171">ReadFixedCString()</a>, and <a class="el" href="_c_d_f_file_data_8h-source.html#l00806">seekg()</a>.
+References <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00260">affxcdf::CCDFProbeSetNames::GetName()</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00856">iteratorReader</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00865">m_ProbeSetNames</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00054">MAX_PROBE_SET_NAME_LENGTH</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00825">probeSetNamePos</a>, <a class="el" href="_file_i_o_8cpp-source.html#l00171">ReadFixedCString()</a>, and <a class="el" href="_c_d_f_file_data_8h-source.html#l00846">seekg()</a>.
 <p>
-Referenced by <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l01081">affymetrix_fusion_io::FusionCDFData::GetProbeSetName()</a>.
+Referenced by <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l01149">affymetrix_fusion_io::FusionCDFData::GetProbeSetName()</a>.
 </div>
 </div><p>
-<a class="anchor" name="739762cdf0d0167844e867419397b4f1"></a><!-- doxytag: member="affxcdf::CCDFFileData::GetChipType" ref="739762cdf0d0167844e867419397b4f1" args="() const" -->
+<a class="anchor" name="6165158d795f08b92caf103c22fe0676"></a><!-- doxytag: member="affxcdf::CCDFFileData::GetChipType" ref="6165158d795f08b92caf103c22fe0676" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -442,7 +498,7 @@ Referenced by <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l01081">af
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td width="100%"> const</td>
+          <td width="100%"></td>
         </tr>
       </table>
 </div>
@@ -452,14 +508,14 @@ Referenced by <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l01081">af
 Gets the chip type (probe array type) of the CDF file. <dl class="return" compact><dt><b>Returns:</b></dt><dd>The chip type. This is just the name (without extension) of the CDF file. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00324">324</a> of file <a class="el" href="_c_d_f_file_data_8cpp-source.html">CDFFileData.cpp</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00367">367</a> of file <a class="el" href="_c_d_f_file_data_8cpp-source.html">CDFFileData.cpp</a>.
 <p>
-References <a class="el" href="_c_d_f_file_data_8h-source.html#l00834">m_FileName</a>.
+References <a class="el" href="_c_d_f_file_data_8h-source.html#l00120">affxcdf::CCDFFileHeader::GetChipType()</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00105">affxcdf::CCDFFileHeader::GetFormatVersion()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00307">IsXDACompatibleFile()</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00874">m_FileName</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00862">m_Header</a>, and <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00452">ReadHeader()</a>.
 <p>
-Referenced by <a class="el" href="_c_h_p_file_writer_8cpp-source.html#l00078">affxchpwriter::CCHPFileWriter::InitializeForWriting()</a>.
+Referenced by <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l01164">affymetrix_fusion_io::FusionCDFData::GetChipType()</a>, and <a class="el" href="_c_h_p_file_writer_8cpp-source.html#l00078">affxchpwriter::CCHPFileWriter::InitializeForWriting()</a>.
 </div>
 </div><p>
-<a class="anchor" name="1ae2ffe5fbf398a9b1e5046baf916b7b"></a><!-- doxytag: member="affxcdf::CCDFFileData::GetChipTypes" ref="1ae2ffe5fbf398a9b1e5046baf916b7b" args="() const" -->
+<a class="anchor" name="87b8f745c66257c7f5f8ca228d6365ac"></a><!-- doxytag: member="affxcdf::CCDFFileData::GetChipTypes" ref="87b8f745c66257c7f5f8ca228d6365ac" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -468,7 +524,7 @@ Referenced by <a class="el" href="_c_h_p_file_writer_8cpp-source.html#l00078">af
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td width="100%"> const</td>
+          <td width="100%"></td>
         </tr>
       </table>
 </div>
@@ -478,9 +534,11 @@ Referenced by <a class="el" href="_c_h_p_file_writer_8cpp-source.html#l00078">af
 Gets the chip types (probe array type) of the CDF file. Allow substrings deliminated by '.' <dl class="return" compact><dt><b>Returns:</b></dt><dd>vector of chip types </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00340">340</a> of file <a class="el" href="_c_d_f_file_data_8cpp-source.html">CDFFileData.cpp</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00397">397</a> of file <a class="el" href="_c_d_f_file_data_8cpp-source.html">CDFFileData.cpp</a>.
 <p>
-References <a class="el" href="_c_d_f_file_data_8h-source.html#l00834">m_FileName</a>.
+References <a class="el" href="_c_d_f_file_data_8h-source.html#l00125">affxcdf::CCDFFileHeader::GetChipTypes()</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00105">affxcdf::CCDFFileHeader::GetFormatVersion()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00307">IsXDACompatibleFile()</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00874">m_FileName</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00862">m_Header</a>, and <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00452">ReadHeader()</a>.
+<p>
+Referenced by <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l01191">affymetrix_fusion_io::FusionCDFData::GetChipTypes()</a>.
 </div>
 </div><p>
 <a class="anchor" name="b98f160968892e93a3d5678fdfb2a51b"></a><!-- doxytag: member="affxcdf::CCDFFileData::Read" ref="b98f160968892e93a3d5678fdfb2a51b" args="()" -->
@@ -502,11 +560,11 @@ References <a class="el" href="_c_d_f_file_data_8h-source.html#l00834">m_FileNam
 Reads the entire file. <dl class="return" compact><dt><b>Returns:</b></dt><dd>True if successful. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00608">608</a> of file <a class="el" href="_c_d_f_file_data_8cpp-source.html">CDFFileData.cpp</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00679">679</a> of file <a class="el" href="_c_d_f_file_data_8cpp-source.html">CDFFileData.cpp</a>.
 <p>
-References <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00295">Close()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00622">Open()</a>, and <a class="el" href="_c_d_f_file_data_8h-source.html#l00819">readHeaderOnly</a>.
+References <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00296">Close()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00693">Open()</a>, and <a class="el" href="_c_d_f_file_data_8h-source.html#l00859">readHeaderOnly</a>.
 <p>
-Referenced by <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l01143">affymetrix_fusion_io::FusionCDFData::Read()</a>.
+Referenced by <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l01233">affymetrix_fusion_io::FusionCDFData::Read()</a>.
 </div>
 </div><p>
 <a class="anchor" name="a57d57eb8d943fec6ad242e8fe0a8bcd"></a><!-- doxytag: member="affxcdf::CCDFFileData::ReadHeader" ref="a57d57eb8d943fec6ad242e8fe0a8bcd" args="()" -->
@@ -528,11 +586,11 @@ Referenced by <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l01143">af
 Reads the header of the file only. <dl class="return" compact><dt><b>Returns:</b></dt><dd>True if successful. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00381">381</a> of file <a class="el" href="_c_d_f_file_data_8cpp-source.html">CDFFileData.cpp</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00452">452</a> of file <a class="el" href="_c_d_f_file_data_8cpp-source.html">CDFFileData.cpp</a>.
 <p>
-References <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00295">Close()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00622">Open()</a>, and <a class="el" href="_c_d_f_file_data_8h-source.html#l00819">readHeaderOnly</a>.
+References <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00296">Close()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00693">Open()</a>, and <a class="el" href="_c_d_f_file_data_8h-source.html#l00859">readHeaderOnly</a>.
 <p>
-Referenced by <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l01171">affymetrix_fusion_io::FusionCDFData::ReadHeader()</a>.
+Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00367">GetChipType()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00397">GetChipTypes()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00325">GetGUID()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00346">GetIntegrityMd5()</a>, and <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l01261">affymetrix_fusion_io::FusionCDFData::ReadHeader()</a>.
 </div>
 </div><p>
 <a class="anchor" name="7753f2ab8285e9a6ffd2a5e7d4775945"></a><!-- doxytag: member="affxcdf::CCDFFileData::Exists" ref="7753f2ab8285e9a6ffd2a5e7d4775945" args="()" -->
@@ -554,9 +612,9 @@ Referenced by <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l01171">af
 Checks if the file exists. <dl class="return" compact><dt><b>Returns:</b></dt><dd>True if the file exists. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00372">372</a> of file <a class="el" href="_c_d_f_file_data_8cpp-source.html">CDFFileData.cpp</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00443">443</a> of file <a class="el" href="_c_d_f_file_data_8cpp-source.html">CDFFileData.cpp</a>.
 <p>
-References <a class="el" href="_c_d_f_file_data_8h-source.html#l00834">m_FileName</a>.
+References <a class="el" href="_c_d_f_file_data_8h-source.html#l00874">m_FileName</a>.
 </div>
 </div><p>
 <a class="anchor" name="2eb3a295c23a7acd823c929977822932"></a><!-- doxytag: member="affxcdf::CCDFFileData::Close" ref="2eb3a295c23a7acd823c929977822932" args="()" -->
@@ -577,11 +635,11 @@ References <a class="el" href="_c_d_f_file_data_8h-source.html#l00834">m_FileNam
 <p>
 Deallocates memory and closes any file handles. 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00295">295</a> of file <a class="el" href="_c_d_f_file_data_8cpp-source.html">CDFFileData.cpp</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00296">296</a> of file <a class="el" href="_c_d_f_file_data_8cpp-source.html">CDFFileData.cpp</a>.
 <p>
-References <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00252">affxcdf::CCDFProbeSetNames::Clear()</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00816">iteratorReader</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00825">m_ProbeSetNames</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00828">m_ProbeSets</a>, and <a class="el" href="_c_d_f_file_data_8h-source.html#l00831">m_QCProbeSets</a>.
+References <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00253">affxcdf::CCDFProbeSetNames::Clear()</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00856">iteratorReader</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00865">m_ProbeSetNames</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00868">m_ProbeSets</a>, and <a class="el" href="_c_d_f_file_data_8h-source.html#l00871">m_QCProbeSets</a>.
 <p>
-Referenced by <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l01204">affymetrix_fusion_io::FusionCDFData::Close()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00622">Open()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00608">Read()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00381">ReadHeader()</a>, and <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00078">~CCDFFileData()</a>.
+Referenced by <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l01294">affymetrix_fusion_io::FusionCDFData::Close()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00693">Open()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00679">Read()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00452">ReadHeader()</a>, and <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00079">~CCDFFileData()</a>.
 </div>
 </div><p>
 <a class="anchor" name="b6dba6f06960c8c88e9daab3961732ca"></a><!-- doxytag: member="affxcdf::CCDFFileData::IsXDACompatibleFile" ref="b6dba6f06960c8c88e9daab3961732ca" args="()" -->
@@ -603,11 +661,11 @@ Referenced by <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l01204">af
 Determines if a CDF file is of the XDA (binary) format. <dl class="return" compact><dt><b>Returns:</b></dt><dd>True if XDA format. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00306">306</a> of file <a class="el" href="_c_d_f_file_data_8cpp-source.html">CDFFileData.cpp</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00307">307</a> of file <a class="el" href="_c_d_f_file_data_8cpp-source.html">CDFFileData.cpp</a>.
 <p>
-References <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00055">CDF_FILE_MAGIC_NUMBER</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00834">m_FileName</a>, and <a class="el" href="_file_i_o_8cpp-source.html#l00072">ReadInt32_I()</a>.
+References <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00056">CDF_FILE_MAGIC_NUMBER</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00874">m_FileName</a>, and <a class="el" href="_file_i_o_8cpp-source.html#l00072">ReadInt32_I()</a>.
 <p>
-Referenced by <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l01222">affymetrix_fusion_io::FusionCDFData::IsXDACompatibleFile()</a>, and <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00622">Open()</a>.
+Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00367">GetChipType()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00397">GetChipTypes()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00325">GetGUID()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00346">GetIntegrityMd5()</a>, <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l01312">affymetrix_fusion_io::FusionCDFData::IsXDACompatibleFile()</a>, and <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00693">Open()</a>.
 </div>
 </div><p>
 <a class="anchor" name="553c7c0f3ed3d3176ad9659b0dff5441"></a><!-- doxytag: member="affxcdf::CCDFFileData::GetProbeSetType" ref="553c7c0f3ed3d3176ad9659b0dff5441" args="(int index)" -->
@@ -635,11 +693,11 @@ Gets the probe set type for non-qc probe sets. <dl compact><dt><b>Parameters:</b
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>The type of probe set. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00395">395</a> of file <a class="el" href="_c_d_f_file_data_8cpp-source.html">CDFFileData.cpp</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00466">466</a> of file <a class="el" href="_c_d_f_file_data_8cpp-source.html">CDFFileData.cpp</a>.
 <p>
-References <a class="el" href="_c_d_f_file_data_8h-source.html#l00816">iteratorReader</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00828">m_ProbeSets</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00791">probeSetIndexPos</a>, <a class="el" href="_file_i_o_8cpp-source.html#l00083">ReadUInt16_I()</a>, <a class="el" href="_file_i_o_8cpp-source.html#l00065">ReadUInt32_I()</a>, and <a class="el" href="_c_d_f_file_data_8h-source.html#l00806">seekg()</a>.
+References <a class="el" href="_c_d_f_file_data_8h-source.html#l00856">iteratorReader</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00868">m_ProbeSets</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00831">probeSetIndexPos</a>, <a class="el" href="_file_i_o_8cpp-source.html#l00083">ReadUInt16_I()</a>, <a class="el" href="_file_i_o_8cpp-source.html#l00065">ReadUInt32_I()</a>, and <a class="el" href="_c_d_f_file_data_8h-source.html#l00846">seekg()</a>.
 <p>
-Referenced by <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l01251">affymetrix_fusion_io::FusionCDFData::GetProbeSetType()</a>, and <a class="el" href="_c_h_p_file_writer_8cpp-source.html#l00078">affxchpwriter::CCHPFileWriter::InitializeForWriting()</a>.
+Referenced by <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l01341">affymetrix_fusion_io::FusionCDFData::GetProbeSetType()</a>, and <a class="el" href="_c_h_p_file_writer_8cpp-source.html#l00078">affxchpwriter::CCHPFileWriter::InitializeForWriting()</a>.
 </div>
 </div><p>
 <a class="anchor" name="7223c3e9b7c92fe686852c0bb28da7c3"></a><!-- doxytag: member="affxcdf::CCDFFileData::GetProbeSetInformation" ref="7223c3e9b7c92fe686852c0bb28da7c3" args="(int index, CCDFProbeSetInformation &amp;info)" -->
@@ -677,11 +735,11 @@ Gets the probe set information. <dl compact><dt><b>Parameters:</b></dt><dd>
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>The probe set information. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00419">419</a> of file <a class="el" href="_c_d_f_file_data_8cpp-source.html">CDFFileData.cpp</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00490">490</a> of file <a class="el" href="_c_d_f_file_data_8cpp-source.html">CDFFileData.cpp</a>.
 <p>
-References <a class="el" href="_c_d_f_file_data_8h-source.html#l00816">iteratorReader</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00333">affxcdf::CCDFProbeGroupInformation::m_AlleleCode</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00348">affxcdf::CCDFProbeGroupInformation::m_Cells</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00336">affxcdf::CCDFProbeGroupInformation::m_Channel</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00345">affxcdf::CCDFProbeGroupInformation::m_Direction</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00484">affxcdf::CCDFProbeSetInformation::m_Direction</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00212">affxcdf::CCDFProbeInformation::m_Expos</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00324">affxcdf::CCDFProbeGroupInformation::m_GroupIndex</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00490">affxcdf::CCDFProbeSetInformation::m_Groups</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00822">m_Header</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00475">affxcdf::CCDFProbeSetInformation::m_Index</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00208">affxcdf::CCDFProbeInformation::m_ListIndex</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00327">affxcdf::CCDFProbeGroupInformation::m_Name</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00312">affxcdf::CCDFProbeGroupInformation::m_NumCells</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00472">affxcdf::CCDFProbeSetInformation::m_NumCells</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00342">affxcdf::CCDFProbeGroupInformation::m_NumCellsPerList</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00487">affxcdf::CCDFProbeSetInformation::m_NumCellsPerList</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00469">affxcdf::CCDFProbeSetInformation::m_NumGroups</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00309">affxcdf::CCDFProbeGroupInformation::m_NumLists</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00466">affxcdf::CCDFProbeSetInformation::m_NumLists</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00221">affxcdf::CCDFProbeInformation::m_PBase</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00351">affxcdf::CCDFProbeGroupInformation::m_pCells</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00493">affxcdf::CCDFProbeSetInformation::m_pGroups</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00230">affxcdf::CCDFProbeInformation::m_ProbeGrouping</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00227">affxcdf::CCDFProbeInformation::m_ProbeLength</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00796">m_probeSetIndex_last</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00801">m_probeSetIndex_last_valid</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00478">affxcdf::CCDFProbeSetInformation::m_ProbeSetNumber</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00828">m_ProbeSets</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00481">affxcdf::CCDFProbeSetInformation::m_ProbeSetType</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00339">affxcdf::CCDFProbeGroupInformation::m_RepType</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00315">affxcdf::CCDFProbeGroupInformation::m_Start</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00318">affxcdf::CCDFProbeGroupInformation::m_Stop</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00224">affxcdf::CCDFProbeInformation::m_TBase</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00066">affxcdf::CCDFFileHeader::m_Version</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00330">affxcdf::CCDFProbeGroupInformation::m_WobbleSituation</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00215">affxcdf::CCDFProbeInformation::m_X</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00218">affxcdf::CCDFProbeInformation::m_Y</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00217">affxcdf::CCDFProbeSetInformation::MakeShallowCopy()</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00054">MAX_PROBE_SET_NAME_LENGTH</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00791">probeSetIndexPos</a>, <a class="el" href="_file_i_o_8cpp-source.html#l00213">ReadFixedString()</a>, <a class="el" href="_file_i_o_8cpp-source.html#l00072">ReadInt32_I()</a>, <a class="el" href="_file_i_o_8cpp-source.html#l00083">ReadUInt16_I()</a>, <a class="el" href="_file_i_o_8cpp-source.html#l00065">ReadUInt32_I()</a>, and <a class="el" href="_file_i_o_8cpp-source.html#l00097">ReadUInt8()</a>.
+References <a class="el" href="_c_d_f_file_data_8h-source.html#l00856">iteratorReader</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00373">affxcdf::CCDFProbeGroupInformation::m_AlleleCode</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00388">affxcdf::CCDFProbeGroupInformation::m_Cells</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00376">affxcdf::CCDFProbeGroupInformation::m_Channel</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00385">affxcdf::CCDFProbeGroupInformation::m_Direction</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00524">affxcdf::CCDFProbeSetInformation::m_Direction</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00252">affxcdf::CCDFProbeInformation::m_Expos</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00364">affxcdf::CCDFProbeGroupInformation::m_GroupIndex</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00530">affxcdf::CCDFProbeSetInformation::m_Groups</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00862">m_Header</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00515">affxcdf::CCDFProbeSetInformation::m_Index</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00248">affxcdf::CCDFProbeInformation::m_ListIndex</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00367">affxcdf::CCDFProbeGroupInformation::m_Name</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00352">affxcdf::CCDFProbeGroupInformation::m_NumCells</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00512">affxcdf::CCDFProbeSetInformation::m_NumCells</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00382">affxcdf::CCDFProbeGroupInformation::m_NumCellsPerList</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00527">affxcdf::CCDFProbeSetInformation::m_NumCellsPerList</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00509">affxcdf::CCDFProbeSetInformation::m_NumGroups</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00349">affxcdf::CCDFProbeGroupInformation::m_NumLists</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00506">affxcdf::CCDFProbeSetInformation::m_NumLists</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00261">affxcdf::CCDFProbeInformation::m_PBase</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00391">affxcdf::CCDFProbeGroupInformation::m_pCells</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00533">affxcdf::CCDFProbeSetInformation::m_pGroups</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00270">affxcdf::CCDFProbeInformation::m_ProbeGrouping</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00267">affxcdf::CCDFProbeInformation::m_ProbeLength</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00836">m_probeSetIndex_last</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00841">m_probeSetIndex_last_valid</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00518">affxcdf::CCDFProbeSetInformation::m_ProbeSetNumber</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00868">m_ProbeSets</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00521">affxcdf::CCDFProbeSetInformation::m_ProbeSetType</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00379">affxcdf::CCDFProbeGroupInformation::m_RepType</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00355">affxcdf::CCDFProbeGroupInformation::m_Start</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00358">affxcdf::CCDFProbeGroupInformation::m_Stop</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00264">affxcdf::CCDFProbeInformation::m_TBase</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00069">affxcdf::CCDFFileHeader::m_Version</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00370">affxcdf::CCDFProbeGroupInformation::m_WobbleSituation</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00255">affxcdf::CCDFProbeInformation::m_X</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00258">affxcdf::CCDFProbeInformation::m_Y</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00218">affxcdf::CCDFProbeSetInformation::MakeShallowCopy()</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00054">MAX_PROBE_SET_NAME_LENGTH</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00831">probeSetIndexPos</a>, <a class="el" href="_file_i_o_8cpp-source.html#l00213">ReadFixedString()</a>, <a class="el" href="_file_i_o_8cpp-source.html#l00072">ReadInt32_I()</a>, <a class="el" href="_file_i_o_8cpp-source.html#l00083">ReadUInt16_I()</a>, <a class="el" href="_file_i_o_8cpp-source.html#l00065">ReadUInt32_I()</a>, and <a class="el" href="_file_i_o_8cpp-source.html#l00097">ReadUInt8()</a>.
 <p>
-Referenced by <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00810">affymetrix_fusion_io::FusionCDFProbeSetInformation::Initialize()</a>.
+Referenced by <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00845">affymetrix_fusion_io::FusionCDFProbeSetInformation::Initialize()</a>.
 </div>
 </div><p>
 <a class="anchor" name="9893a0d6ac6ef91b57b5cc567ce8ef9c"></a><!-- doxytag: member="affxcdf::CCDFFileData::GetQCProbeSetInformation" ref="9893a0d6ac6ef91b57b5cc567ce8ef9c" args="(int index, CCDFQCProbeSetInformation &amp;info)" -->
@@ -719,11 +777,11 @@ Gets the QC probe set information by index. <dl compact><dt><b>Parameters:</b></
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>The QC probe set information. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00560">560</a> of file <a class="el" href="_c_d_f_file_data_8cpp-source.html">CDFFileData.cpp</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00631">631</a> of file <a class="el" href="_c_d_f_file_data_8cpp-source.html">CDFFileData.cpp</a>.
 <p>
-References <a class="el" href="_c_d_f_file_data_8h-source.html#l00816">iteratorReader</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00738">affxcdf::CCDFQCProbeSetInformation::m_Cells</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00732">affxcdf::CCDFQCProbeSetInformation::m_NumCells</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00741">affxcdf::CCDFQCProbeSetInformation::m_pCells</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00831">m_QCProbeSets</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00735">affxcdf::CCDFQCProbeSetInformation::m_QCProbeSetType</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00179">affxcdf::CCDFQCProbeSetInformation::MakeShallowCopy()</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00788">qcSetIndexPos</a>, <a class="el" href="_file_i_o_8cpp-source.html#l00072">ReadInt32_I()</a>, <a class="el" href="_file_i_o_8cpp-source.html#l00083">ReadUInt16_I()</a>, <a class="el" href="_file_i_o_8cpp-source.html#l00097">ReadUInt8()</a>, and <a class="el" href="_c_d_f_file_data_8h-source.html#l00806">seekg()</a>.
+References <a class="el" href="_c_d_f_file_data_8h-source.html#l00856">iteratorReader</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00778">affxcdf::CCDFQCProbeSetInformation::m_Cells</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00772">affxcdf::CCDFQCProbeSetInformation::m_NumCells</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00781">affxcdf::CCDFQCProbeSetInformation::m_pCells</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00871">m_QCProbeSets</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00775">affxcdf::CCDFQCProbeSetInformation::m_QCProbeSetType</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00180">affxcdf::CCDFQCProbeSetInformation::MakeShallowCopy()</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00828">qcSetIndexPos</a>, <a class="el" href="_file_i_o_8cpp-source.html#l00072">ReadInt32_I()</a>, <a class="el" href="_file_i_o_8cpp-source.html#l00083">ReadUInt16_I()</a>, <a class="el" href="_file_i_o_8cpp-source.html#l00097">ReadUInt8()</a>, and <a class="el" href="_c_d_f_file_data_8h-source.html#l00846">seekg()</a>.
 <p>
-Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00545">GetQCProbeSetInformation()</a>, and <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00311">affymetrix_fusion_io::FusionCDFQCProbeSetInformation::Initialize()</a>.
+Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00616">GetQCProbeSetInformation()</a>, and <a class="el" href="_fusion_c_d_f_data_8cpp-source.html#l00346">affymetrix_fusion_io::FusionCDFQCProbeSetInformation::Initialize()</a>.
 </div>
 </div><p>
 <a class="anchor" name="c93318ab938baa25f9cb4533c737758d"></a><!-- doxytag: member="affxcdf::CCDFFileData::GetQCProbeSetInformation" ref="c93318ab938baa25f9cb4533c737758d" args="(GeneChipQCProbeSetType qcType, CCDFQCProbeSetInformation &amp;info)" -->
@@ -761,9 +819,9 @@ Gets the QC probe set information by type. <dl compact><dt><b>Parameters:</b></d
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>The QC probe set information. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00545">545</a> of file <a class="el" href="_c_d_f_file_data_8cpp-source.html">CDFFileData.cpp</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00616">616</a> of file <a class="el" href="_c_d_f_file_data_8cpp-source.html">CDFFileData.cpp</a>.
 <p>
-References <a class="el" href="_c_d_f_file_data_8h-source.html#l00105">affxcdf::CCDFFileHeader::GetNumQCProbeSets()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00560">GetQCProbeSetInformation()</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00755">affxcdf::CCDFQCProbeSetInformation::GetQCProbeSetType()</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00822">m_Header</a>, and <a class="el" href="_c_d_f_file_data_8h-source.html#l00732">affxcdf::CCDFQCProbeSetInformation::m_NumCells</a>.
+References <a class="el" href="_c_d_f_file_data_8h-source.html#l00145">affxcdf::CCDFFileHeader::GetNumQCProbeSets()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00631">GetQCProbeSetInformation()</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00795">affxcdf::CCDFQCProbeSetInformation::GetQCProbeSetType()</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00862">m_Header</a>, and <a class="el" href="_c_d_f_file_data_8h-source.html#l00772">affxcdf::CCDFQCProbeSetInformation::m_NumCells</a>.
 </div>
 </div><p>
 <hr><h2>Member Data Documentation</h2>
@@ -781,9 +839,9 @@ References <a class="el" href="_c_d_f_file_data_8h-source.html#l00105">affxcdf::
 <p>
 The position of the probe set names in the XDA file. 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00785">785</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00825">825</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
 <p>
-Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00280">GetProbeSetName()</a>, and <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00668">ReadXDAFormat()</a>.
+Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00281">GetProbeSetName()</a>, and <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00777">ReadXDAFormat()</a>.
 </div>
 </div><p>
 <a class="anchor" name="fb03cc0d328ac5f732623cc1cc92f8c3"></a><!-- doxytag: member="affxcdf::CCDFFileData::qcSetIndexPos" ref="fb03cc0d328ac5f732623cc1cc92f8c3" args="" -->
@@ -800,9 +858,9 @@ Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00280">GetP
 <p>
 The position of the QC probe set index array in the XDA file. 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00788">788</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00828">828</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
 <p>
-Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00560">GetQCProbeSetInformation()</a>, and <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00668">ReadXDAFormat()</a>.
+Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00631">GetQCProbeSetInformation()</a>, and <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00777">ReadXDAFormat()</a>.
 </div>
 </div><p>
 <a class="anchor" name="52019a4af8436d9bf5da72fb421a3895"></a><!-- doxytag: member="affxcdf::CCDFFileData::probeSetIndexPos" ref="52019a4af8436d9bf5da72fb421a3895" args="" -->
@@ -819,9 +877,9 @@ Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00560">GetQ
 <p>
 The position of the probe set index array in the XDA file. 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00791">791</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00831">831</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
 <p>
-Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00419">GetProbeSetInformation()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00395">GetProbeSetType()</a>, and <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00668">ReadXDAFormat()</a>.
+Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00490">GetProbeSetInformation()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00466">GetProbeSetType()</a>, and <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00777">ReadXDAFormat()</a>.
 </div>
 </div><p>
 <a class="anchor" name="9db39147916832e321e560edcbeb0e89"></a><!-- doxytag: member="affxcdf::CCDFFileData::m_probeSetIndex_last" ref="9db39147916832e321e560edcbeb0e89" args="" -->
@@ -838,9 +896,9 @@ Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00419">GetP
 <p>
 What was the last probesetindex read? This state allows us to handle sequential reads quickly. (no seeking.) 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00796">796</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00836">836</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
 <p>
-Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00419">GetProbeSetInformation()</a>.
+Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00490">GetProbeSetInformation()</a>.
 </div>
 </div><p>
 <a class="anchor" name="cf5cf3d0ddcc22d0fe98d16ca5bb1d95"></a><!-- doxytag: member="affxcdf::CCDFFileData::m_probeSetIndex_last_valid" ref="cf5cf3d0ddcc22d0fe98d16ca5bb1d95" args="" -->
@@ -857,9 +915,9 @@ Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00419">GetP
 <p>
 1 if like m_probeSetIndex_last is valid. The seekg method clears this. 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00801">801</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00841">841</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
 <p>
-Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00419">GetProbeSetInformation()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00668">ReadXDAFormat()</a>, and <a class="el" href="_c_d_f_file_data_8h-source.html#l00806">seekg()</a>.
+Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00490">GetProbeSetInformation()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00777">ReadXDAFormat()</a>, and <a class="el" href="_c_d_f_file_data_8h-source.html#l00846">seekg()</a>.
 </div>
 </div><p>
 <a class="anchor" name="f0b3481b81b989898e1e0fd6f8ea89f3"></a><!-- doxytag: member="affxcdf::CCDFFileData::iteratorReader" ref="f0b3481b81b989898e1e0fd6f8ea89f3" args="" -->
@@ -876,9 +934,9 @@ Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00419">GetP
 <p>
 The file stream for the probe set information iterator. 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00816">816</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00856">856</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
 <p>
-Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00295">Close()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00419">GetProbeSetInformation()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00280">GetProbeSetName()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00395">GetProbeSetType()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00560">GetQCProbeSetInformation()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00668">ReadXDAFormat()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00636">ReadXDAHeader()</a>, and <a class="el" href="_c_d_f_file_data_8h-source.html#l00806">seekg()</a>.
+Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00296">Close()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00490">GetProbeSetInformation()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00281">GetProbeSetName()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00466">GetProbeSetType()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00631">GetQCProbeSetInformation()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00777">ReadXDAFormat()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00707">ReadXDAHeader()</a>, and <a class="el" href="_c_d_f_file_data_8h-source.html#l00846">seekg()</a>.
 </div>
 </div><p>
 <a class="anchor" name="0398f232882e852f433bd5b43bec6bf5"></a><!-- doxytag: member="affxcdf::CCDFFileData::readHeaderOnly" ref="0398f232882e852f433bd5b43bec6bf5" args="" -->
@@ -895,9 +953,9 @@ Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00295">Clos
 <p>
 Flag to indicate that only the header part of the file is to be read. 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00819">819</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00859">859</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
 <p>
-Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00608">Read()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00381">ReadHeader()</a>, and <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00704">ReadTextFormat()</a>.
+Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00679">Read()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00452">ReadHeader()</a>, and <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00813">ReadTextFormat()</a>.
 </div>
 </div><p>
 <a class="anchor" name="71e5d1bee2d7dbb58cd3e6b7e4ef0e67"></a><!-- doxytag: member="affxcdf::CCDFFileData::m_Header" ref="71e5d1bee2d7dbb58cd3e6b7e4ef0e67" args="" -->
@@ -914,9 +972,9 @@ Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00608">Read
 <p>
 The file header object. 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00822">822</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00862">862</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
 <p>
-Referenced by <a class="el" href="_c_d_f_file_data_8h-source.html#l00873">GetHeader()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00419">GetProbeSetInformation()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00545">GetQCProbeSetInformation()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00704">ReadTextFormat()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00668">ReadXDAFormat()</a>, and <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00636">ReadXDAHeader()</a>.
+Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00367">GetChipType()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00397">GetChipTypes()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00325">GetGUID()</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00913">GetHeader()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00346">GetIntegrityMd5()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00490">GetProbeSetInformation()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00616">GetQCProbeSetInformation()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00813">ReadTextFormat()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00777">ReadXDAFormat()</a>, and <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00707">ReadXDAHeader()</a>.
 </div>
 </div><p>
 <a class="anchor" name="9552c8205fecaf8d2d4bcc57f1cf6bd3"></a><!-- doxytag: member="affxcdf::CCDFFileData::m_ProbeSetNames" ref="9552c8205fecaf8d2d4bcc57f1cf6bd3" args="" -->
@@ -933,9 +991,9 @@ Referenced by <a class="el" href="_c_d_f_file_data_8h-source.html#l00873">GetHea
 <p>
 The list of probe set names. 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00825">825</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00865">865</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
 <p>
-Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00295">Close()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00280">GetProbeSetName()</a>, and <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00704">ReadTextFormat()</a>.
+Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00296">Close()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00281">GetProbeSetName()</a>, and <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00813">ReadTextFormat()</a>.
 </div>
 </div><p>
 <a class="anchor" name="aa9a8f3d05f4dd1603a820415c22cbe3"></a><!-- doxytag: member="affxcdf::CCDFFileData::m_ProbeSets" ref="aa9a8f3d05f4dd1603a820415c22cbe3" args="" -->
@@ -952,9 +1010,9 @@ Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00295">Clos
 <p>
 An array of probe sets. 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00828">828</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00868">868</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
 <p>
-Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00295">Close()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00419">GetProbeSetInformation()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00395">GetProbeSetType()</a>, and <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00704">ReadTextFormat()</a>.
+Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00296">Close()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00490">GetProbeSetInformation()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00466">GetProbeSetType()</a>, and <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00813">ReadTextFormat()</a>.
 </div>
 </div><p>
 <a class="anchor" name="f9288113bfd12f2928807bf675f2fca4"></a><!-- doxytag: member="affxcdf::CCDFFileData::m_QCProbeSets" ref="f9288113bfd12f2928807bf675f2fca4" args="" -->
@@ -971,9 +1029,9 @@ Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00295">Clos
 <p>
 An array of QC probe sets. 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00831">831</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00871">871</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
 <p>
-Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00295">Close()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00560">GetQCProbeSetInformation()</a>, and <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00704">ReadTextFormat()</a>.
+Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00296">Close()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00631">GetQCProbeSetInformation()</a>, and <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00813">ReadTextFormat()</a>.
 </div>
 </div><p>
 <a class="anchor" name="fa5f20d73e79b1c9a4c07a67705174ef"></a><!-- doxytag: member="affxcdf::CCDFFileData::m_FileName" ref="fa5f20d73e79b1c9a4c07a67705174ef" args="" -->
@@ -990,9 +1048,9 @@ Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00295">Clos
 <p>
 The CDF file name (full path). 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00834">834</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00874">874</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
 <p>
-Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00372">Exists()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00324">GetChipType()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00340">GetChipTypes()</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00868">GetFileName()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00306">IsXDACompatibleFile()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00704">ReadTextFormat()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00668">ReadXDAFormat()</a>, and <a class="el" href="_c_d_f_file_data_8h-source.html#l00863">SetFileName()</a>.
+Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00443">Exists()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00367">GetChipType()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00397">GetChipTypes()</a>, <a class="el" href="_c_d_f_file_data_8h-source.html#l00908">GetFileName()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00307">IsXDACompatibleFile()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00813">ReadTextFormat()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00777">ReadXDAFormat()</a>, and <a class="el" href="_c_d_f_file_data_8h-source.html#l00903">SetFileName()</a>.
 </div>
 </div><p>
 <a class="anchor" name="d1796c0373d5f1de9e7f5a6185f528b1"></a><!-- doxytag: member="affxcdf::CCDFFileData::m_strError" ref="d1796c0373d5f1de9e7f5a6185f528b1" args="" -->
@@ -1009,14 +1067,14 @@ Referenced by <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00372">Exis
 <p>
 A string to hold an error message upon read failures. 
 <p>
-Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00837">837</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
+Definition at line <a class="el" href="_c_d_f_file_data_8h-source.html#l00877">877</a> of file <a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a>.
 <p>
-Referenced by <a class="el" href="_c_d_f_file_data_8h-source.html#l00878">GetError()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00704">ReadTextFormat()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00668">ReadXDAFormat()</a>, and <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00636">ReadXDAHeader()</a>.
+Referenced by <a class="el" href="_c_d_f_file_data_8h-source.html#l00928">GetError()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00813">ReadTextFormat()</a>, <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00777">ReadXDAFormat()</a>, and <a class="el" href="_c_d_f_file_data_8cpp-source.html#l00707">ReadXDAHeader()</a>.
 </div>
 </div><p>
 <hr>The documentation for this class was generated from the following files:<ul>
 <li>C:/FusionSDK/affy/sdk/file/<a class="el" href="_c_d_f_file_data_8h-source.html">CDFFileData.h</a><li>C:/FusionSDK/affy/sdk/file/<a class="el" href="_c_d_f_file_data_8cpp-source.html">CDFFileData.cpp</a></ul>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:38 2009 for Affymetrix Fusion SDK by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:49 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

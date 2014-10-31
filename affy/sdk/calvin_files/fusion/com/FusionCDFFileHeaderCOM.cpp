@@ -68,3 +68,21 @@ STDMETHODIMP CFusionCDFFileHeaderCOM::get_Reference(BSTR* pVal)
 	*pVal = COMStringUtils::ConvertString(header->GetReference());
 	return S_OK;
 }
+
+STDMETHODIMP CFusionCDFFileHeaderCOM::get_FormatVersion(int* pVal)
+{
+	*pVal = header->GetFormatVersion();
+	return S_OK;
+}
+
+STDMETHODIMP CFusionCDFFileHeaderCOM::get_GUID(BSTR* pVal)
+{
+	*pVal = COMStringUtils::ConvertString(header->GetGUID());
+	return S_OK;
+}
+
+STDMETHODIMP CFusionCDFFileHeaderCOM::get_IntegrityMd5(BSTR* pVal)
+{
+	*pVal = COMStringUtils::ConvertString(header->GetIntegrityMd5());
+	return S_OK;
+}

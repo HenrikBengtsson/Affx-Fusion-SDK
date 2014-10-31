@@ -130,7 +130,7 @@ Class for reading line oriented files and parsing them out into vectors of strin
 <p>
 
 <p>
-Definition at line <a class="el" href="_row_file_8h-source.html#l00045">45</a> of file <a class="el" href="_row_file_8h-source.html">RowFile.h</a>.<hr><h2>Member Enumeration Documentation</h2>
+Definition at line <a class="el" href="_row_file_8h-source.html#l00043">43</a> of file <a class="el" href="_row_file_8h-source.html">RowFile.h</a>.<hr><h2>Member Enumeration Documentation</h2>
 <a class="anchor" name="6aaa646aa8be2fb096aabc2d19dfab7c"></a><!-- doxytag: member="RowFile::FileLineEnding" ref="6aaa646aa8be2fb096aabc2d19dfab7c" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -157,7 +157,7 @@ Line endings are platform specific, this encodes different types we know of. <dl
 </dl>
 
 <p>
-Definition at line <a class="el" href="_row_file_8h-source.html#l00051">51</a> of file <a class="el" href="_row_file_8h-source.html">RowFile.h</a>.
+Definition at line <a class="el" href="_row_file_8h-source.html#l00049">49</a> of file <a class="el" href="_row_file_8h-source.html">RowFile.h</a>.
 </div>
 </div><p>
 <hr><h2>Constructor &amp; Destructor Documentation</h2>
@@ -202,7 +202,7 @@ Constructor. Open an object with delimiter and comment characters. <dl compact><
 </dl>
 
 <p>
-Definition at line <a class="el" href="_row_file_8cpp-source.html#l00051">51</a> of file <a class="el" href="_row_file_8cpp-source.html">RowFile.cpp</a>.
+Definition at line <a class="el" href="_row_file_8cpp-source.html#l00049">49</a> of file <a class="el" href="_row_file_8cpp-source.html">RowFile.cpp</a>.
 </div>
 </div><p>
 <a class="anchor" name="45095e25bcbb2e996de3f6e512704c83"></a><!-- doxytag: member="RowFile::~RowFile" ref="45095e25bcbb2e996de3f6e512704c83" args="()" -->
@@ -225,9 +225,9 @@ Destructor.
 <p>
 Destructor. 
 <p>
-Definition at line <a class="el" href="_row_file_8cpp-source.html#l00073">73</a> of file <a class="el" href="_row_file_8cpp-source.html">RowFile.cpp</a>.
+Definition at line <a class="el" href="_row_file_8cpp-source.html#l00072">72</a> of file <a class="el" href="_row_file_8cpp-source.html">RowFile.cpp</a>.
 <p>
-References <a class="el" href="_row_file_8h-source.html#l00226">m_Buffer</a>, and <a class="el" href="_row_file_8h-source.html#l00222">m_In</a>.
+References <a class="el" href="_row_file_8h-source.html#l00224">m_Buffer</a>, and <a class="el" href="_row_file_8h-source.html#l00220">m_In</a>.
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
@@ -255,11 +255,11 @@ Open file fileName or die trying. <dl compact><dt><b>Parameters:</b></dt><dd>
 </dl>
 
 <p>
-Definition at line <a class="el" href="_row_file_8cpp-source.html#l00061">61</a> of file <a class="el" href="_row_file_8cpp-source.html">RowFile.cpp</a>.
+Definition at line <a class="el" href="_row_file_8cpp-source.html#l00059">59</a> of file <a class="el" href="_row_file_8cpp-source.html">RowFile.cpp</a>.
 <p>
-References <a class="el" href="_row_file_8cpp-source.html#l00373">determineLineEndingType()</a>, <a class="el" href="_err_8cpp-source.html#l00057">Err::errAbort()</a>, <a class="el" href="_row_file_8h-source.html#l00240">m_EndType</a>, <a class="el" href="_row_file_8h-source.html#l00220">m_FileName</a>, and <a class="el" href="_row_file_8h-source.html#l00222">m_In</a>.
+References <a class="el" href="_fs_8cpp-source.html#l01420">Fs::aptOpen()</a>, <a class="el" href="_row_file_8cpp-source.html#l00372">determineLineEndingType()</a>, <a class="el" href="_err_8cpp-source.html#l00068">Err::errAbort()</a>, <a class="el" href="_fs_8h-source.html#l00031">FS_QUOTE_PATH</a>, <a class="el" href="_row_file_8h-source.html#l00238">m_EndType</a>, <a class="el" href="_row_file_8h-source.html#l00218">m_FileName</a>, and <a class="el" href="_row_file_8h-source.html#l00220">m_In</a>.
 <p>
-Referenced by <a class="el" href="_table_file_8cpp-source.html#l00247">TableFile::columnFromFile()</a>, <a class="el" href="_row_file_8cpp-source.html#l00322">matrixFromFile()</a>, and <a class="el" href="_table_file_8cpp-source.html#l00107">TableFile::open()</a>.
+Referenced by <a class="el" href="_table_file_8cpp-source.html#l00249">TableFile::columnFromFile()</a>, <a class="el" href="_row_file_8cpp-source.html#l00321">matrixFromFile()</a>, and <a class="el" href="_table_file_8cpp-source.html#l00106">TableFile::open()</a>.
 </div>
 </div><p>
 <a class="anchor" name="dcb4cbb8f44db81cc24dd3a86bce153f"></a><!-- doxytag: member="RowFile::close" ref="dcb4cbb8f44db81cc24dd3a86bce153f" args="()" -->
@@ -280,11 +280,11 @@ Referenced by <a class="el" href="_table_file_8cpp-source.html#l00247">TableFile
 <p>
 Close file streams. 
 <p>
-Definition at line <a class="el" href="_row_file_8cpp-source.html#l00085">85</a> of file <a class="el" href="_row_file_8cpp-source.html">RowFile.cpp</a>.
+Definition at line <a class="el" href="_row_file_8cpp-source.html#l00084">84</a> of file <a class="el" href="_row_file_8cpp-source.html">RowFile.cpp</a>.
 <p>
-References <a class="el" href="_row_file_8h-source.html#l00222">m_In</a>.
+References <a class="el" href="_row_file_8h-source.html#l00220">m_In</a>.
 <p>
-Referenced by <a class="el" href="_table_file_8cpp-source.html#l00107">TableFile::open()</a>.
+Referenced by <a class="el" href="_table_file_8cpp-source.html#l00106">TableFile::open()</a>.
 </div>
 </div><p>
 <a class="anchor" name="11eb3ec977ea0b583d18e70372ed814c"></a><!-- doxytag: member="RowFile::nextRowExpect" ref="11eb3ec977ea0b583d18e70372ed814c" args="(std::vector&lt; std::string &gt; &amp;words, unsigned int expect)" -->
@@ -322,9 +322,9 @@ Chop the next row into words and return them in the vector squawk and die if exp
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>bool - false at EOF true otherwise. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_row_file_8cpp-source.html#l00255">255</a> of file <a class="el" href="_row_file_8cpp-source.html">RowFile.cpp</a>.
+Definition at line <a class="el" href="_row_file_8cpp-source.html#l00254">254</a> of file <a class="el" href="_row_file_8cpp-source.html">RowFile.cpp</a>.
 <p>
-References <a class="el" href="_err_8cpp-source.html#l00057">Err::errAbort()</a>, <a class="el" href="_row_file_8h-source.html#l00230">m_LineIx</a>, <a class="el" href="_row_file_8cpp-source.html#l00155">nextRow()</a>, and <a class="el" href="_convert_8h-source.html#l00046">ToStr()</a>.
+References <a class="el" href="_err_8cpp-source.html#l00068">Err::errAbort()</a>, <a class="el" href="_row_file_8h-source.html#l00228">m_LineIx</a>, <a class="el" href="_row_file_8cpp-source.html#l00154">nextRow()</a>, and <a class="el" href="_convert_8h-source.html#l00227">ToStr()</a>.
 </div>
 </div><p>
 <a class="anchor" name="c324de10fb73a31b15f46bf316a4133d"></a><!-- doxytag: member="RowFile::nextCStringRowExpect" ref="c324de10fb73a31b15f46bf316a4133d" args="(std::vector&lt; const char * &gt; &amp;words, unsigned int expect)" -->
@@ -362,9 +362,9 @@ Chop the next row into words and return them in the vector squawk and die if exp
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>bool - false at EOF true otherwise. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_row_file_8cpp-source.html#l00181">181</a> of file <a class="el" href="_row_file_8cpp-source.html">RowFile.cpp</a>.
+Definition at line <a class="el" href="_row_file_8cpp-source.html#l00180">180</a> of file <a class="el" href="_row_file_8cpp-source.html">RowFile.cpp</a>.
 <p>
-References <a class="el" href="_err_8cpp-source.html#l00057">Err::errAbort()</a>, <a class="el" href="_row_file_8h-source.html#l00230">m_LineIx</a>, <a class="el" href="_row_file_8cpp-source.html#l00199">nextCStringRow()</a>, and <a class="el" href="_convert_8h-source.html#l00046">ToStr()</a>.
+References <a class="el" href="_err_8cpp-source.html#l00068">Err::errAbort()</a>, <a class="el" href="_row_file_8h-source.html#l00228">m_LineIx</a>, <a class="el" href="_row_file_8cpp-source.html#l00198">nextCStringRow()</a>, and <a class="el" href="_convert_8h-source.html#l00227">ToStr()</a>.
 </div>
 </div><p>
 <a class="anchor" name="60328067441ad2f0aeac2459238f8954"></a><!-- doxytag: member="RowFile::nextCStringRow" ref="60328067441ad2f0aeac2459238f8954" args="(std::vector&lt; const char * &gt; &amp;words)" -->
@@ -392,11 +392,11 @@ Chop the next row into words and return them in the vector. char* memory in vect
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>bool - false at EOF true otherwise. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_row_file_8cpp-source.html#l00199">199</a> of file <a class="el" href="_row_file_8cpp-source.html">RowFile.cpp</a>.
+Definition at line <a class="el" href="_row_file_8cpp-source.html#l00198">198</a> of file <a class="el" href="_row_file_8cpp-source.html">RowFile.cpp</a>.
 <p>
-References <a class="el" href="_util_8h-source.html#l00101">FreezArray()</a>, <a class="el" href="_row_file_8h-source.html#l00226">m_Buffer</a>, <a class="el" href="_row_file_8h-source.html#l00228">m_BufferSize</a>, <a class="el" href="_row_file_8h-source.html#l00224">m_CurrentLine</a>, <a class="el" href="_row_file_8h-source.html#l00232">m_Delim</a>, and <a class="el" href="_row_file_8cpp-source.html#l00131">nextRealLine()</a>.
+References <a class="el" href="_util_8h-source.html#l00077">FreezArray()</a>, <a class="el" href="_row_file_8h-source.html#l00224">m_Buffer</a>, <a class="el" href="_row_file_8h-source.html#l00226">m_BufferSize</a>, <a class="el" href="_row_file_8h-source.html#l00222">m_CurrentLine</a>, <a class="el" href="_row_file_8h-source.html#l00230">m_Delim</a>, and <a class="el" href="_row_file_8cpp-source.html#l00130">nextRealLine()</a>.
 <p>
-Referenced by <a class="el" href="_row_file_8cpp-source.html#l00181">nextCStringRowExpect()</a>.
+Referenced by <a class="el" href="_row_file_8cpp-source.html#l00180">nextCStringRowExpect()</a>.
 </div>
 </div><p>
 <a class="anchor" name="8dbb4eda3b3c0f20fad9eba1fa9a5d40"></a><!-- doxytag: member="RowFile::nextRow" ref="8dbb4eda3b3c0f20fad9eba1fa9a5d40" args="(std::vector&lt; std::string &gt; &amp;words)" -->
@@ -424,11 +424,11 @@ Chop the next row into words and return them in the vector. <dl compact><dt><b>P
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>bool - false at EOF true otherwise. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_row_file_8cpp-source.html#l00155">155</a> of file <a class="el" href="_row_file_8cpp-source.html">RowFile.cpp</a>.
+Definition at line <a class="el" href="_row_file_8cpp-source.html#l00154">154</a> of file <a class="el" href="_row_file_8cpp-source.html">RowFile.cpp</a>.
 <p>
-References <a class="el" href="_row_file_8h-source.html#l00224">m_CurrentLine</a>, <a class="el" href="_row_file_8h-source.html#l00232">m_Delim</a>, and <a class="el" href="_row_file_8cpp-source.html#l00131">nextRealLine()</a>.
+References <a class="el" href="_row_file_8h-source.html#l00222">m_CurrentLine</a>, <a class="el" href="_row_file_8h-source.html#l00230">m_Delim</a>, and <a class="el" href="_row_file_8cpp-source.html#l00130">nextRealLine()</a>.
 <p>
-Referenced by <a class="el" href="_table_file_8cpp-source.html#l00247">TableFile::columnFromFile()</a>, <a class="el" href="_table_file_8cpp-source.html#l00319">TableFile::columnFromRowFile()</a>, <a class="el" href="_row_file_8cpp-source.html#l00322">matrixFromFile()</a>, <a class="el" href="_row_file_8cpp-source.html#l00255">nextRowExpect()</a>, and <a class="el" href="_table_file_8cpp-source.html#l00107">TableFile::open()</a>.
+Referenced by <a class="el" href="_table_file_8cpp-source.html#l00249">TableFile::columnFromFile()</a>, <a class="el" href="_table_file_8cpp-source.html#l00321">TableFile::columnFromRowFile()</a>, <a class="el" href="_row_file_8cpp-source.html#l00321">matrixFromFile()</a>, <a class="el" href="_row_file_8cpp-source.html#l00254">nextRowExpect()</a>, and <a class="el" href="_table_file_8cpp-source.html#l00106">TableFile::open()</a>.
 </div>
 </div><p>
 <a class="anchor" name="c716817d6ce94a9f6133c7ebab573904"></a><!-- doxytag: member="RowFile::setDelim" ref="c716817d6ce94a9f6133c7ebab573904" args="(char nDelim)" -->
@@ -455,9 +455,9 @@ Set the delimiter. <dl compact><dt><b>Parameters:</b></dt><dd>
 </dl>
 
 <p>
-Definition at line <a class="el" href="_row_file_8h-source.html#l00123">123</a> of file <a class="el" href="_row_file_8h-source.html">RowFile.h</a>.
+Definition at line <a class="el" href="_row_file_8h-source.html#l00121">121</a> of file <a class="el" href="_row_file_8h-source.html">RowFile.h</a>.
 <p>
-References <a class="el" href="_row_file_8h-source.html#l00232">m_Delim</a>.
+References <a class="el" href="_row_file_8h-source.html#l00230">m_Delim</a>.
 </div>
 </div><p>
 <a class="anchor" name="a1529b58895fdb3520735263889fccda"></a><!-- doxytag: member="RowFile::getDelim" ref="a1529b58895fdb3520735263889fccda" args="()" -->
@@ -479,9 +479,9 @@ References <a class="el" href="_row_file_8h-source.html#l00232">m_Delim</a>.
 Get the delimiter. <dl class="return" compact><dt><b>Returns:</b></dt><dd>current word delimiter. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_row_file_8h-source.html#l00129">129</a> of file <a class="el" href="_row_file_8h-source.html">RowFile.h</a>.
+Definition at line <a class="el" href="_row_file_8h-source.html#l00127">127</a> of file <a class="el" href="_row_file_8h-source.html">RowFile.h</a>.
 <p>
-References <a class="el" href="_row_file_8h-source.html#l00232">m_Delim</a>.
+References <a class="el" href="_row_file_8h-source.html#l00230">m_Delim</a>.
 </div>
 </div><p>
 <a class="anchor" name="0fa9539e175566bfa1dd4136ae9ae854"></a><!-- doxytag: member="RowFile::setComment" ref="0fa9539e175566bfa1dd4136ae9ae854" args="(char nComment)" -->
@@ -508,9 +508,9 @@ Set the comment. <dl compact><dt><b>Parameters:</b></dt><dd>
 </dl>
 
 <p>
-Definition at line <a class="el" href="_row_file_8h-source.html#l00135">135</a> of file <a class="el" href="_row_file_8h-source.html">RowFile.h</a>.
+Definition at line <a class="el" href="_row_file_8h-source.html#l00133">133</a> of file <a class="el" href="_row_file_8h-source.html">RowFile.h</a>.
 <p>
-References <a class="el" href="_row_file_8h-source.html#l00234">m_Comment</a>.
+References <a class="el" href="_row_file_8h-source.html#l00232">m_Comment</a>.
 </div>
 </div><p>
 <a class="anchor" name="9b39906cf61862dbd6982efca55af535"></a><!-- doxytag: member="RowFile::getComment" ref="9b39906cf61862dbd6982efca55af535" args="()" -->
@@ -532,9 +532,9 @@ References <a class="el" href="_row_file_8h-source.html#l00234">m_Comment</a>.
 Get the comment. <dl class="return" compact><dt><b>Returns:</b></dt><dd>current comment character. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_row_file_8h-source.html#l00141">141</a> of file <a class="el" href="_row_file_8h-source.html">RowFile.h</a>.
+Definition at line <a class="el" href="_row_file_8h-source.html#l00139">139</a> of file <a class="el" href="_row_file_8h-source.html">RowFile.h</a>.
 <p>
-References <a class="el" href="_row_file_8h-source.html#l00234">m_Comment</a>.
+References <a class="el" href="_row_file_8h-source.html#l00232">m_Comment</a>.
 </div>
 </div><p>
 <a class="anchor" name="5bc319284cbc843109047231367e8847"></a><!-- doxytag: member="RowFile::nextLine" ref="5bc319284cbc843109047231367e8847" args="()" -->
@@ -555,11 +555,11 @@ References <a class="el" href="_row_file_8h-source.html#l00234">m_Comment</a>.
 <p>
 Pull the next line from the input buffer or die trying. 
 <p>
-Definition at line <a class="el" href="_row_file_8cpp-source.html#l00095">95</a> of file <a class="el" href="_row_file_8cpp-source.html">RowFile.cpp</a>.
+Definition at line <a class="el" href="_row_file_8cpp-source.html#l00094">94</a> of file <a class="el" href="_row_file_8cpp-source.html">RowFile.cpp</a>.
 <p>
-References <a class="el" href="_row_file_8h-source.html#l00053">DOS</a>, <a class="el" href="_err_8cpp-source.html#l00057">Err::errAbort()</a>, <a class="el" href="_row_file_8h-source.html#l00224">m_CurrentLine</a>, <a class="el" href="_row_file_8h-source.html#l00240">m_EndType</a>, <a class="el" href="_row_file_8h-source.html#l00222">m_In</a>, <a class="el" href="_row_file_8h-source.html#l00230">m_LineIx</a>, <a class="el" href="_row_file_8h-source.html#l00238">m_Reuse</a>, <a class="el" href="_row_file_8h-source.html#l00054">MAC</a>, <a class="el" href="_convert_8h-source.html#l00046">ToStr()</a>, and <a class="el" href="_util_8h-source.html#l00324">Util::trimString()</a>.
+References <a class="el" href="_row_file_8h-source.html#l00051">DOS</a>, <a class="el" href="_err_8cpp-source.html#l00068">Err::errAbort()</a>, <a class="el" href="_row_file_8h-source.html#l00222">m_CurrentLine</a>, <a class="el" href="_row_file_8h-source.html#l00238">m_EndType</a>, <a class="el" href="_row_file_8h-source.html#l00220">m_In</a>, <a class="el" href="_row_file_8h-source.html#l00228">m_LineIx</a>, <a class="el" href="_row_file_8h-source.html#l00236">m_Reuse</a>, <a class="el" href="_row_file_8h-source.html#l00052">MAC</a>, <a class="el" href="_convert_8h-source.html#l00227">ToStr()</a>, and <a class="el" href="_util_8h-source.html#l00220">Util::trimString()</a>.
 <p>
-Referenced by <a class="el" href="_row_file_8cpp-source.html#l00131">nextRealLine()</a>, and <a class="el" href="_row_file_8cpp-source.html#l00266">readHeader()</a>.
+Referenced by <a class="el" href="_row_file_8cpp-source.html#l00130">nextRealLine()</a>, and <a class="el" href="_row_file_8cpp-source.html#l00265">readHeader()</a>.
 </div>
 </div><p>
 <a class="anchor" name="79031da15e5a731bfef32a084bae95ba"></a><!-- doxytag: member="RowFile::nextRealLine" ref="79031da15e5a731bfef32a084bae95ba" args="()" -->
@@ -580,11 +580,11 @@ Referenced by <a class="el" href="_row_file_8cpp-source.html#l00131">nextRealLin
 <p>
 Return the next line that is non-blank and doesn't start with a comment character. 
 <p>
-Definition at line <a class="el" href="_row_file_8cpp-source.html#l00131">131</a> of file <a class="el" href="_row_file_8cpp-source.html">RowFile.cpp</a>.
+Definition at line <a class="el" href="_row_file_8cpp-source.html#l00130">130</a> of file <a class="el" href="_row_file_8cpp-source.html">RowFile.cpp</a>.
 <p>
-References <a class="el" href="_row_file_8h-source.html#l00234">m_Comment</a>, <a class="el" href="_row_file_8h-source.html#l00236">m_Comment2</a>, <a class="el" href="_row_file_8h-source.html#l00224">m_CurrentLine</a>, and <a class="el" href="_row_file_8cpp-source.html#l00095">nextLine()</a>.
+References <a class="el" href="_row_file_8h-source.html#l00232">m_Comment</a>, <a class="el" href="_row_file_8h-source.html#l00234">m_Comment2</a>, <a class="el" href="_row_file_8h-source.html#l00222">m_CurrentLine</a>, and <a class="el" href="_row_file_8cpp-source.html#l00094">nextLine()</a>.
 <p>
-Referenced by <a class="el" href="_row_file_8cpp-source.html#l00199">nextCStringRow()</a>, and <a class="el" href="_row_file_8cpp-source.html#l00155">nextRow()</a>.
+Referenced by <a class="el" href="_row_file_8cpp-source.html#l00198">nextCStringRow()</a>, and <a class="el" href="_row_file_8cpp-source.html#l00154">nextRow()</a>.
 </div>
 </div><p>
 <a class="anchor" name="95a0aaad42dbc43174ae26476f2fcad1"></a><!-- doxytag: member="RowFile::reuseLine" ref="95a0aaad42dbc43174ae26476f2fcad1" args="()" -->
@@ -605,11 +605,11 @@ Referenced by <a class="el" href="_row_file_8cpp-source.html#l00199">nextCString
 <p>
 Reuse the same line again. 
 <p>
-Definition at line <a class="el" href="_row_file_8h-source.html#l00157">157</a> of file <a class="el" href="_row_file_8h-source.html">RowFile.h</a>.
+Definition at line <a class="el" href="_row_file_8h-source.html#l00155">155</a> of file <a class="el" href="_row_file_8h-source.html">RowFile.h</a>.
 <p>
-References <a class="el" href="_row_file_8h-source.html#l00238">m_Reuse</a>.
+References <a class="el" href="_row_file_8h-source.html#l00236">m_Reuse</a>.
 <p>
-Referenced by <a class="el" href="_table_file_8cpp-source.html#l00291">TableFile::columnFromFile()</a>, <a class="el" href="_table_file_8cpp-source.html#l00107">TableFile::open()</a>, and <a class="el" href="_row_file_8cpp-source.html#l00266">readHeader()</a>.
+Referenced by <a class="el" href="_table_file_8cpp-source.html#l00293">TableFile::columnFromFile()</a>, <a class="el" href="_table_file_8cpp-source.html#l00106">TableFile::open()</a>, and <a class="el" href="_row_file_8cpp-source.html#l00265">readHeader()</a>.
 </div>
 </div><p>
 <a class="anchor" name="e1cc867b5e1ed09f09f58d8629e12028"></a><!-- doxytag: member="RowFile::getCurrentLineNumber" ref="e1cc867b5e1ed09f09f58d8629e12028" args="()" -->
@@ -633,11 +633,11 @@ What line number are we reading?
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>Line number. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_row_file_8h-source.html#l00163">163</a> of file <a class="el" href="_row_file_8h-source.html">RowFile.h</a>.
+Definition at line <a class="el" href="_row_file_8h-source.html#l00161">161</a> of file <a class="el" href="_row_file_8h-source.html">RowFile.h</a>.
 <p>
-References <a class="el" href="_row_file_8h-source.html#l00230">m_LineIx</a>.
+References <a class="el" href="_row_file_8h-source.html#l00228">m_LineIx</a>.
 <p>
-Referenced by <a class="el" href="_table_file_8cpp-source.html#l00319">TableFile::columnFromRowFile()</a>, and <a class="el" href="_table_file_8cpp-source.html#l00107">TableFile::open()</a>.
+Referenced by <a class="el" href="_table_file_8cpp-source.html#l00321">TableFile::columnFromRowFile()</a>, and <a class="el" href="_table_file_8cpp-source.html#l00106">TableFile::open()</a>.
 </div>
 </div><p>
 <a class="anchor" name="a64217d452d6a517c5aad73c3d1d7d58"></a><!-- doxytag: member="RowFile::readHeader" ref="a64217d452d6a517c5aad73c3d1d7d58" args="(RowFile &amp;rf, std::map&lt; std::string, std::vector&lt; std::string &gt; &gt; &amp;header, std::vector&lt; std::string &gt; &amp;lines)" -->
@@ -674,11 +674,11 @@ Referenced by <a class="el" href="_table_file_8cpp-source.html#l00319">TableFile
 <p>
 Fill in a header map with data from the top of the file. 
 <p>
-Definition at line <a class="el" href="_row_file_8cpp-source.html#l00266">266</a> of file <a class="el" href="_row_file_8cpp-source.html">RowFile.cpp</a>.
+Definition at line <a class="el" href="_row_file_8cpp-source.html#l00265">265</a> of file <a class="el" href="_row_file_8cpp-source.html">RowFile.cpp</a>.
 <p>
-References <a class="el" href="_err_8cpp-source.html#l00057">Err::errAbort()</a>, <a class="el" href="_row_file_8h-source.html#l00234">m_Comment</a>, <a class="el" href="_row_file_8h-source.html#l00236">m_Comment2</a>, <a class="el" href="_row_file_8cpp-source.html#l00095">nextLine()</a>, <a class="el" href="_row_file_8h-source.html#l00157">reuseLine()</a>, and <a class="el" href="_convert_8h-source.html#l00046">ToStr()</a>.
+References <a class="el" href="_err_8cpp-source.html#l00068">Err::errAbort()</a>, <a class="el" href="_row_file_8h-source.html#l00232">m_Comment</a>, <a class="el" href="_row_file_8h-source.html#l00234">m_Comment2</a>, <a class="el" href="_row_file_8cpp-source.html#l00094">nextLine()</a>, <a class="el" href="_row_file_8h-source.html#l00155">reuseLine()</a>, and <a class="el" href="_convert_8h-source.html#l00227">ToStr()</a>.
 <p>
-Referenced by <a class="el" href="_table_file_8cpp-source.html#l00107">TableFile::open()</a>.
+Referenced by <a class="el" href="_table_file_8cpp-source.html#l00106">TableFile::open()</a>.
 </div>
 </div><p>
 <a class="anchor" name="638f4cd0c467a9a6cd75b84c59021665"></a><!-- doxytag: member="RowFile::writeHeader" ref="638f4cd0c467a9a6cd75b84c59021665" args="(std::ostream &amp;out, const std::vector&lt; std::string &gt; &amp;lines)" -->
@@ -709,9 +709,9 @@ Referenced by <a class="el" href="_table_file_8cpp-source.html#l00107">TableFile
 <p>
 Write out a header in #key=value form. 
 <p>
-Definition at line <a class="el" href="_row_file_8cpp-source.html#l00308">308</a> of file <a class="el" href="_row_file_8cpp-source.html">RowFile.cpp</a>.
+Definition at line <a class="el" href="_row_file_8cpp-source.html#l00307">307</a> of file <a class="el" href="_row_file_8cpp-source.html">RowFile.cpp</a>.
 <p>
-Referenced by <a class="el" href="_table_file_8cpp-source.html#l00220">TableFile::write()</a>.
+Referenced by <a class="el" href="_table_file_8cpp-source.html#l00222">TableFile::write()</a>.
 </div>
 </div><p>
 <a class="anchor" name="4589823bcec737e550ba45887ad20141"></a><!-- doxytag: member="RowFile::matrixFromFile" ref="4589823bcec737e550ba45887ad20141" args="(const std::string &amp;fileName, std::vector&lt; std::vector&lt; double &gt; &gt; &amp;matrix, unsigned int skipLines=0, unsigned int skipCols=0)" -->
@@ -762,11 +762,11 @@ Read in a matrix from a file. <dl compact><dt><b>Parameters:</b></dt><dd>
 </dl>
 
 <p>
-Definition at line <a class="el" href="_row_file_8cpp-source.html#l00322">322</a> of file <a class="el" href="_row_file_8cpp-source.html">RowFile.cpp</a>.
+Definition at line <a class="el" href="_row_file_8cpp-source.html#l00321">321</a> of file <a class="el" href="_row_file_8cpp-source.html">RowFile.cpp</a>.
 <p>
-References <a class="el" href="_err_8cpp-source.html#l00057">Err::errAbort()</a>, <a class="el" href="_row_file_8cpp-source.html#l00155">nextRow()</a>, <a class="el" href="_row_file_8cpp-source.html#l00061">open()</a>, and <a class="el" href="_convert_8cpp-source.html#l00266">Convert::toDouble()</a>.
+References <a class="el" href="_err_8cpp-source.html#l00068">Err::errAbort()</a>, <a class="el" href="_row_file_8cpp-source.html#l00154">nextRow()</a>, <a class="el" href="_row_file_8cpp-source.html#l00059">open()</a>, and <a class="el" href="_convert_8cpp-source.html#l00284">Convert::toDouble()</a>.
 <p>
-Referenced by <a class="el" href="_util_8cpp-source.html#l00716">Util::matrixDifferences()</a>.
+Referenced by <a class="el" href="_util_8cpp-source.html#l00315">Util::matrixDifferences()</a>.
 </div>
 </div><p>
 <a class="anchor" name="4afc84b064e0e04b39e1056ec3fd9449"></a><!-- doxytag: member="RowFile::matrixFromFile" ref="4afc84b064e0e04b39e1056ec3fd9449" args="(const std::string &amp;fileName, std::vector&lt; std::vector&lt; float &gt; &gt; &amp;matrix, unsigned int skipLines=0, unsigned int skipCols=0)" -->
@@ -817,9 +817,9 @@ Read in a matrix from a file. <dl compact><dt><b>Parameters:</b></dt><dd>
 </dl>
 
 <p>
-Definition at line <a class="el" href="_row_file_8cpp-source.html#l00348">348</a> of file <a class="el" href="_row_file_8cpp-source.html">RowFile.cpp</a>.
+Definition at line <a class="el" href="_row_file_8cpp-source.html#l00347">347</a> of file <a class="el" href="_row_file_8cpp-source.html">RowFile.cpp</a>.
 <p>
-References <a class="el" href="_err_8cpp-source.html#l00057">Err::errAbort()</a>, <a class="el" href="_row_file_8cpp-source.html#l00155">nextRow()</a>, <a class="el" href="_row_file_8cpp-source.html#l00061">open()</a>, and <a class="el" href="_convert_8cpp-source.html#l00238">Convert::toFloat()</a>.
+References <a class="el" href="_err_8cpp-source.html#l00068">Err::errAbort()</a>, <a class="el" href="_row_file_8cpp-source.html#l00154">nextRow()</a>, <a class="el" href="_row_file_8cpp-source.html#l00059">open()</a>, and <a class="el" href="_convert_8cpp-source.html#l00255">Convert::toFloat()</a>.
 </div>
 </div><p>
 <a class="anchor" name="842e8b90ebab166efad62fd6d43261ce"></a><!-- doxytag: member="RowFile::getFileType" ref="842e8b90ebab166efad62fd6d43261ce" args="()" -->
@@ -843,9 +843,9 @@ What type of file is this one?
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>Type of file that has been determined. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_row_file_8h-source.html#l00202">202</a> of file <a class="el" href="_row_file_8h-source.html">RowFile.h</a>.
+Definition at line <a class="el" href="_row_file_8h-source.html#l00200">200</a> of file <a class="el" href="_row_file_8h-source.html">RowFile.h</a>.
 <p>
-References <a class="el" href="_row_file_8h-source.html#l00240">m_EndType</a>.
+References <a class="el" href="_row_file_8h-source.html#l00238">m_EndType</a>.
 </div>
 </div><p>
 <a class="anchor" name="19751033d8dd4fa4fde393a21e6f1bcf"></a><!-- doxytag: member="RowFile::getFileName" ref="19751033d8dd4fa4fde393a21e6f1bcf" args="()" -->
@@ -867,11 +867,11 @@ References <a class="el" href="_row_file_8h-source.html#l00240">m_EndType</a>.
 What is the name of the rowfile we're reading from? <dl class="return" compact><dt><b>Returns:</b></dt><dd>name of file being read. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_row_file_8h-source.html#l00208">208</a> of file <a class="el" href="_row_file_8h-source.html">RowFile.h</a>.
+Definition at line <a class="el" href="_row_file_8h-source.html#l00206">206</a> of file <a class="el" href="_row_file_8h-source.html">RowFile.h</a>.
 <p>
-References <a class="el" href="_row_file_8h-source.html#l00220">m_FileName</a>.
+References <a class="el" href="_row_file_8h-source.html#l00218">m_FileName</a>.
 <p>
-Referenced by <a class="el" href="_table_file_8cpp-source.html#l00319">TableFile::columnFromRowFile()</a>.
+Referenced by <a class="el" href="_table_file_8cpp-source.html#l00321">TableFile::columnFromRowFile()</a>.
 </div>
 </div><p>
 <a class="anchor" name="eb5729bc9505a0ca2d5ac610d7301783"></a><!-- doxytag: member="RowFile::determineLineEndingType" ref="eb5729bc9505a0ca2d5ac610d7301783" args="(std::ifstream &amp;input)" -->
@@ -901,11 +901,11 @@ What type of line endings do we see in this input stream? <dl compact><dt><b>Par
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>type of line endings we expect in the future. </dd></dl>
 
 <p>
-Definition at line <a class="el" href="_row_file_8cpp-source.html#l00373">373</a> of file <a class="el" href="_row_file_8cpp-source.html">RowFile.cpp</a>.
+Definition at line <a class="el" href="_row_file_8cpp-source.html#l00372">372</a> of file <a class="el" href="_row_file_8cpp-source.html">RowFile.cpp</a>.
 <p>
-References <a class="el" href="_row_file_8h-source.html#l00053">DOS</a>, <a class="el" href="_row_file_8h-source.html#l00054">MAC</a>, <a class="el" href="_row_file_8h-source.html#l00052">UNIX</a>, and <a class="el" href="_row_file_8h-source.html#l00055">UNKNOWN</a>.
+References <a class="el" href="_row_file_8h-source.html#l00051">DOS</a>, <a class="el" href="_row_file_8h-source.html#l00052">MAC</a>, <a class="el" href="_row_file_8h-source.html#l00050">UNIX</a>, and <a class="el" href="_row_file_8h-source.html#l00053">UNKNOWN</a>.
 <p>
-Referenced by <a class="el" href="_row_file_8cpp-source.html#l00061">open()</a>.
+Referenced by <a class="el" href="_row_file_8cpp-source.html#l00059">open()</a>.
 </div>
 </div><p>
 <hr><h2>Member Data Documentation</h2>
@@ -925,9 +925,9 @@ Name of file we are reading from.
 <p>
 
 <p>
-Definition at line <a class="el" href="_row_file_8h-source.html#l00220">220</a> of file <a class="el" href="_row_file_8h-source.html">RowFile.h</a>.
+Definition at line <a class="el" href="_row_file_8h-source.html#l00218">218</a> of file <a class="el" href="_row_file_8h-source.html">RowFile.h</a>.
 <p>
-Referenced by <a class="el" href="_row_file_8h-source.html#l00208">getFileName()</a>, and <a class="el" href="_row_file_8cpp-source.html#l00061">open()</a>.
+Referenced by <a class="el" href="_row_file_8h-source.html#l00206">getFileName()</a>, and <a class="el" href="_row_file_8cpp-source.html#l00059">open()</a>.
 </div>
 </div><p>
 <a class="anchor" name="62306a826ab51bceb423a3d36ad808b6"></a><!-- doxytag: member="RowFile::m_In" ref="62306a826ab51bceb423a3d36ad808b6" args="" -->
@@ -946,9 +946,9 @@ Stream that we are reading from.
 <p>
 
 <p>
-Definition at line <a class="el" href="_row_file_8h-source.html#l00222">222</a> of file <a class="el" href="_row_file_8h-source.html">RowFile.h</a>.
+Definition at line <a class="el" href="_row_file_8h-source.html#l00220">220</a> of file <a class="el" href="_row_file_8h-source.html">RowFile.h</a>.
 <p>
-Referenced by <a class="el" href="_row_file_8cpp-source.html#l00085">close()</a>, <a class="el" href="_row_file_8cpp-source.html#l00095">nextLine()</a>, <a class="el" href="_row_file_8cpp-source.html#l00061">open()</a>, and <a class="el" href="_row_file_8cpp-source.html#l00073">~RowFile()</a>.
+Referenced by <a class="el" href="_row_file_8cpp-source.html#l00084">close()</a>, <a class="el" href="_row_file_8cpp-source.html#l00094">nextLine()</a>, <a class="el" href="_row_file_8cpp-source.html#l00059">open()</a>, and <a class="el" href="_row_file_8cpp-source.html#l00072">~RowFile()</a>.
 </div>
 </div><p>
 <a class="anchor" name="54dc24c9ab875d5533e684bbaa7e23a6"></a><!-- doxytag: member="RowFile::m_CurrentLine" ref="54dc24c9ab875d5533e684bbaa7e23a6" args="" -->
@@ -967,9 +967,9 @@ Current line read from the file.
 <p>
 
 <p>
-Definition at line <a class="el" href="_row_file_8h-source.html#l00224">224</a> of file <a class="el" href="_row_file_8h-source.html">RowFile.h</a>.
+Definition at line <a class="el" href="_row_file_8h-source.html#l00222">222</a> of file <a class="el" href="_row_file_8h-source.html">RowFile.h</a>.
 <p>
-Referenced by <a class="el" href="_row_file_8cpp-source.html#l00199">nextCStringRow()</a>, <a class="el" href="_row_file_8cpp-source.html#l00095">nextLine()</a>, <a class="el" href="_row_file_8cpp-source.html#l00131">nextRealLine()</a>, and <a class="el" href="_row_file_8cpp-source.html#l00155">nextRow()</a>.
+Referenced by <a class="el" href="_row_file_8cpp-source.html#l00198">nextCStringRow()</a>, <a class="el" href="_row_file_8cpp-source.html#l00094">nextLine()</a>, <a class="el" href="_row_file_8cpp-source.html#l00130">nextRealLine()</a>, and <a class="el" href="_row_file_8cpp-source.html#l00154">nextRow()</a>.
 </div>
 </div><p>
 <a class="anchor" name="f2d0c96b2b99b8251a532de55fbd5e4d"></a><!-- doxytag: member="RowFile::m_Buffer" ref="f2d0c96b2b99b8251a532de55fbd5e4d" args="" -->
@@ -988,9 +988,9 @@ Utility buffer for chopping into char *s, faster than strings.
 <p>
 
 <p>
-Definition at line <a class="el" href="_row_file_8h-source.html#l00226">226</a> of file <a class="el" href="_row_file_8h-source.html">RowFile.h</a>.
+Definition at line <a class="el" href="_row_file_8h-source.html#l00224">224</a> of file <a class="el" href="_row_file_8h-source.html">RowFile.h</a>.
 <p>
-Referenced by <a class="el" href="_row_file_8cpp-source.html#l00199">nextCStringRow()</a>, and <a class="el" href="_row_file_8cpp-source.html#l00073">~RowFile()</a>.
+Referenced by <a class="el" href="_row_file_8cpp-source.html#l00198">nextCStringRow()</a>, and <a class="el" href="_row_file_8cpp-source.html#l00072">~RowFile()</a>.
 </div>
 </div><p>
 <a class="anchor" name="e0502b6768e657eee416a53ea2c92a7e"></a><!-- doxytag: member="RowFile::m_BufferSize" ref="e0502b6768e657eee416a53ea2c92a7e" args="" -->
@@ -1009,9 +1009,9 @@ Current size of the buffer.
 <p>
 
 <p>
-Definition at line <a class="el" href="_row_file_8h-source.html#l00228">228</a> of file <a class="el" href="_row_file_8h-source.html">RowFile.h</a>.
+Definition at line <a class="el" href="_row_file_8h-source.html#l00226">226</a> of file <a class="el" href="_row_file_8h-source.html">RowFile.h</a>.
 <p>
-Referenced by <a class="el" href="_row_file_8cpp-source.html#l00199">nextCStringRow()</a>.
+Referenced by <a class="el" href="_row_file_8cpp-source.html#l00198">nextCStringRow()</a>.
 </div>
 </div><p>
 <a class="anchor" name="5d753b769bab20c4b541c35f7c22e693"></a><!-- doxytag: member="RowFile::m_LineIx" ref="5d753b769bab20c4b541c35f7c22e693" args="" -->
@@ -1030,9 +1030,9 @@ Line number in file that is currently read.
 <p>
 
 <p>
-Definition at line <a class="el" href="_row_file_8h-source.html#l00230">230</a> of file <a class="el" href="_row_file_8h-source.html">RowFile.h</a>.
+Definition at line <a class="el" href="_row_file_8h-source.html#l00228">228</a> of file <a class="el" href="_row_file_8h-source.html">RowFile.h</a>.
 <p>
-Referenced by <a class="el" href="_row_file_8h-source.html#l00163">getCurrentLineNumber()</a>, <a class="el" href="_row_file_8cpp-source.html#l00181">nextCStringRowExpect()</a>, <a class="el" href="_row_file_8cpp-source.html#l00095">nextLine()</a>, and <a class="el" href="_row_file_8cpp-source.html#l00255">nextRowExpect()</a>.
+Referenced by <a class="el" href="_row_file_8h-source.html#l00161">getCurrentLineNumber()</a>, <a class="el" href="_row_file_8cpp-source.html#l00180">nextCStringRowExpect()</a>, <a class="el" href="_row_file_8cpp-source.html#l00094">nextLine()</a>, and <a class="el" href="_row_file_8cpp-source.html#l00254">nextRowExpect()</a>.
 </div>
 </div><p>
 <a class="anchor" name="e62a41c6684123311347d6e152ff0dfc"></a><!-- doxytag: member="RowFile::m_Delim" ref="e62a41c6684123311347d6e152ff0dfc" args="" -->
@@ -1051,9 +1051,9 @@ Separating delimiter, usually tab ('') or comma (',').
 <p>
 
 <p>
-Definition at line <a class="el" href="_row_file_8h-source.html#l00232">232</a> of file <a class="el" href="_row_file_8h-source.html">RowFile.h</a>.
+Definition at line <a class="el" href="_row_file_8h-source.html#l00230">230</a> of file <a class="el" href="_row_file_8h-source.html">RowFile.h</a>.
 <p>
-Referenced by <a class="el" href="_row_file_8h-source.html#l00129">getDelim()</a>, <a class="el" href="_row_file_8cpp-source.html#l00199">nextCStringRow()</a>, <a class="el" href="_row_file_8cpp-source.html#l00155">nextRow()</a>, and <a class="el" href="_row_file_8h-source.html#l00123">setDelim()</a>.
+Referenced by <a class="el" href="_row_file_8h-source.html#l00127">getDelim()</a>, <a class="el" href="_row_file_8cpp-source.html#l00198">nextCStringRow()</a>, <a class="el" href="_row_file_8cpp-source.html#l00154">nextRow()</a>, and <a class="el" href="_row_file_8h-source.html#l00121">setDelim()</a>.
 </div>
 </div><p>
 <a class="anchor" name="3479c57ce8c16ac3fe258af042c14b08"></a><!-- doxytag: member="RowFile::m_Comment" ref="3479c57ce8c16ac3fe258af042c14b08" args="" -->
@@ -1072,9 +1072,9 @@ Comment character usually '#'.
 <p>
 
 <p>
-Definition at line <a class="el" href="_row_file_8h-source.html#l00234">234</a> of file <a class="el" href="_row_file_8h-source.html">RowFile.h</a>.
+Definition at line <a class="el" href="_row_file_8h-source.html#l00232">232</a> of file <a class="el" href="_row_file_8h-source.html">RowFile.h</a>.
 <p>
-Referenced by <a class="el" href="_row_file_8h-source.html#l00141">getComment()</a>, <a class="el" href="_row_file_8cpp-source.html#l00131">nextRealLine()</a>, <a class="el" href="_row_file_8cpp-source.html#l00266">readHeader()</a>, and <a class="el" href="_row_file_8h-source.html#l00135">setComment()</a>.
+Referenced by <a class="el" href="_row_file_8h-source.html#l00139">getComment()</a>, <a class="el" href="_row_file_8cpp-source.html#l00130">nextRealLine()</a>, <a class="el" href="_row_file_8cpp-source.html#l00265">readHeader()</a>, and <a class="el" href="_row_file_8h-source.html#l00133">setComment()</a>.
 </div>
 </div><p>
 <a class="anchor" name="bd11ea8f26c9effeca21753c0356140f"></a><!-- doxytag: member="RowFile::m_Comment2" ref="bd11ea8f26c9effeca21753c0356140f" args="" -->
@@ -1093,9 +1093,9 @@ Secondary comment character, usually ''.
 <p>
 
 <p>
-Definition at line <a class="el" href="_row_file_8h-source.html#l00236">236</a> of file <a class="el" href="_row_file_8h-source.html">RowFile.h</a>.
+Definition at line <a class="el" href="_row_file_8h-source.html#l00234">234</a> of file <a class="el" href="_row_file_8h-source.html">RowFile.h</a>.
 <p>
-Referenced by <a class="el" href="_row_file_8cpp-source.html#l00131">nextRealLine()</a>, and <a class="el" href="_row_file_8cpp-source.html#l00266">readHeader()</a>.
+Referenced by <a class="el" href="_row_file_8cpp-source.html#l00130">nextRealLine()</a>, and <a class="el" href="_row_file_8cpp-source.html#l00265">readHeader()</a>.
 </div>
 </div><p>
 <a class="anchor" name="f5150f272dbe56c821a223db5d9afc87"></a><!-- doxytag: member="RowFile::m_Reuse" ref="f5150f272dbe56c821a223db5d9afc87" args="" -->
@@ -1114,9 +1114,9 @@ Should we reuse the last line again?
 <p>
 
 <p>
-Definition at line <a class="el" href="_row_file_8h-source.html#l00238">238</a> of file <a class="el" href="_row_file_8h-source.html">RowFile.h</a>.
+Definition at line <a class="el" href="_row_file_8h-source.html#l00236">236</a> of file <a class="el" href="_row_file_8h-source.html">RowFile.h</a>.
 <p>
-Referenced by <a class="el" href="_row_file_8cpp-source.html#l00095">nextLine()</a>, and <a class="el" href="_row_file_8h-source.html#l00157">reuseLine()</a>.
+Referenced by <a class="el" href="_row_file_8cpp-source.html#l00094">nextLine()</a>, and <a class="el" href="_row_file_8h-source.html#l00155">reuseLine()</a>.
 </div>
 </div><p>
 <a class="anchor" name="b4f02c5857744ecded86bbc93ebca40e"></a><!-- doxytag: member="RowFile::m_EndType" ref="b4f02c5857744ecded86bbc93ebca40e" args="" -->
@@ -1135,14 +1135,14 @@ What type of line endings does this stream use?
 <p>
 
 <p>
-Definition at line <a class="el" href="_row_file_8h-source.html#l00240">240</a> of file <a class="el" href="_row_file_8h-source.html">RowFile.h</a>.
+Definition at line <a class="el" href="_row_file_8h-source.html#l00238">238</a> of file <a class="el" href="_row_file_8h-source.html">RowFile.h</a>.
 <p>
-Referenced by <a class="el" href="_row_file_8h-source.html#l00202">getFileType()</a>, <a class="el" href="_row_file_8cpp-source.html#l00095">nextLine()</a>, and <a class="el" href="_row_file_8cpp-source.html#l00061">open()</a>.
+Referenced by <a class="el" href="_row_file_8h-source.html#l00200">getFileType()</a>, <a class="el" href="_row_file_8cpp-source.html#l00094">nextLine()</a>, and <a class="el" href="_row_file_8cpp-source.html#l00059">open()</a>.
 </div>
 </div><p>
 <hr>The documentation for this class was generated from the following files:<ul>
 <li>C:/FusionSDK/affy/sdk/util/<a class="el" href="_row_file_8h-source.html">RowFile.h</a><li>C:/FusionSDK/affy/sdk/util/<a class="el" href="_row_file_8cpp-source.html">RowFile.cpp</a></ul>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:34 2009 for Affymetrix Fusion SDK by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:45 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

@@ -27,27 +27,27 @@
 <a name="l00002"></a>00002 <span class="comment">//</span>
 <a name="l00003"></a>00003 <span class="comment">// Copyright (C) 1989, 1991 Free Software Foundation, Inc.</span>
 <a name="l00004"></a>00004 <span class="comment">//</span>
-<a name="l00005"></a>00005 <span class="comment">// This program is free software; you can redistribute it and/or modify </span>
-<a name="l00006"></a>00006 <span class="comment">// it under the terms of the GNU General Public License (version 2) as </span>
-<a name="l00007"></a>00007 <span class="comment">// published by the Free Software Foundation.</span>
+<a name="l00005"></a>00005 <span class="comment">// This library is free software; you can redistribute it and/or modify</span>
+<a name="l00006"></a>00006 <span class="comment">// it under the terms of the GNU Lesser General Public License </span>
+<a name="l00007"></a>00007 <span class="comment">// (version 2.1) as published by the Free Software Foundation.</span>
 <a name="l00008"></a>00008 <span class="comment">// </span>
-<a name="l00009"></a>00009 <span class="comment">// This program is distributed in the hope that it will be useful, </span>
-<a name="l00010"></a>00010 <span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of </span>
-<a name="l00011"></a>00011 <span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU </span>
-<a name="l00012"></a>00012 <span class="comment">// General Public License for more details.</span>
+<a name="l00009"></a>00009 <span class="comment">// This library is distributed in the hope that it will be useful, but</span>
+<a name="l00010"></a>00010 <span class="comment">// WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY</span>
+<a name="l00011"></a>00011 <span class="comment">// or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License</span>
+<a name="l00012"></a>00012 <span class="comment">// for more details.</span>
 <a name="l00013"></a>00013 <span class="comment">// </span>
-<a name="l00014"></a>00014 <span class="comment">// You should have received a copy of the GNU General Public License </span>
-<a name="l00015"></a>00015 <span class="comment">// along with this program;if not, write to the </span>
-<a name="l00016"></a>00016 <span class="comment">// </span>
-<a name="l00017"></a>00017 <span class="comment">// Free Software Foundation, Inc., </span>
-<a name="l00018"></a>00018 <span class="comment">// 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA</span>
-<a name="l00019"></a>00019 <span class="comment">//</span>
-<a name="l00021"></a>00021 <span class="comment"></span>
-<a name="l00022"></a>00022 <span class="preprocessor">#ifndef CALVINTOTXT_H</span>
-<a name="l00023"></a>00023 <span class="preprocessor"></span><span class="preprocessor">#define CALVINTOTXT_H</span>
-<a name="l00024"></a>00024 <span class="preprocessor"></span>
-<a name="l00025"></a>00025 <span class="preprocessor">#include "<a class="code" href="_affx_binary_file_8h.html" title="This header contains the AffxBinaryFile class definition.">util/AffxBinaryFile.h</a>"</span>
-<a name="l00026"></a>00026 <span class="preprocessor">#include "<a class="code" href="_affx_file_8h.html" title="This header contains the AffxFile class definition.">util/AffxFile.h</a>"</span>
+<a name="l00014"></a>00014 <span class="comment">// You should have received a copy of the GNU Lesser General Public License</span>
+<a name="l00015"></a>00015 <span class="comment">// along with this library; if not, write to the Free Software Foundation, Inc.,</span>
+<a name="l00016"></a>00016 <span class="comment">// 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA </span>
+<a name="l00017"></a>00017 <span class="comment">//</span>
+<a name="l00019"></a>00019 <span class="comment"></span>
+<a name="l00020"></a>00020 <span class="preprocessor">#ifndef _UTIL_CALVINTOTEXT_H_</span>
+<a name="l00021"></a>00021 <span class="preprocessor"></span><span class="preprocessor">#define _UTIL_CALVINTOTEXT_H_</span>
+<a name="l00022"></a>00022 <span class="preprocessor"></span>
+<a name="l00023"></a>00023 <span class="comment">//</span>
+<a name="l00024"></a>00024 <span class="preprocessor">#include "<a class="code" href="_affx_binary_file_8h.html" title="This header contains the AffxBinaryFile class definition.">util/AffxBinaryFile.h</a>"</span>
+<a name="l00025"></a>00025 <span class="preprocessor">#include "<a class="code" href="_affx_byte_array_8h.html" title="This header contains the AffxByteArray class definition.">util/AffxByteArray.h</a>"</span>
+<a name="l00026"></a>00026 <span class="preprocessor">#include "<a class="code" href="_affx_string_8h.html" title="This header contains the AffxString class definition.">util/AffxString.h</a>"</span>
 <a name="l00027"></a>00027 <span class="preprocessor">#include "<a class="code" href="_err_8h.html" title="Some utility error functions, currently prints message and aborts().">util/Err.h</a>"</span>
 <a name="l00028"></a>00028 <span class="preprocessor">#include "<a class="code" href="_guid_8h.html" title="This file provides functions for creating globally unique identifiers.">util/Guid.h</a>"</span>
 <a name="l00029"></a>00029 <span class="preprocessor">#include "<a class="code" href="_util_8h.html" title="General Utilities.">util/Util.h</a>"</span>
@@ -58,86 +58,114 @@
 <a name="l00034"></a>00034 <span class="preprocessor">#include "<a class="code" href="_affy_stl_collection_types_8h.html">calvin_files/utils/src/AffyStlCollectionTypes.h</a>"</span>
 <a name="l00035"></a>00035 <span class="preprocessor">#include "<a class="code" href="_string_utils_8h.html">calvin_files/utils/src/StringUtils.h</a>"</span>
 <a name="l00036"></a>00036 <span class="comment">//</span>
-<a name="l00037"></a>00037 
-<a name="l00038"></a>00038 <span class="keyword">using namespace </span>std;
-<a name="l00039"></a>00039 <span class="keyword">using namespace </span>affymetrix_calvin_io;
-<a name="l00040"></a>00040 <span class="keyword">using namespace </span>affymetrix_calvin_parameter;
-<a name="l00041"></a>00041 
-<a name="l00042"></a><a class="code" href="class_calvin_to_text.html">00042</a> <span class="keyword">class </span><a class="code" href="class_calvin_to_text.html">CalvinToText</a>
-<a name="l00043"></a>00043 {
-<a name="l00044"></a>00044 <span class="keyword">protected</span>:
-<a name="l00045"></a><a class="code" href="class_calvin_to_text.html#49843019901f25e8a0dbf6968cfe29c5">00045</a>         <a class="code" href="class_affx_string.html" title="A class derived from std::string.">AffxString</a> <a class="code" href="class_calvin_to_text.html#49843019901f25e8a0dbf6968cfe29c5">m_strFileNameIn</a>;
-<a name="l00046"></a><a class="code" href="class_calvin_to_text.html#84e4629292a0c2edd683fc105b5e5add">00046</a>         <a class="code" href="class_affx_string.html" title="A class derived from std::string.">AffxString</a> <a class="code" href="class_calvin_to_text.html#84e4629292a0c2edd683fc105b5e5add">m_strFileNameOut</a>;
-<a name="l00047"></a><a class="code" href="class_calvin_to_text.html#253bee270da4ec10280bc996760ac142">00047</a>         <a class="code" href="class_affx_file.html" title="A class for managing text files. Used in association with the AffxByteArray class...">AffxFile</a> <a class="code" href="class_calvin_to_text.html#253bee270da4ec10280bc996760ac142">m_file</a>;
-<a name="l00048"></a><a class="code" href="class_calvin_to_text.html#b1c06beaae880a55b7708b6bcd51d86a">00048</a>         <span class="keywordtype">bool</span> <a class="code" href="class_calvin_to_text.html#b1c06beaae880a55b7708b6bcd51d86a">m_bHeader</a>;
-<a name="l00049"></a><a class="code" href="class_calvin_to_text.html#47249e60f02e286603379753889fb318">00049</a>         <span class="keywordtype">int</span> <a class="code" href="class_calvin_to_text.html#47249e60f02e286603379753889fb318">m_iXChromosome</a>;
-<a name="l00050"></a><a class="code" href="class_calvin_to_text.html#5b58a5db156dcc751efbaceea3fe8b73">00050</a>         <span class="keywordtype">int</span> <a class="code" href="class_calvin_to_text.html#5b58a5db156dcc751efbaceea3fe8b73">m_iYChromosome</a>;
-<a name="l00051"></a>00051 <span class="keyword">public</span>:
-<a name="l00052"></a><a class="code" href="class_calvin_to_text.html#7278003ed749a0e8f75e27f641a0f58f">00052</a>         <a class="code" href="class_calvin_to_text.html#7278003ed749a0e8f75e27f641a0f58f">CalvinToText</a>() 
-<a name="l00053"></a>00053         {
-<a name="l00054"></a>00054                 <a class="code" href="class_calvin_to_text.html#b1c06beaae880a55b7708b6bcd51d86a">m_bHeader</a> = <span class="keyword">false</span>;
-<a name="l00055"></a>00055                 <a class="code" href="class_calvin_to_text.html#47249e60f02e286603379753889fb318">m_iXChromosome</a> = -1;
-<a name="l00056"></a>00056                 <a class="code" href="class_calvin_to_text.html#5b58a5db156dcc751efbaceea3fe8b73">m_iYChromosome</a> = -1;
-<a name="l00057"></a>00057         }
+<a name="l00037"></a>00037 <span class="preprocessor">#include &lt;fstream&gt;</span>
+<a name="l00038"></a>00038 <span class="comment">//</span>
+<a name="l00039"></a>00039 
+<a name="l00040"></a>00040 <span class="keyword">using namespace </span>affymetrix_calvin_io;
+<a name="l00041"></a>00041 <span class="keyword">using namespace </span>affymetrix_calvin_parameter;
+<a name="l00042"></a>00042 
+<a name="l00043"></a>00043 
+<a name="l00044"></a>00044 
+<a name="l00045"></a><a class="code" href="class_calvin_to_text_file.html">00045</a> <span class="keyword">class </span><a class="code" href="class_calvin_to_text_file.html">CalvinToTextFile</a>
+<a name="l00046"></a>00046 {
+<a name="l00047"></a>00047 <span class="keyword">public</span>:
+<a name="l00048"></a>00048 
+<a name="l00049"></a>00049     <a class="code" href="class_calvin_to_text_file.html#51b1c3498c73bf02076a3d12e9467e7b">CalvinToTextFile</a>();
+<a name="l00050"></a>00050     <span class="keyword">virtual</span> <a class="code" href="class_calvin_to_text_file.html#c2a9afcabce6cd088e20fe964e710dd3">~CalvinToTextFile</a>();
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052     <span class="keywordtype">bool</span> <a class="code" href="class_calvin_to_text_file.html#49352b231985ea3594286e9b6b442cb5">open</a>(<span class="keyword">const</span> <a class="code" href="class_affx_string.html" title="A class derived from std::string.">AffxString</a>&amp; strFileName);
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054     <span class="keywordtype">bool</span> <a class="code" href="class_calvin_to_text_file.html#2b7ee3ff6659b881a1576cdedbe97b54">isOpen</a>();
+<a name="l00055"></a>00055     <span class="keywordtype">void</span> <a class="code" href="class_calvin_to_text_file.html#eda75c7076e397ecb1cc02704e0182a5">write</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *psz);
+<a name="l00056"></a>00056     <span class="keywordtype">void</span> <a class="code" href="class_calvin_to_text_file.html#ea94e54fba4285d7f7b12974d91dbed1">writeLine</a>(<span class="keyword">const</span> <a class="code" href="class_affx_string.html" title="A class derived from std::string.">AffxString</a>&amp; str);
+<a name="l00057"></a>00057     <span class="keywordtype">void</span> <a class="code" href="class_calvin_to_text_file.html#61598dbdc766d2fe26faf674baf4a31d">close</a>(<span class="keywordtype">void</span>);
 <a name="l00058"></a>00058 
-<a name="l00059"></a>00059         <span class="keywordtype">void</span> <a class="code" href="class_calvin_to_text.html#4d1a091d69fb83fb1bc67fcd5aff9e2c">run</a>(<span class="keyword">const</span> std::string strFileNameIn, <span class="keyword">const</span> std::string strFileNameOut, <span class="keywordtype">bool</span> bHeader, <span class="keywordtype">bool</span> bBody, <span class="keywordtype">bool</span> bNewGuid);
-<a name="l00060"></a>00060 
-<a name="l00061"></a>00061 <span class="keyword">protected</span>:
-<a name="l00062"></a>00062         <span class="keywordtype">void</span> <a class="code" href="class_calvin_to_text.html#72013d0a3d134358aa132317bec48d22">error</a>(<span class="keyword">const</span> <a class="code" href="class_affx_string.html" title="A class derived from std::string.">AffxString</a>&amp; strMessage);
-<a name="l00063"></a>00063         <span class="comment">/*</span>
-<a name="l00064"></a>00064 <span class="comment">         * Read the file into a data object.</span>
-<a name="l00065"></a>00065 <span class="comment">         */</span>
-<a name="l00066"></a>00066         <span class="keywordtype">bool</span> <a class="code" href="class_calvin_to_text.html#c05c87ffa3a1814396597d8726713ed6">ReadFile</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;fileName, <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data.html">GenericData</a> &amp;gdata);
-<a name="l00067"></a>00067 
-<a name="l00068"></a>00068         <span class="comment">/*</span>
-<a name="l00069"></a>00069 <span class="comment">         * Output the data to the command line.</span>
-<a name="l00070"></a>00070 <span class="comment">         */</span>
-<a name="l00071"></a>00071         <span class="keywordtype">void</span> <a class="code" href="class_calvin_to_text.html#f5ed39ef8d70e398d50e3293ad563cc1">OutputData</a>(<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data.html">GenericData</a>&amp; gdata, <span class="keywordtype">int</span> groupIndex, <span class="keywordtype">int</span> setIndex, <span class="keywordtype">int</span> startRow, <span class="keywordtype">int</span> endRow);
-<a name="l00072"></a>00072 
-<a name="l00073"></a>00073         <span class="comment">/*</span>
-<a name="l00074"></a>00074 <span class="comment">         * Output the file header parameters.</span>
-<a name="l00075"></a>00075 <span class="comment">         */</span>
-<a name="l00076"></a>00076         <span class="keywordtype">void</span> <a class="code" href="class_calvin_to_text.html#bf3551e783214fd2390d51dd46d3cc87">OutputFileHeaderParameters</a>(<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data.html">GenericData</a> &amp;gdata, <span class="keywordtype">bool</span> bNewGuid);
-<a name="l00077"></a>00077         <span class="comment">/*</span>
-<a name="l00078"></a>00078 <span class="comment">         * Output the header parameters.</span>
-<a name="l00079"></a>00079 <span class="comment">         */</span>
-<a name="l00080"></a>00080         <span class="keywordtype">void</span> <a class="code" href="class_calvin_to_text.html#a4c30a57ca65efe38ebec6f6987842f4">OutputParameters</a>(<a class="code" href="namespaceaffymetrix__calvin__parameter.html#807be8629af9171416da5b7133772d0a">ParameterNameValueTypeIt</a> &amp;begin, <a class="code" href="namespaceaffymetrix__calvin__parameter.html#807be8629af9171416da5b7133772d0a">ParameterNameValueTypeIt</a> &amp;end);
-<a name="l00081"></a>00081         <span class="comment">/*</span>
-<a name="l00082"></a>00082 <span class="comment">         * Output the header parameters.</span>
-<a name="l00083"></a>00083 <span class="comment">         */</span>
-<a name="l00084"></a>00084         <span class="keywordtype">void</span> <a class="code" href="class_calvin_to_text.html#a4c30a57ca65efe38ebec6f6987842f4">OutputParameters</a>(<a class="code" href="namespaceaffymetrix__calvin__parameter.html#07a322680c35af808a10d0ea275fe678">ParameterNameValueTypeConstIt</a> &amp;begin, <a class="code" href="namespaceaffymetrix__calvin__parameter.html#07a322680c35af808a10d0ea275fe678">ParameterNameValueTypeConstIt</a> &amp;end);
-<a name="l00085"></a>00085 
-<a name="l00086"></a>00086         <span class="comment">/*</span>
-<a name="l00087"></a>00087 <span class="comment">         * Output the data header parameters.</span>
-<a name="l00088"></a>00088 <span class="comment">         */</span>
-<a name="l00089"></a>00089         <span class="keywordtype">void</span> <a class="code" href="class_calvin_to_text.html#564f33ed4aa40f9ae2412b1b8cd1e6e4">OutputDataHeaderParameters</a>(<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html">GenericDataHeader</a> *hdr, <span class="keywordtype">bool</span> bNewGuid);
-<a name="l00090"></a>00090 
+<a name="l00059"></a>00059 <span class="keyword">protected</span>:
+<a name="l00060"></a>00060     
+<a name="l00061"></a><a class="code" href="class_calvin_to_text_file.html#d5a29cfddd7f8c4a11800443f57fa680">00061</a>     std::fstream* <a class="code" href="class_calvin_to_text_file.html#d5a29cfddd7f8c4a11800443f57fa680">m_pfileStream</a>;
+<a name="l00062"></a><a class="code" href="class_calvin_to_text_file.html#3fcd244424783658b32394572a6c990d">00062</a>     <span class="keywordtype">char</span>* <a class="code" href="class_calvin_to_text_file.html#3fcd244424783658b32394572a6c990d">m_cb</a>;
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064 };
+<a name="l00065"></a>00065 
+<a name="l00066"></a><a class="code" href="class_calvin_to_text.html">00066</a> <span class="keyword">class </span><a class="code" href="class_calvin_to_text.html">CalvinToText</a>
+<a name="l00067"></a>00067 {
+<a name="l00068"></a>00068 <span class="keyword">protected</span>:
+<a name="l00069"></a><a class="code" href="class_calvin_to_text.html#49843019901f25e8a0dbf6968cfe29c5">00069</a>         <a class="code" href="class_affx_string.html" title="A class derived from std::string.">AffxString</a> <a class="code" href="class_calvin_to_text.html#49843019901f25e8a0dbf6968cfe29c5">m_strFileNameIn</a>;
+<a name="l00070"></a><a class="code" href="class_calvin_to_text.html#84e4629292a0c2edd683fc105b5e5add">00070</a>         <a class="code" href="class_affx_string.html" title="A class derived from std::string.">AffxString</a> <a class="code" href="class_calvin_to_text.html#84e4629292a0c2edd683fc105b5e5add">m_strFileNameOut</a>;
+<a name="l00071"></a><a class="code" href="class_calvin_to_text.html#aa77ca6bed2e8227e33050a3814bd369">00071</a>         <a class="code" href="class_calvin_to_text_file.html">CalvinToTextFile</a> <a class="code" href="class_calvin_to_text.html#aa77ca6bed2e8227e33050a3814bd369">m_file</a>;
+<a name="l00072"></a><a class="code" href="class_calvin_to_text.html#b1c06beaae880a55b7708b6bcd51d86a">00072</a>         <span class="keywordtype">bool</span> <a class="code" href="class_calvin_to_text.html#b1c06beaae880a55b7708b6bcd51d86a">m_bHeader</a>;
+<a name="l00073"></a><a class="code" href="class_calvin_to_text.html#47249e60f02e286603379753889fb318">00073</a>         <span class="keywordtype">int</span> <a class="code" href="class_calvin_to_text.html#47249e60f02e286603379753889fb318">m_iXChromosome</a>;
+<a name="l00074"></a><a class="code" href="class_calvin_to_text.html#5b58a5db156dcc751efbaceea3fe8b73">00074</a>         <span class="keywordtype">int</span> <a class="code" href="class_calvin_to_text.html#5b58a5db156dcc751efbaceea3fe8b73">m_iYChromosome</a>;
+<a name="l00075"></a>00075 <span class="keyword">public</span>:
+<a name="l00076"></a><a class="code" href="class_calvin_to_text.html#7278003ed749a0e8f75e27f641a0f58f">00076</a>         <a class="code" href="class_calvin_to_text.html#7278003ed749a0e8f75e27f641a0f58f">CalvinToText</a>() 
+<a name="l00077"></a>00077         {
+<a name="l00078"></a>00078                 <a class="code" href="class_calvin_to_text.html#b1c06beaae880a55b7708b6bcd51d86a">m_bHeader</a> = <span class="keyword">false</span>;
+<a name="l00079"></a>00079                 <a class="code" href="class_calvin_to_text.html#47249e60f02e286603379753889fb318">m_iXChromosome</a> = -1;
+<a name="l00080"></a>00080                 <a class="code" href="class_calvin_to_text.html#5b58a5db156dcc751efbaceea3fe8b73">m_iYChromosome</a> = -1;
+<a name="l00081"></a>00081         }
+<a name="l00082"></a>00082 
+<a name="l00083"></a>00083         <span class="keywordtype">void</span> <a class="code" href="class_calvin_to_text.html#502f2e56b3030a39e58adc0b66ce7d34">run</a>(<span class="keyword">const</span> std::string&amp; strFileNameIn, 
+<a name="l00084"></a>00084            <span class="keyword">const</span> std::string&amp; strFileNameOut,
+<a name="l00085"></a>00085            <span class="keywordtype">bool</span> bHeader,
+<a name="l00086"></a>00086            <span class="keywordtype">bool</span> bBody, 
+<a name="l00087"></a>00087            <span class="keywordtype">bool</span> bNewGuid);
+<a name="l00088"></a>00088 
+<a name="l00089"></a>00089 <span class="keyword">protected</span>:
+<a name="l00090"></a>00090         <span class="keywordtype">void</span> <a class="code" href="class_calvin_to_text.html#72013d0a3d134358aa132317bec48d22">error</a>(<span class="keyword">const</span> <a class="code" href="class_affx_string.html" title="A class derived from std::string.">AffxString</a>&amp; strMessage);
 <a name="l00091"></a>00091         <span class="comment">/*</span>
-<a name="l00092"></a>00092 <span class="comment">         * Output the set information, only the header.</span>
+<a name="l00092"></a>00092 <span class="comment">         * Read the file into a data object.</span>
 <a name="l00093"></a>00093 <span class="comment">         */</span>
-<a name="l00094"></a>00094         <span class="keywordtype">void</span> <a class="code" href="class_calvin_to_text.html#63d63c63fddb7baad121dd028ccb1166">OutputSetInfo</a>(<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data.html">GenericData</a> &amp;gdata, <span class="keywordtype">int</span> groupIndex, <span class="keywordtype">int</span> setIndex);
+<a name="l00094"></a>00094         <span class="keywordtype">bool</span> <a class="code" href="class_calvin_to_text.html#23a37e4e3a33a86fba30c0cbfddd65d3">ReadFile</a>(<span class="keyword">const</span> std::string &amp;fileName, <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data.html">GenericData</a> &amp;gdata);
 <a name="l00095"></a>00095 
 <a name="l00096"></a>00096         <span class="comment">/*</span>
-<a name="l00097"></a>00097 <span class="comment">         * Output the group information.</span>
+<a name="l00097"></a>00097 <span class="comment">         * Output the data to the command line.</span>
 <a name="l00098"></a>00098 <span class="comment">         */</span>
-<a name="l00099"></a>00099         <span class="keywordtype">void</span> <a class="code" href="class_calvin_to_text.html#da8e5b03cd1463f33def71952373328b">OutputGroupInfo</a>(<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data.html">GenericData</a> &amp;gdata, <span class="keyword">const</span> std::wstring &amp;groupName, <span class="keywordtype">int</span> groupIndex);
+<a name="l00099"></a>00099         <span class="keywordtype">void</span> <a class="code" href="class_calvin_to_text.html#f5ed39ef8d70e398d50e3293ad563cc1">OutputData</a>(<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data.html">GenericData</a>&amp; gdata, <span class="keywordtype">int</span> groupIndex, <span class="keywordtype">int</span> setIndex, <span class="keywordtype">int</span> startRow, <span class="keywordtype">int</span> endRow);
 <a name="l00100"></a>00100 
 <a name="l00101"></a>00101         <span class="comment">/*</span>
-<a name="l00102"></a>00102 <span class="comment">         * Output the groups and sets.</span>
+<a name="l00102"></a>00102 <span class="comment">         * Output the file header parameters.</span>
 <a name="l00103"></a>00103 <span class="comment">         */</span>
-<a name="l00104"></a>00104         <span class="keywordtype">void</span> <a class="code" href="class_calvin_to_text.html#f8c4b359914944c3c846b44bfdc06b67">OutputGroupsAndSets</a>(<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data.html">GenericData</a> &amp;gdata);
-<a name="l00105"></a>00105 
-<a name="l00106"></a>00106         <span class="comment">/*</span>
-<a name="l00107"></a>00107 <span class="comment">         * Output the header information.</span>
-<a name="l00108"></a>00108 <span class="comment">         */</span>
-<a name="l00109"></a>00109         <span class="keywordtype">void</span> <a class="code" href="class_calvin_to_text.html#ca20ab0b726af456bdae3ea1f3216e1d">OutputHeader</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;strFileName, <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data.html">affymetrix_calvin_io::GenericData</a>&amp; genericData, <span class="keywordtype">bool</span> bNewGuid);
-<a name="l00110"></a>00110 
-<a name="l00111"></a>00111         <span class="keywordtype">bool</span> <a class="code" href="class_calvin_to_text.html#5593175111eb5e95c709fec2c841d74a">isCalvinFile</a>(<span class="keyword">const</span> <a class="code" href="class_affx_string.html" title="A class derived from std::string.">AffxString</a>&amp; strFileName);
-<a name="l00112"></a>00112 
-<a name="l00113"></a>00113 };
-<a name="l00114"></a>00114 
-<a name="l00115"></a>00115 <span class="preprocessor">#endif </span><span class="comment">/*CALVINTOTXT_H*/</span>
-</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:17 2009 for Affymetrix Fusion SDK by&nbsp;
+<a name="l00104"></a>00104         <span class="keywordtype">void</span> <a class="code" href="class_calvin_to_text.html#bf3551e783214fd2390d51dd46d3cc87">OutputFileHeaderParameters</a>(<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data.html">GenericData</a> &amp;gdata, <span class="keywordtype">bool</span> bNewGuid);
+<a name="l00105"></a>00105         <span class="comment">/*</span>
+<a name="l00106"></a>00106 <span class="comment">         * Output the header parameters.</span>
+<a name="l00107"></a>00107 <span class="comment">         */</span>
+<a name="l00108"></a>00108         <span class="keywordtype">void</span> <a class="code" href="class_calvin_to_text.html#a4c30a57ca65efe38ebec6f6987842f4">OutputParameters</a>(<a class="code" href="namespaceaffymetrix__calvin__parameter.html#807be8629af9171416da5b7133772d0a">ParameterNameValueTypeIt</a> &amp;begin, <a class="code" href="namespaceaffymetrix__calvin__parameter.html#807be8629af9171416da5b7133772d0a">ParameterNameValueTypeIt</a> &amp;end);
+<a name="l00109"></a>00109         <span class="comment">/*</span>
+<a name="l00110"></a>00110 <span class="comment">         * Output the header parameters.</span>
+<a name="l00111"></a>00111 <span class="comment">         */</span>
+<a name="l00112"></a>00112         <span class="keywordtype">void</span> <a class="code" href="class_calvin_to_text.html#a4c30a57ca65efe38ebec6f6987842f4">OutputParameters</a>(<a class="code" href="namespaceaffymetrix__calvin__parameter.html#07a322680c35af808a10d0ea275fe678">ParameterNameValueTypeConstIt</a> &amp;begin, <a class="code" href="namespaceaffymetrix__calvin__parameter.html#07a322680c35af808a10d0ea275fe678">ParameterNameValueTypeConstIt</a> &amp;end);
+<a name="l00113"></a>00113 
+<a name="l00114"></a>00114         <span class="comment">/*</span>
+<a name="l00115"></a>00115 <span class="comment">         * Output the data header parameters.</span>
+<a name="l00116"></a>00116 <span class="comment">         */</span>
+<a name="l00117"></a>00117         <span class="keywordtype">void</span> <a class="code" href="class_calvin_to_text.html#564f33ed4aa40f9ae2412b1b8cd1e6e4">OutputDataHeaderParameters</a>(<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data_header.html">GenericDataHeader</a> *hdr, <span class="keywordtype">bool</span> bNewGuid);
+<a name="l00118"></a>00118 
+<a name="l00119"></a>00119         <span class="comment">/*</span>
+<a name="l00120"></a>00120 <span class="comment">         * Output the set information, only the header.</span>
+<a name="l00121"></a>00121 <span class="comment">         */</span>
+<a name="l00122"></a>00122         <span class="keywordtype">void</span> <a class="code" href="class_calvin_to_text.html#63d63c63fddb7baad121dd028ccb1166">OutputSetInfo</a>(<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data.html">GenericData</a> &amp;gdata, <span class="keywordtype">int</span> groupIndex, <span class="keywordtype">int</span> setIndex);
+<a name="l00123"></a>00123 
+<a name="l00124"></a>00124         <span class="comment">/*</span>
+<a name="l00125"></a>00125 <span class="comment">         * Output the group information.</span>
+<a name="l00126"></a>00126 <span class="comment">         */</span>
+<a name="l00127"></a>00127         <span class="keywordtype">void</span> <a class="code" href="class_calvin_to_text.html#da8e5b03cd1463f33def71952373328b">OutputGroupInfo</a>(<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data.html">GenericData</a> &amp;gdata, <span class="keyword">const</span> std::wstring &amp;groupName, <span class="keywordtype">int</span> groupIndex);
+<a name="l00128"></a>00128 
+<a name="l00129"></a>00129         <span class="comment">/*</span>
+<a name="l00130"></a>00130 <span class="comment">         * Output the groups and sets.</span>
+<a name="l00131"></a>00131 <span class="comment">         */</span>
+<a name="l00132"></a>00132         <span class="keywordtype">void</span> <a class="code" href="class_calvin_to_text.html#f8c4b359914944c3c846b44bfdc06b67">OutputGroupsAndSets</a>(<a class="code" href="classaffymetrix__calvin__io_1_1_generic_data.html">GenericData</a> &amp;gdata);
+<a name="l00133"></a>00133 
+<a name="l00134"></a>00134         <span class="comment">/*</span>
+<a name="l00135"></a>00135 <span class="comment">         * Output the header information.</span>
+<a name="l00136"></a>00136 <span class="comment">         */</span>
+<a name="l00137"></a>00137         <span class="keywordtype">void</span> <a class="code" href="class_calvin_to_text.html#30f5e88c43bde23da61d33549876be63">OutputHeader</a>(<span class="keyword">const</span> std::string &amp;strFileName, <a class="code" href="classaffymetrix__calvin__io_1_1_generic_data.html">affymetrix_calvin_io::GenericData</a>&amp; genericData, <span class="keywordtype">bool</span> bNewGuid);
+<a name="l00138"></a>00138 
+<a name="l00139"></a>00139         <span class="keywordtype">bool</span> <a class="code" href="class_calvin_to_text.html#5593175111eb5e95c709fec2c841d74a">isCalvinFile</a>(<span class="keyword">const</span> <a class="code" href="class_affx_string.html" title="A class derived from std::string.">AffxString</a>&amp; strFileName);
+<a name="l00140"></a>00140 
+<a name="l00141"></a>00141 };
+<a name="l00142"></a>00142 
+<a name="l00143"></a>00143 <span class="preprocessor">#endif // _UTIL_CALVINTOTEXT_H_</span>
+</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:27 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>

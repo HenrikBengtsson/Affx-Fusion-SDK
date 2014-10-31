@@ -25,16 +25,15 @@
 <a class="el" href="dir_0083bb8eedef7fed63dbf70caf86d00a.html">FusionSDK</a>&nbsp;&raquo&nbsp;<a class="el" href="dir_e86b6dbad4e625ef3fbba6406e2d4163.html">affy</a>&nbsp;&raquo&nbsp;<a class="el" href="dir_f87490fa8939fe2ce5b8b80cbaa3c2fa.html">sdk</a>&nbsp;&raquo&nbsp;<a class="el" href="dir_374f7a135d973daad145d25feb2e5488.html">util</a></div>
 <h1>Util.h File Reference</h1>General Utilities. <a href="#_details">More...</a>
 <p>
+<code>#include &quot;<a class="el" href="affy-base-types_8h-source.html">portability/affy-base-types.h</a>&quot;</code><br>
+<code>#include &quot;portability/apt-win-dll.h&quot;</code><br>
 <code>#include &quot;<a class="el" href="_convert_8h-source.html">util/Convert.h</a>&quot;</code><br>
 <code>#include &quot;<a class="el" href="_err_8h-source.html">util/Err.h</a>&quot;</code><br>
-<code>#include &quot;<a class="el" href="apt_8h-source.html">apt/apt.h</a>&quot;</code><br>
-<code>#include &quot;<a class="el" href="affy-base-types_8h-source.html">portability/affy-base-types.h</a>&quot;</code><br>
 <code>#include &lt;cassert&gt;</code><br>
 <code>#include &lt;cctype&gt;</code><br>
 <code>#include &lt;cstring&gt;</code><br>
 <code>#include &lt;ctime&gt;</code><br>
 <code>#include &lt;fstream&gt;</code><br>
-<code>#include &lt;string.h&gt;</code><br>
 <code>#include &lt;string&gt;</code><br>
 <code>#include &lt;vector&gt;</code><br>
 
@@ -52,25 +51,9 @@
 <tr><td class="memItemLeft" nowrap align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_util_1_1_static_mem.html">Util::StaticMem</a></td></tr>
 
 <tr><td colspan="2"><br><h2>Defines</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_util_8h.html#65c565b731cec6cf34eda591385cfc91">PATH_SEPARATOR_WIN32</a>&nbsp;&nbsp;&nbsp;&quot;\\&quot;</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">The string which seperates path components on windows.  <a href="#65c565b731cec6cf34eda591385cfc91"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_util_8h.html#e401ad78a9d3b6b29c58ac3e19ca6576">PATH_SEPARATOR_WIN32_CHAR</a>&nbsp;&nbsp;&nbsp;'\\'</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">The character which seperates path components on windows.  <a href="#e401ad78a9d3b6b29c58ac3e19ca6576"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_util_8h.html#83291ac39aff9b1afcd29f15bb6487dc">PATH_SEPARATOR_UNIX</a>&nbsp;&nbsp;&nbsp;&quot;/&quot;</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">The string which seperates path components on unix.  <a href="#83291ac39aff9b1afcd29f15bb6487dc"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_util_8h.html#6279a737df1def404ed00714b413bd8f">PATH_SEPARATOR_UNIX_CHAR</a>&nbsp;&nbsp;&nbsp;'/'</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">The character which seperates path components on unix.  <a href="#6279a737df1def404ed00714b413bd8f"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_util_8h.html#256a5721249aa3309437212cc21a9fe4">PATH_SEPARATOR</a>&nbsp;&nbsp;&nbsp;PATH_SEPARATOR_UNIX</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Path separator depends on OS...  <a href="#256a5721249aa3309437212cc21a9fe4"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_util_8h.html#581727c17b559af16969b4073417701d">PATH_SEPARATOR_CHAR</a>&nbsp;&nbsp;&nbsp;PATH_SEPARATOR_UNIX_CHAR</td></tr>
-
 <tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_util_8h.html#92b22720309846541a7bfc406212076f">MEGABYTE</a>&nbsp;&nbsp;&nbsp;1048576</td></tr>
 
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">uncomment this to remove functions which are  <a href="#92b22720309846541a7bfc406212076f"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_util_8h.html#718eaed46b2cb6046da20e9e1470795b">MEMINFO_2GB_MAX</a>&nbsp;&nbsp;&nbsp;(2UL*1024*1024*1024)</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_util_8h.html#18af743c2cec4baeee9ffb27999ddaad">log2</a>(x)&nbsp;&nbsp;&nbsp;( log((x))/log((2.0)) )</td></tr>
@@ -130,7 +113,7 @@ Returns the number of elements in the array.
 <p>
 
 <p>
-Definition at line <a class="el" href="_util_8h-source.html#l00096">96</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.
+Definition at line <a class="el" href="_util_8h-source.html#l00072">72</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="d0366bf7559d19f9ba38004154add014"></a><!-- doxytag: member="Util.h::InstanceOf" ref="d0366bf7559d19f9ba38004154add014" args="(objPtr, className)" -->
@@ -155,7 +138,7 @@ Definition at line <a class="el" href="_util_8h-source.html#l00096">96</a> of fi
 <p>
 
 <p>
-Definition at line <a class="el" href="_util_8h-source.html#l00116">116</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.
+Definition at line <a class="el" href="_util_8h-source.html#l00092">92</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="18af743c2cec4baeee9ffb27999ddaad"></a><!-- doxytag: member="Util.h::log2" ref="18af743c2cec4baeee9ffb27999ddaad" args="(x)" -->
@@ -179,7 +162,7 @@ Log base two.
 <p>
 
 <p>
-Definition at line <a class="el" href="_util_8h-source.html#l00090">90</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.
+Definition at line <a class="el" href="_util_8h-source.html#l00066">66</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.
 </div>
 </div><p>
 <a class="anchor" name="92b22720309846541a7bfc406212076f"></a><!-- doxytag: member="Util.h::MEGABYTE" ref="92b22720309846541a7bfc406212076f" args="" -->
@@ -194,11 +177,13 @@ Definition at line <a class="el" href="_util_8h-source.html#l00090">90</a> of fi
 <div class="memdoc">
 
 <p>
+uncomment this to remove functions which are 
+<p>
 
 <p>
-Definition at line <a class="el" href="_util_8h-source.html#l00073">73</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.
+Definition at line <a class="el" href="_util_8h-source.html#l00049">49</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.
 <p>
-Referenced by <a class="el" href="_util_8cpp-source.html#l00950">Util::asMB()</a>, and <a class="el" href="_log_stream_8cpp-source.html#l00237">toMB()</a>.
+Referenced by <a class="el" href="_util_8cpp-source.html#l00456">Util::asMB()</a>, and <a class="el" href="_log_stream_8cpp-source.html#l00235">toMB()</a>.
 </div>
 </div><p>
 <a class="anchor" name="718eaed46b2cb6046da20e9e1470795b"></a><!-- doxytag: member="Util.h::MEMINFO_2GB_MAX" ref="718eaed46b2cb6046da20e9e1470795b" args="" -->
@@ -215,123 +200,9 @@ Referenced by <a class="el" href="_util_8cpp-source.html#l00950">Util::asMB()</a
 <p>
 386 systems cant map more than 2GB of user memory. (unless you have a patched kernel...) 
 <p>
-Definition at line <a class="el" href="_util_8h-source.html#l00086">86</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.
+Definition at line <a class="el" href="_util_8h-source.html#l00062">62</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.
 <p>
-Referenced by <a class="el" href="_util_8cpp-source.html#l01199">Util::memInfo()</a>.
-</div>
-</div><p>
-<a class="anchor" name="256a5721249aa3309437212cc21a9fe4"></a><!-- doxytag: member="Util.h::PATH_SEPARATOR" ref="256a5721249aa3309437212cc21a9fe4" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define PATH_SEPARATOR&nbsp;&nbsp;&nbsp;PATH_SEPARATOR_UNIX          </td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Path separator depends on OS... 
-<p>
-
-<p>
-Definition at line <a class="el" href="_util_8h-source.html#l00069">69</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.
-<p>
-Referenced by <a class="el" href="_util_8cpp-source.html#l00474">Util::chompLastIfSep()</a>, <a class="el" href="_util_8cpp-source.html#l00887">Util::convertPathName()</a>, <a class="el" href="_util_8cpp-source.html#l00183">Util::findLibFile()</a>, <a class="el" href="_tmp_file_factory_8cpp-source.html#l00198">TmpFileFactory::genFilename_basic()</a>, and <a class="el" href="_affx_file_8cpp-source.html#l00211">AffxFile::parseDirectory()</a>.
-</div>
-</div><p>
-<a class="anchor" name="581727c17b559af16969b4073417701d"></a><!-- doxytag: member="Util.h::PATH_SEPARATOR_CHAR" ref="581727c17b559af16969b4073417701d" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define PATH_SEPARATOR_CHAR&nbsp;&nbsp;&nbsp;PATH_SEPARATOR_UNIX_CHAR          </td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-
-<p>
-Definition at line <a class="el" href="_util_8h-source.html#l00070">70</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.
-</div>
-</div><p>
-<a class="anchor" name="83291ac39aff9b1afcd29f15bb6487dc"></a><!-- doxytag: member="Util.h::PATH_SEPARATOR_UNIX" ref="83291ac39aff9b1afcd29f15bb6487dc" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define PATH_SEPARATOR_UNIX&nbsp;&nbsp;&nbsp;&quot;/&quot;          </td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-The string which seperates path components on unix. 
-<p>
-
-<p>
-Definition at line <a class="el" href="_util_8h-source.html#l00058">58</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.
-</div>
-</div><p>
-<a class="anchor" name="6279a737df1def404ed00714b413bd8f"></a><!-- doxytag: member="Util.h::PATH_SEPARATOR_UNIX_CHAR" ref="6279a737df1def404ed00714b413bd8f" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define PATH_SEPARATOR_UNIX_CHAR&nbsp;&nbsp;&nbsp;'/'          </td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-The character which seperates path components on unix. 
-<p>
-
-<p>
-Definition at line <a class="el" href="_util_8h-source.html#l00060">60</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.
-</div>
-</div><p>
-<a class="anchor" name="65c565b731cec6cf34eda591385cfc91"></a><!-- doxytag: member="Util.h::PATH_SEPARATOR_WIN32" ref="65c565b731cec6cf34eda591385cfc91" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define PATH_SEPARATOR_WIN32&nbsp;&nbsp;&nbsp;&quot;\\&quot;          </td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-The string which seperates path components on windows. 
-<p>
-
-<p>
-Definition at line <a class="el" href="_util_8h-source.html#l00054">54</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.
-</div>
-</div><p>
-<a class="anchor" name="e401ad78a9d3b6b29c58ac3e19ca6576"></a><!-- doxytag: member="Util.h::PATH_SEPARATOR_WIN32_CHAR" ref="e401ad78a9d3b6b29c58ac3e19ca6576" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define PATH_SEPARATOR_WIN32_CHAR&nbsp;&nbsp;&nbsp;'\\'          </td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-The character which seperates path components on windows. 
-<p>
-
-<p>
-Definition at line <a class="el" href="_util_8h-source.html#l00056">56</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.
+Referenced by <a class="el" href="_util_8cpp-source.html#l00695">Util::memInfo()</a>.
 </div>
 </div><p>
 <a class="anchor" name="dee8c6d2fc20a1194cf64c481e7b6353"></a><!-- doxytag: member="Util.h::sqr" ref="dee8c6d2fc20a1194cf64c481e7b6353" args="(x)" -->
@@ -353,7 +224,7 @@ Definition at line <a class="el" href="_util_8h-source.html#l00056">56</a> of fi
 <p>
 Square of the two numbers (Note: this is bad style due to X being evaled twice.) 
 <p>
-Definition at line <a class="el" href="_util_8h-source.html#l00093">93</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.
+Definition at line <a class="el" href="_util_8h-source.html#l00069">69</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.
 </div>
 </div><p>
 <hr><h2>Function Documentation</h2>
@@ -378,9 +249,9 @@ template&lt;class T&gt; </div>
 <p>
 delete function that deletes the pointer and sets it to NULL. 
 <p>
-Definition at line <a class="el" href="_util_8h-source.html#l00099">99</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.
+Definition at line <a class="el" href="_util_8h-source.html#l00075">75</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.
 <p>
-Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00153">BaseEngine::checkDiskSpace()</a>, <a class="el" href="_base_engine_8cpp-source.html#l00111">BaseEngine::checkOptions()</a>, and <a class="el" href="_base_engine_8cpp-source.html#l00178">BaseEngine::run()</a>.
+Referenced by <a class="el" href="_base_engine_8cpp-source.html#l00265">BaseEngine::checkDiskSpace()</a>, <a class="el" href="_base_engine_8cpp-source.html#l00201">BaseEngine::checkOptions()</a>, <a class="el" href="_base_engine_8cpp-source.html#l00290">BaseEngine::run()</a>, and <a class="el" href="_base_engine_8cpp-source.html#l00102">BaseEngine::~BaseEngine()</a>.
 </div>
 </div><p>
 <a class="anchor" name="af8a1260bc5853179000feabfb97b294"></a><!-- doxytag: member="Util.h::FreezArray" ref="af8a1260bc5853179000feabfb97b294" args="(T *&amp;p)" -->
@@ -404,12 +275,12 @@ template&lt;class T&gt; </div>
 <p>
 delete function that deletes an array and sets the pointer to NULL. 
 <p>
-Definition at line <a class="el" href="_util_8h-source.html#l00101">101</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.
+Definition at line <a class="el" href="_util_8h-source.html#l00077">77</a> of file <a class="el" href="_util_8h-source.html">Util.h</a>.
 <p>
-Referenced by <a class="el" href="_frugal_vector_8h-source.html#l00100">FrugalVector&lt; T &gt;::clear()</a>, and <a class="el" href="_row_file_8cpp-source.html#l00199">RowFile::nextCStringRow()</a>.
+Referenced by <a class="el" href="_frugal_vector_8h-source.html#l00098">FrugalVector&lt; T &gt;::clear()</a>, <a class="el" href="_row_file_8cpp-source.html#l00198">RowFile::nextCStringRow()</a>, and <a class="el" href="_socket_base_8cpp-source.html#l00164">SocketBase::sendMsg()</a>.
 </div>
 </div><p>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Oct 16 12:06:27 2009 for Affymetrix Fusion SDK by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Mar 4 12:59:38 2011 for Affymetrix Fusion SDK by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.2 </small></address>
 </body>
