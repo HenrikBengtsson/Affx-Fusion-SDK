@@ -24,6 +24,7 @@ import affymetrix.calvin.data.AllelePeaks;
 import affymetrix.calvin.data.CHPMultiDataData.MultiDataType;
 import affymetrix.calvin.data.ChromosomeMultiDataSummaryData;
 import affymetrix.calvin.data.ChromosomeSegmentData;
+import affymetrix.calvin.data.CytoGenotypingCall;
 import affymetrix.calvin.data.MarkerABSignals;
 import affymetrix.calvin.data.ProbeSetMultiDataCopyNumberData;
 import affymetrix.calvin.exception.UnsignedOutOfLimitsException;
@@ -203,9 +204,7 @@ public class Main {
                 for (int j = 0; j < Math.min(n, 3); j++) {
                     d = mchp.getMarkerABSignalsEntry(dataTypes4[i], j);
                     System.out.println("Index = " + d.getIndex().toLong());
-                    System.out.println("A Signal = " + d.getASignal());
-                    System.out.println("B Signal = " + d.getBSignal());
-//                    System.out.println("Scar = " + d.getScar());	-- unsupported method
+                    printParams(d.getMetrics());
                 }
             }
 
@@ -220,6 +219,22 @@ public class Main {
                     System.out.println("Position = " + d.getPosition().toLong());
                     printParams(d.getMetrics());
                 }
+            }
+            
+            int n = mchp.getEntryCount(MultiDataType.CytoGenotypingCallMultiDataType);
+            System.out.println("#Entries(" + MultiDataType.CytoGenotypingCallMultiDataType.toString() + ")=" + n);
+            CytoGenotypingCall call;
+            for (int j = 0; j < Math.min(n, 3); j++) {
+                call = mchp.getCytoGenotypingCall(MultiDataType.CytoGenotypingCallMultiDataType, j);
+                System.out.println("ProbeIndex = " + call.getIndex());
+                System.out.println("Call = " + call.getCall());
+                System.out.println("ASignal = " + call.getASignal());
+                System.out.println("BSignal = " + call.getBSignal());
+                System.out.println("Confidence = " + call.getConfidence());
+                System.out.println("Contrast = " + call.getContrast());
+                System.out.println("ForcedCall = " + call.getForcedCall());              
+                System.out.println("SignalStrength = " + call.getSignalStrength());
+                printParams(call.getMetrics());
             }
             mchp.clear();
 

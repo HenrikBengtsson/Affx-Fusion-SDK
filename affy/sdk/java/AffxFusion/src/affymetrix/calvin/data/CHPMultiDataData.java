@@ -71,7 +71,8 @@ public class CHPMultiDataData extends ChpDataBase {
             "DenovoCopyNumber",
             "HemizygousParentOfOrigin",
             "AllelePeaks",
-            "MarkerABSignal"
+            "MarkerABSignal",
+            "Calls"
         };
 
     /** An enumerant to store the types of data stored in the file. */
@@ -104,7 +105,8 @@ public class CHPMultiDataData extends ChpDataBase {
             SegmentDenovoCopyNumberMultiDataType,
             SegmentHemizygousParentOfOriginMultiDataType,
             AllelePeaksMultiDataType,
-            MarkerABSignalsMultiDataType
+            MarkerABSignalsMultiDataType,
+            CytoGenotypingCallMultiDataType
     };
 
     /** The data types. */
@@ -138,7 +140,8 @@ public class CHPMultiDataData extends ChpDataBase {
         MultiDataType.SegmentDenovoCopyNumberMultiDataType,
         MultiDataType.SegmentHemizygousParentOfOriginMultiDataType,
         MultiDataType.AllelePeaksMultiDataType,
-        MultiDataType.MarkerABSignalsMultiDataType
+        MultiDataType.MarkerABSignalsMultiDataType,
+        MultiDataType.CytoGenotypingCallMultiDataType
     };
 
 	/** The column name for the probe set name. */
@@ -174,8 +177,14 @@ public class CHPMultiDataData extends ChpDataBase {
 	/** The column name for the region. */
 	private static final String REGION = "Region";
         
-        /** The column name for the cnv signal. */
+    /** The column name for the cnv signal. */
 	private static final String SIGNAL = "Signal";
+	
+    /** The column name for the signal strength. */
+	private static final String SIGNAL_STRENGTH = "SignalStrength";
+	
+    /** The column name for the contrast. */
+	private static final String CONTRAST = "Contrast";
 
     /** The column name for the force. */
     private static final String FORCE = "Forced Call";
@@ -519,6 +528,16 @@ public class CHPMultiDataData extends ChpDataBase {
 			hdr.addUByteColumn(CALL);
 			hdr.addFloatColumn(CONFIDENCE);
 			break;
+			
+		case CytoGenotypingCallMultiDataType:
+			hdr.addUIntColumn(PROBE_SET_INDEX);
+			hdr.addUByteColumn(CALL);
+			hdr.addFloatColumn(CONFIDENCE);
+			hdr.addUByteColumn(FORCE);
+			hdr.addFloatColumn(A_SIGNAL);
+			hdr.addFloatColumn(B_SIGNAL);
+			hdr.addFloatColumn(SIGNAL_STRENGTH);
+			hdr.addFloatColumn(CONTRAST);
 
         case CopyNumberVariationMultiDataType:
                 hdr.addAsciiColumn(REGION, info.getMaxName());
@@ -682,9 +701,6 @@ public class CHPMultiDataData extends ChpDataBase {
 
         case MarkerABSignalsMultiDataType:
             hdr.addUIntColumn(PROBE_SET_INDEX);
-            hdr.addFloatColumn(A_SIGNAL);
-            hdr.addFloatColumn(B_SIGNAL);
-            hdr.addFloatColumn(SCAR);
             break;
 
         default:
@@ -954,8 +970,6 @@ public class CHPMultiDataData extends ChpDataBase {
 	 *          The data type
 	 * @param index
 	 *          The row index.
-	 * @param entry
-	 *          The expression results.
 	 */
 	private ProbeSetMultiDataExpressionData getGenericExpressionEntry(MultiDataType dataType, int index)
 			throws IOException, UnsignedOutOfLimitsException {
@@ -1124,12 +1138,40 @@ public class CHPMultiDataData extends ChpDataBase {
                 int colIndex = 0;
                 entry = new MarkerABSignals();
                 entry.setIndex(ds.getEntries().getDataUInt(index, colIndex++));
-                entry.setASignal(ds.getEntries().getDataFloat(index, colIndex++));
-                entry.setBSignal(ds.getEntries().getDataFloat(index, colIndex++));
-                entry.setScar(ds.getEntries().getDataFloat(index, colIndex++));
+                List<ParameterNameValue> extraMetrics = getExtraMetricEntries(ds, index, colIndex);
+                if (extraMetrics != null) {
+                    entry.addMetrics(extraMetrics);
+                }
             }
             return entry;
         }
+        
+    /**
+     * Returns cyto genotyping call data for the given row.
+     * @throws IOException
+     * @throws UnsignedOutOfLimitsException
+     */
+  	public CytoGenotypingCall getCytoGenotypingCall(MultiDataType dataType,int rowIndex) throws IOException, UnsignedOutOfLimitsException {
+			DataSetInfo ds = openMultiDataDataSet(dataType);
+			CytoGenotypingCall entry = null;
+		    if ((ds != null) && (ds.getEntries() != null) && ds.getEntries().isOpen()) {
+			    int colIndex = 0;
+			    entry = new CytoGenotypingCall();
+			    entry.setIndex(ds.getEntries().getDataInt(rowIndex, colIndex++));
+			    entry.setCall(ds.getEntries().getDataByte(rowIndex, colIndex++));
+			    entry.setConfidence(ds.getEntries().getDataFloat(rowIndex, colIndex++));
+			    entry.setForcedCall(ds.getEntries().getDataByte(rowIndex, colIndex++));
+			    entry.setASignal(ds.getEntries().getDataFloat(rowIndex, colIndex++));
+			    entry.setBSignal(ds.getEntries().getDataFloat(rowIndex, colIndex++));
+			    entry.setSignalStrength(ds.getEntries().getDataFloat(rowIndex, colIndex++));
+			    entry.setContrast(ds.getEntries().getDataFloat(rowIndex, colIndex++));
+			    List<ParameterNameValue> extraMetrics = getExtraMetricEntries(ds, rowIndex, colIndex);
+			    if (extraMetrics != null) {
+			        entry.addMetrics(extraMetrics);
+			    }
+			}
+    		return entry;
+		}
         
 	/**
 	 * Get the extra metric columns.
@@ -1140,8 +1182,6 @@ public class CHPMultiDataData extends ChpDataBase {
 	 *          The row index.
 	 * @param colIndex
 	 *          The column index
-	 * @param metrics
-	 *          The results.
 	 */
 	private List<ParameterNameValue> getExtraMetricEntries(DataSetInfo ds, int rowIndex, int colIndex)
 			throws IOException, UnsignedOutOfLimitsException {
@@ -1300,23 +1340,23 @@ public class CHPMultiDataData extends ChpDataBase {
 			try {
 				DataSetInfo ds = new DataSetInfo();
                                 
-                                if (dataTypeGroupNames.isEmpty() == true)
-                                {
-                                    Map<String, MultiDataType> nameTypeMap = new HashMap<String, MultiDataType>();
-                                    for (int iname=0; iname<MultiDataDataSetNames.length; iname++)
-                                        nameTypeMap.put(MultiDataDataSetNames[iname], MultiDataDataTypes[iname]);
-                                    int ng = genericData.getHeader().getDataGroupCnt();
-                                    for (int ig=0; ig<ng; ig++)
-                                    {
-                                        DataGroupHeader dh = genericData.getHeader().getDataGroup(ig);
-                                        int ns = dh.getDataSetCnt();
-                                        for (int is=0; is<ns; is++)
-                                        {
-                                            DataSetHeader h = dh.getDataSet(is);
-                                            dataTypeGroupNames.put(nameTypeMap.get(h.getName()), dh.getName());
-                                        }
-                                    }
-                                }    
+        if (dataTypeGroupNames.isEmpty() == true)
+        {
+            Map<String, MultiDataType> nameTypeMap = new HashMap<String, MultiDataType>();
+            for (int iname=0; iname<MultiDataDataSetNames.length; iname++)
+                nameTypeMap.put(MultiDataDataSetNames[iname], MultiDataDataTypes[iname]);
+            int ng = genericData.getHeader().getDataGroupCnt();
+            for (int ig=0; ig<ng; ig++)
+            {
+                DataGroupHeader dh = genericData.getHeader().getDataGroup(ig);
+                int ns = dh.getDataSetCnt();
+                for (int is=0; is<ns; is++)
+                {
+                    DataSetHeader h = dh.getDataSet(is);
+                    dataTypeGroupNames.put(nameTypeMap.get(h.getName()), dh.getName());
+                }
+            }
+        }
                                 
 				ds.setEntries(genericData.getDataSet(dataTypeGroupNames.get(dataType), MultiDataDataSetNames[dataType.ordinal()]));
 				if (ds.getEntries() != null) {
@@ -1341,64 +1381,66 @@ public class CHPMultiDataData extends ChpDataBase {
 					else if (dataType == MultiDataType.CopyNumberVariationMultiDataType) {
 						startCol = 4;
 					}
-                    else if (dataType == MultiDataType.DmetCopyNumberMultiDataType) {
-                            startCol = 7;
-                    }
-                    else if (dataType == MultiDataType.DmetMultiAllelicMultiDataType) {
-                            startCol = 17;
-                    }
-                    else if (dataType == MultiDataType.DmetBiAllelicMultiDataType) {
-                            startCol = 8;
-                    }
+          else if (dataType == MultiDataType.DmetCopyNumberMultiDataType) {
+                  startCol = 7;
+          }
+          else if (dataType == MultiDataType.DmetMultiAllelicMultiDataType) {
+                  startCol = 17;
+          }
+          else if (dataType == MultiDataType.DmetBiAllelicMultiDataType ||
+          				 dataType == MultiDataType.CytoGenotypingCallMultiDataType) 
+          {
+                  startCol = 8;
+          }
 
-                    else if (dataType == MultiDataType.ChromosomeSummaryMultiDataType) {
-                            startCol = 9;
-                    }
-                    else if (dataType == MultiDataType.SegmentCNMultiDataType ||
-                        dataType == MultiDataType.SegmentLOHMultiDataType ||
-                        dataType == MultiDataType.SegmentCNNeutralLOHMultiDataType ||
-                        dataType == MultiDataType.SegmentNormalDiploidMultiDataType ||
-                        dataType == MultiDataType.SegmentNoCallMultiDataType ||
-                        dataType == MultiDataType.SegmentMosaicismMultiDataType)
-                    {
-                            startCol = 6;
-                    }
-                    else if (dataType == MultiDataType.SegmentGenotypeConcordanceMultiDataType ||
-                        dataType == MultiDataType.SegmentGenotypeDiscordanceMultiDataType ||
-                        dataType == MultiDataType.SegmentCNLossLOHConcordanceMultiDataType ||
-                        dataType == MultiDataType.SegmentCNNeutralLOHConcordanceMultiDataType ||
-                        dataType == MultiDataType.SegmentHeteroUPDMultiDataType ||
-                        dataType == MultiDataType.SegmentIsoUPDMultiDataType ||
-                        dataType == MultiDataType.SegmentDenovoCopyNumberMultiDataType ||
-                        dataType == MultiDataType.SegmentHemizygousParentOfOriginMultiDataType)
-                    {
-                            startCol = 11;
-                    }
-                    else if (dataType == MultiDataType.FamilialSegmentOverlapsMultiDataType)
-                    {
-                            startCol = 5;
-                    }
-                    else if (dataType == MultiDataType.FamilialSamplesMultiDataType)
-                    {
-                            startCol = 7;
-                    }
-                    else if (dataType == MultiDataType.AllelePeaksMultiDataType)
-                    {
-                        startCol = 3;
-                    }
-                    else if (dataType == MultiDataType.MarkerABSignalsMultiDataType)
-                    {
-                        startCol = 4;
-                    }
-					for (int icol = startCol; icol < ncols; icol++) {
-						ds.addMetricColumn((ds.getEntries().getHeader().getColumnInfo(icol)));
-					}
-					dataSetInfo.put(dataType, ds);
-					return ds;
-				}
+          else if (dataType == MultiDataType.ChromosomeSummaryMultiDataType) {
+                  startCol = 9;
+          }
+          else if (dataType == MultiDataType.SegmentCNMultiDataType ||
+              dataType == MultiDataType.SegmentLOHMultiDataType ||
+              dataType == MultiDataType.SegmentCNNeutralLOHMultiDataType ||
+              dataType == MultiDataType.SegmentNormalDiploidMultiDataType ||
+              dataType == MultiDataType.SegmentNoCallMultiDataType ||
+              dataType == MultiDataType.SegmentMosaicismMultiDataType)
+          {
+                  startCol = 6;
+          }
+          else if (dataType == MultiDataType.SegmentGenotypeConcordanceMultiDataType ||
+              dataType == MultiDataType.SegmentGenotypeDiscordanceMultiDataType ||
+              dataType == MultiDataType.SegmentCNLossLOHConcordanceMultiDataType ||
+              dataType == MultiDataType.SegmentCNNeutralLOHConcordanceMultiDataType ||
+              dataType == MultiDataType.SegmentHeteroUPDMultiDataType ||
+              dataType == MultiDataType.SegmentIsoUPDMultiDataType ||
+              dataType == MultiDataType.SegmentDenovoCopyNumberMultiDataType ||
+              dataType == MultiDataType.SegmentHemizygousParentOfOriginMultiDataType)
+          {
+                  startCol = 11;
+          }
+          else if (dataType == MultiDataType.FamilialSegmentOverlapsMultiDataType)
+          {
+                  startCol = 5;
+          }
+          else if (dataType == MultiDataType.FamilialSamplesMultiDataType)
+          {
+                  startCol = 7;
+          }
+          else if (dataType == MultiDataType.AllelePeaksMultiDataType)
+          {
+              startCol = 3;
+          }
+          else if (dataType == MultiDataType.MarkerABSignalsMultiDataType)
+          {
+              startCol = 1;
+          }
+          for (int icol = startCol; icol < ncols; icol++) {
+                  ds.addMetricColumn((ds.getEntries().getHeader().getColumnInfo(icol)));
+          }
+          dataSetInfo.put(dataType, ds);
+          return ds;
+        }
 			}
 			catch (Throwable t)
-                        {
+			{
 			}
 		}
 		return null;
@@ -1456,7 +1498,6 @@ public class CHPMultiDataData extends ChpDataBase {
         /** Gets the probe set data.
         * @param dataType The data type
         * @param index The row index.
-        * @param entry The copy number results.
         */
         public DmetCopyNumberData getDmetCopyNumberEntry(MultiDataType dataType, int index) throws IOException,
 			UnsignedOutOfLimitsException {
@@ -1483,7 +1524,6 @@ public class CHPMultiDataData extends ChpDataBase {
         /** Gets the probe set data.
         * @param dataType The data type
         * @param index The row index.
-        * @param entry The copy number results.
         */
         public DmetMultiAllelicData getDmetMultiAllelicEntry(MultiDataType dataType, int index) throws IOException,
 			UnsignedOutOfLimitsException {
@@ -1520,7 +1560,6 @@ public class CHPMultiDataData extends ChpDataBase {
         /** Gets the probe set data.
         * @param dataType The data type
         * @param index The row index.
-        * @param entry The copy number results.
         */
         public DmetBiAllelicData getDmetBiAllelicEntry(MultiDataType dataType, int index) throws IOException,
 			UnsignedOutOfLimitsException {

@@ -98,14 +98,9 @@ public class ParameterNameValue {
 	/**
 	 * Constructor. Useful when reading in from a file
 	 * 
-	 * @param n
-	 *          Parameter name
-	 * @param mimeValue
-	 *          MIME encoded value in a buffer
-	 * @param mimeValueSize
-	 *          The size in bytes of the MIME encoded value.
-	 * @param mimeType
-	 *          The value type.
+	 * @param n Parameter name
+	 * @param mimeValue MIME encoded value in a buffer
+	 * @param mimeType The value type.
 	 */
 	public ParameterNameValue(String n, byte[] mimeValue, String mimeType) {
 		name = n;

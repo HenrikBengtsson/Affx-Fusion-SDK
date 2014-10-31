@@ -51,7 +51,7 @@
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
 				UsePrecompiledHeader="0"
-				WarningLevel="3"
+				WarningLevel="0"
 				DebugInformationFormat="3"
 			/>
 			<Tool
@@ -95,7 +95,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="echo Execute TsvFileTest&#x0D;&#x0A;&quot;$(OutDir)\TsvFileTest.exe&quot;&#x0D;&#x0A;"
+				CommandLine="IF NOT &apos;%APTCOMPILEONLY%&apos; == &apos;true&apos; (echo Execute TsvFileTest&#x0D;&#x0A;&quot;$(OutDir)\TsvFileTest.exe&quot;&#x0D;&#x0A;)"
 			/>
 		</Configuration>
 		<Configuration
@@ -131,7 +131,7 @@
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
 				UsePrecompiledHeader="0"
-				WarningLevel="3"
+				WarningLevel="0"
 				DebugInformationFormat="3"
 			/>
 			<Tool
@@ -175,7 +175,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="echo Execute TsvFileTest&#x0D;&#x0A;&quot;$(OutDir)\TsvFileTest.exe&quot;&#x0D;&#x0A;"
+				CommandLine="IF NOT &apos;%APTCOMPILEONLY%&apos; == &apos;true&apos; (echo Execute TsvFileTest&#x0D;&#x0A;&quot;$(OutDir)\TsvFileTest.exe&quot;&#x0D;&#x0A;)"
 			/>
 		</Configuration>
 		<Configuration
@@ -210,7 +210,7 @@
 				PreprocessorDefinitions="WIN32;_CONSOLE"
 				RuntimeLibrary="2"
 				UsePrecompiledHeader="0"
-				WarningLevel="3"
+				WarningLevel="0"
 				DebugInformationFormat="3"
 			/>
 			<Tool
@@ -255,7 +255,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="echo Execute TsvFileTest&#x0D;&#x0A;&quot;$(OutDir)\TsvFileTest.exe&quot;&#x0D;&#x0A;"
+				CommandLine="IF NOT &apos;%APTCOMPILEONLY%&apos; == &apos;true&apos; (echo Execute TsvFileTest&#x0D;&#x0A;&quot;$(OutDir)\TsvFileTest.exe&quot;&#x0D;&#x0A;)"
 			/>
 		</Configuration>
 		<Configuration
@@ -293,7 +293,7 @@
 				PreprocessorDefinitions="WIN32;_CONSOLE"
 				RuntimeLibrary="2"
 				UsePrecompiledHeader="0"
-				WarningLevel="3"
+				WarningLevel="0"
 				DebugInformationFormat="3"
 			/>
 			<Tool
@@ -339,7 +339,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="echo Execute TsvFileTest&#x0D;&#x0A;&quot;$(OutDir)\TsvFileTest.exe&quot;&#x0D;&#x0A;"
+				CommandLine="IF NOT &apos;%APTCOMPILEONLY%&apos; == &apos;true&apos; (echo Execute TsvFileTest&#x0D;&#x0A;&quot;$(OutDir)\TsvFileTest.exe&quot;&#x0D;&#x0A;)"
 			/>
 		</Configuration>
 	</Configurations>

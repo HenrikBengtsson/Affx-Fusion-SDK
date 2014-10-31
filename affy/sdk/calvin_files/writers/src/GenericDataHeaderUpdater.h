@@ -67,9 +67,6 @@ public:
 	 */
 	void UpdateParameters();
 
-	//$$
-	void UpdateFileHeaderParameter(const std::string &filename, const std::wstring &paramName, float paramValue);
-
 private:
 	/*! Get the size of the FileHeader in bytes.
 	 *	@return The size of the FileHeader.

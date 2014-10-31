@@ -219,6 +219,9 @@ const static std::wstring A_SIGNAL = L"ASignal";
 const static std::wstring B_SIGNAL = L"BSignal";
 const static std::wstring SCAR = L"SCAR";
 
+const static std::wstring CONTRAST = L"Contrast";
+const static std::wstring SIGNAL_STRENGTH = L"SignalStrength";
+
 	/*! constructor */
 DataSetInfo::DataSetInfo()    {
   entries = NULL;
@@ -571,16 +574,36 @@ void CHPMultiDataData::GetEntry(MultiDataType dataType, int index, affymetrix_ca
 	}
 }
 
+
+
 void CHPMultiDataData::GetEntry(MultiDataType dataType, int index, affymetrix_calvin_data::MarkerABSignals &entry)
+{
+	DataSetInfo *ds = OpenMultiDataDataSet(dataType);	
+
+	if (ds && ds->entries && ds->entries->IsOpen())
+	{
+		int colIndex = 0;
+		ds->entries->GetData(index, colIndex++, entry.index);
+		GetExtraMetricEntries(ds, index, colIndex, entry.metrics);
+	}
+}
+
+
+void CHPMultiDataData::GetEntry(MultiDataType dataType, int index, affymetrix_calvin_data::CytoGenotypeCallData &entry)
 {
 	DataSetInfo *ds = OpenMultiDataDataSet(dataType);
 	if (ds && ds->entries && ds->entries->IsOpen())
 	{
 		int colIndex = 0;
 		ds->entries->GetData(index, colIndex++, entry.index);
+		ds->entries->GetData(index, colIndex++, entry.call);
+		ds->entries->GetData(index, colIndex++, entry.confidence);
+		ds->entries->GetData(index, colIndex++, entry.forcedCall);
 		ds->entries->GetData(index, colIndex++, entry.aSignal);
 		ds->entries->GetData(index, colIndex++, entry.bSignal);
-		ds->entries->GetData(index, colIndex++, entry.scar);
+		ds->entries->GetData(index, colIndex++, entry.signalStrength);
+		ds->entries->GetData(index, colIndex++, entry.contrast);
+		GetExtraMetricEntries(ds, index, colIndex, entry.metrics);
 	}
 }
 
@@ -1097,9 +1120,20 @@ void CHPMultiDataData::AddColumns(DataSetInfo &info, DataSetHeader& hdr)
 
 	case MarkerABSignalsMultiDataType:
 		hdr.AddUIntColumn(PROBE_SET_INDEX);
+		/*hdr.AddFloatColumn(A_SIGNAL);
+		hdr.AddFloatColumn(B_SIGNAL);
+		hdr.AddFloatColumn(SCAR);*/
+		break;
+
+	case CytoGenotypeCallMultiDataType:
+		hdr.AddUIntColumn(PROBE_SET_INDEX);
+		hdr.AddByteColumn(CALL);
+		hdr.AddFloatColumn(CONFIDENCE);
+		hdr.AddByteColumn(FORCE);
 		hdr.AddFloatColumn(A_SIGNAL);
 		hdr.AddFloatColumn(B_SIGNAL);
-		hdr.AddFloatColumn(SCAR);
+		hdr.AddFloatColumn(SIGNAL_STRENGTH);
+		hdr.AddFloatColumn(CONTRAST);
 		break;
 
 	default:
@@ -1217,7 +1251,11 @@ DataSetInfo *CHPMultiDataData::OpenMultiDataDataSet(MultiDataType dataType)
 		}
 		else if (dataType == MarkerABSignalsMultiDataType)
 		{
-			startCol = 4;
+			startCol = 1;
+		}
+		else if (dataType = CytoGenotypeCallMultiDataType)
+		{
+			startCol = 8;
 		}
 		for (int32_t icol=startCol; icol<ncols; icol++)
 		{

@@ -1,5 +1,6 @@
 
 #include "calvin_files/fusion/src/FusionCHPMultiDataData.h"
+#include "util/convert.h"
 #include <iostream>
 
 using namespace std;
@@ -29,6 +30,7 @@ static void printParams(std::vector<ParameterNameValueType> &params)
 int main(int argc, char **argv)
 {
 	const char* fileName = (argc == 1 ? "c:\\temp\\test.cychp" : argv[1]);
+	
 	try
 	{
 		FusionCHPData *chp = FusionCHPDataReg::Read(fileName);
@@ -100,6 +102,13 @@ int main(int argc, char **argv)
 			"AllelePeaksMultiDataType",
 		};
 
+		 MultiDataType dataTypes6[] = {
+            CytoGenotypeCallMultiDataType
+        };
+		std::string dataTypes6str[] = {
+			"CytoGenotypeCallMultiDataType",
+		};
+
 
 		for (int i = 0; i < sizeof(dataTypes1)/sizeof(MultiDataType); i++)
 		{
@@ -152,17 +161,16 @@ int main(int argc, char **argv)
                 printParams(d.metrics);
             }
         }
-
+		
+		MarkerABSignals d;
         for (int i = 0; i < sizeof(dataTypes4)/sizeof(MultiDataType); i++) {
             int n = mchp->GetEntryCount(dataTypes4[i]);
             cout << "#Entries(" << dataTypes4str[i] << ")=" << n << endl;
-            MarkerABSignals d;
+           
             for (int j = 0; j < min(n, 3); j++) {
                 mchp->GetMarkerABSignalsEntry(dataTypes4[i], j, d);
                 cout << "Index = " << d.index << endl;
-                cout << "A Signal = " << d.aSignal << endl;
-                cout << "B Signal = " << d.bSignal << endl;
-				cout << "Scar = " << d.scar << endl;
+				printParams(d.metrics);
             }
         }
 
@@ -176,6 +184,28 @@ int main(int argc, char **argv)
                 cout << "Chr = " << (int)d.chr << endl;
 				cout << "Position = " << d.position << endl;
 				printParams(d.peaks);
+            }
+        }
+
+		for (int i = 0; i < sizeof(dataTypes6)/sizeof(MultiDataType); i++) {
+            int n = mchp->GetEntryCount(dataTypes6[i]);
+            cout << "#Entries(" << dataTypes6str[i] << ")=" << n << endl;
+            CytoGenotypeCallData d;
+            for (int j = 0; j < min(n, 9); j++) {
+				mchp->GetCytoGenotypeEntry(dataTypes6[i], j, d);
+                cout << "Index = " << d.index << endl;
+                cout << "Call = " << (int)d.call << endl;
+				cout << "Confidence = " << d.confidence << endl;
+				string f = ToStr(d.confidence);
+				cout <<  "strConfidence = " << f << endl;
+				cout << "ej1 = " << .000001f << endl;
+				cout << "ej2 = " << .0000001f << endl;
+				cout << "ForcedCall = " << (int)d.forcedCall << endl;
+				cout << "ASignal = " << d.aSignal << endl;
+				cout << "BSignal = " << d.bSignal << endl;
+				cout << "SignalStrength = " << d.signalStrength << endl;
+				cout << "Contrast = " << d.contrast << endl;
+				printParams(d.metrics);
             }
         }
 

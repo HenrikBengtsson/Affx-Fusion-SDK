@@ -68,11 +68,6 @@ public class MIMEValue {
 
 	/**
 	 * Constructs a MIME value
-	 * 
-	 * @param value
-	 *          A pointer to array containing the MIME encoded value
-	 * @param size
-	 *          The size of the array
 	 */
 	public MIMEValue(byte[] value) {
 		setValue(value);
@@ -95,10 +90,7 @@ public class MIMEValue {
 	/**
 	 * Set the controlled value
 	 * 
-	 * @param value
-	 *          A pointer to array containing the MIME encoded value
-	 * @param size
-	 *          The size of the array
+	 * @param value A pointer to array containing the MIME encoded value
 	 */
 	public void setValue(byte[] value) {
 		buf = value;

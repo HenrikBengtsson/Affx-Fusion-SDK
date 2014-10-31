@@ -212,14 +212,10 @@ public class ParameterNameValueDefaultRequired extends ParameterNameValue {
 	 *          Parameter name
 	 * @param mimeValue
 	 *          MIME encoded value in a buffer
-	 * @param mimeValueSize
-	 *          The size in bytes of the MIME encoded value.
 	 * @param mimeType
 	 *          The MIME type.
 	 * @param defaultMimeValue
 	 *          The default MIME encoded value in a buffer.
-	 * @param defaultMimeValueSize
-	 *          The size in bytes of the default MIME encoded value.
 	 * @param req
 	 *          Flag to indicate if the parameter is required.
 	 */

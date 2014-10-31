@@ -117,6 +117,25 @@ public:
     return str;
   }
 
+
+  /**
+   * Make the string all uppercase.
+   * @param s - string to be modified
+   */
+  static void upcaseString_inplace(std::string& str) {
+    for(unsigned int i = 0; i < str.size(); i++) {
+      str[i] = (char)toupper(str[i]);
+    }
+  }
+  /// @brief     Copy and upcase a 8bit string.
+  /// @param     str_orig
+  /// @return
+  static std::string upcaseString(const std::string& str_orig) {
+    std::string str=str_orig;
+    upcaseString_inplace(str);
+    return str;
+  }
+
   /** Comparison object for use in map for char * */
    struct ltstr {
      /// Is one string less than another?

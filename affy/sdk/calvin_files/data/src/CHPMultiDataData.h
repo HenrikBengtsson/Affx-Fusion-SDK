@@ -30,6 +30,7 @@
 #include "calvin_files/data/src/GenericData.h"
 #include "calvin_files/data/src/MarkerABSignals.h"
 #include "calvin_files/data/src/ProbeSetMultiDataData.h"
+#include "calvin_files/data/src/CytoGenotypeCallMultiDataData.h"
 #include "calvin_files/portability/src/AffymetrixBaseTypes.h"
 //
 #include <cstring>
@@ -73,7 +74,8 @@ typedef enum MultiDataType {
     SegmentDenovoCopyNumberMultiDataType,
     SegmentHemizygousParentOfOriginMultiDataType,
 	AllelePeaksMultiDataType,
-	MarkerABSignalsMultiDataType
+	MarkerABSignalsMultiDataType,
+	CytoGenotypeCallMultiDataType
 } MultiDataType_t;
 
 /*! The data set name. */
@@ -107,7 +109,8 @@ const static std::wstring MultiDataDataSetNames[] =
     L"DenovoCopyNumber",
     L"HemizygousParentOfOrigin",
 	L"AllelePeaks",
-	L"MarkerABSignal"
+	L"MarkerABSignal",
+	L"Calls"
 };
 
 /*! The data types. */
@@ -141,7 +144,8 @@ const static MultiDataType MultiDataDataTypes[] =
     SegmentDenovoCopyNumberMultiDataType,
     SegmentHemizygousParentOfOriginMultiDataType,
 	AllelePeaksMultiDataType,
-	MarkerABSignalsMultiDataType
+	MarkerABSignalsMultiDataType,
+	CytoGenotypeCallMultiDataType
 };
 
 /*! Holds data set information. */
@@ -400,6 +404,13 @@ public:
 	* @param entry The results.
 	*/
 	void GetEntry(MultiDataType dataType, int index, affymetrix_calvin_data::MarkerABSignals &entry);
+
+	/*! Gets the genotype data for cyto.
+	* @param dataType The data type
+	* @param index The row index.
+	* @param entry The results.
+	*/
+	void GetEntry(MultiDataType dataType, int index, affymetrix_calvin_data::CytoGenotypeCallData &entry);
 
 	/*! Gets the probe set data.
 	* @param dataType The data type

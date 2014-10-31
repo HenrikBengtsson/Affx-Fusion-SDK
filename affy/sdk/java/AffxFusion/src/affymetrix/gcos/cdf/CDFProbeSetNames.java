@@ -59,12 +59,6 @@ public class CDFProbeSetNames {
 		return null;
 	}
 
-	/**
-	 * Sets the size of the vector.
-	 * 
-	 * @param size
-	 *          The size.
-	 */
 	public void clear() {
 		probeSetNames.clear();
 	}

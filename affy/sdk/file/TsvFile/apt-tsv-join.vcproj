@@ -52,7 +52,7 @@
 				RuntimeLibrary="3"
 				RuntimeTypeInfo="true"
 				UsePrecompiledHeader="0"
-				WarningLevel="4"
+				WarningLevel="0"
 				DebugInformationFormat="3"
 			/>
 			<Tool
@@ -94,7 +94,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="echo copy &quot;$(OutDir)\apt-tsv-join.exe&quot; regression\&#x0D;&#x0A;copy &quot;$(OutDir)\apt-tsv-join.exe&quot; regression\&#x0D;&#x0A;"
+				CommandLine=" (echo copy &quot;$(OutDir)\apt-tsv-join.exe&quot; regression\&#x0D;&#x0A;copy &quot;$(OutDir)\apt-tsv-join.exe&quot; regression\&#x0D;&#x0A;)"
 			/>
 		</Configuration>
 		<Configuration
@@ -131,7 +131,7 @@
 				RuntimeLibrary="3"
 				RuntimeTypeInfo="true"
 				UsePrecompiledHeader="0"
-				WarningLevel="4"
+				WarningLevel="0"
 				DebugInformationFormat="3"
 			/>
 			<Tool
@@ -174,7 +174,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="echo copy &quot;$(OutDir)\apt-tsv-join.exe&quot; regression\&#x0D;&#x0A;copy &quot;$(OutDir)\apt-tsv-join.exe&quot; regression\&#x0D;&#x0A;"
+				CommandLine=" (echo copy &quot;$(OutDir)\apt-tsv-join.exe&quot; regression\&#x0D;&#x0A;copy &quot;$(OutDir)\apt-tsv-join.exe&quot; regression\&#x0D;&#x0A;)"
 			/>
 		</Configuration>
 		<Configuration
@@ -211,7 +211,7 @@
 				RuntimeLibrary="2"
 				RuntimeTypeInfo="true"
 				UsePrecompiledHeader="0"
-				WarningLevel="3"
+				WarningLevel="0"
 				DebugInformationFormat="3"
 				OmitDefaultLibName="false"
 			/>
@@ -255,7 +255,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="echo copy &quot;$(OutDir)\apt-tsv-join.exe&quot; regression\&#x0D;&#x0A;copy &quot;$(OutDir)\apt-tsv-join.exe&quot; regression\&#x0D;&#x0A;"
+				CommandLine=" (echo copy &quot;$(OutDir)\apt-tsv-join.exe&quot; regression\&#x0D;&#x0A;copy &quot;$(OutDir)\apt-tsv-join.exe&quot; regression\&#x0D;&#x0A;)"
 			/>
 		</Configuration>
 		<Configuration
@@ -295,7 +295,7 @@
 				RuntimeLibrary="2"
 				RuntimeTypeInfo="true"
 				UsePrecompiledHeader="0"
-				WarningLevel="3"
+				WarningLevel="0"
 				DebugInformationFormat="3"
 				OmitDefaultLibName="false"
 			/>
@@ -341,7 +341,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="echo copy &quot;$(OutDir)\apt-tsv-join.exe&quot; regression\&#x0D;&#x0A;copy &quot;$(OutDir)\apt-tsv-join.exe&quot; regression\&#x0D;&#x0A;"
+				CommandLine=" (echo copy &quot;$(OutDir)\apt-tsv-join.exe&quot; regression\&#x0D;&#x0A;copy &quot;$(OutDir)\apt-tsv-join.exe&quot; regression\&#x0D;&#x0A;)"
 			/>
 		</Configuration>
 	</Configurations>

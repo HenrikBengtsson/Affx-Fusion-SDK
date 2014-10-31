@@ -51,9 +51,6 @@ public:
     /*! The analysis parameters */
     affymetrix_calvin_parameter::ParameterNameValuePairList &AnalysisParameters() { return analysisParameters; }
 
-	/*! The analysis parameters */
-    affymetrix_calvin_parameter::ParameterNameValuePairList &SampleSignatureParameters() { return sampleSignatureParameters; }
-
 	/*! Reads the entire contents of the file.
 	 * @param fileName The name of the file to read.
      * @return true if successful
@@ -75,9 +72,6 @@ private:
 
     /*! The analysis parameters */
     affymetrix_calvin_parameter::ParameterNameValuePairList analysisParameters;
-
-	/*! The sample signature analysis parameters */
-    affymetrix_calvin_parameter::ParameterNameValuePairList sampleSignatureParameters;
 
 };
 

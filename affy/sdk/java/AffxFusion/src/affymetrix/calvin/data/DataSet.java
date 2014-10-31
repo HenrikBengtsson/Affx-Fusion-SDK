@@ -293,8 +293,6 @@ public class DataSet {
    * that value and all subsequent values in the array should be ignored
    * if you are going to interpret the data as a String.
 	 *
-	 * @param b
-	 *          The input file stream.
 	 * @return The string read from the file stream.
 	 */
 	public byte[] getDataString8AsBytes(int row, int col) throws IOException, UnsignedOutOfLimitsException {

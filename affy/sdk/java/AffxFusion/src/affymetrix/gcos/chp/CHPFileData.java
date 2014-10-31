@@ -1118,15 +1118,15 @@ public class CHPFileData {
 		univProbeSetResults.clear();
 		reseqResults = null;
 	}
-
+	
 	/**
 	 * Parses a string into tag/value parameters.
 	 * 
-	 * @param sSource
-	 *          The parameter string
-	 * @sDelimiter1 The delimiter between the tag and value
-	 * @sDelimiter2 The delimiter between the parameters.
+	 * @param source The parameter string
+	 * @param delim1 The delimiter between the tag and value
+	 * @param delim2 The delimiter between the parameters.
 	 */
+	
 	private List<TagValuePair> parseString(String source, String delim1, String delim2) {
 
 		if (source == null) {

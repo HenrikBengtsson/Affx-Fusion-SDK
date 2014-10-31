@@ -22,7 +22,7 @@ package affymetrix.calvin.data;
 import affymetrix.portability.UInt;
 
 /** Holds the marker AB signal results */
-public class MarkerABSignals {
+public class MarkerABSignals extends ProbeSetMultiDataBase {
 
 	/** The index to the probe set ids in the main data set. */
 	private UInt index;
@@ -33,38 +33,8 @@ public class MarkerABSignals {
     /** Sets the index value. */
     public void setIndex(UInt i) { index = i; }
 
-	/** The A signal. */
-	private float aSignal;
-
-    /** Gets the a signal. */
-    public float getASignal() { return aSignal; }
-
-    /** Sets the a signal. */
-    public void setASignal(float s) { aSignal = s; }
-
-	/** The B signal. */
-	private float bSignal;
-
-    /** Gets the b signal. */
-    public float getBSignal() { return bSignal; }
-    
-    /** Sets the b signal. */
-    public void setBSignal(float s) { bSignal = s; }
-
-	/*! The SCAR value. */
-	private float scar;
-
-    /** Gets the scar. */
-    public float getScar() { return scar; }
-
-    /** Sets the scar. */
-    public void setScar(float s) { scar = s; }
-
     /** Construct a new class */
     public MarkerABSignals() {
         index = UInt.ZERO;
-        aSignal = 0.0f;
-        bSignal = 0.0f;
-        scar = 0.0f;
     }
 }

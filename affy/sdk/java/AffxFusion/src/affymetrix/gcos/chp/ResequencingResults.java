@@ -89,10 +89,7 @@ public class ResequencingResults {
 	/**
 	 * Sets the called base.
 	 * 
-	 * @param index
-	 *          The index to the array.
-	 * @param call
-	 *          The call.
+	 * @param call The call.
 	 */
 	public void addCalledBase(char call) {
 		calledBases.add(call);
@@ -134,10 +131,7 @@ public class ResequencingResults {
 	/**
 	 * Sets the score.
 	 * 
-	 * @param index
-	 *          The index to the array.
-	 * @param score
-	 *          The score.
+	 * @param score The score.
 	 */
 	public void addScore(float score) {
 		scores.add(score);
@@ -174,9 +168,6 @@ public class ResequencingResults {
 
 	/**
 	 * Resizes the force calls array.
-	 * 
-	 * @param size
-	 *          The size of the array.
 	 */
 	public void clearForceCalls() {
 		forceCalls.clear();
@@ -184,11 +175,8 @@ public class ResequencingResults {
 
 	/**
 	 * Sets the force call.
-	 * 
-	 * @param index
-	 *          The index to the array.
-	 * @param call
-	 *          The force call.
+	 *
+	 * @param call The force call.
 	 */
 	public void addForceCall(ForceCallType call) {
 		forceCalls.add(call);
@@ -225,9 +213,6 @@ public class ResequencingResults {
 
 	/**
 	 * Resizes the original calls array.
-	 * 
-	 * @param size
-	 *          The size of the array.
 	 */
 	public void clearOrigCalls() {
 		origCalls.clear();
@@ -236,10 +221,7 @@ public class ResequencingResults {
 	/**
 	 * Sets the original call.
 	 * 
-	 * @param index
-	 *          The index to the array.
-	 * @param call
-	 *          The original call.
+	 * @param call The original call.
 	 */
 	public void addOrigCall(BaseCallType call) {
 		origCalls.add(call);

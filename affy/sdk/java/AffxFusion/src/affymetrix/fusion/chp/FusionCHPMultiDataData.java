@@ -27,6 +27,7 @@ import java.util.Map;
 import affymetrix.calvin.data.CHPMultiDataData;
 import affymetrix.calvin.data.DataSetInfo;
 import affymetrix.calvin.data.GenericData;
+import affymetrix.calvin.data.CytoGenotypingCall;
 import affymetrix.calvin.data.ProbeSetMultiDataCopyNumberData;
 import affymetrix.calvin.data.ProbeSetMultiDataExpressionData;
 import affymetrix.calvin.data.ProbeSetMultiDataGenotypeData;
@@ -281,7 +282,6 @@ public class FusionCHPMultiDataData extends FusionCHPData {
     /** Gets the chromosome segment data.
     * @param dataType The data type
     * @param index The row index.
-    * @param entry The results.
     */
     public ChromosomeSegmentData getChromosomeSegmentEntry(MultiDataType dataType, int index) throws IOException,
         UnsignedOutOfLimitsException {
@@ -291,7 +291,6 @@ public class FusionCHPMultiDataData extends FusionCHPData {
     /** Gets the chromosome segment data.
     * @param dataType The data type
     * @param index The row index.
-    * @param entry The results.
     */
     public ChromosomeSegmentDataEx getChromosomeSegmentEntryEx(MultiDataType dataType, int index) throws IOException,
         UnsignedOutOfLimitsException {
@@ -301,7 +300,6 @@ public class FusionCHPMultiDataData extends FusionCHPData {
     /** Gets the chromosome summary data.
     * @param dataType The data type
     * @param index The row index.
-    * @param entry The results.
     */
     public ChromosomeMultiDataSummaryData getChromosomeSummaryEntry(MultiDataType dataType, int index) throws IOException,
         UnsignedOutOfLimitsException {
@@ -311,7 +309,6 @@ public class FusionCHPMultiDataData extends FusionCHPData {
     /** Gets the familial file entry.
     * @param dataType The data type
     * @param index The row index.
-    * @param entry The results.
     */
     public FamilialSegmentOverlap getFamilialSegmentOverlapEntry(MultiDataType dataType, int index) throws IOException,
         UnsignedOutOfLimitsException {
@@ -321,7 +318,6 @@ public class FusionCHPMultiDataData extends FusionCHPData {
     /** Gets the familial file entry.
     * @param dataType The data type
     * @param index The row index.
-    * @param entry The results.
     */
     public FamilialSample getFamilialSampleEntry(MultiDataType dataType, int index) throws IOException,
         UnsignedOutOfLimitsException {
@@ -347,6 +343,15 @@ public class FusionCHPMultiDataData extends FusionCHPData {
         UnsignedOutOfLimitsException {
             return chpData.getMarkerABSignalsEntry(dataType, index);
     }
+
+	/**
+	 * Returns cyto genotyping call data for the given row.
+	 * @throws IOException
+	 * @throws UnsignedOutOfLimitsException
+	 */
+	public CytoGenotypingCall getCytoGenotypingCall(MultiDataType dataType, int rowIndex) throws IOException, UnsignedOutOfLimitsException {
+		return chpData.getCytoGenotypingCall(dataType, rowIndex);
+	}
 
 	/**
 	 * Get the probe set name.

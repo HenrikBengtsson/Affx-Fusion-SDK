@@ -411,8 +411,6 @@ public class GenericData {
 
 	/**
 	 * Opens the file for access.
-	 * 
-	 * @return True if opened successfully.
 	 */
 	public void open() throws FileNotFoundException {
 		// Open a file stream

@@ -1,11 +1,12 @@
-
-
 package fusionsample;
 
+import affymetrix.calvin.exception.UnsignedOutOfLimitsException;
 import affymetrix.fusion.psi.*;
 import affymetrix.fusion.cel.*;
 import affymetrix.fusion.chp.*;
 import affymetrix.fusion.*;
+
+import java.io.IOException;
 import java.util.*;
 
 /** This class provides sample code for using the Fusion SDK.
@@ -22,8 +23,10 @@ public class Main {
     
     /** Calculates some statistics (# and % calls and average signal value) for expression probe set results.
      * @param chp The CHP file object.
+     * @throws IOException 
+     * @throws UnsignedOutOfLimitsException 
      */
-    private void exportExpressionCHP(FusionCHPLegacyData chp) {
+    private void exportExpressionCHP(FusionCHPLegacyData chp) throws UnsignedOutOfLimitsException, IOException {
         int numPresent=0;
         int numAbsent=0;
         int numMarginal=0;
@@ -34,7 +37,7 @@ public class Main {
         FusionExpressionProbeSetResults result = new FusionExpressionProbeSetResults();
         for (int i=0; i<n; i++)
         {
-            chp.getExpressionResults(i, result);
+          chp.getExpressionResults(i, result);
 	        switch (result.getDetection().toShort())
             {
                 case FusionExpressionProbeSetResults.ABS_ABSENT_CALL:
@@ -66,8 +69,10 @@ public class Main {
 
     /** Calculates some statistics (# and % calls) for genotyping probe set results.
      * @param chp The CHP file object.
+     * @throws IOException 
+     * @throws UnsignedOutOfLimitsException 
      */
-    private void exportGenotypingCHP(FusionCHPLegacyData chp) {
+    private void exportGenotypingCHP(FusionCHPLegacyData chp) throws UnsignedOutOfLimitsException, IOException {
         int numAA=0;
         int numAB=0;
         int numBB=0;
@@ -99,8 +104,10 @@ public class Main {
     
     /** Exports data stored in a CHP file.
      * @param file The name of the CHP file.
+     * @throws IOException 
+     * @throws UnsignedOutOfLimitsException 
      */
-    private void exportCHP(String file) {
+    private void exportCHP(String file) throws UnsignedOutOfLimitsException, IOException {
         FusionCHPLegacyData.registerReader();
         FusionCHPData chp = FusionCHPDataReg.read(file);
         if (chp == null)
@@ -169,8 +176,10 @@ public class Main {
     
     /** Exports the average intensity in a CEL file.
      * @param file The name of the CEL file.
+     * @throws IOException 
+     * @throws UnsignedOutOfLimitsException 
      */
-    private void exportCEL(String file) {
+    private void exportCEL(String file) throws UnsignedOutOfLimitsException, IOException {
         FusionCELData cel = new FusionCELData();
         
         cel.setFileName(file);
@@ -217,8 +226,10 @@ public class Main {
     
     /** Calls the various export functions for PSI, CHP, CEL and CDF data.
      * @param args the command line arguments
+     * @throws IOException 
+     * @throws UnsignedOutOfLimitsException 
      */
-    public void exportFiles(String[] args) {
+    public void exportFiles(String[] args) throws UnsignedOutOfLimitsException, IOException {
         // Find the input file name.
         String file = getFile(args);
         if (file == null)
@@ -250,8 +261,10 @@ public class Main {
 
     /** Calls the various export functions for PSI, CHP, CEL and CDF data.
      * @param args the command line arguments
+     * @throws IOException 
+     * @throws UnsignedOutOfLimitsException 
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws UnsignedOutOfLimitsException, IOException {
         Main sample = new Main();
         sample.exportFiles(args);
     }    

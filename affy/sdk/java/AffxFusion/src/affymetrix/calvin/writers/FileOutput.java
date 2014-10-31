@@ -75,7 +75,7 @@ public class FileOutput {
 	 *          output file
 	 * @param value
 	 *          string value
-	 * @param maxLn
+	 * @param maxLnChar
 	 *          length in bytes to be appended to the value
 	 * 
 	 * @throws IOException

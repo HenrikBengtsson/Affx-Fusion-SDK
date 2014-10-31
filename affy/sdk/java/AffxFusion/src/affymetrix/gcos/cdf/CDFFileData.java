@@ -669,7 +669,7 @@ public class CDFFileData {
 	/**
 	 * Reads the header of an XDA format CDF file.
 	 * 
-	 * @param instr
+	 * @param fis
 	 *          The file stream object.
 	 * @return True if successful.
 	 */
