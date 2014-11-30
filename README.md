@@ -13,7 +13,7 @@ The repository contains two branches:
 
 The `affx-fusion-release` branch contains the (extracted) content of
 the following official releases _except_ built binaries (*.dll, *.lib,
-*.jar, *.exe) which are all located under `affy/sdk/libraries_and_tools/`: 
+*.jar, *.exe) which would have been located under `affy/sdk/libraries_and_tools/`: 
 
 1. **Full SDK - Release 1.1.0, October 2009**
    - File name: affx-fusion-release-1\_1\_0.zip
