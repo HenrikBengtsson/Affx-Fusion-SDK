@@ -12,8 +12,7 @@ The repository contains two branches:
 2. `master`
 
 The `affx-fusion-release` branch contains the (extracted) content of
-the following official releases _except_ built binaries (*.dll, *.lib,
-*.jar, *.exe) which would have been located under `affy/sdk/libraries_and_tools/`: 
+the following official releases: 
 
 1. **Full SDK - Release 1.1.0, October 2009**
    - File name: affx-fusion-release-1\_1\_0.zip
@@ -28,6 +27,7 @@ the following official releases _except_ built binaries (*.dll, *.lib,
    - File size: 77,301,851 bytes
    - MD5 checksum: 576661d12b293118c818ef895e2b903a
 
+_Note:_ Any pre-built binaries (*.dll, *.lib, *.jar, *.exe), which would have been located under `affy/sdk/libraries_and_tools/`, are not included here.  They are only part of the above ZIP files distributed by Affymetrix.
 
 The `master` branch contains the latest version with patches.
 
